@@ -81,3 +81,6 @@ hs_err_pid*
 replay_pid*
 CONSOLIDATION_ANALYSIS.md
 LangChain4j_Diagrams_Pack.docx
+
+# Image Generation Guide (contains API key instructions)
+IMAGE_GENERATION_GUIDE.md

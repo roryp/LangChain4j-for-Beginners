@@ -12,6 +12,9 @@ MCP solves a fundamental problem in AI development: every integration is custom.
 
 MCP standardizes this. An MCP server exposes tools with clear descriptions and schemas. Any MCP client can connect, discover available tools, and use them. Build once, use everywhere.
 
+![MCP Architecture](images/mcp-architecture.png)
+*Model Context Protocol architecture - standardized tool discovery and execution*
+
 ## How MCP Works
 
 **Server-Client Architecture**
@@ -25,6 +28,9 @@ When your client connects to an MCP server, it asks "What tools do you have?" Th
 **Transport Mechanisms**
 
 MCP supports different ways to connect:
+
+![Transport Mechanisms](images/transport-mechanisms.png)
+*Three MCP transport mechanisms for different integration scenarios*
 
 **Streamable HTTP** - For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
 

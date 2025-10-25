@@ -44,6 +44,9 @@ The key takeaway: LangChain4j provides the infrastructure (model connection, mem
 
 Not all problems need the same approach. Some questions need quick answers, others need deep thinking. Some need visible reasoning, others just need results. This module covers eight prompting patterns - each optimized for different scenarios. You'll experiment with all of them to learn when each approach works best.
 
+![Reasoning Effort Comparison](images/reasoning-effort.png)
+*Low eagerness (fast, direct) vs High eagerness (thorough, exploratory) reasoning approaches*
+
 **Low Eagerness (Quick & Focused)** - For simple questions where you want fast, direct answers. The model does minimal reasoning - maximum 2 steps. Use this for calculations, lookups, or straightforward questions.
 
 **High Eagerness (Deep & Thorough)** - For complex problems where you want comprehensive analysis. The model explores thoroughly and shows detailed reasoning. Use this for system design, architecture decisions, or complex research.
@@ -102,6 +105,9 @@ GPT-5 lets you control computational effort through your prompts. Low effort mea
 **Structure Guides Behavior**
 
 Notice the XML tags in the prompts? They're not decorative. Models follow structured instructions more reliably than freeform text. When you need multi-step processes or complex logic, structure helps the model track where it is and what comes next.
+
+![Prompt Structure](images/prompt-structure.png)
+*Anatomy of a well-structured prompt with clear sections and XML-style organization*
 
 **Quality Through Self-Evaluation**
 

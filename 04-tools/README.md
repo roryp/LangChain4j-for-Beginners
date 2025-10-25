@@ -17,6 +17,9 @@ An AI agent with tools follows a reasoning and acting pattern (ReAct):
 5. Tool executes and returns data
 6. Agent incorporates the result and provides the final answer
 
+![ReAct Pattern](images/react-pattern.png)
+*The ReAct pattern - how AI agents alternate between reasoning and acting to solve problems*
+
 This happens automatically. You define the tools and their descriptions. The model handles the decision-making about when and how to use them.
 
 ## How Tool Calling Works
@@ -44,6 +47,9 @@ The real power comes from chaining multiple tools. A user might ask "What's the 
 1. Calls the weather tool for Tokyo (gets temperature in Celsius)
 2. Calls the temperature conversion tool (converts to Fahrenheit)
 3. Combines both results into a coherent answer
+
+![Tool Chaining](images/tool-chaining.png)
+*Tool chaining in action - agent orchestrates multiple tool calls to answer a complex query*
 
 This happens in a single conversation turn. The agent orchestrates multiple tool calls autonomously.
 

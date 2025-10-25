@@ -6,6 +6,9 @@ In the previous modules, you learned how to have conversations with AI and struc
 
 RAG (Retrieval-Augmented Generation) solves this problem. Instead of trying to teach the model your information (which is expensive and impractical), you give it the ability to search through your documents. When someone asks a question, the system finds relevant information and includes it in the prompt. The model then answers based on that retrieved context.
 
+![RAG Architecture](images/rag-architecture.png)
+*RAG workflow - from user query to semantic search to contextual answer generation*
+
 ## Understanding RAG
 
 Think of RAG as giving the model a reference library. When you ask a question, the system:
@@ -26,6 +29,9 @@ When you upload a document, the system breaks it into chunks - smaller pieces th
 **Creating Embeddings**
 
 Each chunk is converted into a numerical representation called an embedding - essentially a mathematical fingerprint that captures the meaning of the text. Similar text produces similar embeddings.
+
+![Vector Embeddings Space](images/vector-embeddings.png)
+*Documents represented as vectors in embedding space - similar content clusters together*
 
 **Semantic Search**
 

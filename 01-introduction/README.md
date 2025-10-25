@@ -12,11 +12,17 @@ Language models are stateless. Each API call is independent. If you send "My nam
 
 This is fine for simple Q&A but useless for real applications. Customer service bots need to remember what you told them. Personal assistants need context. Any multi-turn conversation requires memory.
 
+![Stateless vs Stateful Conversations](images/stateless-vs-stateful.png)
+*The difference between stateless (independent calls) and stateful (context-aware) conversations*
+
 ## How Memory Works
 
 Chat memory solves the stateless problem by maintaining conversation history. Before sending your request to the model, the framework prepends relevant previous messages. When you ask "What's my name?", the system actually sends the entire conversation history, allowing the model to see you previously said "My name is John."
 
 LangChain4j provides memory implementations that handle this automatically. You choose how many messages to retain and the framework manages the context window.
+
+![Memory Window Concept](images/memory-window.png)
+*MessageWindowChatMemory maintains a sliding window of recent messages, automatically dropping old ones*
 
 ## How This Uses LangChain4j
 

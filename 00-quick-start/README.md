@@ -6,13 +6,21 @@ Get LangChain4j running in minutes using GitHub Models - no Azure subscription r
 
 LangChain4j is a Java library that simplifies building AI-powered applications. Instead of dealing with HTTP clients and JSON parsing, you work with clean Java APIs. 
 
-The "chain" in LangChain refers to chaining together multiple components - you might chain a prompt to a model to a parser, or chain multiple AI calls together where one output feeds into the next input. This quick start focuses on the fundamentals before exploring more complex chains. We'll use three core components:
+The "chain" in LangChain refers to chaining together multiple components - you might chain a prompt to a model to a parser, or chain multiple AI calls together where one output feeds into the next input. This quick start focuses on the fundamentals before exploring more complex chains.
+
+![LangChain4j Chaining Concept](images/langchain-concept.png)
+*Chaining components in LangChain4j - building blocks connect to create powerful AI workflows*
+
+We'll use three core components:
 
 **ChatLanguageModel** - The interface for AI model interactions. Call `model.chat("prompt")` and get a response string. We use `OpenAiChatModel` which works with OpenAI-compatible endpoints like GitHub Models.
 
 **AiServices** - Creates type-safe AI service interfaces. Define methods, annotate them with `@Tool`, and LangChain4j handles the orchestration. The AI automatically calls your Java methods when needed.
 
 **MessageWindowChatMemory** - Maintains conversation history. Without this, each request is independent. With it, the AI remembers previous messages and maintains context across multiple turns.
+
+![LangChain4j Architecture](images/architecture.png)
+*LangChain4j architecture - core components working together to power your AI applications*
 
 ## LangChain4j Dependencies
 
