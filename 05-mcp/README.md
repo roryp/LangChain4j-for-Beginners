@@ -143,7 +143,7 @@ cd 05-mcp
 mvn exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
 ```
 
-The application launches a Docker container, mounts your repository, and queries commit history through the AI agent.
+The application launches a Docker container, mounts your repository, and analyzes the repository structure and contents through the AI agent.
 
 ## Key Concepts
 
