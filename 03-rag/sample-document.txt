@@ -1,0 +1,67 @@
+Introduction to LangChain4j
+
+LangChain4j is a Java library that simplifies the development of AI-powered applications. It provides abstractions for working with Large Language Models (LLMs), embeddings, vector stores, and RAG implementations.
+
+Key Features
+
+1. Chat Models - LangChain4j supports multiple LLM providers including Azure OpenAI, OpenAI, Anthropic, and local models. The library provides a unified interface regardless of the provider you choose.
+
+2. Memory Management - The library includes built-in support for conversation memory through MessageWindowChatMemory and other implementations. This allows your applications to maintain context across multiple turns.
+
+3. Embeddings - LangChain4j can generate vector embeddings from text using various embedding models. These embeddings are essential for semantic search and RAG applications.
+
+4. Vector Stores - The library integrates with multiple vector databases including Qdrant, Pinecone, Weaviate, and in-memory stores for development.
+
+5. Document Processing - LangChain4j can split documents into chunks, create embeddings, and store them in vector databases. The DocumentSplitter interface provides flexible chunking strategies.
+
+RAG Implementation
+
+Retrieval-Augmented Generation (RAG) is a powerful technique that combines information retrieval with language generation. LangChain4j makes RAG implementation straightforward:
+
+- ContentRetriever finds relevant document chunks based on semantic similarity
+- EmbeddingStore manages vector embeddings and similarity search
+- DocumentSplitter breaks large documents into manageable chunks
+- The chat model generates answers based on retrieved context
+
+Benefits of Using LangChain4j
+
+Developer Productivity - The library reduces boilerplate code and provides high-level abstractions that let you focus on business logic rather than integration details.
+
+Provider Independence - Switch between different LLM providers without changing your application code. The abstraction layer makes your code portable.
+
+Production Ready - LangChain4j includes features needed for production applications like error handling, retry logic, and resource management.
+
+Spring Boot Integration - The library works seamlessly with Spring Boot, allowing you to configure AI components through application properties.
+
+Getting Started
+
+To use LangChain4j in your Maven project, add the following dependencies:
+
+langchain4j-core provides the core abstractions
+langchain4j-azure-open-ai adds Azure OpenAI support
+langchain4j-embeddings-all-minilm-l6-v2 provides local embedding models
+
+Create a chat model by configuring AzureOpenAiChatModel with your endpoint, API key, and deployment name. For RAG, add an EmbeddingModel and EmbeddingStore, then use ContentRetriever to find relevant chunks.
+
+Best Practices
+
+Chunk Size - Use 300-500 token chunks with 10-15% overlap to maintain context across boundaries.
+
+Similarity Threshold - Set a minimum similarity score (typically 0.5-0.7) to filter out irrelevant chunks.
+
+Context Window - Stay within your model's context window by limiting the number of chunks included in each request.
+
+Error Handling - Implement proper error handling for LLM API calls, which can fail due to rate limits or network issues.
+
+Advanced Features
+
+LangChain4j also supports:
+
+- AI Services - Declarative AI-powered interfaces with automatic prompt generation
+- Tools - Allow the LLM to call external functions and APIs
+- Streaming - Stream responses token-by-token for better user experience
+- Moderation - Built-in content moderation to filter inappropriate requests
+
+Conclusion
+
+LangChain4j provides a comprehensive framework for building AI applications in Java. Whether you're implementing simple chat interfaces or complex RAG systems, the library offers the tools you need to build production-ready solutions.

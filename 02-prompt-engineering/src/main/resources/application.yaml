@@ -1,0 +1,24 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: prompt-engineering
+
+# Azure OpenAI Configuration
+# These values can be overridden by environment variables
+azure:
+  openai:
+    endpoint: ${AZURE_OPENAI_ENDPOINT:}
+    api-key: ${AZURE_OPENAI_API_KEY:}
+    deployment: ${AZURE_OPENAI_DEPLOYMENT:}
+    reasoning-effort: low  # low = faster demo responses, medium/high = deeper reasoning
+    max-completion-tokens: 8000  # Balanced for GPT-5: reasoning + output
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.example.langchain4j.prompts: DEBUG
+    dev.langchain4j: DEBUG
+

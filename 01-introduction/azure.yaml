@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/refs/heads/main/schemas/v1.0/azure.yaml.json
+
+name: langchain4j-introduction
+metadata:
+  template: langchain4j-introduction@0.0.1
+
+# No services defined - all applications run locally
+# This configuration only deploys Azure OpenAI infrastructure
+
+hooks:
+  postprovision:
+    shell: sh
+    run: |
+      echo "Generating .env file from azd environment..."
+      cd ..
+      bash .azd-env.sh
+    continueOnError: false
+    interactive: false
