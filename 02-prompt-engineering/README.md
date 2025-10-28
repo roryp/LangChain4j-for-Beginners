@@ -108,11 +108,31 @@ Not all problems need the same approach. Some questions need quick answers, othe
 
 ### Use Existing Azure Resources
 
+**Prerequisites:**
+
+1. Build all modules (required before first run):
 ```bash
-# From Module 01 deployment
+cd ..  # Go to root directory
+mvn clean package -DskipTests
+```
+
+2. Start the application:
+```bash
 cd 02-prompt-engineering
 source ../.env
 mvn spring-boot:run
+```
+
+Or use the start script:
+```bash
+cd 02-prompt-engineering
+./start.sh  # Automatically sources .env from parent directory
+```
+
+Or start all web applications (modules 01-04):
+```bash
+cd ..
+./start-all.sh  # From root directory - runs all 4 Spring Boot apps
 ```
 
 Open http://localhost:8083 in your browser.

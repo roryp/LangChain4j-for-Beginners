@@ -84,11 +84,25 @@ This happens in a single conversation turn. The agent orchestrates multiple tool
 
 ### Use Existing Azure Resources
 
+**Prerequisites:**
+
+1. Build all modules (required before first run):
 ```bash
-# From Module 01 deployment
+cd ..  # Go to root directory
+mvn clean package -DskipTests
+```
+
+2. Start the application:
+```bash
 cd 04-tools
 source ../.env
 ./start.sh
+```
+
+Or start all web applications (modules 01-04):
+```bash
+cd ..
+./start-all.sh  # From root directory - runs all 4 Spring Boot apps
 ```
 
 Open http://localhost:8084 in your browser.

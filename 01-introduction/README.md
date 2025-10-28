@@ -120,31 +120,43 @@ bash .azd-env.sh
 
 ### Run Locally
 
-**Verify `.env` file exists in root directory with Azure credentials:**
+**Prerequisites:**
+
+1. Verify `.env` file exists in root directory with Azure credentials:
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
-**Start just this module:**
+2. Build all modules (required before first run):
+```bash
+cd ..  # Go to root directory
+mvn clean package -DskipTests
+```
+
+**Start the applications:**
+
+Start just this module:
 ```bash
 cd 01-introduction
 ./start.sh  # Automatically sources .env from parent directory
 ```
 
-**Or start all web applications (modules 01-04):**
+Or start all web applications (modules 01-04):
 ```bash
-./start-all.sh  # From root directory
+cd ..
+./start-all.sh  # From root directory - runs all 4 Spring Boot apps
 ```
 
-**Or run manually:**
+Or run manually:
 ```bash
+cd 01-introduction
 source ../.env
 mvn spring-boot:run
 ```
 
 Open http://localhost:8080 in your browser.
 
-**To stop all applications:** `./stop-all.sh`
+**To stop all applications:** `cd .. && ./stop-all.sh`
 
 ## Using the Application
 
