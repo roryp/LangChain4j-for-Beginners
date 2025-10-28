@@ -29,7 +29,16 @@
     <langchain4j.mcp.version>1.8.0-beta15</langchain4j.mcp.version>
     <!-- Test dependency versions -->
     <junit.version>5.10.0</junit.version>
-    <assertj.version>3.24.2</assertj.version>
+    <assertj.version>3.25.3</assertj.version>
+    <testcontainers.version>1.19.3</testcontainers.version>
+    <!-- Logging versions -->
+    <slf4j.version>2.0.9</slf4j.version>
+    <logback.version>1.5.12</logback.version>
+    <!-- Other dependency versions -->
+    <pdfbox.version>2.0.31</pdfbox.version>
+    <!-- Maven plugin versions -->
+    <maven.surefire.version>3.5.4</maven.surefire.version>
+    <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
     <!-- Encoding -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -55,10 +64,47 @@
         <scope>test</scope>
       </dependency>
       <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
         <groupId>org.assertj</groupId>
         <artifactId>assertj-core</artifactId>
         <version>${assertj.version}</version>
         <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>testcontainers</artifactId>
+        <version>${testcontainers.version}</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.testcontainers</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${testcontainers.version}</version>
+        <scope>test</scope>
+      </dependency>
+      
+      <!-- Logging dependencies -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback.version}</version>
+      </dependency>
+      
+      <!-- Other dependencies -->
+      <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>pdfbox</artifactId>
+        <version>${pdfbox.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -69,7 +115,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.13.0</version>
+          <version>${maven.compiler.plugin.version}</version>
           <configuration>
             <source>${java.version}</source>
             <target>${java.version}</target>
@@ -80,6 +126,11 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>${spring.boot.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven.surefire.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>

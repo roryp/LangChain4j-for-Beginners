@@ -71,11 +71,31 @@ The most relevant chunks are included in the prompt to the model. The model read
 
 ### Use Existing Azure Resources
 
+**Prerequisites:**
+
+1. Build all modules (required before first run):
 ```bash
-# From Module 01 deployment
+cd ..  # Go to root directory
+mvn clean package -DskipTests
+```
+
+2. Start the application:
+```bash
 cd 03-rag
 source ../.env
 mvn spring-boot:run
+```
+
+Or use the start script:
+```bash
+cd 03-rag
+./start.sh  # Automatically sources .env from parent directory
+```
+
+Or start all web applications (modules 01-04):
+```bash
+cd ..
+./start-all.sh  # From root directory - runs all 4 Spring Boot apps
 ```
 
 Open http://localhost:8081 in your browser.
