@@ -112,7 +112,7 @@ This will:
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.
 ```
 
-**Or manually generate `.env` from azd:**
+**Note:** The `azd up` command automatically generates the `.env` file. If you need to regenerate it manually (e.g., after changing Azure resources), run:
 ```bash
 cd ..
 bash .azd-env.sh
