@@ -80,6 +80,9 @@ mvn clean package -DskipTests
 ```
 
 2. Start the application:
+
+**Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8081. You can skip the start commands below and go directly to http://localhost:8081.
+
 ```bash
 cd 03-rag
 source ../.env
