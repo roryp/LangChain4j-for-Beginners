@@ -156,44 +156,61 @@ The web interface lets you experiment with different prompting strategies. Each 
 
 Ask a simple question like "What is 15% of 200?" using Low Eagerness. You'll get an instant, direct answer. Now ask something complex like "Design a caching strategy for a high-traffic API" using High Eagerness. Watch how the model slows down and provides detailed reasoning. Same model, same question structure - but the prompt tells it how much thinking to do.
 
-- 📸 [Low Eagerness Demo](images/low-eagerness-demo.png) - Quick calculation with minimal reasoning
-- 📸 [High Eagerness Demo](images/high-eagerness-demo.png) - Comprehensive caching strategy (2.8MB)
+<img src="images/low-eagerness-demo.png" alt="Low Eagerness Demo" width="800"/>
+
+*Quick calculation with minimal reasoning*
+
+<img src="images/high-eagerness-demo.png" alt="High Eagerness Demo" width="800"/>
+
+*Comprehensive caching strategy (2.8MB)*
 
 ### Task Execution (Tool Preambles)
 
 Multi-step workflows benefit from upfront planning and progress narration. The model outlines what it will do, narrates each step, then summarizes results.
 
-- 📸 [Task Execution Demo](images/tool-preambles-demo.png) - Creating a REST endpoint with step-by-step narration (3.9MB)
+<img src="images/tool-preambles-demo.png" alt="Task Execution Demo" width="800"/>
+
+*Creating a REST endpoint with step-by-step narration (3.9MB)*
 
 ### Self-Reflecting Code
 
 Try "Create an email validation service". Instead of just generating code and stopping, the model generates, evaluates against quality criteria, identifies weaknesses, and improves. You'll see it iterate until the code meets production standards.
 
-- 📸 [Self-Reflecting Code Demo](images/self-reflecting-code-demo.png) - Complete email validation service (5.2MB)
+<img src="images/self-reflecting-code-demo.png" alt="Self-Reflecting Code Demo" width="800"/>
+
+*Complete email validation service (5.2MB)*
 
 ### Structured Analysis
 
 Code reviews need consistent evaluation frameworks. The model analyzes code using fixed categories (correctness, practices, performance, security) with severity levels.
 
-- 📸 [Structured Analysis Demo](images/structured-analysis-demo.png) - Framework-based code review
+<img src="images/structured-analysis-demo.png" alt="Structured Analysis Demo" width="800"/>
+
+*Framework-based code review*
 
 ### Multi-Turn Chat
 
 Ask "What is Spring Boot?" then immediately follow up with "Show me an example". The model remembers your first question and gives you a Spring Boot example specifically. Without memory, that second question would be too vague.
 
-- 📸 [Multi-Turn Chat Demo](images/multi-turn-chat-demo.png) - Context preservation across questions
+<img src="images/multi-turn-chat-demo.png" alt="Multi-Turn Chat Demo" width="800"/>
+
+*Context preservation across questions*
 
 ### Step-by-Step Reasoning
 
 Pick a math problem and try it with both Step-by-Step Reasoning and Low Eagerness. Low eagerness just gives you the answer - fast but opaque. Step-by-step shows you every calculation and decision.
 
-- 📸 [Step-by-Step Reasoning Demo](images/step-by-step-reasoning-demo.png) - Math problem with explicit steps
+<img src="images/step-by-step-reasoning-demo.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+
+*Math problem with explicit steps*
 
 ### Constrained Output
 
 When you need specific formats or word counts, this pattern enforces strict adherence. Try generating a summary with exactly 100 words in bullet point format.
 
-- 📸 [Constrained Output Demo](images/constrained-output-demo.png) - Machine learning summary with format control
+<img src="images/constrained-output-demo.png" alt="Constrained Output Demo" width="800"/>
+
+*Machine learning summary with format control*
 
 [↑ Back to top](#module-02-prompt-engineering-with-gpt-5)
 
