@@ -162,19 +162,25 @@ Open http://localhost:8080 in your browser.
 
 The application provides a web interface with two chat implementations side-by-side.
 
-- 📸 [Application Home Screen](images/home-screen.png) - Dashboard showing both Simple Chat (stateless) and Conversational Chat (stateful) options
+<img src="images/home-screen.png" alt="Application Home Screen" width="800"/>
+
+*Dashboard showing both Simple Chat (stateless) and Conversational Chat (stateful) options*
 
 ### Stateless Chat (Left Panel)
 
 Try this first. Ask "My name is John" and then immediately ask "What's my name?" The model won't remember because each message is independent. This demonstrates the core problem with basic language model integration - no conversation context.
 
-- 📸 [Stateless Chat Demo](images/simple-chat-stateless-demo.png) - AI doesn't remember your name from the previous message
+<img src="images/simple-chat-stateless-demo.png" alt="Stateless Chat Demo" width="800"/>
+
+*AI doesn't remember your name from the previous message*
 
 ### Stateful Chat (Right Panel)
 
 Now try the same sequence here. Ask "My name is John" and then "What's my name?" This time it remembers. The difference is MessageWindowChatMemory - it maintains conversation history and includes it with each request. This is how production conversational AI works.
 
-- 📸 [Stateful Chat Demo](images/conversational-chat-stateful-demo.png) - AI remembers your name from earlier in the conversation
+<img src="images/conversational-chat-stateful-demo.png" alt="Stateful Chat Demo" width="800"/>
+
+*AI remembers your name from earlier in the conversation*
 
 Both panels use the same GPT-5 model. The only difference is memory. This makes it clear what memory brings to your application and why it's essential for real use cases.
 
