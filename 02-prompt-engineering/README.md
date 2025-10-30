@@ -46,9 +46,9 @@ This module demonstrates advanced prompting patterns using the same LangChain4j 
 
 **[Prompt Templates](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java)** - The real focus here is prompt engineering, not new LangChain4j APIs. Each pattern (low eagerness, high eagerness, task execution, etc.) uses the same `chatModel.chat(prompt)` method but with carefully structured prompt strings. The XML tags, instructions, and formatting are all part of the prompt text, not LangChain4j features.
 
-**Reasoning Control** - GPT-5's reasoning effort is controlled through prompt instructions like "maximum 2 reasoning steps" or "explore thoroughly". These are prompt engineering techniques, not LangChain4j configurations. The library simply delivers your prompts to the model.
+**Reasoning Control** - GPT-5's reasoning effort is controlled through prompt instructions like "maximum 2 reasoning steps" or "explore thoroughly". These are prompt engineering techniques, not LangChain4j configurations. The library simply delivers your prompts to the model. See how this is implemented in [Gpt5PromptService.java](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java).
 
-The key takeaway: LangChain4j provides the infrastructure (model connection, memory, message handling), while this module teaches you how to craft effective prompts within that infrastructure.
+The key takeaway: LangChain4j provides the infrastructure (model connection via [LangChainConfig.java](src/main/java/com/example/langchain4j/prompts/config/LangChainConfig.java), memory, message handling via [Gpt5PromptService.java](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java)), while this module teaches you how to craft effective prompts within that infrastructure.
 
 ## The Core Patterns
 
