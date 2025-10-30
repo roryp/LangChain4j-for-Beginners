@@ -52,15 +52,15 @@ This happens automatically. You define the tools and their descriptions. The mod
 
 ## How Tool Calling Works
 
-**[Tool Definitions](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java)**
+**Tool Definitions** - [WeatherTool.java](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureConverter.java](src/main/java/com/example/langchain4j/agents/tools/TemperatureConverter.java)
 
 You define functions with clear descriptions and parameter specifications. The model sees these descriptions in its system prompt and understands what each tool does.
 
-**[Decision Making](src/main/java/com/example/langchain4j/agents/service/AgentService.java)**
+**Decision Making**
 
 When a user asks "What's the weather in Seattle?", the model recognizes it needs the weather tool. It generates a function call with the location parameter set to "Seattle".
 
-**[Execution](src/main/java/com/example/langchain4j/agents/service/AgentService.java)**
+**Execution** - [AgentService.java](src/main/java/com/example/langchain4j/agents/service/AgentService.java)
 
 Your code intercepts the function call, executes the actual weather lookup (via API or database), and returns the result to the model.
 
