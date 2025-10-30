@@ -40,7 +40,7 @@ We'll use three core components:
 
 ## LangChain4j Dependencies
 
-This quick start uses two Maven dependencies in the [`pom.xml`](pom.xml#L24-L36):
+This quick start uses two Maven dependencies in the [`pom.xml`](pom.xml):
 
 ```xml
 <!-- Core LangChain4j library -->
@@ -124,6 +124,17 @@ Ask questions about content in `document.txt`.
 **Basic Chat** - [BasicChatDemo.java](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
 
 Start here to see LangChain4j at its simplest. You'll create an `OpenAiChatModel`, send a prompt with `.chat()`, and get back a response. This demonstrates the foundation: how to initialize models with custom endpoints and API keys. Once you understand this pattern, everything else builds on it.
+
+```java
+ChatLanguageModel model = OpenAiChatModel.builder()
+    .baseUrl("https://models.github.ai/inference")
+    .apiKey(System.getenv("GITHUB_TOKEN"))
+    .modelName("gpt-4o-mini")
+    .build();
+
+String response = model.chat("What is LangChain4j?");
+System.out.println(response);
+```
 
 **Prompt Engineering** - [PromptEngineeringDemo.java](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java)
 
