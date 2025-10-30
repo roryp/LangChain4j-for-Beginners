@@ -46,11 +46,11 @@ MCP standardizes this. An MCP server exposes tools with clear descriptions and s
 
 ## How MCP Works
 
-**[Server-Client Architecture](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L37-L62)**
+**[Server-Client Architecture](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)**
 
 MCP uses a client-server model. Servers provide tools - reading files, querying databases, calling APIs. Clients (your AI application) connect to servers and use their tools.
 
-**[Tool Discovery](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L53-L56)**
+**[Tool Discovery](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)**
 
 When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
 
@@ -62,11 +62,11 @@ MCP supports different ways to connect:
 
 *Three MCP transport mechanisms for different integration scenarios*
 
-**[Streamable HTTP](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L37-L48)** - For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
+**[Streamable HTTP](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)** - For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
 
-**[Stdio](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java#L35-L48)** - For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
+**[Stdio](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)** - For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
 
-**[Docker](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java#L40-L51)** - For containerized services. Your application launches a Docker container that exposes MCP tools. Good for complex dependencies or isolated environments.
+**[Docker](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)** - For containerized services. Your application launches a Docker container that exposes MCP tools. Good for complex dependencies or isolated environments.
 
 ## What This Module Covers
 
@@ -150,15 +150,15 @@ The application launches a Docker container, mounts your repository, and analyze
 **Transport Selection**
 
 Choose based on where your tools live:
-- Remote services → [Streamable HTTP](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L81-L88)
-- Local file system → [Stdio](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java#L71-L82)
-- Complex dependencies → [Docker](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java#L85-L96)
+- Remote services → [Streamable HTTP](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
+- Local file system → [Stdio](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
+- Complex dependencies → [Docker](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
 
-**[Tool Discovery](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L53-L56)**
+**[Tool Discovery](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)**
 
 MCP clients automatically discover available tools when connecting. Your AI agent sees tool descriptions and decides which ones to use based on the user's request.
 
-**[Session Management](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L58-L62)**
+**[Session Management](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)**
 
 Streamable HTTP transport maintains sessions, allowing stateful interactions with remote servers. Stdio and Docker transports are typically stateless.
 

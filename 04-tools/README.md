@@ -52,15 +52,15 @@ This happens automatically. You define the tools and their descriptions. The mod
 
 ## How Tool Calling Works
 
-**[Tool Definitions](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java#L27-L39)**
+**[Tool Definitions](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java)**
 
 You define functions with clear descriptions and parameter specifications. The model sees these descriptions in its system prompt and understands what each tool does.
 
-**[Decision Making](src/main/java/com/example/langchain4j/agents/service/AgentService.java#L99-L110)**
+**[Decision Making](src/main/java/com/example/langchain4j/agents/service/AgentService.java)**
 
 When a user asks "What's the weather in Seattle?", the model recognizes it needs the weather tool. It generates a function call with the location parameter set to "Seattle".
 
-**[Execution](src/main/java/com/example/langchain4j/agents/service/AgentService.java#L85-L98)**
+**[Execution](src/main/java/com/example/langchain4j/agents/service/AgentService.java)**
 
 Your code intercepts the function call, executes the actual weather lookup (via API or database), and returns the result to the model.
 
@@ -157,13 +157,13 @@ Notice how the agent interprets natural language and maps it to appropriate tool
 
 **ReAct Pattern (Reasoning and Acting)**
 
-The agent alternates between reasoning (deciding what to do) and acting (using tools). This pattern enables autonomous problem-solving rather than just responding to instructions. [See implementation](src/main/java/com/example/langchain4j/agents/service/AgentService.java#L85-L110).
+The agent alternates between reasoning (deciding what to do) and acting (using tools). This pattern enables autonomous problem-solving rather than just responding to instructions. [See implementation](src/main/java/com/example/langchain4j/agents/service/AgentService.java).
 
-**[Tool Descriptions Matter](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java#L27-L48)**
+**[Tool Descriptions Matter](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java)**
 
 The quality of your tool descriptions directly affects how well the agent uses them. Clear, specific descriptions help the model understand when and how to call each tool.
 
-**[Session Management](src/main/java/com/example/langchain4j/agents/service/AgentService.java#L73-L80)**
+**[Session Management](src/main/java/com/example/langchain4j/agents/service/AgentService.java)**
 
 Like the conversation memory in Module 01, tool-based agents maintain session context. The agent remembers previous tool calls and results within a session, enabling multi-turn interactions.
 

@@ -34,17 +34,17 @@ This module demonstrates advanced prompting patterns using the same LangChain4j 
 </dependency>
 ```
 
-**[AzureOpenAiChatModel Configuration](src/main/java/com/example/langchain4j/prompts/config/LangChainConfig.java#L37-L48)** - Spring Boot configures the chat model with GPT-5 specific settings. The key difference from Module 01 is how we structure the prompts sent to `chatModel.chat()`, not the model setup itself.
+**[AzureOpenAiChatModel Configuration](src/main/java/com/example/langchain4j/prompts/config/LangChainConfig.java)** - Spring Boot configures the chat model with GPT-5 specific settings. The key difference from Module 01 is how we structure the prompts sent to `chatModel.chat()`, not the model setup itself.
 
-**[System and User Messages](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java#L4-L5)** - LangChain4j separates message types for clarity. `SystemMessage` sets the AI's behavior and context (like "You are a code reviewer"), while `UserMessage` contains the actual request. This separation lets you maintain consistent AI behavior across different user queries.
+**[System and User Messages](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java)** - LangChain4j separates message types for clarity. `SystemMessage` sets the AI's behavior and context (like "You are a code reviewer"), while `UserMessage` contains the actual request. This separation lets you maintain consistent AI behavior across different user queries.
 
 <img src="images/message-types.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage provides persistent context while UserMessages contain individual requests*
 
-**[MessageWindowChatMemory for Multi-Turn](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java#L26)** - For the multi-turn conversation pattern, we reuse `MessageWindowChatMemory` from Module 01. Each session gets its own memory instance stored in a `Map<String, ChatMemory>`, allowing multiple concurrent conversations without context mixing.
+**[MessageWindowChatMemory for Multi-Turn](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java)** - For the multi-turn conversation pattern, we reuse `MessageWindowChatMemory` from Module 01. Each session gets its own memory instance stored in a `Map<String, ChatMemory>`, allowing multiple concurrent conversations without context mixing.
 
-**[Prompt Templates](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java#L33-L111)** - The real focus here is prompt engineering, not new LangChain4j APIs. Each pattern (low eagerness, high eagerness, task execution, etc.) uses the same `chatModel.chat(prompt)` method but with carefully structured prompt strings. The XML tags, instructions, and formatting are all part of the prompt text, not LangChain4j features.
+**[Prompt Templates](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java)** - The real focus here is prompt engineering, not new LangChain4j APIs. Each pattern (low eagerness, high eagerness, task execution, etc.) uses the same `chatModel.chat(prompt)` method but with carefully structured prompt strings. The XML tags, instructions, and formatting are all part of the prompt text, not LangChain4j features.
 
 **Reasoning Control** - GPT-5's reasoning effort is controlled through prompt instructions like "maximum 2 reasoning steps" or "explore thoroughly". These are prompt engineering techniques, not LangChain4j configurations. The library simply delivers your prompts to the model.
 
