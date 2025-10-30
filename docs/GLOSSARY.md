@@ -1,3 +1,9 @@
+# LangChain4j Glossary
+
+Quick reference for terms and concepts used throughout the course.
+
+## Core Concepts
+
 **AI Agent** - System that uses AI to reason and act autonomously. [Module 04](../04-tools/README.md)
 
 **Chain** - Sequence of operations where output feeds into the next step.
@@ -24,35 +30,35 @@
 
 ## LangChain4j Components
 
-**AiServices** - Creates type-safe AI service interfaces using `@Tool` annotations. [Module 04](../04-tools/README.md)
+**AiServices** - Creates type-safe AI service interfaces using `@Tool` annotations.
 
-**AzureOpenAiChatModel** - Connects to Azure OpenAI models. [Module 01](../01-introduction/README.md)
+**AzureOpenAiChatModel** - Connects to Azure OpenAI models.
 
-**AzureOpenAiEmbeddingModel** - Creates embeddings using Azure OpenAI. [Module 03](../03-rag/README.md)
+**AzureOpenAiEmbeddingModel** - Creates embeddings using Azure OpenAI.
 
-**ChatLanguageModel** - Core interface for language models. [Module 00](../00-quick-start/README.md)
+**ChatLanguageModel** - Core interface for language models.
 
-**ChatMemory** - Maintains conversation history. [Module 01](../01-introduction/README.md)
+**ChatMemory** - Maintains conversation history.
 
-**ContentRetriever** - Finds relevant document chunks for RAG. [Module 03](../03-rag/README.md)
+**ContentRetriever** - Finds relevant document chunks for RAG.
 
-**DocumentSplitter** - Breaks documents into chunks. [Module 03](../03-rag/README.md)
+**DocumentSplitter** - Breaks documents into chunks.
 
-**EmbeddingModel** - Converts text into numerical vectors. [Module 03](../03-rag/README.md)
+**EmbeddingModel** - Converts text into numerical vectors.
 
-**EmbeddingStore** - Stores and retrieves embeddings. [Module 03](../03-rag/README.md)
+**EmbeddingStore** - Stores and retrieves embeddings.
 
-**MessageWindowChatMemory** - Maintains sliding window of recent messages. [Module 01](../01-introduction/README.md)
+**MessageWindowChatMemory** - Maintains sliding window of recent messages.
 
-**OpenAiChatModel** - Connects to OpenAI-compatible endpoints. [Module 00](../00-quick-start/README.md)
+**OpenAiChatModel** - Connects to OpenAI-compatible endpoints.
 
-**PromptTemplate** - Creates reusable prompts with `{{variable}}` placeholders. [Module 02](../02-prompt-engineering/README.md)
+**PromptTemplate** - Creates reusable prompts with `{{variable}}` placeholders.
 
-**TextSegment** - Text chunk with metadata. Used in RAG. [Module 03](../03-rag/README.md)
+**TextSegment** - Text chunk with metadata. Used in RAG.
 
-**ToolExecutionRequest** - Represents tool execution request. [Module 04](../04-tools/README.md)
+**ToolExecutionRequest** - Represents tool execution request.
 
-**UserMessage / AiMessage / SystemMessage** - Conversation message types. [Module 01](../01-introduction/README.md)
+**UserMessage / AiMessage / SystemMessage** - Conversation message types.
 
 ## AI/ML Concepts
 
@@ -68,96 +74,96 @@
 
 **Zero-Shot Learning** - Performing tasks without examples. [Module 02](../02-prompt-engineering/README.md)
 
-## Prompt Engineering
+## Prompt Engineering - [Module 02](../02-prompt-engineering/README.md)
 
-**Chain-of-Thought** - Step-by-step reasoning for better accuracy. [Module 02](../02-prompt-engineering/README.md)
+**Chain-of-Thought** - Step-by-step reasoning for better accuracy.
 
-**Constrained Output** - Enforcing specific format or structure. [Module 02](../02-prompt-engineering/README.md)
+**Constrained Output** - Enforcing specific format or structure.
 
-**High Eagerness** - GPT-5 pattern for thorough reasoning. [Module 02](../02-prompt-engineering/README.md)
+**High Eagerness** - GPT-5 pattern for thorough reasoning.
 
-**Low Eagerness** - GPT-5 pattern for quick answers. [Module 02](../02-prompt-engineering/README.md)
+**Low Eagerness** - GPT-5 pattern for quick answers.
 
-**Multi-Turn Conversation** - Maintaining context across exchanges. [Module 02](../02-prompt-engineering/README.md)
+**Multi-Turn Conversation** - Maintaining context across exchanges.
 
-**Role-Based Prompting** - Setting model persona via system messages. [Module 02](../02-prompt-engineering/README.md)
+**Role-Based Prompting** - Setting model persona via system messages.
 
-**Self-Reflection** - Model evaluates and improves its output. [Module 02](../02-prompt-engineering/README.md)
+**Self-Reflection** - Model evaluates and improves its output.
 
-**Structured Analysis** - Fixed evaluation framework. [Module 02](../02-prompt-engineering/README.md)
+**Structured Analysis** - Fixed evaluation framework.
 
-**Task Execution Pattern** - Plan → Execute → Summarize. [Module 02](../02-prompt-engineering/README.md)
+**Task Execution Pattern** - Plan → Execute → Summarize.
 
-## RAG (Retrieval-Augmented Generation)
+## RAG (Retrieval-Augmented Generation) - [Module 03](../03-rag/README.md)
 
-**Document Processing Pipeline** - Load → chunk → embed → store. [Module 03](../03-rag/README.md)
+**Document Processing Pipeline** - Load → chunk → embed → store.
 
-**In-Memory Embedding Store** - Non-persistent storage for testing. [Module 03](../03-rag/README.md)
+**In-Memory Embedding Store** - Non-persistent storage for testing.
 
-**RAG** - Combines retrieval with generation to ground responses. [Module 03](../03-rag/README.md)
+**RAG** - Combines retrieval with generation to ground responses.
 
-**Similarity Score** - Measure (0-1) of semantic similarity. [Module 03](../03-rag/README.md)
+**Similarity Score** - Measure (0-1) of semantic similarity.
 
-**Source Reference** - Metadata about retrieved content. [Module 03](../03-rag/README.md)
+**Source Reference** - Metadata about retrieved content.
 
-## Agents and Tools
+## Agents and Tools - [Module 04](../04-tools/README.md)
 
-**@Tool Annotation** - Marks Java methods as AI-callable tools. [Module 04](../04-tools/README.md)
+**@Tool Annotation** - Marks Java methods as AI-callable tools.
 
-**ReAct Pattern** - Reason → Act → Observe → Repeat. [Module 04](../04-tools/README.md)
+**ReAct Pattern** - Reason → Act → Observe → Repeat.
 
-**Session Management** - Separate contexts for different users. [Module 04](../04-tools/README.md)
+**Session Management** - Separate contexts for different users.
 
-**Tool** - Function an AI agent can call. [Module 04](../04-tools/README.md)
+**Tool** - Function an AI agent can call.
 
-**Tool Description** - Documentation of tool purpose and parameters. [Module 04](../04-tools/README.md)
+**Tool Description** - Documentation of tool purpose and parameters.
 
-## Model Context Protocol (MCP)
+## Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)
 
-**Docker Transport** - MCP server in Docker container. [Module 05](../05-mcp/README.md)
+**Docker Transport** - MCP server in Docker container.
 
-**MCP** - Standard for connecting AI apps to external tools. [Module 05](../05-mcp/README.md)
+**MCP** - Standard for connecting AI apps to external tools.
 
-**MCP Client** - Application that connects to MCP servers. [Module 05](../05-mcp/README.md)
+**MCP Client** - Application that connects to MCP servers.
 
-**MCP Server** - Service exposing tools via MCP. [Module 05](../05-mcp/README.md)
+**MCP Server** - Service exposing tools via MCP.
 
 **Server-Sent Events (SSE)** - Server-to-client streaming over HTTP.
 
-**Stdio Transport** - Server as subprocess via stdin/stdout. [Module 05](../05-mcp/README.md)
+**Stdio Transport** - Server as subprocess via stdin/stdout.
 
-**Streamable HTTP Transport** - HTTP with SSE for real-time communication. [Module 05](../05-mcp/README.md)
+**Streamable HTTP Transport** - HTTP with SSE for real-time communication.
 
-**Tool Discovery** - Client queries server for available tools. [Module 05](../05-mcp/README.md)
+**Tool Discovery** - Client queries server for available tools.
 
-## Azure Services
+## Azure Services - [Module 01](../01-introduction/README.md)
 
 **Azure AI Search** - Cloud search with vector capabilities. [Module 03](../03-rag/README.md)
 
-**Azure Developer CLI (azd)** - Deploys Azure resources. [Module 01](../01-introduction/README.md)
+**Azure Developer CLI (azd)** - Deploys Azure resources.
 
-**Azure OpenAI** - Microsoft's enterprise AI service. [Module 01](../01-introduction/README.md)
+**Azure OpenAI** - Microsoft's enterprise AI service.
 
-**Bicep** - Azure infrastructure-as-code language. [Module 01](../01-introduction/infra/README.md)
+**Bicep** - Azure infrastructure-as-code language. [Infrastructure Guide](../01-introduction/infra/README.md)
 
-**Deployment Name** - Name for model deployment in Azure. [Module 01](../01-introduction/README.md)
+**Deployment Name** - Name for model deployment in Azure.
 
 **GPT-5** - Latest OpenAI model with reasoning control. [Module 02](../02-prompt-engineering/README.md)
 
-## Testing and Development
+## Testing and Development - [Testing Guide](TESTING.md)
 
-**Dev Container** - Containerized development environment.
+**Dev Container** - Containerized development environment. [Configuration](../.devcontainer/devcontainer.json)
 
 **GitHub Models** - Free AI model playground. [Module 00](../00-quick-start/README.md)
 
-**In-Memory Testing** - Testing with in-memory storage. [Testing Guide](TESTING.md)
+**In-Memory Testing** - Testing with in-memory storage.
 
-**Integration Testing** - Testing with real infrastructure. [Testing Guide](TESTING.md)
+**Integration Testing** - Testing with real infrastructure.
 
 **Maven** - Java build automation tool.
 
-**Mockito** - Java mocking framework. [Testing Guide](TESTING.md)
+**Mockito** - Java mocking framework.
 
 **Spring Boot** - Java application framework. [Module 01](../01-introduction/README.md)
 
-**Testcontainers** - Docker containers in tests. [Testing Guide](TESTING.md)
+**Testcontainers** - Docker containers in tests.
