@@ -34,9 +34,13 @@ This module demonstrates advanced prompting patterns using the same LangChain4j 
 </dependency>
 ```
 
-**[AzureOpenAiChatModel Configuration](src/main/java/com/example/langchain4j/prompts/config/LangChainConfig.java)** - Spring Boot configures the chat model with GPT-5 specific settings. The key difference from Module 01 is how we structure the prompts sent to `chatModel.chat()`, not the model setup itself.
+**AzureOpenAiChatModel Configuration** - [LangChainConfig.java](src/main/java/com/example/langchain4j/prompts/config/LangChainConfig.java)
 
-**[System and User Messages](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java)** - LangChain4j separates message types for clarity. `SystemMessage` sets the AI's behavior and context (like "You are a code reviewer"), while `UserMessage` contains the actual request. This separation lets you maintain consistent AI behavior across different user queries.
+Spring Boot configures the chat model with GPT-5 specific settings. The key difference from Module 01 is how we structure the prompts sent to `chatModel.chat()`, not the model setup itself.
+
+**System and User Messages** - [Gpt5PromptService.java](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java)
+
+LangChain4j separates message types for clarity. `SystemMessage` sets the AI's behavior and context (like "You are a code reviewer"), while `UserMessage` contains the actual request. This separation lets you maintain consistent AI behavior across different user queries.
 
 <img src="images/message-types.png" alt="Message Types Architecture" width="800"/>
 

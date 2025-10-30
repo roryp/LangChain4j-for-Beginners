@@ -62,11 +62,17 @@ MCP supports different ways to connect:
 
 *Three MCP transport mechanisms for different integration scenarios*
 
-**[Streamable HTTP](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)** - For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
+**Streamable HTTP** - [StreamableHttpDemo.java](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
 
-**[Stdio](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)** - For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
+For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
 
-**[Docker](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)** - For containerized services. Your application launches a Docker container that exposes MCP tools. Good for complex dependencies or isolated environments.
+**Stdio** - [StdioTransportDemo.java](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
+
+For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
+
+**Docker** - [GitRepositoryAnalyzer.java](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+
+For containerized services. Your application launches a Docker container that exposes MCP tools. Good for complex dependencies or isolated environments.
 
 ## What This Module Covers
 
