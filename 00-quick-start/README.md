@@ -182,7 +182,7 @@ String response = model.chat(prompt);
 
 ## Next Steps
 
-Ready for more? The [Introduction module](../01-introduction/README.md) covers conversation memory, architecture patterns, and production considerations using Azure OpenAI's GPT-5.
+**Next Module:** [01-introduction - Getting Started with LangChain4j and gpt-5 on Azure](../01-introduction/README.md)
 
 ---
 
