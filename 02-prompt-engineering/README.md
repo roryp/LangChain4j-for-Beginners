@@ -80,9 +80,42 @@ Not all problems need the same approach. Some questions need quick answers, othe
 
 **Low Eagerness (Quick & Focused)** - For simple questions where you want fast, direct answers. The model does minimal reasoning - maximum 2 steps. Use this for calculations, lookups, or straightforward questions.
 
+```java
+String prompt = """
+    <reasoning_effort>low</reasoning_effort>
+    <instruction>maximum 2 reasoning steps</instruction>
+    
+    What is 15% of 200?
+    """;
+
+String response = chatModel.chat(prompt);
+```
+
 **High Eagerness (Deep & Thorough)** - For complex problems where you want comprehensive analysis. The model explores thoroughly and shows detailed reasoning. Use this for system design, architecture decisions, or complex research.
 
+```java
+String prompt = """
+    <reasoning_effort>high</reasoning_effort>
+    <instruction>explore thoroughly, show detailed reasoning</instruction>
+    
+    Design a caching strategy for a high-traffic REST API.
+    """;
+
+String response = chatModel.chat(prompt);
+```
+
 **Task Execution (Step-by-Step Progress)** - For multi-step workflows. The model provides an upfront plan, narrates each step as it works, then gives a summary. Use this for migrations, implementations, or any multi-step process.
+
+```java
+String prompt = """
+    <task>Create a REST endpoint for user registration</task>
+    <preamble>Provide an upfront plan</preamble>
+    <narration>Narrate each step as you work</narration>
+    <summary>Summarize what was accomplished</summary>
+    """;
+
+String response = chatModel.chat(prompt);
+```
 
 <img src="images/task-execution-pattern.png" alt="Task Execution Pattern" width="800"/>
 
@@ -90,11 +123,46 @@ Not all problems need the same approach. Some questions need quick answers, othe
 
 **Self-Reflecting Code** - For generating production-quality code. The model generates code, checks it against quality criteria, and improves it iteratively. Use this when building new features or services.
 
+```java
+String prompt = """
+    <task>Create an email validation service</task>
+    <quality_criteria>
+    - Correct logic and error handling
+    - Best practices (clean code, proper naming)
+    - Performance optimization
+    - Security considerations
+    </quality_criteria>
+    <instruction>Generate code, evaluate against criteria, improve iteratively</instruction>
+    """;
+
+String response = chatModel.chat(prompt);
+```
+
 <img src="images/self-reflection-cycle.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Iterative improvement loop - generate, evaluate, identify issues, improve, repeat*
 
 **Structured Analysis** - For consistent evaluation. The model reviews code using a fixed framework (correctness, practices, performance, security). Use this for code reviews or quality assessments.
+
+```java
+String prompt = """
+    <code>
+    public List getUsers() {
+        return database.query("SELECT * FROM users");
+    }
+    </code>
+    
+    <framework>
+    Evaluate using these categories:
+    1. Correctness - Logic and functionality
+    2. Best Practices - Code quality
+    3. Performance - Efficiency concerns
+    4. Security - Vulnerabilities
+    </framework>
+    """;
+
+String response = chatModel.chat(prompt);
+```
 
 <img src="images/structured-analysis-pattern.png" alt="Structured Analysis Pattern" width="800"/>
 
@@ -102,17 +170,55 @@ Not all problems need the same approach. Some questions need quick answers, othe
 
 **Multi-Turn Chat** - For conversations that need context. The model remembers previous messages and builds on them. Use this for interactive help sessions or complex Q&A.
 
+```java
+ChatMemory memory = MessageWindowChatMemory.withMaxMessages(10);
+
+memory.add(UserMessage.from("What is Spring Boot?"));
+String response1 = chatModel.chat(memory.messages());
+memory.add(AiMessage.from(response1));
+
+memory.add(UserMessage.from("Show me an example"));
+String response2 = chatModel.chat(memory.messages());
+memory.add(AiMessage.from(response2));
+```
+
 <img src="images/context-memory.png" alt="Context Memory" width="800"/>
 
 *How conversation context accumulates over multiple turns until reaching the token limit*
 
 **Step-by-Step Reasoning** - For problems requiring visible logic. The model shows explicit reasoning for each step. Use this for math problems, logic puzzles, or when you need to understand the thinking process.
 
+```java
+String prompt = """
+    <instruction>Show your reasoning step-by-step</instruction>
+    
+    If a train travels 120 km in 2 hours, then stops for 30 minutes,
+    then travels another 90 km in 1.5 hours, what is the average speed
+    for the entire journey including the stop?
+    """;
+
+String response = chatModel.chat(prompt);
+```
+
 <img src="images/step-by-step-pattern.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Breaking down problems into explicit logical steps*
 
 **Constrained Output** - For responses with specific format requirements. The model strictly follows format and length rules. Use this for summaries or when you need precise output structure.
+
+```java
+String prompt = """
+    <constraints>
+    - Exactly 100 words
+    - Bullet point format
+    - Technical terms only
+    </constraints>
+    
+    Summarize the key concepts of machine learning.
+    """;
+
+String response = chatModel.chat(prompt);
+```
 
 <img src="images/constrained-output-pattern.png" alt="Constrained Output Pattern" width="800"/>
 
