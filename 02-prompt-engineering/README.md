@@ -1,5 +1,25 @@
 # Module 02: Prompt Engineering with GPT-5
 
+## Table of Contents
+
+- [What You'll Learn](#what-youll-learn)
+- [Understanding Prompt Engineering](#understanding-prompt-engineering)
+- [How This Uses LangChain4j](#how-this-uses-langchain4j)
+- [The Core Patterns](#the-core-patterns)
+- [Quick Start](#quick-start)
+  - [Use Existing Azure Resources](#use-existing-azure-resources)
+- [Application Screenshots](#application-screenshots)
+- [Exploring the Patterns](#exploring-the-patterns)
+  - [Low vs High Eagerness](#low-vs-high-eagerness)
+  - [Task Execution (Tool Preambles)](#task-execution-tool-preambles)
+  - [Self-Reflecting Code](#self-reflecting-code)
+  - [Structured Analysis](#structured-analysis)
+  - [Multi-Turn Chat](#multi-turn-chat)
+  - [Step-by-Step Reasoning](#step-by-step-reasoning)
+  - [Constrained Output](#constrained-output)
+- [What You're Really Learning](#what-youre-really-learning)
+- [Next Steps](#next-steps)
+
 ## What You'll Learn
 
 In the previous module, you saw how memory enables conversational AI. Now we'll focus on how you ask questions - the prompts themselves. The way you structure your prompts dramatically affects the quality of responses you get.
