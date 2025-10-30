@@ -40,7 +40,7 @@ We'll use three core components:
 
 ## LangChain4j Dependencies
 
-This quick start uses two Maven dependencies:
+This quick start uses two Maven dependencies in the [`pom.xml`](pom.xml#L24-L36):
 
 ```xml
 <!-- Core LangChain4j library -->
@@ -121,13 +121,13 @@ Ask questions about content in `document.txt`.
 
 ## What Each Example Shows
 
-**BasicChatDemo** - Start here to see LangChain4j at its simplest. You'll create an `OpenAiChatModel`, send a prompt with `.chat()`, and get back a response. This demonstrates the foundation: how to initialize models with custom endpoints and API keys. Once you understand this pattern, everything else builds on it.
+**[BasicChatDemo.java](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java#L19-L41)** - Start here to see LangChain4j at its simplest. You'll create an `OpenAiChatModel`, send a prompt with `.chat()`, and get back a response. This demonstrates the foundation: how to initialize models with custom endpoints and API keys. Once you understand this pattern, everything else builds on it.
 
-**PromptEngineeringDemo** - Now that you know how to talk to a model, let's explore what you say to it. This demo uses the same model setup but shows four different prompting patterns. Try zero-shot prompts for direct instructions, few-shot prompts that learn from examples, chain-of-thought prompts that reveal reasoning steps, and role-based prompts that set context. You'll see how the same model gives dramatically different results based on how you frame your request.
+**[PromptEngineeringDemo.java](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java#L32-L50)** - Now that you know how to talk to a model, let's explore what you say to it. This demo uses the same model setup but shows four different prompting patterns. Try zero-shot prompts for direct instructions, few-shot prompts that learn from examples, chain-of-thought prompts that reveal reasoning steps, and role-based prompts that set context. You'll see how the same model gives dramatically different results based on how you frame your request.
 
-**ToolIntegrationDemo** - This is where LangChain4j gets powerful. You'll use `AiServices` to create an AI assistant that can call your Java methods. Just annotate methods with `@Tool("description")` and LangChain4j handles the rest - the AI automatically decides when to use each tool based on what the user asks. This demonstrates function calling, a key technique for building AI that can take actions, not just answer questions.
+**[ToolIntegrationDemo.java](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java#L25-L57)** - This is where LangChain4j gets powerful. You'll use `AiServices` to create an AI assistant that can call your Java methods. Just annotate methods with `@Tool("description")` and LangChain4j handles the rest - the AI automatically decides when to use each tool based on what the user asks. This demonstrates function calling, a key technique for building AI that can take actions, not just answer questions.
 
-**SimpleReaderDemo** - Here you'll see the foundation of RAG (retrieval-augmented generation). Instead of relying on the model's training data, you load content from `document.txt` and include it in the prompt. The AI answers based on your document, not its general knowledge. This is the first step toward building systems that can work with your own data.
+**[SimpleReaderDemo.java](src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java#L22-L74)** - Here you'll see the foundation of RAG (retrieval-augmented generation). Instead of relying on the model's training data, you load content from [`document.txt`](document.txt) and include it in the prompt. The AI answers based on your document, not its general knowledge. This is the first step toward building systems that can work with your own data.
 
 ## Next Steps
 

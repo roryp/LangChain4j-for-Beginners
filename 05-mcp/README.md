@@ -46,11 +46,11 @@ MCP standardizes this. An MCP server exposes tools with clear descriptions and s
 
 ## How MCP Works
 
-**Server-Client Architecture**
+**[Server-Client Architecture](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L42-L57)**
 
 MCP uses a client-server model. Servers provide tools - reading files, querying databases, calling APIs. Clients (your AI application) connect to servers and use their tools.
 
-**Tool Discovery**
+**[Tool Discovery](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L49-L52)**
 
 When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
 
@@ -62,21 +62,21 @@ MCP supports different ways to connect:
 
 *Three MCP transport mechanisms for different integration scenarios*
 
-**Streamable HTTP** - For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
+**[Streamable HTTP](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L40-L46)** - For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
 
-**Stdio** - For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
+**[Stdio](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java#L36-L46)** - For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
 
-**Docker** - For containerized services. Your application launches a Docker container that exposes MCP tools. Good for complex dependencies or isolated environments.
+**[Docker](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java#L42-L48)** - For containerized services. Your application launches a Docker container that exposes MCP tools. Good for complex dependencies or isolated environments.
 
 ## What This Module Covers
 
 You'll work through three examples that demonstrate different MCP integration patterns:
 
-**Streamable HTTP Transport** - Connect to a remote calculator service. See how networked tool integration works with session management.
+**[Streamable HTTP Transport](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)** - Connect to a remote calculator service. See how networked tool integration works with session management.
 
-**Stdio Transport** - Spawn a local filesystem server. Understand subprocess-based tool execution for local operations.
+**[Stdio Transport](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)** - Spawn a local filesystem server. Understand subprocess-based tool execution for local operations.
 
-**Docker-Based Git Server** - Launch a containerized Git analysis service. Learn how to work with Docker-based MCP servers and mount local repositories.
+**[Docker-Based Git Server](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)** - Launch a containerized Git analysis service. Learn how to work with Docker-based MCP servers and mount local repositories.
 
 Each example shows a different transport mechanism and use case, giving you the foundation to integrate any MCP server.
 
@@ -95,7 +95,7 @@ export GITHUB_TOKEN=your_token_here
 
 ### Example 1: Remote Calculator (Streamable HTTP)
 
-This demonstrates network-based tool integration.
+This demonstrates network-based tool integration. [View source](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
 
 **Terminal 1 - Start the MCP server:**
 ```bash
@@ -116,7 +116,7 @@ Watch the agent discover available tools, then use the calculator to perform add
 
 ### Example 2: File Operations (Stdio)
 
-This demonstrates local subprocess-based tools.
+This demonstrates local subprocess-based tools. [View source](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
 ```bash
 export GITHUB_TOKEN=your_token_here
@@ -128,7 +128,7 @@ The application spawns a filesystem MCP server automatically and reads a local f
 
 ### Example 3: Git Analysis (Docker)
 
-This demonstrates containerized tool servers.
+This demonstrates containerized tool servers. [View source](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
 
 **Terminal 1 - Build the Docker image:**
 ```bash
@@ -150,15 +150,15 @@ The application launches a Docker container, mounts your repository, and analyze
 **Transport Selection**
 
 Choose based on where your tools live:
-- Remote services → Streamable HTTP
-- Local file system → Stdio
-- Complex dependencies → Docker
+- Remote services → [Streamable HTTP](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L78-L83)
+- Local file system → [Stdio](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java#L73-L92)
+- Complex dependencies → [Docker](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java#L83-L108)
 
-**Tool Discovery**
+**[Tool Discovery](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L49-L52)**
 
 MCP clients automatically discover available tools when connecting. Your AI agent sees tool descriptions and decides which ones to use based on the user's request.
 
-**Session Management**
+**[Session Management](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java#L85-L89)**
 
 Streamable HTTP transport maintains sessions, allowing stateful interactions with remote servers. Stdio and Docker transports are typically stateless.
 

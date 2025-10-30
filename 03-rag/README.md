@@ -47,11 +47,11 @@ This grounds the model's responses in your actual data instead of relying on its
 
 ## How It Works
 
-**Document Processing**
+**[Document Processing](src/main/java/com/example/langchain4j/rag/service/DocumentService.java#L33-L39)**
 
 When you upload a document, the system breaks it into chunks - smaller pieces that fit comfortably in the model's context window. These chunks overlap slightly so you don't lose context at the boundaries.
 
-**Creating Embeddings**
+**[Creating Embeddings](src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java#L62-L71)**
 
 Each chunk is converted into a numerical representation called an embedding - essentially a mathematical fingerprint that captures the meaning of the text. Similar text produces similar embeddings.
 
@@ -59,11 +59,11 @@ Each chunk is converted into a numerical representation called an embedding - es
 
 *Documents represented as vectors in embedding space - similar content clusters together*
 
-**Semantic Search**
+**[Semantic Search](src/main/java/com/example/langchain4j/rag/service/RagService.java#L58-L68)**
 
 When you ask a question, your question also becomes an embedding. The system compares your question's embedding against all the document chunks' embeddings. It finds the chunks with the most similar meanings - not just matching keywords, but actual semantic similarity.
 
-**Answer Generation**
+**[Answer Generation](src/main/java/com/example/langchain4j/rag/service/RagService.java#L85-L98)**
 
 The most relevant chunks are included in the prompt to the model. The model reads those specific chunks and answers your question based on that information. This prevents hallucination - the model can only answer from what's in front of it.
 
@@ -140,11 +140,11 @@ Watch how the relevance scores change based on how well your question matches do
 
 ## Key Concepts
 
-**Chunking Strategy**
+**[Chunking Strategy](src/main/java/com/example/langchain4j/rag/service/DocumentService.java#L29-L30)**
 
 Documents are split into 300-token chunks with 30 tokens of overlap. This balance ensures each chunk has enough context to be meaningful while staying small enough to include multiple chunks in a prompt.
 
-**Similarity Scores**
+**[Similarity Scores](src/main/java/com/example/langchain4j/rag/service/RagService.java#L31)**
 
 Scores range from 0 to 1:
 - 0.7-1.0: Highly relevant, exact match
@@ -153,11 +153,11 @@ Scores range from 0 to 1:
 
 The system only retrieves chunks above the minimum threshold to ensure quality.
 
-**In-Memory Storage**
+**[In-Memory Storage](src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java#L80-L85)**
 
 This module uses in-memory storage for simplicity. When you restart the application, uploaded documents are lost. Production systems use persistent vector databases like Qdrant or Azure AI Search.
 
-**Context Window Management**
+**[Context Window Management](src/main/java/com/example/langchain4j/rag/service/RagService.java#L30)**
 
 Each model has a maximum context window. You can't include every chunk from a large document. The system retrieves the top N most relevant chunks (default 5) to stay within limits while providing enough context for accurate answers.
 
