@@ -157,13 +157,13 @@ Notice how the agent interprets natural language and maps it to appropriate tool
 
 **ReAct Pattern (Reasoning and Acting)**
 
-The agent alternates between reasoning (deciding what to do) and acting (using tools). This pattern enables autonomous problem-solving rather than just responding to instructions. [See implementation](src/main/java/com/example/langchain4j/agents/service/AgentService.java).
+The agent alternates between reasoning (deciding what to do) and acting (using tools). This pattern enables autonomous problem-solving rather than just responding to instructions.
 
-**[Tool Descriptions Matter](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java)**
+**Tool Descriptions Matter**
 
 The quality of your tool descriptions directly affects how well the agent uses them. Clear, specific descriptions help the model understand when and how to call each tool.
 
-**[Session Management](src/main/java/com/example/langchain4j/agents/service/AgentService.java)**
+**Session Management**
 
 Like the conversation memory in Module 01, tool-based agents maintain session context. The agent remembers previous tool calls and results within a session, enabling multi-turn interactions.
 
@@ -173,11 +173,11 @@ Tools can fail - APIs timeout, parameters might be invalid, external services go
 
 ## Available Tools
 
-**[Weather Tools](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java)** (mock data for demonstration):
+**Weather Tools** (mock data for demonstration):
 - Get current weather for a location
 - Get multi-day forecast
 
-**[Temperature Conversion Tools](src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)**:
+**Temperature Conversion Tools**:
 - Celsius to Fahrenheit
 - Fahrenheit to Celsius
 - Celsius to Kelvin

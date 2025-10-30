@@ -150,15 +150,15 @@ The application launches a Docker container, mounts your repository, and analyze
 **Transport Selection**
 
 Choose based on where your tools live:
-- Remote services → [Streamable HTTP](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-- Local file system → [Stdio](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
-- Complex dependencies → [Docker](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+- Remote services → Streamable HTTP
+- Local file system → Stdio
+- Complex dependencies → Docker
 
-**[Tool Discovery](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)**
+**Tool Discovery**
 
 MCP clients automatically discover available tools when connecting. Your AI agent sees tool descriptions and decides which ones to use based on the user's request.
 
-**[Session Management](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)**
+**Session Management**
 
 Streamable HTTP transport maintains sessions, allowing stateful interactions with remote servers. Stdio and Docker transports are typically stateless.
 

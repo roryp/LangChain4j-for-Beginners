@@ -140,11 +140,11 @@ Watch how the relevance scores change based on how well your question matches do
 
 ## Key Concepts
 
-**[Chunking Strategy](src/main/java/com/example/langchain4j/rag/service/DocumentService.java)**
+**Chunking Strategy**
 
 Documents are split into 300-token chunks with 30 tokens of overlap. This balance ensures each chunk has enough context to be meaningful while staying small enough to include multiple chunks in a prompt.
 
-**[Similarity Scores](src/main/java/com/example/langchain4j/rag/service/RagService.java)**
+**Similarity Scores**
 
 Scores range from 0 to 1:
 - 0.7-1.0: Highly relevant, exact match
@@ -153,11 +153,11 @@ Scores range from 0 to 1:
 
 The system only retrieves chunks above the minimum threshold to ensure quality.
 
-**[In-Memory Storage](src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)**
+**In-Memory Storage**
 
 This module uses in-memory storage for simplicity. When you restart the application, uploaded documents are lost. Production systems use persistent vector databases like Qdrant or Azure AI Search.
 
-**[Context Window Management](src/main/java/com/example/langchain4j/rag/service/RagService.java)**
+**Context Window Management**
 
 Each model has a maximum context window. You can't include every chunk from a large document. The system retrieves the top N most relevant chunks (default 5) to stay within limits while providing enough context for accurate answers.
 
