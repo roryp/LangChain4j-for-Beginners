@@ -46,11 +46,11 @@ MCP standardizes this. An MCP server exposes tools with clear descriptions and s
 
 ## How MCP Works
 
-**[Server-Client Architecture](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)**
+**Server-Client Architecture**
 
 MCP uses a client-server model. Servers provide tools - reading files, querying databases, calling APIs. Clients (your AI application) connect to servers and use their tools.
 
-**[Tool Discovery](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)**
+**Tool Discovery**
 
 When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
 
