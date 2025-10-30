@@ -51,9 +51,32 @@ This grounds the model's responses in your actual data instead of relying on its
 
 When you upload a document, the system breaks it into chunks - smaller pieces that fit comfortably in the model's context window. These chunks overlap slightly so you don't lose context at the boundaries.
 
+```java
+Document document = FileSystemDocumentLoader.loadDocument("sample-document.txt");
+
+DocumentSplitter splitter = DocumentSplitters
+    .recursive(300, 30, new OpenAiTokenizer());
+
+List<TextSegment> segments = splitter.split(document);
+```
+
 **Creating Embeddings** - [LangChainRagConfig.java](src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
 
 Each chunk is converted into a numerical representation called an embedding - essentially a mathematical fingerprint that captures the meaning of the text. Similar text produces similar embeddings.
+
+```java
+@Bean
+public EmbeddingModel embeddingModel() {
+    return AzureOpenAiEmbeddingModel.builder()
+        .endpoint(azureOpenAiEndpoint)
+        .apiKey(azureOpenAiKey)
+        .deploymentName(azureEmbeddingDeploymentName)
+        .build();
+}
+
+EmbeddingStore<TextSegment> embeddingStore = 
+    new InMemoryEmbeddingStore<>();
+```
 
 <img src="images/vector-embeddings.png" alt="Vector Embeddings Space" width="800"/>
 
@@ -62,6 +85,18 @@ Each chunk is converted into a numerical representation called an embedding - es
 **Semantic Search** - [RagService.java](src/main/java/com/example/langchain4j/rag/service/RagService.java)
 
 When you ask a question, your question also becomes an embedding. The system compares your question's embedding against all the document chunks' embeddings. It finds the chunks with the most similar meanings - not just matching keywords, but actual semantic similarity.
+
+```java
+Embedding queryEmbedding = embeddingModel.embed(question).content();
+
+List<EmbeddingMatch<TextSegment>> matches = 
+    embeddingStore.findRelevant(queryEmbedding, 5, 0.7);
+
+for (EmbeddingMatch<TextSegment> match : matches) {
+    String relevantText = match.embedded().text();
+    double score = match.score();
+}
+```
 
 **Answer Generation** - [RagService.java](src/main/java/com/example/langchain4j/rag/service/RagService.java)
 

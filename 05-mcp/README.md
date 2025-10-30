@@ -66,13 +66,45 @@ MCP supports different ways to connect:
 
 For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
 
+```java
+McpClient client = McpClient.builder()
+    .transport(StreamableHttpTransport.of("http://localhost:3000/sse"))
+    .build();
+
+client.initialize();
+List<Tool> tools = client.listTools();
+```
+
 **Stdio** - [StdioTransportDemo.java](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
 For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
 
+```java
+McpClient client = McpClient.builder()
+    .transport(StdioTransport.builder()
+        .command("node")
+        .arguments("path/to/server.js")
+        .build())
+    .build();
+
+client.initialize();
+```
+
 **Docker** - [GitRepositoryAnalyzer.java](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
 
 For containerized services. Your application launches a Docker container that exposes MCP tools. Good for complex dependencies or isolated environments.
+
+```java
+McpClient client = McpClient.builder()
+    .transport(DockerTransport.builder()
+        .imageName("mcp/git")
+        .arguments("--repository", "/repo")
+        .containerVolume("/repo", localRepoPath)
+        .build())
+    .build();
+
+client.initialize();
+```
 
 ## What This Module Covers
 

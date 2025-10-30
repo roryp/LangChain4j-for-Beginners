@@ -42,6 +42,18 @@ Spring Boot configures the chat model with GPT-5 specific settings. The key diff
 
 LangChain4j separates message types for clarity. `SystemMessage` sets the AI's behavior and context (like "You are a code reviewer"), while `UserMessage` contains the actual request. This separation lets you maintain consistent AI behavior across different user queries.
 
+```java
+SystemMessage systemMsg = SystemMessage.from(
+    "You are a helpful Java programming expert."
+);
+
+UserMessage userMsg = UserMessage.from(
+    "Explain what a List is in Java"
+);
+
+String response = chatModel.chat(systemMsg, userMsg);
+```
+
 <img src="images/message-types.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage provides persistent context while UserMessages contain individual requests*
