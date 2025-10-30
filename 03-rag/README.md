@@ -47,11 +47,11 @@ This grounds the model's responses in your actual data instead of relying on its
 
 ## How It Works
 
-**[Document Processing](src/main/java/com/example/langchain4j/rag/service/DocumentService.java)**
+**Document Processing** - [DocumentService.java](src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
 
 When you upload a document, the system breaks it into chunks - smaller pieces that fit comfortably in the model's context window. These chunks overlap slightly so you don't lose context at the boundaries.
 
-**[Creating Embeddings](src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)**
+**Creating Embeddings** - [LangChainRagConfig.java](src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
 
 Each chunk is converted into a numerical representation called an embedding - essentially a mathematical fingerprint that captures the meaning of the text. Similar text produces similar embeddings.
 
@@ -59,11 +59,11 @@ Each chunk is converted into a numerical representation called an embedding - es
 
 *Documents represented as vectors in embedding space - similar content clusters together*
 
-**[Semantic Search](src/main/java/com/example/langchain4j/rag/service/RagService.java)**
+**Semantic Search** - [RagService.java](src/main/java/com/example/langchain4j/rag/service/RagService.java)
 
 When you ask a question, your question also becomes an embedding. The system compares your question's embedding against all the document chunks' embeddings. It finds the chunks with the most similar meanings - not just matching keywords, but actual semantic similarity.
 
-**[Answer Generation](src/main/java/com/example/langchain4j/rag/service/RagService.java)**
+**Answer Generation** - [RagService.java](src/main/java/com/example/langchain4j/rag/service/RagService.java)
 
 The most relevant chunks are included in the prompt to the model. The model reads those specific chunks and answers your question based on that information. This prevents hallucination - the model can only answer from what's in front of it.
 

@@ -70,11 +70,13 @@ This module builds on the quick start by adding Spring Boot and conversation mem
 </dependency>
 ```
 
-**[AzureOpenAiChatModel](src/main/java/com/example/langchain4j/config/LangChainConfig.java)** - Instead of the generic `OpenAiChatModel` from the quick start, we use `AzureOpenAiChatModel` which connects directly to Azure OpenAI. Spring Boot configures it as a bean using your Azure credentials (endpoint, API key, deployment name).
+**AzureOpenAiChatModel** - [LangChainConfig.java](src/main/java/com/example/langchain4j/config/LangChainConfig.java)
 
-**[MessageWindowChatMemory](src/main/java/com/example/langchain4j/service/ConversationService.java)** - The key component for stateful conversations. Create it with `MessageWindowChatMemory.withMaxMessages(10)` to retain the last 10 messages. The service stores one memory instance per conversation ID, allowing multiple users to chat simultaneously without mixing contexts.
+Instead of the generic `OpenAiChatModel` from the quick start, we use `AzureOpenAiChatModel` which connects directly to Azure OpenAI. Spring Boot configures it as a bean using your Azure credentials (endpoint, API key, deployment name).
 
-**[Message Types](src/main/java/com/example/langchain4j/service/ConversationService.java)** - LangChain4j uses typed messages: `UserMessage.from(text)` for user input and `AiMessage.from(text)` for AI responses. Add these to memory with `memory.add(message)` and retrieve the full history with `memory.messages()`. This structure makes it easy to build conversation context before sending to the model.
+**MessageWindowChatMemory & Message Types** - [ConversationService.java](src/main/java/com/example/langchain4j/service/ConversationService.java)
+
+The key component for stateful conversations. Create it with `MessageWindowChatMemory.withMaxMessages(10)` to retain the last 10 messages. The service stores one memory instance per conversation ID, allowing multiple users to chat simultaneously without mixing contexts. LangChain4j uses typed messages: `UserMessage.from(text)` for user input and `AiMessage.from(text)` for AI responses. Add these to memory with `memory.add(message)` and retrieve the full history with `memory.messages()`. This structure makes it easy to build conversation context before sending to the model.
 
 The stateless chat endpoint skips memory entirely - just `chatModel.chat(prompt)` like the quick start. The stateful endpoint adds messages to memory, retrieves history, and includes that context with each request. Same model, different patterns.
 
