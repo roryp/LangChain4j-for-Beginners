@@ -72,11 +72,11 @@ MCP supports different ways to connect:
 
 You'll work through three examples that demonstrate different MCP integration patterns:
 
-**[Streamable HTTP Transport](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)** - Connect to a remote calculator service. See how networked tool integration works with session management.
+**Streamable HTTP Transport** - Connect to a remote calculator service. See how networked tool integration works with session management.
 
-**[Stdio Transport](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)** - Spawn a local filesystem server. Understand subprocess-based tool execution for local operations.
+**Stdio Transport** - Spawn a local filesystem server. Understand subprocess-based tool execution for local operations.
 
-**[Docker-Based Git Server](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)** - Launch a containerized Git analysis service. Learn how to work with Docker-based MCP servers and mount local repositories.
+**Docker-Based Git Server** - Launch a containerized Git analysis service. Learn how to work with Docker-based MCP servers and mount local repositories.
 
 Each example shows a different transport mechanism and use case, giving you the foundation to integrate any MCP server.
 
@@ -95,7 +95,7 @@ export GITHUB_TOKEN=your_token_here
 
 ### Example 1: Remote Calculator (Streamable HTTP)
 
-This demonstrates network-based tool integration. [View source](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
+This demonstrates network-based tool integration.
 
 **Terminal 1 - Start the MCP server:**
 ```bash
@@ -116,7 +116,7 @@ Watch the agent discover available tools, then use the calculator to perform add
 
 ### Example 2: File Operations (Stdio)
 
-This demonstrates local subprocess-based tools. [View source](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
+This demonstrates local subprocess-based tools.
 
 ```bash
 export GITHUB_TOKEN=your_token_here
@@ -128,7 +128,7 @@ The application spawns a filesystem MCP server automatically and reads a local f
 
 ### Example 3: Git Analysis (Docker)
 
-This demonstrates containerized tool servers. [View source](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+This demonstrates containerized tool servers.
 
 **Terminal 1 - Build the Docker image:**
 ```bash
