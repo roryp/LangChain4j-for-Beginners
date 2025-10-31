@@ -12,10 +12,6 @@
   <artifactId>prompt-engineering</artifactId>
   <name>02-prompt-engineering</name>
 
-  <properties>
-    <java.version>21</java.version>
-  </properties>
-
   <dependencies>
     <!-- Spring MVC for REST endpoints -->
     <dependency>

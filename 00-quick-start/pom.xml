@@ -16,10 +16,6 @@
   <name>00-quick-start</name>
   <description>Quick Start with LangChain4j and GitHub Models</description>
 
-  <properties>
-    <langchain4j.version>1.8.0</langchain4j.version> <!-- Version defined in root pom.xml -->
-  </properties>
-
   <dependencies>
     <!-- LangChain4j Core -->
     <dependency>
