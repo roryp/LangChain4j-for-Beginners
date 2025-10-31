@@ -94,7 +94,7 @@ void testPromptTemplateFormatting() {
 }
 ```
 
-This test lives in `00-quick-start/src/test/java/com/example/langchain4j/azure/quickstart/SimpleQuickStartTest.java`. Run it with `cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testPromptTemplateFormatting`.
+This test lives in `00-quick-start/src/test/java/com/example/langchain4j/quickstart/SimpleQuickStartTest.java`. Run it with `cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testPromptTemplateFormatting`.
 
 ### Pattern 2: Mocking Language Models
 

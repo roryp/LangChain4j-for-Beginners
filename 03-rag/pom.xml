@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <groupId>com.example.langchain4j.azure</groupId>
-    <artifactId>langchain4j-for-beginners-azure</artifactId>
+    <groupId>com.example.langchain4j</groupId>
+    <artifactId>langchain4j-for-beginners</artifactId>
     <version>1.0.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
