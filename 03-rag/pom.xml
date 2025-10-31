@@ -11,10 +11,6 @@
   <artifactId>rag</artifactId>
   <name>03-rag</name>
 
-  <properties>
-    <java.version>21</java.version>
-  </properties>
-
   <dependencies>
     <!-- Spring MVC for REST endpoints -->
     <dependency>
