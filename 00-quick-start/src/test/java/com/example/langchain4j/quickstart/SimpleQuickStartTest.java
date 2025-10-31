@@ -1,4 +1,4 @@
-package com.example.langchain4j.azure.quickstart;
+package com.example.langchain4j.quickstart;
 
 import dev.langchain4j.model.input.Prompt;
 import dev.langchain4j.model.input.PromptTemplate;
