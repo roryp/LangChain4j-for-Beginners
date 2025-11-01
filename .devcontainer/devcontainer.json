@@ -6,7 +6,11 @@
       "installZsh": false,
       "upgradePackages": false
     },
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "version": "latest",
+      "moby": false,
+      "dockerDashComposeVersion": "v2"
+    },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "lts"
     },
@@ -45,5 +49,9 @@
     "JAVA_HOME": "/usr/lib/jvm/msopenjdk-current",
     "MAVEN_OPTS": "-Xmx2g"
   },
-  "forwardPorts": [8080, 8081, 8082, 8083, 3001]
+  "forwardPorts": [8080, 8081, 8082, 8083, 3001],
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "privileged": true
 }
