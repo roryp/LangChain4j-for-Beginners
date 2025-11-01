@@ -140,6 +140,7 @@ System.out.println(response);
 > - "How would I switch from GitHub Models to Azure OpenAI in this code?"
 > - "What other parameters can I configure in OpenAiChatModel.builder()?"
 > - "How do I add streaming responses instead of waiting for the complete response?"
+> - "What's the difference between logRequests and logResponses, and when should I use them?"
 
 **Prompt Engineering** - [PromptEngineeringDemo.java](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java)
 
@@ -162,25 +163,27 @@ String response = model.chat(prompt.text());
 > - "What's the difference between zero-shot and few-shot prompting, and when should I use each?"
 > - "How does the temperature parameter affect the model's responses?"
 > - "What are some techniques to prevent prompt injection attacks in production?"
+> - "How can I create reusable PromptTemplate objects for common patterns?"
 
 **Tool Integration** - [ToolIntegrationDemo.java](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java)
 
 This is where LangChain4j gets powerful. You'll use `AiServices` to create an AI assistant that can call your Java methods. Just annotate methods with `@Tool("description")` and LangChain4j handles the rest - the AI automatically decides when to use each tool based on what the user asks. This demonstrates function calling, a key technique for building AI that can take actions, not just answer questions.
 
 ```java
-@Tool("Get the current weather for a location")
-public String getWeather(String location) {
-    return "Weather in " + location + ": 72°F, sunny";
+@Tool("Performs addition of two numeric values")
+public double add(double a, double b) {
+    return a + b;
 }
 
-Assistant assistant = AiServices.create(Assistant.class, model);
-String response = assistant.chat("What's the weather in Seattle?");
+MathAssistant assistant = AiServices.create(MathAssistant.class, model);
+String response = assistant.chat("What is 25 plus 17?");
 ```
 
 > 💡 **Explore with GitHub Copilot:** Open [`ToolIntegrationDemo.java`](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) and ask:
 > - "How does the @Tool annotation work and what does LangChain4j do with it behind the scenes?"
 > - "Can the AI call multiple tools in sequence to solve complex problems?"
-> - "How would I integrate a real weather API instead of this mock weather tool?"
+> - "What happens if a tool throws an exception - how should I handle errors?"
+> - "How would I integrate a real API instead of this calculator example?"
 
 **Document Q&A (RAG)** - [SimpleReaderDemo.java](src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)
 
@@ -199,6 +202,7 @@ String response = model.chat(prompt);
 > - "How does RAG prevent AI hallucinations compared to using the model's training data?"
 > - "What's the difference between this simple approach and using vector embeddings for retrieval?"
 > - "How would I scale this to handle multiple documents or larger knowledge bases?"
+> - "What are best practices for structuring the prompt to ensure the AI uses only the provided context?"
 
 ## Next Steps
 
