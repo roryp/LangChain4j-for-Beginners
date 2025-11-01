@@ -29,7 +29,7 @@ import dev.langchain4j.service.AiServices;
  * - "How does the @Tool annotation work and what does LangChain4j do with it behind the scenes?"
  * - "Can the AI call multiple tools in sequence to solve complex problems?"
  * - "What happens if a tool throws an exception - how should I handle errors?"
- * - "How would I integrate a real weather API instead of this calculator example?"
+ * - "How would I integrate a real API (like weather or currency) instead of this calculator example?"
  */
 public class ToolIntegrationDemo {
 

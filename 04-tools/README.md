@@ -52,7 +52,7 @@ This happens automatically. You define the tools and their descriptions. The mod
 
 ## How Tool Calling Works
 
-**Tool Definitions** - [WeatherTool.java](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureConverter.java](src/main/java/com/example/langchain4j/agents/tools/TemperatureConverter.java)
+**Tool Definitions** - [WeatherTool.java](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
 
 You define functions with clear descriptions and parameter specifications. The model sees these descriptions in its system prompt and understands what each tool does.
 
