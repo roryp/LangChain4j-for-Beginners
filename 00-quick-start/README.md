@@ -180,7 +180,7 @@ String response = assistant.chat("What's the weather in Seattle?");
 > 💡 **Explore with GitHub Copilot:** Open [`ToolIntegrationDemo.java`](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) and ask:
 > - "How does the @Tool annotation work and what does LangChain4j do with it behind the scenes?"
 > - "Can the AI call multiple tools in sequence to solve complex problems?"
-> - "How would I integrate a real weather API instead of this mock calculator?"
+> - "How would I integrate a real weather API instead of this mock weather tool?"
 
 **Document Q&A (RAG)** - [SimpleReaderDemo.java](src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)
 
