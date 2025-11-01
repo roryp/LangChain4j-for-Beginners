@@ -160,7 +160,7 @@ String response = model.chat(prompt.text());
 
 > 💡 **Explore with GitHub Copilot:** Open [`PromptEngineeringDemo.java`](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) and ask:
 > - "What's the difference between zero-shot and few-shot prompting, and when should I use each?"
-> - "How does the temperature parameter affect response quality and creativity?"
+> - "How does the temperature parameter affect the model's responses?"
 > - "What are some techniques to prevent prompt injection attacks in production applications?"
 
 **Tool Integration** - [ToolIntegrationDemo.java](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java)
