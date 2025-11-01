@@ -4,6 +4,7 @@ import dev.langchain4j.model.openai.OpenAiChatModel;
 
 /**
  * BasicChatDemo - Introduction to LangChain4j Chat Capabilities
+ * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.BasicChatDemo"
  * 
  * This example shows how to set up and use a language model for basic chat interactions.
  * We're using GitHub Models which provides an OpenAI-compatible interface, making it
@@ -13,6 +14,12 @@ import dev.langchain4j.model.openai.OpenAiChatModel;
  * - Model initialization with custom endpoints
  * - Synchronous chat completion
  * - Environment-based authentication
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How would I switch from GitHub Models to Azure OpenAI in this code?"
+ * - "What other parameters can I configure in OpenAiChatModel.builder()?"
+ * - "How do I add streaming responses instead of waiting for the complete response?"
+ * - "What's the difference between logRequests and logResponses, and when should I use them?"
  */
 public class BasicChatDemo {
 

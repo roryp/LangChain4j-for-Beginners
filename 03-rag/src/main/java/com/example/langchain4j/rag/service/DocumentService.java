@@ -20,7 +20,25 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 /**
+ * DocumentService - Document Processing and Chunking
+ * Run: ./start.sh (from module directory, after deploying Azure resources with azd up)
+ * 
  * Service for processing documents (parsing and chunking).
+ * 
+ * Handles document ingestion, parsing multiple formats (PDF, text),
+ * and splitting into optimal chunks for RAG embedding and retrieval.
+ * 
+ * Key Concepts:
+ * - Document splitting strategies (recursive chunking)
+ * - Chunk size and overlap configuration
+ * - Multi-format document parsing (PDF, text)
+ * - Metadata preservation for source tracking
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does LangChain4j split documents into chunks and why is overlap important?"
+ * - "What's the optimal chunk size for different document types and why?"
+ * - "How do I handle documents in multiple languages or with special formatting?"
+ * - "What happens to document structure (headings, sections) during chunking?"
  */
 @Service
 public class DocumentService {

@@ -85,6 +85,11 @@ public AzureOpenAiChatModel chatModel() {
 }
 ```
 
+> 💡 **Explore with GitHub Copilot:** Open [`LangChainConfig.java`](src/main/java/com/example/langchain4j/config/LangChainConfig.java) and ask:
+> - "What's the difference between AzureOpenAiChatModel and OpenAiChatModel?"
+> - "Why does GPT-5 use maxCompletionTokens instead of maxTokens?"
+> - "How can I configure different timeout values or retry policies?"
+
 **MessageWindowChatMemory & Message Types** - [ConversationService.java](src/main/java/com/example/langchain4j/service/ConversationService.java)
 
 The key component for stateful conversations. Create it with `MessageWindowChatMemory.withMaxMessages(10)` to retain the last 10 messages. The service stores one memory instance per conversation ID, allowing multiple users to chat simultaneously without mixing contexts. LangChain4j uses typed messages: `UserMessage.from(text)` for user input and `AiMessage.from(text)` for AI responses. Add these to memory with `memory.add(message)` and retrieve the full history with `memory.messages()`. This structure makes it easy to build conversation context before sending to the model.
@@ -99,6 +104,11 @@ memory.add(UserMessage.from("What's my name?"));
 String response = chatModel.chat(memory.messages());
 memory.add(AiMessage.from(response));
 ```
+
+> 💡 **Explore with GitHub Copilot:** Open [`ConversationService.java`](src/main/java/com/example/langchain4j/service/ConversationService.java) and ask:
+> - "How does MessageWindowChatMemory decide which messages to drop when the window is full?"
+> - "Can I implement custom memory storage using a database instead of in-memory?"
+> - "How would I add summarization to compress old conversation history?"
 
 The stateless chat endpoint skips memory entirely - just `chatModel.chat(prompt)` like the quick start. The stateful endpoint adds messages to memory, retrieves history, and includes that context with each request. Same model, different patterns.
 

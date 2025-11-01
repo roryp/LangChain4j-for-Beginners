@@ -8,6 +8,9 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
+ * SimpleReaderDemo - Introduction to RAG (Retrieval-Augmented Generation)
+ * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.SimpleReaderDemo"
+ * 
  * A simple RAG (Retrieval-Augmented Generation) demonstration that reads a document
  * and allows users to ask questions about its content.
  * 
@@ -17,6 +20,17 @@ import java.util.Scanner;
  * 
  * This prevents the AI from "hallucinating" (making up) answers by giving it
  * specific context to work with.
+ * 
+ * Key Concepts:
+ * - Document loading and retrieval
+ * - Context-aware prompting
+ * - Grounding responses in specific content
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does RAG prevent AI hallucinations compared to using the model's training data?"
+ * - "What's the difference between this simple approach and using vector embeddings?"
+ * - "How would I scale this to handle multiple documents or larger knowledge bases?"
+ * - "What are best practices for structuring the prompt to ensure the AI uses only the provided context?"
  */
 public class SimpleReaderDemo {
 

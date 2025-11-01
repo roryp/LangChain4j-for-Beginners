@@ -14,7 +14,13 @@ import java.time.Duration;
 import java.util.List;
 
 /**
+ * StreamableHttpDemo - MCP Integration via HTTP Transport
+ * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.mcp.StreamableHttpDemo"
+ * 
  * Demonstrates MCP integration via streamable HTTP transport.
+ * 
+ * This example shows how to connect to a remote MCP server over HTTP,
+ * discover available tools, and use them through an AI agent.
  * 
  * Prerequisites:
  * - MCP 'everything' server running on localhost:3001
@@ -25,6 +31,18 @@ import java.util.List;
  * 2. cd servers/src/everything
  * 3. npm install
  * 4. node dist/streamableHttp.js
+ * 
+ * Key Concepts:
+ * - StreamableHttpMcpTransport for remote servers
+ * - Server-Sent Events (SSE) for real-time communication
+ * - Automatic tool discovery from MCP servers
+ * - Session management with HTTP transport
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does MCP differ from direct tool integration like in Module 04?"
+ * - "What are the benefits of using MCP for tool sharing across applications?"
+ * - "How do I handle connection failures or timeouts to MCP servers?"
+ * - "When should I use HTTP transport vs Stdio vs Docker transport?"
  */
 public class StreamableHttpDemo {
 

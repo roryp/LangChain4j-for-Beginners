@@ -14,7 +14,13 @@ import java.io.File;
 import java.util.List;
 
 /**
+ * GitRepositoryAnalyzer - MCP Integration via Docker Transport
+ * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.mcp.GitRepositoryAnalyzer"
+ * 
  * Demonstrates GitHub repository analysis using MCP git server.
+ * 
+ * This example shows how to use Docker-based MCP servers, mount volumes,
+ * and perform repository analysis through AI with git tools.
  * 
  * Prerequisites:
  * - Docker installed and running
@@ -25,6 +31,18 @@ import java.util.List;
  * 1. Clone https://github.com/modelcontextprotocol/servers
  * 2. cd servers/src/git
  * 3. docker build -t mcp/git .
+ * 
+ * Key Concepts:
+ * - Docker-based MCP server deployment
+ * - Volume mounting for repository access
+ * - Git operations through MCP tools
+ * - Container lifecycle management
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does Docker transport isolate MCP servers and what are the benefits?"
+ * - "How do I configure volume mounts to share data between host and MCP containers?"
+ * - "What are best practices for managing Docker-based MCP server lifecycles in production?"
+ * - "How can I create custom Docker-based MCP servers for my own tools?"
  */
 public class GitRepositoryAnalyzer {
 

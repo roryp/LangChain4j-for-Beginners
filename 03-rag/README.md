@@ -60,6 +60,11 @@ DocumentSplitter splitter = DocumentSplitters
 List<TextSegment> segments = splitter.split(document);
 ```
 
+> 💡 **Explore with GitHub Copilot:** Open [`DocumentService.java`](src/main/java/com/example/langchain4j/rag/service/DocumentService.java) and ask:
+> - "How does LangChain4j split documents into chunks and why is overlap important?"
+> - "What's the optimal chunk size for different document types and why?"
+> - "How do I handle documents in multiple languages or with special formatting?"
+
 **Creating Embeddings** - [LangChainRagConfig.java](src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
 
 Each chunk is converted into a numerical representation called an embedding - essentially a mathematical fingerprint that captures the meaning of the text. Similar text produces similar embeddings.
@@ -97,6 +102,11 @@ for (EmbeddingMatch<TextSegment> match : matches) {
     double score = match.score();
 }
 ```
+
+> 💡 **Explore with GitHub Copilot:** Open [`RagService.java`](src/main/java/com/example/langchain4j/rag/service/RagService.java) and ask:
+> - "How does similarity search work with embeddings and what determines the score?"
+> - "What similarity threshold should I use and how does it affect results?"
+> - "How do I handle cases where no relevant documents are found?"
 
 **Answer Generation** - [RagService.java](src/main/java/com/example/langchain4j/rag/service/RagService.java)
 

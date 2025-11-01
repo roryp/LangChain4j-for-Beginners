@@ -7,6 +7,7 @@ import dev.langchain4j.service.AiServices;
 
 /**
  * ToolIntegrationDemo - AI Function Calling
+ * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.ToolIntegrationDemo"
  * 
  * This example demonstrates one of the most powerful features of modern LLMs:
  * the ability to call external functions/tools. The AI can:
@@ -17,6 +18,18 @@ import dev.langchain4j.service.AiServices;
  * This enables AI agents to perform actions, not just generate text.
  * We'll use a calculator as an example, but this pattern applies to
  * any functionality: databases, APIs, file operations, etc.
+ * 
+ * Key Concepts:
+ * - @Tool annotation for method discovery
+ * - AiServices for automatic tool orchestration
+ * - Parameter extraction from natural language
+ * - Multi-step reasoning with tools
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does the @Tool annotation work and what does LangChain4j do with it behind the scenes?"
+ * - "Can the AI call multiple tools in sequence to solve complex problems?"
+ * - "What happens if a tool throws an exception - how should I handle errors?"
+ * - "How would I integrate a real weather API instead of this calculator example?"
  */
 public class ToolIntegrationDemo {
 

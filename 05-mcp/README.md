@@ -75,6 +75,11 @@ client.initialize();
 List<Tool> tools = client.listTools();
 ```
 
+> 💡 **Explore with GitHub Copilot:** Open [`StreamableHttpDemo.java`](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) and ask:
+> - "How does MCP differ from direct tool integration like in Module 04?"
+> - "What are the benefits of using MCP for tool sharing across applications?"
+> - "How do I handle connection failures or timeouts to MCP servers?"
+
 **Stdio** - [StdioTransportDemo.java](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
 For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
@@ -89,6 +94,11 @@ McpClient client = McpClient.builder()
 
 client.initialize();
 ```
+
+> 💡 **Explore with GitHub Copilot:** Open [`StdioTransportDemo.java`](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) and ask:
+> - "How does Stdio transport work and when should I use it vs HTTP?"
+> - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
+> - "What are the security implications of giving AI access to the file system?"
 
 **Docker** - [GitRepositoryAnalyzer.java](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
 
@@ -105,6 +115,11 @@ McpClient client = McpClient.builder()
 
 client.initialize();
 ```
+
+> 💡 **Explore with GitHub Copilot:** Open [`GitRepositoryAnalyzer.java`](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) and ask:
+> - "How does Docker transport isolate MCP servers and what are the benefits?"
+> - "How do I configure volume mounts to share data between host and MCP containers?"
+> - "What are best practices for managing Docker-based MCP server lifecycles in production?"
 
 ## What This Module Covers
 

@@ -3,6 +3,7 @@
 # LangChain4j for Beginners
 
 A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, from basic chat to AI agents.
+**New to LangChain4j?** Check out the [Glossary](docs/GLOSSARY.md) for definitions of key terms and concepts.
 
 ## Table of Contents
 
@@ -12,12 +13,25 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 4. [RAG (Retrieval-Augmented Generation)](03-rag/) - Build intelligent knowledge-based systems
 5. [Tools](04-tools/) - Integrate external tools and APIs with AI agents
 6. [MCP (Model Context Protocol)](05-mcp/) - Work with the Model Context Protocol
+---
 
 Start with [Quick Start](00-quick-start/) and progress through the modules. This module gets you up and running with LangChain4j in minutes using GitHub Models - no Azure subscription required. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/) module for a deeper dive with GPT-5. After completing the modules, explore the [Testing Guide](docs/TESTING.md) to see LangChain4j testing concepts in action.
 
-**New to LangChain4j?** Check out the [Glossary](docs/GLOSSARY.md) for definitions of key terms and concepts.
-
 <img src="images/learning-path.png" alt="Learning Path" width="800"/>
+
+## 💡 Learning with GitHub Copilot
+
+To quickly start coding, open this project in a GitHub Codespace or your local IDE with the provided devcontainer. The devcontainer used in this course comes pre-configured with GitHub Copilot for AI paired programming.
+
+Each code example includes suggested questions you can ask GitHub Copilot to deepen your understanding. Look for the 💡 prompts in:
+
+- **Java file headers** - Questions specific to each example
+- **Module READMEs** - Exploration prompts after code examples
+
+**How to use:** Open any code file and ask Copilot the suggested questions. It has full context of the codebase and can explain, extend, and suggest alternatives.
+
+Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
+
 
 ## Additional Resources 
 

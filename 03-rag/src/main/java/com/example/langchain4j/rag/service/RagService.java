@@ -20,8 +20,29 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * RagService - Retrieval-Augmented Generation Implementation
+ * Run: ./start.sh (from module directory, after deploying Azure resources with azd up)
+ * 
  * Service for Retrieval-Augmented Generation (RAG).
  * Combines semantic search with LLM generation.
+ * 
+ * Handles the complete RAG workflow:
+ * 1. Embed user question
+ * 2. Search for semantically similar document chunks
+ * 3. Build context from relevant chunks
+ * 4. Generate answer grounded in retrieved context
+ * 
+ * Key Concepts:
+ * - Embedding-based semantic search
+ * - Similarity scoring and threshold filtering
+ * - Context window management
+ * - Source attribution for answers
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does similarity search work with embeddings and what determines the score?"
+ * - "What similarity threshold should I use and how does it affect results?"
+ * - "How do I handle cases where no relevant documents are found?"
+ * - "How can I implement hybrid search combining embeddings with keyword matching?"
  */
 @Service
 public class RagService {

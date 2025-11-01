@@ -111,6 +111,11 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
+> 💡 **Explore with GitHub Copilot:** Open [`Gpt5PromptService.java`](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java) and ask:
+> - "What's the difference between low eagerness and high eagerness prompting patterns?"
+> - "How do the XML tags in prompts help structure the AI's response?"
+> - "When should I use self-reflection patterns vs direct instruction?"
+
 **High Eagerness (Deep & Thorough)** - For complex problems where you want comprehensive analysis. The model explores thoroughly and shows detailed reasoning. Use this for system design, architecture decisions, or complex research.
 
 ```java
@@ -136,6 +141,11 @@ String prompt = """
 
 String response = chatModel.chat(prompt);
 ```
+
+> 💡 **Explore with GitHub Copilot:** Ask about this pattern:
+> - "How would I adapt the task execution pattern for long-running operations?"
+> - "What are best practices for structuring tool preambles in production applications?"
+> - "How can I capture and display intermediate progress updates in a UI?"
 
 <img src="images/task-execution-pattern.png" alt="Task Execution Pattern" width="800"/>
 
@@ -183,6 +193,11 @@ String prompt = """
 
 String response = chatModel.chat(prompt);
 ```
+
+> 💡 **Explore with GitHub Copilot:** Ask about structured analysis:
+> - "How can I customize the analysis framework for different types of code reviews?"
+> - "What's the best way to parse and act on structured output programmatically?"
+> - "How do I ensure consistent severity levels across different review sessions?"
 
 <img src="images/structured-analysis-pattern.png" alt="Structured Analysis Pattern" width="800"/>
 
