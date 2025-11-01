@@ -14,8 +14,27 @@ import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * ConversationService - Stateful Conversation Management
+ * Run: ./start.sh (from module directory, after deploying Azure resources with azd up)
+ * 
  * Service for managing conversational interactions with memory.
  * Maintains separate conversation histories for different conversation IDs.
+ * 
+ * This demonstrates the core difference between stateless and stateful AI:
+ * - Without memory: Each request is independent, no context
+ * - With memory: MessageWindowChatMemory maintains conversation history
+ * 
+ * Key Concepts:
+ * - MessageWindowChatMemory for conversation context
+ * - Per-user conversation isolation with ConcurrentHashMap
+ * - UserMessage and AiMessage type safety
+ * - Automatic context window management
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does MessageWindowChatMemory decide which messages to drop when the window is full?"
+ * - "Can I implement custom memory storage using a database instead of in-memory?"
+ * - "What happens if I increase maxMessages beyond the model's token limit?"
+ * - "How would I add summarization to compress old conversation history?"
  */
 @Service
 public class ConversationService {

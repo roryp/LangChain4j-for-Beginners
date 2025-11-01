@@ -6,8 +6,21 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
+ * LangChainConfig - Azure OpenAI Configuration for LangChain4j
+ * 
  * Configuration class for LangChain4j components.
  * Provides beans for Azure OpenAI chat model and other AI services.
+ * 
+ * Key Concepts:
+ * - Spring Bean configuration for AI models
+ * - Azure OpenAI specific parameters (maxCompletionTokens for GPT-5)
+ * - Environment variable injection and configuration
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "What's the difference between AzureOpenAiChatModel and OpenAiChatModel?"
+ * - "Why does GPT-5 use maxCompletionTokens instead of maxTokens?"
+ * - "How can I configure different timeout values or retry policies?"
+ * - "What other builder parameters are available for AzureOpenAiChatModel?"
  */
 @Configuration
 public class LangChainConfig {

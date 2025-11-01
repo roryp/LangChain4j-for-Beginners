@@ -4,6 +4,7 @@ import dev.langchain4j.model.openai.OpenAiChatModel;
 
 /**
  * PromptEngineeringDemo - Basic Prompt Engineering Patterns
+ * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.PromptEngineeringDemo"
  * 
  * This demonstrates fundamental prompt engineering techniques that improve AI responses:
  * 
@@ -14,6 +15,17 @@ import dev.langchain4j.model.openai.OpenAiChatModel;
  * 
  * Uses GitHub Models (gpt-4.1-nano) which works better with rate limits
  * than larger models for simple demonstrations.
+ * 
+ * Key Concepts:
+ * - Different prompting strategies
+ * - Temperature parameter for response variability
+ * - Prompt structure and formatting
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "What's the difference between zero-shot and few-shot prompting, and when should I use each?"
+ * - "How does the temperature parameter affect the model's responses?"
+ * - "What are some techniques to prevent prompt injection attacks in production?"
+ * - "How can I create reusable PromptTemplate objects for common patterns?"
  */
 public class PromptEngineeringDemo {
 

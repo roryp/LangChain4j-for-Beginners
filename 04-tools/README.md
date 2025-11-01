@@ -76,6 +76,11 @@ Assistant assistant = AiServices.builder(Assistant.class)
     .build();
 ```
 
+> 💡 **Explore with GitHub Copilot:** Open [`WeatherTool.java`](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) and ask:
+> - "How would I integrate a real weather API like OpenWeatherMap instead of mock data?"
+> - "What makes a good tool description that helps the AI use it correctly?"
+> - "How do I handle API errors and rate limits in tool implementations?"
+
 **Decision Making**
 
 When a user asks "What's the weather in Seattle?", the model recognizes it needs the weather tool. It generates a function call with the location parameter set to "Seattle".
@@ -83,6 +88,11 @@ When a user asks "What's the weather in Seattle?", the model recognizes it needs
 **Execution** - [AgentService.java](src/main/java/com/example/langchain4j/agents/service/AgentService.java)
 
 Your code intercepts the function call, executes the actual weather lookup (via API or database), and returns the result to the model.
+
+> 💡 **Explore with GitHub Copilot:** Open [`AgentService.java`](src/main/java/com/example/langchain4j/agents/service/AgentService.java) and ask:
+> - "How does the ReAct pattern work and why is it effective for AI agents?"
+> - "How does the agent decide which tool to use and in what order?"
+> - "What happens if a tool execution fails - how should I handle errors robustly?"
 
 **Response Generation**
 

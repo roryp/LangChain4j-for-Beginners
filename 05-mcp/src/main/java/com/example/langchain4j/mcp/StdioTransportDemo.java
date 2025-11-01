@@ -14,12 +14,31 @@ import java.io.File;
 import java.util.List;
 
 /**
+ * StdioTransportDemo - MCP Integration via Stdio Transport
+ * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.mcp.StdioTransportDemo"
+ * 
  * Demonstrates MCP integration via stdio transport for filesystem operations.
+ * 
+ * This example shows how to spawn a local MCP server as a subprocess,
+ * communicate through standard input/output, and use its tools for
+ * file system operations.
  * 
  * Prerequisites:
  * - npm installed
  * - GITHUB_TOKEN environment variable set
  * - Working directory set to mcp-example root
+ * 
+ * Key Concepts:
+ * - StdioMcpTransport for local subprocess servers
+ * - Process spawning and lifecycle management
+ * - File system tool integration
+ * - Cross-platform path handling
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does Stdio transport work and when should I use it vs HTTP?"
+ * - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
+ * - "What are the security implications of giving AI access to the file system?"
+ * - "How can I limit which directories or files the MCP filesystem server can access?"
  */
 public class StdioTransportDemo {
 

@@ -21,8 +21,31 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * AgentService - ReAct Pattern Implementation with Tools
+ * Run: ./start.sh (from module directory, after deploying Azure resources with azd up)
+ * 
  * Agent service using LangChain4j with Azure OpenAI and HTTP tool calling.
  * Implements ReAct pattern: Reason → Act → Observe → Repeat
+ * 
+ * Orchestrates AI agent tool usage:
+ * - Maintains conversation memory per session
+ * - Parses AI responses for tool call requests
+ * - Executes tools via HTTP endpoints
+ * - Feeds results back to AI for final answer
+ * - Supports multi-step reasoning with tool chaining
+ * 
+ * Key Concepts:
+ * - ReAct pattern (reasoning and acting loop)
+ * - Tool execution orchestration
+ * - Session-based conversation state
+ * - Multi-step tool calling
+ * - Error handling and graceful degradation
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How does the ReAct pattern work and why is it effective for AI agents?"
+ * - "How does the agent decide which tool to use and in what order?"
+ * - "What happens if a tool execution fails - how should I handle errors robustly?"
+ * - "How can I add observability to track which tools are being called and why?"
  */
 @Service
 public class AgentService {

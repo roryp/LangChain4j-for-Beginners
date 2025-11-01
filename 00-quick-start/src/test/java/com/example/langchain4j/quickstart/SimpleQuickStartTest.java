@@ -10,8 +10,22 @@ import java.util.Map;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
+ * SimpleQuickStartTest - Unit Tests for Quick Start Module
+ * Run: mvn test
+ * 
  * Simple tests for the Quick Start module.
  * These tests verify basic LangChain4j concepts without requiring API calls!
+ * 
+ * Key Concepts:
+ * - Testing prompt templates without API calls
+ * - Verifying template variable substitution
+ * - Unit testing AI application components
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How can I test my AI application logic without making expensive API calls?"
+ * - "What's the best way to mock OpenAiChatModel for unit testing?"
+ * - "How do I test that my prompt templates are correctly formatted before sending to the API?"
+ * - "What are best practices for testing AI agents with tool integrations?"
  */
 class SimpleQuickStartTest {
 

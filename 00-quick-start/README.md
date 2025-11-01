@@ -136,6 +136,11 @@ String response = model.chat("What is LangChain4j?");
 System.out.println(response);
 ```
 
+> 💡 **Explore with GitHub Copilot:** Open [`BasicChatDemo.java`](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) and ask:
+> - "How would I switch from GitHub Models to Azure OpenAI in this code?"
+> - "What other parameters can I configure in OpenAiChatModel.builder()?"
+> - "How do I add streaming responses instead of waiting for the complete response?"
+
 **Prompt Engineering** - [PromptEngineeringDemo.java](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java)
 
 Now that you know how to talk to a model, let's explore what you say to it. This demo uses the same model setup but shows four different prompting patterns. Try zero-shot prompts for direct instructions, few-shot prompts that learn from examples, chain-of-thought prompts that reveal reasoning steps, and role-based prompts that set context. You'll see how the same model gives dramatically different results based on how you frame your request.
@@ -153,6 +158,11 @@ Prompt prompt = template.apply(Map.of(
 String response = model.chat(prompt.text());
 ```
 
+> 💡 **Explore with GitHub Copilot:** Open [`PromptEngineeringDemo.java`](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) and ask:
+> - "What's the difference between zero-shot and few-shot prompting, and when should I use each?"
+> - "How does the temperature parameter affect response quality and creativity?"
+> - "What are some techniques to prevent prompt injection attacks in production applications?"
+
 **Tool Integration** - [ToolIntegrationDemo.java](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java)
 
 This is where LangChain4j gets powerful. You'll use `AiServices` to create an AI assistant that can call your Java methods. Just annotate methods with `@Tool("description")` and LangChain4j handles the rest - the AI automatically decides when to use each tool based on what the user asks. This demonstrates function calling, a key technique for building AI that can take actions, not just answer questions.
@@ -167,6 +177,11 @@ Assistant assistant = AiServices.create(Assistant.class, model);
 String response = assistant.chat("What's the weather in Seattle?");
 ```
 
+> 💡 **Explore with GitHub Copilot:** Open [`ToolIntegrationDemo.java`](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) and ask:
+> - "How does the @Tool annotation work and what does LangChain4j do with it behind the scenes?"
+> - "Can the AI call multiple tools in sequence to solve complex problems?"
+> - "How would I integrate a real weather API instead of this mock calculator?"
+
 **Document Q&A (RAG)** - [SimpleReaderDemo.java](src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)
 
 Here you'll see the foundation of RAG (retrieval-augmented generation). Instead of relying on the model's training data, you load content from [`document.txt`](document.txt) and include it in the prompt. The AI answers based on your document, not its general knowledge. This is the first step toward building systems that can work with your own data.
@@ -179,6 +194,11 @@ String prompt = "Based on this document: " + content +
                 "\nQuestion: What is the main topic?";
 String response = model.chat(prompt);
 ```
+
+> 💡 **Explore with GitHub Copilot:** Open [`SimpleReaderDemo.java`](src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) and ask:
+> - "How does RAG prevent AI hallucinations compared to using the model's training data?"
+> - "What's the difference between this simple approach and using vector embeddings for retrieval?"
+> - "How would I scale this to handle multiple documents or larger knowledge bases?"
 
 ## Next Steps
 

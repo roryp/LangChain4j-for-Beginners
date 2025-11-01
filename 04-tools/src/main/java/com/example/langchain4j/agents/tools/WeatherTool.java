@@ -9,8 +9,28 @@ import org.springframework.stereotype.Component;
 import java.util.Random;
 
 /**
+ * WeatherTool - Demonstration of AI Function Calling
+ * Run: ./start.sh (from module directory, after deploying Azure resources with azd up)
+ * 
  * Weather tool demonstrating function calling with LangChain4j.
  * In production, this would integrate with a real weather API.
+ * 
+ * Shows how to create tools that AI agents can discover and call:
+ * - @Tool annotation makes methods discoverable by AI
+ * - @P annotation describes parameters for the AI
+ * - Clear descriptions help AI decide when to use the tool
+ * 
+ * Key Concepts:
+ * - @Tool annotation for function calling
+ * - Parameter descriptions with @P
+ * - Tool description best practices
+ * - Mock vs real API integration patterns
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "How would I integrate a real weather API like OpenWeatherMap instead of mock data?"
+ * - "What makes a good tool description that helps the AI use it correctly?"
+ * - "How do I handle API errors and rate limits in tool implementations?"
+ * - "Can I create tools that call other tools internally for complex operations?"
  */
 @Component
 public class WeatherTool {

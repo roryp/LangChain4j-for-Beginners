@@ -13,10 +13,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Gpt5PromptService - GPT-5 Prompting Best Practices
+ * Run: ./start.sh (from module directory, after deploying Azure resources with azd up)
+ * 
  * Service demonstrating GPT-5 prompting best practices with LangChain4j.
  * 
  * Based on OpenAI's GPT-5 Prompting Guide:
  * https://github.com/openai/openai-cookbook/blob/main/examples/gpt-5/gpt-5_prompting_guide.ipynb
+ * 
+ * Key Concepts:
+ * - Low vs high eagerness (reasoning depth control)
+ * - Task execution with progress updates
+ * - Self-reflecting code generation with quality rubrics
+ * - Structured analysis frameworks
+ * - Multi-turn conversations with context
+ * - Constrained output generation
+ * - Explicit step-by-step reasoning
+ * 
+ * 💡 Ask GitHub Copilot:
+ * - "What's the difference between low eagerness and high eagerness prompting patterns?"
+ * - "How do the XML tags in prompts help structure the AI's response?"
+ * - "When should I use self-reflection patterns vs direct instruction?"
+ * - "How can I adapt these patterns for non-GPT-5 models like GPT-4?"
  */
 @Service
 public class Gpt5PromptService {
