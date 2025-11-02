@@ -136,7 +136,7 @@ String response = model.chat("What is LangChain4j?");
 System.out.println(response);
 ```
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot):** Open [`BasicChatDemo.java`](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`BasicChatDemo.java`](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) and ask:
 > - "How would I switch from GitHub Models to Azure OpenAI in this code?"
 > - "What other parameters can I configure in OpenAiChatModel.builder()?"
 > - "How do I add streaming responses instead of waiting for the complete response?"
@@ -159,7 +159,7 @@ Prompt prompt = template.apply(Map.of(
 String response = model.chat(prompt.text());
 ```
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot):** Open [`PromptEngineeringDemo.java`](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`PromptEngineeringDemo.java`](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) and ask:
 > - "What's the difference between zero-shot and few-shot prompting, and when should I use each?"
 > - "How does the temperature parameter affect the model's responses?"
 > - "What are some techniques to prevent prompt injection attacks in production?"
@@ -179,7 +179,7 @@ MathAssistant assistant = AiServices.create(MathAssistant.class, model);
 String response = assistant.chat("What is 25 plus 17?");
 ```
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot):** Open [`ToolIntegrationDemo.java`](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ToolIntegrationDemo.java`](src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) and ask:
 > - "How does the @Tool annotation work and what does LangChain4j do with it behind the scenes?"
 > - "Can the AI call multiple tools in sequence to solve complex problems?"
 > - "What happens if a tool throws an exception - how should I handle errors?"
@@ -198,7 +198,7 @@ String prompt = "Based on this document: " + content +
 String response = model.chat(prompt);
 ```
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot):** Open [`SimpleReaderDemo.java`](src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SimpleReaderDemo.java`](src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) and ask:
 > - "How does RAG prevent AI hallucinations compared to using the model's training data?"
 > - "What's the difference between this simple approach and using vector embeddings for retrieval?"
 > - "How would I scale this to handle multiple documents or larger knowledge bases?"

@@ -60,7 +60,7 @@ DocumentSplitter splitter = DocumentSplitters
 List<TextSegment> segments = splitter.split(document);
 ```
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot):** Open [`DocumentService.java`](src/main/java/com/example/langchain4j/rag/service/DocumentService.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`DocumentService.java`](src/main/java/com/example/langchain4j/rag/service/DocumentService.java) and ask:
 > - "How does LangChain4j split documents into chunks and why is overlap important?"
 > - "What's the optimal chunk size for different document types and why?"
 > - "How do I handle documents in multiple languages or with special formatting?"
@@ -103,7 +103,7 @@ for (EmbeddingMatch<TextSegment> match : matches) {
 }
 ```
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot):** Open [`RagService.java`](src/main/java/com/example/langchain4j/rag/service/RagService.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`RagService.java`](src/main/java/com/example/langchain4j/rag/service/RagService.java) and ask:
 > - "How does similarity search work with embeddings and what determines the score?"
 > - "What similarity threshold should I use and how does it affect results?"
 > - "How do I handle cases where no relevant documents are found?"
