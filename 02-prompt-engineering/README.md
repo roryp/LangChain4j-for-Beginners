@@ -298,6 +298,8 @@ mvn clean package -DskipTests
 
 Open http://localhost:8083 in your browser.
 
+**To stop:** Run `./stop.sh` (this module only) or `cd .. && ./stop-all.sh` (all modules)
+
 ## Application Screenshots
 
 <img src="images/dashboard-home.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>

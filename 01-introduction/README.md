@@ -187,7 +187,7 @@ mvn clean package -DskipTests
 
 Open http://localhost:8080 in your browser.
 
-**To stop all applications:** `cd .. && ./stop-all.sh`
+**To stop:** Run `./stop.sh` (this module only) or `cd .. && ./stop-all.sh` (all modules)
 
 ## Using the Application
 

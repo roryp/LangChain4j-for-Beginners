@@ -147,6 +147,8 @@ mvn clean package -DskipTests
 
 Open http://localhost:8084 in your browser.
 
+**To stop:** Run `./stop.sh` (this module only) or `cd .. && ./stop-all.sh` (all modules)
+
 ## Using the Application
 
 The application provides a web interface where you can interact with an AI agent that has access to weather and temperature conversion tools.
