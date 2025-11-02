@@ -142,7 +142,9 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-> 💡 **Explore with GitHub Copilot:** Ask about this pattern:
+Chain-of-Thought prompting explicitly asks the model to show its reasoning process, improving accuracy for complex tasks. The step-by-step breakdown helps both humans and AI understand the logic.
+
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Ask about this pattern:
 > - "How would I adapt the task execution pattern for long-running operations?"
 > - "What are best practices for structuring tool preambles in production applications?"
 > - "How can I capture and display intermediate progress updates in a UI?"
@@ -194,7 +196,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-> 💡 **Explore with GitHub Copilot:** Ask about structured analysis:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Ask about structured analysis:
 > - "How can I customize the analysis framework for different types of code reviews?"
 > - "What's the best way to parse and act on structured output programmatically?"
 > - "How do I ensure consistent severity levels across different review sessions?"
