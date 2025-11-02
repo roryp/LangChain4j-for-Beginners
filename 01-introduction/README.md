@@ -158,15 +158,9 @@ bash .azd-env.sh
 
 **Prerequisites:**
 
-1. Verify `.env` file exists in root directory with Azure credentials:
+Verify `.env` file exists in root directory with Azure credentials:
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
-```
-
-2. Build all modules (required before first run):
-```bash
-cd ..  # Go to root directory
-mvn clean package -DskipTests
 ```
 
 **Start the applications:**
@@ -183,7 +177,13 @@ cd 01-introduction
 ./start.sh
 ```
 
-Both scripts automatically load environment variables from the root `.env` file.
+Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
+
+**Note:** If you prefer to build all modules manually before starting:
+```bash
+cd ..  # Go to root directory
+mvn clean package -DskipTests
+```
 
 Open http://localhost:8080 in your browser.
 

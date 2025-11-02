@@ -44,9 +44,12 @@ start_app() {
     cd "$SCRIPT_DIR/$module"
     
     if [ ! -f "$jar_file" ]; then
-        echo "Error: JAR file not found at $jar_file"
-        echo "Please build the module first: mvn clean package -DskipTests"
-        return 1
+        echo "Error: JAR file not found. Building..."
+        mvn clean package -DskipTests
+        if [ ! -f "$jar_file" ]; then
+            echo "Error: Build failed for $module"
+            return 1
+        fi
     fi
     
     # Check if port is already in use

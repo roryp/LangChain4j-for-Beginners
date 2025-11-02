@@ -267,13 +267,12 @@ String response = chatModel.chat(prompt);
 
 **Prerequisites:**
 
-1. Build all modules (required before first run):
+Verify `.env` file exists in root directory with Azure credentials (created during Module 01):
 ```bash
-cd ..  # Go to root directory
-mvn clean package -DskipTests
+cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
-2. Start the application:
+**Start the application:**
 
 **Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8083. You can skip the start commands below and go directly to http://localhost:8083.
 
@@ -289,7 +288,13 @@ cd 02-prompt-engineering
 ./start.sh
 ```
 
-Both scripts automatically load environment variables from the root `.env` file.
+Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
+
+**Note:** If you prefer to build all modules manually before starting:
+```bash
+cd ..  # Go to root directory
+mvn clean package -DskipTests
+```
 
 Open http://localhost:8083 in your browser.
 
