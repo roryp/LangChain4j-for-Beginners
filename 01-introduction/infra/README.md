@@ -67,18 +67,25 @@ This displays:
 
 ### 3. Run Applications Locally
 
-Use the output values to run any example:
+The `azd up` command automatically creates a `.env` file in the root directory with all necessary environment variables.
+
+**Recommended:** Start all web applications:
 
 ```bash
-# Set environment variables
-export AZURE_OPENAI_ENDPOINT="<from azd output>"
-export AZURE_OPENAI_API_KEY="<from azd output>"
-export AZURE_OPENAI_DEPLOYMENT="gpt-5"
-
-# Run an example
-cd ../01-introduction  # or 02-prompt-engineering, 03-rag, 04-tools
-mvn spring-boot:run
+# From the root directory
+cd ../..
+./start-all.sh
 ```
+
+Or start a single module:
+
+```bash
+# Example: Start just the introduction module
+cd ../01-introduction
+./start.sh
+```
+
+Both scripts automatically load environment variables from the root `.env` file created by `azd up`.
 
 ## Configuration
 

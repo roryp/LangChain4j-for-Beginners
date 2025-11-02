@@ -169,24 +169,19 @@ mvn clean package -DskipTests
 
 **Start the applications:**
 
-Start just this module:
+**Recommended:** Start all web applications (modules 01-04):
 ```bash
-cd 01-introduction
-./start.sh  # Automatically sources .env from parent directory
+cd ..  # From root directory
+./start-all.sh
 ```
 
-Or start all web applications (modules 01-04):
-```bash
-cd ..
-./start-all.sh  # From root directory - runs all 4 Spring Boot apps
-```
-
-Or run manually:
+Or start just this module:
 ```bash
 cd 01-introduction
-source ../.env
-mvn spring-boot:run
+./start.sh
 ```
+
+Both scripts automatically load environment variables from the root `.env` file.
 
 Open http://localhost:8080 in your browser.
 
