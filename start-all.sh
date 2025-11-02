@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Start all LangChain4j applications
-# This script sources the centralized .env file and starts both modules
+# This script sources the centralized .env file and starts all modules
 
 set -e
 
@@ -32,65 +32,117 @@ echo "Environment variables loaded successfully"
 echo "AZURE_OPENAI_ENDPOINT: $AZURE_OPENAI_ENDPOINT"
 echo "AZURE_OPENAI_DEPLOYMENT: $AZURE_OPENAI_DEPLOYMENT"
 
+# Function to check if port is in use
+is_port_in_use() {
+    local port=$1
+    if command -v lsof &> /dev/null; then
+        lsof -Pi :$port -sTCP:LISTEN -t >/dev/null 2>&1
+    else
+        netstat -ano | grep "LISTENING" | grep -w ":$port" >/dev/null 2>&1
+    fi
+}
+
+# Function to wait for port to be ready
+wait_for_port() {
+    local port=$1
+    local max_wait=30
+    local count=0
+    
+    while [ $count -lt $max_wait ]; do
+        if is_port_in_use $port; then
+            return 0
+        fi
+        sleep 1
+        count=$((count + 1))
+    done
+    return 1
+}
+
 # Function to start an application
 start_app() {
     local module=$1
     local port=$2
-    local jar_file=$3
+    local jar_name=$3
+    local jar_file="$SCRIPT_DIR/$module/target/$jar_name"
+    local log_file="$SCRIPT_DIR/$module/$module.log"
     
     echo ""
     echo "Starting $module on port $port..."
     
-    cd "$SCRIPT_DIR/$module"
-    
-    if [ ! -f "$jar_file" ]; then
-        echo "Error: JAR file not found. Building..."
-        mvn clean package -DskipTests
-        if [ ! -f "$jar_file" ]; then
-            echo "Error: Build failed for $module"
-            return 1
-        fi
-    fi
-    
     # Check if port is already in use
-    if lsof -Pi :$port -sTCP:LISTEN -t >/dev/null 2>&1 || netstat -ano | grep ":$port" >/dev/null 2>&1; then
+    if is_port_in_use $port; then
         echo "Warning: Port $port is already in use. Skipping $module"
         return 0
     fi
     
-    # Start application in background with environment variables
-    AZURE_OPENAI_ENDPOINT="$AZURE_OPENAI_ENDPOINT" \
-    AZURE_OPENAI_API_KEY="$AZURE_OPENAI_API_KEY" \
-    AZURE_OPENAI_DEPLOYMENT="$AZURE_OPENAI_DEPLOYMENT" \
-    AZURE_OPENAI_EMBEDDING_DEPLOYMENT="$AZURE_OPENAI_EMBEDDING_DEPLOYMENT" \
-    nohup java -jar "$jar_file" > "$module.log" 2>&1 &
-    local pid=$!
-    echo "Started $module with PID $pid"
+    # Build if JAR doesn't exist
+    if [ ! -f "$jar_file" ]; then
+        echo "JAR file not found. Building $module..."
+        cd "$SCRIPT_DIR/$module"
+        if ! mvn clean package -DskipTests; then
+            echo "Error: Build failed for $module"
+            cd "$SCRIPT_DIR"
+            return 1
+        fi
+        
+        if [ ! -f "$jar_file" ]; then
+            echo "Error: Build succeeded but JAR file not created at $jar_file"
+            cd "$SCRIPT_DIR"
+            return 1
+        fi
+        echo "Build completed successfully"
+        cd "$SCRIPT_DIR"
+    fi
     
-    # Wait a moment and check if it's still running
-    sleep 2
-    if ps -p $pid > /dev/null 2>&1; then
+    # Start application in background
+    cd "$SCRIPT_DIR/$module"
+    nohup java -jar "$jar_file" > "$log_file" 2>&1 &
+    local pid=$!
+    cd "$SCRIPT_DIR"
+    
+    echo "Started $module with PID $pid, waiting for port $port to be ready..."
+    
+    # Wait for port to become available
+    if wait_for_port $port; then
         echo "✓ $module is running on port $port"
+        return 0
     else
         echo "✗ $module failed to start. Check $module/$module.log for details"
+        return 1
     fi
 }
 
-# Start module 01-introduction (port 8080)
-start_app "01-introduction" 8080 "target/introduction-1.0.0.jar"
+# Start all modules
+failed_modules=()
 
-# Start module 02-prompt-engineering (port 8083)
-start_app "02-prompt-engineering" 8083 "target/prompt-engineering-1.0.0.jar"
+if ! start_app "01-introduction" 8080 "introduction-1.0.0.jar"; then
+    failed_modules+=("01-introduction")
+fi
 
-# Start module 03-rag (port 8081)
-start_app "03-rag" 8081 "target/rag-1.0.0.jar"
+if ! start_app "02-prompt-engineering" 8083 "prompt-engineering-1.0.0.jar"; then
+    failed_modules+=("02-prompt-engineering")
+fi
 
-# Start module 04-tools (port 8084)
-start_app "04-tools" 8084 "target/tools-1.0.0.jar"
+if ! start_app "03-rag" 8081 "rag-1.0.0.jar"; then
+    failed_modules+=("03-rag")
+fi
+
+if ! start_app "04-tools" 8084 "tools-1.0.0.jar"; then
+    failed_modules+=("04-tools")
+fi
 
 echo ""
 echo "============================================"
-echo "All applications started!"
+if [ ${#failed_modules[@]} -eq 0 ]; then
+    echo "All applications started successfully!"
+else
+    echo "Some applications failed to start:"
+    for module in "${failed_modules[@]}"; do
+        echo "  - $module"
+    done
+fi
+echo ""
+echo "Running applications:"
 echo "01-introduction:       http://localhost:8080"
 echo "02-prompt-engineering: http://localhost:8083"
 echo "03-rag:                http://localhost:8081"
@@ -98,3 +150,4 @@ echo "04-tools:              http://localhost:8084"
 echo "============================================"
 echo ""
 echo "To stop all applications, run: ./stop-all.sh"
+
