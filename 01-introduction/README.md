@@ -141,6 +141,8 @@ This will:
 2. Automatically generate `.env` file in project root with credentials
 3. Set up all required environment variables
 
+> **Note:** On first deployment, you may encounter a "RequestConflict" error. This is a known Azure timing issue. Simply run `azd up` again and it will complete successfully.
+
 **Verify `.env` was created:**
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.

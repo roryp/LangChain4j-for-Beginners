@@ -46,12 +46,14 @@ azd up
 
 When prompted:
 - Select your Azure subscription
-- Choose a location (recommended: `eastus` for GPT-5 availability)
+- Choose a location (recommended: `eastus2` or `swedencentral` for GPT-5 availability)
 - Confirm the environment name (default: `langchain4j-dev`)
 
 This will create:
 - Azure OpenAI resource with GPT-5 and text-embedding-3-small
 - Output connection details
+
+> **Note:** On first deployment, you may encounter a "RequestConflict" or "provisioning state is not terminal" error. This is a known Azure timing issue. Simply run `azd up` again and it will complete successfully.
 
 ### 2. Get Connection Details
 
@@ -171,6 +173,16 @@ Pricing calculator: https://azure.microsoft.com/pricing/calculator/
 **Solution:**
 - Choose a region with GPT-5 access (e.g., eastus, swedencentral)
 - Check availability: https://learn.microsoft.com/azure/ai-services/openai/concepts/models
+
+### Issue: "RequestConflict" or "provisioning state is not terminal" on first deployment
+
+**Error Message:**
+```
+Cannot modify resource... because the resource entity provisioning state is not terminal
+```
+
+**Solution:**
+This is a known Azure race condition when deploying OpenAI resources. Simply **run `azd up` again** - it will succeed on the second attempt after the initial resource provisioning completes.
 
 ### Issue: Insufficient quota for deployment
 
