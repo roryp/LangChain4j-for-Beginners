@@ -20,6 +20,16 @@ azure:
       tools:
         base-url: ${TOOLS_BASE_URL:http://localhost:8084}
 
+# Spring Boot Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
 logging:
   level:
     com.example.langchain4j: DEBUG

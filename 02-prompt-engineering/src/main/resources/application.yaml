@@ -15,6 +15,16 @@ azure:
     reasoning-effort: low  # low = faster demo responses, medium/high = deeper reasoning
     max-completion-tokens: 8000  # Balanced for GPT-5: reasoning + output
 
+# Spring Boot Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
 # Logging
 logging:
   level:
