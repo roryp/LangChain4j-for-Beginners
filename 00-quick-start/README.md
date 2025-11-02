@@ -92,13 +92,13 @@ $env:GITHUB_TOKEN="your_token_here"    # Windows PowerShell
 ### 1. Basic Chat
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.BasicChatDemo"
+mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.BasicChatDemo"
 ```
 
 ### 2. Prompt Patterns
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.PromptEngineeringDemo"
+mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.PromptEngineeringDemo"
 ```
 
 Shows zero-shot, few-shot, chain-of-thought, and role-based prompting.
@@ -106,7 +106,7 @@ Shows zero-shot, few-shot, chain-of-thought, and role-based prompting.
 ### 3. Function Calling
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.ToolIntegrationDemo"
+mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.ToolIntegrationDemo"
 ```
 
 AI automatically calls your Java methods when needed.
@@ -114,7 +114,7 @@ AI automatically calls your Java methods when needed.
 ### 4. Document Q&A (RAG)
 
 ```bash
-mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.SimpleReaderDemo"
+mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.SimpleReaderDemo"
 ```
 
 Ask questions about content in `document.txt`.
