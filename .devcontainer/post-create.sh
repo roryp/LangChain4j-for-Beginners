@@ -9,7 +9,7 @@ sudo apt-get install -y maven
 git config --global core.autocrlf input
 git config --global core.eol lf
 
-# Make all shell scripts executable
-find . -name "*.sh" -exec chmod +x {} +
+# Make all shell scripts executable (ignore permission errors)
+find . -name "*.sh" -exec chmod +x {} + 2>/dev/null || true
 
 echo "Dev container setup complete!"
