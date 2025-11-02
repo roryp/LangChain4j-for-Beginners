@@ -85,7 +85,7 @@ public AzureOpenAiChatModel chatModel() {
 }
 ```
 
-> 💡 **Explore with GitHub Copilot:** Open [`LangChainConfig.java`](src/main/java/com/example/langchain4j/config/LangChainConfig.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot):** Open [`LangChainConfig.java`](src/main/java/com/example/langchain4j/config/LangChainConfig.java) and ask:
 > - "What's the difference between AzureOpenAiChatModel and OpenAiChatModel?"
 > - "Why does GPT-5 use maxCompletionTokens instead of maxTokens?"
 > - "How can I configure different timeout values or retry policies?"
@@ -105,7 +105,7 @@ String response = chatModel.chat(memory.messages());
 memory.add(AiMessage.from(response));
 ```
 
-> 💡 **Explore with GitHub Copilot:** Open [`ConversationService.java`](src/main/java/com/example/langchain4j/service/ConversationService.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot):** Open [`ConversationService.java`](src/main/java/com/example/langchain4j/service/ConversationService.java) and ask:
 > - "How does MessageWindowChatMemory decide which messages to drop when the window is full?"
 > - "Can I implement custom memory storage using a database instead of in-memory?"
 > - "How would I add summarization to compress old conversation history?"
