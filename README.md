@@ -16,11 +16,18 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 6. [MCP (Model Context Protocol)](05-mcp/) - Work with the Model Context Protocol
 ---
 
-Start with [Quick Start](00-quick-start/) and progress through the modules. This module gets you up and running with LangChain4j in minutes using GitHub Models - no Azure subscription required. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/) module for a deeper dive with GPT-5. After completing the modules, explore the [Testing Guide](docs/TESTING.md) to see LangChain4j testing concepts in action.
+##  Learning Path
+
+Start with the [Quick Start](00-quick-start/) module and progress through each module to build your skills step-by-step. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/) module for a deeper dive with GPT-5.
 
 <img src="images/learning-path.png" alt="Learning Path" width="800"/>
 
-## 💡 Learning with GitHub Copilot
+After completing the modules, explore the [Testing Guide](docs/TESTING.md) to see LangChain4j testing concepts in action.
+
+> **Note:** This training uses both GitHub Models and Azure OpenAI. The [Quick Start](00-quick-start/) and [MCP](05-mcp/) modules use GitHub Models (no Azure subscription required), while modules 1-4 use Azure OpenAI GPT-5.
+
+
+## Learning with GitHub Copilot
 
 To quickly start coding, open this project in a GitHub Codespace or your local IDE with the provided devcontainer. The devcontainer used in this course comes pre-configured with GitHub Copilot for AI paired programming.
 
