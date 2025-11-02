@@ -277,23 +277,19 @@ mvn clean package -DskipTests
 
 **Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8083. You can skip the start commands below and go directly to http://localhost:8083.
 
+**Recommended:** Start all web applications (modules 01-04):
 ```bash
-cd 02-prompt-engineering
-source ../.env
-mvn spring-boot:run
+cd ..  # From root directory
+./start-all.sh
 ```
 
-Or use the start script:
+Or start just this module:
 ```bash
 cd 02-prompt-engineering
-./start.sh  # Automatically sources .env from parent directory
+./start.sh
 ```
 
-Or start all web applications (modules 01-04):
-```bash
-cd ..
-./start-all.sh  # From root directory - runs all 4 Spring Boot apps
-```
+Both scripts automatically load environment variables from the root `.env` file.
 
 Open http://localhost:8083 in your browser.
 
