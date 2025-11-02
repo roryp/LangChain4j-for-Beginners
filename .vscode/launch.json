@@ -1,0 +1,59 @@
+{
+    "configurations": [
+        // 01-introduction
+        {
+            "type": "java",
+            "name": "Spring Boot: Introduction",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/01-introduction",
+            "mainClass": "com.example.langchain4j.app.Application",
+            "projectName": "introduction",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        // 02-prompt-engineering
+        {
+            "type": "java",
+            "name": "Spring Boot: Prompt Engineering",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/02-prompt-engineering",
+            "mainClass": "com.example.langchain4j.prompts.app.Application",
+            "projectName": "prompt-engineering",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        // 03-rag
+        {
+            "type": "java",
+            "name": "Spring Boot: RAG",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/03-rag",
+            "mainClass": "com.example.langchain4j.rag.RagApplication",
+            "projectName": "rag",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        // 04-tools
+        {
+            "type": "java",
+            "name": "Spring Boot: Agents & Tools",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/04-tools",
+            "mainClass": "com.example.langchain4j.agents.AgentsApplication",
+            "projectName": "tools",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        // 05-mcp
+        {
+            "type": "java",
+            "name": "MCP: Streamable HTTP Demo",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/05-mcp",
+            "mainClass": "com.example.langchain4j.mcp.StreamableHttpDemo",
+            "projectName": "mcp",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

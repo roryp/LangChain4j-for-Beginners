@@ -36,7 +36,6 @@ local.properties
 *.launch
 
 # IDE - VS Code
-.vscode/
 *.code-workspace
 
 # IDE - NetBeans

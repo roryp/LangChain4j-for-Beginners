@@ -125,7 +125,21 @@ cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 
 **Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8084. You can skip the start commands below and go directly to http://localhost:8084.
 
-**Recommended:** Start all web applications (modules 01-04):
+**Option 1: Using Spring Boot Dashboard (Recommended for VS Code users)**
+
+The dev container includes the Spring Boot Dashboard extension, which provides a visual interface to manage all Spring Boot applications. You can find it in the Activity Bar on the left side of VS Code (look for the Spring Boot icon).
+
+From the Spring Boot Dashboard, you can:
+- See all available Spring Boot applications in the workspace
+- Start/stop applications with a single click
+- View application logs in real-time
+- Monitor application status
+
+Simply click the play button next to "tools" to start this module, or start all modules at once.
+
+**Option 2: Using shell scripts**
+
+Start all web applications (modules 01-04):
 ```bash
 cd ..  # From root directory
 ./start-all.sh
