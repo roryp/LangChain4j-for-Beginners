@@ -80,6 +80,7 @@ hs_err_pid*
 replay_pid*
 CONSOLIDATION_ANALYSIS.md
 LangChain4j_Diagrams_Pack.docx
+DOTENV_MIGRATION_PLAN.md
 
 # Playwright output folder
 .playwright-mcp/
