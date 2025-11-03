@@ -44,13 +44,11 @@ This module demonstrates advanced prompting patterns using the same LangChain4j 
 ```xml
 <dependency>
     <groupId>dev.langchain4j</groupId>
-    <artifactId>langchain4j</artifactId>
-    <version>${langchain4j.version}</version> <!-- Version defined in root pom.xml -->
+    <artifactId>langchain4j</artifactId> <!-- Inherited from BOM in root pom.xml -->
 </dependency>
 <dependency>
     <groupId>dev.langchain4j</groupId>
-    <artifactId>langchain4j-azure-open-ai</artifactId>
-    <version>${langchain4j.version}</version> <!-- Version defined in root pom.xml -->
+    <artifactId>langchain4j-azure-open-ai</artifactId> <!-- Inherited from BOM in root pom.xml -->
 </dependency>
 ```
 

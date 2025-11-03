@@ -46,15 +46,13 @@ This quick start uses two Maven dependencies in the [`pom.xml`](pom.xml):
 <!-- Core LangChain4j library -->
 <dependency>
     <groupId>dev.langchain4j</groupId>
-    <artifactId>langchain4j</artifactId>
-    <version>${langchain4j.version}</version> <!-- Version defined in root pom.xml -->
+    <artifactId>langchain4j</artifactId> <!-- Inherited from BOM in root pom.xml -->
 </dependency>
 
 <!-- OpenAI integration (works with GitHub Models) -->
 <dependency>
     <groupId>dev.langchain4j</groupId>
-    <artifactId>langchain4j-open-ai</artifactId>
-    <version>${langchain4j.version}</version> <!-- Version defined in root pom.xml -->
+    <artifactId>langchain4j-open-ai</artifactId> <!-- Inherited from BOM in root pom.xml -->
 </dependency>
 ```
 
