@@ -144,6 +144,8 @@ Each example shows a different transport mechanism and use case, giving you the 
 
 If you're using VS Code, add your token to the `.env` file in the project root:
 
+If the `.env` file does not exist, copy `.env.example` to `.env` or create a new `.env` file in the project root.
+
 ```bash
 # In /workspaces/LangChain4j-for-Beginners/.env
 GITHUB_TOKEN=your_token_here
