@@ -140,15 +140,38 @@ Each example shows a different transport mechanism and use case, giving you the 
 - Docker (for Git integration example)
 - GitHub Personal Access Token (from Quick Start module)
 
+**Option 1: Using VS Code (Recommended)**
+
+If you're using VS Code, add your token to the `.env` file in the project root:
+
+```bash
+# In /workspaces/LangChain4j-for-Beginners/.env
+GITHUB_TOKEN=your_token_here
+```
+
+Then you can simply right-click on any demo file (e.g., `StdioTransportDemo.java`) in the Explorer and select **"Run Java"** or use the launch configurations from the Run and Debug panel.
+
+**Option 2: Using Terminal**
+
+Set the token as an environment variable:
+
 ```bash
 export GITHUB_TOKEN=your_token_here
 ```
 
 ## Quick Start
 
+**Using VS Code:** Simply right-click on any demo file in the Explorer and select **"Run Java"**, or use the launch configurations from the Run and Debug panel (make sure you've added your token to the `.env` file first).
+
+**Using Maven:** Alternatively, you can run from the command line with the examples below.
+
+**⚠️ Important:** Some examples have prerequisites (like starting an MCP server or building Docker images). Check each example's requirements before running.
+
 ### Example 1: Remote Calculator (Streamable HTTP)
 
 This demonstrates network-based tool integration.
+
+**⚠️ Prerequisite:** You need to start the MCP server first (see Terminal 1 below).
 
 **Terminal 1 - Start the MCP server:**
 ```bash
@@ -159,6 +182,10 @@ node dist/streamableHttp.js
 ```
 
 **Terminal 2 - Run the example:**
+
+**Using VS Code:** Right-click on `StreamableHttpDemo.java` and select **"Run Java"**.
+
+**Using Maven:**
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
@@ -171,6 +198,11 @@ Watch the agent discover available tools, then use the calculator to perform add
 
 This demonstrates local subprocess-based tools.
 
+**✅ No prerequisites needed** - the MCP server is spawned automatically.
+
+**Using VS Code:** Right-click on `StdioTransportDemo.java` and select **"Run Java"**.
+
+**Using Maven:**
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
@@ -183,6 +215,8 @@ The application spawns a filesystem MCP server automatically and reads a local f
 
 This demonstrates containerized tool servers.
 
+**⚠️ Prerequisite:** You need to build the Docker image first (see Terminal 1 below).
+
 **Terminal 1 - Build the Docker image:**
 ```bash
 cd servers/src/git
@@ -190,6 +224,10 @@ docker build -t mcp/git .
 ```
 
 **Terminal 2 - Run the analyzer:**
+
+**Using VS Code:** Right-click on `GitRepositoryAnalyzer.java` and select **"Run Java"**.
+
+**Using Maven:**
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
