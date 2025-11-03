@@ -53,15 +53,6 @@
         },
         {
             "type": "java",
-            "name": "MCP: Streamable HTTP Demo (Manual Server)",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/05-mcp",
-            "mainClass": "com.example.langchain4j.mcp.StreamableHttpDemo",
-            "projectName": "mcp-example",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
             "name": "MCP: Git Repository Analyzer (Docker)",
             "request": "launch",
             "cwd": "${workspaceFolder}/05-mcp",
@@ -116,16 +107,6 @@
             "cwd": "${workspaceFolder}/04-tools",
             "mainClass": "com.example.langchain4j.agents.AgentsApplication",
             "projectName": "tools",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "MCP: Streamable HTTP Demo",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/05-mcp",
-            "mainClass": "com.example.langchain4j.mcp.StreamableHttpDemo",
-            "projectName": "mcp",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
