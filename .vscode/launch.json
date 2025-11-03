@@ -5,28 +5,32 @@
             "name": "ToolIntegrationDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.ToolIntegrationDemo",
-            "projectName": "langchain4j-quickstart"
+            "projectName": "langchain4j-quickstart",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
             "name": "SimpleReaderDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.SimpleReaderDemo",
-            "projectName": "langchain4j-quickstart"
+            "projectName": "langchain4j-quickstart",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
             "name": "PromptEngineeringDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.PromptEngineeringDemo",
-            "projectName": "langchain4j-quickstart"
+            "projectName": "langchain4j-quickstart",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
             "name": "BasicChatDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.BasicChatDemo",
-            "projectName": "langchain4j-quickstart"
+            "projectName": "langchain4j-quickstart",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",

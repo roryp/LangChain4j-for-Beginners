@@ -82,12 +82,32 @@ The `langchain4j-open-ai` module provides the `OpenAiChatModel` class that conne
 
 ### 2. Set Your Token
 
+**Option 1: Using VS Code (Recommended)**
+
+If you're using VS Code, add your token to the `.env` file in the project root:
+
+If the `.env` file does not exist, copy `.env.example` to `.env` or create a new `.env` file in the project root.
+```bash
+# In /workspaces/LangChain4j-for-Beginners/.env
+GITHUB_TOKEN=your_token_here
+```
+
+Then you can simply right-click on any demo file (e.g., `BasicChatDemo.java`) in the Explorer and select **"Run Java"** or use the launch configurations from the Run and Debug panel.
+
+**Option 2: Using Terminal**
+
+Set the token as an environment variable:
+
 ```bash
 export GITHUB_TOKEN="your_token_here"  # macOS/Linux
 $env:GITHUB_TOKEN="your_token_here"    # Windows PowerShell
 ```
 
 ## Run the Examples
+
+**Using VS Code:** Simply right-click on any demo file in the Explorer and select **"Run Java"**, or use the launch configurations from the Run and Debug panel (make sure you've added your token to the `.env` file first).
+
+**Using Maven:** Alternatively, you can run from the command line:
 
 ### 1. Basic Chat
 
