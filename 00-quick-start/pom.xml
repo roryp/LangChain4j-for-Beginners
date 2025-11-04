@@ -21,14 +21,12 @@
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j</artifactId>
-      <version>${langchain4j.version}</version>
     </dependency>
 
     <!-- OpenAI Integration (GitHub Models uses OpenAI-compatible API) -->
     <dependency>
       <groupId>dev.langchain4j</groupId>
       <artifactId>langchain4j-open-ai</artifactId>
-      <version>${langchain4j.version}</version>
     </dependency>
 
     <!-- SLF4J Simple Logger (for logging) -->
