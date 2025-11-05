@@ -125,13 +125,13 @@ class SimpleGpt5PromptTest {
         String actualPrompt = promptCaptor.getValue();
         
         assertThat(actualPrompt)
-            .contains("<self_reflection>")
-            .contains("<code_standards>")
-            .contains("Internal rubric")
-            .contains("Correctness")
-            .contains("Quality")
-            .contains("Best Practices")
+            .contains("production-quality Java code")
+            .contains("Spring Boot best practices")
+            .contains("@Service")
             .contains("@RestController")
+            .contains("Java records for DTOs")
+            .contains("proper error handling")
+            .contains("JavaDoc comments")
             .contains(requirement);
     }
 
@@ -296,11 +296,11 @@ class SimpleGpt5PromptTest {
         promptService.solveFocused("test");
         verify(mockChatModel, times(1)).chat(contains("context_gathering"));
         
-        // 2. Self-reflection
+        // 2. Self-reflection (simplified in our implementation)
         reset(mockChatModel);
         when(mockChatModel.chat(anyString())).thenReturn("response");
         promptService.generateCodeWithReflection("test");
-        verify(mockChatModel, times(1)).chat(contains("self_reflection"));
+        verify(mockChatModel, times(1)).chat(contains("production-quality"));
         
         // 3. Structured output
         reset(mockChatModel);
