@@ -127,13 +127,8 @@ public class Gpt5PromptService {
      */
     public String generateCodeWithReflection(String requirement) {
         String prompt = """
-            Generate clean, production-quality Java code for this requirement.
-            Follow Spring Boot best practices: use @Service, @RestController, Java records for DTOs, and proper error handling.
-            Include JavaDoc comments.
-            
-            Requirement: %s
-            
-            Provide the code:
+            Generate Java code with production-quality standards: %s
+            Keep it simple and include basic error handling.
             """.formatted(requirement);
 
         return chatModel.chat(prompt);

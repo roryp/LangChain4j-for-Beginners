@@ -125,13 +125,9 @@ class SimpleGpt5PromptTest {
         String actualPrompt = promptCaptor.getValue();
         
         assertThat(actualPrompt)
-            .contains("production-quality Java code")
-            .contains("Spring Boot best practices")
-            .contains("@Service")
-            .contains("@RestController")
-            .contains("Java records for DTOs")
-            .contains("proper error handling")
-            .contains("JavaDoc comments")
+            .contains("Generate Java code")
+            .contains("simple")
+            .contains("error handling")
             .contains(requirement);
     }
 
