@@ -1,7 +1,6 @@
 package com.example.langchain4j.prompts.controller;
 
 import com.example.langchain4j.prompts.service.Gpt5PromptService;
-import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +27,7 @@ public class Gpt5PromptController {
      */
     @PostMapping("/focused")
     public ResponseEntity<PromptResponse> solveFocused(@RequestBody ProblemRequest request) {
-        String result = gpt5Service.solveFocused(request.getProblem());
+        String result = gpt5Service.solveFocused(request.problem());
         return ResponseEntity.ok(new PromptResponse(result));
     }
 
@@ -41,7 +40,7 @@ public class Gpt5PromptController {
      */
     @PostMapping("/autonomous")
     public ResponseEntity<PromptResponse> solveAutonomous(@RequestBody ProblemRequest request) {
-        String result = gpt5Service.solveAutonomous(request.getProblem());
+        String result = gpt5Service.solveAutonomous(request.problem());
         return ResponseEntity.ok(new PromptResponse(result));
     }
 
@@ -54,7 +53,7 @@ public class Gpt5PromptController {
      */
     @PostMapping("/task")
     public ResponseEntity<PromptResponse> executeTask(@RequestBody TaskRequest request) {
-        String result = gpt5Service.executeWithPreamble(request.getTask());
+        String result = gpt5Service.executeWithPreamble(request.task());
         return ResponseEntity.ok(new PromptResponse(result));
     }
 
@@ -67,7 +66,7 @@ public class Gpt5PromptController {
      */
     @PostMapping("/code")
     public ResponseEntity<PromptResponse> generateCode(@RequestBody CodeRequest request) {
-        String result = gpt5Service.generateCodeWithReflection(request.getRequirement());
+        String result = gpt5Service.generateCodeWithReflection(request.requirement());
         return ResponseEntity.ok(new PromptResponse(result));
     }
 
@@ -80,7 +79,7 @@ public class Gpt5PromptController {
      */
     @PostMapping("/analyze")
     public ResponseEntity<PromptResponse> analyzeCode(@RequestBody CodeAnalysisRequest request) {
-        String result = gpt5Service.analyzeCode(request.getCode());
+        String result = gpt5Service.analyzeCode(request.code());
         return ResponseEntity.ok(new PromptResponse(result));
     }
 
@@ -94,8 +93,8 @@ public class Gpt5PromptController {
     @PostMapping("/chat")
     public ResponseEntity<PromptResponse> chat(@RequestBody ChatRequest request) {
         String result = gpt5Service.continueConversation(
-            request.getMessage(), 
-            request.getSessionId()
+            request.message(), 
+            request.sessionId()
         );
         return ResponseEntity.ok(new PromptResponse(result));
     }
@@ -122,9 +121,9 @@ public class Gpt5PromptController {
     @PostMapping("/constrained")
     public ResponseEntity<PromptResponse> generateConstrained(@RequestBody ConstrainedRequest request) {
         String result = gpt5Service.generateConstrained(
-            request.getTopic(),
-            request.getFormat(),
-            request.getMaxWords()
+            request.topic(),
+            request.format(),
+            request.maxWords()
         );
         return ResponseEntity.ok(new PromptResponse(result));
     }
@@ -138,53 +137,27 @@ public class Gpt5PromptController {
      */
     @PostMapping("/reason")
     public ResponseEntity<PromptResponse> solveWithReasoning(@RequestBody ProblemRequest request) {
-        String result = gpt5Service.solveWithReasoning(request.getProblem());
+        String result = gpt5Service.solveWithReasoning(request.problem());
         return ResponseEntity.ok(new PromptResponse(result));
     }
 
     // Request/Response DTOs
 
-    @Data
-    public static class ProblemRequest {
-        private String problem;
-    }
+    public record ProblemRequest(String problem) {}
 
-    @Data
-    public static class TaskRequest {
-        private String task;
-    }
+    public record TaskRequest(String task) {}
 
-    @Data
-    public static class CodeRequest {
-        private String requirement;
-    }
+    public record CodeRequest(String requirement) {}
 
-    @Data
-    public static class CodeAnalysisRequest {
-        private String code;
-    }
+    public record CodeAnalysisRequest(String code) {}
 
-    @Data
-    public static class ChatRequest {
-        private String message;
-        private String sessionId;
-    }
+    public record ChatRequest(String message, String sessionId) {}
 
-    @Data
-    public static class ConstrainedRequest {
-        private String topic;
-        private String format;
-        private int maxWords;
-    }
+    public record ConstrainedRequest(String topic, String format, int maxWords) {}
 
-    @Data
-    public static class PromptResponse {
-        private String result;
-        private long timestamp;
-
+    public record PromptResponse(String result, long timestamp) {
         public PromptResponse(String result) {
-            this.result = result;
-            this.timestamp = System.currentTimeMillis();
+            this(result, System.currentTimeMillis());
         }
     }
 }

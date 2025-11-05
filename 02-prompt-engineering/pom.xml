@@ -49,13 +49,6 @@
       <artifactId>jackson-databind</artifactId>
     </dependency>
 
-    <!-- Lombok for reducing boilerplate -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <optional>true</optional>
-    </dependency>
-
     <!-- Testing support -->
     <dependency>
       <groupId>org.springframework.boot</groupId>

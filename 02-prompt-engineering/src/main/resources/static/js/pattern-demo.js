@@ -81,7 +81,15 @@ function copyToClipboard(text) {
 }
 
 function setExample(text) {
-    const input = document.querySelector('textarea, input[type="text"]');
+    // Try to find the main input field by common IDs first
+    const input = document.getElementById('code') || 
+                  document.getElementById('task') || 
+                  document.getElementById('problem') ||
+                  document.getElementById('requirement') ||
+                  document.getElementById('question') ||
+                  document.getElementById('topic') ||
+                  document.querySelector('textarea:not([readonly]), input[type="text"]:not([readonly])');
+    
     if (input) {
         input.value = text;
         input.focus();

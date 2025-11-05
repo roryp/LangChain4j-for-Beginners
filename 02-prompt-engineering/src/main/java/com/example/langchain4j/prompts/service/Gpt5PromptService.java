@@ -127,44 +127,8 @@ public class Gpt5PromptService {
      */
     public String generateCodeWithReflection(String requirement) {
         String prompt = """
-            <self_reflection>
-            You are generating production-quality Java code.
-            
-            Internal rubric (do not show to user):
-            1. Correctness: Does it solve the exact requirement?
-            2. Quality: Is it clean, readable, and well-structured?
-            3. Best Practices: Does it follow Java/Spring Boot conventions?
-            4. Maintainability: Is it easy to modify and extend?
-            5. Error Handling: Does it handle edge cases properly?
-            6. Documentation: Is it properly documented?
-            7. Testing: Can it be easily tested?
-            
-            Iterate internally until the solution scores high on all criteria.
-            Only then provide your answer.
-            </self_reflection>
-            
-            <code_standards>
-            <guiding_principles>
-            - Clarity and Reuse: Code should be modular and reusable
-            - Consistency: Follow Spring Boot and Java conventions
-            - Simplicity: Favor small, focused methods
-            - Quality: Include proper JavaDoc, error handling, and logging
-            </guiding_principles>
-            
-            <java_spring_boot_standards>
-            - Use @RestController for REST APIs, @Service for business logic
-            - Implement proper exception handling with @ExceptionHandler
-            - Use Lombok annotations (@Data, @Builder) to reduce boilerplate
-            - Follow constructor-based dependency injection
-            - Include JavaDoc for public methods
-            - Use meaningful variable and method names
-            - Handle null cases and edge conditions
-            </java_spring_boot_standards>
-            </code_standards>
-            
-            Requirement: %s
-            
-            Generate the code:
+            Generate Java code with production-quality standards: %s
+            Keep it simple and include basic error handling.
             """.formatted(requirement);
 
         return chatModel.chat(prompt);
