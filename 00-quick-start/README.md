@@ -19,7 +19,7 @@
 
 ## Introduction
 
-This quickstart is meant to get you up and running with LangChain4j as quickly as possible. It covers the absolute basics of building AI applications with LangChain4j and GitHub Models. In the next modules youll use Azure OpenAI with LangChain4j to build more advanced applications.
+This quickstart is meant to get you up and running with LangChain4j as quickly as possible. It covers the absolute basics of building AI applications with LangChain4j and GitHub Models. In the next modules you'll use Azure OpenAI with LangChain4j to build more advanced applications.
 
 ## What is LangChain4j?
 

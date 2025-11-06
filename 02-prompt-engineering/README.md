@@ -24,7 +24,7 @@
 
 In the previous module, you saw how memory enables conversational AI. Now we'll focus on how you ask questions - the prompts themselves. The way you structure your prompts dramatically affects the quality of responses you get.
 
-In the previous module, you used GitHub Models, and now we'll use Azure OpenAI's GPT-5. GPT-5 is significant because it introduces reasoning control - you can tell the model how much thinking to do before answering. This makes different prompting strategies more apparent and helps you understand when to use each approach. We'll also benefit from Azure's less rate limiting for GPT-5 compared to GitHub Models.
+In the previous module, you used GitHub Models, and now we'll use Azure OpenAI's GPT-5. GPT-5 is significant because it introduces reasoning control - you can tell the model how much thinking to do before answering. This makes different prompting strategies more apparent and helps you understand when to use each approach. We'll also benefit from Azure's fewer rate limits for GPT-5 compared to GitHub Models.
 
 ## Understanding Prompt Engineering
 
