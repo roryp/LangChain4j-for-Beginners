@@ -1,5 +1,15 @@
 # Testing LangChain4j Applications
 
+## Table of Contents
+
+- [Quick Start](#quick-start)
+- [What the Tests Cover](#what-the-tests-cover)
+- [Running the Tests](#running-the-tests)
+- [Running Tests in VS Code](#running-tests-in-vs-code)
+- [Testing Patterns](#testing-patterns)
+- [Testing Philosophy](#testing-philosophy)
+- [Next Steps](#next-steps)
+
 This guide walks you through the tests that demonstrate how to test AI applications without requiring API keys or external services.
 
 ## Quick Start
@@ -13,16 +23,6 @@ mvn test
 <img src="images/test-results.png" alt="Successful Test Results" width="800"/>
 
 *Successful test execution showing all tests passing with zero failures*
-
-## Table of Contents
-
-- [Quick Start](#quick-start)
-- [What the Tests Cover](#what-the-tests-cover)
-- [Running the Tests](#running-the-tests)
-- [Running Tests in VS Code](#running-tests-in-vs-code)
-- [Testing Patterns](#testing-patterns)
-- [Testing Philosophy](#testing-philosophy)
-- [Next Steps](#next-steps)
 
 ## What the Tests Cover
 
