@@ -3,14 +3,14 @@
 ## Table of Contents
 
 - [What You'll Learn](#what-youll-learn)
+- [Prerequisites](#prerequisites)
 - [Understanding RAG](#understanding-rag)
 - [How It Works](#how-it-works)
   - [Document Processing](#document-processing)
   - [Creating Embeddings](#creating-embeddings)
   - [Semantic Search](#semantic-search)
   - [Answer Generation](#answer-generation)
-- [Quick Start](#quick-start)
-  - [Use Existing Azure Resources](#use-existing-azure-resources)
+- [Run the Application](#run-the-application)
 - [Using the Application](#using-the-application)
   - [Upload a Document](#upload-a-document)
   - [Ask Questions](#ask-questions)
@@ -33,6 +33,13 @@ RAG (Retrieval-Augmented Generation) solves this problem. Instead of trying to t
 <img src="images/rag-architecture.png" alt="RAG Architecture" width="800"/>
 
 *RAG workflow - from user query to semantic search to contextual answer generation*
+
+## Prerequisites
+
+- Completed Module 01 (Azure OpenAI resources deployed)
+- `.env` file in root directory with Azure credentials (created by `azd up` in Module 01)
+
+> **Note:** If you haven't completed Module 01, follow the deployment instructions there first.
 
 ## Understanding RAG
 
@@ -112,20 +119,18 @@ for (EmbeddingMatch<TextSegment> match : matches) {
 
 The most relevant chunks are included in the prompt to the model. The model reads those specific chunks and answers your question based on that information. This prevents hallucination - the model can only answer from what's in front of it.
 
-## Quick Start
+## Run the Application
 
-### Use Existing Azure Resources
+**Verify deployment:**
 
-**Prerequisites:**
-
-Verify `.env` file exists in root directory with Azure credentials (created during Module 01):
+Ensure the `.env` file exists in root directory with Azure credentials (created during Module 01):
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
 **Start the application:**
 
-**Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8081. You can skip the start commands below and go directly to http://localhost:8081.
+> **Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8081. You can skip the start commands below and go directly to http://localhost:8081.
 
 **Option 1: Using Spring Boot Dashboard (Recommended for VS Code users)**
 
@@ -157,11 +162,11 @@ cd 03-rag
 
 Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
 
-**Note:** If you prefer to build all modules manually before starting:
-```bash
-cd ..  # Go to root directory
-mvn clean package -DskipTests
-```
+> **Note:** If you prefer to build all modules manually before starting:
+> ```bash
+> cd ..  # Go to root directory
+> mvn clean package -DskipTests
+> ```
 
 Open http://localhost:8081 in your browser.
 
