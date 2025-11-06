@@ -3,11 +3,11 @@
 ## Table of Contents
 
 - [What You'll Learn](#what-youll-learn)
+- [Prerequisites](#prerequisites)
 - [Understanding Prompt Engineering](#understanding-prompt-engineering)
 - [How This Uses LangChain4j](#how-this-uses-langchain4j)
 - [The Core Patterns](#the-core-patterns)
-- [Quick Start](#quick-start)
-  - [Use Existing Azure Resources](#use-existing-azure-resources)
+- [Using Existing Azure Resources](#using-existing-azure-resources)
 - [Application Screenshots](#application-screenshots)
 - [Exploring the Patterns](#exploring-the-patterns)
   - [Low vs High Eagerness](#low-vs-high-eagerness)
@@ -22,9 +22,16 @@
 
 ## What You'll Learn
 
-In the previous module, you saw how memory enables conversational AI. Now we'll focus on how you ask questions - the prompts themselves. The way you structure your prompts dramatically affects the quality of responses you get.
+In the previous module, you saw how memory enables conversational AI and used GitHub Models for basic interactions. Now we'll focus on how you ask questions - the prompts themselves - using Azure OpenAI's GPT-5. The way you structure your prompts dramatically affects the quality of responses you get.
 
-In the previous module, you used GitHub Models, and now we'll use Azure OpenAI's GPT-5. GPT-5 is significant because it introduces reasoning control - you can tell the model how much thinking to do before answering. This makes different prompting strategies more apparent and helps you understand when to use each approach. We'll also benefit from Azure's fewer rate limits for GPT-5 compared to GitHub Models.
+We'll use GPT-5 because it introduces reasoning control - you can tell the model how much thinking to do before answering. This makes different prompting strategies more apparent and helps you understand when to use each approach. We'll also benefit from Azure's fewer rate limits for GPT-5 compared to GitHub Models.
+
+## Prerequisites
+
+- Completed Module 01 (Azure OpenAI resources deployed)
+- `.env` file in root directory with Azure credentials (created by `azd up` in Module 01)
+
+> **Note:** If you haven't completed Module 01, follow the deployment instructions there first.
 
 ## Understanding Prompt Engineering
 
@@ -259,22 +266,18 @@ String response = chatModel.chat(prompt);
 
 *Enforcing specific format, length, and structure requirements*
 
-[↑ Back to top](#module-02-prompt-engineering-with-gpt-5)
+## Using Existing Azure Resources
 
-## Quick Start
+**Verify deployment:**
 
-### Use Existing Azure Resources
-
-**Prerequisites:**
-
-Verify `.env` file exists in root directory with Azure credentials (created during Module 01):
+Ensure the `.env` file exists in root directory with Azure credentials (created during Module 01):
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
 **Start the application:**
 
-**Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8083. You can skip the start commands below and go directly to http://localhost:8083.
+> **Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8083. You can skip the start commands below and go directly to http://localhost:8083.
 
 **Option 1: Using Spring Boot Dashboard (Recommended for VS Code users)**
 
@@ -306,11 +309,11 @@ cd 02-prompt-engineering
 
 Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
 
-**Note:** If you prefer to build all modules manually before starting:
-```bash
-cd ..  # Go to root directory
-mvn clean package -DskipTests
-```
+> **Note:** If you prefer to build all modules manually before starting:
+> ```bash
+> cd ..  # Go to root directory
+> mvn clean package -DskipTests
+> ```
 
 Open http://localhost:8083 in your browser.
 
@@ -321,8 +324,6 @@ Open http://localhost:8083 in your browser.
 <img src="images/dashboard-home.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *The main dashboard showing all 8 prompt engineering patterns with their characteristics and use cases*
-
-[↑ Back to top](#module-02-prompt-engineering-with-gpt-5)
 
 ## Exploring the Patterns
 
@@ -387,8 +388,6 @@ When you need specific formats or word counts, this pattern enforces strict adhe
 <img src="images/constrained-output-demo.png" alt="Constrained Output Demo" width="800"/>
 
 *Machine learning summary with format control*
-
-[↑ Back to top](#module-02-prompt-engineering-with-gpt-5)
 
 ## What You're Really Learning
 
