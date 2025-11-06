@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Introduction](#introduction)
 - [What is LangChain4j?](#what-is-langchain4j)
 - [LangChain4j Dependencies](#langchain4j-dependencies)
 - [Prerequisites](#prerequisites)
@@ -15,6 +16,10 @@
   - [4. Document Q&A (RAG)](#4-document-qa-rag)
 - [What Each Example Shows](#what-each-example-shows)
 - [Next Steps](#next-steps)
+
+## Introduction
+
+This quickstart is meant to get you up and running with LangChain4j as quickly as possible. It covers the absolute basics of building AI applications with LangChain4j and GitHub Models. In the next modules youll use Azure OpenAI with LangChain4j to build more advanced applications.
 
 ## What is LangChain4j?
 
