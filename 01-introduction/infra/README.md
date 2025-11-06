@@ -245,10 +245,10 @@ This is a known Azure race condition when deploying OpenAI resources. Simply **r
 **Issue**: `azd provision` fails with quota or capacity errors
 
 **Solution**: 
-1. Try a different region - GPT-5 is available in `eastus` or `swedencentral`
+1. Try a different region - See [Changing Azure Regions](#changing-azure-regions) section for how to configure regions
 2. Check your subscription has Azure OpenAI quota:
    ```bash
-   az cognitiveservices account list-skus --location eastus
+   az cognitiveservices account list-skus --location <your-region>
    ```
 
 ### Application Not Connecting
