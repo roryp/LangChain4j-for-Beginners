@@ -149,6 +149,8 @@ cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.
 > bash .azd-env.sh
 > ```
 
+For detailed infrastructure information including architecture, cost optimization, troubleshooting, and customization options, see the [Infrastructure README](infra/README.md).
+
 ## Run the Application Locally
 
 **Verify deployment:**
