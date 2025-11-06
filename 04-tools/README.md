@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [What You'll Learn](#what-youll-learn)
+- [Prerequisites](#prerequisites)
 - [Understanding AI Agents with Tools](#understanding-ai-agents-with-tools)
 - [How Tool Calling Works](#how-tool-calling-works)
   - [Tool Definitions](#tool-definitions)
@@ -10,8 +11,7 @@
   - [Execution](#execution)
   - [Response Generation](#response-generation)
 - [Tool Chaining](#tool-chaining)
-- [Quick Start](#quick-start)
-  - [Use Existing Azure Resources](#use-existing-azure-resources)
+- [Run the Application](#run-the-application)
 - [Using the Application](#using-the-application)
   - [Try Simple Tool Usage](#try-simple-tool-usage)
   - [Test Tool Chaining](#test-tool-chaining)
@@ -32,6 +32,13 @@
 So far, you've learned how to have conversations with AI, structure prompts effectively, and ground responses in your documents. But there's still a fundamental limitation: language models can only generate text. They can't check the weather, perform calculations, query databases, or interact with external systems.
 
 Tools change this. By giving the model access to functions it can call, you transform it from a text generator into an agent that can take actions. The model decides when it needs a tool, which tool to use, and what parameters to pass. Your code executes the function and returns the result. The model incorporates that result into its response.
+
+## Prerequisites
+
+- Completed Module 01 (Azure OpenAI resources deployed)
+- `.env` file in root directory with Azure credentials (created by `azd up` in Module 01)
+
+> **Note:** If you haven't completed Module 01, follow the deployment instructions there first.
 
 ## Understanding AI Agents with Tools
 
@@ -110,20 +117,18 @@ The model receives the weather data and formats it into a natural language respo
 
 This happens in a single conversation turn. The agent orchestrates multiple tool calls autonomously.
 
-## Quick Start
+## Run the Application
 
-### Use Existing Azure Resources
+**Verify deployment:**
 
-**Prerequisites:**
-
-Verify `.env` file exists in root directory with Azure credentials (created during Module 01):
+Ensure the `.env` file exists in root directory with Azure credentials (created during Module 01):
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
 **Start the application:**
 
-**Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8084. You can skip the start commands below and go directly to http://localhost:8084.
+> **Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8084. You can skip the start commands below and go directly to http://localhost:8084.
 
 **Option 1: Using Spring Boot Dashboard (Recommended for VS Code users)**
 
@@ -155,11 +160,11 @@ cd 04-tools
 
 Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
 
-**Note:** If you prefer to build all modules manually before starting:
-```bash
-cd ..  # Go to root directory
-mvn clean package -DskipTests
-```
+> **Note:** If you prefer to build all modules manually before starting:
+> ```bash
+> cd ..  # Go to root directory
+> mvn clean package -DskipTests
+> ```
 
 Open http://localhost:8084 in your browser.
 
