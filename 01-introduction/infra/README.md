@@ -1,5 +1,22 @@
 # Azure Infrastructure for LangChain4j Getting Started
 
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Architecture](#architecture)
+- [Resources Created](#resources-created)
+- [Quick Start](#quick-start)
+- [Configuration](#configuration)
+- [Management Commands](#management-commands)
+- [Cost Optimization](#cost-optimization)
+- [Monitoring](#monitoring)
+- [Troubleshooting](#troubleshooting)
+- [Updating Infrastructure](#updating-infrastructure)
+- [Clean Up](#clean-up)
+- [File Structure](#file-structure)
+- [Security Recommendations](#security-recommendations)
+- [Additional Resources](#additional-resources)
+
 This directory contains the Azure infrastructure as code (IaC) using Bicep and Azure Developer CLI (azd) for deploying Azure OpenAI resources.
 
 ## Prerequisites
@@ -33,7 +50,7 @@ All Spring Boot applications run locally on your machine:
 | Resource Group | `rg-{environmentName}` | Contains all resources |
 | Azure OpenAI | `aoai-{resourceToken}` | AI model hosting |
 
-*Note: `{resourceToken}` is a unique string generated from subscription ID, environment name, and location*
+> **Note:** `{resourceToken}` is a unique string generated from subscription ID, environment name, and location
 
 ## Quick Start
 
@@ -125,39 +142,48 @@ param openAiLocation string = 'swedencentral'  // or other GPT-5 region
 
 Check GPT-5 availability: https://learn.microsoft.com/azure/ai-services/openai/concepts/models#model-summary-table-and-region-availability
 
-## Management Commands
-
-### Update Infrastructure
-
-If you modify `main.bicep`, redeploy with:
+To update the infrastructure after making changes to Bicep files:
 
 ```bash
-azd up
+# Rebuild the ARM template
+az bicep build --file infra/main.bicep
+
+# Preview changes
+azd provision --preview
+
+# Apply changes
+azd provision
 ```
 
-### View All Environment Variables
+## Clean Up
+
+To delete all resources:
 
 ```bash
-azd env get-values
-```
-
-### Delete All Resources
-
-```bash
+# Delete all resources
 azd down
+
+# Delete everything including the environment
+azd down --purge
 ```
 
-This removes:
-- Resource group
-- Azure OpenAI resource
-- All model deployments
+**Warning**: This will permanently delete all Azure resources.
+
+## File Structure
 
 ## Cost Optimization
 
-### Development
+### Development/Testing
+For dev/test environments, you can reduce costs:
 - Use Standard tier (S0) for Azure OpenAI
-- Set lower capacity (10K TPM instead of 20K)
+- Set lower capacity (10K TPM instead of 20K) in `infra/core/ai/cognitiveservices.bicep`
 - Delete resources when not in use: `azd down`
+
+### Production
+For production:
+- Increase OpenAI capacity based on usage (50K+ TPM)
+- Enable zone redundancy for higher availability
+- Implement proper monitoring and cost alerts
 
 ### Cost Estimation
 - Azure OpenAI: Pay-per-token (input + output)
@@ -165,6 +191,16 @@ This removes:
 - text-embedding-3-small: ~$0.02 per 1M tokens
 
 Pricing calculator: https://azure.microsoft.com/pricing/calculator/
+
+## Monitoring
+
+### View Azure OpenAI Metrics
+
+Go to Azure Portal → Your OpenAI resource → Metrics:
+- Token-Based Utilization
+- HTTP Request Rate
+- Time To Response
+- Active Tokens
 
 ## Troubleshooting
 
@@ -203,59 +239,6 @@ This is a known Azure race condition when deploying OpenAI resources. Simply **r
 - Verify `AZURE_OPENAI_API_KEY` is set correctly
 - Key format should be 32-character hexadecimal string
 - Get new key from Azure Portal if needed
-
-## File Structure
-
-```
-infra/
-├── main.bicep                       # Main infrastructure definition
-├── main.json                        # Compiled ARM template (auto-generated)
-├── main.bicepparam                  # Parameter file
-├── README.md                        # This file
-└── core/
-    └── ai/
-        └── cognitiveservices.bicep  # Azure OpenAI module
-```
-
-## Security Recommendations
-
-1. **Never commit API keys** - Use environment variables
-2. **Use .env files locally** - Add `.env` to `.gitignore`
-3. **Rotate keys regularly** - Generate new keys in Azure Portal
-4. **Limit access** - Use Azure RBAC to control who can access resources
-5. **Monitor usage** - Set up cost alerts in Azure Portal
-
-## Additional Resources
-
-- [Azure OpenAI Documentation](https://learn.microsoft.com/azure/ai-services/openai/)
-- [Azure Developer CLI (azd)](https://learn.microsoft.com/azure/developer/azure-developer-cli/)
-- [Bicep Documentation](https://learn.microsoft.com/azure/azure-resource-manager/bicep/)
-- [LangChain4j Documentation](https://docs.langchain4j.dev/)
-
-## Cost Optimization
-
-### Development/Testing
-For dev/test environments, you can reduce costs:
-
-- **OpenAI Capacity**: Reduce from 20K to 10K TPM in `infra/core/ai/cognitiveservices.bicep`
-
-### Production
-For production:
-- Increase OpenAI capacity based on usage (50K+ TPM)
-- Enable zone redundancy for higher availability
-- Implement proper monitoring and cost alerts
-
-## Monitoring
-
-### View Azure OpenAI Metrics
-
-Go to Azure Portal → Your OpenAI resource → Metrics:
-- Token-Based Utilization
-- HTTP Request Rate
-- Time To Response
-- Active Tokens
-
-## Troubleshooting
 
 ### Deployment Fails
 
@@ -299,32 +282,24 @@ Go to Azure Portal → Your OpenAI resource → Metrics:
 
 ## Updating Infrastructure
 
-To update the infrastructure after making changes to Bicep files:
-
-```bash
-# Rebuild the ARM template
-az bicep build --file infra/main.bicep
-
-# Preview changes
-azd provision --preview
-
-# Apply changes
-azd provision
+```
+infra/
+├── main.bicep                       # Main infrastructure definition
+├── main.json                        # Compiled ARM template (auto-generated)
+├── main.bicepparam                  # Parameter file
+├── README.md                        # This file
+└── core/
+    └── ai/
+        └── cognitiveservices.bicep  # Azure OpenAI module
 ```
 
-## Clean Up
+## Security Recommendations
 
-To delete all resources:
-
-```bash
-# Delete all resources
-azd down
-
-# Delete everything including the environment
-azd down --purge
-```
-
-**Warning**: This will permanently delete all Azure resources.
+1. **Never commit API keys** - Use environment variables
+2. **Use .env files locally** - Add `.env` to `.gitignore`
+3. **Rotate keys regularly** - Generate new keys in Azure Portal
+4. **Limit access** - Use Azure RBAC to control who can access resources
+5. **Monitor usage** - Set up cost alerts in Azure Portal
 
 ## Additional Resources
 
