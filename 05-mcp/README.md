@@ -8,8 +8,8 @@
   - [Server-Client Architecture](#server-client-architecture)
   - [Tool Discovery](#tool-discovery)
   - [Transport Mechanisms](#transport-mechanisms)
-- [What This Module Covers](#what-this-module-covers)
 - [Prerequisites](#prerequisites)
+- [What This Module Covers](#what-this-module-covers)
 - [Quick Start](#quick-start)
   - [Example 1: Remote Calculator (Streamable HTTP)](#example-1-remote-calculator-streamable-http)
   - [Example 2: File Operations (Stdio)](#example-2-file-operations-stdio)
@@ -121,6 +121,15 @@ client.initialize();
 > - "How do I configure volume mounts to share data between host and MCP containers?"
 > - "What are best practices for managing Docker-based MCP server lifecycles in production?"
 
+## Prerequisites
+
+- Java 21+, Maven 3.9+
+- Node.js 16+ and npm (for MCP servers)
+- Docker (for Git integration example)
+- GitHub Personal Access Token configured in `.env` file (from Module 00)
+
+> **Note:** If you haven't set up your GitHub token yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions.
+
 ## What This Module Covers
 
 In this final module, we'll use GitHub Models again as its rate limits are more generous for the demo servers we'll run locally. You'll work through three examples that demonstrate different MCP integration patterns:
@@ -132,34 +141,6 @@ In this final module, we'll use GitHub Models again as its rate limits are more 
 **Docker-Based Git Server** - Launch a containerized Git analysis service. Learn how to work with Docker-based MCP servers and mount local repositories.
 
 Each example shows a different transport mechanism and use case, giving you the foundation to integrate any MCP server.
-
-## Prerequisites
-
-- Java 21+, Maven 3.9+
-- Node.js 16+ and npm (for MCP servers)
-- Docker (for Git integration example)
-- GitHub Personal Access Token (from Quick Start module)
-
-**Option 1: Using VS Code (Recommended)**
-
-If you're using VS Code, add your token to the `.env` file in the project root:
-
-If the `.env` file does not exist, copy `.env.example` to `.env` or create a new `.env` file in the project root.
-
-```bash
-# In /workspaces/LangChain4j-for-Beginners/.env
-GITHUB_TOKEN=your_token_here
-```
-
-Then you can simply right-click on any demo file (e.g., `StdioTransportDemo.java`) in the Explorer and select **"Run Java"** or use the launch configurations from the Run and Debug panel.
-
-**Option 2: Using Terminal**
-
-Set the token as an environment variable:
-
-```bash
-export GITHUB_TOKEN=your_token_here
-```
 
 ## Quick Start
 
