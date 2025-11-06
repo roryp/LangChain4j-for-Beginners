@@ -24,6 +24,7 @@ find . -name "*.sh" -type f -exec dos2unix {} + 2>/dev/null || \
 find . -name "*.sh" -type f -exec chmod +x {} + 2>/dev/null || true
 
 # Reset Git index to pick up line ending changes
+# Note: This discards uncommitted changes, but runs only on initial container setup
 git rm --cached -r . >/dev/null 2>&1 || true
 git reset --hard >/dev/null 2>&1 || true
 
