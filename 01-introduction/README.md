@@ -34,7 +34,7 @@ You'll build one application that demonstrates both patterns:
 - Azure CLI (https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
 - Azure Developer CLI (azd) (https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd)
 
-> **Note:** Java, Maven, Azure CLI and azd CLI are pre-installed in the provided devcontainer.
+> **Note:** Java, Maven, Azure CLI and Azure Developer CLI (azd) are pre-installed in the provided devcontainer.
 
 ## Understanding the Core Problem
 
