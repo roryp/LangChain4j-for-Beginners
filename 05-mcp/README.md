@@ -123,7 +123,7 @@ client.initialize();
 
 ## What This Module Covers
 
-You'll work through three examples that demonstrate different MCP integration patterns:
+In this final module, we'll use GitHub Models again as its rate limits are more generous for the demo servers we'll run locally. You'll work through three examples that demonstrate different MCP integration patterns:
 
 **Streamable HTTP Transport** - Connect to a remote calculator service. See how networked tool integration works with session management.
 
