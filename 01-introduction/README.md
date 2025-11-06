@@ -3,14 +3,13 @@
 ## Table of Contents
 
 - [What You'll Learn](#what-youll-learn)
+- [Prerequisites](#prerequisites)
 - [Understanding the Core Problem](#understanding-the-core-problem)
 - [Understanding Tokens](#understanding-tokens)
 - [How Memory Works](#how-memory-works)
 - [How This Uses LangChain4j](#how-this-uses-langchain4j)
-- [What This Module Covers](#what-this-module-covers)
-- [Prerequisites](#prerequisites)
 - [Deploy Azure OpenAI Infrastructure](#deploy-azure-openai-infrastructure)
-  - [Run Locally](#run-locally)
+- [Run the Application Locally](#run-the-application-locally)
 - [Using the Application](#using-the-application)
   - [Stateless Chat (Left Panel)](#stateless-chat-left-panel)
   - [Stateful Chat (Right Panel)](#stateful-chat-right-panel)
@@ -21,6 +20,21 @@
 If you completed the quick start, you saw how to send prompts and get responses. That's the foundation, but real applications need more. This module teaches you how to build conversational AI that remembers context and maintains state - the difference between a one-off demo and a production-ready application.
 
 We'll use Azure OpenAI's GPT-5 throughout this guide because its advanced reasoning capabilities make the behavior of different patterns more apparent. When you add memory, you'll clearly see the difference. This makes it easier to understand what each component brings to your application.
+
+You'll build one application that demonstrates both patterns:
+
+**Stateless Chat** - Each request is independent. The model has no memory of previous messages. This is the pattern you used in the quick start.
+
+**Stateful Conversation** - Each request includes conversation history. The model maintains context across multiple turns. This is what production applications require.
+
+## Prerequisites
+
+- Azure subscription with Azure OpenAI access
+- Java 21, Maven 3.9+ 
+- Azure CLI (https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
+- Azure Developer CLI (azd) (https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd)
+
+> **Note:** Java, Maven, Azure CLI and Azure Developer CLI (azd) are pre-installed in the provided devcontainer.
 
 ## Understanding the Core Problem
 
@@ -110,23 +124,6 @@ memory.add(AiMessage.from(response));
 
 The stateless chat endpoint skips memory entirely - just `chatModel.chat(prompt)` like the quick start. The stateful endpoint adds messages to memory, retrieves history, and includes that context with each request. Same model, different patterns.
 
-## What This Module Covers
-
-You'll build two applications that demonstrate the difference:
-
-**Stateless Chat** - Each request is independent. The model has no memory of previous messages. This is the pattern you used in the quick start.
-
-**Stateful Conversation** - Each request includes conversation history. The model maintains context across multiple turns. This is what production applications require.
-
-Both run locally using Azure OpenAI's GPT-5 deployment. You'll see the same Spring Boot application expose both patterns through different API endpoints.
-
-## Prerequisites
-
-- Azure subscription with Azure OpenAI access
-- Java 21, Maven 3.9+ 
-- Azure CLI (https://learn.microsoft.com/en-us/cli/azure/install-azure-cli)
-- azd CLI (https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/install-azd)
-
 ## Deploy Azure OpenAI Infrastructure
 
 ```bash
@@ -141,22 +138,22 @@ This will:
 
 > **Note:** On first deployment, you may encounter a "RequestConflict" error. This is a known Azure timing issue. Simply run `azd up` again and it will complete successfully.
 
-**Verify `.env` was created:**
+**Verify deployment succeeded:**
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.
 ```
 
-**Note:** The `azd up` command automatically generates the `.env` file. If you need to regenerate it manually (e.g., after changing Azure resources), run:
-```bash
-cd ..
-bash .azd-env.sh
-```
+> **Note:** The `azd up` command automatically generates the `.env` file. If you need to update it later, you can either edit the `.env` file manually or regenerate it by running:
+> ```bash
+> cd ..
+> bash .azd-env.sh
+> ```
 
-### Run Locally
+## Run the Application Locally
 
-**Prerequisites:**
+**Verify deployment:**
 
-Verify `.env` file exists in root directory with Azure credentials:
+Ensure the `.env` file exists in root directory with Azure credentials:
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
@@ -193,11 +190,11 @@ cd 01-introduction
 
 Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
 
-**Note:** If you prefer to build all modules manually before starting:
-```bash
-cd ..  # Go to root directory
-mvn clean package -DskipTests
-```
+> **Note:** If you prefer to build all modules manually before starting:
+> ```bash
+> cd ..  # Go to root directory
+> mvn clean package -DskipTests
+> ```
 
 Open http://localhost:8080 in your browser.
 
