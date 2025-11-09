@@ -88,3 +88,4 @@ DOTENV_MIGRATION_PLAN.md
 # Image Generation Guide (contains API key instructions)
 IMAGE_GENERATION_GUIDE.md
 githubcopilot.md
+loadusers.sh
