@@ -31,7 +31,7 @@ After completing the modules, explore the [Testing Guide](docs/TESTING.md) to se
 
 To quickly start coding, open this project in a GitHub Codespace or your local IDE with the provided devcontainer. The devcontainer used in this course comes pre-configured with GitHub Copilot for AI paired programming.
 
-Each code example includes suggested questions you can ask GitHub Copilot to deepen your understanding. Look for the 💡 prompts in:
+Each code example includes suggested questions you can ask GitHub Copilot to deepen your understanding. Look for the 💡/🤖 prompts in:
 
 - **Java file headers** - Questions specific to each example
 - **Module READMEs** - Exploration prompts after code examples
