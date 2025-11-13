@@ -42,13 +42,13 @@ Quick reference for terms and concepts used throughout the course.
 
 ## LangChain4j Components
 
-**AiServices** - Creates type-safe AI service interfaces using `@Tool` annotations.
+**AiServices** - Creates type-safe AI service interfaces.
 
 **AzureOpenAiChatModel** - Connects to Azure OpenAI models.
 
 **AzureOpenAiEmbeddingModel** - Creates embeddings using Azure OpenAI.
 
-**ChatLanguageModel** - Core interface for language models.
+**ChatModel** - Core interface for language models.
 
 **ChatMemory** - Maintains conversation history.
 
