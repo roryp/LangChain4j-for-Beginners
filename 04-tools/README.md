@@ -205,23 +205,13 @@ Start with a straightforward request: "Convert 100 degrees Fahrenheit to Celsius
 
 Now try something more complex: "What's the weather in Seattle and convert it to Fahrenheit?" Watch the agent work through this in steps. It first gets the weather (which returns Celsius), recognizes it needs to convert to Fahrenheit, calls the conversion tool, and combines both results into one response.
 
-<a href="images/tools-chaining-demo.png"><img src="images/tools-chaining-demo.png" alt="Tool Chaining in Action" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
-
-*Agent using multiple tools - weather lookup followed by temperature conversion*
-
 **See Conversation Flow**
 
-<a href="images/tools-chaining-demo.png"><img src="images/tools-chaining-demo.png" alt="Tool Chaining in Action" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
-
-*Agent using multiple tools - weather lookup followed by temperature conversion*
-
-**Observe the Reasoning**
-
-The interface shows you which tools were called. This visibility into the agent's decision-making helps you understand how it breaks down complex requests into tool executions.
+The chat interface maintains conversation history, allowing you to have multi-turn interactions. You can see all previous queries and responses, making it easy to track the conversation and understand how the agent builds context over multiple exchanges.
 
 <a href="images/tools-conversation-demo.png"><img src="images/tools-conversation-demo.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Multi-turn conversation showing both single tool usage and tool chaining*
+*Multi-turn conversation showing simple conversions, weather lookups, and tool chaining*
 
 **Experiment with Different Requests**
 
