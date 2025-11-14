@@ -89,7 +89,7 @@ public class RagService {
             List<EmbeddingMatch<TextSegment>> matches = searchResult.matches();
             
             log.info("Found {} matches above MIN_SCORE {} for question", matches.size(), MIN_SCORE);
-            matches.forEach(match -> log.info("Match score: {:.4f}", match.score()));
+            matches.forEach(match -> log.info("Match score: {}", String.format("%.4f", match.score())));
             
             if (matches.isEmpty()) {
                 log.warn("No relevant documents found for question: '{}'", request.question());
