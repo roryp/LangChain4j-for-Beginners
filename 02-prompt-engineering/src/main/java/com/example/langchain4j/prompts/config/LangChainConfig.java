@@ -11,8 +11,13 @@ import java.time.Duration;
 /**
  * Configuration for LangChain4j with GPT-5 support.
  * 
- * GPT-5 uses reasoning effort levels (low, medium, high) instead of temperature.
- * This controls the depth of reasoning the model applies to responses.
+ * Note: For GPT-5 (o1/o3 models), reasoning effort is controlled through prompt engineering
+ * rather than model configuration parameters. See Gpt5PromptService for examples of how to
+ * use prompts like "<reasoning_effort>low</reasoning_effort>" to control model behavior.
+ * 
+ * The three beans provided here are currently identical and serve as a demonstration of how
+ * you might create different model configurations in the future when/if reasoning_effort is
+ * exposed as a model parameter in LangChain4j.
  */
 @Configuration
 public class LangChainConfig {
@@ -26,12 +31,12 @@ public class LangChainConfig {
     @Value("${azure.openai.deployment:gpt-5}")
     private String deploymentName;
 
-    @Value("${azure.openai.reasoning-effort:medium}")
-    private String reasoningEffort;
-
     @Value("${azure.openai.max-completion-tokens:2000}")
     private Integer maxCompletionTokens;
 
+    /**
+     * Primary chat model for general use.
+     */
     @Bean
     @Primary
     public AzureOpenAiChatModel chatLanguageModel() {
@@ -46,8 +51,8 @@ public class LangChainConfig {
     }
 
     /**
-     * Optional: Bean for low reasoning effort (faster, less thorough)
-     * Use this for simple tasks requiring quick responses
+     * Alternative model bean for quick responses.
+     * Currently identical to primary model - reasoning is controlled via prompts.
      */
     @Bean("quickModel")
     public AzureOpenAiChatModel quickChatModel() {
@@ -62,8 +67,8 @@ public class LangChainConfig {
     }
 
     /**
-     * Optional: Bean for high reasoning effort (slower, more thorough)
-     * Use this for complex tasks requiring deep reasoning
+     * Alternative model bean for thorough responses.
+     * Currently identical to primary model - reasoning is controlled via prompts.
      */
     @Bean("thoroughModel")
     public AzureOpenAiChatModel thoroughChatModel() {
