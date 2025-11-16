@@ -30,6 +30,16 @@ In the previous modules, you learned how to have conversations with AI and struc
 
 RAG (Retrieval-Augmented Generation) solves this problem. Instead of trying to teach the model your information (which is expensive and impractical), you give it the ability to search through your documents. When someone asks a question, the system finds relevant information and includes it in the prompt. The model then answers based on that retrieved context.
 
+Think of RAG as giving the model a reference library. When you ask a question, the system:
+
+1. **User Query** - You ask a question
+2. **Embedding** - Converts your question to a vector
+3. **Vector Search** - Finds similar document chunks
+4. **Context Assembly** - Adds relevant chunks to the prompt
+5. **Response** - LLM generates an answer based on the context
+
+This grounds the model's responses in your actual data instead of relying on its training knowledge or making up answers.
+
 <img src="images/rag-architecture.png" alt="RAG Architecture" width="800"/>
 
 *RAG workflow - from user query to semantic search to contextual answer generation*
@@ -41,16 +51,6 @@ RAG (Retrieval-Augmented Generation) solves this problem. Instead of trying to t
 
 > **Note:** If you haven't completed Module 01, follow the deployment instructions there first.
 
-## Understanding RAG
-
-Think of RAG as giving the model a reference library. When you ask a question, the system:
-
-1. Searches your documents for relevant information
-2. Pulls the most relevant chunks into the context
-3. Asks the model to answer based on that specific information
-4. Returns the answer along with source references
-
-This grounds the model's responses in your actual data instead of relying on its training knowledge or making up answers.
 
 ## How It Works
 
