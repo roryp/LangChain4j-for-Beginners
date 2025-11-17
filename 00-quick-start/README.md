@@ -154,7 +154,7 @@ Start here to see LangChain4j at its simplest. You'll create an `OpenAiChatModel
 ChatLanguageModel model = OpenAiChatModel.builder()
     .baseUrl("https://models.github.ai/inference")
     .apiKey(System.getenv("GITHUB_TOKEN"))
-    .modelName("gpt-4o-mini")
+    .modelName("gpt-4.1-nano")
     .build();
 
 String response = model.chat("What is LangChain4j?");
