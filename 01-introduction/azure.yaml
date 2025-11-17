@@ -4,6 +4,9 @@ name: langchain4j-introduction
 metadata:
   template: langchain4j-introduction@0.0.1
 
+infra:
+  provider: bicep
+
 # No services defined - all applications run locally
 # This configuration only deploys Azure OpenAI infrastructure
 
