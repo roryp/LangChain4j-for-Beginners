@@ -4,10 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import dev.langchain4j.model.openaiofficial.OpenAiOfficialChatModel;
-
 import java.util.Map;
 
+import dev.langchain4j.model.openaiofficial.OpenAiOfficialChatModel;
 /**
  * Simple REST controller exposing a chat endpoint.
  * Delegates requests to the OpenAiOfficialChatModel provided by LangChain4j.
