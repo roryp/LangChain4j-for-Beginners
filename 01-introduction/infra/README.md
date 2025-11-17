@@ -347,7 +347,7 @@ infra/
 - [GPT-5 Model Documentation](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#gpt-5)
 - [Azure Developer CLI Documentation](https://learn.microsoft.com/azure/developer/azure-developer-cli/)
 - [Bicep Documentation](https://learn.microsoft.com/azure/azure-resource-manager/bicep/)
-- [LangChain4j Azure OpenAI Integration](https://docs.langchain4j.dev/integrations/language-models/azure-open-ai)
+- [LangChain4j OpenAI Official Integration](https://docs.langchain4j.dev/integrations/language-models/open-ai)
 
 ## Support
 

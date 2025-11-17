@@ -111,7 +111,7 @@ class SimpleConversationTest {
     private ConversationService conversationService;
     
     @Mock
-    private AzureOpenAiChatModel mockChatModel;
+    private OpenAiOfficialChatModel mockChatModel;
     
     @BeforeEach
     void setUp() {

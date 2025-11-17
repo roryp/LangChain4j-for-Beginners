@@ -39,7 +39,7 @@
         <!-- LangChain4j Azure OpenAI -->
         <dependency>
             <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-azure-open-ai</artifactId>
+            <artifactId>langchain4j-open-ai-official</artifactId>
         </dependency>
 
         <!-- LangChain4j Core -->

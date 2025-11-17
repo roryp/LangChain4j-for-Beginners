@@ -80,30 +80,30 @@ This module builds on the quick start by adding Spring Boot and conversation mem
 </dependency>
 <dependency>
     <groupId>dev.langchain4j</groupId>
-    <artifactId>langchain4j-azure-open-ai-spring-boot-starter</artifactId> <!-- Inherited from BOM in root pom.xml -->
+    <artifactId>langchain4j-open-ai-official</artifactId> <!-- Inherited from BOM in root pom.xml -->
 </dependency>
 ```
 
-**AzureOpenAiChatModel** - Auto-configured by Spring Boot Starter
+The `langchain4j-open-ai-official` module provides the `OpenAiOfficialChatModel` class that works with both OpenAI and Azure OpenAI endpoints.
 
-Instead of the generic `OpenAiChatModel` from the quick start, we use `AzureOpenAiChatModel` which connects directly to Azure OpenAI. The `langchain4j-azure-open-ai-spring-boot-starter` automatically configures it as a Spring bean using properties from `application.yaml`.
+**Manual Configuration** - [LangChainConfig.java](src/main/java/com/example/langchain4j/config/LangChainConfig.java)
 
-```yaml
-langchain4j:
-  azure-open-ai:
-    chat-model:
-      endpoint: ${AZURE_OPENAI_ENDPOINT:}
-      api-key: ${AZURE_OPENAI_API_KEY:}
-      deployment-name: ${AZURE_OPENAI_DEPLOYMENT:}
-      max-completion-tokens: 1000
+Since there's no Spring Boot starter for the OpenAI Official client, we configure the model manually as a Spring bean:
+
+```java
+@Bean
+public OpenAiOfficialChatModel openAiOfficialChatModel() {
+    return OpenAiOfficialChatModel.builder()
+            .baseUrl(azureEndpoint)
+            .apiKey(azureApiKey)
+            .modelName(deploymentName)
+            .timeout(Duration.ofMinutes(5))
+            .maxRetries(3)
+            .build();
+}
 ```
 
-The starter eliminates the need for manual configuration code - just add the dependency and set the properties, and Spring Boot creates the `AzureOpenAiChatModel` bean automatically.
-
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`application.yaml`](src/main/resources/application.yaml) and ask:
-> - "What other Azure OpenAI properties can I configure with the Spring Boot starter?"
-> - "How does the Spring Boot starter auto-configuration work?"
-> - "Can I customize the AzureOpenAiChatModel bean if needed?"
+The configuration reads Azure OpenAI credentials from environment variables set by the `azd up` deployment. The OpenAI Official client provides a unified interface that works with Azure OpenAI by simply setting the `baseUrl` to your Azure endpoint.
 
 **MessageWindowChatMemory & Message Types** - [ConversationService.java](src/main/java/com/example/langchain4j/service/ConversationService.java)
 
@@ -125,7 +125,7 @@ memory.add(aiMessage);
 > - "Can I implement custom memory storage using a database instead of in-memory?"
 > - "How would I add summarization to compress old conversation history?"
 
-The stateless chat endpoint skips memory entirely - just `chatModel.chat(prompt)` like the quick start. The stateful endpoint adds messages to memory, retrieves history, and includes that context with each request. Same auto-configured model, different patterns.
+The stateless chat endpoint skips memory entirely - just `chatModel.chat(prompt)` like the quick start. The stateful endpoint adds messages to memory, retrieves history, and includes that context with each request. Same model configuration, different patterns.
 
 ## Deploy Azure OpenAI Infrastructure
 

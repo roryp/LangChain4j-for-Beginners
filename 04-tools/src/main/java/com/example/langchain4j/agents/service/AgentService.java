@@ -2,7 +2,7 @@ package com.example.langchain4j.agents.service;
 
 import dev.langchain4j.memory.ChatMemory;
 import dev.langchain4j.memory.chat.MessageWindowChatMemory;
-import dev.langchain4j.model.azure.AzureOpenAiChatModel;
+import dev.langchain4j.model.openaiofficial.OpenAiOfficialChatModel;
 import dev.langchain4j.service.AiServices;
 import com.example.langchain4j.agents.model.dto.AgentRequest;
 import com.example.langchain4j.agents.model.dto.AgentResponse;
@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * AgentService - Correct Implementation Using LangChain4j AiServices
  * Run: ./start.sh (from module directory, after deploying Azure resources with azd up)
  * 
- * Agent service using LangChain4j with Azure OpenAI and native tool calling.
+ * Agent service using LangChain4j with OpenAI Official client (configured for Azure OpenAI) and native tool calling.
  * Uses AiServices framework for automatic tool orchestration.
  * 
  * Key Concepts:
@@ -33,7 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 💡 Ask GitHub Copilot:
  * - "How does AiServices.builder().tools() work under the hood?"
  * - "What's the difference between this and manual tool orchestration?"
- * - "How does LangChain4j handle function calling with Azure OpenAI?"
+ * - "How does LangChain4j handle function calling with OpenAI Official client for Azure OpenAI?"
  * - "How can I add custom tool execution logging or monitoring?"
  */
 @Service
@@ -41,7 +41,7 @@ public class AgentService {
 
     private static final Logger log = LoggerFactory.getLogger(AgentService.class);
     
-    private final AzureOpenAiChatModel chatModel;
+    private final OpenAiOfficialChatModel chatModel;
     private final WeatherTool weatherTool;
     private final TemperatureTool temperatureTool;
     
@@ -58,18 +58,17 @@ public class AgentService {
         this.weatherTool = weatherTool;
         this.temperatureTool = temperatureTool;
         
-        log.info("Initializing Agent Service with Azure OpenAI");
-        log.info("Endpoint: {}", endpoint);
-        log.info("Deployment: {}", deployment);
+        log.info("Initializing Agent Service with OpenAI Official client");
+        log.info("Base URL: {}", endpoint);
+        log.info("Model: {}", deployment);
         
-        // Initialize Azure OpenAI chat model
-        this.chatModel = AzureOpenAiChatModel.builder()
-            .endpoint(endpoint)
+        // Initialize OpenAI Official chat model
+        this.chatModel = OpenAiOfficialChatModel.builder()
+            .baseUrl(endpoint)
             .apiKey(apiKey)
-            .deploymentName(deployment)
+            .modelName(deployment)
             .maxCompletionTokens(2000)
             .maxRetries(3)
-            .logRequestsAndResponses(true)
             .build();
         
         log.info("Agent service initialized successfully");
