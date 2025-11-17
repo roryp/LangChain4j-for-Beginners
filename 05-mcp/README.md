@@ -56,23 +56,23 @@ When your client connects to an MCP server, it asks "What tools do you have?" Th
 
 **Transport Mechanisms**
 
-MCP supports different ways to connect:
+MCP defines two transport mechanisms: HTTP for remote servers, Stdio for local processes (including Docker containers):
 
 <img src="images/transport-mechanisms.png" alt="Transport Mechanisms" width="800"/>
 
-*Three MCP transport mechanisms for different integration scenarios*
+*MCP transport mechanisms: HTTP for remote servers, Stdio for local processes (including Docker containers)*
 
 **Streamable HTTP** - [StreamableHttpDemo.java](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
 
 For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
 
 ```java
-McpClient client = McpClient.builder()
-    .transport(StreamableHttpTransport.of("http://localhost:3000/sse"))
+McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
+    .url("http://localhost:3001/mcp")
+    .timeout(Duration.ofSeconds(60))
+    .logRequests(true)
+    .logResponses(true)
     .build();
-
-client.initialize();
-List<Tool> tools = client.listTools();
 ```
 
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`StreamableHttpDemo.java`](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) and ask:
@@ -85,14 +85,14 @@ List<Tool> tools = client.listTools();
 For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
 
 ```java
-McpClient client = McpClient.builder()
-    .transport(StdioTransport.builder()
-        .command("node")
-        .arguments("path/to/server.js")
-        .build())
+McpTransport stdioTransport = new StdioMcpTransport.Builder()
+    .command(List.of(
+        npmCmd, "exec",
+        "@modelcontextprotocol/server-filesystem@0.6.2",
+        resourcesDir
+    ))
+    .logEvents(false)
     .build();
-
-client.initialize();
 ```
 
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`StdioTransportDemo.java`](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) and ask:
@@ -100,20 +100,20 @@ client.initialize();
 > - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
 > - "What are the security implications of giving AI access to the file system?"
 
-**Docker** - [GitRepositoryAnalyzer.java](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+**Docker (uses Stdio)** - [GitRepositoryAnalyzer.java](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
 
-For containerized services. Your application launches a Docker container that exposes MCP tools. Good for complex dependencies or isolated environments.
+For containerized services. Uses stdio transport to communicate with a Docker container via `docker run`. Good for complex dependencies or isolated environments.
 
 ```java
-McpClient client = McpClient.builder()
-    .transport(DockerTransport.builder()
-        .imageName("mcp/git")
-        .arguments("--repository", "/repo")
-        .containerVolume("/repo", localRepoPath)
-        .build())
+McpTransport dockerTransport = new StdioMcpTransport.Builder()
+    .command(List.of(
+        "docker", "run",
+        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
+        "-v", volumeMapping,
+        "-i", "mcp/git"
+    ))
+    .logEvents(true)
     .build();
-
-client.initialize();
 ```
 
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`GitRepositoryAnalyzer.java`](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) and ask:
@@ -195,6 +195,11 @@ mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTranspor
 ```
 
 The application spawns a filesystem MCP server automatically and reads a local file. Notice how the subprocess management is handled for you.
+
+**Expected output:**
+```
+Assistant response: The content of the file is "Kaboom!".
+```
 
 ### Example 3: Git Analysis (Docker)
 

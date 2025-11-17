@@ -97,8 +97,18 @@ public class StdioTransportDemo {
         String npmCmd = isWindows ? "npm.cmd" : "npm";
 
         // Get absolute path to resources directory
-        String resourcesDir = new File("src/main/resources")
-                .getAbsolutePath();
+        File resourcesFile = new File("src/main/resources");
+        if (!resourcesFile.exists()) {
+            throw new RuntimeException(
+                "Resources directory not found. Current working directory: " + 
+                new File(".").getAbsolutePath() + 
+                ". Please run from the 05-mcp directory."
+            );
+        }
+        
+        // Normalize path for Node.js (use forward slashes even on Windows)
+        String resourcesDir = resourcesFile.getAbsolutePath()
+                .replace("\\", "/");
 
         return new StdioMcpTransport.Builder()
                 .command(List.of(
@@ -106,7 +116,7 @@ public class StdioTransportDemo {
                     "@modelcontextprotocol/server-filesystem@0.6.2",
                     resourcesDir
                 ))
-                .logEvents(true)
+                .logEvents(false)
                 .build();
     }
 
