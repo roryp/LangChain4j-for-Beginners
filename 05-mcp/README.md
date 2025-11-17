@@ -125,10 +125,12 @@ client.initialize();
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ and npm (for MCP servers)
-- Docker (for Git integration example)
+- **Docker Desktop** - Must be **RUNNING** for Example 3 (not just installed)
 - GitHub Personal Access Token configured in `.env` file (from Module 00)
 
 > **Note:** If you haven't set up your GitHub token yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions.
+
+> **⚠️ Docker Users:** Before running Example 3, verify Docker Desktop is running with `docker ps`. If you see connection errors, start Docker Desktop and wait ~30 seconds for initialization.
 
 ## What This Module Covers
 
@@ -198,7 +200,16 @@ The application spawns a filesystem MCP server automatically and reads a local f
 
 This demonstrates containerized tool servers.
 
-**⚠️ Prerequisite:** You need to build the Docker image first (see Terminal 1 below).
+**⚠️ Prerequisites:** 
+1. **Docker Desktop must be RUNNING** (not just installed)
+2. You need to build the Docker image first (see Terminal 1 below)
+
+**Verify Docker is running:**
+```bash
+docker ps  # Should show container list, not an error
+```
+
+If you see an error like "Cannot connect to Docker daemon" or "The system cannot find the file specified", start Docker Desktop and wait for it to initialize (~30 seconds).
 
 **Terminal 1 - Build the Docker image:**
 ```bash
