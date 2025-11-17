@@ -36,6 +36,8 @@ You'll build one application that demonstrates both patterns:
 
 > **Note:** Java, Maven, Azure CLI and Azure Developer CLI (azd) are pre-installed in the provided devcontainer.
 
+> **Note:** This module uses GPT-5 on Azure OpenAI. The deployment is configured automatically via `azd up` - do not modify the model name in the code.
+
 ## Understanding the Core Problem
 
 Language models are stateless. Each API call is independent. If you send "My name is John" and then ask "What's my name?", the model has no idea you just introduced yourself. It treats every request as if it's the first conversation you've ever had.

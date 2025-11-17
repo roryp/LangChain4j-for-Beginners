@@ -71,6 +71,8 @@ The `langchain4j-open-ai` module provides the `OpenAiChatModel` class that conne
 - Java 21+, Maven 3.9+
 - GitHub Personal Access Token (instructions below)
 
+> **Note:** This module uses `gpt-4o-mini` from GitHub Models. Do not modify the model name in the code - it's configured to work with GitHub's available models.
+
 ## Setup
 
 ### 1. Get Your GitHub Token
@@ -221,11 +223,17 @@ String prompt = "Based on this document: " + content +
 String response = model.chat(prompt);
 ```
 
+> **Note:** This simple approach loads the entire document into the prompt. For large files (>10KB), you'll exceed context limits. Module 03 covers chunking and vector search for production RAG systems.
+
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SimpleReaderDemo.java`](src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) and ask:
 > - "How does RAG prevent AI hallucinations compared to using the model's training data?"
 > - "What's the difference between this simple approach and using vector embeddings for retrieval?"
 > - "How would I scale this to handle multiple documents or larger knowledge bases?"
 > - "What are best practices for structuring the prompt to ensure the AI uses only the provided context?"
+
+## Debugging
+
+The examples include `.logRequests(true)` and `.logResponses(true)` to show API calls in the console. This helps troubleshoot authentication errors, rate limits, or unexpected responses. Remove these flags in production to reduce log noise.
 
 ## Next Steps
 
