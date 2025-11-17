@@ -121,7 +121,9 @@ McpTransport dockerTransport = new StdioMcpTransport.Builder()
 > - "How do I configure volume mounts to share data between host and MCP containers?"
 > - "What are best practices for managing Docker-based MCP server lifecycles in production?"
 
-## Prerequisites
+## Running the Examples
+
+### Prerequisites
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ and npm (for MCP servers)
@@ -131,18 +133,6 @@ McpTransport dockerTransport = new StdioMcpTransport.Builder()
 > **Note:** If you haven't set up your GitHub token yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions.
 
 > **⚠️ Docker Users:** Before running Example 3, verify Docker Desktop is running with `docker ps`. If you see connection errors, start Docker Desktop and wait ~30 seconds for initialization.
-
-## What This Module Covers
-
-In this final module, we'll use GitHub Models again as its rate limits are more generous for the demo servers we'll run locally. You'll work through three examples that demonstrate different MCP integration patterns:
-
-**Streamable HTTP Transport** - Connect to a remote calculator service. See how networked tool integration works with session management.
-
-**Stdio Transport** - Spawn a local filesystem server. Understand subprocess-based tool execution for local operations.
-
-**Docker-Based Git Server** - Launch a containerized Git analysis service. Learn how to work with Docker-based MCP servers and mount local repositories.
-
-Each example shows a different transport mechanism and use case, giving you the foundation to integrate any MCP server.
 
 ## Quick Start
 
