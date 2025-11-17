@@ -20,7 +20,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * AgentService - Correct Implementation Using LangChain4j AiServices
  * Run: ./start.sh (from module directory, after deploying Azure resources with azd up)
  * 
- /**
  * Agent service using LangChain4j with OpenAI Official client (configured for Azure OpenAI) and native tool calling.
  * Uses AiServices framework for automatic tool orchestration.
  * 
