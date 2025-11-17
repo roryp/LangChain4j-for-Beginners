@@ -204,6 +204,46 @@ Go to Azure Portal → Your OpenAI resource → Metrics:
 
 ## Troubleshooting
 
+### Issue: Azure OpenAI subdomain name conflict
+
+**Error Message:**
+```
+ERROR CODE: CustomDomainInUse
+message: "Please pick a different name. The subdomain name 'aoai-xxxxx' 
+is not available as it's already used by a resource."
+```
+
+**Cause:**
+The subdomain name generated from your subscription/environment is already in use, possibly from a previous deployment that wasn't fully purged.
+
+**Solution:**
+1. **Option 1 - Use a different environment name:**
+   ```bash
+   azd env new my-unique-env-name
+   azd up
+   ```
+
+2. **Option 2 - Manual deployment via Azure Portal:**
+   - Go to Azure Portal → Create a resource → Azure OpenAI
+   - Choose a unique name for your resource
+   - Deploy the following models:
+     - **GPT-5**
+     - **text-embedding-3-small** (for RAG modules)
+   - **Important:** Note your deployment names - they must match `.env` configuration
+   - After deployment, get your endpoint and API key from "Keys and Endpoint"
+   - Create a `.env` file in the project root with:
+     ```bash
+     AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com
+     AZURE_OPENAI_API_KEY=your-api-key-here
+     AZURE_OPENAI_DEPLOYMENT=gpt-5
+     AZURE_OPENAI_EMBEDDING_DEPLOYMENT=text-embedding-3-small
+     ```
+
+**Model Deployment Naming Guidelines:**
+- Use simple, consistent names: `gpt-5`, `gpt-4o`, `text-embedding-3-small`
+- Deployment names must match exactly what you configure in `.env`
+- Common mistake: Creating model with one name but referencing different name in code
+
 ### Issue: GPT-5 not available in selected region
 
 **Solution:**

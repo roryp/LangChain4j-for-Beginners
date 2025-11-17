@@ -137,7 +137,7 @@ This will:
 2. Automatically generate `.env` file in project root with credentials
 3. Set up all required environment variables
 
-> **Note:** On first deployment, you may encounter a "RequestConflict" error. This is a known Azure timing issue. Simply run `azd up` again and it will complete successfully.
+**Having deployment issues?** See the [Infrastructure README](infra/README.md) for detailed troubleshooting including subdomain name conflicts, manual Azure Portal deployment steps, and model configuration guidance.
 
 **Verify deployment succeeded:**
 ```bash
@@ -149,8 +149,6 @@ cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.
 > cd ..
 > bash .azd-env.sh
 > ```
-
-For detailed infrastructure information including architecture, cost optimization, troubleshooting, and customization options, see the [Infrastructure README](infra/README.md).
 
 ## Run the Application Locally
 
