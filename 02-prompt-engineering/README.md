@@ -55,13 +55,13 @@ This module demonstrates advanced prompting patterns using the same LangChain4j 
 </dependency>
 <dependency>
     <groupId>dev.langchain4j</groupId>
-    <artifactId>langchain4j-azure-open-ai</artifactId> <!-- Inherited from BOM in root pom.xml -->
+    <artifactId>langchain4j-open-ai-official</artifactId> <!-- Inherited from BOM in root pom.xml -->
 </dependency>
 ```
 
-**AzureOpenAiChatModel Configuration** - [LangChainConfig.java](src/main/java/com/example/langchain4j/prompts/config/LangChainConfig.java)
+**OpenAiOfficialChatModel Configuration** - [LangChainConfig.java](src/main/java/com/example/langchain4j/prompts/config/LangChainConfig.java)
 
-Spring Boot configures the chat model with GPT-5 specific settings. The key difference from Module 01 is how we structure the prompts sent to `chatModel.chat()`, not the model setup itself.
+The chat model is manually configured as a Spring bean using the OpenAI Official client, which supports Azure OpenAI endpoints. The key difference from Module 01 is how we structure the prompts sent to `chatModel.chat()`, not the model setup itself.
 
 **System and User Messages** - [Gpt5PromptService.java](src/main/java/com/example/langchain4j/prompts/service/Gpt5PromptService.java)
 

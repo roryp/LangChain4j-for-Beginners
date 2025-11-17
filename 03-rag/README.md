@@ -79,10 +79,10 @@ Each chunk is converted into a numerical representation called an embedding - es
 ```java
 @Bean
 public EmbeddingModel embeddingModel() {
-    return AzureOpenAiEmbeddingModel.builder()
-        .endpoint(azureOpenAiEndpoint)
+    return OpenAiOfficialEmbeddingModel.builder()
+        .baseUrl(azureOpenAiEndpoint)
         .apiKey(azureOpenAiKey)
-        .deploymentName(azureEmbeddingDeploymentName)
+        .modelName(azureEmbeddingDeploymentName)
         .build();
 }
 

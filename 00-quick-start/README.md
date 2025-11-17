@@ -33,7 +33,7 @@ The "chain" in LangChain refers to chaining together multiple components - you m
 
 We'll use three core components:
 
-**ChatLanguageModel** - The interface for AI model interactions. Call `model.chat("prompt")` and get a response string. We use `OpenAiChatModel` which works with OpenAI-compatible endpoints like GitHub Models.
+**ChatLanguageModel** - The interface for AI model interactions. Call `model.chat("prompt")` and get a response string. We use `OpenAiOfficialChatModel` which works with OpenAI-compatible endpoints like GitHub Models.
 
 **AiServices** - Creates type-safe AI service interfaces. Define methods, annotate them with `@Tool`, and LangChain4j handles the orchestration. The AI automatically calls your Java methods when needed.
 
@@ -57,11 +57,11 @@ This quick start uses two Maven dependencies in the [`pom.xml`](pom.xml):
 <!-- OpenAI integration (works with GitHub Models) -->
 <dependency>
     <groupId>dev.langchain4j</groupId>
-    <artifactId>langchain4j-open-ai</artifactId> <!-- Inherited from BOM in root pom.xml -->
+    <artifactId>langchain4j-open-ai-official</artifactId> <!-- Inherited from BOM in root pom.xml -->
 </dependency>
 ```
 
-The `langchain4j-open-ai` module provides the `OpenAiChatModel` class that connects to OpenAI-compatible APIs. GitHub Models uses the same API format, so no special adapter is needed - just point the base URL to `https://models.github.ai/inference`.
+The `langchain4j-open-ai-official` module provides the `OpenAiOfficialChatModel` class that connects to OpenAI-compatible APIs. GitHub Models uses the same API format, so no special adapter is needed - just point the base URL to `https://models.github.ai/inference`.
 
 ## Prerequisites
 
@@ -148,10 +148,10 @@ Ask questions about content in `document.txt`.
 
 **Basic Chat** - [BasicChatDemo.java](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
 
-Start here to see LangChain4j at its simplest. You'll create an `OpenAiChatModel`, send a prompt with `.chat()`, and get back a response. This demonstrates the foundation: how to initialize models with custom endpoints and API keys. Once you understand this pattern, everything else builds on it.
+Start here to see LangChain4j at its simplest. You'll create an `OpenAiOfficialChatModel`, send a prompt with `.chat()`, and get back a response. This demonstrates the foundation: how to initialize models with custom endpoints and API keys. Once you understand this pattern, everything else builds on it.
 
 ```java
-ChatLanguageModel model = OpenAiChatModel.builder()
+ChatLanguageModel model = OpenAiOfficialChatModel.builder()
     .baseUrl("https://models.github.ai/inference")
     .apiKey(System.getenv("GITHUB_TOKEN"))
     .modelName("gpt-4.1-nano")
@@ -163,7 +163,7 @@ System.out.println(response);
 
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`BasicChatDemo.java`](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) and ask:
 > - "How would I switch from GitHub Models to Azure OpenAI in this code?"
-> - "What other parameters can I configure in OpenAiChatModel.builder()?"
+> - "What other parameters can I configure in OpenAiOfficialChatModel.builder()?"
 > - "How do I add streaming responses instead of waiting for the complete response?"
 > - "What's the difference between logRequests and logResponses, and when should I use them?"
 
