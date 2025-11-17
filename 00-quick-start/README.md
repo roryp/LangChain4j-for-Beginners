@@ -165,7 +165,6 @@ System.out.println(response);
 > - "How would I switch from GitHub Models to Azure OpenAI in this code?"
 > - "What other parameters can I configure in OpenAiOfficialChatModel.builder()?"
 > - "How do I add streaming responses instead of waiting for the complete response?"
-> - "What's the difference between logRequests and logResponses, and when should I use them?"
 
 **Prompt Engineering** - [PromptEngineeringDemo.java](src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java)
 
