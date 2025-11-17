@@ -70,7 +70,7 @@ LangChain4j provides memory implementations that handle this automatically. You 
 
 ## How This Uses LangChain4j
 
-This module builds on the quick start by adding Spring Boot and conversation memory. Here's what LangChain4j brings:
+This module extends the quick start by integrating Spring Boot and adding conversation memory capabilities. LangChain4j provides:
 
 **Dependencies** - Two core libraries work together:
 ```xml
