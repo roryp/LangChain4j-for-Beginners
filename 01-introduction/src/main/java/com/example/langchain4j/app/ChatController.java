@@ -23,7 +23,7 @@ public class ChatController {
 
   /**
    * Constructor injection of the chat model bean.
-   * Model is auto-configured by langchain4j-open-ai-official Spring Boot integration.
+   * Model is manually configured as a Spring bean (see LangChainConfig.java).
    *
    * @param model configured OpenAI Official chat model
    */
