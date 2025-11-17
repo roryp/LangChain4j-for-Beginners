@@ -70,9 +70,10 @@ LangChain4j provides memory implementations that handle this automatically. You 
 
 ## How This Uses LangChain4j
 
-This module extends the quick start by integrating Spring Boot and adding conversation memory capabilities. LangChain4j provides:
+This module extends the quick start by integrating Spring Boot and adding conversation memory. Here's how the pieces fit together:
 
-**Dependencies** - Two core libraries work together:
+**Dependencies** - Add two LangChain4j libraries:
+
 ```xml
 <dependency>
     <groupId>dev.langchain4j</groupId>
@@ -84,11 +85,7 @@ This module extends the quick start by integrating Spring Boot and adding conver
 </dependency>
 ```
 
-The `langchain4j-open-ai-official` module provides the `OpenAiOfficialChatModel` class that works with both OpenAI and Azure OpenAI endpoints.
-
-**Manual Configuration** - [LangChainConfig.java](src/main/java/com/example/langchain4j/config/LangChainConfig.java)
-
-Since there's no Spring Boot starter for the OpenAI Official client, we configure the model manually as a Spring bean:
+**Chat Model** - Configure Azure OpenAI as a Spring bean ([LangChainConfig.java](src/main/java/com/example/langchain4j/config/LangChainConfig.java)):
 
 ```java
 @Bean
@@ -103,11 +100,9 @@ public OpenAiOfficialChatModel openAiOfficialChatModel() {
 }
 ```
 
-The configuration reads Azure OpenAI credentials from environment variables set by the `azd up` deployment. The OpenAI Official client provides a unified interface that works with Azure OpenAI by simply setting the `baseUrl` to your Azure endpoint.
+The builder reads credentials from environment variables set by `azd up`. Setting `baseUrl` to your Azure endpoint makes the OpenAI client work with Azure OpenAI.
 
-**MessageWindowChatMemory & Message Types** - [ConversationService.java](src/main/java/com/example/langchain4j/service/ConversationService.java)
-
-The key component for stateful conversations. Create it with `MessageWindowChatMemory.withMaxMessages(10)` to retain the last 10 messages. The service stores one memory instance per conversation ID, allowing multiple users to chat simultaneously without mixing contexts. LangChain4j uses typed messages: `UserMessage.from(text)` for user input and `AiMessage.from(text)` for AI responses. Add these to memory with `memory.add(message)` and retrieve the full history with `memory.messages()`. This structure makes it easy to build conversation context before sending to the model.
+**Conversation Memory** - Track chat history with MessageWindowChatMemory ([ConversationService.java](src/main/java/com/example/langchain4j/service/ConversationService.java)):
 
 ```java
 ChatMemory memory = MessageWindowChatMemory.withMaxMessages(10);
@@ -119,6 +114,8 @@ memory.add(UserMessage.from("What's my name?"));
 AiMessage aiMessage = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage);
 ```
+
+Create memory with `withMaxMessages(10)` to keep the last 10 messages. Add user and AI messages with typed wrappers: `UserMessage.from(text)` and `AiMessage.from(text)`. Retrieve history with `memory.messages()` and send it to the model. The service stores separate memory instances per conversation ID, allowing multiple users to chat simultaneously.
 
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ConversationService.java`](src/main/java/com/example/langchain4j/service/ConversationService.java) and ask:
 > - "How does MessageWindowChatMemory decide which messages to drop when the window is full?"
