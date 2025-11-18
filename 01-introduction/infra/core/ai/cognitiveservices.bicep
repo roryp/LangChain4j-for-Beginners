@@ -49,4 +49,6 @@ output id string = cognitiveServices.id
 output name string = cognitiveServices.name
 output endpoint string = cognitiveServices.properties.endpoint
 output deploymentNames array = length(deployments) > 0 ? (length(deployments) > 1 ? [deployment1.name, deployment2.name] : [deployment1.name]) : []
-output key string = cognitiveServices.listKeys().key1
+
+#disable-next-line outputs-should-not-contain-secrets
+output key string = length(deployments) > 1 ? (deployment2.id != '' ? cognitiveServices.listKeys().key1 : cognitiveServices.listKeys().key1) : (length(deployments) > 0 ? (deployment1.id != '' ? cognitiveServices.listKeys().key1 : cognitiveServices.listKeys().key1) : cognitiveServices.listKeys().key1)
