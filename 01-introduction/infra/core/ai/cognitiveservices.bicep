@@ -29,16 +29,18 @@ resource deployment1 'Microsoft.CognitiveServices/accounts/deployments@2024-10-0
   sku: deployments[0].sku
   properties: {
     model: deployments[0].model
+    raiPolicyName: null
   }
 }
 
-// Second deployment - text-embedding-3-small (depends on first)
+// Second deployment - text-embedding-3-small (explicit dependency on first)
 resource deployment2 'Microsoft.CognitiveServices/accounts/deployments@2024-10-01' = if (length(deployments) > 1) {
   parent: cognitiveServices
   name: deployments[1].name
   sku: deployments[1].sku
   properties: {
     model: deployments[1].model
+    raiPolicyName: null
   }
   dependsOn: [
     deployment1
@@ -50,5 +52,5 @@ output name string = cognitiveServices.name
 output endpoint string = cognitiveServices.properties.endpoint
 output deploymentNames array = length(deployments) > 0 ? (length(deployments) > 1 ? [deployment1.name, deployment2.name] : [deployment1.name]) : []
 
-#disable-next-line outputs-should-not-contain-secrets
-output key string = length(deployments) > 1 ? (deployment2.id != '' ? cognitiveServices.listKeys().key1 : cognitiveServices.listKeys().key1) : (length(deployments) > 0 ? (deployment1.id != '' ? cognitiveServices.listKeys().key1 : cognitiveServices.listKeys().key1) : cognitiveServices.listKeys().key1)
+#disable-next-line outputs-should-not-contain-secrets  
+output key string = cognitiveServices.listKeys().key1
