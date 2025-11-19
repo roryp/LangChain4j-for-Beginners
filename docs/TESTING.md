@@ -26,11 +26,11 @@ mvn test
 
 ## What the Tests Cover
 
-This course includes tests that run locally. Each test demonstrates a specific LangChain4j concept in isolation.
+This course focuses on **unit tests** that run locally. Each test demonstrates a specific LangChain4j concept in isolation.
 
 <img src="images/testing-pyramid.png" alt="Testing Pyramid" width="800"/>
 
-*Testing pyramid showing the balance between unit tests (fast, isolated), integration tests (real components), and end-to-end tests (full system with Docker)*
+*Testing pyramid showing the balance between unit tests (fast, isolated), integration tests (real components), and end-to-end tests (full system with Docker). This training covers unit testing.*
 
 | Module | Tests | Focus | Key Files |
 |--------|-------|-------|-----------|
