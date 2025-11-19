@@ -23,6 +23,13 @@ resource cognitiveServices 'Microsoft.CognitiveServices/accounts@2024-10-01' = {
 }
 
 // First deployment - gpt-5
+// NOTE: raiPolicyName *must* be set to null here.
+// Leaving it out causes long-running / stuck deployments for some models
+// in this tenant/region, due to how the RP auto-attaches RAI policies.
+// Do not remove unless you've tested end-to-end.
+// NOTE: We hard-code two deployments and sequence them with dependsOn
+// to avoid parallel deployment conflicts on the same OpenAI account.
+// Previous attempts with a for-loop + concurrent deployments caused timeouts.
 resource deployment1 'Microsoft.CognitiveServices/accounts/deployments@2024-10-01' = if (length(deployments) > 0) {
   parent: cognitiveServices
   name: deployments[0].name
