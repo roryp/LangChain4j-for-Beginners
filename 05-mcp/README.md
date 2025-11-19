@@ -197,7 +197,8 @@ This demonstrates containerized tool servers.
 
 **⚠️ Prerequisites:** 
 1. **Docker Desktop must be RUNNING** (not just installed)
-2. You need to build the Docker image first (see Terminal 1 below)
+2. **Windows users:** WSL 2 mode recommended (Docker Desktop Settings → General → "Use the WSL 2 based engine"). Hyper-V mode requires manual file sharing configuration.
+3. You need to build the Docker image first (see Terminal 1 below)
 
 **Verify Docker is running:**
 ```bash
@@ -205,6 +206,11 @@ docker ps  # Should show container list, not an error
 ```
 
 If you see an error like "Cannot connect to Docker daemon" or "The system cannot find the file specified", start Docker Desktop and wait for it to initialize (~30 seconds).
+
+**Troubleshooting:**
+- If the AI reports an empty repository or no files, the volume mount (`-v`) isn't working.
+- **Windows Hyper-V users:** Add the project directory to Docker Desktop Settings → Resources → File sharing, then restart Docker Desktop.
+- **Recommended solution:** Switch to WSL 2 mode for automatic file sharing (Settings → General → enable "Use the WSL 2 based engine").
 
 **Terminal 1 - Build the Docker image:**
 ```bash
