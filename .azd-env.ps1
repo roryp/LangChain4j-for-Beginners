@@ -28,22 +28,22 @@ if (Test-Path $EnvFile) {
 Push-Location (Join-Path $ScriptDir "01-introduction")
 
 try {
-    # Try to get from azd, fallback to existing values, then to defaults
-    $AzdEndpoint = $null
-    $AzdApiKey = $null
-    $AzdDeployment = $null
-    $AzdEmbedding = $null
-
-    try { $AzdEndpoint = (azd env get-values AZURE_OPENAI_ENDPOINT 2>$null | Select-Object -First 1).Trim() } catch { }
-    try { $AzdApiKey = (azd env get-values AZURE_OPENAI_KEY 2>$null | Select-Object -First 1).Trim() } catch { }
-    try { $AzdDeployment = (azd env get-values AZURE_OPENAI_DEPLOYMENT 2>$null | Select-Object -First 1).Trim() } catch { }
-    try { $AzdEmbedding = (azd env get-values AZURE_OPENAI_EMBEDDING_DEPLOYMENT 2>$null | Select-Object -First 1).Trim() } catch { }
+    # Get all environment variables from azd
+    $AzdEnvVars = @{}
+    $azdOutput = azd env get-values 2>$null
+    if ($azdOutput) {
+        $azdOutput | ForEach-Object {
+            if ($_ -match '^([^=]+)="?([^"]*)"?$') {
+                $AzdEnvVars[$matches[1]] = $matches[2]
+            }
+        }
+    }
 
     # Use azd values if available, otherwise use existing or defaults
-    $AzureOpenAiEndpoint = if ($AzdEndpoint) { $AzdEndpoint } else { $ExistingVars['AZURE_OPENAI_ENDPOINT'] }
-    $AzureOpenAiApiKey = if ($AzdApiKey) { $AzdApiKey } else { $ExistingVars['AZURE_OPENAI_API_KEY'] }
-    $AzureOpenAiDeployment = if ($AzdDeployment) { $AzdDeployment } elseif ($ExistingVars['AZURE_OPENAI_DEPLOYMENT']) { $ExistingVars['AZURE_OPENAI_DEPLOYMENT'] } else { 'gpt-5' }
-    $AzureOpenAiEmbeddingDeployment = if ($AzdEmbedding) { $AzdEmbedding } elseif ($ExistingVars['AZURE_OPENAI_EMBEDDING_DEPLOYMENT']) { $ExistingVars['AZURE_OPENAI_EMBEDDING_DEPLOYMENT'] } else { 'text-embedding-3-small' }
+    $AzureOpenAiEndpoint = if ($AzdEnvVars['AZURE_OPENAI_ENDPOINT']) { $AzdEnvVars['AZURE_OPENAI_ENDPOINT'] } else { $ExistingVars['AZURE_OPENAI_ENDPOINT'] }
+    $AzureOpenAiApiKey = if ($AzdEnvVars['AZURE_OPENAI_KEY']) { $AzdEnvVars['AZURE_OPENAI_KEY'] } else { $ExistingVars['AZURE_OPENAI_API_KEY'] }
+    $AzureOpenAiDeployment = if ($AzdEnvVars['AZURE_OPENAI_DEPLOYMENT']) { $AzdEnvVars['AZURE_OPENAI_DEPLOYMENT'] } elseif ($ExistingVars['AZURE_OPENAI_DEPLOYMENT']) { $ExistingVars['AZURE_OPENAI_DEPLOYMENT'] } else { 'gpt-5' }
+    $AzureOpenAiEmbeddingDeployment = if ($AzdEnvVars['AZURE_OPENAI_EMBEDDING_DEPLOYMENT']) { $AzdEnvVars['AZURE_OPENAI_EMBEDDING_DEPLOYMENT'] } elseif ($ExistingVars['AZURE_OPENAI_EMBEDDING_DEPLOYMENT']) { $ExistingVars['AZURE_OPENAI_EMBEDDING_DEPLOYMENT'] } else { 'text-embedding-3-small' }
 
     # Validate required variables
     if (-not $AzureOpenAiEndpoint) {
