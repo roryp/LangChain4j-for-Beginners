@@ -131,7 +131,7 @@ cd ../01-introduction
 ```powershell
 # Example: Start just the introduction module
 cd ../01-introduction
-bash start.sh
+./start.sh (Bash) or .\start.ps1 (PowerShell)
 ```
 
 Both scripts automatically load environment variables from the root `.env` file created by `azd up`.
