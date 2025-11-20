@@ -105,8 +105,13 @@ Then you can simply right-click on any demo file (e.g., `BasicChatDemo.java`) in
 Set the token as an environment variable:
 
 ```bash
-export GITHUB_TOKEN="your_token_here"  # macOS/Linux
-$env:GITHUB_TOKEN="your_token_here"    # Windows PowerShell
+# Bash (macOS/Linux)
+export GITHUB_TOKEN=your_token_here
+```
+
+```powershell
+# PowerShell (Windows)
+$env:GITHUB_TOKEN=your_token_here
 ```
 
 ## Run the Examples
@@ -118,13 +123,21 @@ $env:GITHUB_TOKEN="your_token_here"    # Windows PowerShell
 ### 1. Basic Chat
 
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.BasicChatDemo"
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
+```
+
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
 ### 2. Prompt Patterns
 
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.PromptEngineeringDemo"
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.PromptEngineeringDemo
+```
+
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.PromptEngineeringDemo
 ```
 
 Shows zero-shot, few-shot, chain-of-thought, and role-based prompting.
@@ -132,7 +145,11 @@ Shows zero-shot, few-shot, chain-of-thought, and role-based prompting.
 ### 3. Function Calling
 
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.ToolIntegrationDemo"
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIntegrationDemo
+```
+
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIntegrationDemo
 ```
 
 AI automatically calls your Java methods when needed.
@@ -140,7 +157,11 @@ AI automatically calls your Java methods when needed.
 ### 4. Document Q&A (RAG)
 
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.SimpleReaderDemo"
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.SimpleReaderDemo
+```
+
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.SimpleReaderDemo
 ```
 
 Ask questions about content in `document.txt`.
