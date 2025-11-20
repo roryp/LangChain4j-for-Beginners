@@ -106,13 +106,13 @@ Then you can simply right-click on any demo file (e.g., `BasicChatDemo.java`) in
 
 Set the token as an environment variable:
 
+**Bash:**
 ```bash
-# Bash (macOS/Linux)
 export GITHUB_TOKEN=your_token_here
 ```
 
+**PowerShell:**
 ```powershell
-# PowerShell (Windows)
 $env:GITHUB_TOKEN=your_token_here
 ```
 
