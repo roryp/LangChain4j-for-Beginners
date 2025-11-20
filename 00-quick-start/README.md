@@ -254,6 +254,26 @@ The examples include `.logRequests(true)` and `.logResponses(true)` to show API 
 
 **Solution**: This is normal behavior. Subsequent builds will be much faster as dependencies are cached locally. Download time depends on your network speed.
 
+### PowerShell Maven Command Syntax
+
+**Issue**: Maven commands fail with error `Unknown lifecycle phase ".mainClass=..."`
+
+**Cause**: PowerShell interprets `=` as a variable assignment operator, breaking Maven property syntax
+
+**Solution**: Use the stop-parsing operator `--%` before the Maven command:
+
+**PowerShell:**
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
+```
+
+**Bash/CMD (alternative):**
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.BasicChatDemo"
+```
+
+The `--%` operator tells PowerShell to pass all remaining arguments literally to Maven without interpretation.
+
 ### Windows PowerShell Emoji Display
 
 **Issue**: AI responses show garbage characters (e.g., `????` or `â??`) instead of emojis in PowerShell
