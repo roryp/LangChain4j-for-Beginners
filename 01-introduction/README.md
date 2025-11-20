@@ -168,7 +168,7 @@ Get-Content ..\.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.
 > **PowerShell:**
 > ```powershell
 > cd ..
-> .\.azd-env.sh
+> .\.azd-env.ps1
 > ```
 
 ## Run the Application Locally
