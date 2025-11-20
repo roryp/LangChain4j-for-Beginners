@@ -138,6 +138,8 @@ cd 01-introduction
 azd up  # Select subscription and location (eastus2 recommended)
 ```
 
+> **Note:** If you encounter a timeout error (`RequestConflict: Cannot modify resource ... provisioning state is not terminal`), simply run `azd up` again. Azure resources may still be provisioning in the background, and retrying allows the deployment to complete once resources reach a terminal state.
+
 This will:
 1. Deploy Azure OpenAI resource with GPT-5 and text-embedding-3-small models
 2. Automatically generate `.env` file in project root with credentials
@@ -300,3 +302,5 @@ Both panels use the same GPT-5 model. The only difference is memory. This makes 
 ---
 
 **Navigation:** [← Previous: Module 00 - Quick Start](../00-quick-start/README.md) | [Back to Main](../README.md) | [Next: Module 02 - Prompt Engineering →](../02-prompt-engineering/README.md)
+
+
