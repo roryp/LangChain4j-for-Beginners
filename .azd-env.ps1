@@ -96,7 +96,7 @@ AZURE_OPENAI_EMBEDDING_DEPLOYMENT=$AzureOpenAiEmbeddingDeployment
     Write-Host "  AZURE_OPENAI_DEPLOYMENT: $AzureOpenAiDeployment"
     Write-Host "  AZURE_OPENAI_EMBEDDING_DEPLOYMENT: $AzureOpenAiEmbeddingDeployment"
     Write-Host ""
-    Write-Host "You can now run: bash start-all.sh"
+    Write-Host "You can now run: .\start-all.ps1"
 
 } catch {
     Pop-Location
