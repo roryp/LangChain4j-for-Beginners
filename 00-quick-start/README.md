@@ -16,6 +16,7 @@
   - [4. Document Q&A (RAG)](#4-document-qa-rag)
 - [What Each Example Shows](#what-each-example-shows)
 - [Next Steps](#next-steps)
+- [Troubleshooting](#troubleshooting)
 
 ## Introduction
 
