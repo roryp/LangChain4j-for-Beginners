@@ -126,7 +126,14 @@ The stateless chat endpoint skips memory entirely - just `chatModel.chat(prompt)
 
 ## Deploy Azure OpenAI Infrastructure
 
+**Bash:**
 ```bash
+cd 01-introduction
+azd up  # Select subscription and location (eastus2 recommended)
+```
+
+**PowerShell:**
+```powershell
 cd 01-introduction
 azd up  # Select subscription and location (eastus2 recommended)
 ```
@@ -139,14 +146,29 @@ This will:
 **Having deployment issues?** See the [Infrastructure README](infra/README.md) for detailed troubleshooting including subdomain name conflicts, manual Azure Portal deployment steps, and model configuration guidance.
 
 **Verify deployment succeeded:**
+
+**Bash:**
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.
 ```
 
+**PowerShell:**
+```powershell
+Get-Content ..\.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.
+```
+
 > **Note:** The `azd up` command automatically generates the `.env` file. If you need to update it later, you can either edit the `.env` file manually or regenerate it by running:
+>
+> **Bash:**
 > ```bash
 > cd ..
 > bash .azd-env.sh
+> ```
+>
+> **PowerShell:**
+> ```powershell
+> cd ..
+> .\.azd-env.ps1
 > ```
 
 ## Run the Application Locally
@@ -154,8 +176,15 @@ cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, etc.
 **Verify deployment:**
 
 Ensure the `.env` file exists in root directory with Azure credentials:
+
+**Bash:**
 ```bash
 cat ../.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
+```
+
+**PowerShell:**
+```powershell
+Get-Content ..\.env  # Should show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
 **Start the applications:**
@@ -177,28 +206,66 @@ Simply click the play button next to "introduction" to start this module, or sta
 **Option 2: Using shell scripts**
 
 Start all web applications (modules 01-04):
+
+**Bash:**
 ```bash
 cd ..  # From root directory
 ./start-all.sh
 ```
 
+**PowerShell:**
+```powershell
+cd ..  # From root directory
+bash start-all.sh
+```
+
 Or start just this module:
+
+**Bash:**
 ```bash
 cd 01-introduction
 ./start.sh
 ```
 
+**PowerShell:**
+```powershell
+cd 01-introduction
+bash start.sh
+```
+
 Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
 
 > **Note:** If you prefer to build all modules manually before starting:
+>
+> **Bash:**
 > ```bash
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
+>
+> **PowerShell:**
+> ```powershell
+> cd ..  # Go to root directory
+> mvn --% clean package -DskipTests
+> ```
 
 Open http://localhost:8080 in your browser.
 
-**To stop:** Run `./stop.sh` (this module only) or `cd .. && ./stop-all.sh` (all modules)
+**To stop:**
+
+**Bash:**
+```bash
+./stop.sh  # This module only
+# Or
+cd .. && ./stop-all.sh  # All modules
+```
+
+**PowerShell:**
+```powershell
+bash stop.sh  # This module only
+# Or
+cd ..; bash stop-all.sh  # All modules
+```
 
 ## Using the Application
 

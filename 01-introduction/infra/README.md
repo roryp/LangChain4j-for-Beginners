@@ -56,7 +56,14 @@ All Spring Boot applications run locally on your machine:
 
 ### 1. Deploy Azure OpenAI
 
+**Bash:**
 ```bash
+cd 01-introduction
+azd up
+```
+
+**PowerShell:**
+```powershell
 cd 01-introduction
 azd up
 ```
@@ -72,7 +79,13 @@ This will create:
 
 ### 2. Get Connection Details
 
+**Bash:**
 ```bash
+azd env get-values
+```
+
+**PowerShell:**
+```powershell
 azd env get-values
 ```
 
@@ -88,18 +101,37 @@ The `azd up` command automatically creates a `.env` file in the root directory w
 
 **Recommended:** Start all web applications:
 
+**Bash:**
 ```bash
 # From the root directory
 cd ../..
 ./start-all.sh
 ```
 
+**PowerShell:**
+```powershell
+# From the root directory
+cd ../..
+# If you have bash (via WSL or Git Bash), run:
+bash start-all.sh
+# Or, if a PowerShell script exists, use:
+# .\start-all.ps1
+```
+
 Or start a single module:
 
+**Bash:**
 ```bash
 # Example: Start just the introduction module
 cd ../01-introduction
 ./start.sh
+```
+
+**PowerShell:**
+```powershell
+# Example: Start just the introduction module
+cd ../01-introduction
+bash start.sh
 ```
 
 Both scripts automatically load environment variables from the root `.env` file created by `azd up`.
@@ -142,7 +174,20 @@ Check GPT-5 availability: https://learn.microsoft.com/azure/ai-services/openai/c
 
 To update the infrastructure after making changes to Bicep files:
 
+**Bash:**
 ```bash
+# Rebuild the ARM template
+az bicep build --file infra/main.bicep
+
+# Preview changes
+azd provision --preview
+
+# Apply changes
+azd provision
+```
+
+**PowerShell:**
+```powershell
 # Rebuild the ARM template
 az bicep build --file infra/main.bicep
 
@@ -157,7 +202,17 @@ azd provision
 
 To delete all resources:
 
+**Bash:**
 ```bash
+# Delete all resources
+azd down
+
+# Delete everything including the environment
+azd down --purge
+```
+
+**PowerShell:**
+```powershell
 # Delete all resources
 azd down
 
@@ -216,7 +271,15 @@ The subdomain name generated from your subscription/environment is already in us
 
 **Solution:**
 1. **Option 1 - Use a different environment name:**
+   
+   **Bash:**
    ```bash
+   azd env new my-unique-env-name
+   azd up
+   ```
+   
+   **PowerShell:**
+   ```powershell
    azd env new my-unique-env-name
    azd up
    ```
@@ -230,6 +293,8 @@ The subdomain name generated from your subscription/environment is already in us
    - **Important:** Note your deployment names - they must match `.env` configuration
    - After deployment, get your endpoint and API key from "Keys and Endpoint"
    - Create a `.env` file in the project root with:
+     
+     **Example `.env` file:**
      ```bash
      AZURE_OPENAI_ENDPOINT=https://your-resource-name.openai.azure.com
      AZURE_OPENAI_API_KEY=your-api-key-here
@@ -277,7 +342,14 @@ The subdomain name generated from your subscription/environment is already in us
 **Solution**: 
 1. Try a different region - See [Changing Azure Regions](#changing-azure-regions) section for how to configure regions
 2. Check your subscription has Azure OpenAI quota:
+   
+   **Bash:**
    ```bash
+   az cognitiveservices account list-skus --location <your-region>
+   ```
+   
+   **PowerShell:**
+   ```powershell
    az cognitiveservices account list-skus --location <your-region>
    ```
 
@@ -287,10 +359,19 @@ The subdomain name generated from your subscription/environment is already in us
 
 **Solution**:
 1. Verify environment variables are exported:
+   
+   **Bash:**
    ```bash
    echo $AZURE_OPENAI_ENDPOINT
    echo $AZURE_OPENAI_API_KEY
    ```
+   
+   **PowerShell:**
+   ```powershell
+   Write-Host $env:AZURE_OPENAI_ENDPOINT
+   Write-Host $env:AZURE_OPENAI_API_KEY
+   ```
+
 2. Check endpoint format is correct (should be `https://xxx.openai.azure.com`)
 3. Verify API key is the primary or secondary key from Azure Portal
 
