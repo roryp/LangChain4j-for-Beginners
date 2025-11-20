@@ -84,7 +84,7 @@ function Start-App {
     if (-not (Test-Path $JarFile)) {
         Write-Host "JAR file not found. Building $Module..."
         Push-Location (Join-Path $ScriptDir $Module)
-        $buildResult = mvn clean package -DskipTests
+        mvn clean package -DskipTests
         if ($LASTEXITCODE -ne 0) {
             Write-Host "Error: Build failed for $Module" -ForegroundColor Red
             Pop-Location
