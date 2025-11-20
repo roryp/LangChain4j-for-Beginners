@@ -326,7 +326,15 @@ cd 02-prompt-engineering
 Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
 
 > **Note:** If you prefer to build all modules manually before starting:
+>
+> **Bash:**
 > ```bash
+> cd ..  # Go to root directory
+> mvn clean package -DskipTests
+> ```
+>
+> **PowerShell:**
+> ```powershell
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
