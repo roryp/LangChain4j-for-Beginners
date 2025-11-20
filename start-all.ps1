@@ -102,7 +102,7 @@ function Start-App {
     
     # Start application in background
     Push-Location (Join-Path $ScriptDir $Module)
-    $process = Start-Process -FilePath "java" -ArgumentList "-jar", $JarFile -NoNewWindow -PassThru -RedirectStandardOutput $LogFile -RedirectStandardError $LogFile
+    $process = Start-Process -FilePath "java" -ArgumentList "-jar", $JarFile -NoNewWindow -PassThru
     Pop-Location
     
     Write-Host "Started $Module with PID $($process.Id), waiting for port $Port to be ready..."
