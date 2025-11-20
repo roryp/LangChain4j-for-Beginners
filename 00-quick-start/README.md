@@ -241,3 +241,28 @@ The examples include `.logRequests(true)` and `.logResponses(true)` to show API 
 ---
 
 **Navigation:** [← Back to Main](../README.md) | [Next: Module 01 - Introduction →](../01-introduction/README.md)
+
+---
+
+## Troubleshooting
+
+### First-Time Maven Build
+
+**Issue**: Initial `mvn clean compile` or `mvn package` takes a long time (10-15 minutes)
+
+**Cause**: Maven needs to download all project dependencies (Spring Boot, LangChain4j libraries, Azure SDKs, etc.) on the first build.
+
+**Solution**: This is normal behavior. Subsequent builds will be much faster as dependencies are cached locally. Download time depends on your network speed.
+
+### Windows PowerShell Emoji Display
+
+**Issue**: AI responses show garbage characters (e.g., `????` or `â??`) instead of emojis in PowerShell
+
+**Cause**: PowerShell's default encoding doesn't support UTF-8 emojis
+
+**Solution**: Run this command before executing Java applications:
+```bash
+chcp 65001
+```
+
+This forces UTF-8 encoding in the terminal. Alternatively, use Windows Terminal which has better Unicode support.
