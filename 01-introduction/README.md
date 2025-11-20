@@ -303,5 +303,4 @@ Both panels use the same GPT-5 model. The only difference is memory. This makes 
 
 **Navigation:** [← Previous: Module 00 - Quick Start](../00-quick-start/README.md) | [Back to Main](../README.md) | [Next: Module 02 - Prompt Engineering →](../02-prompt-engineering/README.md)
 
-#troubleshooting
 
