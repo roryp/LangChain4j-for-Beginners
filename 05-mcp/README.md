@@ -23,6 +23,7 @@
 - [MCP Ecosystem](#mcp-ecosystem)
 - [Congratulations!](#congratulations)
   - [What's Next?](#whats-next)
+- [Troubleshooting](#troubleshooting)
 
 ## What You'll Learn
 
@@ -304,3 +305,49 @@ Thank you for completing this course!
 ---
 
 **Navigation:** [← Previous: Module 04 - Tools](../04-tools/README.md) | [Back to Main](../README.md)
+
+---
+
+## Troubleshooting
+
+### PowerShell Maven Command Syntax
+
+**Issue**: Maven commands fail with error `Unknown lifecycle phase ".mainClass=..."`
+
+**Cause**: PowerShell interprets `=` as a variable assignment operator, breaking Maven property syntax
+
+**Solution**: Use the stop-parsing operator `--%` before the Maven command:
+
+**PowerShell:**
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
+```
+
+**Bash/CMD (alternative):**
+```bash
+mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.mcp.StreamableHttpDemo"
+```
+
+The `--%` operator tells PowerShell to pass all remaining arguments literally to Maven without interpretation.
+
+### Docker Connection Issues
+
+**Issue**: Docker commands fail with "Cannot connect to Docker daemon" or "The system cannot find the file specified"
+
+**Cause**: Docker Desktop is not running or not fully initialized
+
+**Solution**: 
+1. Start Docker Desktop
+2. Wait ~30 seconds for full initialization
+3. Verify with `docker ps` (should show container list, not an error)
+4. Then run your example
+
+### Windows Docker Volume Mounting
+
+**Issue**: Git repository analyzer reports empty repository or no files
+
+**Cause**: Volume mount (`-v`) not working due to file sharing configuration
+
+**Solution**:
+- **Recommended:** Switch to WSL 2 mode (Docker Desktop Settings → General → "Use the WSL 2 based engine")
+- **Alternative (Hyper-V):** Add project directory to Docker Desktop Settings → Resources → File sharing, then restart Docker Desktop
