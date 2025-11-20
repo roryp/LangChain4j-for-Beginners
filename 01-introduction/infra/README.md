@@ -368,8 +368,8 @@ The subdomain name generated from your subscription/environment is already in us
    
    **PowerShell:**
    ```powershell
-   echo $env:AZURE_OPENAI_ENDPOINT
-   echo $env:AZURE_OPENAI_API_KEY
+   Write-Host $env:AZURE_OPENAI_ENDPOINT
+   Write-Host $env:AZURE_OPENAI_API_KEY
    ```
 
 2. Check endpoint format is correct (should be `https://xxx.openai.azure.com`)
