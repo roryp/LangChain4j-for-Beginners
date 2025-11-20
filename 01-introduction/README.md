@@ -248,7 +248,7 @@ Both scripts automatically load environment variables from the root `.env` file 
 > **PowerShell:**
 > ```powershell
 > cd ..  # Go to root directory
-> mvn --% clean package -DskipTests
+> mvn clean package -DskipTests
 > ```
 
 Open http://localhost:8080 in your browser.
