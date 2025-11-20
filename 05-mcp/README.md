@@ -150,7 +150,17 @@ This demonstrates network-based tool integration.
 **⚠️ Prerequisite:** You need to start the MCP server first (see Terminal 1 below).
 
 **Terminal 1 - Start the MCP server:**
+
+**Bash:**
 ```bash
+git clone https://github.com/modelcontextprotocol/servers.git
+cd servers/src/everything
+npm install
+node dist/streamableHttp.js
+```
+
+**PowerShell:**
+```powershell
 git clone https://github.com/modelcontextprotocol/servers.git
 cd servers/src/everything
 npm install
@@ -163,12 +173,14 @@ node dist/streamableHttp.js
 
 **Using Maven:**
 
+**Bash:**
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
 ```
 
+**PowerShell:**
 ```powershell
 $env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
@@ -187,12 +199,14 @@ This demonstrates local subprocess-based tools.
 
 **Using Maven:**
 
+**Bash:**
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
+**PowerShell:**
 ```powershell
 $env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
@@ -216,7 +230,14 @@ This demonstrates containerized tool servers.
 3. You need to build the Docker image first (see Terminal 1 below)
 
 **Verify Docker is running:**
+
+**Bash:**
 ```bash
+docker ps  # Should show container list, not an error
+```
+
+**PowerShell:**
+```powershell
 docker ps  # Should show container list, not an error
 ```
 
@@ -228,7 +249,15 @@ If you see an error like "Cannot connect to Docker daemon" or "The system cannot
 - **Recommended solution:** Switch to WSL 2 mode for automatic file sharing (Settings → General → enable "Use the WSL 2 based engine").
 
 **Terminal 1 - Build the Docker image:**
+
+**Bash:**
 ```bash
+cd servers/src/git
+docker build -t mcp/git .
+```
+
+**PowerShell:**
+```powershell
 cd servers/src/git
 docker build -t mcp/git .
 ```
@@ -239,12 +268,14 @@ docker build -t mcp/git .
 
 **Using Maven:**
 
+**Bash:**
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
 ```
 
+**PowerShell:**
 ```powershell
 $env:GITHUB_TOKEN=your_token_here
 cd 05-mcp

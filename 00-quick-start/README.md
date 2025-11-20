@@ -93,6 +93,8 @@ The `langchain4j-open-ai-official` module provides the `OpenAiOfficialChatModel`
 If you're using VS Code, add your token to the `.env` file in the project root:
 
 If the `.env` file does not exist, copy `.env.example` to `.env` or create a new `.env` file in the project root.
+
+**Example `.env` file:**
 ```bash
 # In /workspaces/LangChain4j-for-Beginners/.env
 GITHUB_TOKEN=your_token_here
@@ -104,13 +106,13 @@ Then you can simply right-click on any demo file (e.g., `BasicChatDemo.java`) in
 
 Set the token as an environment variable:
 
+**Bash:**
 ```bash
-# Bash (macOS/Linux)
 export GITHUB_TOKEN=your_token_here
 ```
 
+**PowerShell:**
 ```powershell
-# PowerShell (Windows)
 $env:GITHUB_TOKEN=your_token_here
 ```
 
@@ -122,20 +124,24 @@ $env:GITHUB_TOKEN=your_token_here
 
 ### 1. Basic Chat
 
+**Bash:**
 ```bash
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
+**PowerShell:**
 ```powershell
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
 ### 2. Prompt Patterns
 
+**Bash:**
 ```bash
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.PromptEngineeringDemo
 ```
 
+**PowerShell:**
 ```powershell
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.PromptEngineeringDemo
 ```
@@ -144,10 +150,12 @@ Shows zero-shot, few-shot, chain-of-thought, and role-based prompting.
 
 ### 3. Function Calling
 
+**Bash:**
 ```bash
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIntegrationDemo
 ```
 
+**PowerShell:**
 ```powershell
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIntegrationDemo
 ```
@@ -156,10 +164,12 @@ AI automatically calls your Java methods when needed.
 
 ### 4. Document Q&A (RAG)
 
+**Bash:**
 ```bash
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.SimpleReaderDemo
 ```
 
+**PowerShell:**
 ```powershell
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.SimpleReaderDemo
 ```
@@ -289,9 +299,9 @@ The examples include `.logRequests(true)` and `.logResponses(true)` to show API 
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
-**Bash/CMD (alternative):**
+**Bash:**
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.BasicChatDemo"
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
 The `--%` operator tells PowerShell to pass all remaining arguments literally to Maven without interpretation.
