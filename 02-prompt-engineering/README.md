@@ -296,15 +296,31 @@ Simply click the play button next to "prompt-engineering" to start this module, 
 **Option 2: Using shell scripts**
 
 Start all web applications (modules 01-04):
+
+**Bash:**
 ```bash
 cd ..  # From root directory
 ./start-all.sh
 ```
 
+**PowerShell:**
+```powershell
+cd ..  # From root directory
+bash start-all.sh
+```
+
 Or start just this module:
+
+**Bash:**
 ```bash
 cd 02-prompt-engineering
 ./start.sh
+```
+
+**PowerShell:**
+```powershell
+cd 02-prompt-engineering
+bash start.sh
 ```
 
 Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
@@ -317,7 +333,21 @@ Both scripts automatically load environment variables from the root `.env` file 
 
 Open http://localhost:8083 in your browser.
 
-**To stop:** Run `./stop.sh` (this module only) or `cd .. && ./stop-all.sh` (all modules)
+**To stop:**
+
+**Bash:**
+```bash
+./stop.sh  # This module only
+# Or
+cd .. && ./stop-all.sh  # All modules
+```
+
+**PowerShell:**
+```powershell
+bash stop.sh  # This module only
+# Or
+cd ..; bash stop-all.sh  # All modules
+```
 
 ## Application Screenshots
 

@@ -216,7 +216,7 @@ cd ..  # From root directory
 **PowerShell:**
 ```powershell
 cd ..  # From root directory
-.\start-all.sh
+bash start-all.sh
 ```
 
 Or start just this module:
@@ -230,7 +230,7 @@ cd 01-introduction
 **PowerShell:**
 ```powershell
 cd 01-introduction
-.\start.sh
+bash start.sh
 ```
 
 Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
@@ -262,9 +262,9 @@ cd .. && ./stop-all.sh  # All modules
 
 **PowerShell:**
 ```powershell
-.\stop.sh  # This module only
+bash stop.sh  # This module only
 # Or
-cd ..; .\stop-all.sh  # All modules
+cd ..; bash stop-all.sh  # All modules
 ```
 
 ## Using the Application
