@@ -284,7 +284,7 @@ The subdomain name generated from your subscription/environment is already in us
    azd up
    ```
 
-2. **Option 2 - Manual deployment via Azure Portal:****
+2. **Option 2 - Manual deployment via Azure Portal:**
    - Go to Azure Portal → Create a resource → Azure OpenAI
    - Choose a unique name for your resource
    - Deploy the following models:
