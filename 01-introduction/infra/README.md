@@ -112,7 +112,10 @@ cd ../..
 ```powershell
 # From the root directory
 cd ../..
-.\start-all.sh
+# If you have bash (via WSL or Git Bash), run:
+bash start-all.sh
+# Or, if a PowerShell script exists, use:
+# .\start-all.ps1
 ```
 
 Or start a single module:
