@@ -261,7 +261,7 @@ The examples include `.logRequests(true)` and `.logResponses(true)` to show API 
 **Cause**: PowerShell's default encoding doesn't support UTF-8 emojis
 
 **Solution**: Run this command before executing Java applications:
-```bash
+```cmd
 chcp 65001
 ```
 
