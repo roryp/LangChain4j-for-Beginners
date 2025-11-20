@@ -162,10 +162,17 @@ node dist/streamableHttp.js
 **Using VS Code:** Right-click on `StreamableHttpDemo.java` and select **"Run Java"**.
 
 **Using Maven:**
+
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
+```
+
+```powershell
+$env:GITHUB_TOKEN=your_token_here
+cd 05-mcp
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
 ```
 
 Watch the agent discover available tools, then use the calculator to perform addition.
@@ -179,10 +186,17 @@ This demonstrates local subprocess-based tools.
 **Using VS Code:** Right-click on `StdioTransportDemo.java` and select **"Run Java"**.
 
 **Using Maven:**
+
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+```
+
+```powershell
+$env:GITHUB_TOKEN=your_token_here
+cd 05-mcp
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
 The application spawns a filesystem MCP server automatically and reads a local file. Notice how the subprocess management is handled for you.
@@ -224,10 +238,17 @@ docker build -t mcp/git .
 **Using VS Code:** Right-click on `GitRepositoryAnalyzer.java` and select **"Run Java"**.
 
 **Using Maven:**
+
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+```
+
+```powershell
+$env:GITHUB_TOKEN=your_token_here
+cd 05-mcp
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
 ```
 
 The application launches a Docker container, mounts your repository, and analyzes the repository structure and contents through the AI agent.
@@ -323,9 +344,9 @@ Thank you for completing this course!
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
 ```
 
-**Bash/CMD (alternative):**
+**Bash:**
 ```bash
-mvn compile exec:java -Dexec.mainClass="com.example.langchain4j.mcp.StreamableHttpDemo"
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
 ```
 
 The `--%` operator tells PowerShell to pass all remaining arguments literally to Maven without interpretation.
