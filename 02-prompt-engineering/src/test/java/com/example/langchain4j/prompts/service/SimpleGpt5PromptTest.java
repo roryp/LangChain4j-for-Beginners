@@ -70,7 +70,7 @@ class SimpleGpt5PromptTest {
         String problem = "What is 2 + 2?";
 
         // When
-        String response = promptService.solveFocused(problem);
+        promptService.solveFocused(problem);
 
         // Then
         verify(mockChatModel).chat(promptCaptor.capture());
@@ -90,7 +90,7 @@ class SimpleGpt5PromptTest {
         String problem = "Design a scalable microservices architecture";
 
         // When
-        String response = promptService.solveAutonomous(problem);
+        promptService.solveAutonomous(problem);
 
         // Then
         verify(mockChatModel).chat(promptCaptor.capture());
@@ -110,7 +110,7 @@ class SimpleGpt5PromptTest {
         String task = "Create a REST API for user management";
 
         // When
-        String response = promptService.executeWithPreamble(task);
+        promptService.executeWithPreamble(task);
 
         // Then
         verify(mockChatModel).chat(promptCaptor.capture());
@@ -131,7 +131,7 @@ class SimpleGpt5PromptTest {
         String requirement = "Create a Spring Boot REST controller for products";
 
         // When
-        String response = promptService.generateCodeWithReflection(requirement);
+        promptService.generateCodeWithReflection(requirement);
 
         // Then
         verify(mockChatModel).chat(promptCaptor.capture());
@@ -151,7 +151,7 @@ class SimpleGpt5PromptTest {
         String code = "public void process() { System.out.println(\"test\"); }";
 
         // When
-        String response = promptService.analyzeCode(code);
+        promptService.analyzeCode(code);
 
         // Then
         verify(mockChatModel).chat(promptCaptor.capture());
@@ -235,7 +235,7 @@ class SimpleGpt5PromptTest {
         int maxWords = 50;
 
         // When
-        String response = promptService.generateConstrained(topic, format, maxWords);
+        promptService.generateConstrained(topic, format, maxWords);
 
         // Then
         verify(mockChatModel).chat(promptCaptor.capture());
@@ -257,7 +257,7 @@ class SimpleGpt5PromptTest {
         String problem = "Calculate the compound interest";
 
         // When
-        String response = promptService.solveWithReasoning(problem);
+        promptService.solveWithReasoning(problem);
 
         // Then
         verify(mockChatModel).chat(promptCaptor.capture());
