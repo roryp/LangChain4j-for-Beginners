@@ -67,17 +67,20 @@ class McpDockerTransportTest {
     @Test
     @DisplayName("Should start a generic container for testing")
     @EnabledIf("isDockerAvailable")
+    @SuppressWarnings("resource") // Container is properly stopped in finally block
     void testGenericContainerCanStart() {
         // Test with a lightweight container to verify Testcontainers works
         // Use a sleep command so the container stays running long enough to verify
-        try (GenericContainer<?> container = new GenericContainer<>(DockerImageName.parse("alpine:latest"))
-                .withCommand("sh", "-c", "sleep 2")) {
-            
+        GenericContainer<?> container = new GenericContainer<>(DockerImageName.parse("alpine:latest"))
+                .withCommand("sh", "-c", "sleep 2");
+        try {
             container.start();
             
             // Verify container started successfully
             assertThat(container.isCreated()).isTrue();
             assertThat(container.getContainerId()).isNotNull();
+        } finally {
+            container.stop();
         }
     }
 
@@ -138,16 +141,19 @@ class McpDockerTransportTest {
     @Test
     @DisplayName("Should test container environment variables")
     @EnabledIf("isDockerAvailable")
+    @SuppressWarnings("resource") // Container is properly stopped in finally block
     void testContainerEnvironment() {
         // Test container with environment variable
-        try (GenericContainer<?> container = new GenericContainer<>(DockerImageName.parse("alpine:latest"))
+        GenericContainer<?> container = new GenericContainer<>(DockerImageName.parse("alpine:latest"))
                 .withEnv("TEST_VAR", "test_value")
-                .withCommand("sh", "-c", "echo $TEST_VAR && sleep 1")) {
-            
+                .withCommand("sh", "-c", "echo $TEST_VAR && sleep 1");
+        try {
             container.start();
             
             assertThat(container.getEnvMap()).containsKey("TEST_VAR");
             assertThat(container.getEnvMap().get("TEST_VAR")).isEqualTo("test_value");
+        } finally {
+            container.stop();
         }
     }
 
