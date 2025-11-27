@@ -89,6 +89,9 @@ DOTENV_MIGRATION_PLAN.md
 # Playwright output folder
 .playwright-mcp/
 
+# MCP Servers (users add locally from https://github.com/modelcontextprotocol/servers)
+servers/
+
 # Image Generation Guide (contains API key instructions)
 IMAGE_GENERATION_GUIDE.md
 githubcopilot.md
