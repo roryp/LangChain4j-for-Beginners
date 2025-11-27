@@ -24,9 +24,9 @@
     <java.version>21</java.version>
     <spring.boot.version>3.3.4</spring.boot.version>
     <!-- Set the LangChain4j version to a recent stable release -->
-    <langchain4j.version>1.8.0</langchain4j.version>
+    <langchain4j.version>1.9.0</langchain4j.version>
     <!-- MCP support requires beta version -->
-    <langchain4j.mcp.version>1.8.0-beta15</langchain4j.mcp.version>
+    <langchain4j.mcp.version>1.9.0-beta16</langchain4j.mcp.version>
     <!-- Test dependency versions -->
     <junit.version>5.10.0</junit.version>
     <assertj.version>3.25.3</assertj.version>
