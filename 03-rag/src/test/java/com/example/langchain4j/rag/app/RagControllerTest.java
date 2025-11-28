@@ -1,16 +1,16 @@
 package com.example.langchain4j.rag.app;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.example.langchain4j.rag.model.dto.RagRequest;
 import com.example.langchain4j.rag.model.dto.RagResponse;
 import com.example.langchain4j.rag.model.dto.SourceReference;
 import com.example.langchain4j.rag.service.RagService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
+import tools.jackson.databind.json.JsonMapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 /**
  * Unit tests for RagController.
+ * Uses Jackson 3 (tools.jackson) which is the default JSON library in Spring Boot 4.0.0.
  */
 @WebMvcTest(RagController.class)
 class RagControllerTest {
@@ -31,7 +32,7 @@ class RagControllerTest {
     private MockMvc mockMvc;
 
     @Autowired
-    private ObjectMapper objectMapper;
+    private JsonMapper jsonMapper;
 
     @MockitoBean
     private RagService ragService;
@@ -55,7 +56,7 @@ class RagControllerTest {
         // When & Then
         mockMvc.perform(post("/api/rag/ask")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request)))
+                .content(jsonMapper.writeValueAsString(request)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.answer").value(response.answer()))
                 .andExpect(jsonPath("$.conversationId").value("conv-123"))
@@ -97,7 +98,7 @@ class RagControllerTest {
         // When & Then
         mockMvc.perform(post("/api/rag/ask")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(request)))
+                .content(jsonMapper.writeValueAsString(request)))
                 .andExpect(status().isInternalServerError())
                 .andExpect(jsonPath("$.error").exists())
                 .andExpect(jsonPath("$.message").exists());
