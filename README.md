@@ -18,13 +18,13 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 
 ##  Learning Path
 
-Start with the [Quick Start](00-quick-start/) module and progress through each module to build your skills step-by-step. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/) module for a deeper dive with GPT-5.
+Start with the [Quick Start](00-quick-start/README.md) module and progress through each module to build your skills step-by-step. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/README.md) module for a deeper dive with GPT-5.
 
 <img src="images/learning-path.png" alt="Learning Path" width="800"/>
 
 After completing the modules, explore the [Testing Guide](docs/TESTING.md) to see LangChain4j testing concepts in action.
 
-> **Note:** This training uses both GitHub Models and Azure OpenAI. The [Quick Start](00-quick-start/) and [MCP](05-mcp/) modules use GitHub Models (no Azure subscription required), while modules 1-4 use Azure OpenAI GPT-5.
+> **Note:** This training uses both GitHub Models and Azure OpenAI. The [Quick Start](00-quick-start/README.md) and [MCP](05-mcp/README.md) modules use GitHub Models (no Azure subscription required), while modules 1-4 use Azure OpenAI GPT-5.
 
 
 ## Learning with GitHub Copilot
