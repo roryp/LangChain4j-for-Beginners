@@ -5,28 +5,32 @@
             "name": "ToolIntegrationDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.ToolIntegrationDemo",
-            "projectName": "langchain4j-quickstart"
+            "projectName": "langchain4j-quickstart",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
             "name": "SimpleReaderDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.SimpleReaderDemo",
-            "projectName": "langchain4j-quickstart"
+            "projectName": "langchain4j-quickstart",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
             "name": "PromptEngineeringDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.PromptEngineeringDemo",
-            "projectName": "langchain4j-quickstart"
+            "projectName": "langchain4j-quickstart",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
             "name": "BasicChatDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.BasicChatDemo",
-            "projectName": "langchain4j-quickstart"
+            "projectName": "langchain4j-quickstart",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
@@ -34,7 +38,8 @@
             "request": "launch",
             "cwd": "${workspaceFolder}/05-mcp",
             "mainClass": "com.example.langchain4j.mcp.StdioTransportDemo",
-            "projectName": "mcp-example"
+            "projectName": "mcp-example",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
@@ -43,6 +48,7 @@
             "cwd": "${workspaceFolder}/05-mcp",
             "mainClass": "com.example.langchain4j.mcp.StreamableHttpDemo",
             "projectName": "mcp-example",
+            "envFile": "${workspaceFolder}/.env",
             "preLaunchTask": "Start MCP Everything Server"
         },
         {
@@ -52,6 +58,7 @@
             "cwd": "${workspaceFolder}/05-mcp",
             "mainClass": "com.example.langchain4j.mcp.GitRepositoryAnalyzer",
             "projectName": "mcp-example",
+            "envFile": "${workspaceFolder}/.env",
             "preLaunchTask": "Build MCP Git Docker Image"
         },
         {
@@ -60,7 +67,8 @@
             "request": "launch",
             "cwd": "${workspaceFolder}/05-mcp",
             "mainClass": "com.example.langchain4j.mcp.GitRepositoryAnalyzer",
-            "projectName": "mcp-example"
+            "projectName": "mcp-example",
+            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
