@@ -8,12 +8,12 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 
 ## Table of Contents
 
-1. [Quick Start](00-quick-start/) - Get started with LangChain4j
-2. [Introduction](01-introduction/) - Learn the fundamentals of LangChain4j
-3. [Prompt Engineering](02-prompt-engineering/) - Master effective prompt design
-4. [RAG (Retrieval-Augmented Generation)](03-rag/) - Build intelligent knowledge-based systems
-5. [Tools](04-tools/) - Integrate external tools and APIs with AI agents
-6. [MCP (Model Context Protocol)](05-mcp/) - Work with the Model Context Protocol
+1. [Quick Start](00-quick-start/README.md) - Get started with LangChain4j
+2. [Introduction](01-introduction/README.md) - Learn the fundamentals of LangChain4j
+3. [Prompt Engineering](02-prompt-engineering/README.md) - Master effective prompt design
+4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Build intelligent knowledge-based systems
+5. [Tools](04-tools/README.md) - Integrate external tools and APIs with AI agents
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work with the Model Context Protocol
 ---
 
 ##  Learning Path
