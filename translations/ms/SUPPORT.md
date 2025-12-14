@@ -1,0 +1,25 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "e6ad884382c7442882eca5e65a7cb42d",
+  "translation_date": "2025-12-13T11:40:51+00:00",
+  "source_file": "SUPPORT.md",
+  "language_code": "ms"
+}
+-->
+# Sokongan
+
+## Cara untuk mengemukakan isu dan mendapatkan bantuan  
+
+Projek ini menggunakan GitHub Issues untuk menjejaki pepijat dan permintaan ciri. Sila cari isu yang sedia ada sebelum mengemukakan isu baru untuk mengelakkan pendua. Untuk isu baru, kemukakan pepijat atau permintaan ciri anda sebagai Isu baru.
+
+## Polisi Sokongan Microsoft  
+
+Sokongan untuk projek ini terhad kepada sumber yang disenaraikan di atas.
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Penafian**:  
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
