@@ -1,0 +1,53 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
+  "translation_date": "2025-12-13T11:59:54+00:00",
+  "source_file": "SECURITY.md",
+  "language_code": "es"
+}
+-->
+## Seguridad
+
+Microsoft se toma en serio la seguridad de nuestros productos y servicios de software, lo que incluye todos los repositorios de código fuente gestionados a través de nuestras organizaciones de GitHub, que incluyen [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet) y [Xamarin](https://github.com/xamarin).
+
+Si cree que ha encontrado una vulnerabilidad de seguridad en algún repositorio propiedad de Microsoft que cumpla con la [definición de vulnerabilidad de seguridad de Microsoft](https://aka.ms/security.md/definition), por favor repórtela como se describe a continuación.
+
+## Reporte de Problemas de Seguridad
+
+**Por favor, no reporte vulnerabilidades de seguridad a través de issues públicos en GitHub.**
+
+En su lugar, repórtelas al Centro de Respuesta de Seguridad de Microsoft (MSRC) en [https://msrc.microsoft.com/create-report](https://aka.ms/security.md/msrc/create-report).
+
+Si prefiere enviar el reporte sin iniciar sesión, envíe un correo electrónico a [secure@microsoft.com](mailto:secure@microsoft.com). Si es posible, encripte su mensaje con nuestra clave PGP; descárguela desde la [página de la clave PGP del Centro de Respuesta de Seguridad de Microsoft](https://aka.ms/security.md/msrc/pgp).
+
+Debería recibir una respuesta en un plazo de 24 horas. Si por alguna razón no la recibe, por favor haga un seguimiento por correo electrónico para asegurarse de que recibimos su mensaje original. Puede encontrar información adicional en [microsoft.com/msrc](https://www.microsoft.com/msrc).
+
+Por favor incluya la información solicitada que se detalla a continuación (tanto como pueda proporcionar) para ayudarnos a entender mejor la naturaleza y el alcance del posible problema:
+
+  * Tipo de problema (por ejemplo, desbordamiento de búfer, inyección SQL, cross-site scripting, etc.)
+  * Rutas completas de los archivos fuente relacionados con la manifestación del problema
+  * La ubicación del código fuente afectado (etiqueta/rama/commit o URL directa)
+  * Cualquier configuración especial requerida para reproducir el problema
+  * Instrucciones paso a paso para reproducir el problema
+  * Código de prueba de concepto o exploit (si es posible)
+  * Impacto del problema, incluyendo cómo un atacante podría explotar el problema
+
+Esta información nos ayudará a clasificar su reporte más rápidamente.
+
+Si está reportando para un programa de recompensas por errores, reportes más completos pueden contribuir a una mayor recompensa. Por favor visite nuestra página del [Programa de Recompensas por Errores de Microsoft](https://aka.ms/security.md/msrc/bounty) para más detalles sobre nuestros programas activos.
+
+## Idiomas Preferidos
+
+Preferimos que todas las comunicaciones sean en inglés.
+
+## Política
+
+Microsoft sigue el principio de [Divulgación Coordinada de Vulnerabilidades](https://aka.ms/security.md/cvd).
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Aviso Legal**:  
+Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas derivadas del uso de esta traducción.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
