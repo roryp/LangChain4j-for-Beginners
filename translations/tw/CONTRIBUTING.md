@@ -1,0 +1,26 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
+  "translation_date": "2025-12-13T11:44:59+00:00",
+  "source_file": "CONTRIBUTING.md",
+  "language_code": "tw"
+}
+-->
+# Contributing
+
+感謝您對貢獻的興趣！我們歡迎對本課程提出拉取請求和改進。提交更改時，請遵循以下指南：
+
+1. **提交中不得包含秘密。**切勿提交 API 金鑰或任何機密資料。請使用本地 `.env` 進行個人測試。
+2. **保持更改專注。**小範圍的拉取請求更易於審查和維護。如果您修復多個問題，請分別提交。
+3. **盡可能添加測試。**單元測試或整合測試有助於捕捉回歸。對於 Spring Boot 模組，請在 `src/test/java` 資料夾下包含測試。
+4. **遵循程式碼風格慣例。**以現有專案結構為指引。我們依賴 Maven 管理相依性，並使用 Spring Boot Maven 插件打包應用程式。
+
+感謝您幫助改進本課程！
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責聲明**：  
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋負責。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
