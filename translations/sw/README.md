@@ -1,13 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:42:09+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T14:50:28+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.sw.png" alt="LangChain4j" width="800"/>
+
+### 🌐 Msaada wa Lugha Nyingi
+
+#### Unaungwa mkono kupitia Kitendo cha GitHub (Kiotomatiki & Kila Wakati Kikiwa Kisasa)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](./README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # LangChain4j kwa Waanzilishi
 
@@ -27,25 +35,25 @@ Kozi ya kujenga programu za AI kwa kutumia LangChain4j na Azure OpenAI GPT-5, ku
 
 ## Njia ya Kujifunza
 
-Anza na moduli ya [Anza Haraka](00-quick-start/README.md) na endelea kupitia kila moduli kujenga ujuzi wako hatua kwa hatua. Utajaribu mifano ya msingi kuelewa misingi kabla ya kuhamia moduli ya [Utangulizi](01-introduction/README.md) kwa uchunguzi wa kina zaidi na GPT-5.
+Anza na moduli ya [Anza Haraka](00-quick-start/README.md) na endelea kupitia kila moduli kujenga ujuzi wako hatua kwa hatua. Utajaribu mifano ya msingi kuelewa misingi kabla ya kuhamia moduli ya [Utangulizi](01-introduction/README.md) kwa uchunguzi wa kina na GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.sw.png" alt="Learning Path" width="800"/>
 
-Baada ya kumaliza moduli, chunguza [Mwongozo wa Kupima](docs/TESTING.md) kuona dhana za upimaji za LangChain4j zikitumika.
+Baada ya kumaliza moduli, chunguza [Mwongozo wa Upimaji](docs/TESTING.md) kuona dhana za upimaji za LangChain4j zikitumika.
 
 > **Kumbuka:** Mafunzo haya yanatumia Modeli za GitHub na Azure OpenAI. Moduli za [Anza Haraka](00-quick-start/README.md) na [MCP](05-mcp/README.md) zinatumia Modeli za GitHub (hakuna usajili wa Azure unahitajika), wakati moduli 1-4 zinatumia Azure OpenAI GPT-5.
 
 
 ## Kujifunza na GitHub Copilot
 
-Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya eneo-kazi kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imeandaliwa tayari na GitHub Copilot kwa programu ya pamoja ya AI.
+Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya eneo-kazi kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imewekwa tayari na GitHub Copilot kwa programu ya pamoja ya AI.
 
 Kila mfano wa msimbo una maswali yaliyopendekezwa ambayo unaweza kumuuliza GitHub Copilot ili kuongeza uelewa wako. Tafuta alama za 💡/🤖 katika:
 
 - **Vichwa vya faili za Java** - Maswali maalum kwa kila mfano
 - **README za moduli** - Maswali ya uchunguzi baada ya mifano ya msimbo
 
-**Jinsi ya kutumia:** Fungua faili yoyote ya msimbo na muulize Copilot maswali yaliyopendekezwa. Ina muktadha kamili wa msimbo na inaweza kuelezea, kuongeza, na kupendekeza mbadala.
+**Jinsi ya kutumia:** Fungua faili yoyote ya msimbo na uliza Copilot maswali yaliyopendekezwa. Ina muktadha kamili wa msimbo na inaweza kuelezea, kuongeza, na kupendekeza mbadala.
 
 Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://aka.ms/GitHubCopilotAI).
 
@@ -92,7 +100,7 @@ Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://
 
 ## Kupata Msaada
 
-Ikiwa unakumbwa na shida au una maswali kuhusu kujenga programu za AI, jiunge:
+Ikiwa unakumbwa au una maswali yoyote kuhusu kujenga programu za AI, jiunge:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -107,6 +115,6 @@ Leseni ya MIT - Angalia faili la [LICENSE](../../LICENSE) kwa maelezo.
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kiarifu cha Msamaha**:
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+**Kiarifu cha Kutotegemea**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

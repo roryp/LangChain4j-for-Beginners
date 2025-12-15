@@ -1,13 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:13:06+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T14:09:24+00:00",
   "source_file": "README.md",
   "language_code": "es"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.es.png" alt="LangChain4j" width="800"/>
+
+### 🌐 Soporte Multilingüe
+
+#### Soportado mediante GitHub Action (Automatizado y Siempre Actualizado)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Árabe](../ar/README.md) | [Bengalí](../bn/README.md) | [Búlgaro](../bg/README.md) | [Birmano (Myanmar)](../my/README.md) | [Chino (Simplificado)](../zh/README.md) | [Chino (Tradicional, Hong Kong)](../hk/README.md) | [Chino (Tradicional, Macao)](../mo/README.md) | [Chino (Tradicional, Taiwán)](../tw/README.md) | [Croata](../hr/README.md) | [Checo](../cs/README.md) | [Danés](../da/README.md) | [Holandés](../nl/README.md) | [Estonio](../et/README.md) | [Finlandés](../fi/README.md) | [Francés](../fr/README.md) | [Alemán](../de/README.md) | [Griego](../el/README.md) | [Hebreo](../he/README.md) | [Hindi](../hi/README.md) | [Húngaro](../hu/README.md) | [Indonesio](../id/README.md) | [Italiano](../it/README.md) | [Japonés](../ja/README.md) | [Kannada](../kn/README.md) | [Coreano](../ko/README.md) | [Lituano](../lt/README.md) | [Malayo](../ms/README.md) | [Malayalam](../ml/README.md) | [Maratí](../mr/README.md) | [Nepalí](../ne/README.md) | [Pidgin Nigeriano](../pcm/README.md) | [Noruego](../no/README.md) | [Persa (Farsi)](../fa/README.md) | [Polaco](../pl/README.md) | [Portugués (Brasil)](../br/README.md) | [Portugués (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumano](../ro/README.md) | [Ruso](../ru/README.md) | [Serbio (Cirílico)](../sr/README.md) | [Eslovaco](../sk/README.md) | [Esloveno](../sl/README.md) | [Español](./README.md) | [Swahili](../sw/README.md) | [Sueco](../sv/README.md) | [Tagalo (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Tailandés](../th/README.md) | [Turco](../tr/README.md) | [Ucraniano](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamita](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # LangChain4j para Principiantes
 
@@ -29,14 +37,14 @@ Un curso para construir aplicaciones de IA con LangChain4j y Azure OpenAI GPT-5,
 
 Comienza con el módulo de [Inicio Rápido](00-quick-start/README.md) y avanza a través de cada módulo para desarrollar tus habilidades paso a paso. Probarás ejemplos básicos para entender los fundamentos antes de pasar al módulo de [Introducción](01-introduction/README.md) para un análisis más profundo con GPT-5.
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.es.png" alt="Learning Path" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.es.png" alt="Ruta de Aprendizaje" width="800"/>
 
-Después de completar los módulos, explora la [Guía de Pruebas](docs/TESTING.md) para ver los conceptos de pruebas de LangChain4j en acción.
+Después de completar los módulos, explora la [Guía de Pruebas](docs/TESTING.md) para ver los conceptos de pruebas en LangChain4j en acción.
 
 > **Nota:** Esta formación utiliza tanto Modelos de GitHub como Azure OpenAI. Los módulos de [Inicio Rápido](00-quick-start/README.md) y [MCP](05-mcp/README.md) usan Modelos de GitHub (no se requiere suscripción a Azure), mientras que los módulos 1-4 usan Azure OpenAI GPT-5.
 
 
-## Aprendiendo con GitHub Copilot
+## Aprendizaje con GitHub Copilot
 
 Para comenzar a programar rápidamente, abre este proyecto en un GitHub Codespace o en tu IDE local con el devcontainer proporcionado. El devcontainer usado en este curso viene preconfigurado con GitHub Copilot para programación asistida por IA.
 
@@ -45,7 +53,7 @@ Cada ejemplo de código incluye preguntas sugeridas que puedes hacerle a GitHub 
 - **Encabezados de archivos Java** - Preguntas específicas para cada ejemplo
 - **READMEs de los módulos** - Prompts de exploración después de los ejemplos de código
 
-**Cómo usar:** Abre cualquier archivo de código y hazle a Copilot las preguntas sugeridas. Tiene el contexto completo del código y puede explicar, extender y sugerir alternativas.
+**Cómo usarlo:** Abre cualquier archivo de código y hazle a Copilot las preguntas sugeridas. Tiene el contexto completo del código y puede explicar, extender y sugerir alternativas.
 
 ¿Quieres aprender más? Consulta [Copilot para Programación Asistida por IA](https://aka.ms/GitHubCopilotAI).
 
@@ -87,12 +95,12 @@ Cada ejemplo de código incluye preguntas sugeridas que puedes hacerle a GitHub 
  
 ### Serie Copilot
 [![Copilot para Programación Asistida por IA](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot para C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Aventura Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
-## Obtener Ayuda
+## Obtener ayuda
 
-Si te quedas atascado o tienes preguntas sobre cómo construir aplicaciones de IA, únete a:
+Si te quedas atascado o tienes alguna pregunta sobre cómo crear aplicaciones de IA, únete a:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 

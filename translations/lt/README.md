@@ -1,17 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:51:40+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T15:07:47+00:00",
   "source_file": "README.md",
   "language_code": "lt"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.lt.png" alt="LangChain4j" width="800"/>
 
+### 🌐 Daugiakalbė palaikymas
+
+#### Palaikoma per GitHub Action (automatizuota ir visada atnaujinta)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](./README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+
 # LangChain4j pradedantiesiems
 
-Kursas, skirtas kurti DI programas naudojant LangChain4j ir Azure OpenAI GPT-5, nuo paprasto pokalbio iki DI agentų.
+Kursas, skirtas kurti DI programas su LangChain4j ir Azure OpenAI GPT-5, nuo pagrindinio pokalbio iki DI agentų.
 
 **Naujas LangChain4j?** Peržiūrėkite [Žodyną](docs/GLOSSARY.md), kuriame pateikiamos pagrindinių terminų ir sąvokų apibrėžtys.
 
@@ -19,7 +27,7 @@ Kursas, skirtas kurti DI programas naudojant LangChain4j ir Azure OpenAI GPT-5, 
 
 1. [Greitas pradžia](00-quick-start/README.md) - Pradėkite naudotis LangChain4j
 2. [Įvadas](01-introduction/README.md) - Sužinokite LangChain4j pagrindus
-3. [Užklausų kūrimas](02-prompt-engineering/README.md) - Įvaldykite efektyvų užklausų kūrimą
+3. [Užklausų kūrimas](02-prompt-engineering/README.md) - Išmokite efektyviai kurti užklausas
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Kurkite išmanias žinių sistemas
 5. [Įrankiai](04-tools/README.md) - Integruokite išorinius įrankius ir API su DI agentais
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Dirbkite su Model Context Protocol
@@ -27,13 +35,13 @@ Kursas, skirtas kurti DI programas naudojant LangChain4j ir Azure OpenAI GPT-5, 
 
 ## Mokymosi kelias
 
-Pradėkite nuo [Greitos pradžios](00-quick-start/README.md) modulio ir žingsnis po žingsnio tobulinkite savo įgūdžius. Išbandysite paprastus pavyzdžius, kad suprastumėte pagrindus, prieš pereidami prie [Įvado](01-introduction/README.md) modulio, kuriame gilinsitės į GPT-5.
+Pradėkite nuo [Greito pradžios](00-quick-start/README.md) modulio ir žingsnis po žingsnio tobulinkite savo įgūdžius. Išbandysite pagrindinius pavyzdžius, kad suprastumėte pagrindus, prieš pereidami prie [Įvado](01-introduction/README.md) modulio, kuriame gilinsitės į GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.lt.png" alt="Learning Path" width="800"/>
 
 Baigę modulius, peržiūrėkite [Testavimo vadovą](docs/TESTING.md), kad pamatytumėte LangChain4j testavimo koncepcijas veikiant.
 
-> **Pastaba:** Šis mokymas naudoja tiek GitHub modelius, tiek Azure OpenAI. [Greitos pradžios](00-quick-start/README.md) ir [MCP](05-mcp/README.md) moduliai naudoja GitHub modelius (nereikia Azure prenumeratos), o moduliai 1-4 naudoja Azure OpenAI GPT-5.
+> **Pastaba:** Šis mokymas naudoja tiek GitHub modelius, tiek Azure OpenAI. [Greito pradžios](00-quick-start/README.md) ir [MCP](05-mcp/README.md) moduliai naudoja GitHub modelius (nereikia Azure prenumeratos), o moduliai 1-4 naudoja Azure OpenAI GPT-5.
 
 
 ## Mokymasis su GitHub Copilot
@@ -92,11 +100,11 @@ Norite sužinoti daugiau? Peržiūrėkite [Copilot DI poriniam programavimui](ht
 
 ## Pagalbos gavimas
 
-Jei užstrigote arba turite klausimų apie DI programų kūrimą, prisijunkite prie:
+Jei įstringate arba turite klausimų apie AI programėlių kūrimą, prisijunkite prie:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Jei turite atsiliepimų apie produktą arba radote klaidų kūrimo metu, apsilankykite:
+Jei turite produkto atsiliepimų arba susiduriate su klaidomis kūrimo metu, apsilankykite:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -107,6 +115,6 @@ MIT licencija - žr. [LICENSE](../../LICENSE) failą dėl detalių.
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Atsakomybės apribojimas**:
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus žmogaus vertimas. Mes neatsakome už bet kokius nesusipratimus ar neteisingus aiškinimus, kilusius dėl šio vertimo naudojimo.
+**Atsakomybės apribojimas**:  
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus žmogaus vertimas. Mes neatsakome už bet kokius nesusipratimus ar neteisingus aiškinimus, kilusius dėl šio vertimo naudojimo.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,17 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:54:03+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T15:11:42+00:00",
   "source_file": "README.md",
   "language_code": "pcm"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.pcm.png" alt="LangChain4j" width="800"/>
 
+### 🌐 Multi-Language Support
+
+#### Supported via GitHub Action (Automated & Always Up-to-Date)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+
 # LangChain4j for Beginners
 
-One course wey dey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat go AI agents.
+Na course wey dey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat go AI agents.
 
 **New to LangChain4j?** Check di [Glossary](docs/GLOSSARY.md) for wetin key terms and concepts mean.
 
@@ -19,7 +27,7 @@ One course wey dey teach how to build AI applications wit LangChain4j and Azure 
 
 1. [Quick Start](00-quick-start/README.md) - How to start wit LangChain4j
 2. [Introduction](01-introduction/README.md) - Learn di basics of LangChain4j
-3. [Prompt Engineering](02-prompt-engineering/README.md) - How to sabi design better prompt
+3. [Prompt Engineering](02-prompt-engineering/README.md) - How to sabi design prompt well well
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Build smart knowledge-based systems
 5. [Tools](04-tools/README.md) - Join external tools and APIs wit AI agents
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work wit di Model Context Protocol
@@ -27,25 +35,25 @@ One course wey dey teach how to build AI applications wit LangChain4j and Azure 
 
 ##  Learning Path
 
-Start wit di [Quick Start](00-quick-start/README.md) module and waka through each module to build your skills step-by-step. You go try basic examples to understand di fundamentals before you move go di [Introduction](01-introduction/README.md) module for deeper knowledge wit GPT-5.
+Start wit di [Quick Start](00-quick-start/README.md) module and waka through each module to build your skills step-by-step. You go try basic examples to understand di basics before you move go di [Introduction](01-introduction/README.md) module for deeper understanding wit GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pcm.png" alt="Learning Path" width="800"/>
 
-After you finish di modules, try check di [Testing Guide](docs/TESTING.md) to see how LangChain4j testing concepts dey work.
+After you don finish di modules, check di [Testing Guide](docs/TESTING.md) to see how LangChain4j testing concepts dey work.
 
 > **Note:** Dis training dey use both GitHub Models and Azure OpenAI. Di [Quick Start](00-quick-start/README.md) and [MCP](05-mcp/README.md) modules dey use GitHub Models (no need Azure subscription), but modules 1-4 dey use Azure OpenAI GPT-5.
 
 
 ## Learning with GitHub Copilot
 
-To start coding quick, open dis project for GitHub Codespace or your local IDE wit di devcontainer wey dem provide. Di devcontainer wey dis course dey use don already set wit GitHub Copilot for AI paired programming.
+To start coding quick quick, open dis project for GitHub Codespace or your local IDE wit di devcontainer wey dem provide. Di devcontainer wey dis course dey use don already set wit GitHub Copilot for AI paired programming.
 
-Every code example get questions wey you fit ask GitHub Copilot to help you understand better. Look for di 💡/🤖 prompts for:
+Every code example get questions wey you fit ask GitHub Copilot to help you understand better. Look out for di 💡/🤖 prompts for:
 
 - **Java file headers** - Questions wey relate to each example
 - **Module READMEs** - Exploration prompts after code examples
 
-**How to use:** Open any code file and ask Copilot di questions wey dem suggest. E get full context of di codebase and fit explain, add more, and suggest other ways.
+**How to use:** Open any code file and ask Copilot di questions wey dem suggest. E get full context of di codebase and fit explain, add more, and suggest other options.
 
 You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
@@ -90,13 +98,13 @@ You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/Gi
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
-## Getting Help
+## How to Get Help
 
 If you jam or get any question about how to build AI apps, join:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-If you get product feedback or errors while you dey build, visit:
+If you get product feedback or wahala while you dey build, waka go:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -108,5 +116,5 @@ MIT License - See [LICENSE](../../LICENSE) file for details.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document na AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) wey translate am. Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. The original document wey e dey for im own language na the correct one. If na serious matter, e better make person wey sabi do professional human translation do am. We no go responsible for any misunderstanding or wrong meaning wey fit come from this translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any wahala or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,13 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:21:29+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T14:20:04+00:00",
   "source_file": "README.md",
   "language_code": "ko"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.ko.png" alt="LangChain4j" width="800"/>
+
+### 🌐 다국어 지원
+
+#### GitHub Action을 통한 지원 (자동화 및 항상 최신 상태 유지)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](./README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # 초보자를 위한 LangChain4j
 
@@ -27,27 +35,27 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 학습 경로
 
-[빠른 시작](00-quick-start/README.md) 모듈부터 시작하여 각 모듈을 단계별로 진행하며 실력을 쌓으세요. 기본 예제를 통해 기초를 이해한 후 [소개](01-introduction/README.md) 모듈에서 GPT-5와 함께 더 깊이 학습합니다.
+[빠른 시작](00-quick-start/README.md) 모듈부터 시작하여 각 모듈을 단계별로 진행하며 실력을 쌓으세요. 기본 예제를 통해 기초를 이해한 후, GPT-5와 함께 더 깊이 배우는 [소개](01-introduction/README.md) 모듈로 넘어갑니다.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ko.png" alt="Learning Path" width="800"/>
 
 모듈을 완료한 후에는 [테스트 가이드](docs/TESTING.md)를 탐색하여 LangChain4j 테스트 개념을 실제로 확인해 보세요.
 
-> **참고:** 이 교육 과정은 GitHub 모델과 Azure OpenAI를 모두 사용합니다. [빠른 시작](00-quick-start/README.md) 및 [MCP](05-mcp/README.md) 모듈은 GitHub 모델을 사용하며(별도의 Azure 구독 불필요), 1~4 모듈은 Azure OpenAI GPT-5를 사용합니다.
+> **참고:** 이 교육 과정은 GitHub 모델과 Azure OpenAI를 모두 사용합니다. [빠른 시작](00-quick-start/README.md)과 [MCP](05-mcp/README.md) 모듈은 GitHub 모델을 사용하며 (Azure 구독 불필요), 1~4 모듈은 Azure OpenAI GPT-5를 사용합니다.
 
 
-## GitHub Copilot과 함께 학습하기
+## GitHub Copilot과 함께 배우기
 
 빠르게 코딩을 시작하려면 이 프로젝트를 GitHub Codespace 또는 제공된 devcontainer가 포함된 로컬 IDE에서 열어보세요. 이 과정에서 사용되는 devcontainer는 AI 페어 프로그래밍을 위한 GitHub Copilot이 사전 구성되어 있습니다.
 
 각 코드 예제에는 GitHub Copilot에게 물어볼 수 있는 추천 질문이 포함되어 있어 이해를 깊게 할 수 있습니다. 💡/🤖 프롬프트는 다음 위치에서 확인하세요:
 
-- **Java 파일 헤더** - 각 예제별 구체적인 질문
+- **Java 파일 헤더** - 각 예제에 특화된 질문
 - **모듈 README** - 코드 예제 후 탐색용 질문
 
 **사용 방법:** 코드 파일을 열고 추천 질문을 Copilot에게 물어보세요. Copilot은 코드베이스 전체 문맥을 이해하고 설명, 확장, 대안 제시가 가능합니다.
 
-더 알고 싶다면 [AI 페어 프로그래밍을 위한 Copilot](https://aka.ms/GitHubCopilotAI)을 확인하세요.
+더 배우고 싶나요? [AI 페어 프로그래밍용 Copilot](https://aka.ms/GitHubCopilotAI)을 확인하세요.
 
 
 ## 추가 자료
@@ -86,9 +94,9 @@ CO_OP_TRANSLATOR_METADATA:
 ---
  
 ### Copilot 시리즈
-[![AI 페어 프로그래밍을 위한 Copilot](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![C#/.NET용 Copilot](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot 어드벤처](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![AI 페어 프로그래밍용 Copilot](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
 ## 도움 받기
 
@@ -108,5 +116,5 @@ MIT 라이선스 - 자세한 내용은 [LICENSE](../../LICENSE) 파일을 참조
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **면책 조항**:  
-이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 노력하고 있으나, 자동 번역에는 오류나 부정확성이 포함될 수 있음을 유의하시기 바랍니다. 원문은 해당 언어의 원본 문서가 권위 있는 출처로 간주되어야 합니다. 중요한 정보의 경우 전문적인 인간 번역을 권장합니다. 본 번역 사용으로 인한 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.
+이 문서는 AI 번역 서비스 [Co-op Translator](https://github.com/Azure/co-op-translator)를 사용하여 번역되었습니다. 정확성을 위해 최선을 다하고 있으나, 자동 번역에는 오류나 부정확성이 포함될 수 있음을 유의하시기 바랍니다. 원문 문서가 권위 있는 출처로 간주되어야 합니다. 중요한 정보의 경우 전문적인 인간 번역을 권장합니다. 본 번역 사용으로 인한 오해나 잘못된 해석에 대해 당사는 책임을 지지 않습니다.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

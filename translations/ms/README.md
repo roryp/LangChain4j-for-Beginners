@@ -1,17 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:40:23+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T14:47:29+00:00",
   "source_file": "README.md",
   "language_code": "ms"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.ms.png" alt="LangChain4j" width="800"/>
 
+### 🌐 Sokongan Pelbagai Bahasa
+
+#### Disokong melalui GitHub Action (Automatik & Sentiasa Dikemas Kini)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](./README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+
 # LangChain4j untuk Pemula
 
-Kursus untuk membina aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, dari sembang asas hingga ejen AI.
+Satu kursus untuk membina aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, dari sembang asas hingga ejen AI.
 
 **Baru dengan LangChain4j?** Lihat [Glosari](docs/GLOSSARY.md) untuk definisi istilah dan konsep utama.
 
@@ -20,7 +28,7 @@ Kursus untuk membina aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, dari
 1. [Mula Pantas](00-quick-start/README.md) - Mulakan dengan LangChain4j
 2. [Pengenalan](01-introduction/README.md) - Pelajari asas-asas LangChain4j
 3. [Kejuruteraan Prompt](02-prompt-engineering/README.md) - Kuasai reka bentuk prompt yang berkesan
-4. [RAG (Generasi Dipertingkatkan Pengambilan)](03-rag/README.md) - Bina sistem berasaskan pengetahuan yang pintar
+4. [RAG (Penjanaan Dipertingkatkan Pengambilan)](03-rag/README.md) - Bina sistem berasaskan pengetahuan yang pintar
 5. [Alat](04-tools/README.md) - Integrasi alat luaran dan API dengan ejen AI
 6. [MCP (Protokol Konteks Model)](05-mcp/README.md) - Bekerja dengan Protokol Konteks Model
 ---
@@ -50,7 +58,7 @@ Setiap contoh kod termasuk soalan yang dicadangkan yang boleh anda tanya kepada 
 Ingin belajar lebih lanjut? Lihat [Copilot untuk Pengaturcaraan Berpasangan AI](https://aka.ms/GitHubCopilotAI).
 
 
-## Sumber Tambahan 
+## Sumber Tambahan
 
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
@@ -102,7 +110,7 @@ Jika anda mempunyai maklum balas produk atau ralat semasa membina, lawati:
 
 ## Lesen
 
-Lesen MIT - Lihat fail [LICENSE](../../LICENSE) untuk butiran.
+Lesen MIT - Lihat fail [LICENSE](../../LICENSE) untuk maklumat lanjut.
 
 ---
 
