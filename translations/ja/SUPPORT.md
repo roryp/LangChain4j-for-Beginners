@@ -1,0 +1,25 @@
+<!--
+CO_OP_TRANSLATOR_METADATA:
+{
+  "original_hash": "e6ad884382c7442882eca5e65a7cb42d",
+  "translation_date": "2025-12-13T11:38:02+00:00",
+  "source_file": "SUPPORT.md",
+  "language_code": "ja"
+}
+-->
+# サポート
+
+## 問題の報告方法とサポートの受け方  
+
+このプロジェクトでは、バグや機能リクエストの管理にGitHub Issuesを使用しています。重複を避けるために、新しい問題を報告する前に既存の問題を検索してください。新しい問題については、バグや機能リクエストを新しいIssueとして報告してください。
+
+## Microsoftサポートポリシー  
+
+このプロジェクトのサポートは、上記に記載されたリソースに限定されます。
+
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責事項**：  
+本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じた誤解や誤訳について、当方は一切の責任を負いかねます。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
