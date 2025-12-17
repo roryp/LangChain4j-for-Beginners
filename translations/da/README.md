@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:37:55+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:25:37+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -41,7 +41,7 @@ Start med modulet [Kom godt i gang](00-quick-start/README.md) og fortsæt gennem
 
 Efter at have gennemført modulerne, kan du udforske [Testvejledningen](docs/TESTING.md) for at se LangChain4j testkoncepter i praksis.
 
-> **Bemærk:** Denne træning bruger både GitHub Models og Azure OpenAI. Modulerne [Kom godt i gang](00-quick-start/README.md) og [MCP](05-mcp/README.md) bruger GitHub Models (ingen Azure-abonnement kræves), mens modulerne 1-4 bruger Azure OpenAI GPT-5.
+> **Bemærk:** Denne træning bruger både GitHub Models og Azure OpenAI. Modulerne [Kom godt i gang](00-quick-start/README.md) og [MCP](05-mcp/README.md) bruger GitHub Models (ingen Azure-abonnement krævet), mens modulerne 1-4 bruger Azure OpenAI GPT-5.
 
 
 ## Læring med GitHub Copilot
@@ -60,6 +60,7 @@ Vil du lære mere? Se [Copilot for AI Paired Programming](https://aka.ms/GitHubC
 
 ## Yderligere ressourcer
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -97,6 +98,7 @@ Vil du lære mere? Se [Copilot for AI Paired Programming](https://aka.ms/GitHubC
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Få hjælp
 
@@ -104,7 +106,7 @@ Hvis du sidder fast eller har spørgsmål om at bygge AI-apps, så deltag i:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Hvis du har produktfeedback eller fejl under udvikling, besøg:
+Hvis du har produktfeedback eller oplever fejl under udvikling, besøg:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

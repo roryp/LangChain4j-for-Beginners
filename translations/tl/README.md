@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:49:01+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:38:00+00:00",
   "source_file": "README.md",
   "language_code": "tl"
 }
@@ -50,16 +50,17 @@ Para mabilis na makapagsimula sa pag-cocode, buksan ang proyektong ito sa isang 
 
 Bawat halimbawa ng code ay may kasamang mga mungkahing tanong na maaari mong itanong sa GitHub Copilot upang palalimin ang iyong pag-unawa. Hanapin ang mga 💡/🤖 na prompt sa:
 
-- **Mga header ng Java file** - Mga tanong na partikular sa bawat halimbawa
-- **Mga README ng Module** - Mga prompt para sa eksplorasyon pagkatapos ng mga halimbawa ng code
+- **Java file headers** - Mga tanong na partikular sa bawat halimbawa
+- **Module READMEs** - Mga prompt para sa eksplorasyon pagkatapos ng mga halimbawa ng code
 
 **Paano gamitin:** Buksan ang anumang file ng code at itanong ang mga mungkahing tanong sa Copilot. Mayroon itong buong konteksto ng codebase at maaaring magpaliwanag, magpalawak, at magmungkahi ng mga alternatibo.
 
-Gusto mo bang matuto pa? Tingnan ang [Copilot para sa AI Paired Programming](https://aka.ms/GitHubCopilotAI).
+Gusto mo pa bang matuto? Tingnan ang [Copilot para sa AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
 
-## Karagdagang Mga Mapagkukunan 
+## Karagdagang Mga Mapagkukunan
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j para sa mga Nagsisimula](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js para sa mga Nagsisimula](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -97,6 +98,7 @@ Gusto mo bang matuto pa? Tingnan ang [Copilot para sa AI Paired Programming](htt
 [![Copilot para sa AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Pagkuha ng Tulong
 
@@ -104,7 +106,7 @@ Kung ikaw ay na-stuck o may mga tanong tungkol sa paggawa ng mga AI app, sumali 
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Kung mayroon kang feedback sa produkto o mga error habang nagtatayo, bisitahin:
+Kung mayroon kang feedback sa produkto o mga error habang gumagawa, bisitahin ang:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

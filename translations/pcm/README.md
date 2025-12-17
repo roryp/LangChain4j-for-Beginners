@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T15:11:42+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T12:00:42+00:00",
   "source_file": "README.md",
   "language_code": "pcm"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j for Beginners
 
-Na course wey dey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat go AI agents.
+Na course wey dey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat go reach AI agents.
 
 **New to LangChain4j?** Check di [Glossary](docs/GLOSSARY.md) for wetin key terms and concepts mean.
 
@@ -35,11 +35,11 @@ Na course wey dey teach how to build AI applications wit LangChain4j and Azure O
 
 ##  Learning Path
 
-Start wit di [Quick Start](00-quick-start/README.md) module and waka through each module to build your skills step-by-step. You go try basic examples to understand di basics before you move go di [Introduction](01-introduction/README.md) module for deeper understanding wit GPT-5.
+Start wit di [Quick Start](00-quick-start/README.md) module and waka go each module step by step to build your skills. You go try basic examples to understand di fundamentals before you enter di [Introduction](01-introduction/README.md) module for deeper knowledge wit GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pcm.png" alt="Learning Path" width="800"/>
 
-After you don finish di modules, check di [Testing Guide](docs/TESTING.md) to see how LangChain4j testing concepts dey work.
+After you finish di modules, check di [Testing Guide](docs/TESTING.md) to see how LangChain4j testing concepts dey work.
 
 > **Note:** Dis training dey use both GitHub Models and Azure OpenAI. Di [Quick Start](00-quick-start/README.md) and [MCP](05-mcp/README.md) modules dey use GitHub Models (no need Azure subscription), but modules 1-4 dey use Azure OpenAI GPT-5.
 
@@ -48,7 +48,7 @@ After you don finish di modules, check di [Testing Guide](docs/TESTING.md) to se
 
 To start coding quick quick, open dis project for GitHub Codespace or your local IDE wit di devcontainer wey dem provide. Di devcontainer wey dis course dey use don already set wit GitHub Copilot for AI paired programming.
 
-Every code example get questions wey you fit ask GitHub Copilot to help you understand better. Look out for di 💡/🤖 prompts for:
+Every code example get questions wey you fit ask GitHub Copilot to help you understand better. Look for di 💡/🤖 prompts for:
 
 - **Java file headers** - Questions wey relate to each example
 - **Module READMEs** - Exploration prompts after code examples
@@ -58,8 +58,9 @@ Every code example get questions wey you fit ask GitHub Copilot to help you unde
 You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
 
-## Additional Resources 
+## Additional Resources
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -97,6 +98,7 @@ You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/Gi
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## How to Get Help
 
@@ -116,5 +118,5 @@ MIT License - See [LICENSE](../../LICENSE) file for details.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any wahala or wrong understanding wey fit happen because of dis translation.
+Dis document na AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) wey dem use translate am. Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make person wey sabi translate am well do am. We no go responsible if person no understand well or if dem use dis translation do mistake.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:50:28+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:39:39+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kozi ya kujenga programu za AI kwa kutumia LangChain4j na Azure OpenAI GPT-5, kutoka mazungumzo ya msingi hadi mawakala wa AI.
 
-**Mpya kwa LangChain4j?** Angalia [Kamusi](docs/GLOSSARY.md) kwa ufafanuzi wa maneno na dhana muhimu.
+**Mpya kwa LangChain4j?** Angalia [Kamusi](docs/GLOSSARY.md) kwa ufafanuzi wa maneno muhimu na dhana.
 
 ## Jedwali la Yaliyomo
 
@@ -35,38 +35,39 @@ Kozi ya kujenga programu za AI kwa kutumia LangChain4j na Azure OpenAI GPT-5, ku
 
 ## Njia ya Kujifunza
 
-Anza na moduli ya [Anza Haraka](00-quick-start/README.md) na endelea kupitia kila moduli kujenga ujuzi wako hatua kwa hatua. Utajaribu mifano ya msingi kuelewa misingi kabla ya kuhamia moduli ya [Utangulizi](01-introduction/README.md) kwa uchunguzi wa kina na GPT-5.
+Anza na moduli ya [Anza Haraka](00-quick-start/README.md) na endelea kupitia kila moduli kujenga ujuzi wako hatua kwa hatua. Utajaribu mifano ya msingi kuelewa misingi kabla ya kuingia kwa undani zaidi kwenye moduli ya [Utangulizi](01-introduction/README.md) kwa GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.sw.png" alt="Learning Path" width="800"/>
 
-Baada ya kumaliza moduli, chunguza [Mwongozo wa Upimaji](docs/TESTING.md) kuona dhana za upimaji za LangChain4j zikitumika.
+Baada ya kumaliza moduli, chunguza [Mwongozo wa Upimaji](docs/TESTING.md) kuona dhana za upimaji za LangChain4j zikiendeshwa.
 
 > **Kumbuka:** Mafunzo haya yanatumia Modeli za GitHub na Azure OpenAI. Moduli za [Anza Haraka](00-quick-start/README.md) na [MCP](05-mcp/README.md) zinatumia Modeli za GitHub (hakuna usajili wa Azure unahitajika), wakati moduli 1-4 zinatumia Azure OpenAI GPT-5.
 
 
 ## Kujifunza na GitHub Copilot
 
-Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya eneo-kazi kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imewekwa tayari na GitHub Copilot kwa programu ya pamoja ya AI.
+Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya eneo-kazi kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imeandaliwa tayari na GitHub Copilot kwa programu ya pamoja ya AI.
 
 Kila mfano wa msimbo una maswali yaliyopendekezwa ambayo unaweza kumuuliza GitHub Copilot ili kuongeza uelewa wako. Tafuta alama za 💡/🤖 katika:
 
 - **Vichwa vya faili za Java** - Maswali maalum kwa kila mfano
 - **README za moduli** - Maswali ya uchunguzi baada ya mifano ya msimbo
 
-**Jinsi ya kutumia:** Fungua faili yoyote ya msimbo na uliza Copilot maswali yaliyopendekezwa. Ina muktadha kamili wa msimbo na inaweza kuelezea, kuongeza, na kupendekeza mbadala.
+**Jinsi ya kutumia:** Fungua faili yoyote ya msimbo na muulize Copilot maswali yaliyopendekezwa. Ina muktadha kamili wa msimbo na inaweza kuelezea, kuongeza, na kupendekeza mbadala.
 
 Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://aka.ms/GitHubCopilotAI).
 
 
 ## Rasilimali Zaidi
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
 
 ---
 
-### Azure / Edge / MCP / Mawakala
+### Azure / Edge / MCP / Agents
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -97,10 +98,11 @@ Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Kupata Msaada
 
-Ikiwa unakumbwa au una maswali yoyote kuhusu kujenga programu za AI, jiunge:
+Ikiwa unashindwa au una maswali yoyote kuhusu kujenga programu za AI, jiunge:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -110,11 +112,11 @@ Ikiwa una maoni kuhusu bidhaa au makosa wakati wa kujenga tembelea:
 
 ## Leseni
 
-Leseni ya MIT - Angalia faili la [LICENSE](../../LICENSE) kwa maelezo.
+Leseni ya MIT - Tazama faili la [LICENSE](../../LICENSE) kwa maelezo.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kiarifu cha Kutotegemea**:
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+**Kiarifu cha Msamaha**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

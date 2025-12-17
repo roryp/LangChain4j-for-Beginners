@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:14:21+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:00:29+00:00",
   "source_file": "README.md",
   "language_code": "ur"
 }
@@ -35,7 +35,7 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 ## تعلیمی راستہ
 
-[فوری آغاز](00-quick-start/README.md) ماڈیول سے شروع کریں اور ہر ماڈیول کے ذریعے قدم بہ قدم اپنی مہارتیں بڑھائیں۔ آپ بنیادی مثالیں آزما کر اصول سمجھیں گے، پھر GPT-5 کے ساتھ گہرائی میں جانے کے لیے [تعارف](01-introduction/README.md) ماڈیول پر جائیں۔
+[فوری آغاز](00-quick-start/README.md) ماڈیول سے شروع کریں اور ہر ماڈیول کے ذریعے قدم بہ قدم اپنی مہارتیں بڑھائیں۔ آپ بنیادی مثالیں آزما کر اصول سمجھیں گے، پھر GPT-5 کے ساتھ گہرائی میں جانے کے لیے [تعارف](01-introduction/README.md) ماڈیول پر جائیں گے۔
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ur.png" alt="Learning Path" width="800"/>
 
@@ -50,14 +50,15 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 ہر کوڈ مثال میں وہ سوالات شامل ہیں جو آپ GitHub Copilot سے پوچھ سکتے ہیں تاکہ اپنی سمجھ کو گہرا کریں۔ 💡/🤖 پرومپٹس تلاش کریں:
 
 - **جاوا فائل ہیڈرز** - ہر مثال کے مخصوص سوالات
-- **ماڈیول README فائلیں** - کوڈ مثالوں کے بعد دریافت کے سوالات
+- **ماڈیول README فائلز** - کوڈ مثالوں کے بعد دریافت کے پرومپٹس
 
-**استعمال کا طریقہ:** کوئی بھی کوڈ فائل کھولیں اور Copilot سے تجویز کردہ سوالات پوچھیں۔ اسے کوڈ بیس کا مکمل سیاق و سباق معلوم ہے اور یہ وضاحت، توسیع، اور متبادل تجاویز دے سکتا ہے۔
+**استعمال کا طریقہ:** کوئی بھی کوڈ فائل کھولیں اور Copilot سے تجویز کردہ سوالات پوچھیں۔ اسے کوڈ بیس کا مکمل سیاق و سباق معلوم ہے اور یہ وضاحت، توسیع، اور متبادل تجویز کر سکتا ہے۔
 
 مزید جاننا چاہتے ہیں؟ [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI) دیکھیں۔
 
 ## اضافی وسائل
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -71,7 +72,7 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 [![AI Agents for Beginners](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
-
+ 
 ### Generative AI Series
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
@@ -79,8 +80,8 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 [![Generative AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
-
-### بنیادی تعلیم
+ 
+### Core Learning
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -90,19 +91,20 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
-
-### کوپائلٹ سیریز
+ 
+### Copilot Series
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## مدد حاصل کرنا
+## مدد حاصل کریں
 
 اگر آپ پھنس جائیں یا AI ایپس بنانے کے بارے میں کوئی سوالات ہوں، تو شامل ہوں:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-اگر آپ کے پاس پروڈکٹ فیڈبیک یا تعمیر کے دوران غلطیاں ہوں تو ملاحظہ کریں:
+اگر آپ کے پاس پروڈکٹ فیڈبیک ہے یا بنانے کے دوران کوئی غلطیاں ہیں تو ملاحظہ کریں:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -113,6 +115,6 @@ MIT لائسنس - تفصیلات کے لیے [LICENSE](../../LICENSE) فائل 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**دستخطی دستبرداری**:  
-یہ دستاویز AI ترجمہ سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کے ذریعے ترجمہ کی گئی ہے۔ اگرچہ ہم درستگی کے لیے کوشاں ہیں، براہ کرم آگاہ رہیں کہ خودکار ترجمے میں غلطیاں یا عدم درستیاں ہو سکتی ہیں۔ اصل دستاویز اپنی مادری زبان میں ہی معتبر ماخذ سمجھی جانی چاہیے۔ اہم معلومات کے لیے پیشہ ور انسانی ترجمہ کی سفارش کی جاتی ہے۔ اس ترجمے کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا غلط تشریح کی ذمہ داری ہم پر عائد نہیں ہوتی۔
+**دستخطی نوٹ**:  
+یہ دستاویز AI ترجمہ سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کے ذریعے ترجمہ کی گئی ہے۔ اگرچہ ہم درستگی کے لیے کوشاں ہیں، براہ کرم اس بات سے آگاہ رہیں کہ خودکار ترجمے میں غلطیاں یا عدم درستیاں ہو سکتی ہیں۔ اصل دستاویز اپنی مادری زبان میں ہی معتبر ماخذ سمجھی جانی چاہیے۔ اہم معلومات کے لیے پیشہ ور انسانی ترجمہ کی سفارش کی جاتی ہے۔ اس ترجمے کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا غلط تشریح کی ذمہ داری ہم پر عائد نہیں ہوتی۔
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

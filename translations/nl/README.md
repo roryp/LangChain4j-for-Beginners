@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:42:14+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:30:34+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Een cursus voor het bouwen van AI-toepassingen met LangChain4j en Azure OpenAI GPT-5, van basis chat tot AI-agenten.
 
-**Nieuw bij LangChain4j?** Bekijk de [Glossary](docs/GLOSSARY.md) voor definities van belangrijke termen en concepten.
+**Nieuw met LangChain4j?** Bekijk de [Glossary](docs/GLOSSARY.md) voor definities van sleuteltermen en concepten.
 
 ## Inhoudsopgave
 
@@ -33,11 +33,11 @@ Een cursus voor het bouwen van AI-toepassingen met LangChain4j en Azure OpenAI G
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Werk met het Model Context Protocol
 ---
 
-## Leertraject
+## Leerpad
 
 Begin met de [Snel aan de slag](00-quick-start/README.md) module en werk stap voor stap door elke module om je vaardigheden op te bouwen. Je probeert basisvoorbeelden om de fundamenten te begrijpen voordat je doorgaat naar de [Introductie](01-introduction/README.md) module voor een diepere duik met GPT-5.
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.nl.png" alt="Leertraject" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.nl.png" alt="Leerpad" width="800"/>
 
 Na het voltooien van de modules, verken de [Testgids](docs/TESTING.md) om LangChain4j testconcepten in actie te zien.
 
@@ -58,8 +58,9 @@ Elk codevoorbeeld bevat voorgestelde vragen die je aan GitHub Copilot kunt stell
 Wil je meer leren? Bekijk [Copilot voor AI-gepaarde programmering](https://aka.ms/GitHubCopilotAI).
 
 
-## Aanvullende bronnen 
+## Aanvullende bronnen
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j voor Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js voor Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -97,10 +98,11 @@ Wil je meer leren? Bekijk [Copilot voor AI-gepaarde programmering](https://aka.m
 [![Copilot voor AI-gepaarde programmering](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Hulp krijgen
 
-Als je vastloopt of vragen hebt over het bouwen van AI-apps, sluit je aan bij:
+Als je vastloopt of vragen hebt over het bouwen van AI-apps, sluit je dan aan bij:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 

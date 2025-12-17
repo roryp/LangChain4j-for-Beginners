@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:56:42+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:45:23+00:00",
   "source_file": "README.md",
   "language_code": "ro"
 }
@@ -27,19 +27,19 @@ Un curs pentru construirea aplicațiilor AI cu LangChain4j și Azure OpenAI GPT-
 
 1. [Pornire Rapidă](00-quick-start/README.md) - Începe cu LangChain4j
 2. [Introducere](01-introduction/README.md) - Învață elementele fundamentale ale LangChain4j
-3. [Ingineria Prompturilor](02-prompt-engineering/README.md) - Stăpânește proiectarea eficientă a prompturilor
+3. [Ingineria Promptului](02-prompt-engineering/README.md) - Stăpânește proiectarea eficientă a prompturilor
 4. [RAG (Generare Augmentată prin Recuperare)](03-rag/README.md) - Construiește sisteme inteligente bazate pe cunoștințe
 5. [Unelte](04-tools/README.md) - Integrează unelte externe și API-uri cu agenți AI
 6. [MCP (Protocolul Contextului Modelului)](05-mcp/README.md) - Lucrează cu Protocolul Contextului Modelului
 ---
 
-## Parcurs de Învățare
+## Parcursul de Învățare
 
-Începe cu modulul [Pornire Rapidă](00-quick-start/README.md) și progresează prin fiecare modul pentru a-ți dezvolta abilitățile pas cu pas. Vei încerca exemple de bază pentru a înțelege elementele fundamentale înainte de a trece la modulul [Introducere](01-introduction/README.md) pentru o aprofundare cu GPT-5.
+Începe cu modulul [Pornire Rapidă](00-quick-start/README.md) și progresează prin fiecare modul pentru a-ți dezvolta abilitățile pas cu pas. Vei încerca exemple de bază pentru a înțelege elementele fundamentale înainte de a trece la modulul [Introducere](01-introduction/README.md) pentru o explorare mai profundă cu GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ro.png" alt="Learning Path" width="800"/>
 
-După ce termini modulele, explorează [Ghidul de Testare](docs/TESTING.md) pentru a vedea conceptele de testare LangChain4j în acțiune.
+După ce ai terminat modulele, explorează [Ghidul de Testare](docs/TESTING.md) pentru a vedea conceptele de testare LangChain4j în acțiune.
 
 > **Notă:** Această instruire folosește atât Modele GitHub, cât și Azure OpenAI. Modulele [Pornire Rapidă](00-quick-start/README.md) și [MCP](05-mcp/README.md) folosesc Modele GitHub (nu este necesar abonament Azure), în timp ce modulele 1-4 folosesc Azure OpenAI GPT-5.
 
@@ -51,15 +51,16 @@ Pentru a începe rapid să codezi, deschide acest proiect într-un GitHub Codesp
 Fiecare exemplu de cod include întrebări sugerate pe care le poți adresa GitHub Copilot pentru a-ți aprofunda înțelegerea. Caută prompturile 💡/🤖 în:
 
 - **Anteturile fișierelor Java** - Întrebări specifice fiecărui exemplu
-- **Fișierele README ale modulelor** - Prompturi de explorare după exemplele de cod
+- **README-urile modulelor** - Prompturi de explorare după exemplele de cod
 
-**Cum să folosești:** Deschide orice fișier de cod și pune Copilot întrebările sugerate. Are context complet al codului și poate explica, extinde și sugera alternative.
+**Cum să folosești:** Deschide orice fișier de cod și adresează Copilot întrebările sugerate. Are context complet al bazei de cod și poate explica, extinde și sugera alternative.
 
 Vrei să afli mai multe? Consultă [Copilot pentru programare AI în pereche](https://aka.ms/GitHubCopilotAI).
 
 
-## Resurse Suplimentare 
+## Resurse Suplimentare
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -97,6 +98,7 @@ Vrei să afli mai multe? Consultă [Copilot pentru programare AI în pereche](ht
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Obținerea ajutorului
 
@@ -110,7 +112,7 @@ Dacă aveți feedback despre produs sau erori în timpul construirii, vizitați:
 
 ## Licență
 
-Licență MIT - Consultați fișierul [LICENSE](../../LICENSE) pentru detalii.
+Licența MIT - Consultați fișierul [LICENSE](../../LICENSE) pentru detalii.
 
 ---
 
