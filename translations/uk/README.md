@@ -1,33 +1,41 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:50:46+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T15:06:04+00:00",
   "source_file": "README.md",
   "language_code": "uk"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.uk.png" alt="LangChain4j" width="800"/>
 
+### 🌐 Підтримка багатьох мов
+
+#### Підтримується через GitHub Action (автоматично та завжди актуально)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](./README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+
 # LangChain4j для початківців
 
-Курс зі створення AI-додатків за допомогою LangChain4j та Azure OpenAI GPT-5, від базового чату до AI-агентів.
+Курс зі створення AI-додатків з LangChain4j та Azure OpenAI GPT-5, від базового чату до AI-агентів.
 
-**Новачок у LangChain4j?** Перегляньте [Глосарій](docs/GLOSSARY.md) для визначень ключових термінів і понять.
+**Новачок у LangChain4j?** Ознайомтеся з [Глосарієм](docs/GLOSSARY.md) для визначень ключових термінів і понять.
 
 ## Зміст
 
 1. [Швидкий старт](00-quick-start/README.md) - Почніть працювати з LangChain4j
 2. [Вступ](01-introduction/README.md) - Вивчіть основи LangChain4j
 3. [Проєктування підказок](02-prompt-engineering/README.md) - Опануйте ефективне створення підказок
-4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Створюйте інтелектуальні системи на основі знань
+4. [RAG (генерація з доповненням пошуком)](03-rag/README.md) - Створюйте інтелектуальні системи на основі знань
 5. [Інструменти](04-tools/README.md) - Інтегруйте зовнішні інструменти та API з AI-агентами
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Працюйте з протоколом контексту моделі
+6. [MCP (протокол контексту моделі)](05-mcp/README.md) - Працюйте з протоколом контексту моделі
 ---
 
 ## Навчальний шлях
 
-Почніть з модуля [Швидкий старт](00-quick-start/README.md) і проходьте кожен модуль крок за кроком, щоб розвивати свої навички. Ви спробуєте базові приклади, щоб зрозуміти основи, перш ніж перейти до модуля [Вступ](01-introduction/README.md) для глибшого занурення з GPT-5.
+Почніть з модуля [Швидкий старт](00-quick-start/README.md) і проходьте кожен модуль крок за кроком, щоб поступово розвивати свої навички. Ви спробуєте базові приклади, щоб зрозуміти основи, перш ніж перейти до модуля [Вступ](01-introduction/README.md) для глибшого вивчення GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.uk.png" alt="Learning Path" width="800"/>
 
@@ -42,12 +50,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 Кожен приклад коду містить запропоновані питання, які ви можете задати GitHub Copilot, щоб поглибити розуміння. Шукайте підказки 💡/🤖 у:
 
-- **Заголовках Java-файлів** - Питання, специфічні для кожного прикладу
-- **README модулів** - Підказки для дослідження після прикладів коду
+- **Заголовках Java-файлів** - питання, специфічні для кожного прикладу
+- **README модулів** - підказки для дослідження після прикладів коду
 
-**Як використовувати:** Відкрийте будь-який файл коду і задайте Copilot запропоновані питання. Він має повний контекст коду і може пояснювати, розширювати та пропонувати альтернативи.
+**Як користуватися:** Відкрийте будь-який файл коду і задайте Copilot запропоновані питання. Він має повний контекст коду і може пояснювати, розширювати та пропонувати альтернативи.
 
-Хочете дізнатися більше? Перегляньте [Copilot для AI-парного програмування](https://aka.ms/GitHubCopilotAI).
+Хочете дізнатися більше? Ознайомтеся з [Copilot для AI-парного програмування](https://aka.ms/GitHubCopilotAI).
 
 
 ## Додаткові ресурси 
@@ -87,12 +95,12 @@ CO_OP_TRANSLATOR_METADATA:
  
 ### Серія Copilot
 [![Copilot для AI-парного програмування](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot для C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
 ## Отримання допомоги
 
-Якщо ви застрягли або маєте питання щодо створення AI-додатків, приєднуйтесь до:
+Якщо ви застрягли або маєте питання щодо створення AI-додатків, приєднуйтесь:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -102,11 +110,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Ліцензія
 
-Ліцензія MIT - Деталі див. у файлі [LICENSE](../../LICENSE).
+Ліцензія MIT - див. файл [LICENSE](../../LICENSE) для деталей.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Відмова від відповідальності**:
+**Відмова від відповідальності**:  
 Цей документ було перекладено за допомогою сервісу автоматичного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, майте на увазі, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується звертатися до професійного людського перекладу. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,17 +1,25 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:17:19+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T14:14:21+00:00",
   "source_file": "README.md",
   "language_code": "ur"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.ur.png" alt="LangChain4j" width="800"/>
 
-# LangChain4j برائے ابتدائی افراد
+### 🌐 کثیراللسانی معاونت
 
-LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بنانے کا ایک کورس، بنیادی چیٹ سے لے کر AI ایجنٹس تک۔
+#### GitHub ایکشن کے ذریعے معاونت یافتہ (خودکار اور ہمیشہ تازہ ترین)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](./README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+
+# LangChain4j برائے مبتدی
+
+LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بنانے کا کورس، بنیادی چیٹ سے لے کر AI ایجنٹس تک۔
 
 **LangChain4j میں نئے ہیں؟** اہم اصطلاحات اور تصورات کی تعریف کے لیے [Glossary](docs/GLOSSARY.md) دیکھیں۔
 
@@ -27,7 +35,7 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 ## تعلیمی راستہ
 
-[فوری آغاز](00-quick-start/README.md) ماڈیول سے شروع کریں اور ہر ماڈیول کے ذریعے قدم بہ قدم اپنی مہارتیں بڑھائیں۔ آپ بنیادی مثالیں آزما کر اصول سمجھیں گے اس کے بعد GPT-5 کے ساتھ گہرائی میں جانے کے لیے [تعارف](01-introduction/README.md) ماڈیول پر جائیں۔
+[فوری آغاز](00-quick-start/README.md) ماڈیول سے شروع کریں اور ہر ماڈیول کے ذریعے قدم بہ قدم اپنی مہارتیں بڑھائیں۔ آپ بنیادی مثالیں آزما کر اصول سمجھیں گے، پھر GPT-5 کے ساتھ گہرائی میں جانے کے لیے [تعارف](01-introduction/README.md) ماڈیول پر جائیں۔
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ur.png" alt="Learning Path" width="800"/>
 
@@ -37,12 +45,12 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 ## GitHub Copilot کے ساتھ سیکھنا
 
-جلدی کوڈنگ شروع کرنے کے لیے، اس پروجیکٹ کو GitHub Codespace یا اپنے مقامی IDE میں فراہم کردہ devcontainer کے ساتھ کھولیں۔ اس کورس میں استعمال ہونے والا devcontainer AI جوڑی پروگرامنگ کے لیے GitHub Copilot کے ساتھ پہلے سے ترتیب دیا گیا ہے۔
+جلدی کوڈنگ شروع کرنے کے لیے، اس پروجیکٹ کو GitHub Codespace یا اپنے مقامی IDE میں فراہم کردہ devcontainer کے ساتھ کھولیں۔ اس کورس میں استعمال ہونے والا devcontainer پہلے سے GitHub Copilot کے ساتھ AI جوڑی پروگرامنگ کے لیے ترتیب دیا گیا ہے۔
 
 ہر کوڈ مثال میں وہ سوالات شامل ہیں جو آپ GitHub Copilot سے پوچھ سکتے ہیں تاکہ اپنی سمجھ کو گہرا کریں۔ 💡/🤖 پرومپٹس تلاش کریں:
 
 - **جاوا فائل ہیڈرز** - ہر مثال کے مخصوص سوالات
-- **ماڈیول README فائلز** - کوڈ مثالوں کے بعد دریافت کے سوالات
+- **ماڈیول README فائلیں** - کوڈ مثالوں کے بعد دریافت کے سوالات
 
 **استعمال کا طریقہ:** کوئی بھی کوڈ فائل کھولیں اور Copilot سے تجویز کردہ سوالات پوچھیں۔ اسے کوڈ بیس کا مکمل سیاق و سباق معلوم ہے اور یہ وضاحت، توسیع، اور متبادل تجاویز دے سکتا ہے۔
 
@@ -90,11 +98,11 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 ## مدد حاصل کرنا
 
-اگر آپ پھنس جائیں یا AI ایپس بنانے کے بارے میں کوئی سوال ہو، تو شامل ہوں:
+اگر آپ پھنس جائیں یا AI ایپس بنانے کے بارے میں کوئی سوالات ہوں، تو شامل ہوں:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-اگر آپ کے پاس پروڈکٹ فیڈبیک ہو یا تعمیر کے دوران غلطیاں ہوں تو ملاحظہ کریں:
+اگر آپ کے پاس پروڈکٹ فیڈبیک یا تعمیر کے دوران غلطیاں ہوں تو ملاحظہ کریں:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

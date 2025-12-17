@@ -1,13 +1,21 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "69c7e2616c66df6cc296492fbfcad9ec",
-  "translation_date": "2025-12-13T12:26:49+00:00",
+  "original_hash": "8b9c4243c12488872afffa00f0092467",
+  "translation_date": "2025-12-15T14:27:53+00:00",
   "source_file": "README.md",
   "language_code": "br"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.br.png" alt="LangChain4j" width="800"/>
+
+### 🌐 Suporte Multilíngue
+
+#### Suportado via GitHub Action (Automatizado e Sempre Atualizado)
+
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](./README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # LangChain4j para Iniciantes
 
@@ -15,7 +23,7 @@ Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5,
 
 **Novo no LangChain4j?** Confira o [Glossário](docs/GLOSSARY.md) para definições de termos e conceitos chave.
 
-## Índice
+## Sumário
 
 1. [Início Rápido](00-quick-start/README.md) - Comece com LangChain4j
 2. [Introdução](01-introduction/README.md) - Aprenda os fundamentos do LangChain4j
@@ -27,11 +35,11 @@ Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5,
 
 ## Caminho de Aprendizagem
 
-Comece com o módulo [Início Rápido](00-quick-start/README.md) e avance por cada módulo para desenvolver suas habilidades passo a passo. Você experimentará exemplos básicos para entender os fundamentos antes de avançar para o módulo [Introdução](01-introduction/README.md) para um mergulho mais profundo com GPT-5.
+Comece com o módulo [Início Rápido](00-quick-start/README.md) e progrida por cada módulo para desenvolver suas habilidades passo a passo. Você experimentará exemplos básicos para entender os fundamentos antes de avançar para o módulo [Introdução](01-introduction/README.md) para um mergulho mais profundo com GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.br.png" alt="Learning Path" width="800"/>
 
-Após completar os módulos, explore o [Guia de Testes](docs/TESTING.md) para ver os conceitos de testes do LangChain4j em ação.
+Após completar os módulos, explore o [Guia de Testes](docs/TESTING.md) para ver os conceitos de teste do LangChain4j em ação.
 
 > **Nota:** Este treinamento usa tanto Modelos do GitHub quanto Azure OpenAI. Os módulos [Início Rápido](00-quick-start/README.md) e [MCP](05-mcp/README.md) usam Modelos do GitHub (não é necessária assinatura Azure), enquanto os módulos 1-4 usam Azure OpenAI GPT-5.
 
@@ -87,16 +95,16 @@ Quer aprender mais? Confira [Copilot para Programação em Par com IA](https://a
  
 ### Série Copilot
 [![Copilot para Programação em Par com IA](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot para C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Aventura Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 
 ## Obtendo Ajuda
 
-Se você ficar preso ou tiver dúvidas sobre como construir apps de IA, junte-se a:
+Se você ficar preso ou tiver alguma dúvida sobre como criar aplicativos de IA, junte-se a:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Se você tiver feedback sobre o produto ou erros durante a construção, visite:
+Se você tiver feedback sobre o produto ou erros durante a criação, visite:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
