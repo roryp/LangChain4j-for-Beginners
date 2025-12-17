@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:24:25+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:12:19+00:00",
   "source_file": "README.md",
   "language_code": "pa"
 }
@@ -43,11 +43,12 @@ LangChain4j ਅਤੇ Azure OpenAI GPT-5 ਨਾਲ AI ਐਪਲੀਕੇਸ਼�
 
 > **ਨੋਟ:** ਇਹ ਟ੍ਰੇਨਿੰਗ ਦੋਹਾਂ GitHub ਮਾਡਲਾਂ ਅਤੇ Azure OpenAI ਦਾ ਉਪਯੋਗ ਕਰਦੀ ਹੈ। [ਤੁਰੰਤ ਸ਼ੁਰੂਆਤ](00-quick-start/README.md) ਅਤੇ [MCP](05-mcp/README.md) ਮੋਡੀਊਲ GitHub ਮਾਡਲਾਂ (ਕੋਈ Azure ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਲੋੜੀਂਦਾ ਨਹੀਂ) ਵਰਤਦੇ ਹਨ, ਜਦਕਿ ਮੋਡੀਊਲ 1-4 Azure OpenAI GPT-5 ਵਰਤਦੇ ਹਨ।
 
+
 ## GitHub Copilot ਨਾਲ ਸਿੱਖਣਾ
 
 ਤੁਰੰਤ ਕੋਡਿੰਗ ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਇਸ ਪ੍ਰੋਜੈਕਟ ਨੂੰ GitHub ਕੋਡਸਪੇਸ ਜਾਂ ਆਪਣੇ ਸਥਾਨਕ IDE ਵਿੱਚ ਦਿੱਤੇ ਗਏ devcontainer ਨਾਲ ਖੋਲ੍ਹੋ। ਇਸ ਕੋਰਸ ਵਿੱਚ ਵਰਤਿਆ ਗਿਆ devcontainer GitHub Copilot ਨਾਲ ਪਹਿਲਾਂ ਤੋਂ ਸੰਰਚਿਤ ਹੈ ਜੋ AI ਜੋੜੀ ਪ੍ਰੋਗ੍ਰਾਮਿੰਗ ਲਈ ਹੈ।
 
-ਹਰ ਕੋਡ ਉਦਾਹਰਣ ਵਿੱਚ GitHub Copilot ਨੂੰ ਪੁੱਛਣ ਲਈ ਸੁਝਾਏ ਗਏ ਸਵਾਲ ਸ਼ਾਮਲ ਹਨ, ਜੋ ਤੁਹਾਡੇ ਸਮਝ ਨੂੰ ਗਹਿਰਾ ਕਰਨਗੇ। 💡/🤖 ਪ੍ਰਾਂਪਟਾਂ ਲਈ ਵੇਖੋ:
+ਹਰ ਕੋਡ ਉਦਾਹਰਣ ਵਿੱਚ ਸੁਝਾਏ ਗਏ ਸਵਾਲ ਸ਼ਾਮਲ ਹਨ ਜੋ ਤੁਸੀਂ GitHub Copilot ਨੂੰ ਪੁੱਛ ਸਕਦੇ ਹੋ ਤਾਂ ਜੋ ਆਪਣੀ ਸਮਝ ਨੂੰ ਗਹਿਰਾ ਕਰੋ। 💡/🤖 ਪ੍ਰਾਂਪਟਾਂ ਲਈ ਵੇਖੋ:
 
 - **Java ਫਾਈਲ ਹੈਡਰਜ਼** - ਹਰ ਉਦਾਹਰਣ ਲਈ ਵਿਸ਼ੇਸ਼ ਸਵਾਲ
 - **ਮੋਡੀਊਲ README** - ਕੋਡ ਉਦਾਹਰਣਾਂ ਤੋਂ ਬਾਅਦ ਖੋਜ ਪ੍ਰਾਂਪਟ
@@ -56,15 +57,17 @@ LangChain4j ਅਤੇ Azure OpenAI GPT-5 ਨਾਲ AI ਐਪਲੀਕੇਸ਼�
 
 ਹੋਰ ਸਿੱਖਣਾ ਚਾਹੁੰਦੇ ਹੋ? [AI ਜੋੜੀ ਪ੍ਰੋਗ੍ਰਾਮਿੰਗ ਲਈ Copilot](https://aka.ms/GitHubCopilotAI) ਵੇਖੋ।
 
+
 ## ਵਾਧੂ ਸਰੋਤ
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
 
 ---
 
-### Azure / Edge / MCP / ਏਜੰਟ
+### Azure / Edge / MCP / Agents
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -72,7 +75,7 @@ LangChain4j ਅਤੇ Azure OpenAI GPT-5 ਨਾਲ AI ਐਪਲੀਕੇਸ਼�
 
 ---
  
-### ਜਨਰੇਟਿਵ AI ਸੀਰੀਜ਼
+### Generative AI Series
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -80,7 +83,7 @@ LangChain4j ਅਤੇ Azure OpenAI GPT-5 ਨਾਲ AI ਐਪਲੀਕੇਸ਼�
 
 ---
  
-### ਮੁੱਖ ਸਿੱਖਿਆ
+### Core Learning
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -91,14 +94,15 @@ LangChain4j ਅਤੇ Azure OpenAI GPT-5 ਨਾਲ AI ਐਪਲੀਕੇਸ਼�
 
 ---
  
-### Copilot ਸੀਰੀਜ਼
+### Copilot Series
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## ਮਦਦ ਪ੍ਰਾਪਤ ਕਰਨਾ
 
-ਜੇ ਤੁਸੀਂ ਫਸ ਜਾਂਦੇ ਹੋ ਜਾਂ AI ਐਪਸ ਬਣਾਉਣ ਬਾਰੇ ਕੋਈ ਸਵਾਲ ਹੈ, ਤਾਂ ਜੁੜੋ:
+ਜੇ ਤੁਸੀਂ ਫਸ ਜਾਂਦੇ ਹੋ ਜਾਂ AI ਐਪਸ ਬਣਾਉਣ ਬਾਰੇ ਕੋਈ ਸਵਾਲ ਹੈ, ਤਾਂ ਸ਼ਾਮਿਲ ਹੋਵੋ:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -108,7 +112,7 @@ LangChain4j ਅਤੇ Azure OpenAI GPT-5 ਨਾਲ AI ਐਪਲੀਕੇਸ਼�
 
 ## ਲਾਇਸੈਂਸ
 
-MIT ਲਾਇਸੈਂਸ - ਵੇਰਵਿਆਂ ਲਈ [LICENSE](../../LICENSE) ਫਾਈਲ ਵੇਖੋ।
+MIT ਲਾਇਸੈਂਸ - ਵੇਰਵੇ ਲਈ [LICENSE](../../LICENSE) ਫਾਈਲ ਵੇਖੋ।
 
 ---
 

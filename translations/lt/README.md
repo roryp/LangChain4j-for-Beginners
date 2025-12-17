@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T15:07:47+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:57:02+00:00",
   "source_file": "README.md",
   "language_code": "lt"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j pradedantiesiems
 
-Kursas, skirtas kurti DI programas su LangChain4j ir Azure OpenAI GPT-5, nuo pagrindinio pokalbio iki DI agentų.
+Kursas, skirtas kurti DI programas naudojant LangChain4j ir Azure OpenAI GPT-5, nuo paprasto pokalbio iki DI agentų.
 
 **Naujas LangChain4j?** Peržiūrėkite [Žodyną](docs/GLOSSARY.md), kuriame pateikiamos pagrindinių terminų ir sąvokų apibrėžtys.
 
@@ -27,7 +27,7 @@ Kursas, skirtas kurti DI programas su LangChain4j ir Azure OpenAI GPT-5, nuo pag
 
 1. [Greitas pradžia](00-quick-start/README.md) - Pradėkite naudotis LangChain4j
 2. [Įvadas](01-introduction/README.md) - Sužinokite LangChain4j pagrindus
-3. [Užklausų kūrimas](02-prompt-engineering/README.md) - Išmokite efektyviai kurti užklausas
+3. [Užklausų kūrimas](02-prompt-engineering/README.md) - Įvaldykite efektyvų užklausų kūrimą
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Kurkite išmanias žinių sistemas
 5. [Įrankiai](04-tools/README.md) - Integruokite išorinius įrankius ir API su DI agentais
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Dirbkite su Model Context Protocol
@@ -35,11 +35,11 @@ Kursas, skirtas kurti DI programas su LangChain4j ir Azure OpenAI GPT-5, nuo pag
 
 ## Mokymosi kelias
 
-Pradėkite nuo [Greito pradžios](00-quick-start/README.md) modulio ir žingsnis po žingsnio tobulinkite savo įgūdžius. Išbandysite pagrindinius pavyzdžius, kad suprastumėte pagrindus, prieš pereidami prie [Įvado](01-introduction/README.md) modulio, kuriame gilinsitės į GPT-5.
+Pradėkite nuo [Greito pradžios](00-quick-start/README.md) modulio ir žingsnis po žingsnio tobulinkite savo įgūdžius. Išbandysite paprastus pavyzdžius, kad suprastumėte pagrindus, prieš pereidami prie [Įvado](01-introduction/README.md) modulio, kuriame gilinsitės į GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.lt.png" alt="Learning Path" width="800"/>
 
-Baigę modulius, peržiūrėkite [Testavimo vadovą](docs/TESTING.md), kad pamatytumėte LangChain4j testavimo koncepcijas veikiant.
+Baigę modulius, peržiūrėkite [Testavimo vadovą](docs/TESTING.md), kad pamatytumėte LangChain4j testavimo koncepcijas veiksme.
 
 > **Pastaba:** Šis mokymas naudoja tiek GitHub modelius, tiek Azure OpenAI. [Greito pradžios](00-quick-start/README.md) ir [MCP](05-mcp/README.md) moduliai naudoja GitHub modelius (nereikia Azure prenumeratos), o moduliai 1-4 naudoja Azure OpenAI GPT-5.
 
@@ -60,6 +60,7 @@ Norite sužinoti daugiau? Peržiūrėkite [Copilot DI poriniam programavimui](ht
 
 ## Papildomi ištekliai
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -97,6 +98,7 @@ Norite sužinoti daugiau? Peržiūrėkite [Copilot DI poriniam programavimui](ht
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Pagalbos gavimas
 
@@ -110,11 +112,11 @@ Jei turite produkto atsiliepimų arba susiduriate su klaidomis kūrimo metu, aps
 
 ## Licencija
 
-MIT licencija - žr. [LICENSE](../../LICENSE) failą dėl detalių.
+MIT licencija – detales žr. faile [LICENSE](../../LICENSE).
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus žmogaus vertimas. Mes neatsakome už bet kokius nesusipratimus ar neteisingus aiškinimus, kilusius dėl šio vertimo naudojimo.
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojamas profesionalus žmogaus vertimas. Mes neatsakome už bet kokius nesusipratimus ar neteisingus aiškinimus, kilusius dėl šio vertimo naudojimo.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

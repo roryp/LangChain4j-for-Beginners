@@ -58,7 +58,8 @@ Each code example includes suggested questions you can ask GitHub Copilot to dee
 Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
 
-## Additional Resources 
+## Additional Resources
+
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
@@ -98,6 +99,7 @@ Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
+
 ## Getting Help
 
 If you get stuck or have any questions about building AI apps, join:
@@ -111,4 +113,6 @@ If you have product feedback or errors while building visit:
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details.
+
+
 

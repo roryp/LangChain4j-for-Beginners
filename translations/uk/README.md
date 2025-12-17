@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T15:06:04+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:55:43+00:00",
   "source_file": "README.md",
   "language_code": "uk"
 }
@@ -30,7 +30,7 @@ CO_OP_TRANSLATOR_METADATA:
 3. [Проєктування підказок](02-prompt-engineering/README.md) - Опануйте ефективне створення підказок
 4. [RAG (генерація з доповненням пошуком)](03-rag/README.md) - Створюйте інтелектуальні системи на основі знань
 5. [Інструменти](04-tools/README.md) - Інтегруйте зовнішні інструменти та API з AI-агентами
-6. [MCP (протокол контексту моделі)](05-mcp/README.md) - Працюйте з протоколом контексту моделі
+6. [MCP (Протокол контексту моделі)](05-mcp/README.md) - Працюйте з Протоколом контексту моделі
 ---
 
 ## Навчальний шлях
@@ -53,13 +53,14 @@ CO_OP_TRANSLATOR_METADATA:
 - **Заголовках Java-файлів** - питання, специфічні для кожного прикладу
 - **README модулів** - підказки для дослідження після прикладів коду
 
-**Як користуватися:** Відкрийте будь-який файл коду і задайте Copilot запропоновані питання. Він має повний контекст коду і може пояснювати, розширювати та пропонувати альтернативи.
+**Як використовувати:** Відкрийте будь-який файл коду і задайте Copilot запропоновані питання. Він має повний контекст коду і може пояснювати, розширювати та пропонувати альтернативи.
 
 Хочете дізнатися більше? Ознайомтеся з [Copilot для AI-парного програмування](https://aka.ms/GitHubCopilotAI).
 
 
-## Додаткові ресурси 
+## Додаткові ресурси
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j для початківців](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js для початківців](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -82,7 +83,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Основне навчання
+### Основи навчання
 [![ML для початківців](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science для початківців](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI для початківців](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -97,6 +98,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![Copilot для AI-парного програмування](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Отримання допомоги
 
