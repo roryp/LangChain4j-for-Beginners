@@ -32,7 +32,7 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
 3. Use the defaults – this will select the Development container created for this course
 4. Click **Create codespace**
-5. Wait ~5 minutes for the environment to be ready
+5. Wait 5-10 minutes for the environment to be ready
 6. Jump straight to [Quick Start](./00-quick-start/README.md) to get started!
 
 Start with the [Quick Start](00-quick-start/README.md) module and progress through each module to build your skills step-by-step. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/README.md) module for a deeper dive with GPT-5.
