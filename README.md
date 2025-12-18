@@ -35,6 +35,16 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 5. Wait 5-10 minutes for the environment to be ready
 6. Jump straight to [Quick Start](./00-quick-start/README.md) to get started!
 
+> **🖥️ Prefer to Clone Locally?**
+>
+> This repository includes 50+ language translations which significantly increases the download size. To clone without translations, use sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations/' '!translated_images/'
+> ```
+> This gives you everything you need to complete the course with a much faster download.
+
 Start with the [Quick Start](00-quick-start/README.md) module and progress through each module to build your skills step-by-step. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/README.md) module for a deeper dive with GPT-5.
 
 <img src="images/learning-path.png" alt="Learning Path" width="800"/>
