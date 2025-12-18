@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:41:12+00:00",
+  "original_hash": "d1499d1abf7e653e94fde35644629500",
+  "translation_date": "2025-12-18T10:12:38+00:00",
   "source_file": "README.md",
   "language_code": "hu"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 Többnyelvű támogatás
 
-#### GitHub Action által támogatott (Automatizált és mindig naprakész)
+#### GitHub Action révén támogatott (Automatizált és mindig naprakész)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](./README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j kezdőknek
 
-Egy tanfolyam AI alkalmazások építéséhez LangChain4j-vel és Azure OpenAI GPT-5-tel, az alapvető csevegéstől az AI ügynökökig.
+Egy tanfolyam AI alkalmazások építéséhez LangChain4j és Azure OpenAI GPT-5 segítségével, az alapvető csevegéstől az AI ügynökökig.
 
 **Új vagy a LangChain4j-ben?** Nézd meg a [Fogalomtárat](docs/GLOSSARY.md) a kulcsfogalmak és definíciók megértéséhez.
 
@@ -35,7 +35,26 @@ Egy tanfolyam AI alkalmazások építéséhez LangChain4j-vel és Azure OpenAI G
 
 ## Tanulási útvonal
 
-Kezdd a [Gyors kezdés](00-quick-start/README.md) modullal, majd haladj lépésről lépésre a modulokon keresztül, hogy fejleszd képességeidet. Alapvető példákat próbálhatsz ki az alapok megértéséhez, mielőtt mélyebben belemerülnél a [Bevezetés](01-introduction/README.md) modulba a GPT-5-tel.
+> **Gyors kezdés**
+
+1. Forkold ezt a tárolót a GitHub fiókodba
+2. Kattints a **Code** → **Codespaces** fülre → **...** → **Új opciókkal...**
+3. Használd az alapértelmezetteket – ez kiválasztja a tanfolyamhoz létrehozott fejlesztői konténert
+4. Kattints a **Codespace létrehozása** gombra
+5. Várj 5-10 percet, amíg a környezet készen áll
+6. Ugorj egyenesen a [Gyors kezdés](./00-quick-start/README.md) modulra, hogy elkezdd!
+
+> **Inkább helyben klónoznál?**
+>
+> Ez a tároló több mint 50 nyelvi fordítást tartalmaz, ami jelentősen megnöveli a letöltési méretet. Ha fordítások nélkül szeretnéd klónozni, használj sparse checkout-ot:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Ez mindent megad, amire szükséged van a tanfolyam elvégzéséhez, sokkal gyorsabb letöltéssel.
+
+Kezdd a [Gyors kezdés](00-quick-start/README.md) modullal, majd haladj végig a modulokon lépésről lépésre, hogy fejleszd a képességeidet. Először alapvető példákat próbálsz ki, hogy megértsd az alapokat, majd mélyebben belemerülsz a [Bevezetés](01-introduction/README.md) modulba a GPT-5-tel.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hu.png" alt="Learning Path" width="800"/>
 
@@ -46,14 +65,14 @@ A modulok elvégzése után fedezd fel a [Tesztelési útmutatót](docs/TESTING.
 
 ## Tanulás GitHub Copilot-tal
 
-A gyors kódolás megkezdéséhez nyisd meg ezt a projektet egy GitHub Codespace-ben vagy a helyi IDE-dben a mellékelt devcontainerrel. A tanfolyamban használt devcontainer előre konfigurált a GitHub Copilot-tal az AI páros programozáshoz.
+A gyors kódolás megkezdéséhez nyisd meg ezt a projektet egy GitHub Codespace-ben vagy a helyi IDE-dben a mellékelt devcontainerrel. A tanfolyamban használt devcontainer előre konfigurált a GitHub Copilot AI páros programozáshoz.
 
 Minden kódpélda tartalmaz javasolt kérdéseket, amelyeket feltehetsz a GitHub Copilot-nak a mélyebb megértés érdekében. Keresd a 💡/🤖 jelzéseket a következőkben:
 
 - **Java fájlfejlécek** - Az adott példához kapcsolódó kérdések
 - **Modul README-k** - Felfedező kérdések a kódpéldák után
 
-**Használati útmutató:** Nyiss meg bármilyen kód fájlt, és tedd fel a javasolt kérdéseket a Copilot-nak. Teljes kontextusa van a kódbázisnak, és képes magyarázni, bővíteni, illetve alternatívákat javasolni.
+**Használat módja:** Nyiss meg bármilyen kód fájlt, és tedd fel a javasolt kérdéseket a Copilot-nak. Teljes kontextusa van a kódbázisnak, képes magyarázni, bővíteni és alternatívákat javasolni.
 
 Szeretnél többet megtudni? Nézd meg a [Copilot az AI páros programozáshoz](https://aka.ms/GitHubCopilotAI) oldalt.
 
@@ -90,29 +109,29 @@ Szeretnél többet megtudni? Nézd meg a [Copilot az AI páros programozáshoz](
 [![Kiberbiztonság kezdőknek](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Webfejlesztés kezdőknek](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT kezdőknek](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR fejlesztés kezdőknek](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Copilot sorozat
-[![Copilot az AI páros programozáshoz](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Segítségkérés
 
-Ha elakadnál vagy kérdéseid lennének az AI alkalmazások fejlesztésével kapcsolatban, csatlakozz:
+Ha elakadnál vagy kérdésed van az AI alkalmazások fejlesztésével kapcsolatban, csatlakozz:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Ha termék visszajelzésed vagy hibákba ütközöl fejlesztés közben, látogass el ide:
+Ha termék visszajelzésed vagy hibák vannak a fejlesztés során, látogass el ide:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licenc
 
-MIT Licenc - Részletekért lásd a [LICENSE](../../LICENSE) fájlt.
+MIT licenc - Részletekért lásd a [LICENSE](../../LICENSE) fájlt.
 
 ---
 

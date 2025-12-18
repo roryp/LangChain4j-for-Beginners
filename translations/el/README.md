@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:21:04+00:00",
+  "original_hash": "d1499d1abf7e653e94fde35644629500",
+  "translation_date": "2025-12-18T09:53:00+00:00",
   "source_file": "README.md",
   "language_code": "el"
 }
@@ -33,20 +33,39 @@ CO_OP_TRANSLATOR_METADATA:
 6. [MCP (Πρωτόκολλο Πλαισίου Μοντέλου)](05-mcp/README.md) - Εργαστείτε με το Πρωτόκολλο Πλαισίου Μοντέλου  
 ---
 
-## Διαδρομή Μάθησης
+## Μονοπάτι Μάθησης
 
-Ξεκινήστε με το [Γρήγορη Εκκίνηση](00-quick-start/README.md) και προχωρήστε σε κάθε ενότητα για να αναπτύξετε τις δεξιότητές σας βήμα-βήμα. Θα δοκιμάσετε βασικά παραδείγματα για να κατανοήσετε τα θεμέλια πριν προχωρήσετε στην [Εισαγωγή](01-introduction/README.md) για μια πιο βαθιά εμβάθυνση με το GPT-5.
+> **Γρήγορη Εκκίνηση**
+
+1. Κάντε fork αυτό το αποθετήριο στον λογαριασμό σας στο GitHub  
+2. Κάντε κλικ στο **Code** → καρτέλα **Codespaces** → **...** → **Νέο με επιλογές...**  
+3. Χρησιμοποιήστε τις προεπιλογές – αυτό θα επιλέξει το κοντέινερ ανάπτυξης που δημιουργήθηκε για αυτό το μάθημα  
+4. Κάντε κλικ στο **Create codespace**  
+5. Περιμένετε 5-10 λεπτά για να είναι έτοιμο το περιβάλλον  
+6. Πηγαίνετε απευθείας στο [Γρήγορη Εκκίνηση](./00-quick-start/README.md) για να ξεκινήσετε!
+
+> **Προτιμάτε να κάνετε κλωνοποίηση τοπικά;**  
+>  
+> Αυτό το αποθετήριο περιλαμβάνει πάνω από 50 μεταφράσεις γλωσσών που αυξάνουν σημαντικά το μέγεθος λήψης. Για να κλωνοποιήσετε χωρίς μεταφράσεις, χρησιμοποιήστε sparse checkout:  
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Αυτό σας δίνει όλα όσα χρειάζεστε για να ολοκληρώσετε το μάθημα με πολύ πιο γρήγορη λήψη.
+
+Ξεκινήστε με το μάθημα [Γρήγορη Εκκίνηση](00-quick-start/README.md) και προχωρήστε σε κάθε ενότητα για να αναπτύξετε τις δεξιότητές σας βήμα-βήμα. Θα δοκιμάσετε βασικά παραδείγματα για να κατανοήσετε τα θεμελιώδη πριν προχωρήσετε στην ενότητα [Εισαγωγή](01-introduction/README.md) για πιο βαθιά εμβάθυνση με το GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.el.png" alt="Learning Path" width="800"/>
 
 Μετά την ολοκλήρωση των ενοτήτων, εξερευνήστε τον [Οδηγό Δοκιμών](docs/TESTING.md) για να δείτε τις έννοιες δοκιμών του LangChain4j σε δράση.
 
-> **Σημείωση:** Αυτή η εκπαίδευση χρησιμοποιεί τόσο τα Μοντέλα GitHub όσο και το Azure OpenAI. Οι ενότητες [Γρήγορη Εκκίνηση](00-quick-start/README.md) και [MCP](05-mcp/README.md) χρησιμοποιούν Μοντέλα GitHub (δεν απαιτείται συνδρομή Azure), ενώ οι ενότητες 1-4 χρησιμοποιούν Azure OpenAI GPT-5.
+> **Σημείωση:** Αυτή η εκπαίδευση χρησιμοποιεί τόσο τα GitHub Models όσο και το Azure OpenAI. Οι ενότητες [Γρήγορη Εκκίνηση](00-quick-start/README.md) και [MCP](05-mcp/README.md) χρησιμοποιούν τα GitHub Models (δεν απαιτείται συνδρομή Azure), ενώ οι ενότητες 1-4 χρησιμοποιούν το Azure OpenAI GPT-5.
 
 
 ## Μάθηση με το GitHub Copilot
 
-Για να ξεκινήσετε γρήγορα τον προγραμματισμό, ανοίξτε αυτό το έργο σε έναν GitHub Codespace ή στο τοπικό σας IDE με το παρεχόμενο devcontainer. Το devcontainer που χρησιμοποιείται σε αυτό το μάθημα είναι προδιαμορφωμένο με το GitHub Copilot για προγραμματισμό AI σε ζευγάρι.
+Για να ξεκινήσετε γρήγορα τον προγραμματισμό, ανοίξτε αυτό το έργο σε ένα GitHub Codespace ή στο τοπικό σας IDE με το παρεχόμενο devcontainer. Το devcontainer που χρησιμοποιείται σε αυτό το μάθημα είναι προδιαμορφωμένο με το GitHub Copilot για προγραμματισμό AI σε ζεύγη.
 
 Κάθε παράδειγμα κώδικα περιλαμβάνει προτεινόμενες ερωτήσεις που μπορείτε να κάνετε στο GitHub Copilot για να εμβαθύνετε την κατανόησή σας. Αναζητήστε τις ενδείξεις 💡/🤖 σε:
 
@@ -55,7 +74,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Πώς να το χρησιμοποιήσετε:** Ανοίξτε οποιοδήποτε αρχείο κώδικα και κάντε τις προτεινόμενες ερωτήσεις στο Copilot. Έχει πλήρες πλαίσιο του κώδικα και μπορεί να εξηγήσει, να επεκτείνει και να προτείνει εναλλακτικές.
 
-Θέλετε να μάθετε περισσότερα; Δείτε το [Copilot για Προγραμματισμό AI σε Ζευγάρι](https://aka.ms/GitHubCopilotAI).
+Θέλετε να μάθετε περισσότερα; Δείτε το [Copilot για Προγραμματισμό AI σε Ζεύγη](https://aka.ms/GitHubCopilotAI).
 
 
 ## Πρόσθετοι Πόροι
@@ -84,18 +103,18 @@ CO_OP_TRANSLATOR_METADATA:
 ---
  
 ### Βασική Μάθηση
-[![Μηχανική Μάθηση για Αρχάριους](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![ML για Αρχάριους](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Επιστήμη Δεδομένων για Αρχάριους](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![Τεχνητή Νοημοσύνη για Αρχάριους](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI για Αρχάριους](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Κυβερνοασφάλεια για Αρχάριους](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![Ανάπτυξη Ιστού για Αρχάριους](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![Web Dev για Αρχάριους](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT για Αρχάριους](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![Ανάπτυξη XR για Αρχάριους](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Σειρά Copilot
-[![Copilot για Προγραμματισμό AI σε Ζευγάρι](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->

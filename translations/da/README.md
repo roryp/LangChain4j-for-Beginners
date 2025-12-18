@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:25:37+00:00",
+  "original_hash": "d1499d1abf7e653e94fde35644629500",
+  "translation_date": "2025-12-18T09:57:33+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -26,7 +26,7 @@ Et kursus til at bygge AI-applikationer med LangChain4j og Azure OpenAI GPT-5, f
 ## Indholdsfortegnelse
 
 1. [Kom godt i gang](00-quick-start/README.md) - Kom i gang med LangChain4j
-2. [Introduktion](01-introduction/README.md) - Lær det grundlæggende om LangChain4j
+2. [Introduktion](01-introduction/README.md) - Lær grundlæggende om LangChain4j
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Mestre effektiv promptdesign
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Byg intelligente vidensbaserede systemer
 5. [Værktøjer](04-tools/README.md) - Integrer eksterne værktøjer og API'er med AI-agenter
@@ -35,18 +35,37 @@ Et kursus til at bygge AI-applikationer med LangChain4j og Azure OpenAI GPT-5, f
 
 ## Læringssti
 
+> **Kom godt i gang**
+
+1. Fork dette repository til din GitHub-konto
+2. Klik på **Code** → fanen **Codespaces** → **...** → **Ny med muligheder...**
+3. Brug standardindstillingerne – dette vælger udviklingscontaineren oprettet til dette kursus
+4. Klik på **Opret codespace**
+5. Vent 5-10 minutter på, at miljøet er klar
+6. Gå direkte til [Kom godt i gang](./00-quick-start/README.md) for at komme i gang!
+
+> **Foretrækker du at klone lokalt?**
+>
+> Dette repository inkluderer 50+ sprogoversættelser, hvilket øger downloadstørrelsen betydeligt. For at klone uden oversættelser, brug sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Dette giver dig alt, hvad du behøver for at gennemføre kurset med en meget hurtigere download.
+
 Start med modulet [Kom godt i gang](00-quick-start/README.md) og fortsæt gennem hvert modul for at opbygge dine færdigheder trin for trin. Du vil prøve grundlæggende eksempler for at forstå det fundamentale, før du går videre til modulet [Introduktion](01-introduction/README.md) for en dybere gennemgang med GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.da.png" alt="Learning Path" width="800"/>
 
-Efter at have gennemført modulerne, kan du udforske [Testvejledningen](docs/TESTING.md) for at se LangChain4j testkoncepter i praksis.
+Efter at have gennemført modulerne, udforsk [Testvejledningen](docs/TESTING.md) for at se LangChain4j testkoncepter i praksis.
 
-> **Bemærk:** Denne træning bruger både GitHub Models og Azure OpenAI. Modulerne [Kom godt i gang](00-quick-start/README.md) og [MCP](05-mcp/README.md) bruger GitHub Models (ingen Azure-abonnement krævet), mens modulerne 1-4 bruger Azure OpenAI GPT-5.
+> **Bemærk:** Denne træning bruger både GitHub Models og Azure OpenAI. Modulerne [Kom godt i gang](00-quick-start/README.md) og [MCP](05-mcp/README.md) bruger GitHub Models (ingen Azure-abonnement krævet), mens moduler 1-4 bruger Azure OpenAI GPT-5.
 
 
 ## Læring med GitHub Copilot
 
-For hurtigt at komme i gang med kodning, åbn dette projekt i en GitHub Codespace eller din lokale IDE med den medfølgende devcontainer. Devcontaineren, der bruges i dette kursus, er forudkonfigureret med GitHub Copilot til AI-parprogrammering.
+For hurtigt at komme i gang med kodning, åbn dette projekt i en GitHub Codespace eller din lokale IDE med den medfølgende devcontainer. Devcontaineren, der bruges i dette kursus, kommer forudkonfigureret med GitHub Copilot til AI-parprogrammering.
 
 Hvert kodeeksempel inkluderer foreslåede spørgsmål, du kan stille GitHub Copilot for at uddybe din forståelse. Kig efter 💡/🤖 prompts i:
 
@@ -106,7 +125,7 @@ Hvis du sidder fast eller har spørgsmål om at bygge AI-apps, så deltag i:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Hvis du har produktfeedback eller oplever fejl under udvikling, besøg:
+Hvis du har produktfeedback eller fejl under udvikling, besøg:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

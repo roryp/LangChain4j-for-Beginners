@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:39:39+00:00",
+  "original_hash": "d1499d1abf7e653e94fde35644629500",
+  "translation_date": "2025-12-18T10:11:08+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kozi ya kujenga programu za AI kwa kutumia LangChain4j na Azure OpenAI GPT-5, kutoka mazungumzo ya msingi hadi mawakala wa AI.
 
-**Mpya kwa LangChain4j?** Angalia [Kamusi](docs/GLOSSARY.md) kwa ufafanuzi wa maneno muhimu na dhana.
+**Mpya kwa LangChain4j?** Angalia [Kamusi](docs/GLOSSARY.md) kwa ufafanuzi wa maneno na dhana muhimu.
 
 ## Jedwali la Yaliyomo
 
@@ -35,7 +35,26 @@ Kozi ya kujenga programu za AI kwa kutumia LangChain4j na Azure OpenAI GPT-5, ku
 
 ## Njia ya Kujifunza
 
-Anza na moduli ya [Anza Haraka](00-quick-start/README.md) na endelea kupitia kila moduli kujenga ujuzi wako hatua kwa hatua. Utajaribu mifano ya msingi kuelewa misingi kabla ya kuingia kwa undani zaidi kwenye moduli ya [Utangulizi](01-introduction/README.md) kwa GPT-5.
+> **Anza Haraka**
+
+1. Fanya fork ya hifadhidata hii kwenye akaunti yako ya GitHub
+2. Bonyeza **Code** → kichupo cha **Codespaces** → **...** → **Mpya na chaguzi...**
+3. Tumia chaguo za msingi – hii itachagua kontena la Maendeleo lililoundwa kwa kozi hii
+4. Bonyeza **Unda codespace**
+5. Subiri dakika 5-10 ili mazingira yawe tayari
+6. Nenda moja kwa moja kwenye [Anza Haraka](./00-quick-start/README.md) kuanza!
+
+> **Unapendelea Kuiga Kwenye Kompyuta Yako?**
+>
+> Hifadhidata hii ina tafsiri zaidi ya 50 za lugha ambazo huongeza ukubwa wa kupakua kwa kiasi kikubwa. Ili kuiga bila tafsiri, tumia sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Hii inakupa kila kitu unachohitaji kukamilisha kozi kwa upakuaji wa haraka zaidi.
+
+Anza na moduli ya [Anza Haraka](00-quick-start/README.md) na endelea kupitia kila moduli kujenga ujuzi wako hatua kwa hatua. Utajaribu mifano ya msingi kuelewa misingi kabla ya kuhamia kwenye moduli ya [Utangulizi](01-introduction/README.md) kwa uchunguzi wa kina zaidi na GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.sw.png" alt="Learning Path" width="800"/>
 
@@ -46,7 +65,7 @@ Baada ya kumaliza moduli, chunguza [Mwongozo wa Upimaji](docs/TESTING.md) kuona 
 
 ## Kujifunza na GitHub Copilot
 
-Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya eneo-kazi kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imeandaliwa tayari na GitHub Copilot kwa programu ya pamoja ya AI.
+Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya ndani kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imewekwa tayari na GitHub Copilot kwa ajili ya programu ya pamoja ya AI.
 
 Kila mfano wa msimbo una maswali yaliyopendekezwa ambayo unaweza kumuuliza GitHub Copilot ili kuongeza uelewa wako. Tafuta alama za 💡/🤖 katika:
 
@@ -75,7 +94,7 @@ Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://
 
 ---
  
-### Mfululizo wa AI Inayozalisha
+### Generative AI Series
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -83,7 +102,7 @@ Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://
 
 ---
  
-### Kujifunza Msingi
+### Core Learning
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -102,7 +121,7 @@ Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://
 
 ## Kupata Msaada
 
-Ikiwa unashindwa au una maswali yoyote kuhusu kujenga programu za AI, jiunge:
+Ikiwa unakwama au una maswali yoyote kuhusu kujenga programu za AI, jiunge:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -112,11 +131,11 @@ Ikiwa una maoni kuhusu bidhaa au makosa wakati wa kujenga tembelea:
 
 ## Leseni
 
-Leseni ya MIT - Tazama faili la [LICENSE](../../LICENSE) kwa maelezo.
+Leseni ya MIT - Angalia faili la [LICENSE](../../LICENSE) kwa maelezo.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kiarifu cha Msamaha**:
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+**Kiarifa cha Kukataa**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
