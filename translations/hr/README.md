@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T15:01:42+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:50:20+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -28,16 +28,16 @@ Tečaj za izgradnju AI aplikacija s LangChain4j i Azure OpenAI GPT-5, od osnovno
 1. [Brzi početak](00-quick-start/README.md) - Počnite s LangChain4j
 2. [Uvod](01-introduction/README.md) - Naučite osnove LangChain4j
 3. [Inženjering prompta](02-prompt-engineering/README.md) - Ovladavanje učinkovitim dizajnom prompta
-4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Izgradnja inteligentnih sustava temeljenih na znanju
-5. [Alati](04-tools/README.md) - Integracija vanjskih alata i API-ja s AI agentima
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Rad s Model Context Protocolom
+4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Izgradite inteligentne sustave temeljene na znanju
+5. [Alati](04-tools/README.md) - Integrirajte vanjske alate i API-je s AI agentima
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Rad s Model Context Protocol
 ---
 
 ## Put učenja
 
 Započnite s modulom [Brzi početak](00-quick-start/README.md) i napredujte kroz svaki modul kako biste korak po korak gradili svoje vještine. Isprobajte osnovne primjere da biste razumjeli osnove prije nego što prijeđete na modul [Uvod](01-introduction/README.md) za dublje upoznavanje s GPT-5.
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hr.png" alt="Put učenja" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hr.png" alt="Learning Path" width="800"/>
 
 Nakon završetka modula, istražite [Vodič za testiranje](docs/TESTING.md) kako biste vidjeli koncepte testiranja LangChain4j u praksi.
 
@@ -48,7 +48,7 @@ Nakon završetka modula, istražite [Vodič za testiranje](docs/TESTING.md) kako
 
 Za brzo započinjanje kodiranja, otvorite ovaj projekt u GitHub Codespaceu ili u svom lokalnom IDE-u s priloženim devcontainerom. Devcontainer korišten u ovom tečaju dolazi unaprijed konfiguriran s GitHub Copilotom za AI upareno programiranje.
 
-Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub Copilotu za dublje razumijevanje. Potražite 💡/🤖 upite u:
+Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub Copilotu kako biste produbili svoje razumijevanje. Potražite 💡/🤖 upite u:
 
 - **Zaglavlja Java datoteka** - Pitanja specifična za svaki primjer
 - **README datoteke modula** - Upiti za istraživanje nakon primjera koda
@@ -58,8 +58,9 @@ Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub 
 Želite li saznati više? Pogledajte [Copilot za AI upareno programiranje](https://aka.ms/GitHubCopilotAI).
 
 
-## Dodatni resursi 
+## Dodatni resursi
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j za početnike](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js za početnike](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -97,10 +98,11 @@ Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub 
 [![Copilot za AI upareno programiranje](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Dobivanje pomoći
 
-Ako zapnete ili imate pitanja o izradi AI aplikacija, pridružite se:
+Ako zapnete ili imate bilo kakvih pitanja o izradi AI aplikacija, pridružite se:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -116,5 +118,5 @@ MIT licenca - Pogledajte datoteku [LICENSE](../../LICENSE) za detalje.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Odricanje od odgovornosti**:
-Ovaj dokument je preveden pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument preveden je pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

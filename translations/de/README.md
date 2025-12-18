@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:10:52+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T10:56:22+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j für Einsteiger
 
-Ein Kurs zum Erstellen von KI-Anwendungen mit LangChain4j und Azure OpenAI GPT-5, von einfachem Chat bis zu KI-Agenten.
+Ein Kurs zum Erstellen von KI-Anwendungen mit LangChain4j und Azure OpenAI GPT-5, vom einfachen Chat bis zu KI-Agenten.
 
 **Neu bei LangChain4j?** Schau dir das [Glossar](docs/GLOSSARY.md) für Definitionen wichtiger Begriffe und Konzepte an.
 
@@ -35,11 +35,11 @@ Ein Kurs zum Erstellen von KI-Anwendungen mit LangChain4j und Azure OpenAI GPT-5
 
 ## Lernpfad
 
-Beginne mit dem [Schnellstart](00-quick-start/README.md) Modul und arbeite dich Schritt für Schritt durch die Module, um deine Fähigkeiten aufzubauen. Du wirst grundlegende Beispiele ausprobieren, um die Grundlagen zu verstehen, bevor du im [Einführungs](01-introduction/README.md)-Modul mit GPT-5 tiefer eintauchst.
+Beginne mit dem [Schnellstart](00-quick-start/README.md) Modul und arbeite dich Schritt für Schritt durch die Module, um deine Fähigkeiten aufzubauen. Du wirst grundlegende Beispiele ausprobieren, um die Grundlagen zu verstehen, bevor du mit dem [Einführungs](01-introduction/README.md)-Modul für einen tieferen Einblick in GPT-5 fortfährst.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.de.png" alt="Lernpfad" width="800"/>
 
-Nach Abschluss der Module erkunde den [Testleitfaden](docs/TESTING.md), um LangChain4j-Testkonzepte in Aktion zu sehen.
+Nach Abschluss der Module kannst du den [Testleitfaden](docs/TESTING.md) erkunden, um LangChain4j-Testkonzepte in Aktion zu sehen.
 
 > **Hinweis:** Dieses Training verwendet sowohl GitHub-Modelle als auch Azure OpenAI. Die Module [Schnellstart](00-quick-start/README.md) und [MCP](05-mcp/README.md) verwenden GitHub-Modelle (kein Azure-Abonnement erforderlich), während die Module 1-4 Azure OpenAI GPT-5 nutzen.
 
@@ -50,7 +50,7 @@ Um schnell mit dem Programmieren zu beginnen, öffne dieses Projekt in einem Git
 
 Jedes Codebeispiel enthält vorgeschlagene Fragen, die du GitHub Copilot stellen kannst, um dein Verständnis zu vertiefen. Achte auf die 💡/🤖 Hinweise in:
 
-- **Java-Dateiköpfen** - Fragen spezifisch zu jedem Beispiel
+- **Java-Dateikopfzeilen** - Fragen, die speziell zu jedem Beispiel gehören
 - **Modul-READMEs** - Erkundungsfragen nach Codebeispielen
 
 **Wie man es benutzt:** Öffne eine beliebige Code-Datei und stelle Copilot die vorgeschlagenen Fragen. Es hat den vollständigen Kontext des Codes und kann erklären, erweitern und Alternativen vorschlagen.
@@ -58,8 +58,9 @@ Jedes Codebeispiel enthält vorgeschlagene Fragen, die du GitHub Copilot stellen
 Möchtest du mehr lernen? Schau dir [Copilot für KI-Paarprogrammierung](https://aka.ms/GitHubCopilotAI) an.
 
 
-## Zusätzliche Ressourcen 
+## Zusätzliche Ressourcen
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j für Einsteiger](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js für Einsteiger](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -97,6 +98,7 @@ Möchtest du mehr lernen? Schau dir [Copilot für KI-Paarprogrammierung](https:/
 [![Copilot für KI-Paarprogrammierung](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Hilfe erhalten
 

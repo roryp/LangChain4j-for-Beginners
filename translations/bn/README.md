@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:21:28+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:08:17+00:00",
   "source_file": "README.md",
   "language_code": "bn"
 }
@@ -19,11 +19,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j শুরু করার জন্য
 
-LangChain4j এবং Azure OpenAI GPT-5 দিয়ে AI অ্যাপ্লিকেশন তৈরি করার জন্য একটি কোর্স, বেসিক চ্যাট থেকে AI এজেন্ট পর্যন্ত।
+LangChain4j এবং Azure OpenAI GPT-5 দিয়ে AI অ্যাপ্লিকেশন তৈরি করার জন্য একটি কোর্স, মৌলিক চ্যাট থেকে AI এজেন্ট পর্যন্ত।
 
 **LangChain4j নতুন?** মূল শব্দ ও ধারণাগুলোর সংজ্ঞার জন্য [Glossary](docs/GLOSSARY.md) দেখুন।
 
-## বিষয়সূচি
+## বিষয়বস্তু সূচি
 
 1. [দ্রুত শুরু](00-quick-start/README.md) - LangChain4j দিয়ে শুরু করুন
 2. [পরিচিতি](01-introduction/README.md) - LangChain4j এর মৌলিক বিষয় শিখুন
@@ -35,23 +35,23 @@ LangChain4j এবং Azure OpenAI GPT-5 দিয়ে AI অ্যাপ্�
 
 ## শেখার পথ
 
-[দ্রুত শুরু](00-quick-start/README.md) মডিউল থেকে শুরু করুন এবং প্রতিটি মডিউল অতিক্রম করে ধাপে ধাপে দক্ষতা গড়ে তুলুন। মৌলিক বিষয় বুঝতে সহজ উদাহরণ চেষ্টা করুন, তারপর GPT-5 এর সাথে গভীরভাবে জানার জন্য [পরিচিতি](01-introduction/README.md) মডিউলে যান।
+[দ্রুত শুরু](00-quick-start/README.md) মডিউল দিয়ে শুরু করুন এবং প্রতিটি মডিউল অতিক্রম করে ধাপে ধাপে দক্ষতা গড়ে তুলুন। মৌলিক বিষয় বুঝতে সহজ উদাহরণ চেষ্টা করুন, তারপর GPT-5 সহ গভীরভাবে জানার জন্য [পরিচিতি](01-introduction/README.md) মডিউলে যান।
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.bn.png" alt="Learning Path" width="800"/>
 
 মডিউলগুলো শেষ করার পর, LangChain4j টেস্টিং ধারণাগুলো কার্যকরভাবে দেখতে [Testing Guide](docs/TESTING.md) অন্বেষণ করুন।
 
-> **নোট:** এই প্রশিক্ষণে GitHub মডেল এবং Azure OpenAI উভয়ই ব্যবহৃত হয়। [দ্রুত শুরু](00-quick-start/README.md) এবং [MCP](05-mcp/README.md) মডিউলগুলো GitHub মডেল ব্যবহার করে (Azure সাবস্ক্রিপশন প্রয়োজন নেই), আর মডিউল ১-৪ Azure OpenAI GPT-5 ব্যবহার করে।
+> **দ্রষ্টব্য:** এই প্রশিক্ষণে GitHub মডেল এবং Azure OpenAI উভয়ই ব্যবহৃত হয়। [দ্রুত শুরু](00-quick-start/README.md) এবং [MCP](05-mcp/README.md) মডিউলগুলো GitHub মডেল ব্যবহার করে (কোনো Azure সাবস্ক্রিপশন প্রয়োজন নেই), আর ১-৪ নম্বর মডিউলগুলো Azure OpenAI GPT-5 ব্যবহার করে।
 
 
 ## GitHub Copilot দিয়ে শেখা
 
-দ্রুত কোডিং শুরু করতে, এই প্রকল্পটি GitHub Codespace বা আপনার লোকাল IDE তে devcontainer সহ খুলুন। এই কোর্সে ব্যবহৃত devcontainer GitHub Copilot সহ AI পেয়ার প্রোগ্রামিংয়ের জন্য প্রি-কনফিগার করা।
+দ্রুত কোডিং শুরু করতে, এই প্রকল্পটি GitHub Codespace বা আপনার লোকাল IDE তে devcontainer সহ খুলুন। এই কোর্সে ব্যবহৃত devcontainer GitHub Copilot সহ AI যুগ্ম প্রোগ্রামিংয়ের জন্য পূর্বনির্ধারিত।
 
 প্রতিটি কোড উদাহরণে GitHub Copilot কে জিজ্ঞাসা করার জন্য প্রস্তাবিত প্রশ্ন রয়েছে যা আপনার বোঝাপড়া গভীর করবে। 💡/🤖 প্রম্পটগুলো খুঁজুন:
 
 - **জাভা ফাইল হেডার** - প্রতিটি উদাহরণের জন্য নির্দিষ্ট প্রশ্ন
-- **মডিউল README** - কোড উদাহরণের পর অনুসন্ধানমূলক প্রম্পট
+- **মডিউল README** - কোড উদাহরণের পর অনুসন্ধানমূলক প্রশ্ন
 
 **কিভাবে ব্যবহার করবেন:** যেকোনো কোড ফাইল খুলুন এবং Copilot কে প্রস্তাবিত প্রশ্ন করুন। এটি কোডবেসের সম্পূর্ণ প্রসঙ্গ জানে এবং ব্যাখ্যা, সম্প্রসারণ ও বিকল্প প্রস্তাব করতে পারে।
 
@@ -59,6 +59,7 @@ LangChain4j এবং Azure OpenAI GPT-5 দিয়ে AI অ্যাপ্�
 
 ## অতিরিক্ত সম্পদ
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j for Beginners](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js for Beginners](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -73,7 +74,7 @@ LangChain4j এবং Azure OpenAI GPT-5 দিয়ে AI অ্যাপ্�
 
 ---
  
-### Generative AI সিরিজ
+### Generative AI Series
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -81,7 +82,7 @@ LangChain4j এবং Azure OpenAI GPT-5 দিয়ে AI অ্যাপ্�
 
 ---
  
-### মূল শেখা
+### Core Learning
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -92,10 +93,11 @@ LangChain4j এবং Azure OpenAI GPT-5 দিয়ে AI অ্যাপ্�
 
 ---
  
-### Copilot সিরিজ
+### Copilot Series
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## সাহায্য পাওয়া
 

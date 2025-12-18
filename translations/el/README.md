@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:32:52+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:21:04+00:00",
   "source_file": "README.md",
   "language_code": "el"
 }
@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Διαδρομή Μάθησης
 
-Ξεκινήστε με το [Γρήγορη Εκκίνηση](00-quick-start/README.md) και προχωρήστε σε κάθε ενότητα για να αναπτύξετε τις δεξιότητές σας βήμα-βήμα. Θα δοκιμάσετε βασικά παραδείγματα για να κατανοήσετε τα θεμέλια πριν προχωρήσετε στην ενότητα [Εισαγωγή](01-introduction/README.md) για μια πιο βαθιά εμβάθυνση με το GPT-5.
+Ξεκινήστε με το [Γρήγορη Εκκίνηση](00-quick-start/README.md) και προχωρήστε σε κάθε ενότητα για να αναπτύξετε τις δεξιότητές σας βήμα-βήμα. Θα δοκιμάσετε βασικά παραδείγματα για να κατανοήσετε τα θεμέλια πριν προχωρήσετε στην [Εισαγωγή](01-introduction/README.md) για μια πιο βαθιά εμβάθυνση με το GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.el.png" alt="Learning Path" width="800"/>
 
@@ -51,15 +51,16 @@ CO_OP_TRANSLATOR_METADATA:
 Κάθε παράδειγμα κώδικα περιλαμβάνει προτεινόμενες ερωτήσεις που μπορείτε να κάνετε στο GitHub Copilot για να εμβαθύνετε την κατανόησή σας. Αναζητήστε τις ενδείξεις 💡/🤖 σε:
 
 - **Κεφαλίδες αρχείων Java** - Ερωτήσεις ειδικές για κάθε παράδειγμα  
-- **README των ενοτήτων** - Ερωτήσεις εξερεύνησης μετά από παραδείγματα κώδικα  
+- **README των ενοτήτων** - Ερωτήσεις εξερεύνησης μετά τα παραδείγματα κώδικα  
 
 **Πώς να το χρησιμοποιήσετε:** Ανοίξτε οποιοδήποτε αρχείο κώδικα και κάντε τις προτεινόμενες ερωτήσεις στο Copilot. Έχει πλήρες πλαίσιο του κώδικα και μπορεί να εξηγήσει, να επεκτείνει και να προτείνει εναλλακτικές.
 
 Θέλετε να μάθετε περισσότερα; Δείτε το [Copilot για Προγραμματισμό AI σε Ζευγάρι](https://aka.ms/GitHubCopilotAI).
 
 
-## Πρόσθετοι Πόροι 
+## Πρόσθετοι Πόροι
 
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j για Αρχάριους](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js για Αρχάριους](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -85,7 +86,7 @@ CO_OP_TRANSLATOR_METADATA:
 ### Βασική Μάθηση
 [![Μηχανική Μάθηση για Αρχάριους](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Επιστήμη Δεδομένων για Αρχάριους](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI για Αρχάριους](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Τεχνητή Νοημοσύνη για Αρχάριους](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Κυβερνοασφάλεια για Αρχάριους](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Ανάπτυξη Ιστού για Αρχάριους](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT για Αρχάριους](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
@@ -97,6 +98,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![Copilot για Προγραμματισμό AI σε Ζευγάρι](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Λήψη Βοήθειας
 

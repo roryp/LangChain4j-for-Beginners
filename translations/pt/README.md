@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "8b9c4243c12488872afffa00f0092467",
-  "translation_date": "2025-12-15T14:26:08+00:00",
+  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
+  "translation_date": "2025-12-17T11:13:43+00:00",
   "source_file": "README.md",
   "language_code": "pt"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j para Iniciantes
 
-Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5, desde chat básico a agentes de IA.
+Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5, desde chat básico até agentes de IA.
 
 **Novo no LangChain4j?** Consulte o [Glossário](docs/GLOSSARY.md) para definições de termos e conceitos chave.
 
@@ -35,13 +35,14 @@ Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5,
 
 ## Caminho de Aprendizagem
 
-Comece com o módulo [Início Rápido](00-quick-start/README.md) e progrida por cada módulo para desenvolver as suas competências passo a passo. Vai experimentar exemplos básicos para entender os fundamentos antes de avançar para o módulo [Introdução](01-introduction/README.md) para um mergulho mais profundo com o GPT-5.
+Comece com o módulo [Início Rápido](00-quick-start/README.md) e progrida por cada módulo para desenvolver as suas competências passo a passo. Experimentará exemplos básicos para entender os fundamentos antes de avançar para o módulo [Introdução](01-introduction/README.md) para um mergulho mais profundo com GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pt.png" alt="Caminho de Aprendizagem" width="800"/>
 
 Após completar os módulos, explore o [Guia de Testes](docs/TESTING.md) para ver os conceitos de testes do LangChain4j em ação.
 
-> **Nota:** Esta formação usa tanto Modelos GitHub como Azure OpenAI. Os módulos [Início Rápido](00-quick-start/README.md) e [MCP](05-mcp/README.md) usam Modelos GitHub (não é necessária subscrição Azure), enquanto os módulos 1-4 usam Azure OpenAI GPT-5.
+> **Nota:** Este treino usa tanto Modelos GitHub como Azure OpenAI. Os módulos [Início Rápido](00-quick-start/README.md) e [MCP](05-mcp/README.md) usam Modelos GitHub (não é necessária subscrição Azure), enquanto os módulos 1-4 usam Azure OpenAI GPT-5.
+
 
 ## Aprender com GitHub Copilot
 
@@ -56,8 +57,10 @@ Cada exemplo de código inclui perguntas sugeridas que pode fazer ao GitHub Copi
 
 Quer aprender mais? Consulte [Copilot para Programação em Par com IA](https://aka.ms/GitHubCopilotAI).
 
-## Recursos Adicionais 
 
+## Recursos Adicionais
+
+<!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
 [![LangChain4j para Iniciantes](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
 [![LangChain.js para Iniciantes](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
@@ -95,14 +98,15 @@ Quer aprender mais? Consulte [Copilot para Programação em Par com IA](https://
 [![Copilot para Programação em Par com IA](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+<!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Obter Ajuda
 
-Se ficar bloqueado ou tiver alguma questão sobre como criar aplicações de IA, junte-se a:
+Se ficar bloqueado ou tiver alguma dúvida sobre como criar aplicações de IA, junte-se a:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Se tiver feedback sobre o produto ou erros durante a criação, visite:
+Se tiver feedback sobre o produto ou erros durante a construção, visite:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -114,5 +118,5 @@ Licença MIT - Veja o ficheiro [LICENSE](../../LICENSE) para detalhes.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Aviso Legal**:
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações erradas decorrentes do uso desta tradução.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
