@@ -35,7 +35,7 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 5. Wait 5-10 minutes for the environment to be ready
 6. Jump straight to [Quick Start](./00-quick-start/README.md) to get started!
 
-> **🖥️ Prefer to Clone Locally?**
+> **Prefer to Clone Locally?**
 >
 > This repository includes 50+ language translations which significantly increases the download size. To clone without translations, use sparse checkout:
 > ```bash
