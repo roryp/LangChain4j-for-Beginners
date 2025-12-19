@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T09:11:35+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:55:28+00:00",
   "source_file": "README.md",
   "language_code": "et"
 }
@@ -30,7 +30,7 @@ Kursus AI rakenduste loomiseks LangChain4j ja Azure OpenAI GPT-5 abil, alates li
 3. [Promptide loomine](02-prompt-engineering/README.md) - Saa meistriks tõhusas promptide kujundamises
 4. [RAG (otsingupõhine genereerimine)](03-rag/README.md) - Ehita nutikaid teadmistepõhiseid süsteeme
 5. [Tööriistad](04-tools/README.md) - Integreeri väliseid tööriistu ja API-sid AI agentidega
-6. [MCP (Mudeli konteksti protokoll)](05-mcp/README.md) - Töötamine Mudeli konteksti protokolliga
+6. [MCP (mudeli konteksti protokoll)](05-mcp/README.md) - Töötamine mudeli konteksti protokolliga
 ---
 
 ## Õppeteekond
@@ -66,16 +66,16 @@ Pärast moodulite läbimist vaata [Testimise juhendit](docs/TESTING.md), et näh
 
 Kiireks kodeerimise alustamiseks ava see projekt GitHub Codespaces või oma lokaalses IDE-s koos antud devcontaineriga. Selle kursuse devcontainer on eelkonfigureeritud GitHub Copilotiga AI paarisprogrammeerimiseks.
 
-Igas koodinäites on soovitatud küsimused, mida võid GitHub Copilotile esitada, et oma arusaamist süvendada. Otsi 💡/🤖 vihjeid:
+Igas koodinäites on soovitatud küsimused, mida saad GitHub Copilotile esitada, et oma arusaamist süvendada. Otsi 💡/🤖 vihjeid:
 
 - **Java failide päistes** - konkreetsete näidete küsimused
 - **Moodulite README-d** - uurimisküsimused pärast koodinäiteid
 
 **Kuidas kasutada:** Ava ükskõik milline koodifail ja esita Copilotile soovitatud küsimused. Tal on täielik ülevaade koodibaasist ning ta suudab selgitada, laiendada ja pakkuda alternatiive.
 
-Tahad rohkem teada? Vaata [Copilot AI paarisprogrammeerimiseks](https://aka.ms/GitHubCopilotAI).
+Soovid rohkem teada? Vaata [Copilot AI paarisprogrammeerimiseks](https://aka.ms/GitHubCopilotAI).
 
-## Täiendavad ressursid
+## Lisamaterjalid
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -92,7 +92,7 @@ Tahad rohkem teada? Vaata [Copilot AI paarisprogrammeerimiseks](https://aka.ms/G
 
 ---
  
-### Generatiivse AI sari
+### Generatiivne AI sari
 [![Generatiivne AI algajatele](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generatiivne AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generatiivne AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -119,7 +119,7 @@ Tahad rohkem teada? Vaata [Copilot AI paarisprogrammeerimiseks](https://aka.ms/G
 
 ## Abi saamine
 
-Kui takerdud või sul on küsimusi AI rakenduste loomise kohta, liitu:
+Kui jääd hätta või sul on küsimusi AI rakenduste loomise kohta, liitu:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -135,5 +135,5 @@ MIT litsents - vaata üksikasju [LICENSE](../../LICENSE) failist.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastutusest loobumine**:
-See dokument on tõlgitud kasutades tehisintellektil põhinevat tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi püüame tagada täpsust, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti mõistmiste eest.
+See dokument on tõlgitud kasutades tehisintellekti tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi püüame tagada täpsust, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti mõistmiste eest.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T09:03:24+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:48:39+00:00",
   "source_file": "README.md",
   "language_code": "sl"
 }
@@ -23,14 +23,14 @@ Tečaj za izdelavo AI aplikacij z LangChain4j in Azure OpenAI GPT-5, od osnovneg
 
 **Nov v LangChain4j?** Oglejte si [Slovar](docs/GLOSSARY.md) za definicije ključnih izrazov in pojmov.
 
-## Kazalo vsebine
+## Kazalo
 
 1. [Hiter začetek](00-quick-start/README.md) - Začnite z LangChain4j
 2. [Uvod](01-introduction/README.md) - Spoznajte osnove LangChain4j
 3. [Oblikovanje pozivov](02-prompt-engineering/README.md) - Obvladajte učinkovito oblikovanje pozivov
 4. [RAG (generiranje z iskanjem)](03-rag/README.md) - Zgradite inteligentne sisteme na osnovi znanja
 5. [Orodja](04-tools/README.md) - Integrirajte zunanja orodja in API-je z AI agenti
-6. [MCP (Protokol konteksta modela)](05-mcp/README.md) - Delo s protokolom konteksta modela
+6. [MCP (protokol konteksta modela)](05-mcp/README.md) - Delo s protokolom konteksta modela
 ---
 
 ## Učna pot
@@ -52,7 +52,7 @@ Tečaj za izdelavo AI aplikacij z LangChain4j in Azure OpenAI GPT-5, od osnovneg
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Tako dobiš vse, kar potrebuješ za dokončanje tečaja z veliko hitrejšim prenosom.
+> Tako dobiš vse, kar potrebuješ za dokončanje tečaja, z veliko hitrejšim prenosom.
 
 Začni z modulom [Hiter začetek](00-quick-start/README.md) in postopoma napreduj skozi vsak modul, da gradiš svoje veščine korak za korakom. Poskusil boš osnovne primere, da razumeš osnove, preden preideš na modul [Uvod](01-introduction/README.md) za poglobljeno spoznavanje z GPT-5.
 
@@ -137,5 +137,5 @@ MIT licenca - podrobnosti si oglejte v datoteki [LICENSE](../../LICENSE).
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

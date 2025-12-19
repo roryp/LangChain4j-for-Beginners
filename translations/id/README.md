@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:47:53+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:33:42+00:00",
   "source_file": "README.md",
   "language_code": "id"
 }
@@ -125,7 +125,7 @@ Jika Anda mengalami kesulitan atau memiliki pertanyaan tentang membangun aplikas
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Jika Anda memiliki umpan balik produk atau menemukan kesalahan saat membangun, kunjungi:
+Jika Anda memiliki masukan produk atau menemukan kesalahan saat membangun, kunjungi:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

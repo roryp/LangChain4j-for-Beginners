@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:39:00+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:25:02+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -26,7 +26,7 @@ Et kursus til at bygge AI-applikationer med LangChain4j og Azure OpenAI GPT-5, f
 ## Indholdsfortegnelse
 
 1. [Kom godt i gang](00-quick-start/README.md) - Kom i gang med LangChain4j
-2. [Introduktion](01-introduction/README.md) - Lær grundlæggende om LangChain4j
+2. [Introduktion](01-introduction/README.md) - Lær det grundlæggende om LangChain4j
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Mestre effektiv promptdesign
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Byg intelligente vidensbaserede systemer
 5. [Værktøjer](04-tools/README.md) - Integrer eksterne værktøjer og API'er med AI-agenter
@@ -38,15 +38,15 @@ Et kursus til at bygge AI-applikationer med LangChain4j og Azure OpenAI GPT-5, f
 > **Kom godt i gang**
 
 1. Fork dette repository til din GitHub-konto
-2. Klik på **Code** → fanen **Codespaces** → **...** → **Ny med muligheder...**
+2. Klik på **Code** → fanen **Codespaces** → **...** → **New with options...**
 3. Brug standardindstillingerne – dette vælger udviklingscontaineren oprettet til dette kursus
-4. Klik på **Opret codespace**
+4. Klik på **Create codespace**
 5. Vent 5-10 minutter på, at miljøet er klar
 6. Gå direkte til [Kom godt i gang](./00-quick-start/README.md) for at komme i gang!
 
 > **Foretrækker du at klone lokalt?**
 >
-> Dette repository inkluderer 50+ sprogoversættelser, hvilket øger downloadstørrelsen betydeligt. For at klone uden oversættelser, brug sparse checkout:
+> Dette repository indeholder 50+ sprogoversættelser, hvilket øger downloadstørrelsen betydeligt. For at klone uden oversættelser, brug sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -67,7 +67,7 @@ Efter at have gennemført modulerne, udforsk [Testvejledningen](docs/TESTING.md)
 
 For hurtigt at komme i gang med kodning, åbn dette projekt i en GitHub Codespace eller din lokale IDE med den medfølgende devcontainer. Devcontaineren, der bruges i dette kursus, er forudkonfigureret med GitHub Copilot til AI-parprogrammering.
 
-Hvert kodeeksempel inkluderer foreslåede spørgsmål, du kan stille GitHub Copilot for at uddybe din forståelse. Kig efter 💡/🤖 prompts i:
+Hvert kodeeksempel indeholder foreslåede spørgsmål, du kan stille GitHub Copilot for at uddybe din forståelse. Kig efter 💡/🤖 prompts i:
 
 - **Java-filoverskrifter** - Spørgsmål specifikke for hvert eksempel
 - **Modul-README'er** - Udforskningsspørgsmål efter kodeeksempler

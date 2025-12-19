@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:05:23+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T09:50:57+00:00",
   "source_file": "README.md",
   "language_code": "es"
 }
@@ -46,7 +46,7 @@ Un curso para construir aplicaciones de IA con LangChain4j y Azure OpenAI GPT-5,
 
 > **¿Prefieres Clonar Localmente?**
 >
-> Este repositorio incluye más de 50 traducciones de idiomas, lo que aumenta significativamente el tamaño de la descarga. Para clonar sin traducciones, usa sparse checkout:
+> Este repositorio incluye más de 50 traducciones de idiomas que aumentan significativamente el tamaño de la descarga. Para clonar sin traducciones, usa sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -63,7 +63,7 @@ Después de completar los módulos, explora la [Guía de Pruebas](docs/TESTING.m
 > **Nota:** Esta formación utiliza tanto Modelos de GitHub como Azure OpenAI. Los módulos [Inicio Rápido](00-quick-start/README.md) y [MCP](05-mcp/README.md) usan Modelos de GitHub (no se requiere suscripción a Azure), mientras que los módulos 1-4 usan Azure OpenAI GPT-5.
 
 
-## Aprendizaje con GitHub Copilot
+## Aprendiendo con GitHub Copilot
 
 Para comenzar a programar rápidamente, abre este proyecto en un GitHub Codespace o en tu IDE local con el devcontainer proporcionado. El devcontainer usado en este curso viene preconfigurado con GitHub Copilot para programación en pareja con IA.
 
@@ -72,7 +72,7 @@ Cada ejemplo de código incluye preguntas sugeridas que puedes hacerle a GitHub 
 - **Encabezados de archivos Java** - Preguntas específicas para cada ejemplo
 - **READMEs de los módulos** - Prompts de exploración después de los ejemplos de código
 
-**Cómo usar:** Abre cualquier archivo de código y hazle a Copilot las preguntas sugeridas. Tiene el contexto completo del código y puede explicar, extender y sugerir alternativas.
+**Cómo usarlo:** Abre cualquier archivo de código y hazle a Copilot las preguntas sugeridas. Tiene el contexto completo del código y puede explicar, extender y sugerir alternativas.
 
 ¿Quieres aprender más? Consulta [Copilot para Programación en Pareja con IA](https://aka.ms/GitHubCopilotAI).
 
@@ -125,7 +125,7 @@ Si te quedas atascado o tienes alguna pregunta sobre cómo crear aplicaciones de
 
 [![Discord de Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Si tienes comentarios sobre el producto o errores mientras construyes, visita:
+Si tienes comentarios sobre el producto o errores mientras desarrollas, visita:
 
 [![Foro de Desarrolladores de Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

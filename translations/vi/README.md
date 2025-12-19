@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:46:27+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:32:16+00:00",
   "source_file": "README.md",
   "language_code": "vi"
 }
@@ -46,7 +46,7 @@ Một khóa học xây dựng ứng dụng AI với LangChain4j và Azure OpenAI
 
 > **Muốn Clone Cục Bộ?**
 >
-> Kho lưu trữ này bao gồm hơn 50 bản dịch ngôn ngữ làm tăng đáng kể kích thước tải xuống. Để clone không có bản dịch, sử dụng sparse checkout:
+> Kho lưu trữ này bao gồm hơn 50 bản dịch ngôn ngữ làm tăng đáng kể kích thước tải về. Để clone không có bản dịch, sử dụng sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -67,12 +67,12 @@ Sau khi hoàn thành các module, khám phá [Hướng Dẫn Kiểm Thử](docs/
 
 Để nhanh chóng bắt đầu lập trình, mở dự án này trong GitHub Codespace hoặc IDE cục bộ của bạn với devcontainer được cung cấp. Devcontainer sử dụng trong khóa học này đã được cấu hình sẵn với GitHub Copilot cho lập trình cặp AI.
 
-Mỗi ví dụ mã đều bao gồm các câu hỏi gợi ý bạn có thể hỏi GitHub Copilot để hiểu sâu hơn. Tìm các dấu 💡/🤖 trong:
+Mỗi ví dụ mã đều bao gồm các câu hỏi gợi ý bạn có thể hỏi GitHub Copilot để hiểu sâu hơn. Tìm các gợi ý 💡/🤖 trong:
 
 - **Tiêu đề file Java** - Câu hỏi cụ thể cho từng ví dụ
 - **README các module** - Gợi ý khám phá sau các ví dụ mã
 
-**Cách sử dụng:** Mở bất kỳ file mã nào và hỏi Copilot các câu hỏi gợi ý. Nó có toàn bộ ngữ cảnh của codebase và có thể giải thích, mở rộng, và đề xuất các lựa chọn thay thế.
+**Cách sử dụng:** Mở bất kỳ file mã nào và hỏi Copilot các câu hỏi gợi ý. Nó có đầy đủ ngữ cảnh của codebase và có thể giải thích, mở rộng, và đề xuất các phương án thay thế.
 
 Muốn tìm hiểu thêm? Xem [Copilot cho Lập Trình Cặp AI](https://aka.ms/GitHubCopilotAI).
 
@@ -137,5 +137,5 @@ Giấy phép MIT - Xem tệp [LICENSE](../../LICENSE) để biết chi tiết.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Tuyên bố từ chối trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ gốc của nó nên được coi là nguồn chính xác và đáng tin cậy. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ gốc của nó nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

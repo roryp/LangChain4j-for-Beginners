@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:03:55+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T09:49:27+00:00",
   "source_file": "README.md",
   "language_code": "fr"
 }
@@ -30,7 +30,7 @@ Un cours pour créer des applications d'IA avec LangChain4j et Azure OpenAI GPT-
 3. [Conception de prompt](02-prompt-engineering/README.md) - Maîtrisez la conception efficace de prompts
 4. [RAG (Génération augmentée par récupération)](03-rag/README.md) - Construisez des systèmes intelligents basés sur la connaissance
 5. [Outils](04-tools/README.md) - Intégrez des outils externes et des API avec des agents IA
-6. [MCP (Protocole de contexte de modèle)](05-mcp/README.md) - Travaillez avec le Protocole de contexte de modèle
+6. [MCP (Protocole de contexte de modèle)](05-mcp/README.md) - Travaillez avec le protocole de contexte de modèle
 ---
 
 ## Parcours d'apprentissage
@@ -46,7 +46,7 @@ Un cours pour créer des applications d'IA avec LangChain4j et Azure OpenAI GPT-
 
 > **Préférez cloner localement ?**
 >
-> Ce dépôt inclut plus de 50 traductions de langues ce qui augmente significativement la taille du téléchargement. Pour cloner sans les traductions, utilisez le sparse checkout :
+> Ce dépôt inclut plus de 50 traductions linguistiques ce qui augmente considérablement la taille du téléchargement. Pour cloner sans les traductions, utilisez le sparse checkout :
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -60,10 +60,10 @@ Commencez par le module [Démarrage rapide](00-quick-start/README.md) et progres
 
 Après avoir terminé les modules, explorez le [Guide de test](docs/TESTING.md) pour voir les concepts de test LangChain4j en action.
 
-> **Note :** Cette formation utilise à la fois les modèles GitHub et Azure OpenAI. Les modules [Démarrage rapide](00-quick-start/README.md) et [MCP](05-mcp/README.md) utilisent les modèles GitHub (aucun abonnement Azure requis), tandis que les modules 1-4 utilisent Azure OpenAI GPT-5.
+> **Note :** Cette formation utilise à la fois les modèles GitHub et Azure OpenAI. Les modules [Démarrage rapide](00-quick-start/README.md) et [MCP](05-mcp/README.md) utilisent les modèles GitHub (aucun abonnement Azure requis), tandis que les modules 1 à 4 utilisent Azure OpenAI GPT-5.
 
 
-## Apprendre avec GitHub Copilot
+## Apprentissage avec GitHub Copilot
 
 Pour commencer rapidement à coder, ouvrez ce projet dans un GitHub Codespace ou votre IDE local avec le devcontainer fourni. Le devcontainer utilisé dans ce cours est préconfiguré avec GitHub Copilot pour la programmation assistée par IA.
 
@@ -125,9 +125,9 @@ Si vous êtes bloqué ou avez des questions sur la création d'applications IA, 
 
 [![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Si vous avez des retours sur le produit ou des erreurs lors du développement, visitez :
+Si vous avez des retours sur le produit ou des erreurs lors de la création, visitez :
 
-[![Forum développeurs Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Forum développeur Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licence
 

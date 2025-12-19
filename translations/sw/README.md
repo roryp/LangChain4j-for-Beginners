@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:52:03+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:37:31+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kozi ya kujenga programu za AI kwa kutumia LangChain4j na Azure OpenAI GPT-5, kutoka mazungumzo ya msingi hadi mawakala wa AI.
 
-**Mpya kwa LangChain4j?** Angalia [Kamusi](docs/GLOSSARY.md) kwa ufafanuzi wa maneno na dhana muhimu.
+**Mpya kwa LangChain4j?** Angalia [Kamusi ya Maneno](docs/GLOSSARY.md) kwa ufafanuzi wa maneno na dhana muhimu.
 
 ## Jedwali la Yaliyomo
 
@@ -39,10 +39,10 @@ Kozi ya kujenga programu za AI kwa kutumia LangChain4j na Azure OpenAI GPT-5, ku
 
 1. Fanya fork ya hifadhidata hii kwenye akaunti yako ya GitHub
 2. Bonyeza **Code** → kichupo cha **Codespaces** → **...** → **Mpya na chaguzi...**
-3. Tumia chaguo za msingi – hii itachagua kontena la Maendeleo lililoundwa kwa kozi hii
-4. Bonyeza **Unda codespace**
-5. Subiri dakika 5-10 ili mazingira yawe tayari
-6. Nenda moja kwa moja kwenye [Anza Haraka](./00-quick-start/README.md) kuanza!
+3. Tumia chaguo za msingi – hii itachagua kontena la Maendeleo lililotengenezwa kwa kozi hii
+4. Bonyeza **Tengeneza codespace**
+5. Subiri dakika 5-10 kwa mazingira kuwa tayari
+6. Ruka moja kwa moja kwenye [Anza Haraka](./00-quick-start/README.md) kuanza!
 
 > **Unapendelea Kuiga Kwenye Kompyuta Yako?**
 >
@@ -65,7 +65,7 @@ Baada ya kumaliza moduli, chunguza [Mwongozo wa Upimaji](docs/TESTING.md) kuona 
 
 ## Kujifunza na GitHub Copilot
 
-Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya ndani kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imewekwa tayari na GitHub Copilot kwa usaidizi wa programu ya AI kwa pamoja.
+Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya ndani kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imewekwa tayari na GitHub Copilot kwa ajili ya programu ya pamoja ya AI.
 
 Kila mfano wa msimbo una maswali yaliyopendekezwa ambayo unaweza kumuuliza GitHub Copilot ili kuongeza uelewa wako. Tafuta alama za 💡/🤖 katika:
 
@@ -74,7 +74,7 @@ Kila mfano wa msimbo una maswali yaliyopendekezwa ambayo unaweza kumuuliza GitHu
 
 **Jinsi ya kutumia:** Fungua faili yoyote ya msimbo na muulize Copilot maswali yaliyopendekezwa. Ina muktadha kamili wa msimbo na inaweza kuelezea, kuongeza, na kupendekeza mbadala.
 
-Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya AI kwa Pamoja](https://aka.ms/GitHubCopilotAI).
+Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://aka.ms/GitHubCopilotAI).
 
 
 ## Rasilimali Zaidi

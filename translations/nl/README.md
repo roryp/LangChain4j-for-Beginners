@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:43:41+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:29:19+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -33,7 +33,7 @@ Een cursus voor het bouwen van AI-toepassingen met LangChain4j en Azure OpenAI G
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Werk met het Model Context Protocol
 ---
 
-## Leertraject
+## Leerpad
 
 > **Quick Start**
 
@@ -56,7 +56,7 @@ Een cursus voor het bouwen van AI-toepassingen met LangChain4j en Azure OpenAI G
 
 Begin met de module [Quick Start](00-quick-start/README.md) en werk stap voor stap door elke module om je vaardigheden op te bouwen. Je probeert basisvoorbeelden om de fundamenten te begrijpen voordat je doorgaat naar de module [Introductie](01-introduction/README.md) voor een diepere duik met GPT-5.
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.nl.png" alt="Leertraject" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.nl.png" alt="Leerpad" width="800"/>
 
 Na het voltooien van de modules, verken de [Testgids](docs/TESTING.md) om LangChain4j testconcepten in actie te zien.
 

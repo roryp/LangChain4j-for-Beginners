@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:54:26+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:39:53+00:00",
   "source_file": "README.md",
   "language_code": "cs"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 Podpora více jazyků
 
-#### Podporováno přes GitHub Action (automatizované a vždy aktuální)
+#### Podporováno přes GitHub Action (automatizováno a vždy aktuální)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](./README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j pro začátečníky
 
-Kurz pro vytváření AI aplikací s LangChain4j a Azure OpenAI GPT-5, od základního chatu po AI agenty.
+Kurz pro tvorbu AI aplikací s LangChain4j a Azure OpenAI GPT-5, od základního chatu po AI agenty.
 
 **Nový v LangChain4j?** Podívejte se na [Glosář](docs/GLOSSARY.md) pro definice klíčových pojmů a konceptů.
 
@@ -30,14 +30,14 @@ Kurz pro vytváření AI aplikací s LangChain4j a Azure OpenAI GPT-5, od zákla
 3. [Návrh promptů](02-prompt-engineering/README.md) - Ovládněte efektivní návrh promptů
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Vytvářejte inteligentní systémy založené na znalostech
 5. [Nástroje](04-tools/README.md) - Integrujte externí nástroje a API s AI agenty
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Pracujte s protokolem Model Context Protocol
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Práce s protokolem Model Context Protocol
 ---
 
 ## Výuková cesta
 
 > **Rychlý start**
 
-1. Vytvořte fork tohoto repozitáře do svého GitHub účtu
+1. Vytvořte fork tohoto repozitáře na svůj GitHub účet
 2. Klikněte na **Code** → záložka **Codespaces** → **...** → **New with options...**
 3. Použijte výchozí nastavení – vybere se vývojové kontejner vytvořený pro tento kurz
 4. Klikněte na **Create codespace**
@@ -70,7 +70,7 @@ Pro rychlý start s kódováním otevřete tento projekt v GitHub Codespace nebo
 Každý příklad kódu obsahuje navrhované otázky, které můžete položit GitHub Copilotovi pro hlubší pochopení. Hledejte výzvy 💡/🤖 v:
 
 - **Hlavičkách Java souborů** - otázky specifické pro každý příklad
-- **README modulech** - průzkumné výzvy po příkladech kódu
+- **README modulů** - průzkumné výzvy po příkladech kódu
 
 **Jak používat:** Otevřete jakýkoli kódový soubor a položte Copilotovi navrhované otázky. Má plný kontext kódu a může vysvětlit, rozšířit a navrhnout alternativy.
 
@@ -137,5 +137,5 @@ MIT Licence - Podrobnosti naleznete v souboru [LICENSE](../../LICENSE).
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Prohlášení o vyloučení odpovědnosti**:  
-Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

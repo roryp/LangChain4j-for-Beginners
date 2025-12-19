@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:32:54+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:19:21+00:00",
   "source_file": "README.md",
   "language_code": "tr"
 }
@@ -44,7 +44,7 @@ LangChain4j ve Azure OpenAI GPT-5 ile temel sohbetten AI ajanlarına kadar AI uy
 5. Ortamın hazır olması için 5-10 dakika bekleyin
 6. Başlamak için doğrudan [Hızlı Başlangıç](./00-quick-start/README.md) bölümüne atlayın!
 
-> **Yerel olarak Klonlamayı mı Tercih Ediyorsunuz?**
+> **Yerel Klonlamayı mı Tercih Ediyorsunuz?**
 >
 > Bu depo, indirme boyutunu önemli ölçüde artıran 50+ dil çevirisi içerir. Çeviriler olmadan klonlamak için sparse checkout kullanın:
 > ```bash
@@ -65,7 +65,7 @@ Modülleri tamamladıktan sonra, LangChain4j test kavramlarını uygulamada gör
 
 ## GitHub Copilot ile Öğrenme
 
-Hızlıca kodlamaya başlamak için bu projeyi GitHub Codespace'te veya sağlanan devcontainer ile yerel IDE'nizde açın. Bu kursta kullanılan devcontainer, AI eşliğinde programlama için önceden yapılandırılmış GitHub Copilot ile gelir.
+Hızlıca kodlamaya başlamak için bu projeyi bir GitHub Codespace'te veya sağlanan devcontainer ile yerel IDE'nizde açın. Bu kursta kullanılan devcontainer, AI eşliğinde programlama için önceden yapılandırılmış GitHub Copilot içerir.
 
 Her kod örneği, GitHub Copilot'a sorabileceğiniz ve anlayışınızı derinleştirebileceğiniz önerilen soruları içerir. 💡/🤖 işaretlerini şu yerlerde arayın:
 
@@ -137,5 +137,5 @@ MIT Lisansı - Ayrıntılar için [LICENSE](../../LICENSE) dosyasına bakınız.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Feragatname**:  
-Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
