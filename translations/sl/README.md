@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:23:43+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T09:03:24+00:00",
   "source_file": "README.md",
   "language_code": "sl"
 }
@@ -23,7 +23,7 @@ Tečaj za izdelavo AI aplikacij z LangChain4j in Azure OpenAI GPT-5, od osnovneg
 
 **Nov v LangChain4j?** Oglejte si [Slovar](docs/GLOSSARY.md) za definicije ključnih izrazov in pojmov.
 
-## Kazalo
+## Kazalo vsebine
 
 1. [Hiter začetek](00-quick-start/README.md) - Začnite z LangChain4j
 2. [Uvod](01-introduction/README.md) - Spoznajte osnove LangChain4j
@@ -39,7 +39,7 @@ Tečaj za izdelavo AI aplikacij z LangChain4j in Azure OpenAI GPT-5, od osnovneg
 
 1. Razvezi ta repozitorij na svoj GitHub račun
 2. Klikni **Code** → zavihek **Codespaces** → **...** → **Novo z možnostmi...**
-3. Uporabi privzete nastavitve – to bo izbralo razvojno okolje, ustvarjeno za ta tečaj
+3. Uporabi privzete nastavitve – to bo izbralo razvojni kontejner, ustvarjen za ta tečaj
 4. Klikni **Ustvari codespace**
 5. Počakaj 5-10 minut, da je okolje pripravljeno
 6. Pojdi neposredno na [Hiter začetek](./00-quick-start/README.md) in začni!
@@ -52,7 +52,7 @@ Tečaj za izdelavo AI aplikacij z LangChain4j in Azure OpenAI GPT-5, od osnovneg
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Tako dobiš vse, kar potrebuješ za dokončanje tečaja, z veliko hitrejšim prenosom.
+> Tako dobiš vse, kar potrebuješ za dokončanje tečaja z veliko hitrejšim prenosom.
 
 Začni z modulom [Hiter začetek](00-quick-start/README.md) in postopoma napreduj skozi vsak modul, da gradiš svoje veščine korak za korakom. Poskusil boš osnovne primere, da razumeš osnove, preden preideš na modul [Uvod](01-introduction/README.md) za poglobljeno spoznavanje z GPT-5.
 
@@ -65,7 +65,7 @@ Po zaključku modulov razišči [Vodnik za testiranje](docs/TESTING.md), da vidi
 
 ## Učenje z GitHub Copilot
 
-Za hiter začetek kodiranja odpri ta projekt v GitHub Codespace ali v svojem lokalnem IDE z zagotovljenim devcontainerjem. Devcontainer, uporabljen v tem tečaju, je vnaprej konfiguriran z GitHub Copilot za AI programiranje v paru.
+Za hiter začetek kodiranja odpri ta projekt v GitHub Codespace ali svojem lokalnem IDE z zagotovljenim devcontainerjem. Devcontainer, uporabljen v tem tečaju, je vnaprej konfiguriran z GitHub Copilot za AI programiranje v paru.
 
 Vsak primer kode vključuje predlagana vprašanja, ki jih lahko zastaviš GitHub Copilotu za poglobitev razumevanja. Poišči oznake 💡/🤖 v:
 
@@ -90,11 +90,11 @@ Vsak primer kode vključuje predlagana vprašanja, ki jih lahko zastaviš GitHub
 [![AZD za začetnike](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI za začetnike](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP za začetnike](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI Agenti za začetnike](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI agenti za začetnike](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Serija Generativne AI
+### Serija generativne AI
 [![Generativna AI za začetnike](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generativna AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generativna AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -137,5 +137,5 @@ MIT licenca - podrobnosti si oglejte v datoteki [LICENSE](../../LICENSE).
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitne nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:22:22+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T09:01:59+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -54,7 +54,7 @@ Tečaj za izgradnju AI aplikacija s LangChain4j i Azure OpenAI GPT-5, od osnovno
 > ```
 > Ovo vam daje sve što vam treba za dovršetak tečaja s mnogo bržim preuzimanjem.
 
-Započnite s modulom [Brzi početak](00-quick-start/README.md) i napredujte kroz svaki modul kako biste korak po korak gradili svoje vještine. Isprobajte osnovne primjere da razumijete osnove prije nego što prijeđete na modul [Uvod](01-introduction/README.md) za dublje upoznavanje s GPT-5.
+Započnite s modulom [Brzi početak](00-quick-start/README.md) i napredujte kroz svaki modul kako biste korak po korak razvijali svoje vještine. Isprobajte osnovne primjere da razumijete osnove prije nego što prijeđete na modul [Uvod](01-introduction/README.md) za dublje razumijevanje s GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hr.png" alt="Learning Path" width="800"/>
 
@@ -106,7 +106,7 @@ Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub 
 [![ML za početnike](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science za početnike](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI za početnike](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![Kibernetička sigurnost za početnike](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Cybersecurity za početnike](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web razvoj za početnike](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT za početnike](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)

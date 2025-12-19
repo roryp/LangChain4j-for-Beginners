@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:24:13+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:06:51+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -26,10 +26,10 @@ Ein Kurs zum Erstellen von KI-Anwendungen mit LangChain4j und Azure OpenAI GPT-5
 ## Inhaltsverzeichnis
 
 1. [Schnellstart](00-quick-start/README.md) - Einstieg in LangChain4j
-2. [Einführung](01-introduction/README.md) - Grundlagen von LangChain4j lernen
+2. [Einführung](01-introduction/README.md) - Grundlagen von LangChain4j kennenlernen
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Effektives Prompt-Design meistern
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Intelligente wissensbasierte Systeme bauen
-5. [Werkzeuge](04-tools/README.md) - Externe Werkzeuge und APIs mit KI-Agenten integrieren
+5. [Tools](04-tools/README.md) - Externe Tools und APIs mit KI-Agenten integrieren
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Arbeiten mit dem Model Context Protocol
 ---
 
@@ -54,7 +54,7 @@ Ein Kurs zum Erstellen von KI-Anwendungen mit LangChain4j und Azure OpenAI GPT-5
 > ```
 > So erhältst du alles, was du für den Kurs brauchst, mit einem viel schnelleren Download.
 
-Beginne mit dem Modul [Schnellstart](00-quick-start/README.md) und arbeite dich durch jedes Modul, um deine Fähigkeiten Schritt für Schritt aufzubauen. Du wirst grundlegende Beispiele ausprobieren, um die Grundlagen zu verstehen, bevor du im Modul [Einführung](01-introduction/README.md) mit GPT-5 tiefer eintauchst.
+Beginne mit dem Modul [Schnellstart](00-quick-start/README.md) und arbeite dich Schritt für Schritt durch die Module, um deine Fähigkeiten aufzubauen. Du wirst grundlegende Beispiele ausprobieren, um die Grundlagen zu verstehen, bevor du im Modul [Einführung](01-introduction/README.md) mit GPT-5 tiefer eintauchst.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.de.png" alt="Lernpfad" width="800"/>
 
@@ -88,7 +88,7 @@ Möchtest du mehr lernen? Schau dir [Copilot für KI-Paarprogrammierung](https:/
 
 ### Azure / Edge / MCP / Agenten
 [![AZD für Einsteiger](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Edge AI für Einsteiger](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge KI für Einsteiger](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP für Einsteiger](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![KI-Agenten für Einsteiger](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 

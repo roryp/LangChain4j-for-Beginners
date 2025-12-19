@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:12:38+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:53:16+00:00",
   "source_file": "README.md",
   "language_code": "hu"
 }
@@ -60,7 +60,7 @@ Kezdd a [Gyors kezdés](00-quick-start/README.md) modullal, majd haladj végig a
 
 A modulok elvégzése után fedezd fel a [Tesztelési útmutatót](docs/TESTING.md), hogy lásd a LangChain4j tesztelési koncepcióit működés közben.
 
-> **Megjegyzés:** Ez a képzés mind a GitHub Modelleket, mind az Azure OpenAI-t használja. A [Gyors kezdés](00-quick-start/README.md) és a [MCP](05-mcp/README.md) modulok GitHub Modelleket használnak (nem szükséges Azure előfizetés), míg az 1-4. modulok Azure OpenAI GPT-5-tel dolgoznak.
+> **Megjegyzés:** Ez a képzés mind a GitHub Modelleket, mind az Azure OpenAI-t használja. A [Gyors kezdés](00-quick-start/README.md) és a [MCP](05-mcp/README.md) modulok GitHub Modelleket használnak (nem szükséges Azure előfizetés), míg az 1-4 modulok Azure OpenAI GPT-5-tel dolgoznak.
 
 
 ## Tanulás GitHub Copilot-tal
@@ -72,7 +72,7 @@ Minden kódpélda tartalmaz javasolt kérdéseket, amelyeket feltehetsz a GitHub
 - **Java fájlfejlécek** - Az adott példához kapcsolódó kérdések
 - **Modul README-k** - Felfedező kérdések a kódpéldák után
 
-**Használat módja:** Nyiss meg bármilyen kód fájlt, és tedd fel a javasolt kérdéseket a Copilot-nak. Teljes kontextusa van a kódbázisnak, képes magyarázni, bővíteni és alternatívákat javasolni.
+**Használat módja:** Nyiss meg bármilyen kód fájlt, és tedd fel a javasolt kérdéseket a Copilot-nak. Teljes kontextusa van a kódbázisról, képes magyarázni, bővíteni és alternatívákat javasolni.
 
 Szeretnél többet megtudni? Nézd meg a [Copilot az AI páros programozáshoz](https://aka.ms/GitHubCopilotAI) oldalt.
 
@@ -137,5 +137,5 @@ MIT licenc - Részletekért lásd a [LICENSE](../../LICENSE) fájlt.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Jogi nyilatkozat**:
-Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

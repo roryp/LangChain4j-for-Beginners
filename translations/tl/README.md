@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:09:29+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:50:33+00:00",
   "source_file": "README.md",
   "language_code": "tl"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Isang kurso para sa paggawa ng mga AI application gamit ang LangChain4j at Azure OpenAI GPT-5, mula sa basic chat hanggang sa AI agents.
 
-**Bago sa LangChain4j?** Tingnan ang [Glossary](docs/GLOSSARY.md) para sa mga kahulugan ng mga pangunahing termino at konsepto.
+**Bago sa LangChain4j?** Tingnan ang [Glossary](docs/GLOSSARY.md) para sa mga depinisyon ng mga pangunahing termino at konsepto.
 
 ## Talaan ng Nilalaman
 
@@ -60,12 +60,12 @@ Magsimula sa [Mabilis na Pagsisimula](00-quick-start/README.md) na module at mag
 
 Pagkatapos makumpleto ang mga module, tuklasin ang [Testing Guide](docs/TESTING.md) upang makita ang mga konsepto ng LangChain4j testing sa aksyon.
 
-> **Tandaan:** Ginagamit ng pagsasanay na ito ang parehong GitHub Models at Azure OpenAI. Ang mga module na [Mabilis na Pagsisimula](00-quick-start/README.md) at [MCP](05-mcp/README.md) ay gumagamit ng GitHub Models (hindi kailangan ng Azure subscription), habang ang mga module 1-4 ay gumagamit ng Azure OpenAI GPT-5.
+> **Tandaan:** Ginagamit sa pagsasanay na ito ang parehong GitHub Models at Azure OpenAI. Ang mga module na [Mabilis na Pagsisimula](00-quick-start/README.md) at [MCP](05-mcp/README.md) ay gumagamit ng GitHub Models (hindi kailangan ng Azure subscription), habang ang mga module 1-4 ay gumagamit ng Azure OpenAI GPT-5.
 
 
 ## Pag-aaral gamit ang GitHub Copilot
 
-Para mabilis na makapagsimula sa pag-cocode, buksan ang proyektong ito sa isang GitHub Codespace o sa iyong lokal na IDE gamit ang ibinigay na devcontainer. Ang devcontainer na ginamit sa kursong ito ay naka-pre-configure na may GitHub Copilot para sa AI paired programming.
+Para mabilis na makapagsimula sa pag-code, buksan ang proyektong ito sa isang GitHub Codespace o sa iyong lokal na IDE gamit ang ibinigay na devcontainer. Ang devcontainer na ginamit sa kursong ito ay naka-pre-configure na gamit ang GitHub Copilot para sa AI paired programming.
 
 Bawat halimbawa ng code ay may kasamang mga mungkahing tanong na maaari mong itanong sa GitHub Copilot upang palalimin ang iyong pag-unawa. Hanapin ang mga 💡/🤖 na prompt sa:
 

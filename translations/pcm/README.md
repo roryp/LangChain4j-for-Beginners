@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:32:05+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T09:13:00+00:00",
   "source_file": "README.md",
   "language_code": "pcm"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j for Beginners
 
-Course wey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat go AI agents.
+Na course wey dey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat go AI agents.
 
 **New to LangChain4j?** Check di [Glossary](docs/GLOSSARY.md) for wetin key terms and concepts mean.
 
@@ -44,9 +44,9 @@ Course wey teach how to build AI applications wit LangChain4j and Azure OpenAI G
 5. Wait 5-10 minutes make di environment ready
 6. Jump straight go [Quick Start](./00-quick-start/README.md) to start!
 
-> **You prefer to Clone for your machine?**
+> **You prefer to Clone Locally?**
 >
-> Dis repository get 50+ language translations wey go make di download size big. To clone without di translations, use sparse checkout:
+> Dis repository get 50+ language translations wey go make di download size big. To clone without translations, use sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -54,7 +54,7 @@ Course wey teach how to build AI applications wit LangChain4j and Azure OpenAI G
 > ```
 > Dis one go give you everything wey you need to finish di course fast.
 
-Start wit di [Quick Start](00-quick-start/README.md) module and waka through each module to build your skills step-by-step. You go try basic examples to understand di basics before you move go di [Introduction](01-introduction/README.md) module for deeper knowledge wit GPT-5.
+Start wit di [Quick Start](00-quick-start/README.md) module and waka through each module to build your skills step-by-step. You go try basic examples to understand di fundamentals before you move go di [Introduction](01-introduction/README.md) module for deeper understanding wit GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pcm.png" alt="Learning Path" width="800"/>
 
@@ -65,14 +65,14 @@ After you finish di modules, check di [Testing Guide](docs/TESTING.md) to see ho
 
 ## Learning with GitHub Copilot
 
-To start coding quick, open dis project for GitHub Codespace or your local IDE wit di devcontainer wey dem provide. Di devcontainer wey dem use for dis course don already set up wit GitHub Copilot for AI paired programming.
+To start coding quick, open dis project for GitHub Codespace or your local IDE wit di devcontainer wey dem provide. Di devcontainer wey dis course dey use don already set up wit GitHub Copilot for AI paired programming.
 
 Every code example get suggested questions wey you fit ask GitHub Copilot to understand better. Look for di 💡/🤖 prompts for:
 
 - **Java file headers** - Questions wey relate to each example
 - **Module READMEs** - Exploration prompts after code examples
 
-**How to use:** Open any code file and ask Copilot di suggested questions. E get full context of di codebase and fit explain, add more, and suggest other options.
+**How to use:** Open any code file and ask Copilot di suggested questions. E get full context of di codebase and fit explain, extend, and suggest other options.
 
 You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
@@ -121,7 +121,7 @@ You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/Gi
 
 ## Getting Help
 
-If you get stuck or get any question about how to build AI apps, join:
+If you get stuck or get any questions about how to build AI apps, join:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -137,5 +137,5 @@ MIT License - See [LICENSE](../../LICENSE) file for details.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any misunderstanding or wrong meaning wey fit come from dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make person wey sabi translate am well do am. We no go responsible for any wahala or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

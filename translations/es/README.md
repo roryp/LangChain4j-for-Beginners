@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:22:44+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:05:23+00:00",
   "source_file": "README.md",
   "language_code": "es"
 }
@@ -54,13 +54,13 @@ Un curso para construir aplicaciones de IA con LangChain4j y Azure OpenAI GPT-5,
 > ```
 > Esto te da todo lo que necesitas para completar el curso con una descarga mucho más rápida.
 
-Comienza con el módulo [Inicio Rápido](00-quick-start/README.md) y avanza por cada módulo para desarrollar tus habilidades paso a paso. Probarás ejemplos básicos para entender los fundamentos antes de pasar al módulo [Introducción](01-introduction/README.md) para un análisis más profundo con GPT-5.
+Comienza con el módulo [Inicio Rápido](00-quick-start/README.md) y avanza a través de cada módulo para desarrollar tus habilidades paso a paso. Probarás ejemplos básicos para entender los fundamentos antes de pasar al módulo [Introducción](01-introduction/README.md) para una inmersión más profunda con GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.es.png" alt="Ruta de Aprendizaje" width="800"/>
 
 Después de completar los módulos, explora la [Guía de Pruebas](docs/TESTING.md) para ver los conceptos de pruebas de LangChain4j en acción.
 
-> **Nota:** Esta formación usa tanto Modelos de GitHub como Azure OpenAI. Los módulos [Inicio Rápido](00-quick-start/README.md) y [MCP](05-mcp/README.md) usan Modelos de GitHub (no se requiere suscripción a Azure), mientras que los módulos 1-4 usan Azure OpenAI GPT-5.
+> **Nota:** Esta formación utiliza tanto Modelos de GitHub como Azure OpenAI. Los módulos [Inicio Rápido](00-quick-start/README.md) y [MCP](05-mcp/README.md) usan Modelos de GitHub (no se requiere suscripción a Azure), mientras que los módulos 1-4 usan Azure OpenAI GPT-5.
 
 
 ## Aprendizaje con GitHub Copilot
@@ -72,7 +72,7 @@ Cada ejemplo de código incluye preguntas sugeridas que puedes hacerle a GitHub 
 - **Encabezados de archivos Java** - Preguntas específicas para cada ejemplo
 - **READMEs de los módulos** - Prompts de exploración después de los ejemplos de código
 
-**Cómo usarlo:** Abre cualquier archivo de código y hazle a Copilot las preguntas sugeridas. Tiene el contexto completo del código y puede explicar, extender y sugerir alternativas.
+**Cómo usar:** Abre cualquier archivo de código y hazle a Copilot las preguntas sugeridas. Tiene el contexto completo del código y puede explicar, extender y sugerir alternativas.
 
 ¿Quieres aprender más? Consulta [Copilot para Programación en Pareja con IA](https://aka.ms/GitHubCopilotAI).
 
@@ -109,25 +109,25 @@ Cada ejemplo de código incluye preguntas sugeridas que puedes hacerle a GitHub 
 [![Ciberseguridad para Principiantes](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Desarrollo Web para Principiantes](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT para Principiantes](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Desarrollo XR para Principiantes](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Serie Copilot
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot para Programación en Pareja con IA](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot para C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Aventura Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Obtener ayuda
 
 Si te quedas atascado o tienes alguna pregunta sobre cómo crear aplicaciones de IA, únete a:
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Discord de Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
 Si tienes comentarios sobre el producto o errores mientras construyes, visita:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Foro de Desarrolladores de Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licencia
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:04:56+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:46:27+00:00",
   "source_file": "README.md",
   "language_code": "vi"
 }
@@ -21,15 +21,15 @@ CO_OP_TRANSLATOR_METADATA:
 
 Một khóa học xây dựng ứng dụng AI với LangChain4j và Azure OpenAI GPT-5, từ chat cơ bản đến các tác nhân AI.
 
-**Mới với LangChain4j?** Xem [Thuật ngữ](docs/GLOSSARY.md) để biết định nghĩa các thuật ngữ và khái niệm chính.
+**Mới với LangChain4j?** Xem [Thuật ngữ](docs/GLOSSARY.md) để định nghĩa các thuật ngữ và khái niệm chính.
 
 ## Mục Lục
 
 1. [Bắt Đầu Nhanh](00-quick-start/README.md) - Bắt đầu với LangChain4j
 2. [Giới Thiệu](01-introduction/README.md) - Tìm hiểu các kiến thức cơ bản về LangChain4j
 3. [Kỹ Thuật Prompt](02-prompt-engineering/README.md) - Làm chủ thiết kế prompt hiệu quả
-4. [RAG (Tạo Nội Dung Tăng Cường Truy Xuất)](03-rag/README.md) - Xây dựng hệ thống kiến thức thông minh
-5. [Công Cụ](04-tools/README.md) - Tích hợp công cụ và API bên ngoài với tác nhân AI
+4. [RAG (Tạo Sinh Tăng Cường Truy Xuất)](03-rag/README.md) - Xây dựng hệ thống kiến thức thông minh
+5. [Công Cụ](04-tools/README.md) - Tích hợp công cụ và API bên ngoài với các tác nhân AI
 6. [MCP (Giao Thức Ngữ Cảnh Mô Hình)](05-mcp/README.md) - Làm việc với Giao Thức Ngữ Cảnh Mô Hình
 ---
 
@@ -46,7 +46,7 @@ Một khóa học xây dựng ứng dụng AI với LangChain4j và Azure OpenAI
 
 > **Muốn Clone Cục Bộ?**
 >
-> Kho lưu trữ này bao gồm hơn 50 bản dịch ngôn ngữ làm tăng đáng kể kích thước tải về. Để clone không có bản dịch, sử dụng sparse checkout:
+> Kho lưu trữ này bao gồm hơn 50 bản dịch ngôn ngữ làm tăng đáng kể kích thước tải xuống. Để clone không có bản dịch, sử dụng sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -70,11 +70,11 @@ Sau khi hoàn thành các module, khám phá [Hướng Dẫn Kiểm Thử](docs/
 Mỗi ví dụ mã đều bao gồm các câu hỏi gợi ý bạn có thể hỏi GitHub Copilot để hiểu sâu hơn. Tìm các dấu 💡/🤖 trong:
 
 - **Tiêu đề file Java** - Câu hỏi cụ thể cho từng ví dụ
-- **README các module** - Gợi ý khám phá sau ví dụ mã
+- **README các module** - Gợi ý khám phá sau các ví dụ mã
 
-**Cách sử dụng:** Mở bất kỳ file mã nào và hỏi Copilot các câu hỏi gợi ý. Nó có đầy đủ ngữ cảnh của codebase và có thể giải thích, mở rộng, và đề xuất các phương án thay thế.
+**Cách sử dụng:** Mở bất kỳ file mã nào và hỏi Copilot các câu hỏi gợi ý. Nó có toàn bộ ngữ cảnh của codebase và có thể giải thích, mở rộng, và đề xuất các lựa chọn thay thế.
 
-Muốn tìm hiểu thêm? Xem [Copilot cho Lập trình Cặp AI](https://aka.ms/GitHubCopilotAI).
+Muốn tìm hiểu thêm? Xem [Copilot cho Lập Trình Cặp AI](https://aka.ms/GitHubCopilotAI).
 
 
 ## Tài Nguyên Bổ Sung
@@ -94,7 +94,7 @@ Muốn tìm hiểu thêm? Xem [Copilot cho Lập trình Cặp AI](https://aka.ms
 
 ---
  
-### Chuỗi AI Tạo Sinh
+### Generative AI Series
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -102,7 +102,7 @@ Muốn tìm hiểu thêm? Xem [Copilot cho Lập trình Cặp AI](https://aka.ms
 
 ---
  
-### Học Cốt Lõi
+### Core Learning
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -121,7 +121,7 @@ Muốn tìm hiểu thêm? Xem [Copilot cho Lập trình Cặp AI](https://aka.ms
 
 ## Nhận trợ giúp
 
-Nếu bạn bị mắc kẹt hoặc có bất kỳ câu hỏi nào về xây dựng ứng dụng AI, hãy tham gia:
+Nếu bạn bị mắc kẹt hoặc có bất kỳ câu hỏi nào về việc xây dựng ứng dụng AI, hãy tham gia:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -137,5 +137,5 @@ Giấy phép MIT - Xem tệp [LICENSE](../../LICENSE) để biết chi tiết.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Tuyên bố từ chối trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ gốc của nó nên được coi là nguồn tham khảo chính thức. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ gốc của nó nên được coi là nguồn chính xác và đáng tin cậy. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
