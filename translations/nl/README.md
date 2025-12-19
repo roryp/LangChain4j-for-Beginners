@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:01:57+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:43:41+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Een cursus voor het bouwen van AI-toepassingen met LangChain4j en Azure OpenAI GPT-5, van basis chat tot AI-agenten.
 
-**Nieuw bij LangChain4j?** Bekijk de [Glossary](docs/GLOSSARY.md) voor definities van sleuteltermen en concepten.
+**Nieuw bij LangChain4j?** Bekijk de [Glossary](docs/GLOSSARY.md) voor definities van belangrijke termen en concepten.
 
 ## Inhoudsopgave
 
@@ -65,7 +65,7 @@ Na het voltooien van de modules, verken de [Testgids](docs/TESTING.md) om LangCh
 
 ## Leren met GitHub Copilot
 
-Om snel te beginnen met coderen, open je dit project in een GitHub Codespace of je lokale IDE met de meegeleverde devcontainer. De devcontainer die in deze cursus wordt gebruikt, is vooraf geconfigureerd met GitHub Copilot voor AI-gepaard programmeren.
+Om snel te beginnen met coderen, open je dit project in een GitHub Codespace of je lokale IDE met de meegeleverde devcontainer. De devcontainer die in deze cursus wordt gebruikt, is vooraf geconfigureerd met GitHub Copilot voor AI-gepaarde programmering.
 
 Elk codevoorbeeld bevat voorgestelde vragen die je aan GitHub Copilot kunt stellen om je begrip te verdiepen. Let op de 💡/🤖 prompts in:
 
@@ -74,7 +74,7 @@ Elk codevoorbeeld bevat voorgestelde vragen die je aan GitHub Copilot kunt stell
 
 **Hoe te gebruiken:** Open een willekeurig codebestand en stel Copilot de voorgestelde vragen. Het heeft volledige context van de codebase en kan uitleggen, uitbreiden en alternatieven voorstellen.
 
-Wil je meer leren? Bekijk [Copilot voor AI-gepaard programmeren](https://aka.ms/GitHubCopilotAI).
+Wil je meer leren? Bekijk [Copilot voor AI-gepaarde programmering](https://aka.ms/GitHubCopilotAI).
 
 
 ## Aanvullende bronnen

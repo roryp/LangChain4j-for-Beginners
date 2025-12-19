@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:56:10+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:37:32+00:00",
   "source_file": "README.md",
   "language_code": "sv"
 }
@@ -67,7 +67,7 @@ Efter att ha slutfört modulerna, utforska [Testningsguiden](docs/TESTING.md) f�
 
 För att snabbt börja koda, öppna detta projekt i en GitHub Codespace eller din lokala IDE med den medföljande devcontainern. Devcontainern som används i denna kurs är förkonfigurerad med GitHub Copilot för AI-parprogrammering.
 
-Varje kodexempel innehåller föreslagna frågor du kan ställa till GitHub Copilot för att fördjupa din förståelse. Leta efter 💡/🤖-uppmaningar i:
+Varje kodexempel inkluderar föreslagna frågor du kan ställa till GitHub Copilot för att fördjupa din förståelse. Leta efter 💡/🤖-uppmaningar i:
 
 - **Java-filhuvuden** - Frågor specifika för varje exempel
 - **Modul-README-filer** - Utforskningsuppmaningar efter kodexempel
@@ -102,7 +102,7 @@ Vill du lära dig mer? Kolla in [Copilot för AI-parprogrammering](https://aka.m
 
 ---
  
-### Kärnlärande
+### Kärnkunskap
 [![ML för nybörjare](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science för nybörjare](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI för nybörjare](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -137,5 +137,5 @@ MIT-licens - Se [LICENSE](../../LICENSE) filen för detaljer.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Ansvarsfriskrivning**:
-Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen observera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår vid användning av denna översättning.
+Detta dokument har översatts med hjälp av AI-översättningstjänsten [Co-op Translator](https://github.com/Azure/co-op-translator). Även om vi strävar efter noggrannhet, vänligen observera att automatiska översättningar kan innehålla fel eller brister. Det ursprungliga dokumentet på dess modersmål bör betraktas som den auktoritativa källan. För kritisk information rekommenderas professionell mänsklig översättning. Vi ansvarar inte för några missförstånd eller feltolkningar som uppstår till följd av användningen av denna översättning.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

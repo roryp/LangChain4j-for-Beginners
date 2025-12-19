@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:57:33+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:39:00+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -60,17 +60,17 @@ Start med modulet [Kom godt i gang](00-quick-start/README.md) og fortsæt gennem
 
 Efter at have gennemført modulerne, udforsk [Testvejledningen](docs/TESTING.md) for at se LangChain4j testkoncepter i praksis.
 
-> **Bemærk:** Denne træning bruger både GitHub Models og Azure OpenAI. Modulerne [Kom godt i gang](00-quick-start/README.md) og [MCP](05-mcp/README.md) bruger GitHub Models (ingen Azure-abonnement krævet), mens moduler 1-4 bruger Azure OpenAI GPT-5.
+> **Bemærk:** Denne træning bruger både GitHub Models og Azure OpenAI. Modulerne [Kom godt i gang](00-quick-start/README.md) og [MCP](05-mcp/README.md) bruger GitHub Models (ingen Azure-abonnement krævet), mens modulerne 1-4 bruger Azure OpenAI GPT-5.
 
 
 ## Læring med GitHub Copilot
 
-For hurtigt at komme i gang med kodning, åbn dette projekt i en GitHub Codespace eller din lokale IDE med den medfølgende devcontainer. Devcontaineren, der bruges i dette kursus, kommer forudkonfigureret med GitHub Copilot til AI-parprogrammering.
+For hurtigt at komme i gang med kodning, åbn dette projekt i en GitHub Codespace eller din lokale IDE med den medfølgende devcontainer. Devcontaineren, der bruges i dette kursus, er forudkonfigureret med GitHub Copilot til AI-parprogrammering.
 
 Hvert kodeeksempel inkluderer foreslåede spørgsmål, du kan stille GitHub Copilot for at uddybe din forståelse. Kig efter 💡/🤖 prompts i:
 
 - **Java-filoverskrifter** - Spørgsmål specifikke for hvert eksempel
-- **Modul-README'er** - Udforskningsprompter efter kodeeksempler
+- **Modul-README'er** - Udforskningsspørgsmål efter kodeeksempler
 
 **Sådan bruger du det:** Åbn en hvilken som helst kodefil og stil Copilot de foreslåede spørgsmål. Den har fuld kontekst af kodebasen og kan forklare, udvide og foreslå alternativer.
 
@@ -125,7 +125,7 @@ Hvis du sidder fast eller har spørgsmål om at bygge AI-apps, så deltag i:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Hvis du har produktfeedback eller fejl under udvikling, besøg:
+Hvis du har produktfeedback eller oplever fejl under udvikling, besøg:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

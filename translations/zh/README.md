@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:31:11+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:12:59+00:00",
   "source_file": "README.md",
   "language_code": "zh"
 }
@@ -14,10 +14,10 @@ CO_OP_TRANSLATOR_METADATA:
 #### 通过 GitHub Action 支持（自动且始终保持最新）
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[阿拉伯语](../ar/README.md) | [孟加拉语](../bn/README.md) | [保加利亚语](../bg/README.md) | [缅甸语 (Myanmar)](../my/README.md) | [中文（简体）](./README.md) | [中文（繁体，香港）](../hk/README.md) | [中文（繁体，澳门）](../mo/README.md) | [中文（繁体，台湾）](../tw/README.md) | [克罗地亚语](../hr/README.md) | [捷克语](../cs/README.md) | [丹麦语](../da/README.md) | [荷兰语](../nl/README.md) | [爱沙尼亚语](../et/README.md) | [芬兰语](../fi/README.md) | [法语](../fr/README.md) | [德语](../de/README.md) | [希腊语](../el/README.md) | [希伯来语](../he/README.md) | [印地语](../hi/README.md) | [匈牙利语](../hu/README.md) | [印度尼西亚语](../id/README.md) | [意大利语](../it/README.md) | [日语](../ja/README.md) | [卡纳达语](../kn/README.md) | [韩语](../ko/README.md) | [立陶宛语](../lt/README.md) | [马来语](../ms/README.md) | [马拉雅拉姆语](../ml/README.md) | [马拉地语](../mr/README.md) | [尼泊尔语](../ne/README.md) | [尼日利亚皮钦语](../pcm/README.md) | [挪威语](../no/README.md) | [波斯语 (法尔西语)](../fa/README.md) | [波兰语](../pl/README.md) | [葡萄牙语（巴西）](../br/README.md) | [葡萄牙语（葡萄牙）](../pt/README.md) | [旁遮普语（古鲁姆基）](../pa/README.md) | [罗马尼亚语](../ro/README.md) | [俄语](../ru/README.md) | [塞尔维亚语（西里尔字母）](../sr/README.md) | [斯洛伐克语](../sk/README.md) | [斯洛文尼亚语](../sl/README.md) | [西班牙语](../es/README.md) | [斯瓦希里语](../sw/README.md) | [瑞典语](../sv/README.md) | [他加禄语（菲律宾语）](../tl/README.md) | [泰米尔语](../ta/README.md) | [泰卢固语](../te/README.md) | [泰语](../th/README.md) | [土耳其语](../tr/README.md) | [乌克兰语](../uk/README.md) | [乌尔都语](../ur/README.md) | [越南语](../vi/README.md)
+[阿拉伯语](../ar/README.md) | [孟加拉语](../bn/README.md) | [保加利亚语](../bg/README.md) | [缅甸语 (Myanmar)](../my/README.md) | [中文（简体）](./README.md) | [中文（繁体，香港）](../hk/README.md) | [中文（繁体，澳门）](../mo/README.md) | [中文（繁体，台湾）](../tw/README.md) | [克罗地亚语](../hr/README.md) | [捷克语](../cs/README.md) | [丹麦语](../da/README.md) | [荷兰语](../nl/README.md) | [爱沙尼亚语](../et/README.md) | [芬兰语](../fi/README.md) | [法语](../fr/README.md) | [德语](../de/README.md) | [希腊语](../el/README.md) | [希伯来语](../he/README.md) | [印地语](../hi/README.md) | [匈牙利语](../hu/README.md) | [印度尼西亚语](../id/README.md) | [意大利语](../it/README.md) | [日语](../ja/README.md) | [卡纳达语](../kn/README.md) | [韩语](../ko/README.md) | [立陶宛语](../lt/README.md) | [马来语](../ms/README.md) | [马拉雅拉姆语](../ml/README.md) | [马拉地语](../mr/README.md) | [尼泊尔语](../ne/README.md) | [尼日利亚皮钦语](../pcm/README.md) | [挪威语](../no/README.md) | [波斯语 (法尔西)](../fa/README.md) | [波兰语](../pl/README.md) | [葡萄牙语（巴西）](../br/README.md) | [葡萄牙语（葡萄牙）](../pt/README.md) | [旁遮普语（古鲁姆克希）](../pa/README.md) | [罗马尼亚语](../ro/README.md) | [俄语](../ru/README.md) | [塞尔维亚语（西里尔字母）](../sr/README.md) | [斯洛伐克语](../sk/README.md) | [斯洛文尼亚语](../sl/README.md) | [西班牙语](../es/README.md) | [斯瓦希里语](../sw/README.md) | [瑞典语](../sv/README.md) | [他加禄语（菲律宾语）](../tl/README.md) | [泰米尔语](../ta/README.md) | [泰卢固语](../te/README.md) | [泰语](../th/README.md) | [土耳其语](../tr/README.md) | [乌克兰语](../uk/README.md) | [乌尔都语](../ur/README.md) | [越南语](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# LangChain4j 初学者课程
+# LangChain4j 初学者指南
 
 使用 LangChain4j 和 Azure OpenAI GPT-5 构建 AI 应用的课程，从基础聊天到 AI 代理。
 
@@ -25,7 +25,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 目录
 
-1. [快速开始](00-quick-start/README.md) - 快速入门 LangChain4j
+1. [快速开始](00-quick-start/README.md) - 快速上手 LangChain4j
 2. [介绍](01-introduction/README.md) - 学习 LangChain4j 的基础知识
 3. [提示工程](02-prompt-engineering/README.md) - 掌握有效的提示设计
 4. [RAG（检索增强生成）](03-rag/README.md) - 构建智能知识库系统
@@ -54,13 +54,13 @@ CO_OP_TRANSLATOR_METADATA:
 > ```
 > 这将为你提供完成课程所需的所有内容，下载速度更快。
 
-从 [快速开始](00-quick-start/README.md) 模块开始，逐步完成每个模块，逐步提升技能。你将先尝试基础示例以理解基础知识，然后进入 [介绍](01-introduction/README.md) 模块，深入学习 GPT-5。
+从 [快速开始](00-quick-start/README.md) 模块开始，逐步完成每个模块，逐步提升技能。你将通过基础示例理解基本原理，然后进入 [介绍](01-introduction/README.md) 模块，深入学习 GPT-5。
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.zh.png" alt="学习路径" width="800"/>
 
 完成模块后，探索 [测试指南](docs/TESTING.md)，了解 LangChain4j 测试概念的实际应用。
 
-> **注意：** 本培训同时使用 GitHub 模型和 Azure OpenAI。[快速开始](00-quick-start/README.md) 和 [MCP](05-mcp/README.md) 模块使用 GitHub 模型（无需 Azure 订阅），而第 1-4 模块使用 Azure OpenAI GPT-5。
+> **注意：** 本培训同时使用 GitHub 模型和 Azure OpenAI。[快速开始](00-quick-start/README.md) 和 [MCP](05-mcp/README.md) 模块使用 GitHub 模型（无需 Azure 订阅），而模块 1-4 使用 Azure OpenAI GPT-5。
 
 ## 使用 GitHub Copilot 学习
 
@@ -75,7 +75,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 想了解更多？请查看 [AI 配对编程的 Copilot](https://aka.ms/GitHubCopilotAI)。
 
-## 额外资源
+## 其他资源
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -105,7 +105,7 @@ CO_OP_TRANSLATOR_METADATA:
 [![数据科学初学者](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![人工智能初学者](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![网络安全初学者](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![Web 开发初学者](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![网页开发初学者](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![物联网初学者](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
@@ -135,5 +135,5 @@ MIT 许可证 - 详情请参见 [LICENSE](../../LICENSE) 文件。
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免责声明**：  
-本文件由人工智能翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)翻译而成。虽然我们力求准确，但请注意自动翻译可能包含错误或不准确之处。原始文件的母语版本应被视为权威来源。对于重要信息，建议使用专业人工翻译。因使用本翻译而产生的任何误解或误释，我们概不负责。
+本文件由人工智能翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻译。尽管我们力求准确，但请注意自动翻译可能存在错误或不准确之处。原始文件的母语版本应被视为权威来源。对于重要信息，建议使用专业人工翻译。我们不对因使用本翻译而产生的任何误解或误释承担责任。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

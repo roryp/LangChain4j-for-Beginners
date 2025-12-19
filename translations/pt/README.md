@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:45:39+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:27:17+00:00",
   "source_file": "README.md",
   "language_code": "pt"
 }
@@ -72,7 +72,7 @@ Cada exemplo de código inclui perguntas sugeridas que pode fazer ao GitHub Copi
 - **Cabeçalhos de ficheiros Java** - Perguntas específicas para cada exemplo
 - **READMEs dos módulos** - Prompts de exploração após exemplos de código
 
-**Como usar:** Abra qualquer ficheiro de código e faça ao Copilot as perguntas sugeridas. Ele tem o contexto completo da base de código e pode explicar, expandir e sugerir alternativas.
+**Como usar:** Abra qualquer ficheiro de código e faça ao Copilot as perguntas sugeridas. Ele tem contexto completo da base de código e pode explicar, expandir e sugerir alternativas.
 
 Quer aprender mais? Consulte [Copilot para Programação em Par com IA](https://aka.ms/GitHubCopilotAI).
 
@@ -123,11 +123,11 @@ Quer aprender mais? Consulte [Copilot para Programação em Par com IA](https://
 
 Se ficar bloqueado ou tiver alguma dúvida sobre como criar aplicações de IA, junte-se a:
 
-[![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
 Se tiver feedback sobre o produto ou erros durante a criação, visite:
 
-[![Fórum de Desenvolvedores Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licença
 
@@ -137,5 +137,5 @@ Licença MIT - Veja o ficheiro [LICENSE](../../LICENSE) para detalhes.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Aviso Legal**:
-Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações erradas decorrentes do uso desta tradução.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

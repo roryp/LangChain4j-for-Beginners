@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:11:08+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:52:03+00:00",
   "source_file": "README.md",
   "language_code": "sw"
 }
@@ -65,7 +65,7 @@ Baada ya kumaliza moduli, chunguza [Mwongozo wa Upimaji](docs/TESTING.md) kuona 
 
 ## Kujifunza na GitHub Copilot
 
-Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya ndani kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imewekwa tayari na GitHub Copilot kwa ajili ya programu ya pamoja ya AI.
+Ili kuanza kuandika msimbo haraka, fungua mradi huu katika GitHub Codespace au IDE yako ya ndani kwa kutumia devcontainer iliyotolewa. Devcontainer inayotumika katika kozi hii imewekwa tayari na GitHub Copilot kwa usaidizi wa programu ya AI kwa pamoja.
 
 Kila mfano wa msimbo una maswali yaliyopendekezwa ambayo unaweza kumuuliza GitHub Copilot ili kuongeza uelewa wako. Tafuta alama za 💡/🤖 katika:
 
@@ -74,7 +74,7 @@ Kila mfano wa msimbo una maswali yaliyopendekezwa ambayo unaweza kumuuliza GitHu
 
 **Jinsi ya kutumia:** Fungua faili yoyote ya msimbo na muulize Copilot maswali yaliyopendekezwa. Ina muktadha kamili wa msimbo na inaweza kuelezea, kuongeza, na kupendekeza mbadala.
 
-Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://aka.ms/GitHubCopilotAI).
+Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya AI kwa Pamoja](https://aka.ms/GitHubCopilotAI).
 
 
 ## Rasilimali Zaidi
@@ -121,7 +121,7 @@ Unataka kujifunza zaidi? Angalia [Copilot kwa Programu ya Pamoja ya AI](https://
 
 ## Kupata Msaada
 
-Ikiwa unakwama au una maswali yoyote kuhusu kujenga programu za AI, jiunge:
+Ikiwa unashindwa au una maswali yoyote kuhusu kujenga programu za AI, jiunge:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -137,5 +137,5 @@ Leseni ya MIT - Angalia faili la [LICENSE](../../LICENSE) kwa maelezo.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Kiarifa cha Kukataa**:
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatuna dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatubebei dhamana kwa kutoelewana au tafsiri potofu zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

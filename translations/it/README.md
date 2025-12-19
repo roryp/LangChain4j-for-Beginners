@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:48:21+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:30:00+00:00",
   "source_file": "README.md",
   "language_code": "it"
 }
@@ -27,10 +27,10 @@ Un corso per costruire applicazioni AI con LangChain4j e Azure OpenAI GPT-5, dal
 
 1. [Avvio Rapido](00-quick-start/README.md) - Inizia con LangChain4j
 2. [Introduzione](01-introduction/README.md) - Impara le basi di LangChain4j
-3. [Ingegneria del Prompt](02-prompt-engineering/README.md) - Padroneggia la progettazione efficace dei prompt
-4. [RAG (Generazione Aumentata da Recupero)](03-rag/README.md) - Costruisci sistemi intelligenti basati sulla conoscenza
+3. [Prompt Engineering](02-prompt-engineering/README.md) - Padroneggia la progettazione efficace dei prompt
+4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Costruisci sistemi intelligenti basati sulla conoscenza
 5. [Strumenti](04-tools/README.md) - Integra strumenti esterni e API con agenti AI
-6. [MCP (Protocollo di Contesto del Modello)](05-mcp/README.md) - Lavora con il Protocollo di Contesto del Modello
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Lavora con il Model Context Protocol
 ---
 
 ## Percorso di Apprendimento
@@ -38,23 +38,23 @@ Un corso per costruire applicazioni AI con LangChain4j e Azure OpenAI GPT-5, dal
 > **Avvio Rapido**
 
 1. Fai il fork di questo repository nel tuo account GitHub
-2. Clicca su **Code** → scheda **Codespaces** → **...** → **Nuovo con opzioni...**
+2. Clicca su **Code** → scheda **Codespaces** → **...** → **New with options...**
 3. Usa le impostazioni predefinite – questo selezionerà il contenitore di sviluppo creato per questo corso
-4. Clicca su **Crea codespace**
+4. Clicca su **Create codespace**
 5. Attendi 5-10 minuti che l’ambiente sia pronto
 6. Vai direttamente a [Avvio Rapido](./00-quick-start/README.md) per iniziare!
 
 > **Preferisci Clonare Localmente?**
 >
-> Questo repository include oltre 50 traduzioni linguistiche che aumentano significativamente la dimensione del download. Per clonare senza traduzioni, usa il checkout sparso:
+> Questo repository include oltre 50 traduzioni linguistiche che aumentano significativamente la dimensione del download. Per clonare senza traduzioni, usa il sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Questo ti dà tutto il necessario per completare il corso con un download molto più veloce.
+> Questo ti fornisce tutto il necessario per completare il corso con un download molto più veloce.
 
-Inizia con il modulo [Avvio Rapido](00-quick-start/README.md) e prosegui attraverso ogni modulo per sviluppare le tue competenze passo dopo passo. Proverai esempi di base per comprendere i fondamenti prima di passare al modulo [Introduzione](01-introduction/README.md) per un approfondimento con GPT-5.
+Inizia con il modulo [Avvio Rapido](00-quick-start/README.md) e procedi attraverso ogni modulo per sviluppare le tue competenze passo dopo passo. Proverai esempi base per comprendere i fondamenti prima di passare al modulo [Introduzione](01-introduction/README.md) per un approfondimento con GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.it.png" alt="Percorso di Apprendimento" width="800"/>
 
@@ -86,7 +86,7 @@ Vuoi saperne di più? Dai un’occhiata a [Copilot per la programmazione AI in c
 
 ---
 
-### Azure / Edge / MCP / Agenti
+### Azure / Edge / MCP / Agents
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)

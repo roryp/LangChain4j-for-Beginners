@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:27:37+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:09:52+00:00",
   "source_file": "README.md",
   "language_code": "ar"
 }
@@ -39,9 +39,9 @@ CO_OP_TRANSLATOR_METADATA:
 
 1. قم بعمل فورك لهذا المستودع إلى حساب GitHub الخاص بك
 2. انقر على **Code** → تبويب **Codespaces** → **...** → **جديد مع خيارات...**
-3. استخدم الإعدادات الافتراضية – سيختار هذا حاوية التطوير التي تم إنشاؤها لهذه الدورة
+3. استخدم الإعدادات الافتراضية – هذا سيختار حاوية التطوير التي تم إنشاؤها لهذه الدورة
 4. انقر على **إنشاء مساحة التعليمات البرمجية**
-5. انتظر 5-10 دقائق حتى يصبح البيئة جاهزة
+5. انتظر من 5 إلى 10 دقائق حتى يصبح البيئة جاهزة
 6. انتقل مباشرة إلى [البدء السريع](./00-quick-start/README.md) للبدء!
 
 > **تفضل الاستنساخ محليًا؟**
@@ -56,25 +56,25 @@ CO_OP_TRANSLATOR_METADATA:
 
 ابدأ بوحدة [البدء السريع](00-quick-start/README.md) وتقدم خلال كل وحدة لبناء مهاراتك خطوة بخطوة. ستجرب أمثلة أساسية لفهم الأساسيات قبل الانتقال إلى وحدة [المقدمة](01-introduction/README.md) للغوص أعمق مع GPT-5.
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ar.png" alt="مسار التعلم" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ar.png" alt="Learning Path" width="800"/>
 
 بعد إكمال الوحدات، استكشف [دليل الاختبار](docs/TESTING.md) لرؤية مفاهيم اختبار LangChain4j أثناء العمل.
 
-> **ملاحظة:** يستخدم هذا التدريب كل من نماذج GitHub و Azure OpenAI. تستخدم وحدات [البدء السريع](00-quick-start/README.md) و [MCP](05-mcp/README.md) نماذج GitHub (لا حاجة لاشتراك Azure)، بينما تستخدم الوحدات 1-4 Azure OpenAI GPT-5.
+> **ملاحظة:** يستخدم هذا التدريب كل من نماذج GitHub و Azure OpenAI. تستخدم وحدات [البدء السريع](00-quick-start/README.md) و [MCP](05-mcp/README.md) نماذج GitHub (لا يتطلب اشتراك Azure)، بينما تستخدم الوحدات 1-4 Azure OpenAI GPT-5.
 
 
 ## التعلم مع GitHub Copilot
 
-للبدء السريع في الترميز، افتح هذا المشروع في GitHub Codespace أو بيئة التطوير المحلية الخاصة بك مع devcontainer المقدم. يأتي devcontainer المستخدم في هذه الدورة مهيأ مسبقًا مع GitHub Copilot للبرمجة المزدوجة بالذكاء الاصطناعي.
+للبدء السريع في الترميز، افتح هذا المشروع في GitHub Codespace أو بيئة التطوير المحلية الخاصة بك مع devcontainer المقدم. يأتي devcontainer المستخدم في هذه الدورة مهيأ مسبقًا مع GitHub Copilot للبرمجة الزوجية بالذكاء الاصطناعي.
 
-تتضمن كل مثال برمجي أسئلة مقترحة يمكنك طرحها على GitHub Copilot لتعميق فهمك. ابحث عن الإشارات 💡/🤖 في:
+يتضمن كل مثال برمجي أسئلة مقترحة يمكنك طرحها على GitHub Copilot لتعميق فهمك. ابحث عن الإشارات 💡/🤖 في:
 
 - **رؤوس ملفات جافا** - أسئلة محددة لكل مثال
 - **ملفات README للوحدات** - مطالبات استكشافية بعد أمثلة الكود
 
 **كيفية الاستخدام:** افتح أي ملف كود واطرح على Copilot الأسئلة المقترحة. لديه سياق كامل لقاعدة الكود ويمكنه الشرح، التوسيع، واقتراح البدائل.
 
-هل تريد معرفة المزيد؟ اطلع على [Copilot للبرمجة المزدوجة بالذكاء الاصطناعي](https://aka.ms/GitHubCopilotAI).
+هل تريد معرفة المزيد؟ اطلع على [Copilot للبرمجة الزوجية بالذكاء الاصطناعي](https://aka.ms/GitHubCopilotAI).
 
 
 ## موارد إضافية
@@ -103,7 +103,7 @@ CO_OP_TRANSLATOR_METADATA:
 ---
  
 ### التعلم الأساسي
-[![تعلم الآلة للمبتدئين](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![التعلم الآلي للمبتدئين](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![علوم البيانات للمبتدئين](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![الذكاء الاصطناعي للمبتدئين](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![الأمن السيبراني للمبتدئين](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
@@ -114,7 +114,7 @@ CO_OP_TRANSLATOR_METADATA:
 ---
  
 ### سلسلة كوبيلوت
-[![كوبيلوت للبرمجة المزدوجة بالذكاء الاصطناعي](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![كوبيلوت للبرمجة الزوجية بالذكاء الاصطناعي](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![كوبيلوت لـ C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![مغامرة كوبيلوت](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->

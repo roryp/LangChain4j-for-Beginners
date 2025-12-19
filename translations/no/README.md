@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:58:51+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:40:37+00:00",
   "source_file": "README.md",
   "language_code": "no"
 }
@@ -52,7 +52,7 @@ Et kurs for å bygge AI-applikasjoner med LangChain4j og Azure OpenAI GPT-5, fra
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dette gir deg alt du trenger for å fullføre kurset med en mye raskere nedlasting.
+> Dette gir deg alt du trenger for å fullføre kurset med mye raskere nedlasting.
 
 Start med [Rask start](00-quick-start/README.md)-modulen og gå gjennom hver modul for å bygge ferdighetene dine steg for steg. Du vil prøve grunnleggende eksempler for å forstå det grunnleggende før du går videre til [Introduksjon](01-introduction/README.md)-modulen for en dypere gjennomgang med GPT-5.
 
@@ -60,12 +60,12 @@ Start med [Rask start](00-quick-start/README.md)-modulen og gå gjennom hver mod
 
 Etter å ha fullført modulene, utforsk [Testing Guide](docs/TESTING.md) for å se LangChain4j testkonsepter i praksis.
 
-> **Merk:** Denne opplæringen bruker både GitHub Models og Azure OpenAI. [Rask start](00-quick-start/README.md) og [MCP](05-mcp/README.md)-modulene bruker GitHub Models (ingen Azure-abonnement kreves), mens modulene 1-4 bruker Azure OpenAI GPT-5.
+> **Merk:** Denne opplæringen bruker både GitHub Models og Azure OpenAI. [Rask start](00-quick-start/README.md) og [MCP](05-mcp/README.md)-modulene bruker GitHub Models (ingen Azure-abonnement kreves), mens modul 1-4 bruker Azure OpenAI GPT-5.
 
 
 ## Læring med GitHub Copilot
 
-For å raskt komme i gang med koding, åpne dette prosjektet i en GitHub Codespace eller din lokale IDE med den medfølgende devcontaineren. Devcontaineren som brukes i dette kurset kommer forhåndskonfigurert med GitHub Copilot for AI-parprogrammering.
+For å raskt komme i gang med koding, åpne dette prosjektet i en GitHub Codespace eller din lokale IDE med den medfølgende devcontaineren. Devcontaineren som brukes i dette kurset er forhåndskonfigurert med GitHub Copilot for AI-parprogrammering.
 
 Hvert kodeeksempel inkluderer foreslåtte spørsmål du kan stille GitHub Copilot for å utdype forståelsen din. Se etter 💡/🤖-promptene i:
 
@@ -125,7 +125,7 @@ Hvis du står fast eller har spørsmål om å bygge AI-apper, bli med:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Hvis du har produktinnspill eller feil under bygging, besøk:
+Hvis du har produktfeedback eller feil under bygging, besøk:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

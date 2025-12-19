@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:49:50+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:31:24+00:00",
   "source_file": "README.md",
   "language_code": "pl"
 }
@@ -14,14 +14,14 @@ CO_OP_TRANSLATOR_METADATA:
 #### Obsługiwane przez GitHub Action (Automatyczne i zawsze aktualne)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabski](../ar/README.md) | [Bengalski](../bn/README.md) | [Bułgarski](../bg/README.md) | [Birmański (Myanmar)](../my/README.md) | [Chiński (uproszczony)](../zh/README.md) | [Chiński (tradycyjny, Hongkong)](../hk/README.md) | [Chiński (tradycyjny, Makau)](../mo/README.md) | [Chiński (tradycyjny, Tajwan)](../tw/README.md) | [Chorwacki](../hr/README.md) | [Czeski](../cs/README.md) | [Duński](../da/README.md) | [Niderlandzki](../nl/README.md) | [Estoński](../et/README.md) | [Fiński](../fi/README.md) | [Francuski](../fr/README.md) | [Niemiecki](../de/README.md) | [Grecki](../el/README.md) | [Hebrajski](../he/README.md) | [Hindi](../hi/README.md) | [Węgierski](../hu/README.md) | [Indonezyjski](../id/README.md) | [Włoski](../it/README.md) | [Japoński](../ja/README.md) | [Kannada](../kn/README.md) | [Koreański](../ko/README.md) | [Litewski](../lt/README.md) | [Malajski](../ms/README.md) | [Malajalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalski](../ne/README.md) | [Nigeryjski pidgin](../pcm/README.md) | [Norweski](../no/README.md) | [Perski (Farsi)](../fa/README.md) | [Polski](./README.md) | [Portugalski (Brazylia)](../br/README.md) | [Portugalski (Portugalia)](../pt/README.md) | [Pendżabski (Gurmukhi)](../pa/README.md) | [Rumuński](../ro/README.md) | [Rosyjski](../ru/README.md) | [Serbski (cyrylica)](../sr/README.md) | [Słowacki](../sk/README.md) | [Słoweński](../sl/README.md) | [Hiszpański](../es/README.md) | [Suahili](../sw/README.md) | [Szwedzki](../sv/README.md) | [Tagalog (Filipiński)](../tl/README.md) | [Tamilski](../ta/README.md) | [Telugu](../te/README.md) | [Tajski](../th/README.md) | [Turecki](../tr/README.md) | [Ukraiński](../uk/README.md) | [Urdu](../ur/README.md) | [Wietnamski](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](./README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # LangChain4j dla początkujących
 
-Kurs tworzenia aplikacji AI z LangChain4j i Azure OpenAI GPT-5, od podstawowego czatu po agentów AI.
+Kurs budowania aplikacji AI z LangChain4j i Azure OpenAI GPT-5, od podstawowego czatu po agentów AI.
 
-**Nowy w LangChain4j?** Sprawdź [Słownik](docs/GLOSSARY.md) z definicjami kluczowych terminów i pojęć.
+**Nowy w LangChain4j?** Sprawdź [Słownik](docs/GLOSSARY.md) dla definicji kluczowych terminów i pojęć.
 
 ## Spis treści
 
@@ -30,7 +30,7 @@ Kurs tworzenia aplikacji AI z LangChain4j i Azure OpenAI GPT-5, od podstawowego 
 3. [Inżynieria promptów](02-prompt-engineering/README.md) - Opanuj skuteczne projektowanie promptów
 4. [RAG (Generowanie wspomagane wyszukiwaniem)](03-rag/README.md) - Buduj inteligentne systemy oparte na wiedzy
 5. [Narzędzia](04-tools/README.md) - Integruj zewnętrzne narzędzia i API z agentami AI
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Pracuj z protokołem kontekstu modelu
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Pracuj z protokołem Model Context
 ---
 
 ## Ścieżka nauki
@@ -52,9 +52,9 @@ Kurs tworzenia aplikacji AI z LangChain4j i Azure OpenAI GPT-5, od podstawowego 
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> To zapewnia wszystko, czego potrzebujesz do ukończenia kursu, z dużo szybszym pobieraniem.
+> To daje wszystko, czego potrzebujesz, aby ukończyć kurs, z dużo szybszym pobieraniem.
 
-Zacznij od modułu [Szybki start](00-quick-start/README.md) i przechodź przez kolejne moduły, aby krok po kroku rozwijać swoje umiejętności. Wypróbujesz podstawowe przykłady, aby zrozumieć fundamenty, zanim przejdziesz do modułu [Wprowadzenie](01-introduction/README.md) na głębsze zanurzenie z GPT-5.
+Zacznij od modułu [Szybki start](00-quick-start/README.md) i przechodź przez kolejne moduły, aby krok po kroku rozwijać swoje umiejętności. Wypróbujesz podstawowe przykłady, aby zrozumieć fundamenty, zanim przejdziesz do modułu [Wprowadzenie](01-introduction/README.md) na głębsze poznanie GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pl.png" alt="Ścieżka nauki" width="800"/>
 
@@ -67,7 +67,7 @@ Po ukończeniu modułów, zapoznaj się z [Przewodnikiem testowania](docs/TESTIN
 
 Aby szybko zacząć kodować, otwórz ten projekt w GitHub Codespace lub w swoim lokalnym IDE z dostarczonym devcontainerem. Devcontainer używany w tym kursie jest wstępnie skonfigurowany z GitHub Copilot do programowania w parach z AI.
 
-Każdy przykład kodu zawiera sugerowane pytania, które możesz zadać GitHub Copilot, aby pogłębić swoją wiedzę. Szukaj podpowiedzi 💡/🤖 w:
+Każdy przykład kodu zawiera sugerowane pytania, które możesz zadać GitHub Copilot, aby pogłębić swoje zrozumienie. Szukaj podpowiedzi 💡/🤖 w:
 
 - **Nagłówkach plików Java** - pytania specyficzne dla każdego przykładu
 - **Plikach README modułów** - podpowiedzi do eksploracji po przykładach kodu

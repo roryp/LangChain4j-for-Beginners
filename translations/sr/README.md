@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T10:20:45+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T09:00:34+00:00",
   "source_file": "README.md",
   "language_code": "sr"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 Подршка за више језика
 
-#### Подржано преко GitHub Action (Аутоматизовано и увек ажурирано)
+#### Подржано преко GitHub акције (аутоматизовано и увек ажурирано)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](./README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
@@ -65,14 +65,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Учење са GitHub Copilot-ом
 
-Да бисте брзо почели са кодирањем, отворите овај пројекат у GitHub Codespace-у или вашем локалном IDE-у са обезбеђеним devcontainer-ом. Devcontainer који се користи у овом курсу је претходно конфигурисан са GitHub Copilot-ом за AI парно програмирање.
+Да бисте брзо почели са кодирањем, отворите овај пројекат у GitHub Codespace-у или у свом локалном IDE-у са обезбеђеним devcontainer-ом. Devcontainer који се користи у овом курсу је претходно конфигурисан са GitHub Copilot-ом за AI парно програмирање.
 
-Сваки пример кода укључује предложена питања која можете поставити GitHub Copilot-у да продубите своје разумевање. Потражите 💡/🤖 упутства у:
+Сваки пример кода укључује предложена питања која можете поставити GitHub Copilot-у да бисте продубили своје разумевање. Потражите 💡/🤖 упутства у:
 
-- **Java заглављима фајлова** - Питања специфична за сваки пример
+- **Заглављима Java фајлова** - Питања специфична за сваки пример
 - **README-има модула** - Упутства за истраживање након примера кода
 
-**Како користити:** Отворите било који фајл са кодом и поставите Copilot-у предложена питања. Има пун контекст базе кода и може објаснити, проширити и предложити алтернативе.
+**Како користити:** Отворите било који фајл са кодом и поставите Copilot-у предложена питања. Он има пун контекст базе кода и може објаснити, проширити и предложити алтернативе.
 
 Желите да сазнате више? Погледајте [Copilot за AI парно програмирање](https://aka.ms/GitHubCopilotAI).
 
@@ -121,11 +121,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Добијање помоћи
 
-Ако запнете или имате било каквих питања о изградњи AI апликација, придружите се:
+Ако запнете или имате било каквих питања о изради AI апликација, придружите се:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Ако имате повратне информације о производу или грешке током изградње посетите:
+Ако имате повратне информације о производу или грешке током израде посетите:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 

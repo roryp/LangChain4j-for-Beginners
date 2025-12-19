@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d1499d1abf7e653e94fde35644629500",
-  "translation_date": "2025-12-18T09:30:15+00:00",
+  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
+  "translation_date": "2025-12-19T08:12:16+00:00",
   "source_file": "README.md",
   "language_code": "ur"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 کثیراللسانی معاونت
 
-#### GitHub ایکشن کے ذریعے معاونت یافتہ (خودکار اور ہمیشہ تازہ ترین)
+#### GitHub ایکشن کے ذریعے معاونت (خودکار اور ہمیشہ تازہ ترین)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](./README.md) | [Vietnamese](../vi/README.md)
@@ -69,7 +69,7 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 ہر کوڈ مثال میں وہ سوالات شامل ہیں جو آپ GitHub Copilot سے پوچھ سکتے ہیں تاکہ اپنی سمجھ کو گہرا کریں۔ 💡/🤖 پرامپٹس تلاش کریں:
 
 - **Java فائل ہیڈرز** - ہر مثال کے مخصوص سوالات
-- **ماڈیول README فائلیں** - کوڈ مثالوں کے بعد دریافت کے پرامپٹس
+- **ماڈیول README فائلز** - کوڈ مثالوں کے بعد دریافت کے پرامپٹس
 
 **استعمال کا طریقہ:** کوئی بھی کوڈ فائل کھولیں اور Copilot سے تجویز کردہ سوالات پوچھیں۔ اسے کوڈ بیس کا مکمل سیاق و سباق معلوم ہے اور یہ وضاحت، توسیع، اور متبادل تجاویز دے سکتا ہے۔
 
@@ -123,7 +123,7 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-اگر آپ کے پاس پروڈکٹ فیڈبیک ہو یا بنانے کے دوران کوئی غلطی ہو تو ملاحظہ کریں:
+اگر آپ کے پاس پروڈکٹ فیڈبیک یا تعمیر کے دوران غلطیاں ہوں تو ملاحظہ کریں:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
