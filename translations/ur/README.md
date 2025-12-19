@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:12:16+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T09:57:40+00:00",
   "source_file": "README.md",
   "language_code": "ur"
 }
@@ -21,12 +21,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بنانے کا کورس، بنیادی چیٹ سے لے کر AI ایجنٹس تک۔
 
-**LangChain4j میں نیا ہیں؟** اہم اصطلاحات اور تصورات کی تعریف کے لیے [Glossary](docs/GLOSSARY.md) دیکھیں۔
+**LangChain4j میں نئے ہیں؟** اہم اصطلاحات اور تصورات کی تعریف کے لیے [Glossary](docs/GLOSSARY.md) دیکھیں۔
 
 ## فہرست مضامین
 
 1. [فوری آغاز](00-quick-start/README.md) - LangChain4j کے ساتھ شروع کریں
-2. [تعارف](01-introduction/README.md) - LangChain4j کی بنیادی باتیں سیکھیں
+2. [تعارف](01-introduction/README.md) - LangChain4j کے بنیادی اصول سیکھیں
 3. [پرومپٹ انجینئرنگ](02-prompt-engineering/README.md) - مؤثر پرومپٹ ڈیزائن میں مہارت حاصل کریں
 4. [RAG (ریٹریول-آگمینٹڈ جنریشن)](03-rag/README.md) - ذہین علم پر مبنی نظام بنائیں
 5. [ٹولز](04-tools/README.md) - AI ایجنٹس کے ساتھ بیرونی ٹولز اور APIs کو مربوط کریں
@@ -46,7 +46,7 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 > **مقامی طور پر کلون کرنا پسند کریں؟**
 >
-> اس ریپوزیٹری میں 50+ زبانوں کے تراجم شامل ہیں جو ڈاؤن لوڈ کے حجم کو نمایاں طور پر بڑھاتے ہیں۔ تراجم کے بغیر کلون کرنے کے لیے sparse checkout استعمال کریں:
+> اس ریپوزیٹری میں 50+ زبانوں کے تراجم شامل ہیں جو ڈاؤن لوڈ سائز کو نمایاں طور پر بڑھاتے ہیں۔ تراجم کے بغیر کلون کرنے کے لیے sparse checkout استعمال کریں:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -54,7 +54,7 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 > ```
 > یہ آپ کو کورس مکمل کرنے کے لیے ہر چیز فراہم کرتا ہے، اور ڈاؤن لوڈ بہت تیز ہوتا ہے۔
 
-[فوری آغاز](00-quick-start/README.md) ماڈیول سے شروع کریں اور ہر ماڈیول کے ذریعے قدم بہ قدم اپنی مہارتیں بڑھائیں۔ آپ بنیادی مثالیں آزما کر بنیادی باتیں سمجھیں گے، پھر GPT-5 کے ساتھ گہرائی میں جانے کے لیے [تعارف](01-introduction/README.md) ماڈیول پر جائیں گے۔
+[فوری آغاز](00-quick-start/README.md) ماڈیول سے شروع کریں اور ہر ماڈیول کے ذریعے قدم بہ قدم اپنی مہارتیں بڑھائیں۔ آپ بنیادی مثالیں آزما کر اصول سمجھیں گے، پھر GPT-5 کے ساتھ گہرائی میں جانے کے لیے [تعارف](01-introduction/README.md) ماڈیول پر جائیں گے۔
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ur.png" alt="Learning Path" width="800"/>
 
@@ -123,7 +123,7 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-اگر آپ کے پاس پروڈکٹ فیڈبیک یا تعمیر کے دوران غلطیاں ہوں تو ملاحظہ کریں:
+اگر آپ کے پاس پروڈکٹ فیڈبیک ہو یا بنانے کے دوران کوئی غلطی ہو تو ملاحظہ کریں:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -135,5 +135,5 @@ MIT لائسنس - تفصیلات کے لیے [LICENSE](../../LICENSE) فائل 
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **دستخطی دستبرداری**:  
-یہ دستاویز AI ترجمہ سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کے ذریعے ترجمہ کی گئی ہے۔ اگرچہ ہم درستگی کے لیے کوشاں ہیں، براہ کرم اس بات سے آگاہ رہیں کہ خودکار ترجمے میں غلطیاں یا عدم درستیاں ہو سکتی ہیں۔ اصل دستاویز اپنی مادری زبان میں معتبر ماخذ سمجھی جانی چاہیے۔ اہم معلومات کے لیے پیشہ ور انسانی ترجمہ کی سفارش کی جاتی ہے۔ اس ترجمے کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا غلط تشریح کی ذمہ داری ہم پر عائد نہیں ہوتی۔
+یہ دستاویز AI ترجمہ سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کے ذریعے ترجمہ کی گئی ہے۔ اگرچہ ہم درستگی کے لیے کوشاں ہیں، براہ کرم آگاہ رہیں کہ خودکار ترجمے میں غلطیاں یا عدم درستیاں ہو سکتی ہیں۔ اصل دستاویز اپنی مادری زبان میں ہی معتبر ماخذ سمجھی جانی چاہیے۔ اہم معلومات کے لیے پیشہ ور انسانی ترجمہ کی سفارش کی جاتی ہے۔ اس ترجمے کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا غلط تشریح کی ذمہ داری ہم پر عائد نہیں ہوتی۔
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:50:33+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:36:16+00:00",
   "source_file": "README.md",
   "language_code": "tl"
 }
@@ -54,7 +54,7 @@ Isang kurso para sa paggawa ng mga AI application gamit ang LangChain4j at Azure
 > ```
 > Bibigyan ka nito ng lahat ng kailangan mo para matapos ang kurso nang mas mabilis ang pag-download.
 
-Magsimula sa [Mabilis na Pagsisimula](00-quick-start/README.md) na module at magpatuloy sa bawat module upang unti-unting paunlarin ang iyong mga kasanayan. Susubukan mo ang mga basic na halimbawa upang maunawaan ang mga pundasyon bago lumipat sa [Panimula](01-introduction/README.md) na module para sa mas malalim na pag-aaral gamit ang GPT-5.
+Magsimula sa [Mabilis na Pagsisimula](00-quick-start/README.md) na module at magpatuloy sa bawat module upang paunlarin ang iyong mga kasanayan nang hakbang-hakbang. Susubukan mo ang mga basic na halimbawa upang maunawaan ang mga pundasyon bago lumipat sa [Panimula](01-introduction/README.md) na module para sa mas malalim na pag-aaral gamit ang GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.tl.png" alt="Learning Path" width="800"/>
 
@@ -65,14 +65,14 @@ Pagkatapos makumpleto ang mga module, tuklasin ang [Testing Guide](docs/TESTING.
 
 ## Pag-aaral gamit ang GitHub Copilot
 
-Para mabilis na makapagsimula sa pag-code, buksan ang proyektong ito sa isang GitHub Codespace o sa iyong lokal na IDE gamit ang ibinigay na devcontainer. Ang devcontainer na ginamit sa kursong ito ay naka-pre-configure na gamit ang GitHub Copilot para sa AI paired programming.
+Para mabilis na makapagsimula sa pag-cocode, buksan ang proyektong ito sa isang GitHub Codespace o sa iyong lokal na IDE gamit ang ibinigay na devcontainer. Ang devcontainer na ginamit sa kursong ito ay pre-configured na may GitHub Copilot para sa AI paired programming.
 
 Bawat halimbawa ng code ay may kasamang mga mungkahing tanong na maaari mong itanong sa GitHub Copilot upang palalimin ang iyong pag-unawa. Hanapin ang mga 💡/🤖 na prompt sa:
 
 - **Java file headers** - Mga tanong na partikular sa bawat halimbawa
 - **Module READMEs** - Mga prompt para sa eksplorasyon pagkatapos ng mga halimbawa ng code
 
-**Paano gamitin:** Buksan ang anumang file ng code at itanong ang mga mungkahing tanong kay Copilot. Mayroon itong buong konteksto ng codebase at maaaring magpaliwanag, magpalawak, at magmungkahi ng mga alternatibo.
+**Paano gamitin:** Buksan ang anumang file ng code at itanong ang mga mungkahing tanong sa Copilot. Mayroon itong buong konteksto ng codebase at maaaring magpaliwanag, magpalawak, at magmungkahi ng mga alternatibo.
 
 Gusto mo bang matuto pa? Tingnan ang [Copilot para sa AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 

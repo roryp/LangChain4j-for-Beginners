@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:06:51+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T09:52:15+00:00",
   "source_file": "README.md",
   "language_code": "de"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j für Einsteiger
 
-Ein Kurs zum Erstellen von KI-Anwendungen mit LangChain4j und Azure OpenAI GPT-5, von einfachem Chat bis zu KI-Agenten.
+Ein Kurs zum Erstellen von KI-Anwendungen mit LangChain4j und Azure OpenAI GPT-5, vom einfachen Chat bis zu KI-Agenten.
 
 **Neu bei LangChain4j?** Schau dir das [Glossar](docs/GLOSSARY.md) für Definitionen wichtiger Begriffe und Konzepte an.
 
@@ -29,7 +29,7 @@ Ein Kurs zum Erstellen von KI-Anwendungen mit LangChain4j und Azure OpenAI GPT-5
 2. [Einführung](01-introduction/README.md) - Grundlagen von LangChain4j kennenlernen
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Effektives Prompt-Design meistern
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Intelligente wissensbasierte Systeme bauen
-5. [Tools](04-tools/README.md) - Externe Tools und APIs mit KI-Agenten integrieren
+5. [Werkzeuge](04-tools/README.md) - Externe Werkzeuge und APIs mit KI-Agenten integrieren
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Arbeiten mit dem Model Context Protocol
 ---
 
@@ -65,12 +65,12 @@ Nach Abschluss der Module kannst du den [Testleitfaden](docs/TESTING.md) erkunde
 
 ## Lernen mit GitHub Copilot
 
-Um schnell mit dem Programmieren zu beginnen, öffne dieses Projekt in einem GitHub Codespace oder deiner lokalen IDE mit dem bereitgestellten Devcontainer. Der in diesem Kurs verwendete Devcontainer ist vorkonfiguriert mit GitHub Copilot für KI-gestütztes Paarprogrammieren.
+Um schnell mit dem Programmieren zu beginnen, öffne dieses Projekt in einem GitHub Codespace oder deiner lokalen IDE mit dem bereitgestellten Devcontainer. Der in diesem Kurs verwendete Devcontainer ist vorkonfiguriert mit GitHub Copilot für KI-Paarprogrammierung.
 
 Jedes Codebeispiel enthält vorgeschlagene Fragen, die du GitHub Copilot stellen kannst, um dein Verständnis zu vertiefen. Achte auf die 💡/🤖 Hinweise in:
 
-- **Java-Dateikopfzeilen** - Fragen, die speziell zu jedem Beispiel gehören
-- **Modul-READMEs** - Erkundungsfragen nach Codebeispielen
+- **Java-Dateikopfzeilen** – Fragen, die speziell zu jedem Beispiel gehören
+- **Modul-READMEs** – Erkundungsfragen nach Codebeispielen
 
 **Wie man es benutzt:** Öffne eine beliebige Code-Datei und stelle Copilot die vorgeschlagenen Fragen. Es hat den vollständigen Kontext des Codes und kann erklären, erweitern und Alternativen vorschlagen.
 
@@ -88,7 +88,7 @@ Möchtest du mehr lernen? Schau dir [Copilot für KI-Paarprogrammierung](https:/
 
 ### Azure / Edge / MCP / Agenten
 [![AZD für Einsteiger](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Edge KI für Einsteiger](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Edge AI für Einsteiger](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP für Einsteiger](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![KI-Agenten für Einsteiger](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 

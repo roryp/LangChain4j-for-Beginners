@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:40:37+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:26:17+00:00",
   "source_file": "README.md",
   "language_code": "no"
 }
@@ -29,7 +29,7 @@ Et kurs for å bygge AI-applikasjoner med LangChain4j og Azure OpenAI GPT-5, fra
 2. [Introduksjon](01-introduction/README.md) - Lær det grunnleggende om LangChain4j
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Mestre effektiv promptdesign
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Bygg intelligente kunnskapsbaserte systemer
-5. [Verktøy](04-tools/README.md) - Integrer eksterne verktøy og API-er med AI-agenter
+5. [Verktøy](04-tools/README.md) - Integrer eksterne verktøy og APIer med AI-agenter
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Arbeid med Model Context Protocol
 ---
 
@@ -39,14 +39,14 @@ Et kurs for å bygge AI-applikasjoner med LangChain4j og Azure OpenAI GPT-5, fra
 
 1. Fork dette depotet til din GitHub-konto
 2. Klikk **Code** → **Codespaces**-fanen → **...** → **New with options...**
-3. Bruk standardinnstillingene – dette velger utviklingscontaineren som er laget for dette kurset
+3. Bruk standardinnstillingene – dette velger utviklingscontaineren laget for dette kurset
 4. Klikk **Create codespace**
 5. Vent 5-10 minutter til miljøet er klart
 6. Gå rett til [Rask start](./00-quick-start/README.md) for å komme i gang!
 
 > **Foretrekker du å klone lokalt?**
 >
-> Dette depotet inkluderer 50+ språkoversettelser som øker nedlastingsstørrelsen betydelig. For å klone uten oversettelser, bruk sparse checkout:
+> Dette depotet inkluderer 50+ språkoversettelser som betydelig øker nedlastingsstørrelsen. For å klone uten oversettelser, bruk sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -60,7 +60,7 @@ Start med [Rask start](00-quick-start/README.md)-modulen og gå gjennom hver mod
 
 Etter å ha fullført modulene, utforsk [Testing Guide](docs/TESTING.md) for å se LangChain4j testkonsepter i praksis.
 
-> **Merk:** Denne opplæringen bruker både GitHub Models og Azure OpenAI. [Rask start](00-quick-start/README.md) og [MCP](05-mcp/README.md)-modulene bruker GitHub Models (ingen Azure-abonnement kreves), mens modul 1-4 bruker Azure OpenAI GPT-5.
+> **Merk:** Denne opplæringen bruker både GitHub Models og Azure OpenAI. [Rask start](00-quick-start/README.md) og [MCP](05-mcp/README.md) modulene bruker GitHub Models (ingen Azure-abonnement kreves), mens modul 1-4 bruker Azure OpenAI GPT-5.
 
 
 ## Læring med GitHub Copilot

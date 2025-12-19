@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T09:01:59+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:47:12+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -30,7 +30,7 @@ Tečaj za izgradnju AI aplikacija s LangChain4j i Azure OpenAI GPT-5, od osnovno
 3. [Inženjering prompta](02-prompt-engineering/README.md) - Ovladavanje učinkovitim dizajnom prompta
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Izgradite inteligentne sustave temeljene na znanju
 5. [Alati](04-tools/README.md) - Integrirajte vanjske alate i API-je s AI agentima
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Rad s Model Context Protocol
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Rad s Model Context Protocolom
 ---
 
 ## Put učenja
@@ -54,9 +54,9 @@ Tečaj za izgradnju AI aplikacija s LangChain4j i Azure OpenAI GPT-5, od osnovno
 > ```
 > Ovo vam daje sve što vam treba za dovršetak tečaja s mnogo bržim preuzimanjem.
 
-Započnite s modulom [Brzi početak](00-quick-start/README.md) i napredujte kroz svaki modul kako biste korak po korak razvijali svoje vještine. Isprobajte osnovne primjere da razumijete osnove prije nego što prijeđete na modul [Uvod](01-introduction/README.md) za dublje razumijevanje s GPT-5.
+Započnite s modulom [Brzi početak](00-quick-start/README.md) i napredujte kroz svaki modul kako biste korak po korak gradili svoje vještine. Isprobajte osnovne primjere da razumijete osnove prije nego što prijeđete na modul [Uvod](01-introduction/README.md) za dublje upoznavanje s GPT-5.
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hr.png" alt="Learning Path" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hr.png" alt="Put učenja" width="800"/>
 
 Nakon završetka modula, istražite [Vodič za testiranje](docs/TESTING.md) da vidite koncepte testiranja LangChain4j u praksi.
 
@@ -69,8 +69,8 @@ Za brzo započinjanje kodiranja, otvorite ovaj projekt u GitHub Codespaceu ili u
 
 Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub Copilotu za dublje razumijevanje. Potražite 💡/🤖 oznake u:
 
-- **Java zaglavljima datoteka** - Pitanja specifična za svaki primjer
-- **README datotekama modula** - Istraživački upiti nakon primjera koda
+- **Zaglavlja Java datoteka** - Pitanja specifična za svaki primjer
+- **README datoteke modula** - Istraživački upiti nakon primjera koda
 
 **Kako koristiti:** Otvorite bilo koju datoteku s kodom i postavite Copilotu predložena pitanja. Ima puni kontekst baze koda i može objasniti, proširiti i predložiti alternative.
 
@@ -94,11 +94,11 @@ Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub 
 
 ---
  
-### Serija Generativnog AI
-[![Generativni AI za početnike](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Generativni AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![Generativni AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
-[![Generativni AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+### Serija generativne AI
+[![Generativna AI za početnike](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Generativna AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![Generativna AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Generativna AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
@@ -137,5 +137,5 @@ MIT licenca - Pogledajte datoteku [LICENSE](../../LICENSE) za detalje.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Odricanje od odgovornosti**:
-Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazume ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

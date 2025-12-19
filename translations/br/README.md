@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:28:43+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:15:05+00:00",
   "source_file": "README.md",
   "language_code": "br"
 }
@@ -37,7 +37,7 @@ Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5,
 
 > **Início Rápido**
 
-1. Faça um fork deste repositório para sua conta no GitHub
+1. Faça um fork deste repositório para sua conta do GitHub
 2. Clique em **Code** → aba **Codespaces** → **...** → **Novo com opções...**
 3. Use as configurações padrão – isso selecionará o container de Desenvolvimento criado para este curso
 4. Clique em **Criar codespace**
@@ -46,7 +46,7 @@ Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5,
 
 > **Prefere Clonar Localmente?**
 >
-> Este repositório inclui mais de 50 traduções de idiomas, o que aumenta significativamente o tamanho do download. Para clonar sem as traduções, use o sparse checkout:
+> Este repositório inclui mais de 50 traduções de idiomas, o que aumenta significativamente o tamanho do download. Para clonar sem traduções, use o sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -121,7 +121,7 @@ Quer aprender mais? Confira [Copilot para Programação em Par com IA](https://a
 
 ## Obter Ajuda
 
-Se você ficar preso ou tiver alguma dúvida sobre como criar aplicativos de IA, participe:
+Se você ficar preso ou tiver alguma dúvida sobre como criar aplicativos de IA, junte-se a:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -137,5 +137,5 @@ Licença MIT - Veja o arquivo [LICENSE](../../LICENSE) para detalhes.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Aviso Legal**:  
-Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
+Este documento foi traduzido utilizando o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

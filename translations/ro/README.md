@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:57:19+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:42:46+00:00",
   "source_file": "README.md",
   "language_code": "ro"
 }
@@ -27,7 +27,7 @@ Un curs pentru construirea aplicațiilor AI cu LangChain4j și Azure OpenAI GPT-
 
 1. [Pornire Rapidă](00-quick-start/README.md) - Începe cu LangChain4j
 2. [Introducere](01-introduction/README.md) - Învață elementele fundamentale ale LangChain4j
-3. [Ingineria Promptului](02-prompt-engineering/README.md) - Stăpânește proiectarea eficientă a prompturilor
+3. [Ingineria Prompturilor](02-prompt-engineering/README.md) - Stăpânește proiectarea eficientă a prompturilor
 4. [RAG (Generare Augmentată prin Recuperare)](03-rag/README.md) - Construiește sisteme inteligente bazate pe cunoștințe
 5. [Unelte](04-tools/README.md) - Integrează unelte externe și API-uri cu agenți AI
 6. [MCP (Protocolul Contextului Modelului)](05-mcp/README.md) - Lucrează cu Protocolul Contextului Modelului
@@ -46,7 +46,7 @@ Un curs pentru construirea aplicațiilor AI cu LangChain4j și Azure OpenAI GPT-
 
 > **Preferi să clonezi local?**
 >
-> Acest depozit include peste 50 de traduceri, ceea ce crește semnificativ dimensiunea descărcării. Pentru a clona fără traduceri, folosește sparse checkout:
+> Acest depozit include peste 50 de traduceri care cresc semnificativ dimensiunea descărcării. Pentru a clona fără traduceri, folosește sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -60,7 +60,7 @@ Un curs pentru construirea aplicațiilor AI cu LangChain4j și Azure OpenAI GPT-
 
 După ce termini modulele, explorează [Ghidul de Testare](docs/TESTING.md) pentru a vedea conceptele de testare LangChain4j în acțiune.
 
-> **Notă:** Această instruire folosește atât Modelele GitHub, cât și Azure OpenAI. Modulele [Pornire Rapidă](00-quick-start/README.md) și [MCP](05-mcp/README.md) folosesc Modelele GitHub (nu este necesar abonament Azure), în timp ce modulele 1-4 folosesc Azure OpenAI GPT-5.
+> **Notă:** Acest training folosește atât Modele GitHub, cât și Azure OpenAI. Modulele [Pornire Rapidă](00-quick-start/README.md) și [MCP](05-mcp/README.md) folosesc Modele GitHub (nu este necesar abonament Azure), în timp ce modulele 1-4 folosesc Azure OpenAI GPT-5.
 
 
 ## Învățare cu GitHub Copilot
@@ -94,7 +94,7 @@ Vrei să afli mai multe? Consultă [Copilot pentru programare asistată AI în p
 
 ---
  
-### Seria AI Generativă
+### Seria AI Generativ
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -127,7 +127,7 @@ Dacă întâmpini dificultăți sau ai întrebări despre construirea aplicații
 
 Dacă ai feedback despre produs sau erori în timpul construirii, vizitează:
 
-[![Forumul Dezvoltatorilor Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Forum Dezvoltatori Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licență
 

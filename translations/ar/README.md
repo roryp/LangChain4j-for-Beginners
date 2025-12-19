@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:09:52+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T09:55:21+00:00",
   "source_file": "README.md",
   "language_code": "ar"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 دورة لبناء تطبيقات الذكاء الاصطناعي باستخدام LangChain4j و Azure OpenAI GPT-5، من الدردشة الأساسية إلى وكلاء الذكاء الاصطناعي.
 
-**جديد على LangChain4j؟** اطلع على [المصطلحات](docs/GLOSSARY.md) لتعريفات المصطلحات والمفاهيم الأساسية.
+**جديد في LangChain4j؟** اطلع على [المصطلحات](docs/GLOSSARY.md) لتعريفات المصطلحات والمفاهيم الأساسية.
 
 ## جدول المحتويات
 
@@ -60,14 +60,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 بعد إكمال الوحدات، استكشف [دليل الاختبار](docs/TESTING.md) لرؤية مفاهيم اختبار LangChain4j أثناء العمل.
 
-> **ملاحظة:** يستخدم هذا التدريب كل من نماذج GitHub و Azure OpenAI. تستخدم وحدات [البدء السريع](00-quick-start/README.md) و [MCP](05-mcp/README.md) نماذج GitHub (لا يتطلب اشتراك Azure)، بينما تستخدم الوحدات 1-4 Azure OpenAI GPT-5.
+> **ملاحظة:** يستخدم هذا التدريب كل من نماذج GitHub و Azure OpenAI. تستخدم وحدات [البدء السريع](00-quick-start/README.md) و [MCP](05-mcp/README.md) نماذج GitHub (لا حاجة لاشتراك Azure)، بينما تستخدم الوحدات 1-4 Azure OpenAI GPT-5.
 
 
 ## التعلم مع GitHub Copilot
 
-للبدء السريع في الترميز، افتح هذا المشروع في GitHub Codespace أو بيئة التطوير المحلية الخاصة بك مع devcontainer المقدم. يأتي devcontainer المستخدم في هذه الدورة مهيأ مسبقًا مع GitHub Copilot للبرمجة الزوجية بالذكاء الاصطناعي.
+لبدء الترميز بسرعة، افتح هذا المشروع في GitHub Codespace أو بيئة التطوير المحلية الخاصة بك مع devcontainer المقدم. يأتي devcontainer المستخدم في هذه الدورة مهيأ مسبقًا مع GitHub Copilot للبرمجة الزوجية بالذكاء الاصطناعي.
 
-يتضمن كل مثال برمجي أسئلة مقترحة يمكنك طرحها على GitHub Copilot لتعميق فهمك. ابحث عن الإشارات 💡/🤖 في:
+تتضمن كل أمثلة الكود أسئلة مقترحة يمكنك طرحها على GitHub Copilot لتعميق فهمك. ابحث عن الإشارات 💡/🤖 في:
 
 - **رؤوس ملفات جافا** - أسئلة محددة لكل مثال
 - **ملفات README للوحدات** - مطالبات استكشافية بعد أمثلة الكود
@@ -103,7 +103,7 @@ CO_OP_TRANSLATOR_METADATA:
 ---
  
 ### التعلم الأساسي
-[![التعلم الآلي للمبتدئين](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![تعلم الآلة للمبتدئين](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![علوم البيانات للمبتدئين](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![الذكاء الاصطناعي للمبتدئين](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![الأمن السيبراني للمبتدئين](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
@@ -113,10 +113,10 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### سلسلة كوبيلوت
-[![كوبيلوت للبرمجة الزوجية بالذكاء الاصطناعي](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![كوبيلوت لـ C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![مغامرة كوبيلوت](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+### سلسلة كوبايلوت
+[![كوبايلوت للبرمجة الزوجية بالذكاء الاصطناعي](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![كوبايلوت لـ C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![مغامرة كوبايلوت](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## الحصول على المساعدة

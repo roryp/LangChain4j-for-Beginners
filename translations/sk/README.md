@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1dccdb1a8e2b8ed18e6dea22e823c608",
-  "translation_date": "2025-12-19T08:55:52+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:41:19+00:00",
   "source_file": "README.md",
   "language_code": "sk"
 }
@@ -54,11 +54,11 @@ Kurz na tvorbu AI aplikácií s LangChain4j a Azure OpenAI GPT-5, od základnéh
 > ```
 > Toto vám poskytne všetko potrebné na dokončenie kurzu s oveľa rýchlejším sťahovaním.
 
-Začnite modulom [Rýchly štart](00-quick-start/README.md) a postupujte cez jednotlivé moduly krok za krokom, aby ste si vybudovali zručnosti. Vyskúšate si základné príklady na pochopenie základov predtým, než prejdete do modulu [Úvod](01-introduction/README.md) pre hlbší ponor s GPT-5.
+Začnite modulom [Rýchly štart](00-quick-start/README.md) a postupujte cez jednotlivé moduly, aby ste si krok za krokom vybudovali zručnosti. Vyskúšate si základné príklady na pochopenie základov predtým, než prejdete do modulu [Úvod](01-introduction/README.md) pre hlbší ponor s GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.sk.png" alt="Learning Path" width="800"/>
 
-Po dokončení modulov preskúmajte [Sprievodcu testovaním](docs/TESTING.md), aby ste videli koncepty testovania LangChain4j v praxi.
+Po dokončení modulov preskúmajte [Testovací sprievodca](docs/TESTING.md), aby ste videli koncepty testovania LangChain4j v praxi.
 
 > **Poznámka:** Tento tréning používa modely GitHub aj Azure OpenAI. Moduly [Rýchly štart](00-quick-start/README.md) a [MCP](05-mcp/README.md) používajú modely GitHub (nie je potrebné predplatné Azure), zatiaľ čo moduly 1-4 používajú Azure OpenAI GPT-5.
 
@@ -72,7 +72,7 @@ Každý príklad kódu obsahuje navrhované otázky, ktoré môžete položiť G
 - **Hlavičkách Java súborov** - Otázky špecifické pre každý príklad
 - **README modulov** - Výzvy na skúmanie po príkladoch kódu
 
-**Ako používať:** Otvorte akýkoľvek súbor s kódom a položte Copilotovi navrhované otázky. Má plný kontext kódu a môže vysvetľovať, rozširovať a navrhovať alternatívy.
+**Ako používať:** Otvorte ľubovoľný súbor s kódom a položte Copilotovi navrhované otázky. Má plný kontext kódu a môže vysvetľovať, rozširovať a navrhovať alternatívy.
 
 Chcete sa dozvedieť viac? Pozrite si [Copilot pre AI párované programovanie](https://aka.ms/GitHubCopilotAI).
 
@@ -86,7 +86,7 @@ Chcete sa dozvedieť viac? Pozrite si [Copilot pre AI párované programovanie](
 
 ---
 
-### Azure / Edge / MCP / Agentov
+### Azure / Edge / MCP / Agents
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -94,7 +94,7 @@ Chcete sa dozvedieť viac? Pozrite si [Copilot pre AI párované programovanie](
 
 ---
  
-### Séria Generatívnej AI
+### Generatívna AI séria
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -106,7 +106,7 @@ Chcete sa dozvedieť viac? Pozrite si [Copilot pre AI párované programovanie](
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![Kyberbezpečnosť pre začiatočníkov](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Kybernetická bezpečnosť pre začiatočníkov](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Webový vývoj pre začiatočníkov](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT pre začiatočníkov](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
 [![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -121,7 +121,7 @@ Chcete sa dozvedieť viac? Pozrite si [Copilot pre AI párované programovanie](
 
 ## Získanie pomoci
 
-Ak sa zaseknete alebo máte otázky ohľadom tvorby AI aplikácií, pripojte sa:
+Ak sa zaseknete alebo máte otázky o tvorbe AI aplikácií, pripojte sa:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -137,5 +137,5 @@ MIT licencia - Podrobnosti nájdete v súbore [LICENSE](../../LICENSE).
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zrieknutie sa zodpovednosti**:
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, majte prosím na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, majte prosím na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho rodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
