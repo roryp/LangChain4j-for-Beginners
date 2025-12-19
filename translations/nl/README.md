@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:30:34+00:00",
+  "original_hash": "d1499d1abf7e653e94fde35644629500",
+  "translation_date": "2025-12-18T10:01:57+00:00",
   "source_file": "README.md",
   "language_code": "nl"
 }
@@ -21,11 +21,11 @@ CO_OP_TRANSLATOR_METADATA:
 
 Een cursus voor het bouwen van AI-toepassingen met LangChain4j en Azure OpenAI GPT-5, van basis chat tot AI-agenten.
 
-**Nieuw met LangChain4j?** Bekijk de [Glossary](docs/GLOSSARY.md) voor definities van sleuteltermen en concepten.
+**Nieuw bij LangChain4j?** Bekijk de [Glossary](docs/GLOSSARY.md) voor definities van sleuteltermen en concepten.
 
 ## Inhoudsopgave
 
-1. [Snel aan de slag](00-quick-start/README.md) - Begin met LangChain4j
+1. [Quick Start](00-quick-start/README.md) - Begin met LangChain4j
 2. [Introductie](01-introduction/README.md) - Leer de basisprincipes van LangChain4j
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Beheers effectieve promptontwerp
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Bouw intelligente kennisgebaseerde systemen
@@ -33,20 +33,39 @@ Een cursus voor het bouwen van AI-toepassingen met LangChain4j en Azure OpenAI G
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Werk met het Model Context Protocol
 ---
 
-## Leerpad
+## Leertraject
 
-Begin met de [Snel aan de slag](00-quick-start/README.md) module en werk stap voor stap door elke module om je vaardigheden op te bouwen. Je probeert basisvoorbeelden om de fundamenten te begrijpen voordat je doorgaat naar de [Introductie](01-introduction/README.md) module voor een diepere duik met GPT-5.
+> **Quick Start**
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.nl.png" alt="Leerpad" width="800"/>
+1. Fork deze repository naar je GitHub-account
+2. Klik op **Code** → tabblad **Codespaces** → **...** → **Nieuw met opties...**
+3. Gebruik de standaardinstellingen – dit selecteert de ontwikkelcontainer die voor deze cursus is gemaakt
+4. Klik op **Codespace maken**
+5. Wacht 5-10 minuten tot de omgeving klaar is
+6. Ga direct naar [Quick Start](./00-quick-start/README.md) om te beginnen!
+
+> **Lieber lokaal klonen?**
+>
+> Deze repository bevat meer dan 50 taalvertalingen, wat de downloadgrootte aanzienlijk vergroot. Om te klonen zonder vertalingen, gebruik sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Dit geeft je alles wat je nodig hebt om de cursus te voltooien met een veel snellere download.
+
+Begin met de module [Quick Start](00-quick-start/README.md) en werk stap voor stap door elke module om je vaardigheden op te bouwen. Je probeert basisvoorbeelden om de fundamenten te begrijpen voordat je doorgaat naar de module [Introductie](01-introduction/README.md) voor een diepere duik met GPT-5.
+
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.nl.png" alt="Leertraject" width="800"/>
 
 Na het voltooien van de modules, verken de [Testgids](docs/TESTING.md) om LangChain4j testconcepten in actie te zien.
 
-> **Opmerking:** Deze training gebruikt zowel GitHub Models als Azure OpenAI. De [Snel aan de slag](00-quick-start/README.md) en [MCP](05-mcp/README.md) modules gebruiken GitHub Models (geen Azure-abonnement vereist), terwijl modules 1-4 Azure OpenAI GPT-5 gebruiken.
+> **Opmerking:** Deze training gebruikt zowel GitHub Models als Azure OpenAI. De modules [Quick Start](00-quick-start/README.md) en [MCP](05-mcp/README.md) gebruiken GitHub Models (geen Azure-abonnement vereist), terwijl modules 1-4 Azure OpenAI GPT-5 gebruiken.
 
 
 ## Leren met GitHub Copilot
 
-Om snel te beginnen met coderen, open je dit project in een GitHub Codespace of je lokale IDE met de meegeleverde devcontainer. De devcontainer die in deze cursus wordt gebruikt, is vooraf geconfigureerd met GitHub Copilot voor AI-gepaarde programmering.
+Om snel te beginnen met coderen, open je dit project in een GitHub Codespace of je lokale IDE met de meegeleverde devcontainer. De devcontainer die in deze cursus wordt gebruikt, is vooraf geconfigureerd met GitHub Copilot voor AI-gepaard programmeren.
 
 Elk codevoorbeeld bevat voorgestelde vragen die je aan GitHub Copilot kunt stellen om je begrip te verdiepen. Let op de 💡/🤖 prompts in:
 
@@ -55,7 +74,7 @@ Elk codevoorbeeld bevat voorgestelde vragen die je aan GitHub Copilot kunt stell
 
 **Hoe te gebruiken:** Open een willekeurig codebestand en stel Copilot de voorgestelde vragen. Het heeft volledige context van de codebase en kan uitleggen, uitbreiden en alternatieven voorstellen.
 
-Wil je meer leren? Bekijk [Copilot voor AI-gepaarde programmering](https://aka.ms/GitHubCopilotAI).
+Wil je meer leren? Bekijk [Copilot voor AI-gepaard programmeren](https://aka.ms/GitHubCopilotAI).
 
 
 ## Aanvullende bronnen
@@ -90,29 +109,29 @@ Wil je meer leren? Bekijk [Copilot voor AI-gepaarde programmering](https://aka.m
 [![Cybersecurity voor Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Webontwikkeling voor Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT voor Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Ontwikkeling voor Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Copilot Serie
-[![Copilot voor AI-gepaarde programmering](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## Hulp krijgen
+## Hulp Krijgen
 
-Als je vastloopt of vragen hebt over het bouwen van AI-apps, sluit je dan aan bij:
+Als je vastloopt of vragen hebt over het bouwen van AI-apps, sluit je aan bij:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Als je productfeedback hebt of fouten tegenkomt tijdens het bouwen, bezoek dan:
+Als je productfeedback hebt of fouten tegenkomt tijdens het bouwen, bezoek:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licentie
 
-MIT-licentie - Zie het [LICENSE](../../LICENSE) bestand voor details.
+MIT-licentie - Zie [LICENSE](../../LICENSE) bestand voor details.
 
 ---
 

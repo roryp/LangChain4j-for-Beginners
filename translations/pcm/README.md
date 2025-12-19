@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T12:00:42+00:00",
+  "original_hash": "d1499d1abf7e653e94fde35644629500",
+  "translation_date": "2025-12-18T10:32:05+00:00",
   "source_file": "README.md",
   "language_code": "pcm"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j for Beginners
 
-Na course wey dey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat go reach AI agents.
+Course wey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat go AI agents.
 
 **New to LangChain4j?** Check di [Glossary](docs/GLOSSARY.md) for wetin key terms and concepts mean.
 
@@ -27,7 +27,7 @@ Na course wey dey teach how to build AI applications wit LangChain4j and Azure O
 
 1. [Quick Start](00-quick-start/README.md) - How to start wit LangChain4j
 2. [Introduction](01-introduction/README.md) - Learn di basics of LangChain4j
-3. [Prompt Engineering](02-prompt-engineering/README.md) - How to sabi design prompt well well
+3. [Prompt Engineering](02-prompt-engineering/README.md) - How to sabi design better prompt
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Build smart knowledge-based systems
 5. [Tools](04-tools/README.md) - Join external tools and APIs wit AI agents
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work wit di Model Context Protocol
@@ -35,7 +35,26 @@ Na course wey dey teach how to build AI applications wit LangChain4j and Azure O
 
 ##  Learning Path
 
-Start wit di [Quick Start](00-quick-start/README.md) module and waka go each module step by step to build your skills. You go try basic examples to understand di fundamentals before you enter di [Introduction](01-introduction/README.md) module for deeper knowledge wit GPT-5.
+> **Quick Start**
+
+1. Fork dis repository go your GitHub account
+2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
+3. Use di defaults – dis one go select di Development container wey dem create for dis course
+4. Click **Create codespace**
+5. Wait 5-10 minutes make di environment ready
+6. Jump straight go [Quick Start](./00-quick-start/README.md) to start!
+
+> **You prefer to Clone for your machine?**
+>
+> Dis repository get 50+ language translations wey go make di download size big. To clone without di translations, use sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Dis one go give you everything wey you need to finish di course fast.
+
+Start wit di [Quick Start](00-quick-start/README.md) module and waka through each module to build your skills step-by-step. You go try basic examples to understand di basics before you move go di [Introduction](01-introduction/README.md) module for deeper knowledge wit GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pcm.png" alt="Learning Path" width="800"/>
 
@@ -46,14 +65,14 @@ After you finish di modules, check di [Testing Guide](docs/TESTING.md) to see ho
 
 ## Learning with GitHub Copilot
 
-To start coding quick quick, open dis project for GitHub Codespace or your local IDE wit di devcontainer wey dem provide. Di devcontainer wey dis course dey use don already set wit GitHub Copilot for AI paired programming.
+To start coding quick, open dis project for GitHub Codespace or your local IDE wit di devcontainer wey dem provide. Di devcontainer wey dem use for dis course don already set up wit GitHub Copilot for AI paired programming.
 
-Every code example get questions wey you fit ask GitHub Copilot to help you understand better. Look for di 💡/🤖 prompts for:
+Every code example get suggested questions wey you fit ask GitHub Copilot to understand better. Look for di 💡/🤖 prompts for:
 
 - **Java file headers** - Questions wey relate to each example
 - **Module READMEs** - Exploration prompts after code examples
 
-**How to use:** Open any code file and ask Copilot di questions wey dem suggest. E get full context of di codebase and fit explain, add more, and suggest other options.
+**How to use:** Open any code file and ask Copilot di suggested questions. E get full context of di codebase and fit explain, add more, and suggest other options.
 
 You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
@@ -100,13 +119,13 @@ You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/Gi
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## How to Get Help
+## Getting Help
 
-If you jam or get any question about how to build AI apps, join:
+If you get stuck or get any question about how to build AI apps, join:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-If you get product feedback or wahala while you dey build, waka go:
+If you get product feedback or errors while you dey build, visit:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -118,5 +137,5 @@ MIT License - See [LICENSE](../../LICENSE) file for details.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document na AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) wey dem use translate am. Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make person wey sabi translate am well do am. We no go responsible if person no understand well or if dem use dis translation do mistake.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any misunderstanding or wrong meaning wey fit come from dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

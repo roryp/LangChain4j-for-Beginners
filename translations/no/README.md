@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:27:20+00:00",
+  "original_hash": "d1499d1abf7e653e94fde35644629500",
+  "translation_date": "2025-12-18T09:58:51+00:00",
   "source_file": "README.md",
   "language_code": "no"
 }
@@ -35,13 +35,32 @@ Et kurs for å bygge AI-applikasjoner med LangChain4j og Azure OpenAI GPT-5, fra
 
 ## Læringssti
 
+> **Rask start**
+
+1. Fork dette depotet til din GitHub-konto
+2. Klikk **Code** → **Codespaces**-fanen → **...** → **New with options...**
+3. Bruk standardinnstillingene – dette velger utviklingscontaineren som er laget for dette kurset
+4. Klikk **Create codespace**
+5. Vent 5-10 minutter til miljøet er klart
+6. Gå rett til [Rask start](./00-quick-start/README.md) for å komme i gang!
+
+> **Foretrekker du å klone lokalt?**
+>
+> Dette depotet inkluderer 50+ språkoversettelser som øker nedlastingsstørrelsen betydelig. For å klone uten oversettelser, bruk sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Dette gir deg alt du trenger for å fullføre kurset med en mye raskere nedlasting.
+
 Start med [Rask start](00-quick-start/README.md)-modulen og gå gjennom hver modul for å bygge ferdighetene dine steg for steg. Du vil prøve grunnleggende eksempler for å forstå det grunnleggende før du går videre til [Introduksjon](01-introduction/README.md)-modulen for en dypere gjennomgang med GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.no.png" alt="Learning Path" width="800"/>
 
 Etter å ha fullført modulene, utforsk [Testing Guide](docs/TESTING.md) for å se LangChain4j testkonsepter i praksis.
 
-> **Merk:** Denne opplæringen bruker både GitHub-modeller og Azure OpenAI. [Rask start](00-quick-start/README.md) og [MCP](05-mcp/README.md)-modulene bruker GitHub-modeller (ingen Azure-abonnement kreves), mens modul 1-4 bruker Azure OpenAI GPT-5.
+> **Merk:** Denne opplæringen bruker både GitHub Models og Azure OpenAI. [Rask start](00-quick-start/README.md) og [MCP](05-mcp/README.md)-modulene bruker GitHub Models (ingen Azure-abonnement kreves), mens modulene 1-4 bruker Azure OpenAI GPT-5.
 
 
 ## Læring med GitHub Copilot
@@ -94,7 +113,7 @@ Vil du lære mer? Sjekk ut [Copilot for AI Paired Programming](https://aka.ms/Gi
 
 ---
  
-### Copilot-serie
+### Copilot-serien
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
@@ -102,17 +121,17 @@ Vil du lære mer? Sjekk ut [Copilot for AI Paired Programming](https://aka.ms/Gi
 
 ## Få hjelp
 
-Hvis du står fast eller har spørsmål om å bygge AI-apper, bli med i:
+Hvis du står fast eller har spørsmål om å bygge AI-apper, bli med:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Hvis du har produktinnspill eller opplever feil under bygging, besøk:
+Hvis du har produktinnspill eller feil under bygging, besøk:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Lisens
 
-MIT-lisens - Se [LICENSE](../../LICENSE)-filen for detaljer.
+MIT-lisens - Se [LICENSE](../../LICENSE) filen for detaljer.
 
 ---
 

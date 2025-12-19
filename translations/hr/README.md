@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:50:20+00:00",
+  "original_hash": "d1499d1abf7e653e94fde35644629500",
+  "translation_date": "2025-12-18T10:22:22+00:00",
   "source_file": "README.md",
   "language_code": "hr"
 }
@@ -35,11 +35,30 @@ Tečaj za izgradnju AI aplikacija s LangChain4j i Azure OpenAI GPT-5, od osnovno
 
 ## Put učenja
 
-Započnite s modulom [Brzi početak](00-quick-start/README.md) i napredujte kroz svaki modul kako biste korak po korak gradili svoje vještine. Isprobajte osnovne primjere da biste razumjeli osnove prije nego što prijeđete na modul [Uvod](01-introduction/README.md) za dublje upoznavanje s GPT-5.
+> **Brzi početak**
+
+1. Forkajte ovaj repozitorij na svoj GitHub račun
+2. Kliknite **Code** → karticu **Codespaces** → **...** → **New with options...**
+3. Koristite zadane postavke – ovo će odabrati razvojni kontejner kreiran za ovaj tečaj
+4. Kliknite **Create codespace**
+5. Pričekajte 5-10 minuta da se okruženje pripremi
+6. Odmah prijeđite na [Brzi početak](./00-quick-start/README.md) i započnite!
+
+> **Radije klonirati lokalno?**
+>
+> Ovaj repozitorij uključuje 50+ prijevoda jezika što značajno povećava veličinu preuzimanja. Za kloniranje bez prijevoda, koristite sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Ovo vam daje sve što vam treba za dovršetak tečaja s mnogo bržim preuzimanjem.
+
+Započnite s modulom [Brzi početak](00-quick-start/README.md) i napredujte kroz svaki modul kako biste korak po korak gradili svoje vještine. Isprobajte osnovne primjere da razumijete osnove prije nego što prijeđete na modul [Uvod](01-introduction/README.md) za dublje upoznavanje s GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hr.png" alt="Learning Path" width="800"/>
 
-Nakon završetka modula, istražite [Vodič za testiranje](docs/TESTING.md) kako biste vidjeli koncepte testiranja LangChain4j u praksi.
+Nakon završetka modula, istražite [Vodič za testiranje](docs/TESTING.md) da vidite koncepte testiranja LangChain4j u praksi.
 
 > **Napomena:** Ova obuka koristi i GitHub modele i Azure OpenAI. Moduli [Brzi početak](00-quick-start/README.md) i [MCP](05-mcp/README.md) koriste GitHub modele (nije potrebna Azure pretplata), dok moduli 1-4 koriste Azure OpenAI GPT-5.
 
@@ -48,10 +67,10 @@ Nakon završetka modula, istražite [Vodič za testiranje](docs/TESTING.md) kako
 
 Za brzo započinjanje kodiranja, otvorite ovaj projekt u GitHub Codespaceu ili u svom lokalnom IDE-u s priloženim devcontainerom. Devcontainer korišten u ovom tečaju dolazi unaprijed konfiguriran s GitHub Copilotom za AI upareno programiranje.
 
-Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub Copilotu kako biste produbili svoje razumijevanje. Potražite 💡/🤖 upite u:
+Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub Copilotu za dublje razumijevanje. Potražite 💡/🤖 oznake u:
 
-- **Zaglavlja Java datoteka** - Pitanja specifična za svaki primjer
-- **README datoteke modula** - Upiti za istraživanje nakon primjera koda
+- **Java zaglavljima datoteka** - Pitanja specifična za svaki primjer
+- **README datotekama modula** - Istraživački upiti nakon primjera koda
 
 **Kako koristiti:** Otvorite bilo koju datoteku s kodom i postavite Copilotu predložena pitanja. Ima puni kontekst baze koda i može objasniti, proširiti i predložiti alternative.
 
@@ -87,22 +106,22 @@ Svaki primjer koda uključuje predložena pitanja koja možete postaviti GitHub 
 [![ML za početnike](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science za početnike](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI za početnike](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![Cybersecurity za početnike](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Kibernetička sigurnost za početnike](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web razvoj za početnike](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT za početnike](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR razvoj za početnike](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Serija Copilot
-[![Copilot za AI upareno programiranje](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Dobivanje pomoći
 
-Ako zapnete ili imate bilo kakvih pitanja o izradi AI aplikacija, pridružite se:
+Ako zapnete ili imate pitanja o izradi AI aplikacija, pridružite se:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
@@ -118,5 +137,5 @@ MIT licenca - Pogledajte datoteku [LICENSE](../../LICENSE) za detalje.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Odricanje od odgovornosti**:
-Ovaj dokument preveden je pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Ovaj dokument je preveden korištenjem AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
