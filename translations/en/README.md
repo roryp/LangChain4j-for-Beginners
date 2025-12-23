@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
-  "translation_date": "2025-12-19T09:48:01+00:00",
+  "original_hash": "1e85afe0b0ee47fc09b20442b0ee4ca5",
+  "translation_date": "2025-12-23T08:06:53+00:00",
   "source_file": "README.md",
   "language_code": "en"
 }
@@ -136,6 +136,6 @@ MIT License - See [LICENSE](../../LICENSE) file for details.
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+Disclaimer:
+This document has been translated using AI translation service Co-op Translator (https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

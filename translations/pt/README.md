@@ -1,52 +1,52 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
-  "translation_date": "2025-12-19T10:13:46+00:00",
+  "original_hash": "1e85afe0b0ee47fc09b20442b0ee4ca5",
+  "translation_date": "2025-12-23T09:22:36+00:00",
   "source_file": "README.md",
   "language_code": "pt"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.pt.png" alt="LangChain4j" width="800"/>
 
-### 🌐 Suporte Multilíngue
+### 🌐 Suporte Multilingue
 
-#### Suportado via GitHub Action (Automatizado e Sempre Atualizado)
+#### Suportado via GitHub Action (Automatizado & Sempre Atualizado)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Árabe](../ar/README.md) | [Bengali](../bn/README.md) | [Búlgaro](../bg/README.md) | [Birmanês (Myanmar)](../my/README.md) | [Chinês (Simplificado)](../zh/README.md) | [Chinês (Tradicional, Hong Kong)](../hk/README.md) | [Chinês (Tradicional, Macau)](../mo/README.md) | [Chinês (Tradicional, Taiwan)](../tw/README.md) | [Croata](../hr/README.md) | [Checo](../cs/README.md) | [Dinamarquês](../da/README.md) | [Holandês](../nl/README.md) | [Estónio](../et/README.md) | [Finlandês](../fi/README.md) | [Francês](../fr/README.md) | [Alemão](../de/README.md) | [Grego](../el/README.md) | [Hebraico](../he/README.md) | [Hindi](../hi/README.md) | [Húngaro](../hu/README.md) | [Indonésio](../id/README.md) | [Italiano](../it/README.md) | [Japonês](../ja/README.md) | [Kannada](../kn/README.md) | [Coreano](../ko/README.md) | [Lituano](../lt/README.md) | [Malaio](../ms/README.md) | [Malaiala](../ml/README.md) | [Marata](../mr/README.md) | [Nepali](../ne/README.md) | [Pidgin Nigeriano](../pcm/README.md) | [Norueguês](../no/README.md) | [Persa (Farsi)](../fa/README.md) | [Polaco](../pl/README.md) | [Português (Brasil)](../br/README.md) | [Português (Portugal)](./README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romeno](../ro/README.md) | [Russo](../ru/README.md) | [Sérvio (Cirílico)](../sr/README.md) | [Eslovaco](../sk/README.md) | [Esloveno](../sl/README.md) | [Espanhol](../es/README.md) | [Suaíli](../sw/README.md) | [Sueco](../sv/README.md) | [Tagalo (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Tailandês](../th/README.md) | [Turco](../tr/README.md) | [Ucraniano](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamita](../vi/README.md)
+[Árabe](../ar/README.md) | [Bengali](../bn/README.md) | [Búlgaro](../bg/README.md) | [Birmanês (Myanmar)](../my/README.md) | [Chinês (Simplificado)](../zh/README.md) | [Chinês (Tradicional, Hong Kong)](../hk/README.md) | [Chinês (Tradicional, Macau)](../mo/README.md) | [Chinês (Tradicional, Taiwan)](../tw/README.md) | [Croata](../hr/README.md) | [Checo](../cs/README.md) | [Dinamarquês](../da/README.md) | [Holandês](../nl/README.md) | [Estónio](../et/README.md) | [Finlandês](../fi/README.md) | [Francês](../fr/README.md) | [Alemão](../de/README.md) | [Grego](../el/README.md) | [Hebraico](../he/README.md) | [Hindi](../hi/README.md) | [Húngaro](../hu/README.md) | [Indonésio](../id/README.md) | [Italiano](../it/README.md) | [Japonês](../ja/README.md) | [Kannada](../kn/README.md) | [Coreano](../ko/README.md) | [Lituano](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalês](../ne/README.md) | [Pidgin nigeriano](../pcm/README.md) | [Norueguês](../no/README.md) | [Persa (Farsi)](../fa/README.md) | [Polaco](../pl/README.md) | [Português (Brasil)](../br/README.md) | [Português (Portugal)](./README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romeno](../ro/README.md) | [Russo](../ru/README.md) | [Sérvio (Cirílico)](../sr/README.md) | [Eslovaco](../sk/README.md) | [Esloveno](../sl/README.md) | [Espanhol](../es/README.md) | [Swahili](../sw/README.md) | [Sueco](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Tailandês](../th/README.md) | [Turco](../tr/README.md) | [Ucraniano](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamita](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # LangChain4j para Iniciantes
 
-Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5, desde chat básico a agentes de IA.
+Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5, desde chat básico até agentes de IA.
 
-**Novo no LangChain4j?** Consulte o [Glossário](docs/GLOSSARY.md) para definições de termos e conceitos chave.
+**Novo no LangChain4j?** Consulte o [Glossário](docs/GLOSSARY.md) para definições dos termos e conceitos principais.
 
-## Índice
+## Table of Contents
 
-1. [Início Rápido](00-quick-start/README.md) - Comece com LangChain4j
+1. [Início Rápido](00-quick-start/README.md) - Comece com o LangChain4j
 2. [Introdução](01-introduction/README.md) - Aprenda os fundamentos do LangChain4j
-3. [Engenharia de Prompt](02-prompt-engineering/README.md) - Domine o design eficaz de prompts
+3. [Engenharia de Prompts](02-prompt-engineering/README.md) - Domine o design eficaz de prompts
 4. [RAG (Geração Aumentada por Recuperação)](03-rag/README.md) - Construa sistemas inteligentes baseados em conhecimento
 5. [Ferramentas](04-tools/README.md) - Integre ferramentas externas e APIs com agentes de IA
 6. [MCP (Protocolo de Contexto de Modelo)](05-mcp/README.md) - Trabalhe com o Protocolo de Contexto de Modelo
 ---
 
-## Caminho de Aprendizagem
+##  Caminho de Aprendizagem
 
 > **Início Rápido**
 
 1. Faça um fork deste repositório para a sua conta GitHub
 2. Clique em **Code** → separador **Codespaces** → **...** → **Novo com opções...**
-3. Use as predefinições – isto selecionará o contentor de Desenvolvimento criado para este curso
+3. Use as predefinições – isto irá selecionar o contentor de desenvolvimento criado para este curso
 4. Clique em **Criar codespace**
-5. Aguarde 5-10 minutos para o ambiente estar pronto
+5. Espere 5-10 minutos para o ambiente ficar pronto
 6. Vá diretamente para [Início Rápido](./00-quick-start/README.md) para começar!
 
 > **Prefere Clonar Localmente?**
 >
-> Este repositório inclui mais de 50 traduções de idiomas, o que aumenta significativamente o tamanho do download. Para clonar sem traduções, use checkout esparso:
+> Este repositório inclui mais de 50 traduções de idiomas, o que aumenta significativamente o tamanho de download. Para clonar sem traduções, use sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -54,27 +54,27 @@ Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5,
 > ```
 > Isto dá-lhe tudo o que precisa para completar o curso com um download muito mais rápido.
 
-Comece pelo módulo [Início Rápido](00-quick-start/README.md) e progrida por cada módulo para desenvolver as suas competências passo a passo. Vai experimentar exemplos básicos para entender os fundamentos antes de avançar para o módulo [Introdução](01-introduction/README.md) para um mergulho mais profundo com GPT-5.
+Start with the [Início Rápido](00-quick-start/README.md) module and progress through each module to build your skills step-by-step. You'll try basic examples to understand the fundamentals before moving to the [Introdução](01-introduction/README.md) module for a deeper dive with GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pt.png" alt="Caminho de Aprendizagem" width="800"/>
 
-Após completar os módulos, explore o [Guia de Testes](docs/TESTING.md) para ver os conceitos de testes do LangChain4j em ação.
+After completing the modules, explore the [Guia de Testes](docs/TESTING.md) to see LangChain4j testing concepts in action.
 
-> **Nota:** Esta formação usa tanto os Modelos GitHub como o Azure OpenAI. Os módulos [Início Rápido](00-quick-start/README.md) e [MCP](05-mcp/README.md) usam Modelos GitHub (não é necessária subscrição Azure), enquanto os módulos 1-4 usam Azure OpenAI GPT-5.
+> **Nota:** Esta formação usa tanto GitHub Models como Azure OpenAI. Os módulos [Início Rápido](00-quick-start/README.md) e [MCP (Protocolo de Contexto de Modelo)](05-mcp/README.md) utilizam GitHub Models (não é necessária subscrição Azure), enquanto os módulos 1-4 usam Azure OpenAI GPT-5.
 
 
-## Aprender com GitHub Copilot
+## Aprender com o GitHub Copilot
 
-Para começar a programar rapidamente, abra este projeto num GitHub Codespace ou no seu IDE local com o devcontainer fornecido. O devcontainer usado neste curso vem pré-configurado com GitHub Copilot para programação em par com IA.
+Para começar a programar rapidamente, abra este projeto num GitHub Codespace ou no seu IDE local com o devcontainer fornecido. O devcontainer utilizado neste curso vem pré-configurado com o GitHub Copilot para programação emparelhada com IA.
 
-Cada exemplo de código inclui perguntas sugeridas que pode fazer ao GitHub Copilot para aprofundar a sua compreensão. Procure os prompts 💡/🤖 em:
+Cada exemplo de código inclui perguntas sugeridas que pode colocar ao GitHub Copilot para aprofundar a sua compreensão. Procure os prompts 💡/🤖 em:
 
 - **Cabeçalhos de ficheiros Java** - Perguntas específicas para cada exemplo
-- **READMEs dos módulos** - Prompts de exploração após exemplos de código
+- **READMEs dos Módulos** - Prompts de exploração após os exemplos de código
 
-**Como usar:** Abra qualquer ficheiro de código e faça ao Copilot as perguntas sugeridas. Ele tem contexto completo da base de código e pode explicar, expandir e sugerir alternativas.
+**Como usar:** Abra qualquer ficheiro de código e pergunte ao Copilot as questões sugeridas. Ele tem o contexto completo da base de código e pode explicar, estender e sugerir alternativas.
 
-Quer aprender mais? Consulte [Copilot para Programação em Par com IA](https://aka.ms/GitHubCopilotAI).
+Quer saber mais? Consulte [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
 
 ## Recursos Adicionais
@@ -86,7 +86,7 @@ Quer aprender mais? Consulte [Copilot para Programação em Par com IA](https://
 
 ---
 
-### Azure / Edge / MCP / Agentes
+### Azure / Edge / MCP / Agents
 [![AZD para Iniciantes](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI para Iniciantes](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP para Iniciantes](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -102,7 +102,7 @@ Quer aprender mais? Consulte [Copilot para Programação em Par com IA](https://
 
 ---
  
-### Aprendizagem Fundamental
+### Aprendizagem Básica
 [![ML para Iniciantes](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Ciência de Dados para Iniciantes](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![IA para Iniciantes](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -121,11 +121,11 @@ Quer aprender mais? Consulte [Copilot para Programação em Par com IA](https://
 
 ## Obter Ajuda
 
-Se ficar bloqueado ou tiver alguma dúvida sobre como criar aplicações de IA, junte-se a:
+Se ficar preso ou tiver alguma dúvida sobre a criação de aplicações de IA, junte-se a:
 
-[![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Discord do Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Se tiver feedback sobre o produto ou erros durante a criação, visite:
+Se tiver feedback sobre o produto ou encontrar erros durante a construção, visite:
 
 [![Fórum de Desenvolvedores Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -136,6 +136,6 @@ Licença MIT - Veja o ficheiro [LICENSE](../../LICENSE) para detalhes.
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Aviso Legal**:
-Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, por favor tenha em conta que traduções automáticas podem conter erros ou imprecisões. O documento original na sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se a tradução profissional humana. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações erradas decorrentes do uso desta tradução.
+Isenção de responsabilidade:
+Este documento foi traduzido com o serviço de tradução por IA [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos por garantir a precisão, tenha em atenção que traduções automatizadas podem conter erros ou imprecisões. O documento original, no seu idioma de origem, deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se uma tradução profissional efetuada por um tradutor humano. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes da utilização desta tradução.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

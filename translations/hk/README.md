@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
-  "translation_date": "2025-12-19T10:02:01+00:00",
+  "original_hash": "1e85afe0b0ee47fc09b20442b0ee4ca5",
+  "translation_date": "2025-12-23T08:44:40+00:00",
   "source_file": "README.md",
   "language_code": "hk"
 }
@@ -11,73 +11,73 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 多語言支援
 
-#### 透過 GitHub Action 支援（自動化且持續更新）
+#### Supported via GitHub Action (Automated & Always Up-to-Date)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](./README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[阿拉伯語](../ar/README.md) | [孟加拉語](../bn/README.md) | [保加利亞語](../bg/README.md) | [緬甸語 (Myanmar)](../my/README.md) | [中文 (簡體)](../zh/README.md) | [中文 (繁體, 香港)](./README.md) | [中文 (繁體, 澳門)](../mo/README.md) | [中文 (繁體, 台灣)](../tw/README.md) | [克羅地亞語](../hr/README.md) | [捷克語](../cs/README.md) | [丹麥語](../da/README.md) | [荷蘭語](../nl/README.md) | [愛沙尼亞語](../et/README.md) | [芬蘭語](../fi/README.md) | [法語](../fr/README.md) | [德語](../de/README.md) | [希臘語](../el/README.md) | [希伯來語](../he/README.md) | [印地語](../hi/README.md) | [匈牙利語](../hu/README.md) | [印尼語](../id/README.md) | [意大利語](../it/README.md) | [日語](../ja/README.md) | [卡納達語](../kn/README.md) | [韓語](../ko/README.md) | [立陶宛語](../lt/README.md) | [馬來語](../ms/README.md) | [馬拉雅拉姆語](../ml/README.md) | [馬拉地語](../mr/README.md) | [尼泊爾語](../ne/README.md) | [尼日利亞皮欽語](../pcm/README.md) | [挪威語](../no/README.md) | [波斯語 (Farsi)](../fa/README.md) | [波蘭語](../pl/README.md) | [葡萄牙語 (巴西)](../br/README.md) | [葡萄牙語 (葡萄牙)](../pt/README.md) | [旁遮普語 (Gurmukhi)](../pa/README.md) | [羅馬尼亞語](../ro/README.md) | [俄語](../ru/README.md) | [塞爾維亞語 (Cyrillic)](../sr/README.md) | [斯洛伐克語](../sk/README.md) | [斯洛文尼亞語](../sl/README.md) | [西班牙語](../es/README.md) | [斯瓦希里語](../sw/README.md) | [瑞典語](../sv/README.md) | [他加祿語 (Filipino)](../tl/README.md) | [泰米爾語](../ta/README.md) | [泰盧固語](../te/README.md) | [泰語](../th/README.md) | [土耳其語](../tr/README.md) | [烏克蘭語](../uk/README.md) | [烏爾都語](../ur/README.md) | [越南語](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# LangChain4j 初學者指南
+# LangChain4j 初學者入門
 
 一門使用 LangChain4j 與 Azure OpenAI GPT-5 建立 AI 應用程式的課程，從基本聊天到 AI 代理人。
 
-**剛接觸 LangChain4j？** 請參考 [詞彙表](docs/GLOSSARY.md) 了解關鍵術語與概念定義。
+**剛接觸 LangChain4j？** 請查看 [Glossary](docs/GLOSSARY.md) 以取得主要術語與概念的定義。
 
-## 目錄
+## Table of Contents
 
-1. [快速入門](00-quick-start/README.md) - 開始使用 LangChain4j
-2. [介紹](01-introduction/README.md) - 學習 LangChain4j 基礎
-3. [提示工程](02-prompt-engineering/README.md) - 精通有效的提示設計
-4. [RAG（檢索增強生成）](03-rag/README.md) - 建立智能知識系統
-5. [工具](04-tools/README.md) - 與 AI 代理人整合外部工具與 API
-6. [MCP（模型上下文協議）](05-mcp/README.md) - 使用模型上下文協議
+1. [Quick Start](00-quick-start/README.md) - 使用 LangChain4j 快速入門
+2. [Introduction](01-introduction/README.md) - 學習 LangChain4j 的基礎
+3. [Prompt Engineering](02-prompt-engineering/README.md) - 精通有效的提示設計
+4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - 建立具智慧的知識型系統
+5. [Tools](04-tools/README.md) - 將外部工具與 API 與 AI 代理人整合
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - 使用 Model Context Protocol
 ---
 
-## 學習路徑
+##  Learning Path
 
-> **快速入門**
+> **Quick Start**
 
-1. 將此儲存庫分叉到您的 GitHub 帳戶
-2. 點擊 **Code** → **Codespaces** 標籤 → **...** → **New with options...**
-3. 使用預設值 – 這會選擇為本課程建立的開發容器
+1. Fork this repository to your GitHub account
+2. 點擊 **Code** → **Codespaces** tab → **...** → **New with options...**
+3. 使用預設值 – 這會選取為本課程建立的 Development container
 4. 點擊 **Create codespace**
-5. 等待 5-10 分鐘，環境即會準備完成
-6. 直接跳到 [快速入門](./00-quick-start/README.md) 開始！
+5. 等待 5-10 分鐘，環境即會準備就緒
+6. 直接跳到 [Quick Start](./00-quick-start/README.md) 開始！
 
-> **想要本地端克隆？**
+> **Prefer to Clone Locally?**
 >
-> 此儲存庫包含 50 多種語言翻譯，會大幅增加下載大小。若想不含翻譯克隆，請使用稀疏檢出：
+> This repository includes 50+ language translations which significantly increases the download size. To clone without translations, use sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> 這樣您就能以更快的速度下載完成課程所需的所有內容。
+> 這會為您提供完成課程所需的一切，且下載更快。
 
-從 [快速入門](00-quick-start/README.md) 模組開始，逐步完成每個模組以建立技能。您將先嘗試基本範例以理解基礎，然後進入 [介紹](01-introduction/README.md) 模組，深入了解 GPT-5。
+從 [Quick Start](00-quick-start/README.md) 模組開始，然後依序完成每個模組以逐步建立您的技能。您會先嘗試基本範例以理解基礎，然後再進入使用 GPT-5 的 [Introduction](01-introduction/README.md) 模組以深入學習。
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hk.png" alt="Learning Path" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hk.png" alt="學習路徑" width="800"/>
 
-完成模組後，探索 [測試指南](docs/TESTING.md) 以實際了解 LangChain4j 的測試概念。
+完成各模組後，請瀏覽 [Testing Guide](docs/TESTING.md) 以查看 LangChain4j 測試概念的實作範例。
 
-> **注意：** 本訓練同時使用 GitHub 模型與 Azure OpenAI。[快速入門](00-quick-start/README.md) 與 [MCP](05-mcp/README.md) 模組使用 GitHub 模型（無需 Azure 訂閱），而模組 1-4 則使用 Azure OpenAI GPT-5。
-
-
-## 使用 GitHub Copilot 學習
-
-要快速開始編碼，請在 GitHub Codespace 或本地 IDE 中開啟此專案，並使用提供的 devcontainer。本課程使用的 devcontainer 已預先配置 GitHub Copilot 以支援 AI 配對程式設計。
-
-每個程式碼範例都包含您可以問 GitHub Copilot 的建議問題，幫助您加深理解。請留意以下位置的 💡/🤖 提示：
-
-- **Java 檔案標頭** - 針對每個範例的特定問題
-- **模組 README** - 程式碼範例後的探索提示
-
-**使用方式：** 開啟任一程式碼檔案，向 Copilot 詢問建議問題。它擁有完整程式碼庫上下文，能解釋、擴充並建議替代方案。
-
-想了解更多？請參考 [AI 配對程式設計的 Copilot](https://aka.ms/GitHubCopilotAI)。
+> **Note:** This training uses both GitHub Models and Azure OpenAI. The [Quick Start](00-quick-start/README.md) and [MCP](05-mcp/README.md) modules use GitHub Models (no Azure subscription required), while modules 1-4 use Azure OpenAI GPT-5.
 
 
-## 其他資源
+## Learning with GitHub Copilot
+
+要快速開始撰寫程式，請在 GitHub Codespace 或使用提供的 devcontainer 在本機 IDE 中開啟此專案。本課程使用的 devcontainer 已預先設定好 GitHub Copilot 以支援 AI 配對程式設計。
+
+每個程式範例都包含建議您可以詢問 GitHub Copilot 的問題，以加深您的理解。請在以下位置尋找 💡/🤖 提示：
+
+- **Java file headers** - 針對每個範例的專屬問題
+- **Module READMEs** - 程式範例後的探索提示
+
+**使用方式：** 開啟任何程式檔案並向 Copilot 詢問建議的問題。它具有完整的程式碼庫上下文，能夠說明、擴充並提出替代方案。
+
+想了解更多？請參閱 [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
+
+
+## Additional Resources
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -94,7 +94,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### 生成式 AI 系列
+### Generative AI Series
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -102,40 +102,40 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### 核心學習
+### Core Learning
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR 開發入門](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Copilot 系列
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot（AI 配對程式設計）](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot 適用於 C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot 冒險](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## 尋求協助
 
-如果你遇到困難或對建立 AI 應用程式有任何疑問，請加入：
+如果你在建立 AI 應用時遇到困難或有任何問題，請加入：
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Azure AI Foundry Discord 社群](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-如果你在開發過程中有產品反饋或錯誤，請造訪：
+如果你在建立過程中有產品反饋或遇到錯誤，請造訪：
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Azure AI Foundry 開發者討論區](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
-## 授權條款
+## 授權
 
-MIT 授權條款 - 詳情請參閱 [LICENSE](../../LICENSE) 檔案。
+MIT 授權 - 詳情請參閱 [LICENSE](../../LICENSE) 檔案。
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責聲明**：  
-本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而引起的任何誤解或誤釋承擔責任。
+免責聲明：
+本文件經由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻譯。雖然我們力求準確，但請注意機器翻譯可能包含錯誤或不準確之處。原文（以其原始語言）應被視為具權威性的版本。若涉及重要資訊，建議採用專業人工翻譯。對於因使用此翻譯而引致的任何誤解或曲解，我們概不負責。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
