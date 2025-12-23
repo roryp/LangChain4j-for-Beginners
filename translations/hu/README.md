@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:41:12+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:38:41+00:00",
   "source_file": "README.md",
   "language_code": "hu"
 }
@@ -35,25 +35,44 @@ Egy tanfolyam AI alkalmazások építéséhez LangChain4j-vel és Azure OpenAI G
 
 ## Tanulási útvonal
 
-Kezdd a [Gyors kezdés](00-quick-start/README.md) modullal, majd haladj lépésről lépésre a modulokon keresztül, hogy fejleszd képességeidet. Alapvető példákat próbálhatsz ki az alapok megértéséhez, mielőtt mélyebben belemerülnél a [Bevezetés](01-introduction/README.md) modulba a GPT-5-tel.
+> **Gyors kezdés**
+
+1. Forkold ezt a tárolót a GitHub fiókodba
+2. Kattints a **Code** → **Codespaces** fülre → **...** → **Új opciókkal...**
+3. Használd az alapértelmezetteket – ez kiválasztja a tanfolyamhoz létrehozott fejlesztői konténert
+4. Kattints a **Codespace létrehozása** gombra
+5. Várj 5-10 percet, amíg a környezet készen áll
+6. Ugorj egyenesen a [Gyors kezdés](./00-quick-start/README.md) modulra, hogy elkezdd!
+
+> **Inkább helyben klónoznál?**
+>
+> Ez a tároló több mint 50 nyelvi fordítást tartalmaz, ami jelentősen megnöveli a letöltési méretet. Ha fordítások nélkül szeretnéd klónozni, használj sparse checkout-ot:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Ez mindent megad, amire szükséged van a tanfolyam elvégzéséhez, sokkal gyorsabb letöltéssel.
+
+Kezdd a [Gyors kezdés](00-quick-start/README.md) modullal, majd haladj végig a modulokon lépésről lépésre, hogy fejleszd a képességeidet. Először alapvető példákat próbálsz ki, hogy megértsd az alapokat, majd mélyebben belemerülsz a [Bevezetés](01-introduction/README.md) modulba a GPT-5-tel.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.hu.png" alt="Learning Path" width="800"/>
 
 A modulok elvégzése után fedezd fel a [Tesztelési útmutatót](docs/TESTING.md), hogy lásd a LangChain4j tesztelési koncepcióit működés közben.
 
-> **Megjegyzés:** Ez a képzés mind a GitHub Modelleket, mind az Azure OpenAI-t használja. A [Gyors kezdés](00-quick-start/README.md) és a [MCP](05-mcp/README.md) modulok GitHub Modelleket használnak (nem szükséges Azure előfizetés), míg az 1-4. modulok Azure OpenAI GPT-5-tel dolgoznak.
+> **Megjegyzés:** Ez a képzés mind a GitHub Modelleket, mind az Azure OpenAI-t használja. A [Gyors kezdés](00-quick-start/README.md) és a [MCP](05-mcp/README.md) modulok GitHub Modelleket használnak (nem szükséges Azure előfizetés), míg az 1-4 modulok Azure OpenAI GPT-5-tel dolgoznak.
 
 
-## Tanulás GitHub Copilot-tal
+## Tanulás GitHub Copilottal
 
-A gyors kódolás megkezdéséhez nyisd meg ezt a projektet egy GitHub Codespace-ben vagy a helyi IDE-dben a mellékelt devcontainerrel. A tanfolyamban használt devcontainer előre konfigurált a GitHub Copilot-tal az AI páros programozáshoz.
+A gyors kódolás megkezdéséhez nyisd meg ezt a projektet egy GitHub Codespace-ben vagy a helyi IDE-dben a mellékelt devcontainerrel. A tanfolyamban használt devcontainer előre konfigurált a GitHub Copilottal az AI páros programozáshoz.
 
-Minden kódpélda tartalmaz javasolt kérdéseket, amelyeket feltehetsz a GitHub Copilot-nak a mélyebb megértés érdekében. Keresd a 💡/🤖 jelzéseket a következőkben:
+Minden kódpélda tartalmaz javasolt kérdéseket, amelyeket feltehetsz a GitHub Copilotnak a mélyebb megértés érdekében. Keresd a 💡/🤖 jelzéseket a következőkben:
 
-- **Java fájlfejlécek** - Az adott példához kapcsolódó kérdések
+- **Java fájlfejlécek** - Példánként specifikus kérdések
 - **Modul README-k** - Felfedező kérdések a kódpéldák után
 
-**Használati útmutató:** Nyiss meg bármilyen kód fájlt, és tedd fel a javasolt kérdéseket a Copilot-nak. Teljes kontextusa van a kódbázisnak, és képes magyarázni, bővíteni, illetve alternatívákat javasolni.
+**Használati útmutató:** Nyiss meg bármilyen kód fájlt, és tedd fel a javasolt kérdéseket Copilotnak. Teljes kontextusa van a kódbázisról, képes magyarázni, bővíteni és alternatívákat javasolni.
 
 Szeretnél többet megtudni? Nézd meg a [Copilot az AI páros programozáshoz](https://aka.ms/GitHubCopilotAI) oldalt.
 
@@ -90,25 +109,25 @@ Szeretnél többet megtudni? Nézd meg a [Copilot az AI páros programozáshoz](
 [![Kiberbiztonság kezdőknek](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Webfejlesztés kezdőknek](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT kezdőknek](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR fejlesztés kezdőknek](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Fejlesztés Kezdőknek](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Copilot sorozat
-[![Copilot az AI páros programozáshoz](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+### Copilot Sorozat
+[![Copilot AI Páros Programozáshoz](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot C#/.NET-hez](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Kaland](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Segítségkérés
 
-Ha elakadnál vagy kérdéseid lennének az AI alkalmazások fejlesztésével kapcsolatban, csatlakozz:
+Ha elakadnál vagy kérdésed van az AI alkalmazások fejlesztésével kapcsolatban, csatlakozz:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Ha termék visszajelzésed vagy hibákba ütközöl fejlesztés közben, látogass el ide:
+Ha termék visszajelzésed vagy hibák vannak a fejlesztés során, látogass el ide:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Azure AI Foundry Fejlesztői Fórum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licenc
 

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:18:01+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:17:47+00:00",
   "source_file": "README.md",
   "language_code": "pl"
 }
@@ -21,7 +21,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Kurs budowania aplikacji AI z LangChain4j i Azure OpenAI GPT-5, od podstawowego czatu po agentów AI.
 
-**Nowy w LangChain4j?** Sprawdź [Słownik](docs/GLOSSARY.md) z definicjami kluczowych terminów i pojęć.
+**Nowy w LangChain4j?** Sprawdź [Słownik](docs/GLOSSARY.md) dla definicji kluczowych terminów i pojęć.
 
 ## Spis treści
 
@@ -35,20 +35,39 @@ Kurs budowania aplikacji AI z LangChain4j i Azure OpenAI GPT-5, od podstawowego 
 
 ## Ścieżka nauki
 
-Zacznij od modułu [Szybki start](00-quick-start/README.md) i przechodź przez kolejne moduły, aby krok po kroku rozwijać swoje umiejętności. Wypróbujesz podstawowe przykłady, aby zrozumieć fundamenty, zanim przejdziesz do modułu [Wprowadzenie](01-introduction/README.md) na głębsze poznanie GPT-5.
+> **Szybki start**
+
+1. Sforkuj to repozytorium na swoje konto GitHub
+2. Kliknij **Code** → zakładka **Codespaces** → **...** → **Nowy z opcjami...**
+3. Użyj domyślnych ustawień – wybierze to kontener deweloperski stworzony dla tego kursu
+4. Kliknij **Utwórz codespace**
+5. Poczekaj 5-10 minut na przygotowanie środowiska
+6. Przejdź bezpośrednio do [Szybkiego startu](./00-quick-start/README.md), aby zacząć!
+
+> **Wolisz klonować lokalnie?**
+>
+> To repozytorium zawiera ponad 50 tłumaczeń językowych, co znacznie zwiększa rozmiar pobierania. Aby sklonować bez tłumaczeń, użyj sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> To zapewnia wszystko, czego potrzebujesz do ukończenia kursu, z dużo szybszym pobieraniem.
+
+Zacznij od modułu [Szybki start](00-quick-start/README.md) i przechodź przez kolejne moduły, aby krok po kroku rozwijać swoje umiejętności. Wypróbujesz podstawowe przykłady, aby zrozumieć fundamenty, zanim przejdziesz do modułu [Wprowadzenie](01-introduction/README.md) na głębsze zanurzenie z GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pl.png" alt="Ścieżka nauki" width="800"/>
 
-Po ukończeniu modułów zapoznaj się z [Przewodnikiem testowania](docs/TESTING.md), aby zobaczyć koncepcje testowania LangChain4j w praktyce.
+Po ukończeniu modułów, zapoznaj się z [Przewodnikiem testowania](docs/TESTING.md), aby zobaczyć koncepcje testowania LangChain4j w praktyce.
 
-> **Uwaga:** To szkolenie korzysta zarówno z modeli GitHub, jak i Azure OpenAI. Moduły [Szybki start](00-quick-start/README.md) i [MCP](05-mcp/README.md) używają modeli GitHub (nie jest wymagana subskrypcja Azure), natomiast moduły 1-4 korzystają z Azure OpenAI GPT-5.
+> **Uwaga:** To szkolenie korzysta zarówno z modeli GitHub, jak i Azure OpenAI. Moduły [Szybki start](00-quick-start/README.md) i [MCP](05-mcp/README.md) używają modeli GitHub (nie jest wymagana subskrypcja Azure), podczas gdy moduły 1-4 korzystają z Azure OpenAI GPT-5.
 
 
 ## Nauka z GitHub Copilot
 
 Aby szybko zacząć kodować, otwórz ten projekt w GitHub Codespace lub w swoim lokalnym IDE z dostarczonym devcontainerem. Devcontainer używany w tym kursie jest wstępnie skonfigurowany z GitHub Copilot do programowania w parach z AI.
 
-Każdy przykład kodu zawiera sugerowane pytania, które możesz zadać GitHub Copilot, aby pogłębić swoją wiedzę. Szukaj podpowiedzi 💡/🤖 w:
+Każdy przykład kodu zawiera sugerowane pytania, które możesz zadać GitHub Copilot, aby pogłębić swoje zrozumienie. Szukaj podpowiedzi 💡/🤖 w:
 
 - **Nagłówkach plików Java** - pytania specyficzne dla każdego przykładu
 - **Plikach README modułów** - podpowiedzi do eksploracji po przykładach kodu
@@ -90,12 +109,12 @@ Chcesz dowiedzieć się więcej? Sprawdź [Copilot do programowania w parach z A
 [![Cyberbezpieczeństwo dla początkujących](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web Dev dla początkujących](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT dla początkujących](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development dla początkujących](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Seria Copilot
-[![Copilot do programowania w parach z AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
@@ -118,5 +137,5 @@ Licencja MIT - Szczegóły w pliku [LICENSE](../../LICENSE).
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Zastrzeżenie**:  
-Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dokładamy starań, aby tłumaczenie było jak najbardziej precyzyjne, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym powinien być uznawany za źródło autorytatywne. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mimo że dokładamy starań, aby tłumaczenie było jak najbardziej precyzyjne, prosimy mieć na uwadze, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w języku źródłowym należy traktować jako źródło wiążące. W przypadku informacji o kluczowym znaczeniu zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

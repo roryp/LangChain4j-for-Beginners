@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:59:10+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:55:28+00:00",
   "source_file": "README.md",
   "language_code": "et"
 }
@@ -19,7 +19,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j algajatele
 
-Kursus AI-rakenduste loomiseks LangChain4j ja Azure OpenAI GPT-5 abil, alates lihtsast vestlusest kuni AI-agentideni.
+Kursus AI rakenduste loomiseks LangChain4j ja Azure OpenAI GPT-5 abil, alates lihtsast vestlusest kuni AI agentideni.
 
 **Uus LangChain4j-s?** Tutvu [Sõnastikuga](docs/GLOSSARY.md), et saada ülevaade võtmeterminitest ja kontseptsioonidest.
 
@@ -29,25 +29,44 @@ Kursus AI-rakenduste loomiseks LangChain4j ja Azure OpenAI GPT-5 abil, alates li
 2. [Sissejuhatus](01-introduction/README.md) - Õpi LangChain4j põhialuseid
 3. [Promptide loomine](02-prompt-engineering/README.md) - Saa meistriks tõhusas promptide kujundamises
 4. [RAG (otsingupõhine genereerimine)](03-rag/README.md) - Ehita nutikaid teadmistepõhiseid süsteeme
-5. [Tööriistad](04-tools/README.md) - Integreeri väliseid tööriistu ja API-sid AI-agentidega
+5. [Tööriistad](04-tools/README.md) - Integreeri väliseid tööriistu ja API-sid AI agentidega
 6. [MCP (mudeli konteksti protokoll)](05-mcp/README.md) - Töötamine mudeli konteksti protokolliga
 ---
 
 ## Õppeteekond
 
-Alusta [Kiire alguse](00-quick-start/README.md) moodulist ja liigu samm-sammult edasi, et oma oskusi järk-järgult arendada. Proovi lihtsaid näiteid, et mõista põhialuseid, enne kui süüvid põhjalikumalt [Sissejuhatuses](01-introduction/README.md) GPT-5-ga.
+> **Kiire algus**
+
+1. Tee selle hoidla fork oma GitHub kontole
+2. Klõpsa **Code** → **Codespaces** vahekaart → **...** → **New with options...**
+3. Kasuta vaikeseadeid – see valib selle kursuse jaoks loodud arenduskonteineri
+4. Klõpsa **Create codespace**
+5. Oota 5-10 minutit, kuni keskkond on valmis
+6. Hüpata otse [Kiire algus](./00-quick-start/README.md) juurde ja alusta!
+
+> **Eelistad kloonida lokaalselt?**
+>
+> See hoidla sisaldab üle 50 keele tõlkeid, mis suurendab oluliselt allalaadimise mahtu. Tõlgeteta kloonimiseks kasuta sparse checkouti:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> See annab sulle kõik vajaliku kursuse läbimiseks palju kiirema allalaadimisega.
+
+Alusta [Kiire algus](00-quick-start/README.md) moodulist ja liigu samm-sammult läbi iga mooduli, et oma oskusi arendada. Proovid lihtsaid näiteid, et mõista põhialuseid, enne kui süvened [Sissejuhatusse](01-introduction/README.md) GPT-5-ga.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.et.png" alt="Õppeteekond" width="800"/>
 
-Pärast moodulite läbimist tutvu [Testimise juhendiga](docs/TESTING.md), et näha LangChain4j testimise kontseptsioone praktikas.
+Pärast moodulite läbimist vaata [Testimise juhendit](docs/TESTING.md), et näha LangChain4j testimise kontseptsioone praktikas.
 
-> **Märkus:** See koolitus kasutab nii GitHubi mudeleid kui ka Azure OpenAI-d. [Kiire alguse](00-quick-start/README.md) ja [MCP](05-mcp/README.md) moodulid kasutavad GitHubi mudeleid (Azure tellimus pole vajalik), samas kui moodulid 1-4 kasutavad Azure OpenAI GPT-5.
+> **Märkus:** See koolitus kasutab nii GitHubi mudeleid kui ka Azure OpenAI-d. [Kiire algus](00-quick-start/README.md) ja [MCP](05-mcp/README.md) moodulid kasutavad GitHubi mudeleid (Azure tellimust ei nõuta), samas kui moodulid 1-4 kasutavad Azure OpenAI GPT-5.
 
 ## Õppimine GitHub Copilotiga
 
-Kiireks kodeerimise alustamiseks ava see projekt GitHub Codespace'is või oma kohalikus IDE-s koos antud devcontaineriga. Selle kursuse devcontainer on eelkonfigureeritud GitHub Copilotiga AI paarisprogrammeerimiseks.
+Kiireks kodeerimise alustamiseks ava see projekt GitHub Codespaces või oma lokaalses IDE-s koos antud devcontaineriga. Selle kursuse devcontainer on eelkonfigureeritud GitHub Copilotiga AI paarisprogrammeerimiseks.
 
-Iga koodinäite juures on soovitatud küsimused, mida saad GitHub Copilotile esitada, et oma arusaamist süvendada. Otsi 💡/🤖 märke:
+Igas koodinäites on soovitatud küsimused, mida saad GitHub Copilotile esitada, et oma arusaamist süvendada. Otsi 💡/🤖 vihjeid:
 
 - **Java failide päistes** - konkreetsete näidete küsimused
 - **Moodulite README-d** - uurimisküsimused pärast koodinäiteid
@@ -56,7 +75,7 @@ Iga koodinäite juures on soovitatud küsimused, mida saad GitHub Copilotile esi
 
 Soovid rohkem teada? Vaata [Copilot AI paarisprogrammeerimiseks](https://aka.ms/GitHubCopilotAI).
 
-## Täiendavad ressursid
+## Lisamaterjalid
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -69,11 +88,11 @@ Soovid rohkem teada? Vaata [Copilot AI paarisprogrammeerimiseks](https://aka.ms/
 [![AZD algajatele](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI algajatele](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP algajatele](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI agentide algajatele](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI agendid algajatele](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Generatiivse AI sari
+### Generatiivne AI sari
 [![Generatiivne AI algajatele](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generatiivne AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generatiivne AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -88,29 +107,29 @@ Soovid rohkem teada? Vaata [Copilot AI paarisprogrammeerimiseks](https://aka.ms/
 [![Küberjulgeolek algajatele](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Veebiarendus algajatele](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT algajatele](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR arendus algajatele](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Copiloti sari
-[![Copilot AI paarisprogrammeerimiseks](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+### Copiloti seeria
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Abi saamine
 
-Kui jääd hätta või sul on küsimusi AI-rakenduste loomise kohta, liitu:
+Kui jääd hätta või sul on küsimusi AI rakenduste loomise kohta, liitu:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Kui sul on toote tagasisidet või ehitamise ajal vigu, külasta:
+Kui sul on toote tagasisidet või ehitamisel vigu, külasta:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Litsents
 
-MIT litsents - vaata üksikasju failist [LICENSE](../../LICENSE).
+MIT litsents - vaata üksikasju [LICENSE](../../LICENSE) failist.
 
 ---
 

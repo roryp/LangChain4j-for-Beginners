@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:47:05+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:44:14+00:00",
   "source_file": "README.md",
   "language_code": "bg"
 }
@@ -28,25 +28,44 @@ CO_OP_TRANSLATOR_METADATA:
 1. [Бърз старт](00-quick-start/README.md) - Започнете с LangChain4j
 2. [Въведение](01-introduction/README.md) - Научете основите на LangChain4j
 3. [Проектиране на заявки](02-prompt-engineering/README.md) - Овладейте ефективното проектиране на заявки
-4. [RAG (Генериране с обогатяване чрез извличане)](03-rag/README.md) - Създайте интелигентни системи, базирани на знания
+4. [RAG (Генериране с допълнително извличане)](03-rag/README.md) - Изградете интелигентни системи, базирани на знания
 5. [Инструменти](04-tools/README.md) - Интегрирайте външни инструменти и API с AI агенти
 6. [MCP (Протокол за контекст на модела)](05-mcp/README.md) - Работа с Протокола за контекст на модела
 ---
 
 ## Обучителен път
 
+> **Бърз старт**
+
+1. Форкнете това хранилище в своя GitHub акаунт
+2. Кликнете **Code** → раздел **Codespaces** → **...** → **New with options...**
+3. Използвайте подразбиращите се настройки – това ще избере контейнера за разработка, създаден за този курс
+4. Кликнете **Create codespace**
+5. Изчакайте 5-10 минути за готовност на средата
+6. Отидете директно на [Бърз старт](./00-quick-start/README.md), за да започнете!
+
+> **Предпочитате да клонирате локално?**
+>
+> Това хранилище включва над 50 езикови превода, което значително увеличава размера на изтегляне. За да клонирате без преводи, използвайте sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Това ви дава всичко необходимо за завършване на курса с много по-бързо изтегляне.
+
 Започнете с модула [Бърз старт](00-quick-start/README.md) и преминавайте през всеки модул, за да изградите уменията си стъпка по стъпка. Ще изпробвате основни примери, за да разберете основите, преди да преминете към модула [Въведение](01-introduction/README.md) за по-задълбочено изучаване с GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.bg.png" alt="Learning Path" width="800"/>
 
-След като завършите модулите, разгледайте [Ръководството за тестване](docs/TESTING.md), за да видите концепциите за тестване на LangChain4j в действие.
+След завършване на модулите, разгледайте [Ръководството за тестване](docs/TESTING.md), за да видите концепциите за тестване на LangChain4j в действие.
 
 > **Забележка:** Това обучение използва както GitHub модели, така и Azure OpenAI. Модулите [Бърз старт](00-quick-start/README.md) и [MCP](05-mcp/README.md) използват GitHub модели (не е необходим абонамент за Azure), докато модулите 1-4 използват Azure OpenAI GPT-5.
 
 
 ## Обучение с GitHub Copilot
 
-За бърз старт с кодирането отворете този проект в GitHub Codespace или в локалната си IDE с предоставения devcontainer. Използваният в този курс devcontainer е предварително конфигуриран с GitHub Copilot за AI съвместно програмиране.
+За бърз старт на кодирането, отворете този проект в GitHub Codespace или в локалната си IDE с предоставения devcontainer. Devcontainer-ът, използван в този курс, е предварително конфигуриран с GitHub Copilot за AI съвместно програмиране.
 
 Всеки примерен код включва предложени въпроси, които можете да зададете на GitHub Copilot, за да задълбочите разбирането си. Потърсете подсказките 💡/🤖 в:
 
@@ -85,24 +104,24 @@ CO_OP_TRANSLATOR_METADATA:
  
 ### Основно обучение
 [![Машинно обучение за начинаещи](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![Данни науки за начинаещи](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![Данни и наука за начинаещи](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI за начинаещи](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Киберсигурност за начинаещи](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Уеб разработка за начинаещи](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT за начинаещи](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR разработка за начинаещи](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Серия Copilot
-[![Copilot за AI съвместно програмиране](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Получаване на помощ
 
-Ако се затрудните или имате въпроси относно създаването на AI приложения, присъединете се към:
+Ако заседнете или имате въпроси относно създаването на AI приложения, присъединете се към:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 

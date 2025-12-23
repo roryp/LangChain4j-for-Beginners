@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:19:26+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:19:21+00:00",
   "source_file": "README.md",
   "language_code": "tr"
 }
@@ -35,11 +35,30 @@ LangChain4j ve Azure OpenAI GPT-5 ile temel sohbetten AI ajanlarına kadar AI uy
 
 ## Öğrenme Yolu
 
-[Hızlı Başlangıç](00-quick-start/README.md) modülü ile başlayın ve becerilerinizi adım adım geliştirmek için her modülden geçin. Temelleri anlamak için temel örnekleri deneyin, ardından GPT-5 ile daha derinlemesine bir dalış için [Giriş](01-introduction/README.md) modülüne geçin.
+> **Hızlı Başlangıç**
+
+1. Bu depoyu GitHub hesabınıza fork edin
+2. **Code** → **Codespaces** sekmesine tıklayın → **...** → **Yeni seçeneklerle...**
+3. Varsayılanları kullanın – bu, bu kurs için oluşturulan Geliştirme konteynerini seçecektir
+4. **Codespace oluştur** butonuna tıklayın
+5. Ortamın hazır olması için 5-10 dakika bekleyin
+6. Başlamak için doğrudan [Hızlı Başlangıç](./00-quick-start/README.md) bölümüne atlayın!
+
+> **Yerel Klonlamayı mı Tercih Ediyorsunuz?**
+>
+> Bu depo, indirme boyutunu önemli ölçüde artıran 50+ dil çevirisi içerir. Çeviriler olmadan klonlamak için sparse checkout kullanın:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Bu, kursu tamamlamak için ihtiyacınız olan her şeyi çok daha hızlı bir indirme ile sağlar.
+
+[Hızlı Başlangıç](00-quick-start/README.md) modülü ile başlayın ve becerilerinizi adım adım geliştirmek için her modülden ilerleyin. Temelleri anlamak için temel örnekleri deneyeceksiniz, ardından GPT-5 ile daha derinlemesine bir dalış için [Giriş](01-introduction/README.md) modülüne geçeceksiniz.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.tr.png" alt="Learning Path" width="800"/>
 
-Modülleri tamamladıktan sonra, LangChain4j test kavramlarını uygulamalı görmek için [Test Rehberini](docs/TESTING.md) keşfedin.
+Modülleri tamamladıktan sonra, LangChain4j test kavramlarını uygulamada görmek için [Test Rehberini](docs/TESTING.md) keşfedin.
 
 > **Not:** Bu eğitim hem GitHub Modellerini hem de Azure OpenAI'yi kullanır. [Hızlı Başlangıç](00-quick-start/README.md) ve [MCP](05-mcp/README.md) modülleri GitHub Modellerini kullanır (Azure aboneliği gerekmez), modüller 1-4 ise Azure OpenAI GPT-5 kullanır.
 
@@ -55,7 +74,7 @@ Her kod örneği, GitHub Copilot'a sorabileceğiniz ve anlayışınızı derinle
 
 **Nasıl kullanılır:** Herhangi bir kod dosyasını açın ve Copilot'a önerilen soruları sorun. Kod tabanının tam bağlamına sahiptir ve açıklayabilir, genişletebilir ve alternatifler önerebilir.
 
-Daha fazlasını öğrenmek ister misiniz? [AI Eşli Programlama için Copilot](https://aka.ms/GitHubCopilotAI) sayfasına göz atın.
+Daha fazlasını öğrenmek ister misiniz? [AI Eşliğinde Programlama için Copilot](https://aka.ms/GitHubCopilotAI) sayfasına göz atın.
 
 
 ## Ek Kaynaklar
@@ -90,33 +109,33 @@ Daha fazlasını öğrenmek ister misiniz? [AI Eşli Programlama için Copilot](
 [![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Yeni Başlayanlar için XR Geliştirme](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Copilot Serisi
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Yapay Zeka Eşli Programlama için Copilot](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![C#/.NET için Copilot](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Macerası](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Yardım Alma
 
-Takılırsanız veya AI uygulamaları geliştirme hakkında herhangi bir sorunuz olursa, katılın:
+Tıkandığınızda veya AI uygulamaları geliştirme hakkında sorularınız olduğunda katılın:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Ürün geri bildirimi veya geliştirme sırasında hatalarınız varsa ziyaret edin:
+Ürün geri bildirimi veya geliştirme sırasında hatalar için ziyaret edin:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Azure AI Foundry Geliştirici Forumu](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Lisans
 
-MIT Lisansı - Detaylar için [LICENSE](../../LICENSE) dosyasına bakınız.
+MIT Lisansı - Ayrıntılar için [LICENSE](../../LICENSE) dosyasına bakınız.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Feragatname**:  
-Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

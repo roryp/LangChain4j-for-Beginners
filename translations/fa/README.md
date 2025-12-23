@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T10:59:46+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T09:56:56+00:00",
   "source_file": "README.md",
   "language_code": "fa"
 }
@@ -35,7 +35,26 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## مسیر یادگیری
 
-با ماژول [شروع سریع](00-quick-start/README.md) شروع کنید و به تدریج با هر ماژول مهارت‌های خود را گام به گام بسازید. ابتدا مثال‌های پایه را امتحان می‌کنید تا اصول را درک کنید، سپس به ماژول [مقدمه](01-introduction/README.md) برای بررسی عمیق‌تر با GPT-5 می‌روید.
+> **شروع سریع**
+
+1. این مخزن را به حساب GitHub خود فورک کنید  
+2. روی **Code** کلیک کنید → تب **Codespaces** → **...** → **New with options...**  
+3. از تنظیمات پیش‌فرض استفاده کنید – این کانتینر توسعه ایجاد شده برای این دوره را انتخاب می‌کند  
+4. روی **Create codespace** کلیک کنید  
+5. ۵ تا ۱۰ دقیقه منتظر بمانید تا محیط آماده شود  
+6. مستقیماً به [شروع سریع](./00-quick-start/README.md) بروید و کار را آغاز کنید!
+
+> **ترجیح می‌دهید به صورت محلی کلون کنید؟**  
+>  
+> این مخزن شامل بیش از ۵۰ ترجمه زبانی است که حجم دانلود را به طور قابل توجهی افزایش می‌دهد. برای کلون بدون ترجمه‌ها، از sparse checkout استفاده کنید:  
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> این به شما همه چیز لازم برای تکمیل دوره را با دانلود بسیار سریع‌تر می‌دهد.
+
+با ماژول [شروع سریع](00-quick-start/README.md) شروع کنید و به ترتیب هر ماژول را پیش ببرید تا مهارت‌های خود را گام به گام بسازید. ابتدا مثال‌های پایه را امتحان می‌کنید تا اصول را بفهمید، سپس به ماژول [مقدمه](01-introduction/README.md) برای بررسی عمیق‌تر با GPT-5 می‌روید.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.fa.png" alt="Learning Path" width="800"/>
 
@@ -45,14 +64,14 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## یادگیری با GitHub Copilot
 
-برای شروع سریع کدنویسی، این پروژه را در GitHub Codespace یا IDE محلی خود با devcontainer ارائه شده باز کنید. devcontainer استفاده شده در این دوره به صورت پیش‌فرض با GitHub Copilot برای برنامه‌نویسی جفتی هوش مصنوعی پیکربندی شده است.
+برای شروع سریع کدنویسی، این پروژه را در GitHub Codespace یا IDE محلی خود با devcontainer ارائه شده باز کنید. devcontainer استفاده شده در این دوره به طور پیش‌فرض با GitHub Copilot برای برنامه‌نویسی جفتی هوش مصنوعی پیکربندی شده است.
 
 هر مثال کد شامل سوالات پیشنهادی است که می‌توانید از GitHub Copilot بپرسید تا درک خود را عمیق‌تر کنید. به دنبال نشانه‌های 💡/🤖 در:
 
 - **هدر فایل‌های جاوا** - سوالات خاص هر مثال  
-- **README ماژول‌ها** - سوالات اکتشافی پس از مثال‌های کد  
+- **README ماژول‌ها** - پیشنهادات اکتشافی پس از مثال‌های کد  
 
-**نحوه استفاده:** هر فایل کد را باز کنید و سوالات پیشنهادی را از Copilot بپرسید. او به طور کامل به کد دسترسی دارد و می‌تواند توضیح دهد، گسترش دهد و جایگزین‌هایی پیشنهاد کند.
+**نحوه استفاده:** هر فایل کد را باز کنید و سوالات پیشنهادی را از Copilot بپرسید. او به طور کامل با کد آشناست و می‌تواند توضیح دهد، گسترش دهد و جایگزین‌هایی پیشنهاد کند.
 
 می‌خواهید بیشتر یاد بگیرید؟ به [Copilot برای برنامه‌نویسی جفتی هوش مصنوعی](https://aka.ms/GitHubCopilotAI) مراجعه کنید.
 
@@ -92,21 +111,21 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### سری Copilot
-[![Copilot برای برنامه‌نویسی جفتی هوش مصنوعی](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+### سری کوپایلوت
+[![کوپایلوت برای برنامه‌نویسی جفتی هوش مصنوعی](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![کوپایلوت برای C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![ماجراجویی کوپایلوت](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## دریافت کمک
 
 اگر گیر کردید یا سوالی درباره ساخت برنامه‌های هوش مصنوعی داشتید، بپیوندید به:
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![دیسکورد Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
 اگر بازخورد محصول یا خطایی هنگام ساخت داشتید، مراجعه کنید به:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![انجمن توسعه‌دهندگان Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## مجوز
 
@@ -116,5 +135,5 @@ CO_OP_TRANSLATOR_METADATA:
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطاها یا نادرستی‌هایی باشند. سند اصلی به زبان بومی خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئول هیچ گونه سوءتفاهم یا تفسیر نادرستی که از استفاده این ترجمه ناشی شود، نیستیم.
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطاها یا نواقصی باشند. سند اصلی به زبان بومی خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئول هیچ گونه سوءتفاهم یا تفسیر نادرستی که از استفاده این ترجمه ناشی شود، نیستیم.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

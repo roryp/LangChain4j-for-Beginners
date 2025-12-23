@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:25:37+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:25:02+00:00",
   "source_file": "README.md",
   "language_code": "da"
 }
@@ -35,11 +35,30 @@ Et kursus til at bygge AI-applikationer med LangChain4j og Azure OpenAI GPT-5, f
 
 ## Læringssti
 
+> **Kom godt i gang**
+
+1. Fork dette repository til din GitHub-konto
+2. Klik på **Code** → fanen **Codespaces** → **...** → **New with options...**
+3. Brug standardindstillingerne – dette vælger udviklingscontaineren oprettet til dette kursus
+4. Klik på **Create codespace**
+5. Vent 5-10 minutter på, at miljøet er klar
+6. Gå direkte til [Kom godt i gang](./00-quick-start/README.md) for at komme i gang!
+
+> **Foretrækker du at klone lokalt?**
+>
+> Dette repository indeholder 50+ sprogoversættelser, hvilket øger downloadstørrelsen betydeligt. For at klone uden oversættelser, brug sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Dette giver dig alt, hvad du behøver for at gennemføre kurset med en meget hurtigere download.
+
 Start med modulet [Kom godt i gang](00-quick-start/README.md) og fortsæt gennem hvert modul for at opbygge dine færdigheder trin for trin. Du vil prøve grundlæggende eksempler for at forstå det fundamentale, før du går videre til modulet [Introduktion](01-introduction/README.md) for en dybere gennemgang med GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.da.png" alt="Learning Path" width="800"/>
 
-Efter at have gennemført modulerne, kan du udforske [Testvejledningen](docs/TESTING.md) for at se LangChain4j testkoncepter i praksis.
+Efter at have gennemført modulerne, udforsk [Testvejledningen](docs/TESTING.md) for at se LangChain4j testkoncepter i praksis.
 
 > **Bemærk:** Denne træning bruger både GitHub Models og Azure OpenAI. Modulerne [Kom godt i gang](00-quick-start/README.md) og [MCP](05-mcp/README.md) bruger GitHub Models (ingen Azure-abonnement krævet), mens modulerne 1-4 bruger Azure OpenAI GPT-5.
 
@@ -48,10 +67,10 @@ Efter at have gennemført modulerne, kan du udforske [Testvejledningen](docs/TES
 
 For hurtigt at komme i gang med kodning, åbn dette projekt i en GitHub Codespace eller din lokale IDE med den medfølgende devcontainer. Devcontaineren, der bruges i dette kursus, er forudkonfigureret med GitHub Copilot til AI-parprogrammering.
 
-Hvert kodeeksempel inkluderer foreslåede spørgsmål, du kan stille GitHub Copilot for at uddybe din forståelse. Kig efter 💡/🤖 prompts i:
+Hvert kodeeksempel indeholder foreslåede spørgsmål, du kan stille GitHub Copilot for at uddybe din forståelse. Kig efter 💡/🤖 prompts i:
 
 - **Java-filoverskrifter** - Spørgsmål specifikke for hvert eksempel
-- **Modul-README'er** - Udforskningsprompter efter kodeeksempler
+- **Modul-README'er** - Udforskningsspørgsmål efter kodeeksempler
 
 **Sådan bruger du det:** Åbn en hvilken som helst kodefil og stil Copilot de foreslåede spørgsmål. Den har fuld kontekst af kodebasen og kan forklare, udvide og foreslå alternativer.
 

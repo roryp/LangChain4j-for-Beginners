@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:16:34+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:16:25+00:00",
   "source_file": "README.md",
   "language_code": "it"
 }
@@ -35,13 +35,32 @@ Un corso per costruire applicazioni AI con LangChain4j e Azure OpenAI GPT-5, dal
 
 ## Percorso di Apprendimento
 
-Inizia con il modulo [Avvio Rapido](00-quick-start/README.md) e prosegui attraverso ogni modulo per sviluppare le tue competenze passo dopo passo. Proverai esempi di base per comprendere i fondamenti prima di passare al modulo [Introduzione](01-introduction/README.md) per un approfondimento con GPT-5.
+> **Avvio Rapido**
+
+1. Fai il fork di questo repository nel tuo account GitHub
+2. Clicca su **Code** → scheda **Codespaces** → **...** → **Nuovo con opzioni...**
+3. Usa le impostazioni predefinite – questo selezionerà il contenitore di sviluppo creato per questo corso
+4. Clicca su **Crea codespace**
+5. Attendi 5-10 minuti che l’ambiente sia pronto
+6. Vai direttamente a [Avvio Rapido](./00-quick-start/README.md) per iniziare!
+
+> **Preferisci Clonare Localmente?**
+>
+> Questo repository include oltre 50 traduzioni linguistiche che aumentano significativamente la dimensione del download. Per clonare senza traduzioni, usa il checkout sparso:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Questo ti dà tutto il necessario per completare il corso con un download molto più veloce.
+
+Inizia con il modulo [Avvio Rapido](00-quick-start/README.md) e procedi attraverso ogni modulo per sviluppare le tue competenze passo dopo passo. Proverai esempi di base per comprendere i fondamenti prima di passare al modulo [Introduzione](01-introduction/README.md) per un approfondimento con GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.it.png" alt="Percorso di Apprendimento" width="800"/>
 
 Dopo aver completato i moduli, esplora la [Guida ai Test](docs/TESTING.md) per vedere i concetti di testing di LangChain4j in azione.
 
-> **Nota:** Questa formazione utilizza sia i Modelli GitHub che Azure OpenAI. I moduli [Avvio Rapido](00-quick-start/README.md) e [MCP](05-mcp/README.md) usano i Modelli GitHub (non è richiesta una sottoscrizione Azure), mentre i moduli 1-4 usano Azure OpenAI GPT-5.
+> **Nota:** Questa formazione utilizza sia GitHub Models che Azure OpenAI. I moduli [Avvio Rapido](00-quick-start/README.md) e [MCP](05-mcp/README.md) usano GitHub Models (non è richiesta una sottoscrizione Azure), mentre i moduli 1-4 usano Azure OpenAI GPT-5.
 
 
 ## Apprendimento con GitHub Copilot
@@ -53,7 +72,7 @@ Ogni esempio di codice include domande suggerite che puoi porre a GitHub Copilot
 - **Intestazioni dei file Java** - Domande specifiche per ogni esempio
 - **README dei moduli** - Prompt di esplorazione dopo gli esempi di codice
 
-**Come usare:** Apri qualsiasi file di codice e poni a Copilot le domande suggerite. Ha il contesto completo del codice e può spiegare, estendere e suggerire alternative.
+**Come usarlo:** Apri qualsiasi file di codice e poni a Copilot le domande suggerite. Ha il contesto completo del codice e può spiegare, estendere e suggerire alternative.
 
 Vuoi saperne di più? Dai un’occhiata a [Copilot per la Programmazione AI in Coppia](https://aka.ms/GitHubCopilotAI).
 
@@ -83,19 +102,19 @@ Vuoi saperne di più? Dai un’occhiata a [Copilot per la Programmazione AI in C
 
 ---
  
-### Apprendimento Base
+### Apprendimento di Base
 [![ML per Principianti](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science per Principianti](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI per Principianti](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Cybersecurity per Principianti](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Sviluppo Web per Principianti](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT per Principianti](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![Sviluppo XR per Principianti](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Serie Copilot
-[![Copilot per la Programmazione AI in Coppia](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->

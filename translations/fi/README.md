@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:29:02+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:27:50+00:00",
   "source_file": "README.md",
   "language_code": "fi"
 }
@@ -27,7 +27,7 @@ Kurssi tekoälysovellusten rakentamiseen LangChain4j:llä ja Azure OpenAI GPT-5:
 
 1. [Pika-aloitus](00-quick-start/README.md) - Aloita LangChain4j:n kanssa
 2. [Johdanto](01-introduction/README.md) - Opi LangChain4j:n perusteet
-3. [Promptin suunnittelu](02-prompt-engineering/README.md) - Hallitse tehokas prompttien suunnittelu
+3. [Promptin suunnittelu](02-prompt-engineering/README.md) - Hallitse tehokas promptin suunnittelu
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Rakenna älykkäitä tietopohjaisia järjestelmiä
 5. [Työkalut](04-tools/README.md) - Integroi ulkoisia työkaluja ja API:ita tekoälyagenttien kanssa
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Työskentele Model Context Protocolin kanssa
@@ -35,25 +35,44 @@ Kurssi tekoälysovellusten rakentamiseen LangChain4j:llä ja Azure OpenAI GPT-5:
 
 ## Oppimispolku
 
-Aloita [Pika-aloitus](00-quick-start/README.md) -moduulista ja etene moduuli kerrallaan kehittäen taitojasi askel askeleelta. Kokeilet perusesimerkkejä ymmärtääksesi perusteet ennen siirtymistä [Johdanto](01-introduction/README.md) -moduuliin, jossa sukelletaan syvemmälle GPT-5:n kanssa.
+> **Pika-aloitus**
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.fi.png" alt="Oppimispolku" width="800"/>
+1. Tee forkki tästä repositoriosta GitHub-tilillesi
+2. Klikkaa **Code** → **Codespaces** -välilehti → **...** → **New with options...**
+3. Käytä oletusasetuksia – tämä valitsee kehityssäiliön, joka on luotu tälle kurssille
+4. Klikkaa **Create codespace**
+5. Odota 5-10 minuuttia, että ympäristö on valmis
+6. Siirry suoraan [Pika-aloitus](./00-quick-start/README.md) -osioon aloittaaksesi!
+
+> **Haluatko mieluummin kloonata paikallisesti?**
+>
+> Tämä repositorio sisältää yli 50 käännöstä, mikä lisää merkittävästi latauskokoa. Kloonaa ilman käännöksiä käyttämällä sparse checkoutia:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Tämä antaa sinulle kaiken tarvittavan kurssin suorittamiseen paljon nopeammalla latauksella.
+
+Aloita [Pika-aloitus](00-quick-start/README.md) -moduulista ja etene moduuli kerrallaan kehittääksesi taitojasi askel askeleelta. Kokeilet perusesimerkkejä ymmärtääksesi perusteet ennen siirtymistä [Johdanto](01-introduction/README.md) -moduuliin, jossa sukelletaan syvemmälle GPT-5:n kanssa.
+
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.fi.png" alt="Learning Path" width="800"/>
 
 Moduulien suorittamisen jälkeen tutustu [Testausoppaaseen](docs/TESTING.md) nähdäksesi LangChain4j:n testauskonsepteja käytännössä.
 
-> **Huom:** Tämä koulutus käyttää sekä GitHub-malleja että Azure OpenAI:ta. [Pika-aloitus](00-quick-start/README.md) ja [MCP](05-mcp/README.md) -moduulit käyttävät GitHub-malleja (ei Azure-tilausta vaadita), kun taas moduulit 1-4 käyttävät Azure OpenAI GPT-5:ttä.
+> **Huom:** Tämä koulutus käyttää sekä GitHub-malleja että Azure OpenAI:ta. [Pika-aloitus](00-quick-start/README.md) ja [MCP](05-mcp/README.md) moduulit käyttävät GitHub-malleja (ei Azure-tilausta vaadita), kun taas moduulit 1-4 käyttävät Azure OpenAI GPT-5:ttä.
 
 
 ## Oppiminen GitHub Copilotin kanssa
 
-Aloittaaksesi koodaamisen nopeasti, avaa tämä projekti GitHub Codespacessa tai paikallisessa IDE:ssä mukana tulevan devcontainerin kanssa. Tässä kurssissa käytetty devcontainer on esikonfiguroitu GitHub Copilotilla tekoälypariohjelmointia varten.
+Aloittaaksesi koodaamisen nopeasti, avaa tämä projekti GitHub Codespacessa tai paikallisessa IDE:ssä mukana tulevan devcontainerin kanssa. Tässä kurssissa käytetty devcontainer on esikonfiguroitu GitHub Copilotille tekoälypariohjelmointia varten.
 
-Jokaisessa koodiesimerkissä on ehdotettuja kysymyksiä, joita voit esittää GitHub Copilotille syventääksesi ymmärrystäsi. Etsi 💡/🤖 kehotteita:
+Jokainen koodiesimerkki sisältää ehdotettuja kysymyksiä, joita voit esittää GitHub Copilotille syventääksesi ymmärrystäsi. Etsi 💡/🤖 kehotteita:
 
 - **Java-tiedostojen otsikoissa** - Esimerkkiin liittyviä kysymyksiä
 - **Moduulien README-tiedostoissa** - Tutkimuskehotteita koodiesimerkkien jälkeen
 
-**Käyttöohje:** Avaa mikä tahansa kooditiedosto ja esitä Copilotille ehdotetut kysymykset. Se tuntee koko koodikannan ja voi selittää, laajentaa ja ehdottaa vaihtoehtoja.
+**Kuinka käyttää:** Avaa mikä tahansa kooditiedosto ja esitä Copilotille ehdotetut kysymykset. Se tuntee koko koodikannan ja voi selittää, laajentaa ja ehdottaa vaihtoehtoja.
 
 Haluatko oppia lisää? Tutustu [Copilot tekoälypariohjelmointiin](https://aka.ms/GitHubCopilotAI).
 
@@ -83,7 +102,7 @@ Haluatko oppia lisää? Tutustu [Copilot tekoälypariohjelmointiin](https://aka.
 
 ---
  
-### Perusopetus
+### Perusoppiminen
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -106,7 +125,7 @@ Jos jumitut tai sinulla on kysyttävää tekoälysovellusten rakentamisesta, lii
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Jos sinulla on tuotepalautetta tai kohtaat virheitä rakentamisen aikana, käy:
+Jos sinulla on tuotepalautetta tai virheitä rakentamisen aikana, käy:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -118,5 +137,5 @@ MIT-lisenssi - Katso lisätiedot [LICENSE](../../LICENSE) tiedostosta.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Vastuuvapauslauseke**:
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulee pitää virallisena lähteenä. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

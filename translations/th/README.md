@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:22:46+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:22:21+00:00",
   "source_file": "README.md",
   "language_code": "th"
 }
@@ -25,17 +25,36 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## สารบัญ
 
-1. [เริ่มต้นอย่างรวดเร็ว](00-quick-start/README.md) - เริ่มต้นกับ LangChain4j
+1. [เริ่มต้นอย่างรวดเร็ว](00-quick-start/README.md) - เริ่มต้นใช้งาน LangChain4j
 2. [บทนำ](01-introduction/README.md) - เรียนรู้พื้นฐานของ LangChain4j
 3. [การออกแบบพรอมต์](02-prompt-engineering/README.md) - เชี่ยวชาญการออกแบบพรอมต์ที่มีประสิทธิภาพ
-4. [RAG (การสร้างเสริมด้วยการดึงข้อมูล)](03-rag/README.md) - สร้างระบบความรู้ที่ชาญฉลาด
+4. [RAG (การสร้างด้วยการเสริมการดึงข้อมูล)](03-rag/README.md) - สร้างระบบความรู้ที่ชาญฉลาด
 5. [เครื่องมือ](04-tools/README.md) - รวมเครื่องมือและ API ภายนอกกับเอเจนต์ AI
 6. [MCP (โปรโตคอลบริบทของโมเดล)](05-mcp/README.md) - ทำงานกับโปรโตคอลบริบทของโมเดล
 ---
 
 ## เส้นทางการเรียนรู้
 
-เริ่มต้นด้วยโมดูล [เริ่มต้นอย่างรวดเร็ว](00-quick-start/README.md) และก้าวหน้าผ่านแต่ละโมดูลเพื่อสร้างทักษะของคุณทีละขั้นตอน คุณจะได้ลองตัวอย่างพื้นฐานเพื่อเข้าใจพื้นฐานก่อนที่จะไปยังโมดูล [บทนำ](01-introduction/README.md) เพื่อเจาะลึกกับ GPT-5
+> **เริ่มต้นอย่างรวดเร็ว**
+
+1. Fork ที่เก็บนี้ไปยังบัญชี GitHub ของคุณ
+2. คลิก **Code** → แท็บ **Codespaces** → **...** → **New with options...**
+3. ใช้ค่าปริยาย – จะเลือก Development container ที่สร้างสำหรับหลักสูตรนี้
+4. คลิก **Create codespace**
+5. รอ 5-10 นาทีจนกว่าสภาพแวดล้อมจะพร้อมใช้งาน
+6. ไปที่ [เริ่มต้นอย่างรวดเร็ว](./00-quick-start/README.md) เพื่อเริ่มต้น!
+
+> **ต้องการโคลนแบบโลคอล?**
+>
+> ที่เก็บนี้มีการแปลภาษากว่า 50 ภาษา ซึ่งเพิ่มขนาดการดาวน์โหลดอย่างมาก หากต้องการโคลนโดยไม่รวมการแปล ให้ใช้ sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> วิธีนี้จะให้ทุกอย่างที่คุณต้องการเพื่อทำหลักสูตรให้เสร็จเร็วขึ้นมาก
+
+เริ่มต้นด้วยโมดูล [เริ่มต้นอย่างรวดเร็ว](00-quick-start/README.md) และดำเนินการผ่านแต่ละโมดูลเพื่อพัฒนาทักษะทีละขั้นตอน คุณจะได้ลองตัวอย่างพื้นฐานเพื่อเข้าใจพื้นฐานก่อนที่จะไปยังโมดูล [บทนำ](01-introduction/README.md) เพื่อเจาะลึกกับ GPT-5
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.th.png" alt="Learning Path" width="800"/>
 
@@ -46,7 +65,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## การเรียนรู้กับ GitHub Copilot
 
-เพื่อเริ่มเขียนโค้ดอย่างรวดเร็ว ให้เปิดโปรเจกต์นี้ใน GitHub Codespace หรือ IDE ในเครื่องของคุณด้วย devcontainer ที่จัดเตรียมไว้ Devcontainer ที่ใช้ในหลักสูตรนี้ถูกตั้งค่าล่วงหน้าพร้อม GitHub Copilot สำหรับการเขียนโปรแกรมคู่กับ AI
+เพื่อเริ่มเขียนโค้ดอย่างรวดเร็ว ให้เปิดโปรเจกต์นี้ใน GitHub Codespace หรือ IDE ในเครื่องของคุณด้วย devcontainer ที่จัดเตรียมไว้ Devcontainer ที่ใช้ในหลักสูตรนี้ได้ตั้งค่า GitHub Copilot สำหรับการเขียนโปรแกรมคู่กับ AI ไว้ล่วงหน้าแล้ว
 
 ตัวอย่างโค้ดแต่ละตัวมีคำถามแนะนำที่คุณสามารถถาม GitHub Copilot เพื่อเพิ่มความเข้าใจ ค้นหาสัญลักษณ์ 💡/🤖 ใน:
 
@@ -85,24 +104,24 @@ CO_OP_TRANSLATOR_METADATA:
  
 ### การเรียนรู้หลัก
 [![ML สำหรับผู้เริ่มต้น](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![วิทยาศาสตร์ข้อมูลสำหรับผู้เริ่มต้น](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science สำหรับผู้เริ่มต้น](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI สำหรับผู้เริ่มต้น](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![ความปลอดภัยไซเบอร์สำหรับผู้เริ่มต้น](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![เว็บดีเวลอปสำหรับผู้เริ่มต้น](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![Cybersecurity สำหรับผู้เริ่มต้น](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Web Dev สำหรับผู้เริ่มต้น](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT สำหรับผู้เริ่มต้น](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![การพัฒนา XR สำหรับผู้เริ่มต้น](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### ชุด Copilot
-[![Copilot สำหรับการเขียนโปรแกรมคู่กับ AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## การขอความช่วยเหลือ
 
-หากคุณติดขัดหรือต้องการสอบถามเกี่ยวกับการสร้างแอป AI เข้าร่วมได้ที่:
+หากคุณติดขัดหรือต้องการคำถามเกี่ยวกับการสร้างแอป AI เข้าร่วมได้ที่:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 

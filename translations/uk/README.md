@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5faf6e12d99d1ba33780f9f32b062d96",
-  "translation_date": "2025-12-17T11:55:43+00:00",
+  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
+  "translation_date": "2025-12-19T10:51:46+00:00",
   "source_file": "README.md",
   "language_code": "uk"
 }
@@ -30,12 +30,31 @@ CO_OP_TRANSLATOR_METADATA:
 3. [Проєктування підказок](02-prompt-engineering/README.md) - Опануйте ефективне створення підказок
 4. [RAG (генерація з доповненням пошуком)](03-rag/README.md) - Створюйте інтелектуальні системи на основі знань
 5. [Інструменти](04-tools/README.md) - Інтегруйте зовнішні інструменти та API з AI-агентами
-6. [MCP (Протокол контексту моделі)](05-mcp/README.md) - Працюйте з Протоколом контексту моделі
+6. [MCP (протокол контексту моделі)](05-mcp/README.md) - Працюйте з протоколом контексту моделі
 ---
 
 ## Навчальний шлях
 
-Почніть з модуля [Швидкий старт](00-quick-start/README.md) і проходьте кожен модуль крок за кроком, щоб поступово розвивати свої навички. Ви спробуєте базові приклади, щоб зрозуміти основи, перш ніж перейти до модуля [Вступ](01-introduction/README.md) для глибшого вивчення GPT-5.
+> **Швидкий старт**
+
+1. Форкніть цей репозиторій у свій обліковий запис GitHub
+2. Клікніть **Code** → вкладка **Codespaces** → **...** → **New with options...**
+3. Використовуйте налаштування за замовчуванням – це вибере контейнер розробки, створений для цього курсу
+4. Клікніть **Create codespace**
+5. Зачекайте 5-10 хвилин, поки середовище буде готове
+6. Перейдіть безпосередньо до [Швидкого старту](./00-quick-start/README.md), щоб почати!
+
+> **Віддаєте перевагу клонувати локально?**
+>
+> Цей репозиторій містить понад 50 перекладів мов, що значно збільшує розмір завантаження. Щоб клонувати без перекладів, використовуйте sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Це дасть вам усе необхідне для проходження курсу з набагато швидшим завантаженням.
+
+Починайте з модуля [Швидкий старт](00-quick-start/README.md) і проходьте кожен модуль, щоб крок за кроком розвивати свої навички. Ви спробуєте базові приклади, щоб зрозуміти основи, перш ніж перейти до модуля [Вступ](01-introduction/README.md) для глибшого занурення з GPT-5.
 
 <img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.uk.png" alt="Learning Path" width="800"/>
 
@@ -53,7 +72,7 @@ CO_OP_TRANSLATOR_METADATA:
 - **Заголовках Java-файлів** - питання, специфічні для кожного прикладу
 - **README модулів** - підказки для дослідження після прикладів коду
 
-**Як використовувати:** Відкрийте будь-який файл коду і задайте Copilot запропоновані питання. Він має повний контекст коду і може пояснювати, розширювати та пропонувати альтернативи.
+**Як користуватися:** Відкрийте будь-який файл коду і задайте Copilot запропоновані питання. Він має повний контекст коду і може пояснювати, розширювати та пропонувати альтернативи.
 
 Хочете дізнатися більше? Ознайомтеся з [Copilot для AI-парного програмування](https://aka.ms/GitHubCopilotAI).
 
@@ -83,19 +102,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Основи навчання
+### Основне навчання
 [![ML для початківців](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science для початківців](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI для початківців](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Кібербезпека для початківців](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Веб-розробка для початківців](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT для початківців](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR розробка для початківців](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Серія Copilot
-[![Copilot для AI-парного програмування](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
