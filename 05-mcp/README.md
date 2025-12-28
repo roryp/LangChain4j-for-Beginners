@@ -22,6 +22,13 @@ You've built conversational AI, mastered prompts, grounded responses in document
 
 The Model Context Protocol (MCP) provides exactly that - a standard way for AI applications to discover and use external tools. Instead of writing custom integrations for each data source or service, you connect to MCP servers that expose their capabilities in a consistent format. Your AI agent can then discover and use these tools automatically.
 
+In this module, you'll learn:
+
+- **Model Context Protocol (MCP)** - A standard way for AI applications to discover and use external tools
+- **MCP Transports** - How to connect to MCP servers using Stdio for local processes
+- **Tool Discovery** - How AI agents automatically discover and use available tools
+- **Agentic Module** - Build declarative agents using `@Agent` annotations and `AgenticServices` - the modern approach to creating AI agents that can leverage MCP tools
+
 <img src="images/mcp-comparison.png" alt="MCP Comparison" width="800"/>
 
 *Before MCP: Complex point-to-point integrations. After MCP: One protocol, endless possibilities.*
@@ -45,6 +52,10 @@ MCP uses a client-server model. Servers provide tools - reading files, querying 
 **Tool Discovery**
 
 When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
+
+**Combining MCP with the Agentic Module**
+
+While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build the agents that use those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code, making it easy to create sophisticated agents that leverage MCP's tool ecosystem.
 
 **Transport Mechanisms**
 
@@ -198,6 +209,12 @@ The file contains a single word: "Kaboom!"
 - Your tools are simple and won't be reused
 - You need complete control over execution
 
+**Use the Agentic Module when:**
+- You want declarative agent definitions with `@Agent` annotations
+- Building agents that need workflow orchestration (sequential, loop, parallel)
+- You prefer interface-based agent design over imperative code
+- Combining multiple agents that can share outputs via `outputKey`
+
 ## MCP Ecosystem
 
 The Model Context Protocol is an open standard with a growing ecosystem:
@@ -208,6 +225,8 @@ The Model Context Protocol is an open standard with a growing ecosystem:
 - Cross-framework compatibility (works with any MCP client)
 
 This standardization means tools built for one AI application work with others, creating a shared ecosystem of capabilities.
+
+LangChain4j's agentic module complements MCP by providing a declarative layer on top. While MCP standardizes *what tools are available*, the agentic module standardizes *how agents use those tools* - through annotations, interfaces, and workflow patterns. Together, they enable building sophisticated AI agents with minimal boilerplate code.
 
 ## Congratulations!
 
