@@ -11,9 +11,6 @@
   - [File Operations (Stdio)](#file-operations-stdio)
   - [Supervisor Agent (Pure Agentic AI)](#supervisor-agent-pure-agentic-ai)
 - [Key Concepts](#key-concepts)
-- [Project Structure](#project-structure)
-- [When to Use MCP](#when-to-use-mcp)
-- [MCP Ecosystem](#mcp-ecosystem)
 - [Congratulations!](#congratulations)
   - [What's Next?](#whats-next)
 - [Troubleshooting](#troubleshooting)
@@ -225,101 +222,6 @@ LangChain4j is a Java AI library providing unified APIs, RAG support, and agent 
 
 ## Key Concepts
 
-**MCP Server-Client Architecture**
-
-MCP uses a standardized client-server model where servers expose tools and clients (your AI application) discover and use them. This decouples tool implementation from AI agents, enabling tool reuse across different applications.
-
-**Tool Discovery**
-
-When your client connects to an MCP server, it automatically discovers available tools with their descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests without hardcoded integrations.
-
-**The @Agent Annotation**
-
-The `@Agent` annotation marks methods as agentic workflow steps. It includes a description (for LLM understanding) and an `outputKey` (for sharing results between agents). This declarative approach replaces imperative tool coordination code.
-
-**Supervisor vs Deterministic Workflows**
-
-- **Sequential/Loop/Parallel** - You define the exact execution order; predictable but inflexible
-- **Supervisor** - The LLM decides which agents to invoke and in what order; flexible but requires a capable planning model
-
-**Response Strategies**
-
-The Supervisor Agent supports three response strategies:
-- `LAST` - Returns the final agent's response (default)
-- `SUMMARY` - Returns a summary of all operations performed
-- `SCORED` - Uses another LLM to score and select the best response
-
-## Project Structure
-
-This module organizes agents into a dedicated folder to separate concerns and improve maintainability:
-
-```
-05-mcp/src/main/java/com/example/langchain4j/mcp/
-├── agents/                      # Agent interfaces (sub-agents)
-│   ├── FileAgent.java           # Reads files via MCP tools
-│   ├── AnalysisAgent.java       # Analyzes content structure and themes
-│   └── SummaryAgent.java        # Creates concise summaries
-├── StdioTransportDemo.java      # Basic MCP transport demo
-└── SupervisorAgentDemo.java     # Supervisor pattern demo
-```
-
-**Multi-Agent Workflow Diagram:**
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                         User Request                                │
-│            "Read file.txt and analyze what it's about"              │
-└─────────────────────────────────────────────────────────────────────┘
-                                  │
-                                  ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                        Supervisor Agent                             │
-│  ┌───────────────────────────────────────────────────────────────┐  │
-│  │ 🧠 LLM Plans Execution:                                       │  │
-│  │    1. User wants to read a file → invoke FileAgent            │  │
-│  │    2. User wants analysis → invoke AnalysisAgent              │  │
-│  └───────────────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────────────┘
-                                  │
-          ┌───────────────────────┴───────────────────────┐
-          ▼                                               ▼
-┌─────────────────────┐                     ┌─────────────────────────┐
-│     FileAgent       │                     │     AnalysisAgent       │
-│  ┌───────────────┐  │                     │  ┌───────────────────┐  │
-│  │  @Agent       │  │  outputKey:         │  │  @Agent           │  │
-│  │  description: │  │  "summary"          │  │  description:     │  │
-│  │  "Reads and   │  │      │              │  │  "Analyzes text"  │  │
-│  │  summarizes   │  │      │              │  └───────────────────┘  │
-│  │  file..."     │  │      ▼              │            │            │
-│  └───────────────┘  │   Agentic Scope     │            ▼            │
-│         │           │   ┌───────────┐     │     outputKey:          │
-│         ▼           │   │ summary:  │     │     "analysis"          │
-│   MCP Tool Call     │   │ "..."     │     └─────────────────────────┘
-│   read_file()       │   └───────────┘
-└─────────────────────┘         │
-                                ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                        Supervisor Returns                           │
-│              (Based on ResponseStrategy: SUMMARY)                   │
-│      "The file describes LangChain4j framework. Analysis shows..."  │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
-**Key Workflow Concepts:**
-
-1. **Supervisor as Orchestrator** - The Supervisor Agent receives the user request and uses an LLM to plan which sub-agents to invoke. This is "pure agentic AI" - the LLM decides the workflow, not hardcoded logic.
-
-2. **Specialized Sub-Agents** - Each agent in the `agents/` folder is specialized:
-   - `FileAgent` - Has MCP tools for file system access
-   - `AnalysisAgent` - Pure LLM reasoning for content analysis
-   - `SummaryAgent` - Pure LLM reasoning for summarization
-
-3. **Output Sharing via Agentic Scope** - Agents can share data using `outputKey`. When `FileAgent` returns a result, it's stored in the agentic scope under the key "summary", making it available to subsequent agents.
-
-4. **Dynamic Routing** - The Supervisor reads the `@Agent` descriptions to understand each agent's capabilities. Based on the user request, it dynamically selects which agents to invoke.
-
-## When to Use MCP
-
 **Use MCP when:**
 - You want to leverage existing tool ecosystems
 - Building tools that multiple applications will use
@@ -338,19 +240,6 @@ This module organizes agents into a dedicated folder to separate concerns and im
 - Building conversational systems that need to route to different capabilities
 - You want the most flexible, adaptive agent behavior
 
-## MCP Ecosystem
-
-The Model Context Protocol is an open standard with a growing ecosystem:
-
-- Official MCP servers for common tasks (filesystem, Git, databases)
-- Community-contributed servers for various services
-- Standardized tool descriptions and schemas
-- Cross-framework compatibility (works with any MCP client)
-
-This standardization means tools built for one AI application work with others, creating a shared ecosystem of capabilities.
-
-LangChain4j's agentic module complements MCP by providing a declarative layer on top. While MCP standardizes *what tools are available*, the agentic module standardizes *how agents use those tools* - through annotations, interfaces, and workflow patterns. Together, they enable building sophisticated AI agents with minimal boilerplate code.
-
 ## Congratulations!
 
 You've completed the LangChain4j for Beginners course. You've learned:
@@ -359,9 +248,7 @@ You've completed the LangChain4j for Beginners course. You've learned:
 - Prompt engineering patterns for different tasks (Module 02)
 - Grounding responses in your documents with RAG (Module 03)
 - Creating AI agents with custom tools (Module 04)
-- Integrating standardized tools through MCP (Module 05)
-- Building declarative agents with the agentic module
-- Orchestrating multiple agents with the Supervisor pattern
+- Integrating standardized tools through MCP and the agentic module (Module 05)
 
 You now have the foundation to build production AI applications. The concepts you've learned apply regardless of specific frameworks or models - they're fundamental patterns in AI engineering.
 
