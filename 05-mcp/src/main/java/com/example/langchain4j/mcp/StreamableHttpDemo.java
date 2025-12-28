@@ -30,7 +30,7 @@ import java.util.List;
  * 1. Clone https://github.com/modelcontextprotocol/servers
  * 2. cd servers/src/everything
  * 3. npm install
- * 4. node dist/streamableHttp.js
+ * 4. node dist/transports/streamableHttp.js
  * 
  * Key Concepts:
  * - StreamableHttpMcpTransport for remote servers
