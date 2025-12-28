@@ -6,7 +6,7 @@
             "type": "shell",
             "command": "node",
             "args": [
-                "dist/streamableHttp.js"
+                "dist/transports/streamableHttp.js"
             ],
             "options": {
                 "cwd": "${workspaceFolder}/../servers/src/everything"

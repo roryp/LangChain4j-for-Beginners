@@ -156,7 +156,8 @@ This demonstrates network-based tool integration.
 git clone https://github.com/modelcontextprotocol/servers.git
 cd servers/src/everything
 npm install
-node dist/streamableHttp.js
+npm run build
+node dist/transports/streamableHttp.js
 ```
 
 **PowerShell:**
@@ -164,7 +165,8 @@ node dist/streamableHttp.js
 git clone https://github.com/modelcontextprotocol/servers.git
 cd servers/src/everything
 npm install
-node dist/streamableHttp.js
+npm run build
+node dist/transports/streamableHttp.js
 ```
 
 **Terminal 2 - Run the example:**

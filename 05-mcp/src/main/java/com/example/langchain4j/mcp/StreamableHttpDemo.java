@@ -58,29 +58,29 @@ public class StreamableHttpDemo {
         // Setup HTTP transport for MCP server
         McpTransport httpTransport = buildHttpTransport();
         
-        // Initialize MCP client
-        McpClient client = buildMcpClient(httpTransport);
-        
-        // Create tool provider from MCP
-        ToolProvider tools = McpToolProvider.builder()
-                .mcpClients(List.of(client))
-                .build();
+        // Initialize MCP client with try-with-resources for automatic cleanup
+        try (McpClient client = buildMcpClient(httpTransport)) {
+            
+            // Create tool provider from MCP
+            ToolProvider tools = McpToolProvider.builder()
+                    .mcpClients(List.of(client))
+                    .build();
 
-        // Build AI service with MCP tools
-        Bot assistant = AiServices.builder(Bot.class)
-                .chatModel(chatModel)
-                .toolProvider(tools)
-                .build();
-        
-        try {
+            // Build AI service with MCP tools
+            Bot assistant = AiServices.builder(Bot.class)
+                    .chatModel(chatModel)
+                    .toolProvider(tools)
+                    .build();
+
             // Test math operation via MCP tool
             String result = assistant.chat(
                 "Calculate 5 plus 12 using the available addition tool"
             );
             System.out.println("Result: " + result);
-        } finally {
-            client.close();
         }
+        
+        // Force exit to cleanup OkHttp connection pool threads
+        System.exit(0);
     }
 
     private static ChatModel buildChatModel() {
@@ -88,6 +88,8 @@ public class StreamableHttpDemo {
                 .baseUrl(GITHUB_MODELS_URL)
                 .apiKey(System.getenv("GITHUB_TOKEN"))
                 .modelName(MODEL_NAME)
+                .timeout(Duration.ofSeconds(60))
+                .strictTools(false)
                 .build();
     }
 
@@ -103,6 +105,9 @@ public class StreamableHttpDemo {
     private static McpClient buildMcpClient(McpTransport transport) {
         return new DefaultMcpClient.Builder()
                 .transport(transport)
+                .autoHealthCheck(false)
+                .initializationTimeout(Duration.ofSeconds(60))
+                .toolExecutionTimeout(Duration.ofSeconds(120))
                 .build();
     }
 }
