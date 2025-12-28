@@ -250,8 +250,6 @@ You've completed the LangChain4j for Beginners course. You've learned:
 - Creating basic AI agents (assistants) with custom tools (Module 04)
 - Integrating standardized tools with the LangChain4j MCP and Agentic modules (Module 05)
 
-You now have the foundation to build production AI applications. The concepts you've learned apply regardless of specific frameworks or models - they're fundamental patterns in AI engineering.
-
 ### What's Next?
 
 After completing the modules, explore the [Testing Guide](../docs/TESTING.md) to see LangChain4j testing concepts in action.
