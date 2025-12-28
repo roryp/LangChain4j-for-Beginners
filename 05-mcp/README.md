@@ -226,24 +226,25 @@ See [SupervisorAgentDemo.java](src/main/java/com/example/langchain4j/mcp/Supervi
 
 **Expected output:**
 ```
-Supervisor Agent Demo (Pure Agentic AI Pattern)
-==================================================
-
-📋 Request 1: Read and Analyze
-User request: Read the file at .../file.txt and analyze what it's about
+Request: Read the file at .../file.txt and analyze what it's about
 --------------------------------------------------
 
-🤖 Supervisor Response:
-The file contains information about LangChain4j framework. Analysis shows it describes...
+🚀 [EVENT] Starting agent: invoke
+   📥 request: Read the file at ...
+🚀 [EVENT] Starting agent: readFile
+   📥 path: .../file.txt
+✅ [EVENT] Completed agent: readFile -> Summary of file.txt...
+🚀 [EVENT] Starting agent: analyzeContent
+   📥 content: LangChain4j is an open-source Java library...
+✅ [EVENT] Completed agent: analyzeContent -> **Structure:** The content is organized...
+✅ [EVENT] Completed agent: invoke -> The file describes LangChain4j...
 
-==================================================
+Response:
+The file describes LangChain4j, an open-source Java library for integrating LLMs...
 
-📋 Request 2: Summarize Content
-User request: [asking for summary of LangChain4j description]
---------------------------------------------------
-
-🤖 Supervisor Response:
-LangChain4j is a Java AI library providing unified APIs, RAG support, and agent capabilities...
+--- Scope Contents ---
+summary (FileAgent/SummaryAgent): LangChain4j is an open-source Java library...
+analysis (AnalysisAgent): **Structure:** The summary is presented in a clear format...
 ```
 
 ### Other Agentic Module Features
@@ -272,8 +273,18 @@ List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
 ```java
 AgentListener monitor = new AgentListener() {
     @Override
-    public void onAgentInvoked(AgentInvocation invocation) {
-        System.out.println("Agent: " + invocation.agentName() + ", Duration: " + invocation.duration());
+    public void beforeAgentInvocation(AgentRequest request) {
+        System.out.println("🚀 Starting: " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("✅ Completed: " + response.agentName());
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Propagate to all sub-agents
     }
 };
 ```

@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SupervisorAgentDemo",
+            "request": "launch",
+            "mainClass": "com.example.langchain4j.mcp.SupervisorAgentDemo",
+            "projectName": "mcp-example"
+        },
+        {
+            "type": "java",
             "name": "McpAgentDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.mcp.McpAgentDemo",
