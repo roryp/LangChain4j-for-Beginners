@@ -96,6 +96,8 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
 
 While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build agents that orchestrate those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code.
 
+In this module, you'll explore the **Supervisor Agent** pattern — an advanced agentic AI approach where a "supervisor" agent dynamically decides which sub-agents to invoke based on user requests. We'll combine both concepts by giving one of our sub-agents MCP-powered file access capabilities.
+
 <img src="images/agentic.png" alt="Agentic Module" width="800"/>
 
 To use the agentic module, add this Maven dependency:
