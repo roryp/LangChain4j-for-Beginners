@@ -5,17 +5,10 @@
 - [What You'll Learn](#what-youll-learn)
 - [Understanding MCP](#understanding-mcp)
 - [How MCP Works](#how-mcp-works)
-  - [Server-Client Architecture](#server-client-architecture)
-  - [Tool Discovery](#tool-discovery)
-  - [Transport Mechanisms](#transport-mechanisms)
-- [Prerequisites](#prerequisites)
+- [Running the Examples](#running-the-examples)
+  - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
-- [Key Concepts](#key-concepts)
-  - [Transport Selection](#transport-selection)
-  - [Tool Discovery](#tool-discovery-1)
-  - [Session Management](#session-management)
-  - [Cross-Platform Considerations](#cross-platform-considerations)
 - [When to Use MCP](#when-to-use-mcp)
 - [MCP Ecosystem](#mcp-ecosystem)
 - [Congratulations!](#congratulations)
@@ -140,7 +133,6 @@ Assistant response: The content of the file is "Kaboom!".
 - Performance is critical (MCP adds overhead)
 - Your tools are simple and won't be reused
 - You need complete control over execution
-
 
 ## MCP Ecosystem
 
