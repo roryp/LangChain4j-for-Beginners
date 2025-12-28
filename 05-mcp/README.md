@@ -134,7 +134,6 @@ Assistant response: The content of the file is "Kaboom!".
 MCP supports multiple transport mechanisms:
 - **Stdio** - For local processes (demonstrated in this module)
 - **Streamable HTTP** - For remote servers
-- **Docker** - For containerized services (uses Stdio under the hood)
 
 **Tool Discovery**
 
