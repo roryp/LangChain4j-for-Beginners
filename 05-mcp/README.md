@@ -9,6 +9,7 @@
   - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
+  - [MCP Agent with Agentic Module](#mcp-agent-with-agentic-module)
 - [When to Use MCP](#when-to-use-mcp)
 - [MCP Ecosystem](#mcp-ecosystem)
 - [Congratulations!](#congratulations)
@@ -120,6 +121,69 @@ The application spawns a filesystem MCP server automatically and reads a local f
 Assistant response: The content of the file is "Kaboom!".
 ```
 
+### MCP Agent with Agentic Module
+
+This demonstrates combining MCP tools with LangChain4j's **agentic module** - the declarative way to build AI agents using annotations.
+
+**✅ No prerequisites needed** - the MCP server is spawned automatically.
+
+**Using VS Code:** Right-click on `McpAgentDemo.java` and select **"Run Java"**.
+
+**Using Maven:**
+
+**Bash:**
+```bash
+export GITHUB_TOKEN=your_token_here
+cd 05-mcp
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.McpAgentDemo
+```
+
+**PowerShell:**
+```powershell
+$env:GITHUB_TOKEN=your_token_here
+cd 05-mcp
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.McpAgentDemo
+```
+
+The agentic module uses the `@Agent` annotation to define agent capabilities declaratively:
+
+```java
+// FileAgent.java - Define agent interface with @Agent annotation
+public interface FileAgent {
+    
+    @SystemMessage("You are a helpful file assistant. Use the available tools to read files.")
+    @UserMessage("Read the file at {{path}} and summarize its contents.")
+    @Agent(description = "Reads and summarizes file contents", outputKey = "summary")
+    String readFile(@V("path") String path);
+}
+```
+
+See [FileAgent.java](src/main/java/com/example/langchain4j/mcp/FileAgent.java) for the complete interface.
+
+```java
+// Build agent using AgenticServices instead of AiServices
+FileAgent agent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)
+        .build();
+```
+
+Key differences from `AiServices`:
+- **`@Agent` annotation** - Declares the method as an agentic workflow step with description and output keys
+- **`AgenticServices.agentBuilder()`** - Builds agents with agentic capabilities
+- **Workflow support** - Enables chaining agents in sequential, loop, or parallel workflows
+
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`McpAgentDemo.java`](src/main/java/com/example/langchain4j/mcp/McpAgentDemo.java) and ask:
+> - "What's the difference between AgenticServices and AiServices?"
+> - "How can I chain multiple agents together using the agentic module?"
+> - "Explain how the @Agent annotation enables workflow orchestration"
+
+**Expected output:**
+```
+Agent Response:
+The file contains a single word: "Kaboom!"
+```
+
 ## When to Use MCP
 
 **Use MCP when:**
@@ -154,6 +218,7 @@ You've completed the LangChain4j for Beginners course. You've learned:
 - Grounding responses in your documents with RAG (Module 03)
 - Creating AI agents with custom tools (Module 04)
 - Integrating standardized tools through MCP (Module 05)
+- Building declarative agents with the agentic module
 
 You now have the foundation to build production AI applications. The concepts you've learned apply regardless of specific frameworks or models - they're fundamental patterns in AI engineering.
 
