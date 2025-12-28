@@ -106,7 +106,7 @@ To use the agentic module, add this Maven dependency:
 <dependency>
     <groupId>dev.langchain4j</groupId>
     <artifactId>langchain4j-agentic</artifactId>
-    <version>${langchain4j.version}</version>
+    <version>${langchain4j.mcp.version}</version>
 </dependency>
 ```
 
