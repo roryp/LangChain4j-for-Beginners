@@ -5,11 +5,13 @@
 - [What You'll Learn](#what-youll-learn)
 - [Understanding MCP](#understanding-mcp)
 - [How MCP Works](#how-mcp-works)
+- [The Agentic Module](#the-agentic-module)
 - [Running the Examples](#running-the-examples)
   - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
   - [Supervisor Agent (Pure Agentic AI)](#supervisor-agent-pure-agentic-ai)
+  - [Other Agentic Module Features](#other-agentic-module-features)
 - [Key Concepts](#key-concepts)
 - [Congratulations!](#congratulations)
   - [What's Next?](#whats-next)
@@ -52,14 +54,6 @@ MCP uses a client-server model. Servers provide tools - reading files, querying 
 
 When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
 
-**Combining MCP with the Agentic Module**
-
-While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build the agents that use those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code, making it easy to create sophisticated agents that leverage MCP's tool ecosystem.
-
-> **⚠️ Experimental:** Currently, the **NEW** `langchain4j-agentic` module should be considered **experimental** and is subject to change in future releases. The stable way to build AI assistants remains the `langchain4j-core` module with custom tools (Module 04). The agentic module is evolving rapidly to provide a more declarative and flexible approach to building AI agents.
-
-
-
 **Transport Mechanisms**
 
 MCP supports different transport mechanisms. This module demonstrates the Stdio transport for local processes:
@@ -87,6 +81,24 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
 > - "How does Stdio transport work and when should I use it vs HTTP?"
 > - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
 > - "What are the security implications of giving AI access to the file system?"
+
+## The Agentic Module
+
+While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build agents that orchestrate those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code.
+
+<img src="images/agentic.png" alt="Agentic Module" width="800"/>
+
+To use the agentic module, add this Maven dependency:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
+```
+
+> **⚠️ Experimental:** The `langchain4j-agentic` module is **experimental** and subject to change. The stable way to build AI assistants remains `langchain4j-core` with custom tools (Module 04).
 
 ## Running the Examples
 
