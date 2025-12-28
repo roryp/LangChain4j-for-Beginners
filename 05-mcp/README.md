@@ -248,17 +248,9 @@ analysis (AnalysisAgent): **Structure:** The summary is presented in a clear for
 
 ### Other Agentic Module Features
 
-Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
+The example demonstrates several advanced features of the agentic module.
 
-| Pattern | Description | Use Case |
-|---------|-------------|----------|
-| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
-| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
-| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
-| **Conditional** | Route based on conditions | Classify → route to specialist agent |
-| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
-
-**AgenticScope** allows agents to share state and introspect execution:
+**AgenticScope** allows agents to share state and introspect execution history:
 
 ```java
 ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
@@ -287,6 +279,18 @@ AgentListener monitor = new AgentListener() {
     }
 };
 ```
+
+## Patterns
+
+Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
+| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
+| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
+| **Conditional** | Route based on conditions | Classify → route to specialist agent |
+| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
 
 ## Key Concepts
 
