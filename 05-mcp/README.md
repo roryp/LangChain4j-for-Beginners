@@ -163,7 +163,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 <img src="images/agentic.png" alt="Agentic Module" width="800"/>
 
 
-**Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
+The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
 
 **Key concepts:**
 - The Supervisor analyzes the user request and generates an execution plan
