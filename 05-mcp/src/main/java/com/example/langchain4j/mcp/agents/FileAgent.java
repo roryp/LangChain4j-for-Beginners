@@ -1,4 +1,4 @@
-package com.example.langchain4j.mcp;
+package com.example.langchain4j.mcp.agents;
 
 import dev.langchain4j.agentic.Agent;
 import dev.langchain4j.service.SystemMessage;
@@ -7,7 +7,14 @@ import dev.langchain4j.service.V;
 
 /**
  * FileAgent - An agent that reads and analyzes files using MCP tools.
- * The @Agent annotation marks this as an agentic AI service.
+ * 
+ * This agent is equipped with MCP filesystem tools and can read files from the
+ * allowed directory. It's typically the entry point in a multi-agent workflow
+ * when file content needs to be processed.
+ * 
+ * The @Agent annotation marks this as an agentic AI service with:
+ * - description: Helps the Supervisor understand when to invoke this agent
+ * - outputKey: Stores the result in the agentic scope for other agents to access
  */
 public interface FileAgent {
     
