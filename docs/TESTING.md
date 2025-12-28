@@ -45,7 +45,7 @@ This course focuses on **unit tests** that run locally. Each test demonstrates a
 | **02 - Prompt Engineering** | 12 | GPT-5 patterns, eagerness levels, structured output | `SimpleGpt5PromptTest.java` |
 | **03 - RAG** | 10 | Document ingestion, embeddings, similarity search | `DocumentServiceTest.java` |
 | **04 - Tools** | 12 | Function calling and tool chaining | `SimpleToolsTest.java` |
-| **05 - MCP** | 15 | Model Context Protocol with Docker | `SimpleMcpTest.java`, `McpDockerTransportTest.java` |
+| **05 - MCP** | 8 | Model Context Protocol with Stdio transport | `SimpleMcpTest.java` |
 
 ## Running the Tests
 
@@ -123,7 +123,7 @@ The Test Explorer shows green checkmarks for passing tests and provides detailed
 
 <img src="images/testing-patterns.png" alt="Six Testing Patterns" width="800"/>
 
-*Six testing patterns for LangChain4j applications: prompt templates, mocking models, conversation isolation, tools testing, in-memory RAG, and Docker integration*
+*Six testing patterns for LangChain4j applications: prompt templates, mocking models, conversation isolation, tools testing, in-memory RAG, and MCP integration*
 
 ### Pattern 1: Testing Prompt Templates
 
@@ -310,15 +310,15 @@ void testProcessTextDocument() {
 
 This test from `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` creates a document in memory and verifies chunking and metadata handling.
 
-### Pattern 6: Integration Testing with Docker
+### Pattern 6: MCP Integration Testing
 
-Some features need real infrastructure. The MCP module uses Testcontainers to spin up Docker containers for integration tests. These validate your code works with actual services while maintaining test isolation.
+The MCP module tests the Model Context Protocol integration using stdio transport. These tests verify that your application can spawn and communicate with MCP servers as subprocesses.
 
-<img src="images/mcp-testing.png" alt="MCP Docker Integration Testing" width="800"/>
+<img src="images/mcp-testing.png" alt="MCP Integration Testing" width="800"/>
 
-*MCP integration testing with Testcontainers showing automated container lifecycle: start, test execution, stop, and cleanup*
+*MCP integration testing showing stdio transport lifecycle: spawn server, communicate via stdin/stdout, and cleanup*
 
-The tests in `05-mcp/src/test/java/com/example/langchain4j/mcp/McpDockerTransportTest.java` require Docker to be running.
+The tests in `05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` validate MCP client behavior.
 
 **Run them:**
 
