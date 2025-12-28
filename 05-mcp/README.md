@@ -57,6 +57,8 @@ When your client connects to an MCP server, it asks "What tools do you have?" Th
 
 While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build the agents that use those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code, making it easy to create sophisticated agents that leverage MCP's tool ecosystem.
 
+> **⚠️ Experimental:** Currently, the **NEW** `langchain4j-agentic` module should be considered **experimental** and is subject to change in future releases. The stable way to build AI assistants remains the `langchain4j-core` module with custom tools (Module 04). The agentic module is evolving rapidly to provide a more declarative and flexible approach to building AI agents.
+
 **Transport Mechanisms**
 
 MCP supports different transport mechanisms. This module demonstrates the Stdio transport for local processes:
