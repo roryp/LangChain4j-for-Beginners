@@ -4,7 +4,14 @@ import com.example.langchain4j.mcp.agents.AnalysisAgent;
 import com.example.langchain4j.mcp.agents.FileAgent;
 import com.example.langchain4j.mcp.agents.SummaryAgent;
 import dev.langchain4j.agentic.AgenticServices;
+import dev.langchain4j.agentic.observability.AgentListener;
+import dev.langchain4j.agentic.observability.AgentRequest;
+import dev.langchain4j.agentic.observability.AgentResponse;
+import dev.langchain4j.agentic.observability.AgentInvocationError;
+import dev.langchain4j.agentic.scope.AgenticScope;
+import dev.langchain4j.agentic.scope.ResultWithAgenticScope;
 import dev.langchain4j.agentic.supervisor.SupervisorAgent;
+import dev.langchain4j.agentic.supervisor.SupervisorAgentServiceImpl;
 import dev.langchain4j.agentic.supervisor.SupervisorResponseStrategy;
 import dev.langchain4j.mcp.McpToolProvider;
 import dev.langchain4j.mcp.client.DefaultMcpClient;
@@ -19,117 +26,84 @@ import java.time.Duration;
 import java.util.List;
 
 /**
- * Supervisor Agent Demo - Demonstrates the Pure Agentic AI pattern using a Supervisor.
+ * Supervisor Agent Demo with AgenticScope.
  * 
- * The Supervisor Agent pattern allows an LLM to autonomously decide which agents to invoke
- * based on the user's request. Unlike deterministic workflows (sequential, loop, parallel),
- * the supervisor dynamically generates an execution plan.
+ * Demonstrates:
+ * - Supervisor pattern: LLM autonomously decides which agents to invoke
+ * - AgenticScope: Shared context for agents to store/retrieve intermediate results
  * 
- * This demo showcases:
- * 1. FileAgent - Reads files using MCP filesystem tools
- * 2. AnalysisAgent - Analyzes content structure and themes
- * 3. SummaryAgent - Creates concise summaries
- * 
- * The Supervisor decides which agents to invoke based on the user request.
- * 
- * @see <a href="https://docs.langchain4j.dev/tutorials/agents/">LangChain4j Agents Documentation</a>
+ * Agents store results via @Agent(outputKey="...") and access them through the scope.
  */
 public class SupervisorAgentDemo {
 
     private static final String GITHUB_TOKEN = System.getenv("GITHUB_TOKEN");
     private static final String ALLOWED_DIRECTORY = System.getProperty("user.dir");
 
-    public static void main(String[] args) {
-        System.out.println("Supervisor Agent Demo (Pure Agentic AI Pattern)");
-        System.out.println("=".repeat(50));
+    public static void main(String[] args) throws Exception {
+        validateEnvironment();
 
-        if (GITHUB_TOKEN == null || GITHUB_TOKEN.isBlank()) {
-            System.err.println("Error: GITHUB_TOKEN environment variable not set");
-            System.exit(1);
-        }
-
-        McpTransport transport = buildStdioTransport();
-        McpClient mcpClient = buildMcpClient(transport);
-
-        try {
-            ToolProvider mcpToolProvider = McpToolProvider.builder()
+        try (McpClient mcpClient = createMcpClient()) {
+            ChatModel model = createChatModel();
+            ToolProvider mcpTools = McpToolProvider.builder()
                     .mcpClients(List.of(mcpClient))
                     .build();
 
-            ChatModel model = buildChatModel();
-
-            // Build individual agents with specific capabilities
-            // Each agent has a description that helps the Supervisor decide when to use it
-            
-            // FileAgent: Has MCP tools to read files
+            // Build agents
             FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
                     .chatModel(model)
-                    .toolProvider(mcpToolProvider)
+                    .toolProvider(mcpTools)
                     .build();
 
-            // AnalysisAgent: Analyzes content for structure and themes
             AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
                     .chatModel(model)
                     .build();
 
-            // SummaryAgent: Creates concise summaries
             SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
                     .chatModel(model)
                     .build();
 
-            // Build the Supervisor Agent
-            // The Supervisor uses an LLM to plan which agents to invoke
-            SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
-                    .chatModel(model)  // The "planner" model that decides what to do
+            // Build supervisor that returns ResultWithAgenticScope to access shared context
+            SupervisorAgent supervisor = ((SupervisorAgentServiceImpl<SupervisorAgent>) AgenticServices.supervisorBuilder())
+                    .chatModel(model)
                     .subAgents(fileAgent, analysisAgent, summaryAgent)
-                    .responseStrategy(SupervisorResponseStrategy.SUMMARY)  // Return a summary of all operations
+                    .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+                    .listener(createAgentListener())
                     .build();
 
-            // Request 1: Ask for a file to be read and analyzed
+            // Invoke supervisor - the AgenticScope is automatically created and managed
             String filePath = ALLOWED_DIRECTORY + "/src/main/resources/file.txt";
-            String request1 = "Read the file at " + filePath + " and analyze what it's about";
-            
-            System.out.println("\n📋 Request 1: Read and Analyze");
-            System.out.println("User request: " + request1);
-            System.out.println("-".repeat(50));
-            
-            // The Supervisor will autonomously:
-            // 1. Recognize it needs to read a file → invoke FileAgent
-            // 2. Recognize it needs to analyze → invoke AnalysisAgent
-            String response1 = supervisor.invoke(request1);
-            System.out.println("\n🤖 Supervisor Response:");
-            System.out.println(response1);
+            String request = "Read the file at " + filePath + " and analyze what it's about";
 
-            // Request 2: Ask for just a summary (Supervisor should choose SummaryAgent)
-            System.out.println("\n" + "=".repeat(50));
-            String content = "LangChain4j is a Java library that simplifies integrating AI/LLM capabilities. " +
-                           "It provides unified APIs for various AI providers, supports RAG patterns, " +
-                           "and enables building AI agents with tools and MCP integration.";
-            String request2 = "Give me a brief summary of this: " + content;
-            
-            System.out.println("\n📋 Request 2: Summarize Content");
-            System.out.println("User request: [asking for summary of LangChain4j description]");
+            System.out.println("Request: " + request);
             System.out.println("-".repeat(50));
-            
-            String response2 = supervisor.invoke(request2);
-            System.out.println("\n🤖 Supervisor Response:");
-            System.out.println(response2);
 
-        } finally {
-            try { mcpClient.close(); } catch (Exception ignored) {}
-            System.exit(0);
+            // ResultWithAgenticScope provides access to both the result and the shared scope
+            ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+            
+            System.out.println("\nResponse:\n" + result.result());
+
+            // Access agent outputs from the AgenticScope
+            AgenticScope scope = result.agenticScope();
+            System.out.println("\n--- Scope Contents ---");
+            printScopeValue(scope, "summary", "FileAgent/SummaryAgent");
+            printScopeValue(scope, "analysis", "AnalysisAgent");
         }
     }
 
-    private static McpTransport buildStdioTransport() {
-        String npmCommand = System.getProperty("os.name").toLowerCase().contains("win") ? "npm.cmd" : "npm";
-        return new StdioMcpTransport.Builder()
-                .command(List.of(npmCommand, "exec", "@modelcontextprotocol/server-filesystem@2025.12.18", ALLOWED_DIRECTORY))
-                .logEvents(false)
-                .build();
+    private static void validateEnvironment() {
+        if (GITHUB_TOKEN == null || GITHUB_TOKEN.isBlank()) {
+            System.err.println("Error: GITHUB_TOKEN environment variable not set");
+            System.exit(1);
+        }
     }
 
-    private static McpClient buildMcpClient(McpTransport transport) {
+    private static McpClient createMcpClient() {
+        String npmCmd = System.getProperty("os.name").toLowerCase().contains("win") ? "npm.cmd" : "npm";
+        McpTransport transport = new StdioMcpTransport.Builder()
+                .command(List.of(npmCmd, "exec", "@modelcontextprotocol/server-filesystem@2025.12.18", ALLOWED_DIRECTORY))
+                .logEvents(false)
+                .build();
+
         return new DefaultMcpClient.Builder()
                 .transport(transport)
                 .clientName("supervisor-agent-demo")
@@ -138,11 +112,54 @@ public class SupervisorAgentDemo {
                 .build();
     }
 
-    private static ChatModel buildChatModel() {
+    private static ChatModel createChatModel() {
         return OpenAiOfficialChatModel.builder()
                 .baseUrl("https://models.inference.ai.azure.com")
                 .modelName("gpt-4.1")
                 .apiKey(GITHUB_TOKEN)
                 .build();
+    }
+
+    private static void printScopeValue(AgenticScope scope, String key, String source) {
+        Object value = scope.readState(key);
+        if (value != null) {
+            String strValue = value.toString();
+            String truncated = strValue.length() > 200 ? strValue.substring(0, 200) + "..." : strValue;
+            System.out.println(key + " (" + source + "): " + truncated);
+        }
+    }
+
+    private static AgentListener createAgentListener() {
+        return new AgentListener() {
+            @Override
+            public void beforeAgentInvocation(AgentRequest request) {
+                System.out.println("\n🚀 [EVENT] Starting agent: " + request.agentName());
+                var inputs = request.inputs();
+                if (inputs != null && !inputs.isEmpty()) {
+                    inputs.forEach((k, v) -> {
+                        String val = v != null ? v.toString() : "null";
+                        String truncated = val.length() > 80 ? val.substring(0, 80) + "..." : val;
+                        System.out.println("   📥 " + k + ": " + truncated);
+                    });
+                }
+            }
+
+            @Override
+            public void afterAgentInvocation(AgentResponse response) {
+                String res = response.output() != null ? response.output().toString() : "null";
+                String truncated = res.length() > 100 ? res.substring(0, 100) + "..." : res;
+                System.out.println("✅ [EVENT] Completed agent: " + response.agentName() + " -> " + truncated);
+            }
+
+            @Override
+            public void onAgentInvocationError(AgentInvocationError error) {
+                System.out.println("❌ [EVENT] Error in agent: " + error.agent().name() + " - " + error.error().getMessage());
+            }
+
+            @Override
+            public boolean inheritedBySubagents() {
+                return true;
+            }
+        };
     }
 }
