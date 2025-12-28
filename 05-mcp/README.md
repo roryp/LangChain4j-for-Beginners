@@ -196,11 +196,6 @@ String response = supervisor.invoke("Read the file at /path/file.txt and analyze
 
 See [SupervisorAgentDemo.java](src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) for the complete implementation.
 
-**Response Strategies:**
-- `LAST` (default) - Returns the response from the last invoked agent
-- `SUMMARY` - Returns a summary of all operations performed
-- `SCORED` - Uses a scorer agent to decide the best response
-
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SupervisorAgentDemo.java`](src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) and ask:
 > - "How does the Supervisor decide which agents to invoke?"
 > - "What's the difference between Supervisor and Sequential workflow patterns?"
