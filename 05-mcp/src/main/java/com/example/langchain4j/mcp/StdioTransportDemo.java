@@ -1,5 +1,9 @@
 package com.example.langchain4j.mcp;
 
+import java.io.File;
+import java.time.Duration;
+import java.util.List;
+
 import dev.langchain4j.mcp.McpToolProvider;
 import dev.langchain4j.mcp.client.DefaultMcpClient;
 import dev.langchain4j.mcp.client.McpClient;
@@ -9,9 +13,6 @@ import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openaiofficial.OpenAiOfficialChatModel;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.tool.ToolProvider;
-
-import java.io.File;
-import java.util.List;
 
 /**
  * StdioTransportDemo - MCP Integration via Stdio Transport
@@ -26,7 +27,11 @@ import java.util.List;
  * Prerequisites:
  * - npm installed
  * - GITHUB_TOKEN environment variable set
- * - Working directory set to mcp-example root
+ * 
+ * Run this example:
+ * 1. export GITHUB_TOKEN=your_token_here
+ * 2. cd 05-mcp
+ * 3. mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
  * 
  * Key Concepts:
  * - StdioMcpTransport for local subprocess servers
@@ -54,21 +59,20 @@ public class StdioTransportDemo {
         // Setup stdio transport with filesystem server
         McpTransport stdioTransport = buildStdioTransport();
 
-        // Initialize MCP client
-        McpClient client = buildMcpClient(stdioTransport);
+        // Initialize MCP client with try-with-resources for automatic cleanup
+        try (McpClient client = buildMcpClient(stdioTransport)) {
+            
+            // Create tool provider
+            ToolProvider tools = McpToolProvider.builder()
+                    .mcpClients(List.of(client))
+                    .build();
 
-        // Create tool provider
-        ToolProvider tools = McpToolProvider.builder()
-                .mcpClients(List.of(client))
-                .build();
+            // Build AI service
+            Bot assistant = AiServices.builder(Bot.class)
+                    .chatModel(chatModel)
+                    .toolProvider(tools)
+                    .build();
 
-        // Build AI service
-        Bot assistant = AiServices.builder(Bot.class)
-                .chatModel(chatModel)
-                .toolProvider(tools)
-                .build();
-
-        try {
             File targetFile = new File(TARGET_FILE);
             String query = String.format(
                 "Read and summarize the content from: %s", 
@@ -76,9 +80,10 @@ public class StdioTransportDemo {
             );
             String result = assistant.chat(query);
             System.out.println("Assistant response: " + result);
-        } finally {
-            client.close();
         }
+        
+        // Force exit to cleanup OkHttp connection pool threads
+        System.exit(0);
     }
 
     private static ChatModel buildChatModel() {
@@ -86,6 +91,8 @@ public class StdioTransportDemo {
                 .baseUrl(GITHUB_MODELS_URL)
                 .apiKey(System.getenv("GITHUB_TOKEN"))
                 .modelName(MODEL_NAME)
+                .timeout(Duration.ofSeconds(20))
+                .strictTools(false)
                 .build();
     }
 
@@ -123,6 +130,9 @@ public class StdioTransportDemo {
     private static McpClient buildMcpClient(McpTransport transport) {
         return new DefaultMcpClient.Builder()
                 .transport(transport)
+                .autoHealthCheck(false)
+                .initializationTimeout(Duration.ofSeconds(20))
+                .toolExecutionTimeout(Duration.ofSeconds(20))
                 .build();
     }
 }

@@ -43,35 +43,6 @@
         },
         {
             "type": "java",
-            "name": "MCP: Streamable HTTP Demo",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/05-mcp",
-            "mainClass": "com.example.langchain4j.mcp.StreamableHttpDemo",
-            "projectName": "mcp-example",
-            "envFile": "${workspaceFolder}/.env",
-            "preLaunchTask": "Start MCP Everything Server"
-        },
-        {
-            "type": "java",
-            "name": "MCP: Git Repository Analyzer (Docker)",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/05-mcp",
-            "mainClass": "com.example.langchain4j.mcp.GitRepositoryAnalyzer",
-            "projectName": "mcp-example",
-            "envFile": "${workspaceFolder}/.env",
-            "preLaunchTask": "Build MCP Git Docker Image"
-        },
-        {
-            "type": "java",
-            "name": "MCP: Git Repository Analyzer (Manual Docker)",
-            "request": "launch",
-            "cwd": "${workspaceFolder}/05-mcp",
-            "mainClass": "com.example.langchain4j.mcp.GitRepositoryAnalyzer",
-            "projectName": "mcp-example",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
             "name": "Spring Boot: Introduction",
             "request": "launch",
             "cwd": "${workspaceFolder}/01-introduction",
