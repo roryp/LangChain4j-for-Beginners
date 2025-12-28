@@ -285,8 +285,6 @@ AgentListener monitor = new AgentListener() {
 };
 ```
 
-> **Learn More:** See the [LangChain4j Agents Documentation](https://docs.langchain4j.dev/tutorials/agents/) for comprehensive examples of all workflow patterns.
-
 ## Key Concepts
 
 **Use MCP when:**
