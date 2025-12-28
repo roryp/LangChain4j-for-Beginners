@@ -1,5 +1,9 @@
 package com.example.langchain4j.mcp;
 
+import java.io.File;
+import java.time.Duration;
+import java.util.List;
+
 import dev.langchain4j.mcp.McpToolProvider;
 import dev.langchain4j.mcp.client.DefaultMcpClient;
 import dev.langchain4j.mcp.client.McpClient;
@@ -9,10 +13,6 @@ import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openaiofficial.OpenAiOfficialChatModel;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.tool.ToolProvider;
-
-import java.io.File;
-import java.time.Duration;
-import java.util.List;
 
 /**
  * StdioTransportDemo - MCP Integration via Stdio Transport
@@ -27,7 +27,11 @@ import java.util.List;
  * Prerequisites:
  * - npm installed
  * - GITHUB_TOKEN environment variable set
- * - Working directory set to mcp-example root
+ * 
+ * Run this example:
+ * 1. export GITHUB_TOKEN=your_token_here
+ * 2. cd 05-mcp
+ * 3. mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
  * 
  * Key Concepts:
  * - StdioMcpTransport for local subprocess servers
@@ -87,7 +91,7 @@ public class StdioTransportDemo {
                 .baseUrl(GITHUB_MODELS_URL)
                 .apiKey(System.getenv("GITHUB_TOKEN"))
                 .modelName(MODEL_NAME)
-                .timeout(Duration.ofSeconds(60))
+                .timeout(Duration.ofSeconds(20))
                 .strictTools(false)
                 .build();
     }
@@ -127,8 +131,8 @@ public class StdioTransportDemo {
         return new DefaultMcpClient.Builder()
                 .transport(transport)
                 .autoHealthCheck(false)
-                .initializationTimeout(Duration.ofSeconds(60))
-                .toolExecutionTimeout(Duration.ofSeconds(120))
+                .initializationTimeout(Duration.ofSeconds(20))
+                .toolExecutionTimeout(Duration.ofSeconds(20))
                 .build();
     }
 }

@@ -9,11 +9,8 @@
   - [Tool Discovery](#tool-discovery)
   - [Transport Mechanisms](#transport-mechanisms)
 - [Prerequisites](#prerequisites)
-- [What This Module Covers](#what-this-module-covers)
 - [Quick Start](#quick-start)
-  - [Example 1: Remote Calculator (Streamable HTTP)](#example-1-remote-calculator-streamable-http)
-  - [Example 2: File Operations (Stdio)](#example-2-file-operations-stdio)
-  - [Example 3: Git Analysis (Docker)](#example-3-git-analysis-docker)
+  - [File Operations (Stdio)](#file-operations-stdio)
 - [Key Concepts](#key-concepts)
   - [Transport Selection](#transport-selection)
   - [Tool Discovery](#tool-discovery-1)
@@ -57,29 +54,11 @@ When your client connects to an MCP server, it asks "What tools do you have?" Th
 
 **Transport Mechanisms**
 
-MCP defines two transport mechanisms: HTTP for remote servers, Stdio for local processes (including Docker containers):
+MCP supports different transport mechanisms. This module demonstrates the Stdio transport for local processes:
 
 <img src="images/transport-mechanisms.png" alt="Transport Mechanisms" width="800"/>
 
 *MCP transport mechanisms: HTTP for remote servers, Stdio for local processes (including Docker containers)*
-
-**Streamable HTTP** - [StreamableHttpDemo.java](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-For remote servers. Your application makes HTTP requests to a server running somewhere on the network. Uses Server-Sent Events for real-time communication.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
-```
-
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`StreamableHttpDemo.java`](src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) and ask:
-> - "How does MCP differ from direct tool integration like in Module 04?"
-> - "What are the benefits of using MCP for tool sharing across applications?"
-> - "How do I handle connection failures or timeouts to MCP servers?"
 
 **Stdio** - [StdioTransportDemo.java](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
@@ -101,39 +80,15 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
 > - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
 > - "What are the security implications of giving AI access to the file system?"
 
-**Docker (uses Stdio)** - [GitRepositoryAnalyzer.java](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
-
-For containerized services. Uses stdio transport to communicate with a Docker container via `docker run`. Good for complex dependencies or isolated environments.
-
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
-```
-
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`GitRepositoryAnalyzer.java`](src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) and ask:
-> - "How does Docker transport isolate MCP servers and what are the benefits?"
-> - "How do I configure volume mounts to share data between host and MCP containers?"
-> - "What are best practices for managing Docker-based MCP server lifecycles in production?"
-
 ## Running the Examples
 
 ### Prerequisites
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ and npm (for MCP servers)
-- **Docker Desktop** - Must be **RUNNING** for Example 3 (not just installed)
 - GitHub Personal Access Token configured in `.env` file (from Module 00)
 
 > **Note:** If you haven't set up your GitHub token yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions.
-
-> **⚠️ Docker Users:** Before running Example 3, verify Docker Desktop is running with `docker ps`. If you see connection errors, start Docker Desktop and wait ~30 seconds for initialization.
 
 ## Quick Start
 
@@ -141,57 +96,7 @@ McpTransport dockerTransport = new StdioMcpTransport.Builder()
 
 **Using Maven:** Alternatively, you can run from the command line with the examples below.
 
-**⚠️ Important:** Some examples have prerequisites (like starting an MCP server or building Docker images). Check each example's requirements before running.
-
-### Example 1: Remote Calculator (Streamable HTTP)
-
-This demonstrates network-based tool integration.
-
-**⚠️ Prerequisite:** You need to start the MCP server first (see Terminal 1 below).
-
-**Terminal 1 - Start the MCP server:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-npm run build
-node dist/transports/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-npm run build
-node dist/transports/streamableHttp.js
-```
-
-**Terminal 2 - Run the example:**
-
-**Using VS Code:** Right-click on `StreamableHttpDemo.java` and select **"Run Java"**.
-
-**Using Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Watch the agent discover available tools, then use the calculator to perform addition.
-
-### Example 2: File Operations (Stdio)
+### File Operations (Stdio)
 
 This demonstrates local subprocess-based tools.
 
@@ -221,78 +126,6 @@ The application spawns a filesystem MCP server automatically and reads a local f
 ```
 Assistant response: The content of the file is "Kaboom!".
 ```
-
-### Example 3: Git Analysis (Docker)
-
-This demonstrates containerized tool servers.
-
-**⚠️ Prerequisites:** 
-1. **Docker Desktop must be RUNNING** (not just installed)
-2. **Windows users:** WSL 2 mode recommended (Docker Desktop Settings → General → "Use the WSL 2 based engine"). Hyper-V mode requires manual file sharing configuration.
-3. You need to build the Docker image first (see Terminal 1 below)
-
-**Verify Docker is running:**
-
-**Bash:**
-```bash
-docker ps  # Should show container list, not an error
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Should show container list, not an error
-```
-
-If you see an error like "Cannot connect to Docker daemon" or "The system cannot find the file specified", start Docker Desktop and wait for it to initialize (~30 seconds).
-
-**Troubleshooting:**
-- If the AI reports an empty repository or no files, the volume mount (`-v`) isn't working.
-- **Windows Hyper-V users:** Add the project directory to Docker Desktop Settings → Resources → File sharing, then restart Docker Desktop.
-- **Recommended solution:** Switch to WSL 2 mode for automatic file sharing (Settings → General → enable "Use the WSL 2 based engine").
-
-**Terminal 1 - Build the Docker image:**
-
-> **Note:** If you already cloned the `servers` repo for Example 1, skip the clone step and just navigate to `servers/src/git`.
-
-**Bash:**
-```bash
-# Clone the MCP servers repo (skip if already cloned for Example 1)
-cd ..
-git clone https://github.com/modelcontextprotocol/servers
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-# Clone the MCP servers repo (skip if already cloned for Example 1)
-cd ..
-git clone https://github.com/modelcontextprotocol/servers
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**Terminal 2 - Run the analyzer:**
-
-**Using VS Code:** Right-click on `GitRepositoryAnalyzer.java` and select **"Run Java"**.
-
-**Using Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
-```
-
-The application launches a Docker container, mounts your repository, and analyzes the repository structure and contents through the AI agent.
 
 ## Key Concepts
 
@@ -382,34 +215,12 @@ Thank you for completing this course!
 
 **PowerShell:**
 ```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
 **Bash:**
 ```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
 The `--%` operator tells PowerShell to pass all remaining arguments literally to Maven without interpretation.
-
-### Docker Connection Issues
-
-**Issue**: Docker commands fail with "Cannot connect to Docker daemon" or "The system cannot find the file specified"
-
-**Cause**: Docker Desktop is not running or not fully initialized
-
-**Solution**: 
-1. Start Docker Desktop
-2. Wait ~30 seconds for full initialization
-3. Verify with `docker ps` (should show container list, not an error)
-4. Then run your example
-
-### Windows Docker Volume Mounting
-
-**Issue**: Git repository analyzer reports empty repository or no files
-
-**Cause**: Volume mount (`-v`) not working due to file sharing configuration
-
-**Solution**:
-- **Recommended:** Switch to WSL 2 mode (Docker Desktop Settings → General → "Use the WSL 2 based engine")
-- **Alternative (Hyper-V):** Add project directory to Docker Desktop Settings → Resources → File sharing, then restart Docker Desktop
