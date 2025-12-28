@@ -247,10 +247,8 @@ You've completed the LangChain4j for Beginners course. You've learned:
 - How to build conversational AI with memory (Module 01)
 - Prompt engineering patterns for different tasks (Module 02)
 - Grounding responses in your documents with RAG (Module 03)
-- Creating AI agents with custom tools (Module 04)
-- Integrating standardized tools through MCP and the agentic module (Module 05)
-
-You now have the foundation to build production AI applications. The concepts you've learned apply regardless of specific frameworks or models - they're fundamental patterns in AI engineering.
+- Creating basic AI agents (assistants) with custom tools (Module 04)
+- Integrating standardized tools with the LangChain4j MCP and Agentic modules (Module 05)
 
 ### What's Next?
 
