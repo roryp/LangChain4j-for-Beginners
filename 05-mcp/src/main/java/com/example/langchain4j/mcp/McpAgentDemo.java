@@ -16,6 +16,10 @@ import java.util.List;
 /**
  * MCP Agent Demo - Uses the LangChain4j Agentic module with MCP tools.
  * 
+ * This demo showcases:
+ * 1. FileAgent - reads files using MCP filesystem tools
+ * 2. AnalysisAgent - analyzes content (demonstrates chaining multiple agents)
+ * 
  * Run: mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.McpAgentDemo
  */
 public class McpAgentDemo {
@@ -42,18 +46,33 @@ public class McpAgentDemo {
 
             ChatModel model = buildChatModel();
 
-            // Build agent using AgenticServices (from langchain4j-agentic module)
-            FileAgent agent = AgenticServices.agentBuilder(FileAgent.class)
+            // Build FileAgent using AgenticServices (from langchain4j-agentic module)
+            FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
                     .chatModel(model)
                     .toolProvider(mcpToolProvider)
                     .build();
 
+            // Build AnalysisAgent - demonstrates using multiple agents together
+            // Each agent has its own responsibility and can chain outputs
+            AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+                    .chatModel(model)
+                    .build();
+
             String filePath = ALLOWED_DIRECTORY + "/src/main/resources/file.txt";
-            System.out.println("\nReading: " + filePath);
+            System.out.println("\nStep 1: Reading file with FileAgent");
+            System.out.println("File: " + filePath);
             
-            String response = agent.readFile(filePath);
-            System.out.println("\nAgent Response:");
-            System.out.println(response);
+            // First agent reads the file
+            String fileContent = fileAgent.readFile(filePath);
+            System.out.println("\nFileAgent Response:");
+            System.out.println(fileContent);
+
+            // Second agent analyzes the content from the first agent
+            System.out.println("\n" + "=".repeat(50));
+            System.out.println("Step 2: Analyzing content with AnalysisAgent");
+            String analysis = analysisAgent.analyzeContent(fileContent);
+            System.out.println("\nAnalysisAgent Response:");
+            System.out.println(analysis);
 
         } finally {
             try { mcpClient.close(); } catch (Exception ignored) {}

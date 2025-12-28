@@ -175,11 +175,32 @@ See [FileAgent.java](src/main/java/com/example/langchain4j/mcp/FileAgent.java) f
 
 ```java
 // Build agent using AgenticServices instead of AiServices
-FileAgent agent = AgenticServices.agentBuilder(FileAgent.class)
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
         .chatModel(model)
         .toolProvider(mcpToolProvider)
         .build();
 ```
+
+**Using Multiple Agents Together**
+
+The demo also shows how to chain multiple agents, each with its own responsibility:
+
+```java
+// AnalysisAgent.java - A second agent for content analysis
+public interface AnalysisAgent {
+    
+    @SystemMessage("You are an expert text analyst...")
+    @UserMessage("Analyze the following content:\n\n{{content}}")
+    @Agent(description = "Analyzes text content", outputKey = "analysis")
+    String analyzeContent(@V("content") String content);
+}
+
+// Chain agents: FileAgent reads → AnalysisAgent analyzes
+String fileContent = fileAgent.readFile(filePath);
+String analysis = analysisAgent.analyzeContent(fileContent);
+```
+
+See [AnalysisAgent.java](src/main/java/com/example/langchain4j/mcp/AnalysisAgent.java) for the complete interface.
 
 Key differences from `AiServices`:
 - **`@Agent` annotation** - Declares the method as an agentic workflow step with description and output keys
@@ -193,8 +214,14 @@ Key differences from `AiServices`:
 
 **Expected output:**
 ```
-Agent Response:
+Step 1: Reading file with FileAgent
+FileAgent Response:
 The file contains a single word: "Kaboom!"
+
+==================================================
+Step 2: Analyzing content with AnalysisAgent
+AnalysisAgent Response:
+The content is minimal - a single exclamatory word "Kaboom!" suggesting an explosion or dramatic impact...
 ```
 
 ## When to Use MCP
