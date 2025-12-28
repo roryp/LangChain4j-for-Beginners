@@ -280,8 +280,6 @@ AgentListener monitor = new AgentListener() {
 };
 ```
 
-## Patterns
-
 Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
 
 | Pattern | Description | Use Case |
@@ -294,23 +292,11 @@ Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several
 
 ## Key Concepts
 
-**Use MCP when:**
-- You want to leverage existing tool ecosystems
-- Building tools that multiple applications will use
-- Integrating third-party services with standard protocols
-- You need to swap tool implementations without code changes
+**MCP** is ideal when you want to leverage existing tool ecosystems, build tools that multiple applications can share, integrate third-party services with standard protocols, or swap tool implementations without changing code.
 
-**Use the Agentic Module when:**
-- You want declarative agent definitions with `@Agent` annotations
-- Building agents that need workflow orchestration (sequential, loop, parallel)
-- You prefer interface-based agent design over imperative code
-- Combining multiple agents that can share outputs via `outputKey`
+**The Agentic Module** works best when you want declarative agent definitions with `@Agent` annotations, need workflow orchestration (sequential, loop, parallel), prefer interface-based agent design over imperative code, or are combining multiple agents that share outputs via `outputKey`.
 
-**Use the Supervisor Agent pattern when:**
-- The workflow isn't predictable in advance - let the LLM decide
-- You have multiple specialized agents and want dynamic orchestration
-- Building conversational systems that need to route to different capabilities
-- You want the most flexible, adaptive agent behavior
+**The Supervisor Agent pattern** shines when the workflow isn't predictable in advance and you want the LLM to decide, when you have multiple specialized agents that need dynamic orchestration, when building conversational systems that route to different capabilities, or when you want the most flexible, adaptive agent behavior.
 
 ## Congratulations!
 
