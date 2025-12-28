@@ -21,7 +21,7 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Master effective prompt design
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Build intelligent knowledge-based systems
 5. [Tools](04-tools/README.md) - Integrate external tools and APIs
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work with the Model Context Protocol
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work with Model Context Protocol (MCP) and Agents
 ---
 
 ##  Learning Path
@@ -44,10 +44,6 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
 > This gives you everything you need to complete the course with a much faster download.
-
-Start with the [Quick Start](00-quick-start/README.md) module and progress through each module to build your skills step-by-step. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/README.md) module for a deeper dive with GPT-5.
-
-<img src="images/learning-path.png" alt="Learning Path" width="800"/>
 
 After completing the modules, explore the [Testing Guide](docs/TESTING.md) to see LangChain4j testing concepts in action.
 
