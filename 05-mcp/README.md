@@ -9,9 +9,8 @@
   - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
-  - [MCP Agent with Agentic Module](#mcp-agent-with-agentic-module)
-- [When to Use MCP](#when-to-use-mcp)
-- [MCP Ecosystem](#mcp-ecosystem)
+  - [Supervisor Agent (Pure Agentic AI)](#supervisor-agent-pure-agentic-ai)
+- [Key Concepts](#key-concepts)
 - [Congratulations!](#congratulations)
   - [What's Next?](#whats-next)
 - [Troubleshooting](#troubleshooting)
@@ -131,16 +130,21 @@ The application spawns a filesystem MCP server automatically and reads a local f
 
 **Expected output:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### MCP Agent with Agentic Module
+### Supervisor Agent (Pure Agentic AI)
 
-This demonstrates combining MCP tools with LangChain4j's **agentic module** - the declarative way to build AI agents using annotations.
+The **Supervisor Agent** pattern is the most flexible form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
 
-**✅ No prerequisites needed** - the MCP server is spawned automatically.
+**Key concepts:**
+- The Supervisor analyzes the user request and generates an execution plan
+- It decides which sub-agents to invoke and in what order
+- It can adapt dynamically to different types of requests
+- Returns either the last agent's response or a summary of all operations
 
-**Using VS Code:** Right-click on `McpAgentDemo.java` and select **"Run Java"**.
+**Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"**.
 
 **Using Maven:**
 
@@ -148,56 +152,75 @@ This demonstrates combining MCP tools with LangChain4j's **agentic module** - th
 ```bash
 export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.McpAgentDemo
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.SupervisorAgentDemo
 ```
 
 **PowerShell:**
 ```powershell
 $env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.McpAgentDemo
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.SupervisorAgentDemo
 ```
 
-The agentic module uses the `@Agent` annotation to define agent capabilities declaratively:
+**How the Supervisor Works:**
 
 ```java
-// FileAgent.java - Define agent interface with @Agent annotation
-public interface FileAgent {
-    
-    @SystemMessage("You are a helpful file assistant. Use the available tools to read files.")
-    @UserMessage("Read the file at {{path}} and summarize its contents.")
-    @Agent(description = "Reads and summarizes file contents", outputKey = "summary")
-    String readFile(@V("path") String path);
-}
-```
-
-See [FileAgent.java](src/main/java/com/example/langchain4j/mcp/FileAgent.java) for the complete interface.
-
-```java
-// Build agent using AgenticServices instead of AiServices
-FileAgent agent = AgenticServices.agentBuilder(FileAgent.class)
+// Define multiple agents with specific capabilities
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
         .chatModel(model)
-        .toolProvider(mcpToolProvider)
+        .toolProvider(mcpToolProvider)  // Has MCP tools for file operations
         .build();
+
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
+
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
+
+// Create a Supervisor that orchestrates these agents
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // The "planner" model
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
+
+// The Supervisor autonomously decides which agents to invoke
+// Just pass a natural language request - the LLM plans the execution
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
 ```
 
-Key differences from `AiServices`:
-- **`@Agent` annotation** - Declares the method as an agentic workflow step with description and output keys
-- **`AgenticServices.agentBuilder()`** - Builds agents with agentic capabilities
-- **Workflow support** - Enables chaining agents in sequential, loop, or parallel workflows
+See [SupervisorAgentDemo.java](src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) for the complete implementation.
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`McpAgentDemo.java`](src/main/java/com/example/langchain4j/mcp/McpAgentDemo.java) and ask:
-> - "What's the difference between AgenticServices and AiServices?"
-> - "How can I chain multiple agents together using the agentic module?"
-> - "Explain how the @Agent annotation enables workflow orchestration"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SupervisorAgentDemo.java`](src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) and ask:
+> - "How does the Supervisor decide which agents to invoke?"
+> - "What's the difference between Supervisor and Sequential workflow patterns?"
+> - "How can I customize the Supervisor's planning behavior?"
 
 **Expected output:**
 ```
-Agent Response:
-The file contains a single word: "Kaboom!"
+Supervisor Agent Demo (Pure Agentic AI Pattern)
+==================================================
+
+📋 Request 1: Read and Analyze
+User request: Read the file at .../file.txt and analyze what it's about
+--------------------------------------------------
+
+🤖 Supervisor Response:
+The file contains information about LangChain4j framework. Analysis shows it describes...
+
+==================================================
+
+📋 Request 2: Summarize Content
+User request: [asking for summary of LangChain4j description]
+--------------------------------------------------
+
+🤖 Supervisor Response:
+LangChain4j is a Java AI library providing unified APIs, RAG support, and agent capabilities...
 ```
 
-## When to Use MCP
+## Key Concepts
 
 **Use MCP when:**
 - You want to leverage existing tool ecosystems
@@ -205,30 +228,17 @@ The file contains a single word: "Kaboom!"
 - Integrating third-party services with standard protocols
 - You need to swap tool implementations without code changes
 
-**Use custom tools (Module 04) when:**
-- Building application-specific functionality
-- Performance is critical (MCP adds overhead)
-- Your tools are simple and won't be reused
-- You need complete control over execution
-
 **Use the Agentic Module when:**
 - You want declarative agent definitions with `@Agent` annotations
 - Building agents that need workflow orchestration (sequential, loop, parallel)
 - You prefer interface-based agent design over imperative code
 - Combining multiple agents that can share outputs via `outputKey`
 
-## MCP Ecosystem
-
-The Model Context Protocol is an open standard with a growing ecosystem:
-
-- Official MCP servers for common tasks (filesystem, Git, databases)
-- Community-contributed servers for various services
-- Standardized tool descriptions and schemas
-- Cross-framework compatibility (works with any MCP client)
-
-This standardization means tools built for one AI application work with others, creating a shared ecosystem of capabilities.
-
-LangChain4j's agentic module complements MCP by providing a declarative layer on top. While MCP standardizes *what tools are available*, the agentic module standardizes *how agents use those tools* - through annotations, interfaces, and workflow patterns. Together, they enable building sophisticated AI agents with minimal boilerplate code.
+**Use the Supervisor Agent pattern when:**
+- The workflow isn't predictable in advance - let the LLM decide
+- You have multiple specialized agents and want dynamic orchestration
+- Building conversational systems that need to route to different capabilities
+- You want the most flexible, adaptive agent behavior
 
 ## Congratulations!
 
@@ -238,8 +248,7 @@ You've completed the LangChain4j for Beginners course. You've learned:
 - Prompt engineering patterns for different tasks (Module 02)
 - Grounding responses in your documents with RAG (Module 03)
 - Creating AI agents with custom tools (Module 04)
-- Integrating standardized tools through MCP (Module 05)
-- Building declarative agents with the agentic module
+- Integrating standardized tools through MCP and the agentic module (Module 05)
 
 You now have the foundation to build production AI applications. The concepts you've learned apply regardless of specific frameworks or models - they're fundamental patterns in AI engineering.
 
