@@ -258,37 +258,6 @@ Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several
 | **Conditional** | Route based on conditions | Classify → route to specialist agent |
 | **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
 
-**Quick Examples:**
-
-```java
-// Sequential: agents run in order
-UntypedAgent pipeline = AgenticServices.sequenceBuilder()
-    .subAgents(researchAgent, analyzeAgent, reportAgent)
-    .outputKey("report")
-    .build();
-
-// Parallel: agents run simultaneously
-UntypedAgent parallel = AgenticServices.parallelBuilder()
-    .subAgents(weatherAgent, newsAgent)
-    .executor(Executors.newFixedThreadPool(2))
-    .build();
-
-// Loop: repeat until quality threshold
-UntypedAgent reviewLoop = AgenticServices.loopBuilder()
-    .subAgents(scorer, editor)
-    .maxIterations(5)
-    .exitCondition(scope -> scope.readState("score", 0.0) >= 0.8)
-    .build();
-
-// Human-in-the-Loop: get user approval
-HumanInTheLoop approval = AgenticServices.humanInTheLoopBuilder()
-    .description("Get user approval")
-    .inputKey("draft")
-    .outputKey("approved")
-    .async(true)
-    .build();
-```
-
 **AgenticScope** allows agents to share state and introspect execution:
 
 ```java
