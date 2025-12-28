@@ -250,14 +250,22 @@ If you see an error like "Cannot connect to Docker daemon" or "The system cannot
 
 **Terminal 1 - Build the Docker image:**
 
+> **Note:** If you already cloned the `servers` repo for Example 1, skip the clone step and just navigate to `servers/src/git`.
+
 **Bash:**
 ```bash
+# Clone the MCP servers repo (skip if already cloned for Example 1)
+cd ..
+git clone https://github.com/modelcontextprotocol/servers
 cd servers/src/git
 docker build -t mcp/git .
 ```
 
 **PowerShell:**
 ```powershell
+# Clone the MCP servers repo (skip if already cloned for Example 1)
+cd ..
+git clone https://github.com/modelcontextprotocol/servers
 cd servers/src/git
 docker build -t mcp/git .
 ```

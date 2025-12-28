@@ -11,6 +11,7 @@ import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.tool.ToolProvider;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -28,9 +29,10 @@ import java.util.List;
  * - GITHUB_TOKEN environment variable set
  * 
  * Build Docker image:
- * 1. Clone https://github.com/modelcontextprotocol/servers
- * 2. cd servers/src/git
- * 3. docker build -t mcp/git .
+ * 1. cd to parent directory of this project (e.g., cd ..)
+ * 2. git clone https://github.com/modelcontextprotocol/servers
+ * 3. cd servers/src/git
+ * 4. docker build -t mcp/git .
  * 
  * Key Concepts:
  * - Docker-based MCP server deployment
@@ -58,31 +60,32 @@ public class GitRepositoryAnalyzer {
         // Setup Docker-based MCP transport
         McpTransport dockerTransport = buildDockerTransport();
 
-        // Initialize MCP client
-        McpClient client = buildMcpClient(dockerTransport);
+        // Initialize MCP client with try-with-resources for automatic cleanup
+        try (McpClient client = buildMcpClient(dockerTransport)) {
+            
+            // Create tool provider
+            ToolProvider tools = McpToolProvider.builder()
+                    .mcpClients(List.of(client))
+                    .build();
 
-        // Create tool provider
-        ToolProvider tools = McpToolProvider.builder()
-                .mcpClients(List.of(client))
-                .build();
+            // Build AI service
+            Bot assistant = AiServices.builder(Bot.class)
+                    .chatModel(chatModel)
+                    .toolProvider(tools)
+                    .build();
 
-        // Build AI service
-        Bot assistant = AiServices.builder(Bot.class)
-                .chatModel(chatModel)
-                .toolProvider(tools)
-                .build();
-
-        try {
             String query = String.format(
-                "Analyze the Git repository located at %s and provide a summary of its contents, structure, and any notable features.",
+                "Use the git_log tool to get the last 5 commits from the repository at %s. Show me the commit hash, author, date, and message for each commit.",
                 REPO_MOUNT_PATH
             );
+            
+            System.out.println("Analyzing repository...");
             String analysis = assistant.chat(query);
-            System.out.println("Repository Analysis:");
-            System.out.println(analysis);
-        } finally {
-            client.close();
+            System.out.println("\nRepository Analysis:\n" + analysis);
         }
+        
+        // Force exit to cleanup OkHttp connection pool threads
+        System.exit(0);
     }
 
     private static ChatModel buildChatModel() {
@@ -90,6 +93,8 @@ public class GitRepositoryAnalyzer {
                 .baseUrl(GITHUB_MODELS_URL)
                 .apiKey(System.getenv("GITHUB_TOKEN"))
                 .modelName(MODEL_NAME)
+                .timeout(Duration.ofSeconds(60))
+                .strictTools(false)
                 .build();
     }
 
@@ -110,7 +115,7 @@ public class GitRepositoryAnalyzer {
 
         return new StdioMcpTransport.Builder()
                 .command(List.of(
-                    "docker", "run",
+                    "docker", "run", "--rm",
                     "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
                     "-v", volumeMapping,
                     "-i", "mcp/git"
@@ -122,6 +127,9 @@ public class GitRepositoryAnalyzer {
     private static McpClient buildMcpClient(McpTransport transport) {
         return new DefaultMcpClient.Builder()
                 .transport(transport)
+                .autoHealthCheck(false)
+                .initializationTimeout(Duration.ofSeconds(60))
+                .toolExecutionTimeout(Duration.ofSeconds(120))
                 .build();
     }
 }
