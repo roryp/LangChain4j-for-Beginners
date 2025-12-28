@@ -5,11 +5,13 @@
 - [What You'll Learn](#what-youll-learn)
 - [Understanding MCP](#understanding-mcp)
 - [How MCP Works](#how-mcp-works)
+- [The Agentic Module](#the-agentic-module)
 - [Running the Examples](#running-the-examples)
   - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
   - [Supervisor Agent (Pure Agentic AI)](#supervisor-agent-pure-agentic-ai)
+  - [Other Agentic Module Features](#other-agentic-module-features)
 - [Key Concepts](#key-concepts)
 - [Congratulations!](#congratulations)
   - [What's Next?](#whats-next)
@@ -48,15 +50,19 @@ MCP standardizes this. An MCP server exposes tools with clear descriptions and s
 
 MCP uses a client-server model. Servers provide tools - reading files, querying databases, calling APIs. Clients (your AI application) connect to servers and use their tools.
 
+To use MCP with LangChain4j, add this Maven dependency:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
+```
+
 **Tool Discovery**
 
 When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
-
-**Combining MCP with the Agentic Module**
-
-While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build the agents that use those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code, making it easy to create sophisticated agents that leverage MCP's tool ecosystem.
-
-> **⚠️ Experimental:** Currently, the **NEW** `langchain4j-agentic` module should be considered **experimental** and is subject to change in future releases. The stable way to build AI assistants remains the `langchain4j-core` module with custom tools (Module 04). The agentic module is evolving rapidly to provide a more declarative and flexible approach to building AI agents.
 
 **Transport Mechanisms**
 
@@ -85,6 +91,26 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
 > - "How does Stdio transport work and when should I use it vs HTTP?"
 > - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
 > - "What are the security implications of giving AI access to the file system?"
+
+## The Agentic Module
+
+While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build agents that orchestrate those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code.
+
+In this module, you'll explore the **Supervisor Agent** pattern — an advanced agentic AI approach where a "supervisor" agent dynamically decides which sub-agents to invoke based on user requests. We'll combine both concepts by giving one of our sub-agents MCP-powered file access capabilities.
+
+<img src="images/agentic.png" alt="Agentic Module" width="800"/>
+
+To use the agentic module, add this Maven dependency:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
+```
+
+> **⚠️ Experimental:** The `langchain4j-agentic` module is **experimental** and subject to change. The stable way to build AI assistants remains `langchain4j-core` with custom tools (Module 04).
 
 ## Running the Examples
 
@@ -218,6 +244,69 @@ User request: [asking for summary of LangChain4j description]
 
 🤖 Supervisor Response:
 LangChain4j is a Java AI library providing unified APIs, RAG support, and agent capabilities...
+```
+
+### Other Agentic Module Features
+
+Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
+| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
+| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
+| **Conditional** | Route based on conditions | Classify → route to specialist agent |
+| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
+
+**Quick Examples:**
+
+```java
+// Sequential: agents run in order
+UntypedAgent pipeline = AgenticServices.sequenceBuilder()
+    .subAgents(researchAgent, analyzeAgent, reportAgent)
+    .outputKey("report")
+    .build();
+
+// Parallel: agents run simultaneously
+UntypedAgent parallel = AgenticServices.parallelBuilder()
+    .subAgents(weatherAgent, newsAgent)
+    .executor(Executors.newFixedThreadPool(2))
+    .build();
+
+// Loop: repeat until quality threshold
+UntypedAgent reviewLoop = AgenticServices.loopBuilder()
+    .subAgents(scorer, editor)
+    .maxIterations(5)
+    .exitCondition(scope -> scope.readState("score", 0.0) >= 0.8)
+    .build();
+
+// Human-in-the-Loop: get user approval
+HumanInTheLoop approval = AgenticServices.humanInTheLoopBuilder()
+    .description("Get user approval")
+    .inputKey("draft")
+    .outputKey("approved")
+    .async(true)
+    .build();
+```
+
+**AgenticScope** allows agents to share state and introspect execution:
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** enable monitoring and debugging:
+
+```java
+AgentListener monitor = new AgentListener() {
+    @Override
+    public void onAgentInvoked(AgentInvocation invocation) {
+        System.out.println("Agent: " + invocation.agentName() + ", Duration: " + invocation.duration());
+    }
+};
 ```
 
 ## Key Concepts
