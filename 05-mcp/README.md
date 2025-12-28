@@ -98,8 +98,6 @@ While MCP provides standardized tools, LangChain4j's **agentic module** provides
 
 In this module, you'll explore the **Supervisor Agent** pattern — an advanced agentic AI approach where a "supervisor" agent dynamically decides which sub-agents to invoke based on user requests. We'll combine both concepts by giving one of our sub-agents MCP-powered file access capabilities.
 
-<img src="images/agentic.png" alt="Agentic Module" width="800"/>
-
 To use the agentic module, add this Maven dependency:
 
 ```xml
@@ -160,9 +158,12 @@ Assistant response: The file provides an overview of LangChain4j, an open-source
 for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Supervisor Agent (Pure Agentic AI)
+### Supervisor Agent pattern
 
-The **Supervisor Agent** pattern is the most flexible form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
+<img src="images/agentic.png" alt="Agentic Module" width="800"/>
+
+
+**Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
 
 **Key concepts:**
 - The Supervisor analyzes the user request and generates an execution plan
