@@ -130,19 +130,13 @@ Quick reference for terms and concepts used throughout the course.
 
 ## Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)
 
-**Docker Transport** - MCP server in Docker container.
-
 **MCP** - Standard for connecting AI apps to external tools.
 
 **MCP Client** - Application that connects to MCP servers.
 
 **MCP Server** - Service exposing tools via MCP.
 
-**Server-Sent Events (SSE)** - Server-to-client streaming over HTTP.
-
 **Stdio Transport** - Server as subprocess via stdin/stdout.
-
-**Streamable HTTP Transport** - HTTP with SSE for real-time communication.
 
 **Tool Discovery** - Client queries server for available tools.
 
@@ -175,5 +169,3 @@ Quick reference for terms and concepts used throughout the course.
 **Mockito** - Java mocking framework.
 
 **Spring Boot** - Java application framework. [Module 01](../01-introduction/README.md)
-
-**Testcontainers** - Docker containers in tests.
