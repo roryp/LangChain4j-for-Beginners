@@ -5,17 +5,10 @@
 - [What You'll Learn](#what-youll-learn)
 - [Understanding MCP](#understanding-mcp)
 - [How MCP Works](#how-mcp-works)
-  - [Server-Client Architecture](#server-client-architecture)
-  - [Tool Discovery](#tool-discovery)
-  - [Transport Mechanisms](#transport-mechanisms)
-- [Prerequisites](#prerequisites)
+- [Running the Examples](#running-the-examples)
+  - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
-- [Key Concepts](#key-concepts)
-  - [Transport Selection](#transport-selection)
-  - [Tool Discovery](#tool-discovery-1)
-  - [Session Management](#session-management)
-  - [Cross-Platform Considerations](#cross-platform-considerations)
 - [When to Use MCP](#when-to-use-mcp)
 - [MCP Ecosystem](#mcp-ecosystem)
 - [Congratulations!](#congratulations)
@@ -68,7 +61,7 @@ For local processes. Your application spawns a server as a subprocess and commun
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
@@ -127,22 +120,6 @@ The application spawns a filesystem MCP server automatically and reads a local f
 Assistant response: The content of the file is "Kaboom!".
 ```
 
-## Key Concepts
-
-**Transport Selection**
-
-MCP supports two main transport mechanisms:
-- **Stdio** - For local processes (demonstrated in this module)
-- **Streamable HTTP** - For remote servers
-
-**Tool Discovery**
-
-MCP clients automatically discover available tools when connecting. Your AI agent sees tool descriptions and decides which ones to use based on the user's request.
-
-**Session Management**
-
-MCP transports can be stateful or stateless depending on the implementation. Stdio transport spawns a subprocess that remains active during the session.
-
 ## When to Use MCP
 
 **Use MCP when:**
@@ -156,7 +133,6 @@ MCP transports can be stateful or stateless depending on the implementation. Std
 - Performance is critical (MCP adds overhead)
 - Your tools are simple and won't be reused
 - You need complete control over execution
-
 
 ## MCP Ecosystem
 
