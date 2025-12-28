@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "McpAgentDemo",
+            "request": "launch",
+            "mainClass": "com.example.langchain4j.mcp.McpAgentDemo",
+            "projectName": "mcp-example"
+        },
+        {
+            "type": "java",
             "name": "ToolIntegrationDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.quickstart.ToolIntegrationDemo",

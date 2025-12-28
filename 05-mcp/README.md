@@ -9,6 +9,7 @@
   - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
+  - [MCP Agent with Agentic Module](#mcp-agent-with-agentic-module)
 - [When to Use MCP](#when-to-use-mcp)
 - [MCP Ecosystem](#mcp-ecosystem)
 - [Congratulations!](#congratulations)
@@ -20,6 +21,13 @@
 You've built conversational AI, mastered prompts, grounded responses in documents, and created agents with tools. But all those tools were custom-built for your specific application. What if you could give your AI access to a standardized ecosystem of tools that anyone can create and share?
 
 The Model Context Protocol (MCP) provides exactly that - a standard way for AI applications to discover and use external tools. Instead of writing custom integrations for each data source or service, you connect to MCP servers that expose their capabilities in a consistent format. Your AI agent can then discover and use these tools automatically.
+
+In this module, you'll learn:
+
+- **Model Context Protocol (MCP)** - A standard way for AI applications to discover and use external tools
+- **MCP Transports** - How to connect to MCP servers using Stdio for local processes
+- **Tool Discovery** - How AI agents automatically discover and use available tools
+- **Agentic Module** - Build declarative agents using `@Agent` annotations and `AgenticServices` - the modern approach to creating AI agents that can leverage MCP tools
 
 <img src="images/mcp-comparison.png" alt="MCP Comparison" width="800"/>
 
@@ -44,6 +52,10 @@ MCP uses a client-server model. Servers provide tools - reading files, querying 
 **Tool Discovery**
 
 When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
+
+**Combining MCP with the Agentic Module**
+
+While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build the agents that use those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code, making it easy to create sophisticated agents that leverage MCP's tool ecosystem.
 
 **Transport Mechanisms**
 
@@ -120,6 +132,69 @@ The application spawns a filesystem MCP server automatically and reads a local f
 Assistant response: The content of the file is "Kaboom!".
 ```
 
+### MCP Agent with Agentic Module
+
+This demonstrates combining MCP tools with LangChain4j's **agentic module** - the declarative way to build AI agents using annotations.
+
+**✅ No prerequisites needed** - the MCP server is spawned automatically.
+
+**Using VS Code:** Right-click on `McpAgentDemo.java` and select **"Run Java"**.
+
+**Using Maven:**
+
+**Bash:**
+```bash
+export GITHUB_TOKEN=your_token_here
+cd 05-mcp
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.McpAgentDemo
+```
+
+**PowerShell:**
+```powershell
+$env:GITHUB_TOKEN=your_token_here
+cd 05-mcp
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.McpAgentDemo
+```
+
+The agentic module uses the `@Agent` annotation to define agent capabilities declaratively:
+
+```java
+// FileAgent.java - Define agent interface with @Agent annotation
+public interface FileAgent {
+    
+    @SystemMessage("You are a helpful file assistant. Use the available tools to read files.")
+    @UserMessage("Read the file at {{path}} and summarize its contents.")
+    @Agent(description = "Reads and summarizes file contents", outputKey = "summary")
+    String readFile(@V("path") String path);
+}
+```
+
+See [FileAgent.java](src/main/java/com/example/langchain4j/mcp/FileAgent.java) for the complete interface.
+
+```java
+// Build agent using AgenticServices instead of AiServices
+FileAgent agent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)
+        .build();
+```
+
+Key differences from `AiServices`:
+- **`@Agent` annotation** - Declares the method as an agentic workflow step with description and output keys
+- **`AgenticServices.agentBuilder()`** - Builds agents with agentic capabilities
+- **Workflow support** - Enables chaining agents in sequential, loop, or parallel workflows
+
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`McpAgentDemo.java`](src/main/java/com/example/langchain4j/mcp/McpAgentDemo.java) and ask:
+> - "What's the difference between AgenticServices and AiServices?"
+> - "How can I chain multiple agents together using the agentic module?"
+> - "Explain how the @Agent annotation enables workflow orchestration"
+
+**Expected output:**
+```
+Agent Response:
+The file contains a single word: "Kaboom!"
+```
+
 ## When to Use MCP
 
 **Use MCP when:**
@@ -134,6 +209,12 @@ Assistant response: The content of the file is "Kaboom!".
 - Your tools are simple and won't be reused
 - You need complete control over execution
 
+**Use the Agentic Module when:**
+- You want declarative agent definitions with `@Agent` annotations
+- Building agents that need workflow orchestration (sequential, loop, parallel)
+- You prefer interface-based agent design over imperative code
+- Combining multiple agents that can share outputs via `outputKey`
+
 ## MCP Ecosystem
 
 The Model Context Protocol is an open standard with a growing ecosystem:
@@ -145,6 +226,8 @@ The Model Context Protocol is an open standard with a growing ecosystem:
 
 This standardization means tools built for one AI application work with others, creating a shared ecosystem of capabilities.
 
+LangChain4j's agentic module complements MCP by providing a declarative layer on top. While MCP standardizes *what tools are available*, the agentic module standardizes *how agents use those tools* - through annotations, interfaces, and workflow patterns. Together, they enable building sophisticated AI agents with minimal boilerplate code.
+
 ## Congratulations!
 
 You've completed the LangChain4j for Beginners course. You've learned:
@@ -154,6 +237,7 @@ You've completed the LangChain4j for Beginners course. You've learned:
 - Grounding responses in your documents with RAG (Module 03)
 - Creating AI agents with custom tools (Module 04)
 - Integrating standardized tools through MCP (Module 05)
+- Building declarative agents with the agentic module
 
 You now have the foundation to build production AI applications. The concepts you've learned apply regardless of specific frameworks or models - they're fundamental patterns in AI engineering.
 
