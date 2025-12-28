@@ -131,9 +131,10 @@ Assistant response: The content of the file is "Kaboom!".
 
 **Transport Selection**
 
-Choose based on where your tools live:
-- Remote services → Streamable HTTP
-- Local file system → Stdio
+MCP supports multiple transport mechanisms:
+- **Stdio** - For local processes (demonstrated in this module)
+- **Streamable HTTP** - For remote servers
+- **Docker** - For containerized services (uses Stdio under the hood)
 
 **Tool Discovery**
 
@@ -141,7 +142,7 @@ MCP clients automatically discover available tools when connecting. Your AI agen
 
 **Session Management**
 
-Streamable HTTP transport maintains sessions, allowing stateful interactions with remote servers. Stdio transport is typically stateless.
+MCP transports can be stateful or stateless depending on the implementation. Stdio transport spawns a subprocess that remains active during the session.
 
 ## When to Use MCP
 
