@@ -58,6 +58,8 @@ While MCP provides standardized tools, LangChain4j's **agentic module** provides
 
 > **⚠️ Experimental:** Currently, the **NEW** `langchain4j-agentic` module should be considered **experimental** and is subject to change in future releases. The stable way to build AI assistants remains the `langchain4j-core` module with custom tools (Module 04). The agentic module is evolving rapidly to provide a more declarative and flexible approach to building AI agents.
 
+
+
 **Transport Mechanisms**
 
 MCP supports different transport mechanisms. This module demonstrates the Stdio transport for local processes:
@@ -219,6 +221,71 @@ User request: [asking for summary of LangChain4j description]
 🤖 Supervisor Response:
 LangChain4j is a Java AI library providing unified APIs, RAG support, and agent capabilities...
 ```
+
+### Other Agentic Module Features
+
+Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
+| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
+| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
+| **Conditional** | Route based on conditions | Classify → route to specialist agent |
+| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
+
+**Quick Examples:**
+
+```java
+// Sequential: agents run in order
+UntypedAgent pipeline = AgenticServices.sequenceBuilder()
+    .subAgents(researchAgent, analyzeAgent, reportAgent)
+    .outputKey("report")
+    .build();
+
+// Parallel: agents run simultaneously
+UntypedAgent parallel = AgenticServices.parallelBuilder()
+    .subAgents(weatherAgent, newsAgent)
+    .executor(Executors.newFixedThreadPool(2))
+    .build();
+
+// Loop: repeat until quality threshold
+UntypedAgent reviewLoop = AgenticServices.loopBuilder()
+    .subAgents(scorer, editor)
+    .maxIterations(5)
+    .exitCondition(scope -> scope.readState("score", 0.0) >= 0.8)
+    .build();
+
+// Human-in-the-Loop: get user approval
+HumanInTheLoop approval = AgenticServices.humanInTheLoopBuilder()
+    .description("Get user approval")
+    .inputKey("draft")
+    .outputKey("approved")
+    .async(true)
+    .build();
+```
+
+**AgenticScope** allows agents to share state and introspect execution:
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** enable monitoring and debugging:
+
+```java
+AgentListener monitor = new AgentListener() {
+    @Override
+    public void onAgentInvoked(AgentInvocation invocation) {
+        System.out.println("Agent: " + invocation.agentName() + ", Duration: " + invocation.duration());
+    }
+};
+```
+
+> **Learn More:** See the [LangChain4j Agents Documentation](https://docs.langchain4j.dev/tutorials/agents/) for comprehensive examples of all workflow patterns.
 
 ## Key Concepts
 
