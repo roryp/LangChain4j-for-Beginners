@@ -10,7 +10,7 @@
   - [Prerequisites](#prerequisites)
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
-  - [Supervisor Agent (Pure Agentic AI)](#supervisor-agent-pure-agentic-ai)
+  - [Supervisor Agent](#supervisor-agent)
   - [Other Agentic Module Features](#other-agentic-module-features)
 - [Key Concepts](#key-concepts)
 - [Congratulations!](#congratulations)
@@ -158,18 +158,16 @@ Assistant response: The file provides an overview of LangChain4j, an open-source
 for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Supervisor Agent pattern
+### Supervisor Agent
 
 <img src="images/agentic.png" alt="Agentic Module" width="800"/>
 
 
 The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
 
-**Key concepts:**
-- The Supervisor analyzes the user request and generates an execution plan
-- It decides which sub-agents to invoke and in what order
-- It can adapt dynamically to different types of requests
-- Returns either the last agent's response or a summary of all operations
+**Combining Supervisor with MCP:** In this example, we give the `FileAgent` access to MCP file system tools via `toolProvider(mcpToolProvider)`. When a user asks to "read and analyze a file," the Supervisor analyzes the request and generates an execution plan. It then routes the request to `FileAgent`, which uses MCP's `read_file` tool to retrieve the content. The Supervisor passes that content to `AnalysisAgent` for interpretation, and optionally invokes `SummaryAgent` to condense the results.
+
+This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it. The Supervisor adapts dynamically to different types of requests and returns either the last agent's response or a summary of all operations.
 
 **Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"**.
 
