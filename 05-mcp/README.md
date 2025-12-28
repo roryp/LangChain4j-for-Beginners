@@ -58,7 +58,7 @@ MCP supports different transport mechanisms. This module demonstrates the Stdio 
 
 <img src="images/transport-mechanisms.png" alt="Transport Mechanisms" width="800"/>
 
-*MCP transport mechanisms: HTTP for remote servers, Stdio for local processes (including Docker containers)*
+*MCP transport mechanisms: HTTP for remote servers, Stdio for local processes*
 
 **Stdio** - [StdioTransportDemo.java](src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
@@ -134,7 +134,6 @@ Assistant response: The content of the file is "Kaboom!".
 Choose based on where your tools live:
 - Remote services → Streamable HTTP
 - Local file system → Stdio
-- Complex dependencies → Docker
 
 **Tool Discovery**
 
@@ -142,11 +141,7 @@ MCP clients automatically discover available tools when connecting. Your AI agen
 
 **Session Management**
 
-Streamable HTTP transport maintains sessions, allowing stateful interactions with remote servers. Stdio and Docker transports are typically stateless.
-
-**Cross-Platform Considerations**
-
-The examples handle platform differences automatically (Windows vs Unix command differences, path conversions for Docker). This is important for production deployments across different environments.
+Streamable HTTP transport maintains sessions, allowing stateful interactions with remote servers. Stdio transport is typically stateless.
 
 ## When to Use MCP
 
