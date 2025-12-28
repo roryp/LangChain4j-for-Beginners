@@ -42,6 +42,8 @@ Tools change this. By giving the model access to functions it can call, you tran
 
 ## Understanding AI Agents with Tools
 
+> **📝 Note:** The term "agents" in this module refers to AI assistants enhanced with tool-calling capabilities. This is different from the **Agentic AI** patterns (autonomous agents with planning, memory, and multi-step reasoning) that we'll cover in [Module 05: MCP](../05-mcp/README.md).
+
 An AI agent with tools follows a reasoning and acting pattern (ReAct):
 
 1. User asks a question
