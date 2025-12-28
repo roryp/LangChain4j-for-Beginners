@@ -36,7 +36,7 @@ This course focuses on **unit tests** that run locally. Each test demonstrates a
 
 <img src="images/testing-pyramid.png" alt="Testing Pyramid" width="800"/>
 
-*Testing pyramid showing the balance between unit tests (fast, isolated), integration tests (real components), and end-to-end tests (full system with Docker). This training covers unit testing.*
+*Testing pyramid showing the balance between unit tests (fast, isolated), integration tests (real components), and end-to-end tests. This training covers unit testing.*
 
 | Module | Tests | Focus | Key Files |
 |--------|-------|-------|-----------|
@@ -120,10 +120,6 @@ If you're using Visual Studio Code, the Test Explorer provides a graphical inter
 The Test Explorer shows green checkmarks for passing tests and provides detailed failure messages when tests fail.
 
 ## Testing Patterns
-
-<img src="images/testing-patterns.png" alt="Six Testing Patterns" width="800"/>
-
-*Six testing patterns for LangChain4j applications: prompt templates, mocking models, conversation isolation, tools testing, in-memory RAG, and MCP integration*
 
 ### Pattern 1: Testing Prompt Templates
 
@@ -314,10 +310,6 @@ This test from `03-rag/src/test/java/com/example/langchain4j/rag/service/Documen
 
 The MCP module tests the Model Context Protocol integration using stdio transport. These tests verify that your application can spawn and communicate with MCP servers as subprocesses.
 
-<img src="images/mcp-testing.png" alt="MCP Integration Testing" width="800"/>
-
-*MCP integration testing showing stdio transport lifecycle: spawn server, communicate via stdin/stdout, and cleanup*
-
 The tests in `05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` validate MCP client behavior.
 
 **Run them:**
@@ -353,7 +345,7 @@ Now that you understand the testing patterns, dive deeper into each module:
 - **[02 - Prompt Engineering](../02-prompt-engineering/README.md)** - Master GPT-5 prompting patterns
 - **[03 - RAG](../03-rag/README.md)** - Build retrieval-augmented generation systems
 - **[04 - Tools](../04-tools/README.md)** - Implement function calling and tool chains
-- **[05 - MCP](../05-mcp/README.md)** - Integrate Model Context Protocol with Docker
+- **[05 - MCP](../05-mcp/README.md)** - Integrate Model Context Protocol
 
 Each module's README provides detailed explanations of the concepts tested here.
 
