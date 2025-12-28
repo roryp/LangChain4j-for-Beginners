@@ -131,7 +131,7 @@ Assistant response: The content of the file is "Kaboom!".
 
 **Transport Selection**
 
-MCP supports multiple transport mechanisms:
+MCP supports two main transport mechanisms:
 - **Stdio** - For local processes (demonstrated in this module)
 - **Streamable HTTP** - For remote servers
 
