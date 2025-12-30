@@ -1,52 +1,52 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
-  "translation_date": "2025-12-19T10:05:17+00:00",
+  "original_hash": "1e85afe0b0ee47fc09b20442b0ee4ca5",
+  "translation_date": "2025-12-23T08:52:41+00:00",
   "source_file": "README.md",
   "language_code": "ja"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.ja.png" alt="LangChain4j" width="800"/>
 
-### 🌐 多言語対応
+### 🌐 多言語サポート
 
-#### GitHub Actionによるサポート（自動化＆常に最新）
+#### GitHub Action を介してサポート（自動化・常に最新）
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[アラビア語](../ar/README.md) | [ベンガル語](../bn/README.md) | [ブルガリア語](../bg/README.md) | [ビルマ語（ミャンマー）](../my/README.md) | [中国語（簡体字）](../zh/README.md) | [中国語（繁体字、香港）](../hk/README.md) | [中国語（繁体字、マカオ）](../mo/README.md) | [中国語（繁体字、台湾）](../tw/README.md) | [クロアチア語](../hr/README.md) | [チェコ語](../cs/README.md) | [デンマーク語](../da/README.md) | [オランダ語](../nl/README.md) | [エストニア語](../et/README.md) | [フィンランド語](../fi/README.md) | [フランス語](../fr/README.md) | [ドイツ語](../de/README.md) | [ギリシャ語](../el/README.md) | [ヘブライ語](../he/README.md) | [ヒンディー語](../hi/README.md) | [ハンガリー語](../hu/README.md) | [インドネシア語](../id/README.md) | [イタリア語](../it/README.md) | [日本語](./README.md) | [カンナダ語](../kn/README.md) | [韓国語](../ko/README.md) | [リトアニア語](../lt/README.md) | [マレー語](../ms/README.md) | [マラヤーラム語](../ml/README.md) | [マラーティー語](../mr/README.md) | [ネパール語](../ne/README.md) | [ナイジェリア・ピジン語](../pcm/README.md) | [ノルウェー語](../no/README.md) | [ペルシャ語（ファルシ）](../fa/README.md) | [ポーランド語](../pl/README.md) | [ポルトガル語（ブラジル）](../br/README.md) | [ポルトガル語（ポルトガル）](../pt/README.md) | [パンジャブ語（グルムキー）](../pa/README.md) | [ルーマニア語](../ro/README.md) | [ロシア語](../ru/README.md) | [セルビア語（キリル）](../sr/README.md) | [スロバキア語](../sk/README.md) | [スロベニア語](../sl/README.md) | [スペイン語](../es/README.md) | [スワヒリ語](../sw/README.md) | [スウェーデン語](../sv/README.md) | [タガログ語（フィリピン）](../tl/README.md) | [タミル語](../ta/README.md) | [テルグ語](../te/README.md) | [タイ語](../th/README.md) | [トルコ語](../tr/README.md) | [ウクライナ語](../uk/README.md) | [ウルドゥー語](../ur/README.md) | [ベトナム語](../vi/README.md)
+[アラビア語](../ar/README.md) | [ベンガル語](../bn/README.md) | [ブルガリア語](../bg/README.md) | [ビルマ語（ミャンマー）](../my/README.md) | [中国語（簡体字）](../zh/README.md) | [中国語（繁体字、香港）](../hk/README.md) | [中国語（繁体字、マカオ）](../mo/README.md) | [中国語（繁体字、台湾）](../tw/README.md) | [クロアチア語](../hr/README.md) | [チェコ語](../cs/README.md) | [デンマーク語](../da/README.md) | [オランダ語](../nl/README.md) | [エストニア語](../et/README.md) | [フィンランド語](../fi/README.md) | [フランス語](../fr/README.md) | [ドイツ語](../de/README.md) | [ギリシャ語](../el/README.md) | [ヘブライ語](../he/README.md) | [ヒンディー語](../hi/README.md) | [ハンガリー語](../hu/README.md) | [インドネシア語](../id/README.md) | [イタリア語](../it/README.md) | [日本語](./README.md) | [カンナダ語](../kn/README.md) | [韓国語](../ko/README.md) | [リトアニア語](../lt/README.md) | [マレー語](../ms/README.md) | [マラヤーラム語](../ml/README.md) | [マラーティー語](../mr/README.md) | [ネパール語](../ne/README.md) | [ナイジェリア・ピジン語](../pcm/README.md) | [ノルウェー語](../no/README.md) | [ペルシア語（ファルシ）](../fa/README.md) | [ポーランド語](../pl/README.md) | [ポルトガル語（ブラジル）](../br/README.md) | [ポルトガル語（ポルトガル）](../pt/README.md) | [パンジャブ語（グルムキー）](../pa/README.md) | [ルーマニア語](../ro/README.md) | [ロシア語](../ru/README.md) | [セルビア語（キリル）](../sr/README.md) | [スロバキア語](../sk/README.md) | [スロベニア語](../sl/README.md) | [スペイン語](../es/README.md) | [スワヒリ語](../sw/README.md) | [スウェーデン語](../sv/README.md) | [タガログ語（フィリピン）](../tl/README.md) | [タミル語](../ta/README.md) | [テルグ語](../te/README.md) | [タイ語](../th/README.md) | [トルコ語](../tr/README.md) | [ウクライナ語](../uk/README.md) | [ウルドゥー語](../ur/README.md) | [ベトナム語](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# 初心者向けLangChain4j
+# 初心者向け LangChain4j
 
-LangChain4jとAzure OpenAI GPT-5を使ったAIアプリケーション構築コース。基本的なチャットからAIエージェントまで。
+LangChain4j と Azure OpenAI GPT-5 を使って、基本的なチャットから AI エージェントまでの AI アプリケーションを構築するためのコースです。
 
-**LangChain4jが初めてですか？** 重要な用語や概念の定義は[用語集](docs/GLOSSARY.md)をご覧ください。
+**LangChain4j に不慣れですか？** 主要用語と概念の定義については [用語集](docs/GLOSSARY.md) を確認してください。
 
-## 目次
+## Table of Contents
 
-1. [クイックスタート](00-quick-start/README.md) - LangChain4jの始め方
-2. [イントロダクション](01-introduction/README.md) - LangChain4jの基本を学ぶ
-3. [プロンプトエンジニアリング](02-prompt-engineering/README.md) - 効果的なプロンプト設計を習得
-4. [RAG（検索強化生成）](03-rag/README.md) - 知識ベースのインテリジェントシステムを構築
-5. [ツール](04-tools/README.md) - 外部ツールやAPIをAIエージェントに統合
-6. [MCP（モデルコンテキストプロトコル）](05-mcp/README.md) - モデルコンテキストプロトコルを扱う
+1. [クイックスタート](00-quick-start/README.md) - LangChain4j の始め方
+2. [導入](01-introduction/README.md) - LangChain4j の基礎を学ぶ
+3. [プロンプトエンジニアリング](02-prompt-engineering/README.md) - 効果的なプロンプト設計を習得する
+4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - 知識に基づくインテリジェントなシステムを構築する
+5. [ツール](04-tools/README.md) - AI エージェントと外部ツールや API を統合する
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Model Context Protocol を扱う
 ---
 
-## 学習パス
+##  Learning Path
 
 > **クイックスタート**
 
-1. このリポジトリをGitHubアカウントにフォークする
-2. **Code** → **Codespaces** タブ → **...** → **New with options...** をクリック
-3. デフォルト設定を使用 – 本コース用に作成された開発コンテナが選択されます
-4. **Create codespace** をクリック
-5. 環境が準備されるまで5～10分待つ
-6. すぐに[クイックスタート](./00-quick-start/README.md)に進んで開始！
+1. このリポジトリをあなたの GitHub アカウントにフォークしてください
+2. 「**Code**」→「**Codespaces**」タブ→「**...**」→「**New with options...**」をクリック
+3. デフォルトを使用してください – これにより、このコース用に作成された Development コンテナが選択されます
+4. 「**Create codespace**」をクリック
+5. 環境が準備されるまで5〜10分待ちます
+6. まずは [クイックスタート](./00-quick-start/README.md) に進んで始めてください！
 
-> **ローカルでクローンしたい場合は？**
+> **ローカルでクローンしますか？**
 >
-> このリポジトリには50以上の言語翻訳が含まれており、ダウンロードサイズが大きくなります。翻訳なしでクローンするにはスパースチェックアウトを使用してください：
+> このリポジトリには 50 を超える言語翻訳が含まれており、ダウンロードサイズが大幅に増加します。翻訳なしでクローンするには、sparse checkout を使用してください:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
@@ -54,48 +54,48 @@ LangChain4jとAzure OpenAI GPT-5を使ったAIアプリケーション構築コ�
 > ```
 > これにより、コースを完了するために必要なすべてがより高速にダウンロードできます。
 
-[クイックスタート](00-quick-start/README.md)モジュールから始めて、各モジュールを順に進めてスキルを段階的に構築しましょう。基本的な例で基礎を理解した後、GPT-5を使ったより深い内容の[イントロダクション](01-introduction/README.md)モジュールに進みます。
+まずは [クイックスタート](00-quick-start/README.md) モジュールから始め、各モジュールを順に進めてスキルを段階的に構築してください。基本的な例で基礎を理解してから、GPT-5 を用いたより詳しい内容の [導入](01-introduction/README.md) モジュールに進みましょう。
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ja.png" alt="Learning Path" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.ja.png" alt="学習パス" width="800"/>
 
-モジュールを完了したら、[テストガイド](docs/TESTING.md)でLangChain4jのテスト概念を実際に確認してください。
+モジュールを完了したら、LangChain4j のテスト概念を実際に見るために [Testing Guide](docs/TESTING.md) を参照してください。
 
-> **注意：** 本トレーニングではGitHub ModelsとAzure OpenAIの両方を使用します。[クイックスタート](00-quick-start/README.md)と[MCP](05-mcp/README.md)モジュールはGitHub Models（Azureサブスクリプション不要）を使用し、モジュール1～4はAzure OpenAI GPT-5を使用します。
-
-
-## GitHub Copilotで学ぶ
-
-すぐにコーディングを始めるには、このプロジェクトをGitHub Codespaceまたは提供されたdevcontainerを使ってローカルIDEで開いてください。本コースで使用するdevcontainerには、AIペアプログラミング用のGitHub Copilotが事前設定されています。
-
-各コード例には、理解を深めるためにGitHub Copilotに尋ねられる推奨質問が含まれています。💡/🤖のプロンプトを探してください：
-
-- **Javaファイルのヘッダー** - 各例に特化した質問
-- **モジュールのREADME** - コード例後の探求用プロンプト
-
-**使い方：** 任意のコードファイルを開き、推奨質問をCopilotに尋ねてください。コードベースの全体コンテキストを把握しており、説明、拡張、代替案の提案が可能です。
-
-もっと知りたいですか？[AIペアプログラミング用Copilot](https://aka.ms/GitHubCopilotAI)をご覧ください。
+> **注意：** このトレーニングでは GitHub Models と Azure OpenAI の両方を使用します。[クイックスタート](00-quick-start/README.md) と [MCP](05-mcp/README.md) モジュールは GitHub Models（Azure サブスクリプション不要）を使用し、モジュール 1〜4 は Azure OpenAI GPT-5 を使用します。
 
 
-## 追加リソース
+## Learning with GitHub Copilot
+
+すぐにコーディングを開始するには、このプロジェクトを GitHub Codespace または提供された devcontainer を使ってローカル IDE で開いてください。本コースで使用する devcontainer には、AI ペアプログラミング用の GitHub Copilot が事前設定されています。
+
+各コード例には、GitHub Copilot に尋ねて理解を深めるための推奨質問が含まれています。以下の 💡/🤖 プロンプトを探してください:
+
+- **Java ファイルのヘッダー** - 各例に特有の質問
+- **モジュールの README** - コード例後の探索用プロンプト
+
+使い方：任意のコードファイルを開き、推奨質問を Copilot に尋ねてください。Copilot はコードベースの完全なコンテキストを持っており、説明、拡張、代替案の提案ができます。
+
+もっと学びたいですか？[AI ペアプログラミング向け Copilot](https://aka.ms/GitHubCopilotAI) をご覧ください。
+
+
+## Additional Resources
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
-[![初心者向けLangChain4j](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
-[![初心者向けLangChain.js](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
+[![初心者向け LangChain4j](https://img.shields.io/badge/LangChain4j%20for%20Beginners-22C55E?style=for-the-badge&&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchain4j-for-beginners)
+[![初心者向け LangChain.js](https://img.shields.io/badge/LangChain.js%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=0553D6)](https://aka.ms/langchainjs-for-beginners?WT.mc_id=m365-94501-dwahlin)
 
 ---
 
 ### Azure / Edge / MCP / エージェント
-[![初心者向けAZD](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けEdge AI](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けMCP](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けAIエージェント](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け AZD](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け Edge AI](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け MCP](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け AI エージェント](https://img.shields.io/badge/AI%20Agents%20for%20Beginners-00C49A?style=for-the-badge&labelColor=E5E7EB&color=00C49A)](https://github.com/microsoft/ai-agents-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### 生成AIシリーズ
-[![初心者向け生成AI](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け 生成AI](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![生成AI（.NET）](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![生成AI（Java）](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
 [![生成AI（JavaScript）](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
@@ -103,39 +103,40 @@ LangChain4jとAzure OpenAI GPT-5を使ったAIアプリケーション構築コ�
 ---
  
 ### コア学習
-[![初心者向けML](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けデータサイエンス](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けAI](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けサイバーセキュリティ](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![初心者向けWeb開発](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![初心者向けIoT](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け 機械学習](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け データサイエンス](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け AI](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け サイバーセキュリティ](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![初心者向け Web 開発](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![初心者向け IoT](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+
+[![初心者のための XR 開発](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Copilot シリーズ
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![AI ペアプログラミング向け Copilot](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![C#/.NET 向け Copilot](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot アドベンチャー](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## ヘルプを得る
+## ヘルプ
 
-AIアプリの構築で行き詰まったり質問がある場合は、以下に参加してください：
+If you get stuck or have any questions about building AI apps, join:
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Azure AI Foundry の Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-製品のフィードバックや構築中のエラーがある場合は、以下を訪問してください：
+If you have product feedback or errors while building visit:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Azure AI Foundry 開発者フォーラム](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## ライセンス
 
-MITライセンス - 詳細は[LICENSE](../../LICENSE)ファイルを参照してください。
+MIT ライセンス - 詳細は [LICENSE](../../LICENSE) ファイルを参照してください。
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責事項**：  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じた誤解や誤訳について、当方は一切の責任を負いかねます。
+免責事項：
+本書はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の確保に努めていますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があります。原文（原言語の文書）を権威ある出典とみなしてください。重要な情報については、専門の人による翻訳を推奨します。本翻訳の利用に起因する誤解や解釈の相違について、当社は一切責任を負いません。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
