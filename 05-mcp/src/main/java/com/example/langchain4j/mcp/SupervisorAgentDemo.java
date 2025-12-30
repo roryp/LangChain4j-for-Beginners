@@ -98,7 +98,7 @@ public class SupervisorAgentDemo {
             ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
             
             printSection("FINAL RESPONSE");
-            System.out.println(result.result());
+            System.out.println(stripMarkdown(result.result()));
 
             // Access agent outputs from the AgenticScope
             AgenticScope scope = result.agenticScope();
@@ -167,10 +167,30 @@ public class SupervisorAgentDemo {
     private static void printScopeValue(AgenticScope scope, String key, String source) {
         Object value = scope.readState(key);
         if (value != null) {
-            String strValue = value.toString();
+            String strValue = stripMarkdown(value.toString());
             String truncated = strValue.length() > 150 ? strValue.substring(0, 150) + "..." : strValue;
             System.out.println("  * " + key + ": " + truncated);
         }
+    }
+
+    /**
+     * Strips Markdown formatting and special characters from text for clean console output.
+     */
+    private static String stripMarkdown(String text) {
+        if (text == null) return "";
+        return text
+            .replaceAll("\\*\\*([^*]+)\\*\\*", "$1")  // Bold **text**
+            .replaceAll("\\*([^*]+)\\*", "$1")        // Italic *text*
+            .replaceAll("__([^_]+)__", "$1")          // Bold __text__
+            .replaceAll("_([^_]+)_", "$1")            // Italic _text_
+            .replaceAll("#{1,6}\\s*", "")             // Headers # ## ###
+            .replaceAll("`([^`]+)`", "$1")            // Inline code `text`
+            .replaceAll("```[\\s\\S]*?```", "")       // Code blocks
+            .replaceAll("\\[([^\\]]+)\\]\\([^)]+\\)", "$1")  // Links [text](url)
+            .replaceAll("(?m)^[-*+]\\s+", "- ")       // List items (multiline)
+            .replaceAll("(?m)^>\\s*", "")             // Blockquotes (multiline)
+            .replaceAll("\\n{3,}", "\n\n")            // Multiple newlines
+            .trim();
     }
 
     private static AgentListener createAgentListener() {
@@ -211,7 +231,7 @@ public class SupervisorAgentDemo {
                     return;
                 }
                 
-                String result = response.output() != null ? response.output().toString() : "null";
+                String result = response.output() != null ? stripMarkdown(response.output().toString()) : "null";
                 String truncated = result.length() > 80 ? result.substring(0, 80) + "..." : result;
                 System.out.println("  |");
                 System.out.println("  |   Result: " + truncated);
