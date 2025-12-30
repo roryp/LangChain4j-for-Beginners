@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [What You'll Learn](#what-youll-learn)
-- [Understanding MCP](#understanding-mcp)
+- [What is MCP?](#what-is-mcp)
 - [How MCP Works](#how-mcp-works)
 - [The Agentic Module](#the-agentic-module)
 - [Running the Examples](#running-the-examples)
@@ -11,30 +11,23 @@
 - [Quick Start](#quick-start)
   - [File Operations (Stdio)](#file-operations-stdio)
   - [Supervisor Agent](#supervisor-agent)
-  - [Other Agentic Module Features](#other-agentic-module-features)
+    - [Understanding the Output](#understanding-the-output)
+    - [Explanation of Agentic Module Features](#explanation-of-agentic-module-features)
 - [Key Concepts](#key-concepts)
 - [Congratulations!](#congratulations)
   - [What's Next?](#whats-next)
-- [Troubleshooting](#troubleshooting)
 
 ## What You'll Learn
 
-You've built conversational AI, mastered prompts, grounded responses in documents, and created agents with tools. But all those tools were custom-built for your specific application. What if you could give your AI access to a standardized ecosystem of tools that anyone can create and share?
+You've built conversational AI, mastered prompts, grounded responses in documents, and created agents with tools. But all those tools were custom-built for your specific application. What if you could give your AI access to a standardized ecosystem of tools that anyone can create and share? In this module, you'll learn how to do just that with the Model Context Protocol (MCP) and LangChain4j's agentic module. We first showcase a simple MCP file reader and then show how it easily integrates into advanced agentic workflows using the Supervisor Agent pattern.
+
+## What is MCP?
 
 The Model Context Protocol (MCP) provides exactly that - a standard way for AI applications to discover and use external tools. Instead of writing custom integrations for each data source or service, you connect to MCP servers that expose their capabilities in a consistent format. Your AI agent can then discover and use these tools automatically.
-
-In this module, you'll learn:
-
-- **Model Context Protocol (MCP)** - A standard way for AI applications to discover and use external tools
-- **MCP Transports** - How to connect to MCP servers using Stdio for local processes
-- **Tool Discovery** - How AI agents automatically discover and use available tools
-- **Agentic Module** - Build declarative agents using `@Agent` annotations and `AgenticServices` - the modern approach to creating AI agents that can leverage MCP tools
 
 <img src="images/mcp-comparison.png" alt="MCP Comparison" width="800"/>
 
 *Before MCP: Complex point-to-point integrations. After MCP: One protocol, endless possibilities.*
-
-## Understanding MCP
 
 MCP solves a fundamental problem in AI development: every integration is custom. Want to access GitHub? Custom code. Want to read files? Custom code. Want to query a database? Custom code. And none of these integrations work with other AI applications.
 
@@ -116,9 +109,11 @@ To use the agentic module, add this Maven dependency:
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ and npm (for MCP servers)
-- GitHub Personal Access Token configured in `.env` file (from Module 00)
+- Environment variables configured in `.env` file (from the root directory):
+  - **For StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **For SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (same as Modules 01-04)
 
-> **Note:** If you haven't set up your GitHub token yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions.
+> **Note:** If you haven't set up your environment variables yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions, or copy `.env.example` to `.env` in the root directory and fill in your values.
 
 ## Quick Start
 
@@ -169,23 +164,24 @@ The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike de
 
 This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it. The Supervisor adapts dynamically to different types of requests and returns either the last agent's response or a summary of all operations.
 
-**Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"**.
+**Using the Start Scripts (Recommended):**
 
-**Using Maven:**
+The start scripts automatically load environment variables from the root `.env` file:
 
 **Bash:**
 ```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.SupervisorAgentDemo
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.SupervisorAgentDemo
+.\start.ps1
 ```
+
+**Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"** (ensure your `.env` file is configured).
 
 **How the Supervisor Works:**
 
@@ -223,34 +219,89 @@ See [SupervisorAgentDemo.java](src/main/java/com/example/langchain4j/mcp/Supervi
 > - "What's the difference between Supervisor and Sequential workflow patterns?"
 > - "How can I customize the Supervisor's planning behavior?"
 
-**Expected output:**
+#### Understanding the Output
+
+When you run the demo, you'll see a structured walkthrough of how the Supervisor orchestrates multiple agents. Here's what each section means:
+
 ```
-Request: Read the file at .../file.txt and analyze what it's about
---------------------------------------------------
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
 
-🚀 [EVENT] Starting agent: invoke
-   📥 request: Read the file at ...
-🚀 [EVENT] Starting agent: readFile
-   📥 path: .../file.txt
-✅ [EVENT] Completed agent: readFile -> Summary of file.txt...
-🚀 [EVENT] Starting agent: analyzeContent
-   📥 content: LangChain4j is an open-source Java library...
-✅ [EVENT] Completed agent: analyzeContent -> **Structure:** The content is organized...
-✅ [EVENT] Completed agent: invoke -> The file describes LangChain4j...
-
-Response:
-The file describes LangChain4j, an open-source Java library for integrating LLMs...
-
---- Scope Contents ---
-summary (FileAgent/SummaryAgent): LangChain4j is an open-source Java library...
-analysis (AnalysisAgent): **Structure:** The summary is presented in a clear format...
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
 ```
 
-### Other Agentic Module Features
+**The header** introduces the demo and explains the core concept: the Supervisor uses an LLM (not hardcoded rules) to decide which agents to call.
 
-The example demonstrates several advanced features of the agentic module.
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
 
-**AgenticScope** allows agents to share state and introspect execution history:
+**Available Agents** shows the three specialized agents the Supervisor can choose from. Each agent has a specific capability:
+- **FileAgent** can read files using MCP tools (external capability)
+- **AnalysisAgent** analyzes content (pure LLM capability)
+- **SummaryAgent** creates summaries (pure LLM capability)
+
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
+
+**User Request** shows what was asked. The Supervisor must parse this and decide which agents to invoke.
+
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
+
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
+
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: **Structure:** The content is organized into clear paragraphs...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
+
+**Supervisor Orchestration** is where the magic happens. Watch how:
+1. The Supervisor **chose FileAgent first** because the request mentioned "read the file"
+2. FileAgent used MCP's `read_file` tool to retrieve the file contents
+3. The Supervisor then **chose AnalysisAgent** and passed the file contents to it
+4. AnalysisAgent analyzed the structure, tone, and themes
+
+Notice the Supervisor made these decisions **autonomously** based on the user's request — no hardcoded workflow!
+
+**Final Response** is the Supervisor's synthesized answer, combining outputs from all agents it invoked. The example dumps the agentic scope showing the summary and analysis results stored by each agent.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: **Structure:** The content is organized into clear paragraphs...
+```
+
+### Explanation of Agentic Module Features
+
+The example demonstrates several advanced features of the agentic module. Let's have a closer look at Agentic Scope and Agent Listeners.
+
+**Agentic Scope** shows the shared memory where agents stored their results using `@Agent(outputKey="...")`. This allows:
+- Later agents to access earlier agents' outputs
+- The Supervisor to synthesize a final response
+- You to inspect what each agent produced
 
 ```java
 ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
@@ -259,18 +310,24 @@ String story = scope.readState("story");
 List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
 ```
 
-**Agent Listeners** enable monitoring and debugging:
+**Agent Listeners** enable monitoring and debugging of agent execution. The step-by-step output you see in the demo comes from an AgentListener that hooks into each agent invocation:
+- **beforeAgentInvocation** - Called when the Supervisor selects an agent, letting you see which agent was chosen and why
+- **afterAgentInvocation** - Called when an agent completes, showing its result
+- **inheritedBySubagents** - When true, the listener monitors all agents in the hierarchy
 
 ```java
 AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
     @Override
     public void beforeAgentInvocation(AgentRequest request) {
-        System.out.println("🚀 Starting: " + request.agentName());
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
     }
     
     @Override
     public void afterAgentInvocation(AgentResponse response) {
-        System.out.println("✅ Completed: " + response.agentName());
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
     }
     
     @Override
@@ -323,26 +380,3 @@ Thank you for completing this course!
 
 **Navigation:** [← Previous: Module 04 - Tools](../04-tools/README.md) | [Back to Main](../README.md)
 
----
-
-## Troubleshooting
-
-### PowerShell Maven Command Syntax
-
-**Issue**: Maven commands fail with error `Unknown lifecycle phase ".mainClass=..."`
-
-**Cause**: PowerShell interprets `=` as a variable assignment operator, breaking Maven property syntax
-
-**Solution**: Use the stop-parsing operator `--%` before the Maven command:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
-```
-
-The `--%` operator tells PowerShell to pass all remaining arguments literally to Maven without interpretation.

@@ -36,7 +36,11 @@ import java.util.List;
  */
 public class SupervisorAgentDemo {
 
-    private static final String GITHUB_TOKEN = System.getenv("GITHUB_TOKEN");
+    // Azure OpenAI configuration (same as modules 01-04)
+    private static final String AZURE_OPENAI_ENDPOINT = System.getenv("AZURE_OPENAI_ENDPOINT");
+    private static final String AZURE_OPENAI_API_KEY = System.getenv("AZURE_OPENAI_API_KEY");
+    private static final String AZURE_OPENAI_DEPLOYMENT = System.getenv("AZURE_OPENAI_DEPLOYMENT");
+    
     private static final String ALLOWED_DIRECTORY = System.getProperty("user.dir");
 
     public static void main(String[] args) throws Exception {
@@ -74,25 +78,49 @@ public class SupervisorAgentDemo {
             String filePath = ALLOWED_DIRECTORY + "/src/main/resources/file.txt";
             String request = "Read the file at " + filePath + " and analyze what it's about";
 
-            System.out.println("Request: " + request);
-            System.out.println("-".repeat(50));
+            printHeader("SUPERVISOR AGENT DEMO");
+            System.out.println("This demo shows how a Supervisor Agent orchestrates multiple specialized agents.");
+            System.out.println("The Supervisor uses an LLM to decide which agent to call based on the task.\n");
+            
+            printSection("AVAILABLE AGENTS");
+            System.out.println("  [FILE]     FileAgent     - Reads files using MCP filesystem tools");
+            System.out.println("  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes");
+            System.out.println("  [SUMMARY]  SummaryAgent  - Creates concise summaries of content\n");
+            
+            printSection("USER REQUEST");
+            System.out.println("  \"" + request + "\"\n");
+            
+            printSection("SUPERVISOR ORCHESTRATION");
+            System.out.println("  The Supervisor will now decide which agents to invoke and in what order...\n");
 
             // ResultWithAgenticScope provides access to both the result and the shared scope
             ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
             
-            System.out.println("\nResponse:\n" + result.result());
+            printSection("FINAL RESPONSE");
+            System.out.println(result.result());
 
             // Access agent outputs from the AgenticScope
             AgenticScope scope = result.agenticScope();
-            System.out.println("\n--- Scope Contents ---");
+            printSection("AGENTIC SCOPE (Shared Memory)");
+            System.out.println("  Agents store their results in a shared scope for other agents to use:");
             printScopeValue(scope, "summary", "FileAgent/SummaryAgent");
             printScopeValue(scope, "analysis", "AnalysisAgent");
+            
+            System.out.println("\n" + "=".repeat(70));
         }
     }
 
     private static void validateEnvironment() {
-        if (GITHUB_TOKEN == null || GITHUB_TOKEN.isBlank()) {
-            System.err.println("Error: GITHUB_TOKEN environment variable not set");
+        if (AZURE_OPENAI_ENDPOINT == null || AZURE_OPENAI_ENDPOINT.isBlank()) {
+            System.err.println("Error: AZURE_OPENAI_ENDPOINT environment variable not set");
+            System.exit(1);
+        }
+        if (AZURE_OPENAI_API_KEY == null || AZURE_OPENAI_API_KEY.isBlank()) {
+            System.err.println("Error: AZURE_OPENAI_API_KEY environment variable not set");
+            System.exit(1);
+        }
+        if (AZURE_OPENAI_DEPLOYMENT == null || AZURE_OPENAI_DEPLOYMENT.isBlank()) {
+            System.err.println("Error: AZURE_OPENAI_DEPLOYMENT environment variable not set");
             System.exit(1);
         }
     }
@@ -114,51 +142,95 @@ public class SupervisorAgentDemo {
 
     private static ChatModel createChatModel() {
         return OpenAiOfficialChatModel.builder()
-                .baseUrl("https://models.inference.ai.azure.com")
-                .modelName("gpt-4.1")
-                .apiKey(GITHUB_TOKEN)
+                .baseUrl(AZURE_OPENAI_ENDPOINT)
+                .apiKey(AZURE_OPENAI_API_KEY)
+                .modelName(AZURE_OPENAI_DEPLOYMENT)
+                .timeout(Duration.ofMinutes(5))
+                .maxRetries(3)
                 .build();
+    }
+
+    private static void printHeader(String title) {
+        System.out.println("\n" + "=".repeat(70));
+        System.out.println("  " + title);
+        System.out.println("=".repeat(70) + "\n");
+    }
+    
+    private static void printSection(String title) {
+        System.out.println("--- " + title + " " + "-".repeat(Math.max(0, 65 - title.length())));
     }
 
     private static void printScopeValue(AgenticScope scope, String key, String source) {
         Object value = scope.readState(key);
         if (value != null) {
             String strValue = value.toString();
-            String truncated = strValue.length() > 200 ? strValue.substring(0, 200) + "..." : strValue;
-            System.out.println(key + " (" + source + "): " + truncated);
+            String truncated = strValue.length() > 150 ? strValue.substring(0, 150) + "..." : strValue;
+            System.out.println("  * " + key + ": " + truncated);
         }
     }
 
     private static AgentListener createAgentListener() {
         return new AgentListener() {
+            private int step = 0;
+            
             @Override
             public void beforeAgentInvocation(AgentRequest request) {
-                System.out.println("\n🚀 [EVENT] Starting agent: " + request.agentName());
+                String agentName = request.agentName();
+                
+                // Skip the internal "invoke" wrapper
+                if ("invoke".equals(agentName)) {
+                    return;
+                }
+                
+                step++;
+                System.out.println();
+                System.out.println("  +-- STEP " + step + ": Supervisor chose -> " + getAgentDisplayName(agentName));
+                System.out.println("  |");
+                
+                // Show what input the agent received
                 var inputs = request.inputs();
                 if (inputs != null && !inputs.isEmpty()) {
                     inputs.forEach((k, v) -> {
                         String val = v != null ? v.toString() : "null";
-                        String truncated = val.length() > 80 ? val.substring(0, 80) + "..." : val;
-                        System.out.println("   📥 " + k + ": " + truncated);
+                        String truncated = val.length() > 60 ? val.substring(0, 60) + "..." : val;
+                        System.out.println("  |   Input: " + truncated);
                     });
                 }
             }
 
             @Override
             public void afterAgentInvocation(AgentResponse response) {
-                String res = response.output() != null ? response.output().toString() : "null";
-                String truncated = res.length() > 100 ? res.substring(0, 100) + "..." : res;
-                System.out.println("✅ [EVENT] Completed agent: " + response.agentName() + " -> " + truncated);
+                String agentName = response.agentName();
+                
+                // Skip the internal "invoke" wrapper
+                if ("invoke".equals(agentName)) {
+                    return;
+                }
+                
+                String result = response.output() != null ? response.output().toString() : "null";
+                String truncated = result.length() > 80 ? result.substring(0, 80) + "..." : result;
+                System.out.println("  |");
+                System.out.println("  |   Result: " + truncated);
+                System.out.println("  +-- [OK] " + getAgentDisplayName(agentName) + " completed");
             }
 
             @Override
             public void onAgentInvocationError(AgentInvocationError error) {
-                System.out.println("❌ [EVENT] Error in agent: " + error.agent().name() + " - " + error.error().getMessage());
+                System.out.println("  +-- [ERROR] " + error.agent().name() + ": " + error.error().getMessage());
             }
 
             @Override
             public boolean inheritedBySubagents() {
                 return true;
+            }
+            
+            private String getAgentDisplayName(String agentName) {
+                return switch (agentName) {
+                    case "readFile" -> "FileAgent (reading file via MCP)";
+                    case "analyzeContent" -> "AnalysisAgent (analyzing content)";
+                    case "summarize" -> "SummaryAgent (creating summary)";
+                    default -> agentName;
+                };
             }
         };
     }
