@@ -1,13 +1,17 @@
 package com.example.langchain4j.mcp;
 
+import java.time.Duration;
+import java.util.List;
+
 import com.example.langchain4j.mcp.agents.AnalysisAgent;
 import com.example.langchain4j.mcp.agents.FileAgent;
 import com.example.langchain4j.mcp.agents.SummaryAgent;
+
 import dev.langchain4j.agentic.AgenticServices;
+import dev.langchain4j.agentic.observability.AgentInvocationError;
 import dev.langchain4j.agentic.observability.AgentListener;
 import dev.langchain4j.agentic.observability.AgentRequest;
 import dev.langchain4j.agentic.observability.AgentResponse;
-import dev.langchain4j.agentic.observability.AgentInvocationError;
 import dev.langchain4j.agentic.scope.AgenticScope;
 import dev.langchain4j.agentic.scope.ResultWithAgenticScope;
 import dev.langchain4j.agentic.supervisor.SupervisorAgent;
@@ -21,9 +25,6 @@ import dev.langchain4j.mcp.client.transport.stdio.StdioMcpTransport;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openaiofficial.OpenAiOfficialChatModel;
 import dev.langchain4j.service.tool.ToolProvider;
-
-import java.time.Duration;
-import java.util.List;
 
 /**
  * Supervisor Agent Demo with AgenticScope.
@@ -108,6 +109,10 @@ public class SupervisorAgentDemo {
             
             System.out.println("\n" + "=".repeat(70));
         }
+        
+        // Force exit: OkHttp connection pool threads from the chat model (and possibly MCP stdio transport threads)
+        // keep non-daemon threads alive, so we terminate the JVM explicitly for this demo.
+        System.exit(0);
     }
 
     private static void validateEnvironment() {
