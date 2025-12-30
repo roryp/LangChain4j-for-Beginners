@@ -110,7 +110,8 @@ public class SupervisorAgentDemo {
             System.out.println("\n" + "=".repeat(70));
         }
         
-        // Force exit - the MCP transport's child process keeps non-daemon threads alive
+        // Force exit: OkHttp connection pool threads from the chat model (and possibly MCP stdio transport threads)
+        // keep non-daemon threads alive, so we terminate the JVM explicitly for this demo.
         System.exit(0);
     }
 
