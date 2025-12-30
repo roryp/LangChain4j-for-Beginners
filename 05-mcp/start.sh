@@ -19,7 +19,9 @@ fi
 
 # Load environment variables
 echo "Loading environment variables from $ENV_FILE"
-export $(grep -v '^#' "$ENV_FILE" | xargs)
+set -a
+source "$ENV_FILE"
+set +a
 
 # Verify required variables
 if [ -z "$AZURE_OPENAI_ENDPOINT" ] || [ -z "$AZURE_OPENAI_API_KEY" ] || [ -z "$AZURE_OPENAI_DEPLOYMENT" ]; then
