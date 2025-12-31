@@ -1,83 +1,81 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "e137234b4d3a7fcbbfc93bf17ae8a621",
-  "translation_date": "2025-12-19T10:50:10+00:00",
+  "original_hash": "1e85afe0b0ee47fc09b20442b0ee4ca5",
+  "translation_date": "2025-12-23T11:05:10+00:00",
   "source_file": "README.md",
   "language_code": "my"
 }
 -->
 <img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.my.png" alt="LangChain4j" width="800"/>
 
-### 🌐 ဘာသာစကားစုံထောက်ခံမှု
+### 🌐 ဘာသာစကား မျိုးစုံ ထောက်ပံ့မှု
 
-#### GitHub Action မှတဆင့် ထောက်ခံထားသည် (အလိုအလျောက်နှင့် အမြဲတမ်းနောက်ဆုံးပေါ်)
+#### GitHub Action မှတဆင့် ထောက်ပံ့သည် (အလိုအလျောက် ပြုလုပ်ပြီး အမြဲတမ်း နောက်ဆုံးထား)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](./README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# LangChain4j အတွက် စတင်သူများ
+# LangChain4j သင်ယူသူများအတွက်
 
-LangChain4j နှင့် Azure OpenAI GPT-5 ဖြင့် AI အပလီကေးရှင်းများ တည်ဆောက်ခြင်းအတွက် သင်တန်း၊ အခြေခံစကားပြောမှစ၍ AI ကိုယ်စားလှယ်များအထိ။
+LangChain4j နှင့် Azure OpenAI GPT-5 ကို အသုံးပြု၍ AI အက်ප්လီကေးရှင်းများ တည်ဆောက်ခြင်းအတွက် သင်တန်း - အခြေခံ chat မှနေ၍ AI agent များထိ။
 
-**LangChain4j အသစ်လား?** အဓိက စကားလုံးများနှင့် အယူအဆများအတွက် [Glossary](docs/GLOSSARY.md) ကို ကြည့်ပါ။
+**LangChain4j အကြောင်း မသိသေးဘူးလား?** အဓိက အသုံးအနှုန်းများနှင့် သဘောတရားများကို ရှင်းလင်းထားသော [Glossary](docs/GLOSSARY.md) ကို ကြည့်ပါ။
 
-## အကြောင်းအရာ စာရင်း
+## Table of Contents
 
-1. [အမြန်စတင်ခြင်း](00-quick-start/README.md) - LangChain4j ဖြင့် စတင်ပါ
-2. [နိဒါန်း](01-introduction/README.md) - LangChain4j ၏ အခြေခံအချက်များကို သင်ယူပါ
-3. [Prompt Engineering](02-prompt-engineering/README.md) - ထိရောက်သော prompt ဒီဇိုင်းကို ကျွမ်းကျင်ပါ
-4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - ဉာဏ်ရည်မြင့် သိပ္ပံပညာအခြေခံ စနစ်များ တည်ဆောက်ပါ
-5. [ကိရိယာများ](04-tools/README.md) - AI ကိုယ်စားလှယ်များနှင့် အပြင်ကိရိယာများနှင့် API များ ပေါင်းစပ်ပါ
+1. [Quick Start](00-quick-start/README.md) - LangChain4j ဖြင့် စတင်ရန်
+2. [Introduction](01-introduction/README.md) - LangChain4j အခြေခံများကို သင်ယူပါ
+3. [Prompt Engineering](02-prompt-engineering/README.md) - ထိရောက်သော prompt ဒီဇိုင်း ကျွမ်းကျင်ပါ
+4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - ထောက်ခံစာအချက်အလက် အလားအလာရှိသော စနစ်များ တည်ဆောက်ပါ
+5. [Tools](04-tools/README.md) - အပြင် tools နှင့် APIs ကို AI agent များနှင့် ပေါင်းစည်းပါ
 6. [MCP (Model Context Protocol)](05-mcp/README.md) - Model Context Protocol နှင့် အလုပ်လုပ်ပါ
 ---
 
-## သင်ယူမှု လမ်းကြောင်း
+##  Learning Path
 
-> **အမြန်စတင်ခြင်း**
+> **Quick Start**
 
 1. ဤ repository ကို သင့် GitHub အကောင့်သို့ Fork လုပ်ပါ
 2. **Code** → **Codespaces** tab → **...** → **New with options...** ကို နှိပ်ပါ
-3. ပုံမှန်တန်ဖိုးများကို အသုံးပြုပါ – သင်တန်းအတွက် ဖန်တီးထားသော Development container ကို ရွေးချယ်ပါမည်
+3. ပုံမှန် သတ်မှတ်ချက်များကို အသုံးပြုပါ – ၎င်းက ဤ သင်တန်းအတွက် ဖန်တီးထားသော Development container ကို ရွေးချယ်ပေးမည်
 4. **Create codespace** ကို နှိပ်ပါ
-5. ပတ်ဝန်းကျင် ပြင်ဆင်ပြီးစီးရန် ၅-၁၀ မိနစ် စောင့်ပါ
-6. စတင်ရန် [အမြန်စတင်ခြင်း](./00-quick-start/README.md) သို့ တိုက်ရိုက်သွားပါ!
+5. ပတ်ဝန်းကျင် သင့်ဖြစ်ရန် ၅–၁၀ မိနစ် ခန့် စောင့်ပါ
+6. စတင်ရန် တိုက်ရိုက် [Quick Start](./00-quick-start/README.md) သို့ သွားပါ!
 
-> **ဒေသတွင်းတွင် Clone လုပ်ချင်ပါသလား?**
+> **ဒေသခံတွင် Clone လုပ်ချင်ပါသလား?**
 >
-> ဤ repository တွင် ဘာသာစကား ၅၀ ကျော် အပြန်အလှန်ဘာသာပြန်ချက်များ ပါဝင်ပြီး ဒေါင်းလုပ်အရွယ်အစားကို အလွန်တိုးမြှင့်သည်။ ဘာသာပြန်ချက်များမပါဘဲ clone လုပ်ရန် sparse checkout ကို အသုံးပြုပါ:
+> ဤ repository တွင် ဘာသာစကားအထူးကဏ္ဍ ၅၀ ကျော် ပါဝင်သောကြောင့် ဒေါင်းလုပ်စွမ်းဆောင်ရည် အမျိုးအစား ကြီးစေပါသည်။ ဘာသာပြန်ချက်များမပါဘဲ clone ရယူရန် sparse checkout ကို အသုံးပြုပါ:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> သင်တန်းကို အလျင်အမြန်ပြီးစီးရန် လိုအပ်သည့် အရာအားလုံးကို ပေးပါသည်။
+> ၎င်းက သင်တန်းကို ပြီးမြောက်စေရန် လိုအပ်သည့် အရာအားလုံးကို ပိုမိုရရှိစေပြီး ဒေါင်းလုဒ် အချိန်ကို ထိရောက်စေပါသည်။
 
-[အမြန်စတင်ခြင်း](00-quick-start/README.md) မော်ဂျူးဖြင့် စတင်ပြီး တစ်ခုချင်းစီကို အဆင့်လိုက် တိုးတက်မှု ရယူပါ။ အခြေခံ ဥပမာများကို ကြိုးစားပြီး အခြေခံအယူအဆများကို နားလည်ပါက [နိဒါန်း](01-introduction/README.md) မော်ဂျူးသို့ ရောက်ရှိပြီး GPT-5 ဖြင့် နက်ရှိုင်းစွာ လေ့လာနိုင်ပါသည်။
+[Quick Start](00-quick-start/README.md) မော်ဂျူးဖြင့် စတင်ပြီး မော်ဂျူးတစ်ခုချင်းစီအတိုင်း တိုးတက်အောင် လေ့လာပြီး ကျွမ်းကျင်မှုများ တိုးတက်ပါစေ။ အခြေခံ ဥပမာများကို ကြိုးစားလေ့လာပြီး နောက်ထပ် [Introduction](01-introduction/README.md) မော်ဂျူးတွင် GPT-5 ဖြင့် နက်ရှိုင်းစွာ ရှင်းလင်းပါမည်။
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.my.png" alt="Learning Path" width="800"/>
+<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.my.png" alt="သင်ယူလမ်းကြောင်း" width="800"/>
 
-မော်ဂျူးများ ပြီးဆုံးပြီးနောက် [စမ်းသပ်မှု လမ်းညွှန်](docs/TESTING.md) ကို လေ့လာပြီး LangChain4j စမ်းသပ်မှု အယူအဆများကို လက်တွေ့ကြည့်ရှုပါ။
+မော်ဂျူးများကို ပြီးမြောက်ပြီးပါက LangChain4j စမ်းသပ်ခြင်း အယူအဆများကို ကြည့်ရန် [Testing Guide](docs/TESTING.md) ကို လေ့လာပါ။
 
-> **မှတ်ချက်။** ဤသင်တန်းတွင် GitHub Models နှင့် Azure OpenAI နှစ်ခုစလုံးကို အသုံးပြုသည်။ [အမြန်စတင်ခြင်း](00-quick-start/README.md) နှင့် [MCP](05-mcp/README.md) မော်ဂျူးများတွင် GitHub Models ကို အသုံးပြုသည် (Azure subscription မလိုအပ်ပါ)၊ မော်ဂျူး ၁-၄ တွင် Azure OpenAI GPT-5 ကို အသုံးပြုသည်။
+> **မှတ်ချက်။** ဤသင်တန်းတွင် GitHub Models နှင့် Azure OpenAI နှစ်ခုလုံးကို အသုံးပြုပါသည်။ [Quick Start](00-quick-start/README.md) နှင့် [MCP](05-mcp/README.md) မော်ဂျူးများတွင် GitHub Models များကို အသုံးပြုပါ (Azure subscription မလိုအပ်ပါ)၊ မော်ဂျူး ၁-၄ တွင် Azure OpenAI GPT-5 ကို အသုံးပြုပါသည်။
 
+## Learning with GitHub Copilot
 
-## GitHub Copilot ဖြင့် သင်ယူခြင်း
+အမြန်ဆုံး ကုဒ်ရေးစတင်ရန်၊ ဤ project ကို GitHub Codespace သို့မဟုတ် သင့် ဒေသခံ IDE တွင် ဖွင့်ပြီး ထည့်သွင်းထားသော devcontainer ကို အသုံးပြုပါ။ ဤသင်တန်းတွင် အသုံးပြုသော devcontainer သည် GitHub Copilot ကို AI စုံတွဲ ပရိုဂရမ်မင်းအဖြစ် ကြိုတင်ပြင်ဆင်ထားပါသည်။
 
-အမြန်ဆုံး ကုဒ်ရေးရန် GitHub Codespace သို့မဟုတ် သင့်ဒေသတွင်း IDE တွင် ဒီ project ကို ဖွင့်ပါ၊ သင်တန်းတွင် အသုံးပြုသော devcontainer ပါဝင်သည်။ ဒီသင်တန်းတွင် အသုံးပြုသော devcontainer တွင် AI နှင့် တွဲဖက် programming အတွက် GitHub Copilot ကို ကြိုတင်ပြင်ဆင်ထားသည်။
+ကုဒ်ဥပမာတစ်ခုချင်းစီတွင် GitHub Copilot ကို မေးမြန်းရန် အကြံပြုထားသော မေးခွန်းများ ပါဝင်သည်။ 💡/🤖 ပုံချင်းကို အောက်ပါနေရာများတွင် ရှာပါ။
 
-ကုဒ်ဥပမာတိုင်းတွင် GitHub Copilot ကို မေးမြန်းနိုင်သော အကြံပြုမေးခွန်းများ ပါဝင်သည်။ 💡/🤖 အမှတ်အသားများကို အောက်ပါနေရာများတွင် ရှာဖွေပါ -
+- **Java file headers** - ဥပမာတစ်ခုချင်းစီနှင့် သက်ဆိုင်သော မေးခွန်းများ
+- **Module READMEs** - ကုဒ်ဥပမာများပြီးနောက် တွေ့မြင်စူးစမ်းရန် အချက်ပြ မေးခွန်းများ
 
-- **Java ဖိုင်ခေါင်းစီးများ** - ဥပမာတစ်ခုချင်းစီအတွက် မေးခွန်းများ
-- **မော်ဂျူး README များ** - ကုဒ်ဥပမာများပြီးနောက် စူးစမ်းမေးမြန်းရန်
+**အသုံးပြုပုံ။** ကုဒ်ဖိုင်တစ်ခုခု ဖွင့်ပြီး Copilot ကို အဆိုပြုထားသော မေးခွန်းများ မေးပါ။ ၎င်းတွင် ကုဒ်ဘေ့စ်၏ အပြည့်အစုံ ကို သိထားပြီး ရှင်းပြ ပေးခြင်း၊ တိုးချဲ့ပေးခြင်းနှင့် အခြားရွေးချယ်စရာများ အကြံပြုပေးနိုင်သည်။
 
-**အသုံးပြုနည်း။** မည်သည့်ကုဒ်ဖိုင်မဆို ဖွင့်ပြီး Copilot ကို အကြံပြုမေးခွန်းများ မေးပါ။ Copilot သည် ကုဒ်အခြေခံကို အပြည့်အဝ နားလည်ပြီး ရှင်းပြ၊ တိုးချဲ့၊ နှင့် အခြားရွေးချယ်စရာများကို အကြံပြုနိုင်သည်။
+Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
-ပိုမိုသိရှိလိုပါသလား? [AI တွဲဖက် programming အတွက် Copilot](https://aka.ms/GitHubCopilotAI) ကို ကြည့်ပါ။
-
-
-## အပိုဆောင်း အရင်းအမြစ်များ
+## Additional Resources
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -109,33 +107,34 @@ LangChain4j နှင့် Azure OpenAI GPT-5 ဖြင့် AI အပလီ�
 [![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![စတင်လေ့လာသူများအတွက် XR ဖွံ့ဖြိုးရေး](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Copilot စီးရီးများ
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+### Copilot စီးရီး
+[![AI တွဲဖက် ပရိုဂရမ်မင်းအတွက် Copilot](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![C#/.NET အတွက် Copilot](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot စွန့်စားခန်း](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## အကူအညီရယူခြင်း
+## အကူအညီ ရယူရန်
 
-AI အက်ပ်များ တည်ဆောက်ရာတွင် အခက်အခဲရှိပါက သို့မဟုတ် မေးခွန်းများရှိပါက ဝင်ရောက်ဆွေးနွေးနိုင်ပါသည်-
+AI အက်ပ်များ ဖန်တီးရာတွင် အခက်အခဲဖြစ်ခဲ့ပါက သို့မဟုတ် မေးခွန်းများ ရှိပါက အောက်ပါနေရာတွင် ပါဝင်ပါ:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-ထုတ်ကုန်တုံ့ပြန်ချက်များ သို့မဟုတ် အမှားများရှိပါက အောက်ပါနေရာသို့ သွားရောက်ကြည့်ရှုနိုင်ပါသည်-
+ထုတ်ကုန် အကြံပြုချက်များ သို့မဟုတ် ဖန်တီးနေစဉ် အမှားများ ရှိပါက အောက်ပါနေရာသို့ သွားကြည့်ပါ:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## လိုင်စင်
 
-MIT လိုင်စင် - အသေးစိတ်အချက်အလက်များအတွက် [LICENSE](../../LICENSE) ဖိုင်ကို ကြည့်ပါ။
+MIT License - အသေးစိတ်အချက်အလက်များအတွက် [LICENSE](../../LICENSE) ဖိုင်ကို ကြည့်ပါ။
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**အကြောင်းကြားချက်**  
-ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ဖြင့် ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားသော်လည်း အလိုအလျောက် ဘာသာပြန်မှုများတွင် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ပါဝင်နိုင်ကြောင်း သတိပြုပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။ မူရင်းစာတမ်းကို မိမိဘာသာစကားဖြင့်သာ တရားဝင်အရင်းအမြစ်အဖြစ် သတ်မှတ်စဉ်းစားသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ပညာရှင်များ၏ ပရော်ဖက်ရှင်နယ် ဘာသာပြန်မှုကို အကြံပြုပါသည်။ ဤဘာသာပြန်မှုကို အသုံးပြုရာမှ ဖြစ်ပေါ်လာနိုင်သည့် နားလည်မှုမှားယွင်းမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+တာဝန်ငြင်းဆိုချက်:
+
+ဒီစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှုဖြစ်သည့် [Co-op Translator](https://github.com/Azure/co-op-translator) ဖြင့် ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်စေရန် ကြိုးစားပေမယ့်၊ အလိုအလျောက် ပြုလုပ်သော ဘာသာပြန်ချက်များတွင် အမှားများ သို့မဟုတ် မတိကျမှုများ ပါဝင်နိုင်ကြောင်း သတိပြုပါ။ မူရင်းစာတမ်းကို မူရင်းဘာသာစကားဖြင့်သာ အာဏာပိုင် အရင်းအမြစ်အဖြစ် ခံယူသင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် ပရော်ဖက်ရှင်နယ် လူသား ဘာသာပြန်ကို အသုံးပြုရန် အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုခြင်းကြောင့် ဖြစ်ပေါ်လာနိုင်သည့် နားမလည်မှုများ သို့မဟုတ် မှားဖော်ပြချက်များအတွက် ကျွန်ုပ်တို့သည် တာဝန်မရှိပါ။
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
