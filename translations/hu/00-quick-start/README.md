@@ -37,7 +37,7 @@ A LangChain4j egy Java könyvtár, amely leegyszerűsíti az AI-alapú alkalmaz�
 
 A LangChain "lánc" arra utal, hogy több komponenst összefűzünk – például egy promptot egy modellhez, majd egy elemzőhöz, vagy több AI hívást egymás után, ahol az egyik kimenete a következő bemenete. Ez a gyors kezdés az alapokra fókuszál, mielőtt bonyolultabb láncokat vizsgálnánk.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.hu.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.hu.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Komponensek összefűzése LangChain4j-ben – építőelemek kapcsolódnak, hogy erőteljes AI munkafolyamatokat hozzanak létre*
 
@@ -49,7 +49,7 @@ Három fő komponenst használunk:
 
 **MessageWindowChatMemory** – Megőrzi a beszélgetés előzményeit. Enélkül minden kérés független. Ezzel az AI emlékszik az előző üzenetekre és fenntartja a kontextust több körön át.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.hu.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.hu.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j architektúra – a fő komponensek együtt dolgoznak, hogy meghajtják az AI alkalmazásaidat*
 

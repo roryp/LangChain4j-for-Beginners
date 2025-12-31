@@ -49,7 +49,7 @@ Pikirkan RAG sebagai memberikan model sebuah perpustakaan referensi. Ketika Anda
 
 Ini mendasari jawaban model pada data nyata Anda, bukan hanya mengandalkan pengetahuan pelatihan atau membuat jawaban.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.id.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.id.png" alt="RAG Architecture" width="800"/>
 
 *Alur kerja RAG - dari pertanyaan pengguna ke pencarian semantik hingga generasi jawaban kontekstual*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.id.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.id.png" alt="Vector Embeddings Space" width="800"/>
 
 *Dokumen direpresentasikan sebagai vektor di ruang embedding - konten serupa berkumpul bersama*
 
@@ -152,7 +152,7 @@ Dari Spring Boot Dashboard, Anda dapat:
 
 Cukup klik tombol play di sebelah "rag" untuk memulai modul ini, atau mulai semua modul sekaligus.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.id.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.id.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opsi 2: Menggunakan skrip shell**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 Aplikasi menyediakan antarmuka web untuk mengunggah dokumen dan mengajukan pertanyaan.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.id.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.id.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Antarmuka aplikasi RAG - unggah dokumen dan ajukan pertanyaan*
 
@@ -240,7 +240,7 @@ Sekarang ajukan pertanyaan spesifik tentang isi dokumen. Cobalah sesuatu yang fa
 
 Perhatikan setiap jawaban menyertakan referensi sumber dengan skor kemiripan. Skor ini (0 sampai 1) menunjukkan seberapa relevan setiap potongan dengan pertanyaan Anda. Skor lebih tinggi berarti kecocokan lebih baik. Ini memungkinkan Anda memverifikasi jawaban terhadap materi sumber.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.id.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.id.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Hasil kueri menampilkan jawaban dengan referensi sumber dan skor relevansi*
 

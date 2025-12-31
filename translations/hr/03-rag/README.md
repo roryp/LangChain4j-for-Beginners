@@ -49,7 +49,7 @@ Zamislite RAG kao da modelu dajete referentnu knjižnicu. Kad postavite pitanje,
 
 Ovo utemeljuje odgovore modela u vašim stvarnim podacima umjesto da se oslanja na znanje iz treninga ili izmišlja odgovore.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.hr.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.hr.png" alt="RAG Architecture" width="800"/>
 
 *RAG tijek rada - od korisničkog upita do semantičkog pretraživanja do generiranja odgovora u kontekstu*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.hr.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.hr.png" alt="Vector Embeddings Space" width="800"/>
 
 *Dokumenti predstavljeni kao vektori u prostoru ugradnji - sličan sadržaj se grupira*
 
@@ -152,7 +152,7 @@ Iz Spring Boot nadzorne ploče možete:
 
 Jednostavno kliknite gumb za pokretanje pored "rag" da pokrenete ovaj modul, ili pokrenite sve module odjednom.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.hr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.hr.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opcija 2: Korištenje shell skripti**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Svi moduli
 
 Aplikacija pruža web sučelje za učitavanje dokumenata i postavljanje pitanja.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.hr.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.hr.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sučelje RAG aplikacije - učitajte dokumente i postavljajte pitanja*
 
@@ -240,7 +240,7 @@ Sada postavite specifična pitanja o sadržaju dokumenta. Isprobajte nešto čin
 
 Primijetite da svaki odgovor uključuje izvore s ocjenama sličnosti. Te ocjene (od 0 do 1) pokazuju koliko je svaki dio bio relevantan za vaše pitanje. Više ocjene znače bolje podudaranje. Ovo vam omogućuje da provjerite odgovor u odnosu na izvorni materijal.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.hr.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.hr.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Rezultati upita prikazuju odgovor s referencama izvora i ocjenama relevantnosti*
 

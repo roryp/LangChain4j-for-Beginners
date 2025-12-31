@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 זה בסדר לשאלות ותשובות פשוטות אבל חסר תועלת לאפליקציות אמיתיות. רובוטי שירות לקוחות צריכים לזכור מה אמרתם להם. עוזרים אישיים צריכים הקשר. כל שיחה מרובת סבבים דורשת זיכרון.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.he.png" alt="שיחות ללא מצב מול שיחות עם מצב" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.he.png" alt="שיחות ללא מצב מול שיחות עם מצב" width="800"/>
 
 *ההבדל בין שיחות ללא מצב (קריאות עצמאיות) לשיחות עם מצב (מודעות להקשר)*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 לפני שנכנסים לשיחות, חשוב להבין טוקנים - יחידות הטקסט הבסיסיות שמודלי השפה מעבדים:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.he.png" alt="הסבר טוקנים" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.he.png" alt="הסבר טוקנים" width="800"/>
 
 *דוגמה לאיך טקסט מפורק לטוקנים - "I love AI!" הופך ל-4 יחידות עיבוד נפרדות*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j מספקת מימושי זיכרון שמטפלים בזה אוטומטית. אתם בוחרים כמה הודעות לשמור והמסגרת מנהלת את חלון ההקשר.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.he.png" alt="מושג חלון זיכרון" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.he.png" alt="מושג חלון זיכרון" width="800"/>
 
 *MessageWindowChatMemory שומר על חלון מחליק של הודעות אחרונות, ומסיר אוטומטית הודעות ישנות*
 
@@ -212,7 +212,7 @@ Get-Content ..\.env  # צריך להציג את AZURE_OPENAI_ENDPOINT, API_KEY, 
 
 פשוט לחצו על כפתור ההפעלה ליד "introduction" כדי להתחיל את המודול הזה, או להפעיל את כל המודולים בבת אחת.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.he.png" alt="לוח בקרה של Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.he.png" alt="לוח בקרה של Spring Boot" width="400"/>
 
 **אפשרות 2: שימוש בסקריפטים של shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 האפליקציה מספקת ממשק ווב עם שתי מימושי שיחה זה לצד זה.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.he.png" alt="מסך הבית של האפליקציה" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.he.png" alt="מסך הבית של האפליקציה" width="800"/>
 
 *לוח בקרה המציג את שתי האפשרויות: שיחה פשוטה (ללא מצב) ושיחה שיחית (עם מצב)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 נסו את זה קודם. שאלו "שמי ג'ון" ואז מיד שאלו "מה השם שלי?" המודל לא יזכור כי כל הודעה היא עצמאית. זה מדגים את הבעיה המרכזית באינטגרציה בסיסית של מודל שפה - אין הקשר שיחה.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.he.png" alt="הדגמת שיחה ללא מצב" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.he.png" alt="הדגמת שיחה ללא מצב" width="800"/>
 
 *ה-AI לא זוכר את שמך מההודעה הקודמת*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 עכשיו נסו את אותו רצף כאן. שאלו "שמי ג'ון" ואז "מה השם שלי?" הפעם הוא זוכר. ההבדל הוא MessageWindowChatMemory - הוא שומר היסטוריית שיחה וכולל אותה עם כל בקשה. כך עובדת בינה מלאכותית שיחית בייצור.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.he.png" alt="הדגמת שיחה עם מצב" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.he.png" alt="הדגמת שיחה עם מצב" width="800"/>
 
 *ה-AI זוכר את שמך מהשיחה הקודמת*
 

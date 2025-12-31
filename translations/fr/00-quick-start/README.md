@@ -37,7 +37,7 @@ LangChain4j est une bibliothèque Java qui simplifie la création d'applications
 
 La "chaîne" dans LangChain fait référence à l'enchaînement de plusieurs composants - vous pouvez chaîner un prompt à un modèle, puis à un parseur, ou chaîner plusieurs appels IA où la sortie d'un appel alimente l'entrée suivante. Ce démarrage rapide se concentre sur les fondamentaux avant d'explorer des chaînes plus complexes.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.fr.png" alt="Concept d'enchaînement LangChain4j" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.fr.png" alt="Concept d'enchaînement LangChain4j" width="800"/>
 
 *Enchaînement des composants dans LangChain4j - les blocs de construction se connectent pour créer des flux de travail IA puissants*
 
@@ -49,7 +49,7 @@ Nous utiliserons trois composants principaux :
 
 **MessageWindowChatMemory** - Maintient l'historique de la conversation. Sans cela, chaque requête est indépendante. Avec, l'IA se souvient des messages précédents et maintient le contexte sur plusieurs tours.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.fr.png" alt="Architecture LangChain4j" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.fr.png" alt="Architecture LangChain4j" width="800"/>
 
 *Architecture LangChain4j - composants principaux travaillant ensemble pour alimenter vos applications IA*
 

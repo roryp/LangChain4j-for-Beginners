@@ -37,7 +37,7 @@ LangChain4j는 AI 기반 애플리케이션 구축을 단순화하는 자바 라
 
 LangChain의 "체인"은 여러 구성 요소를 연결하는 것을 의미합니다 - 프롬프트를 모델에 연결하고, 모델을 파서에 연결하거나, 여러 AI 호출을 연결하여 한 출력이 다음 입력으로 이어지게 할 수 있습니다. 이 빠른 시작은 더 복잡한 체인을 탐구하기 전에 기본 개념에 집중합니다.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.ko.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.ko.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *LangChain4j에서 구성 요소 체인 연결 - 빌딩 블록들이 연결되어 강력한 AI 워크플로우를 만듭니다*
 
@@ -49,7 +49,7 @@ LangChain의 "체인"은 여러 구성 요소를 연결하는 것을 의미합�
 
 **MessageWindowChatMemory** - 대화 기록을 유지합니다. 이것이 없으면 각 요청은 독립적입니다. 이것이 있으면 AI가 이전 메시지를 기억하고 여러 턴에 걸쳐 문맥을 유지합니다.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.ko.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.ko.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j 아키텍처 - 핵심 구성 요소들이 함께 작동하여 AI 애플리케이션을 구동합니다*
 

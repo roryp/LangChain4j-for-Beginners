@@ -49,7 +49,7 @@ Pensa a RAG come a fornire al modello una biblioteca di riferimento. Quando fai 
 
 Questo ancoraggio delle risposte del modello ai tuoi dati reali evita di affidarsi solo alla conoscenza di addestramento o di inventare risposte.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.it.png" alt="Architettura RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.it.png" alt="Architettura RAG" width="800"/>
 
 *Flusso di lavoro RAG - dalla query utente alla ricerca semantica fino alla generazione della risposta contestuale*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.it.png" alt="Spazio degli Embedding Vettoriali" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.it.png" alt="Spazio degli Embedding Vettoriali" width="800"/>
 
 *Documenti rappresentati come vettori nello spazio degli embedding - contenuti simili si raggruppano*
 
@@ -152,7 +152,7 @@ Dal Spring Boot Dashboard puoi:
 
 Clicca semplicemente il pulsante play accanto a "rag" per avviare questo modulo, oppure avvia tutti i moduli insieme.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.it.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.it.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opzione 2: Usare script shell**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Tutti i moduli
 
 L'applicazione fornisce un'interfaccia web per il caricamento dei documenti e per porre domande.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.it.png" alt="Interfaccia Applicazione RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.it.png" alt="Interfaccia Applicazione RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interfaccia dell'applicazione RAG - carica documenti e poni domande*
 
@@ -240,7 +240,7 @@ Ora poni domande specifiche sul contenuto del documento. Prova qualcosa di fattu
 
 Nota che ogni risposta include riferimenti alle fonti con punteggi di similarità. Questi punteggi (da 0 a 1) mostrano quanto ogni frammento fosse rilevante per la tua domanda. Punteggi più alti significano corrispondenze migliori. Questo ti permette di verificare la risposta rispetto al materiale di origine.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.it.png" alt="Risultati Query RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.it.png" alt="Risultati Query RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Risultati della query che mostrano la risposta con riferimenti alle fonti e punteggi di rilevanza*
 

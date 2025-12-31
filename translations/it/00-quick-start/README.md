@@ -37,7 +37,7 @@ LangChain4j è una libreria Java che semplifica la costruzione di applicazioni p
 
 La "catena" in LangChain si riferisce al concatenare insieme più componenti - potresti concatenare un prompt a un modello a un parser, o concatenare più chiamate AI dove un output alimenta il successivo input. Questo quick start si concentra sui fondamenti prima di esplorare catene più complesse.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.it.png" alt="Concetto di concatenamento in LangChain4j" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.it.png" alt="Concetto di concatenamento in LangChain4j" width="800"/>
 
 *Concatenamento di componenti in LangChain4j - i blocchi costitutivi si connettono per creare potenti flussi di lavoro AI*
 
@@ -49,7 +49,7 @@ Useremo tre componenti principali:
 
 **MessageWindowChatMemory** - Mantiene la cronologia della conversazione. Senza questo, ogni richiesta è indipendente. Con esso, l'AI ricorda i messaggi precedenti e mantiene il contesto su più turni.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.it.png" alt="Architettura di LangChain4j" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.it.png" alt="Architettura di LangChain4j" width="800"/>
 
 *Architettura di LangChain4j - componenti principali che lavorano insieme per alimentare le tue applicazioni AI*
 

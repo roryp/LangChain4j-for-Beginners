@@ -49,7 +49,7 @@ RAG ಅನ್ನು ಮಾದರಿಗೆ ಒಂದು ಉಲ್ಲೇಖ ಗ್
 
 ಇದು ಮಾದರಿಯ ಉತ್ತರಗಳನ್ನು ಅದರ ತರಬೇತಿ ಜ್ಞಾನ ಅಥವಾ ಕಲ್ಪನೆಗಳ ಮೇಲೆ ಅವಲಂಬಿಸದೆ ನಿಮ್ಮ ನಿಜವಾದ ಡೇಟಾದಲ್ಲಿ ನೆಲೆಸುವಂತೆ ಮಾಡುತ್ತದೆ.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.kn.png" alt="RAG ವಾಸ್ತುಶಿಲ್ಪ" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.kn.png" alt="RAG ವಾಸ್ತುಶಿಲ್ಪ" width="800"/>
 
 *RAG ಕಾರ್ಯಪ್ರವಾಹ - ಬಳಕೆದಾರ ಪ್ರಶ್ನೆಯಿಂದ ಅರ್ಥಪೂರ್ಣ ಹುಡುಕಾಟ ಮತ್ತು ಸಂದರ್ಭಾತ್ಮಕ ಉತ್ತರ ತಯಾರಿಕೆ*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.kn.png" alt="ವೆಕ್ಟರ್ ಎಂಬೆಡ್ಡಿಂಗ್‌ಗಳ ಸ್ಥಳ" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.kn.png" alt="ವೆಕ್ಟರ್ ಎಂಬೆಡ್ಡಿಂಗ್‌ಗಳ ಸ್ಥಳ" width="800"/>
 
 *ಎಂಬೆಡ್ಡಿಂಗ್ ಸ್ಥಳದಲ್ಲಿ ವೆಕ್ಟರ್‌ಗಳಾಗಿ ಪ್ರತಿನಿಧಿಸಲಾದ ದಾಖಲೆಗಳು - ಸಮಾನ ವಿಷಯ ಗುಂಪುಗಳಾಗಿ ಸೇರಿವೆ*
 
@@ -152,7 +152,7 @@ Spring Boot ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ ನೀವು:
 
 "rag" ಪಕ್ಕದ ಪ್ಲೇ ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ ಈ ಮೋಡ್ಯೂಲ್ ಪ್ರಾರಂಭಿಸಿ, ಅಥವಾ ಎಲ್ಲಾ ಮೋಡ್ಯೂಲ್‌ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಪ್ರಾರಂಭಿಸಿ.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.kn.png" alt="Spring Boot ಡ್ಯಾಶ್‌ಬೋರ್ಡ್" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.kn.png" alt="Spring Boot ಡ್ಯಾಶ್‌ಬೋರ್ಡ್" width="400"/>
 
 **ಆಯ್ಕೆ 2: ಶೆಲ್ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳು ಬಳಕೆ**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # ಎಲ್ಲಾ ಮಾಯಾಜಾಲಗಳು
 
 ಅಪ್ಲಿಕೇಶನ್ ದಾಖಲೆ ಅಪ್ಲೋಡ್ ಮತ್ತು ಪ್ರಶ್ನೆಗಳಿಗೆ ವೆಬ್ ಇಂಟರ್ಫೇಸ್ ಒದಗಿಸುತ್ತದೆ.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.kn.png" alt="RAG ಅಪ್ಲಿಕೇಶನ್ ಇಂಟರ್ಫೇಸ್" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.kn.png" alt="RAG ಅಪ್ಲಿಕೇಶನ್ ಇಂಟರ್ಫೇಸ್" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG ಅಪ್ಲಿಕೇಶನ್ ಇಂಟರ್ಫೇಸ್ - ದಾಖಲೆಗಳನ್ನು ಅಪ್ಲೋಡ್ ಮಾಡಿ ಮತ್ತು ಪ್ರಶ್ನೆ ಕೇಳಿ*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # ಎಲ್ಲಾ ಮಾಯಾಜಾಲಗಳು
 
 ಪ್ರತಿ ಉತ್ತರದಲ್ಲಿ ಮೂಲ ಉಲ್ಲೇಖಗಳು ಮತ್ತು ಸಮಾನತೆ ಅಂಕೆಗಳು ಸೇರಿವೆ. ಈ ಅಂಕೆಗಳು (0 ರಿಂದ 1) ನಿಮ್ಮ ಪ್ರಶ್ನೆಗೆ ಪ್ರತಿ ಚಂಕ್ ಎಷ್ಟು ಸಂಬಂಧಿತವೋ ತೋರಿಸುತ್ತವೆ. ಹೆಚ್ಚಿನ ಅಂಕೆಗಳು ಉತ್ತಮ ಹೊಂದಾಣಿಕೆಯನ್ನು ಸೂಚಿಸುತ್ತವೆ. ಇದರಿಂದ ನೀವು ಉತ್ತರವನ್ನು ಮೂಲ ವಸ್ತುಗಳೊಂದಿಗೆ ಪರಿಶೀಲಿಸಬಹುದು.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.kn.png" alt="RAG ಪ್ರಶ್ನೆ ಫಲಿತಾಂಶಗಳು" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.kn.png" alt="RAG ಪ್ರಶ್ನೆ ಫಲಿತಾಂಶಗಳು" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ಮೂಲ ಉಲ್ಲೇಖಗಳು ಮತ್ತು ಸಂಬಂಧಿತ ಅಂಕೆಗಳೊಂದಿಗೆ ಉತ್ತರವನ್ನು ತೋರಿಸುವ ಪ್ರಶ್ನೆ ಫಲಿತಾಂಶಗಳು*
 
