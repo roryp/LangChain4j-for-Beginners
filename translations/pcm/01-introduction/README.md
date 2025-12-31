@@ -53,7 +53,7 @@ Language models no get state. Every API call na independent. If you send "My nam
 
 This one good for simple Q&A but e no work for real applications. Customer service bots need to remember wetin you talk. Personal assistants need context. Any multi-turn conversation need memory.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.pcm.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.pcm.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *The difference between stateless (independent calls) and stateful (context-aware) conversations*
 
@@ -61,7 +61,7 @@ This one good for simple Q&A but e no work for real applications. Customer servi
 
 Before you enter conversations, e important to understand tokens - na the basic units of text wey language models dey process:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.pcm.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.pcm.png" alt="Token Explanation" width="800"/>
 
 *Example of how text dey break into tokens - "I love AI!" become 4 separate processing units*
 
@@ -73,7 +73,7 @@ Chat memory dey solve the stateless problem by maintaining conversation history.
 
 LangChain4j get memory implementations wey dey handle this automatically. You go choose how many messages to keep and the framework go manage the context window.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.pcm.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.pcm.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory dey maintain sliding window of recent messages, e dey automatically drop old ones*
 
@@ -212,7 +212,7 @@ From Spring Boot Dashboard, you fit:
 
 Just click the play button beside "introduction" to start this module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.pcm.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.pcm.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # All di modules
 
 The application get web interface with two chat implementations side-by-side.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.pcm.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.pcm.png" alt="Application Home Screen" width="800"/>
 
 *Dashboard wey show both Simple Chat (stateless) and Conversational Chat (stateful) options*
 
@@ -290,7 +290,7 @@ The application get web interface with two chat implementations side-by-side.
 
 Try this one first. Ask "My name is John" then immediately ask "What's my name?" The model no go remember because every message na independent. This one dey show the core problem with basic language model integration - no conversation context.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.pcm.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.pcm.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI no remember your name from the previous message*
 
@@ -298,7 +298,7 @@ Try this one first. Ask "My name is John" then immediately ask "What's my name?"
 
 Now try the same thing here. Ask "My name is John" then "What's my name?" This time e remember. The difference na MessageWindowChatMemory - e dey maintain conversation history and include am with every request. Na so production conversational AI dey work.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.pcm.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.pcm.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI remember your name from earlier for the conversation*
 

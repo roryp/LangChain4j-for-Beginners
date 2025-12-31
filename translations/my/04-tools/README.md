@@ -1,76 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "aa23f106e7f53270924c9dd39c629004",
-  "translation_date": "2025-12-13T19:33:59+00:00",
+  "original_hash": "13ec450c12cdd1a863baa2b778f27cd7",
+  "translation_date": "2025-12-31T06:10:03+00:00",
   "source_file": "04-tools/README.md",
   "language_code": "my"
 }
 -->
-# Module 04: ကိရိယာများပါသော AI ကိုယ်စားလှယ်များ
+# Module 04: AI Agents with Tools
 
-## အကြောင်းအရာ စာရင်း
+## Table of Contents
 
-- [သင်ယူမည့်အရာများ](../../../04-tools)
-- [လိုအပ်ချက်များ](../../../04-tools)
-- [ကိရိယာများပါသော AI ကိုယ်စားလှယ်များကို နားလည်ခြင်း](../../../04-tools)
-- [ကိရိယာခေါ်ဆိုမှု ဘယ်လို လုပ်ဆောင်သလဲ](../../../04-tools)
-  - [ကိရိယာ သတ်မှတ်ချက်များ](../../../04-tools)
-  - [ဆုံးဖြတ်ချက် ချခြင်း](../../../04-tools)
-  - [အကောင်အထည်ဖော်ခြင်း](../../../04-tools)
-  - [တုံ့ပြန်ချက် ဖန်တီးခြင်း](../../../04-tools)
-- [ကိရိယာ ချိတ်ဆက်ခြင်း](../../../04-tools)
-- [အပလီကေးရှင်းကို စတင် လည်ပတ်ခြင်း](../../../04-tools)
-- [အပလီကေးရှင်း အသုံးပြုခြင်း](../../../04-tools)
-  - [ရိုးရှင်းသော ကိရိယာ အသုံးပြုမှု စမ်းသပ်ခြင်း](../../../04-tools)
-  - [ကိရိယာ ချိတ်ဆက်မှု စမ်းသပ်ခြင်း](../../../04-tools)
-  - [စကားပြော ဆက်သွယ်မှု လည်ပတ်မှု ကြည့်ရှုခြင်း](../../../04-tools)
-  - [အကြောင်းပြချက် ကြည့်ရှုခြင်း](../../../04-tools)
-  - [မတူညီသော တောင်းဆိုမှုများ စမ်းသပ်ခြင်း](../../../04-tools)
-- [အဓိက အယူအဆများ](../../../04-tools)
-  - [ReAct ပုံစံ (အကြောင်းပြချက်နှင့် လုပ်ဆောင်ခြင်း)](../../../04-tools)
-  - [ကိရိယာ ဖော်ပြချက်များ အရေးကြီးသည်](../../../04-tools)
-  - [အစည်းအဝေး စီမံခန့်ခွဲမှု](../../../04-tools)
-  - [အမှား ကိုင်တွယ်မှု](../../../04-tools)
-- [ရရှိနိုင်သော ကိရိယာများ](../../../04-tools)
-- [ကိရိယာအခြေပြု ကိုယ်စားလှယ်များကို ဘယ်အချိန် အသုံးပြုမလဲ](../../../04-tools)
-- [နောက်တစ်ဆင့်များ](../../../04-tools)
+- [What You'll Learn](../../../04-tools)
+- [Prerequisites](../../../04-tools)
+- [Understanding AI Agents with Tools](../../../04-tools)
+- [How Tool Calling Works](../../../04-tools)
+  - [Tool Definitions](../../../04-tools)
+  - [Decision Making](../../../04-tools)
+  - [Execution](../../../04-tools)
+  - [Response Generation](../../../04-tools)
+- [Tool Chaining](../../../04-tools)
+- [Run the Application](../../../04-tools)
+- [Using the Application](../../../04-tools)
+  - [Try Simple Tool Usage](../../../04-tools)
+  - [Test Tool Chaining](../../../04-tools)
+  - [See Conversation Flow](../../../04-tools)
+  - [Observe the Reasoning](../../../04-tools)
+  - [Experiment with Different Requests](../../../04-tools)
+- [Key Concepts](../../../04-tools)
+  - [ReAct Pattern (Reasoning and Acting)](../../../04-tools)
+  - [Tool Descriptions Matter](../../../04-tools)
+  - [Session Management](../../../04-tools)
+  - [Error Handling](../../../04-tools)
+- [Available Tools](../../../04-tools)
+- [When to Use Tool-Based Agents](../../../04-tools)
+- [Next Steps](../../../04-tools)
 
-## သင်ယူမည့်အရာများ
+## What You'll Learn
 
-ယခုအထိ သင်သည် AI နှင့် စကားပြောနည်း၊ prompt များကို ထိရောက်စွာ ဖွဲ့စည်းနည်းနှင့် သင်၏စာရွက်စာတမ်းများအပေါ် အခြေခံ၍ တုံ့ပြန်ချက်များ ထုတ်ပေးနည်းကို သင်ယူပြီးဖြစ်သည်။ သို့သော် အခြေခံ ကန့်သတ်ချက်တစ်ခု ရှိနေဆဲဖြစ်သည်။ ဘာလို့ဆိုသော် ဘာသာစကား မော်ဒယ်များသည် စာသားသာ ထုတ်ပေးနိုင်ပြီး မိုးလေဝသ စစ်ဆေးခြင်း၊ တွက်ချက်ခြင်း၊ ဒေတာဘေ့စ် မေးမြန်းခြင်း သို့မဟုတ် ပြင်ပ စနစ်များနှင့် ဆက်သွယ်နိုင်ခြင်း မရှိပါ။
+ယခုအချိန်ထိ သင် AI နှင့် စကားပြောနည်းများ၊ prompt များကို ထိရောက်စွာ ဖွဲ့စည်းနည်းများနှင့် သင်၏စာအုပ်များကို အရင်းအမြစ်အဖြစ် အသုံးပြု၍ ဖြေကြားချက်များကို အခြေခံပေးနည်းများကို သင်ယူပြီးပါပြီ။ သို့သော် အခြေခံ ကန့်သတ်ချက်တစ်ခု ရှိဆဲဖြစ်သည်။ ဘာဆိုသော် ယာယီမော်ဒယ်များသည် စာသားပဲ ထုတ်ပေးနိုင်ကြသည်။ မိုးလေဝသကို စစ်ထုတ်၍မရ၊ တွက်ချက်ချက်၊ ဒေတာဘေ့စ် မေးမြန်းမှုမပြုနိုင်၊ ဒါမှမဟုတ် ပြင်ပ စနစ်များနှင့် အပြန်အလှန်ဆက်သွယ်၍ မရနိုင်ပါ။
 
-ကိရိယာများက ဒီအခြေအနေကို ပြောင်းလဲပေးသည်။ မော်ဒယ်ကို ခေါ်နိုင်သော function များကို အသုံးပြုခွင့် ပေးခြင်းဖြင့်၊ စာသား ထုတ်ပေးသူမှ လုပ်ဆောင်နိုင်သော ကိုယ်စားလှယ်တစ်ဦးအဖြစ် ပြောင်းလဲပေးသည်။ မော်ဒယ်သည် ဘယ်အချိန်ကိရိယာလိုအပ်သည်၊ ဘယ်ကိရိယာကို အသုံးပြုမည်၊ ဘယ် parameter များ ပေးပို့မည်ဆိုတာ ဆုံးဖြတ်သည်။ သင်၏ကုဒ်သည် function ကို အကောင်အထည်ဖော်ပြီး ရလဒ်ကို ပြန်ပေးသည်။ မော်ဒယ်သည် ထိုရလဒ်ကို တုံ့ပြန်ချက်ထဲ ထည့်သွင်းသည်။
+ကိရိယာများ (tools) သည် ဤကို ပြောင်းလဲစေသည်။ မော်ဒယ်အား function များကို ခေါ်ရန် ခွင့်ပြုခြင်းဖြင့်၊ ၎င်းအား စာသားထုတ်ပေးသူမှ လုပ်ဆောင်နိုင်သည့် အေးဂျင့်တစ်ခုအဖြစ် ပြောင်းလဲစေပါသည်။ မော်ဒယ်သည် ဘယ်အချိန်တွင် ကိရိယာတစ်ခုလိုအပ်သည်၊ ဘယ်ကိရိယာကို အသုံးပြုမည်၊ အားလုံး parameter များကို ၎င်းမှဆုံးဖြတ်သည်။ သင်၏ကုဒ်သည် function ကို အကောင်အထည်ဖော်ပြီး ရလဒ်ကို ပြန်ပေးသည်။ မော်ဒယ်က ထိုရလဒ်ကို ၎င်း၏ ဖြေကြားချက်ထဲသို့ ပေါင်းထည့်သည်။
 
-## လိုအပ်ချက်များ
+## Prerequisites
 
-- Module 01 ပြီးစီးထားပြီး (Azure OpenAI အရင်းအမြစ်များ တပ်ဆင်ပြီး)
-- root directory တွင် `.env` ဖိုင်ရှိပြီး Azure အတည်ပြုချက်များ ပါရှိသည် (Module 01 တွင် `azd up` ဖြင့် ဖန်တီးထားသည်)
+- Completed Module 01 (Azure OpenAI resources deployed)
+- `.env` file in root directory with Azure credentials (created by `azd up` in Module 01)
 
-> **မှတ်ချက်:** Module 01 မပြီးစီးသေးပါက အရင်ဆုံး အဲဒီမှာ ဖော်ပြထားသော တပ်ဆင်မှု လမ်းညွှန်ချက်များကို လိုက်နာပါ။
+> **Note:** If you haven't completed Module 01, follow the deployment instructions there first.
 
-## ကိရိယာများပါသော AI ကိုယ်စားလှယ်များကို နားလည်ခြင်း
+## Understanding AI Agents with Tools
 
-ကိရိယာပါသော AI ကိုယ်စားလှယ်သည် အကြောင်းပြချက်နှင့် လုပ်ဆောင်ခြင်း ပုံစံ (ReAct) ကို လိုက်နာသည်-
+> **📝 Note:** The term "agents" in this module refers to AI assistants enhanced with tool-calling capabilities. This is different from the **Agentic AI** patterns (autonomous agents with planning, memory, and multi-step reasoning) that we'll cover in [Module 05: MCP](../05-mcp/README.md).
 
-1. အသုံးပြုသူ မေးခွန်းတစ်ခု မေးသည်
-2. ကိုယ်စားလှယ်သည် သိရန်လိုအပ်သည့်အရာကို အကြောင်းပြချက် ချသည်
-3. ကိုယ်စားလှယ်သည် ဖြေဆိုရန် ကိရိယာလိုအပ်မလို ဆုံးဖြတ်သည်
-4. လိုအပ်ပါက သင့်တော်သော ကိရိယာကို မှန်ကန်သော parameter များဖြင့် ခေါ်ဆိုသည်
-5. ကိရိယာသည် အကောင်အထည်ဖော်ပြီး ဒေတာ ပြန်ပေးသည်
-6. ကိုယ်စားလှယ်သည် ရလဒ်ကို ထည့်သွင်းပြီး နောက်ဆုံးဖြေကြားချက် ပေးသည်
+An AI agent with tools follows a reasoning and acting pattern (ReAct):
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13ae5b0218d4e91befabc04e00f97539df14f93d1ad9b8516f.my.png" alt="ReAct Pattern" width="800"/>
+1. User asks a question
+2. Agent reasons about what it needs to know
+3. Agent decides if it needs a tool to answer
+4. If yes, agent calls the appropriate tool with the right parameters
+5. Tool executes and returns data
+6. Agent incorporates the result and provides the final answer
 
-*ReAct ပုံစံ - AI ကိုယ်စားလှယ်များသည် ပြဿနာများကို ဖြေရှင်းရန် အကြောင်းပြချက်နှင့် လုပ်ဆောင်ခြင်းကို အလဲအလှယ် လုပ်ဆောင်သည်*
+<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.my.png" alt="ReAct Pattern" width="800"/>
 
-ဤကိစ္စသည် အလိုအလျောက် ဖြစ်ပေါ်သည်။ သင်သည် ကိရိယာများနှင့် ၎င်းတို့၏ ဖော်ပြချက်များကို သတ်မှတ်သည်။ မော်ဒယ်သည် ဘယ်အချိန်၊ ဘယ်လို အသုံးပြုမည်ဆိုသည်ကို ဆုံးဖြတ်ခြင်းကို ကိုင်တွယ်သည်။
+*The ReAct pattern - how AI agents alternate between reasoning and acting to solve problems*
 
-## ကိရိယာခေါ်ဆိုမှု ဘယ်လို လုပ်ဆောင်သလဲ
+This happens automatically. You define the tools and their descriptions. The model handles the decision-making about when and how to use them.
 
-**ကိရိယာ သတ်မှတ်ချက်များ** - [WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
+## How Tool Calling Works
 
-သင်သည် ဖော်ပြချက်ရှင်းလင်းပြီး parameter သတ်မှတ်ချက်များပါသော function များကို သတ်မှတ်သည်။ မော်ဒယ်သည် ၎င်းတို့၏ ဖော်ပြချက်များကို system prompt တွင် မြင်ပြီး ကိရိယာတစ်ခုချင်းစီ ဘာလုပ်ဆောင်သည်ကို နားလည်သည်။
+**Tool Definitions** - [WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
+
+You define functions with clear descriptions and parameter specifications. The model sees these descriptions in its system prompt and understands what each tool does.
 
 ```java
 @Component
@@ -78,7 +80,7 @@ public class WeatherTool {
     
     @Tool("Get the current weather for a location")
     public String getCurrentWeather(@P("Location name") String location) {
-        // သင့်ရာသီဥတုရှာဖွေရေးအချက်အလက်
+        // သင့်ရဲ့ ရာသီဥတု ရှာဖွေရေး လုပ်ထုံးလုပ်နည်း
         return "Weather in " + location + ": 22°C, cloudy";
     }
 }
@@ -88,103 +90,103 @@ public interface Assistant {
     String chat(@MemoryId String sessionId, @UserMessage String message);
 }
 
-// အကူအညီပေးသူကို Spring Boot မှ အလိုအလျောက်ချိတ်ဆက်ထားသည်။
+// Assistant ကို Spring Boot က အလိုအလျောက် ချိတ်ဆက်ပေးထားသည်:
 // - ChatModel bean
-// - @Component အတန်းများမှ @Tool နည်းလမ်းများအားလုံး
-// - အစည်းအဝေးစီမံခန့်ခွဲမှုအတွက် ChatMemoryProvider
+// - @Component အတန်းများမှ @Tool ဖြင့် သတ်မှတ်ထားသော အားလုံးသော method များ
+// - Session စီမံခန့်ခွဲရေးအတွက် ChatMemoryProvider
 ```
 
-> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ဖြင့် စမ်းသပ်ပါ:** [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) ဖိုင်ကို ဖွင့်ပြီး မေးပါ-
-> - "Mock data အစား OpenWeatherMap ကဲ့သို့သော အမှန်တကယ် မိုးလေဝသ API ကို ဘယ်လို ပေါင်းစည်းမလဲ?"
-> - "AI ကို ကိရိယာကို မှန်ကန်စွာ အသုံးပြုရန် ကူညီပေးသော ကိရိယာ ဖော်ပြချက်ကောင်းတစ်ခု ဘာလဲ?"
-> - "ကိရိယာ အကောင်အထည်ဖော်မှုများတွင် API အမှားများနှင့် rate limit များကို ဘယ်လို ကိုင်တွယ်မလဲ?"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) and ask:
+> - "How would I integrate a real weather API like OpenWeatherMap instead of mock data?"
+> - "What makes a good tool description that helps the AI use it correctly?"
+> - "How do I handle API errors and rate limits in tool implementations?"
 
-**ဆုံးဖြတ်ချက် ချခြင်း**
+**Decision Making**
 
-အသုံးပြုသူက "Seattle ရဲ့ မိုးလေဝသ ဘယ်လိုလဲ?" ဟု မေးသောအခါ မော်ဒယ်သည် မိုးလေဝသ ကိရိယာလိုအပ်ကြောင်း သိရှိသည်။ location parameter ကို "Seattle" ဟု သတ်မှတ်၍ function call တစ်ခု ဖန်တီးသည်။
+When a user asks "What's the weather in Seattle?", the model recognizes it needs the weather tool. It generates a function call with the location parameter set to "Seattle".
 
-**အကောင်အထည်ဖော်ခြင်း** - [AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
+**Execution** - [AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
 
-Spring Boot သည် `@AiService` interface များကို အလိုအလျောက် tools များနှင့် ဆက်သွယ်ပေးပြီး LangChain4j သည် ကိရိယာခေါ်ဆိုမှုများကို အလိုအလျောက် လုပ်ဆောင်ပေးသည်။
+Spring Boot auto-wires the declarative `@AiService` interface with all registered tools, and LangChain4j executes tool calls automatically.
 
-> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ဖြင့် စမ်းသပ်ပါ:** [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) ဖိုင်ကို ဖွင့်ပြီး မေးပါ-
-> - "ReAct ပုံစံ ဘယ်လို လုပ်ဆောင်ပြီး AI ကိုယ်စားလှယ်များအတွက် ဘာကြောင့် ထိရောက်သလဲ?"
-> - "ကိုယ်စားလှယ်သည် ဘယ်ကိရိယာကို ဘယ်အဆင့်တွင် အသုံးပြုမည်ဆိုတာ ဘယ်လို ဆုံးဖြတ်သလဲ?"
-> - "ကိရိယာ အကောင်အထည်ဖော်မှု မအောင်မြင်ပါက ဘာဖြစ်မလဲ - အမှားများကို ဘယ်လို ခိုင်မာစွာ ကိုင်တွယ်သင့်သလဲ?"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) and ask:
+> - "How does the ReAct pattern work and why is it effective for AI agents?"
+> - "How does the agent decide which tool to use and in what order?"
+> - "What happens if a tool execution fails - how should I handle errors robustly?"
 
-**တုံ့ပြန်ချက် ဖန်တီးခြင်း**
+**Response Generation**
 
-မော်ဒယ်သည် မိုးလေဝသ ဒေတာကို လက်ခံပြီး အသုံးပြုသူအတွက် သဘာဝဘာသာစကားဖြင့် တုံ့ပြန်ချက် ဖန်တီးပေးသည်။
+The model receives the weather data and formats it into a natural language response for the user.
 
-### ဘာကြောင့် Declarative AI Services ကို အသုံးပြုသနည်း?
+### Why Use Declarative AI Services?
 
-ဤ module သည် LangChain4j ၏ Spring Boot ပေါင်းစည်းမှုဖြင့် declarative `@AiService` interface များကို အသုံးပြုသည်-
+This module uses LangChain4j's Spring Boot integration with declarative `@AiService` interfaces:
 
-- **Spring Boot auto-wiring** - ChatModel နှင့် ကိရိယာများကို အလိုအလျောက် ထည့်သွင်းပေးသည်
-- **@MemoryId ပုံစံ** - အလိုအလျောက် session-based memory စီမံခန့်ခွဲမှု
-- **တစ်ခုတည်းသော instance** - Assistant ကို တစ်ကြိမ် ဖန်တီးပြီး ထပ်မံအသုံးပြုခြင်းဖြင့် ထိရောက်မှု မြှင့်တင်သည်
-- **Type-safe execution** - Java method များကို တိုက်ရိုက် type conversion ဖြင့် ခေါ်ဆိုသည်
-- **Multi-turn orchestration** - ကိရိယာ ချိတ်ဆက်မှုကို အလိုအလျောက် ကိုင်တွယ်ပေးသည်
-- **Zero boilerplate** - လက်ဖြင့် AiServices.builder() ခေါ်ဆိုမှု သို့မဟုတ် memory HashMap မလိုအပ်ပါ
+- **Spring Boot auto-wiring** - ChatModel and tools automatically injected
+- **@MemoryId pattern** - Automatic session-based memory management
+- **Single instance** - Assistant created once and reused for better performance
+- **Type-safe execution** - Java methods called directly with type conversion
+- **Multi-turn orchestration** - Handles tool chaining automatically
+- **Zero boilerplate** - No manual AiServices.builder() calls or memory HashMap
 
-အခြားနည်းလမ်းများ (လက်ဖြင့် `AiServices.builder()`) သည် ကုဒ်ပိုများပြီး Spring Boot ပေါင်းစည်းမှု အကျိုးကျေးဇူးများ မရရှိနိုင်ပါ။
+Alternative approaches (manual `AiServices.builder()`) require more code and miss Spring Boot integration benefits.
 
-## ကိရိယာ ချိတ်ဆက်ခြင်း
+## Tool Chaining
 
-**ကိရိယာ ချိတ်ဆက်ခြင်း** - AI သည် ကိရိယာများစွာကို အဆက်မပြတ် ခေါ်ဆိုနိုင်သည်။ "Seattle ရဲ့ မိုးလေဝသ ဘယ်လိုလဲ၊ ထီးယူသင့်မလား?" ဟု မေးပြီး `getCurrentWeather` ကို ခေါ်ဆိုကာ မိုးရွာမှုအတွက် အကြောင်းပြချက် ချသည်ကို ကြည့်ရှုပါ။
+**Tool Chaining** - The AI might call multiple tools in sequence. Ask "What's the weather in Seattle and should I bring an umbrella?" and watch it chain `getCurrentWeather` with reasoning about rain gear.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b1d54117d54ba382c21c51176aaf3800084cae2e7dfc82508.my.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.my.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*အဆက်မပြတ် ကိရိယာခေါ်ဆိုမှု - တစ်ခု၏ ထွက်ရှိမှုသည် နောက်တစ်ခု၏ ဆုံးဖြတ်ချက်အတွက် အချက်အလက်ဖြစ်သည်*
+*Sequential tool calls - one tool's output feeds into the next decision*
 
-**Graceful Failures** - Mock data တွင် မပါသော မြို့တစ်မြို့၏ မိုးလေဝသကို မေးပါ။ ကိရိယာသည် အမှားစာသား ပြန်ပေးပြီး AI သည် ကူညီ၍ မရနိုင်ကြောင်း ရှင်းပြသည်။ ကိရိယာများသည် လုံခြုံစွာ မအောင်မြင်နိုင်ပါ။
+**Graceful Failures** - Ask for weather in a city that's not in the mock data. The tool returns an error message, and the AI explains it can't help. Tools fail safely.
 
-ဤကိစ္စသည် တစ်ခုတည်းသော စကားပြော အကြိမ်အတွင်း ဖြစ်ပေါ်သည်။ ကိုယ်စားလှယ်သည် ကိရိယာခေါ်ဆိုမှုများစွာကို ကိုယ်တိုင် စီမံခန့်ခွဲသည်။
+This happens in a single conversation turn. The agent orchestrates multiple tool calls autonomously.
 
-## အပလီကေးရှင်းကို စတင် လည်ပတ်ခြင်း
+## Run the Application
 
-**တပ်ဆင်မှုကို အတည်ပြုပါ:**
+**Verify deployment:**
 
-Module 01 တွင် ဖန်တီးထားသော Azure အတည်ပြုချက်များပါရှိသည့် `.env` ဖိုင်သည် root directory တွင် ရှိကြောင်း သေချာစေပါ-
+Ensure the `.env` file exists in root directory with Azure credentials (created during Module 01):
 ```bash
-cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT ကိုပြသသင့်သည်။
+cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT ကို ပြသသင့်သည်
 ```
 
-**အပလီကေးရှင်း စတင်ပါ:**
+**Start the application:**
 
-> **မှတ်ချက်:** Module 01 မှ `./start-all.sh` ဖြင့် အားလုံးကို စတင်ထားပြီးဖြစ်ပါက ဤ module သည် port 8084 တွင် လည်ပတ်နေပြီး ဖြစ်သည်။ အောက်ပါ စတင်မှု အမိန့်များကို ကျော်လွှား၍ http://localhost:8084 သို့ တိုက်ရိုက် သွားနိုင်ပါသည်။
+> **Note:** If you already started all applications using `./start-all.sh` from Module 01, this module is already running on port 8084. You can skip the start commands below and go directly to http://localhost:8084.
 
-**ရွေးချယ်မှု ၁: Spring Boot Dashboard အသုံးပြုခြင်း (VS Code အသုံးပြုသူများအတွက် အကြံပြုသည်)**
+**Option 1: Using Spring Boot Dashboard (Recommended for VS Code users)**
 
-Dev container တွင် Spring Boot Dashboard extension ပါဝင်ပြီး၊ ၎င်းသည် Spring Boot အပလီကေးရှင်းများအား စီမံခန့်ခွဲရန် မြင်သာသော အင်တာဖေ့စ် ပေးသည်။ VS Code ၏ ဘယ်ဘက် Activity Bar တွင် Spring Boot အိုင်ကွန်ကို ရှာနိုင်သည်။
+The dev container includes the Spring Boot Dashboard extension, which provides a visual interface to manage all Spring Boot applications. You can find it in the Activity Bar on the left side of VS Code (look for the Spring Boot icon).
 
-Spring Boot Dashboard မှ-
-- အလုပ်လုပ်နေသော Spring Boot အပလီကေးရှင်းများအားလုံးကို ကြည့်ရှုနိုင်သည်
-- တစ်ချက်နှိပ်၍ အပလီကေးရှင်းများ စတင်/ရပ်တန့်နိုင်သည်
-- အပလီကေးရှင်းမှတ်တမ်းများကို အချိန်နှင့်တပြေးညီ ကြည့်ရှုနိုင်သည်
-- အပလီကေးရှင်း အခြေအနေကို စောင့်ကြည့်နိုင်သည်
+From the Spring Boot Dashboard, you can:
+- See all available Spring Boot applications in the workspace
+- Start/stop applications with a single click
+- View application logs in real-time
+- Monitor application status
 
-"tools" အနီးရှိ play ခလုတ်ကို နှိပ်၍ ဤ module ကို စတင်ပါ၊ သို့မဟုတ် အားလုံးကို တပြိုင်နက် စတင်နိုင်သည်။
+Simply click the play button next to "tools" to start this module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30af495a594f5c0213fecdbdf5bd9fb543d3c5467565773974a.my.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.my.png" alt="Spring Boot Dashboard" width="400"/>
 
-**ရွေးချယ်မှု ၂: shell script များ အသုံးပြုခြင်း**
+**Option 2: Using shell scripts**
 
-Web application အားလုံး (module 01-04) ကို စတင်ရန်-
+Start all web applications (modules 01-04):
 
 **Bash:**
 ```bash
-cd ..  # မူလဖိုင်လမ်းကြောင်းမှ
+cd ..  # အမြစ် ဒိုင်ရက်ထရီမှ
 ./start-all.sh
 ```
 
 **PowerShell:**
 ```powershell
-cd ..  # မူလဖိုင်လမ်းကြောင်းမှ
+cd ..  # အမြစ် ဒိုင်ရေးထရီမှ
 .\start-all.ps1
 ```
 
-သို့မဟုတ် ဤ module သာ စတင်ရန်-
+Or start just this module:
 
 **Bash:**
 ```bash
@@ -198,9 +200,9 @@ cd 04-tools
 .\start.ps1
 ```
 
-နှစ်ခုလုံးသည် root `.env` ဖိုင်မှ ပတ်ဝန်းကျင် အပြောင်းအလဲများကို အလိုအလျောက် load လုပ်ပြီး JAR မရှိပါက တည်ဆောက်ပေးသည်။
+Both scripts automatically load environment variables from the root `.env` file and will build the JARs if they don't exist.
 
-> **မှတ်ချက်:** စတင်မပြုမီ module အားလုံးကို လက်ဖြင့် တည်ဆောက်လိုပါက-
+> **Note:** If you prefer to build all modules manually before starting:
 >
 > **Bash:**
 > ```bash
@@ -214,116 +216,116 @@ cd 04-tools
 > mvn clean package -DskipTests
 > ```
 
-http://localhost:8084 ကို browser တွင် ဖွင့်ပါ။
+Open http://localhost:8084 in your browser.
 
-**ရပ်ရန်:**
+**To stop:**
 
 **Bash:**
 ```bash
-./stop.sh  # ဒီမော်ဂျူးသာ
-# ဒါမှမဟုတ်
+./stop.sh  # ဤမော်ဂျူးသာ
+# သို့မဟုတ်
 cd .. && ./stop-all.sh  # မော်ဂျူးအားလုံး
 ```
 
 **PowerShell:**
 ```powershell
-.\stop.ps1  # ဒီမော်ဂျူးသာ
-# ဒါမှမဟုတ်
-cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
+.\stop.ps1  # ဤမော်ဂျူးသာ
+# သို့မဟုတ်
+cd ..; .\stop-all.ps1  # မော်ဂျူးများအားလုံး
 ```
 
-## အပလီကေးရှင်း အသုံးပြုခြင်း
+## Using the Application
 
-အပလီကေးရှင်းသည် မိုးလေဝသနှင့် အပူချိန် ပြောင်းလဲမှု ကိရိယာများကို အသုံးပြုနိုင်သော AI ကိုယ်စားလှယ်နှင့် ဆက်သွယ်နိုင်သော ဝက်ဘ် အင်တာဖေ့စ် ပေးသည်။
+The application provides a web interface where you can interact with an AI agent that has access to weather and temperature conversion tools.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f96216024b45b493ca1cd84935d6856416ea7a383b42f280d648c.my.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.my.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*AI ကိုယ်စားလှယ် ကိရိယာများ အင်တာဖေ့စ် - ကိရိယာများနှင့် ဆက်သွယ်ရန် အမြန် ဥပမာများနှင့် စကားပြော အင်တာဖေ့စ်*
+*The AI Agent Tools interface - quick examples and chat interface for interacting with tools*
 
-**ရိုးရှင်းသော ကိရိယာ အသုံးပြုမှု စမ်းသပ်ခြင်း**
+**Try Simple Tool Usage**
 
-ရိုးရှင်းသော တောင်းဆိုမှုဖြင့် စတင်ပါ- "100 ဒီဂရီ Fahrenheit ကို Celsius သို့ ပြောင်းပါ"။ ကိုယ်စားလှယ်သည် အပူချိန် ပြောင်းလဲမှု ကိရိယာလိုအပ်ကြောင်း သိရှိပြီး မှန်ကန်သော parameter များဖြင့် ခေါ်ဆိုကာ ရလဒ် ပြန်ပေးသည်။ သင်သည် ဘယ်ကိရိယာကို အသုံးပြုမည်၊ ဘယ်လို ခေါ်မည်ဆိုတာ မသတ်မှတ်ပေမယ့် သဘာဝကျသော ခံစားမှု ရရှိသည်ကို သတိပြုပါ။
+Start with a straightforward request: "Convert 100 degrees Fahrenheit to Celsius". The agent recognizes it needs the temperature conversion tool, calls it with the right parameters, and returns the result. Notice how natural this feels - you didn't specify which tool to use or how to call it.
 
-**ကိရိယာ ချိတ်ဆက်မှု စမ်းသပ်ခြင်း**
+**Test Tool Chaining**
 
-ယခု ပိုမိုရှုပ်ထွေးသော တောင်းဆိုမှု- "Seattle ရဲ့ မိုးလေဝသ ဘယ်လိုလဲ၊ Fahrenheit သို့ ပြောင်းပါ" ဟု မေးပါ။ ကိုယ်စားလှယ်သည် အဆင့်လိုက် လုပ်ဆောင်သည်ကို ကြည့်ပါ။ ပထမဆုံး မိုးလေဝသ (Celsius ဖြင့် ပြန်ပေးသည်) ရယူပြီး Fahrenheit သို့ ပြောင်းရန် လိုအပ်ကြောင်း သိရှိကာ ပြောင်းလဲမှု ကိရိယာကို ခေါ်ဆိုပြီး နှစ်ခုလုံးရလဒ်ကို တစ်ခုတည်းသော တုံ့ပြန်ချက်အဖြစ် ပေါင်းစပ်ပေးသည်။
+Now try something more complex: "What's the weather in Seattle and convert it to Fahrenheit?" Watch the agent work through this in steps. It first gets the weather (which returns Celsius), recognizes it needs to convert to Fahrenheit, calls the conversion tool, and combines both results into one response.
 
-**စကားပြော ဆက်သွယ်မှု လည်ပတ်မှု ကြည့်ရှုခြင်း**
+**See Conversation Flow**
 
-စကားပြော အင်တာဖေ့စ်သည် စကားပြော သမိုင်းကို ထိန်းသိမ်းထားပြီး မျိုးစုံသော အကြိမ်ကြိမ် ဆက်သွယ်မှုများ ပြုလုပ်နိုင်သည်။ ယခင် မေးခွန်းများနှင့် တုံ့ပြန်ချက်များအားလုံးကို ကြည့်ရှုနိုင်ပြီး စကားပြောကို လိုက်လံ ထိန်းသိမ်းခြင်းနှင့် ကိုယ်စားလှယ်သည် မျိုးစုံသော အပြန်အလှန်များမှ ဘယ်လို context ဖန်တီးသည်ကို နားလည်ရန် အဆင်ပြေသည်။
+The chat interface maintains conversation history, allowing you to have multi-turn interactions. You can see all previous queries and responses, making it easy to track the conversation and understand how the agent builds context over multiple exchanges.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f596acc43e227bf70f3c0d6030ad91d84df81070abf08848608.my.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.my.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*ရိုးရှင်းသော ပြောင်းလဲမှုများ၊ မိုးလေဝသ ရှာဖွေမှုများနှင့် ကိရိယာ ချိတ်ဆက်မှုများ ပါသော မျိုးစုံ စကားပြော*
+*Multi-turn conversation showing simple conversions, weather lookups, and tool chaining*
 
-**မတူညီသော တောင်းဆိုမှုများ စမ်းသပ်ခြင်း**
+**Experiment with Different Requests**
 
-မျိုးစုံ ပေါင်းစပ်မှုများကို စမ်းသပ်ပါ-
-- မိုးလေဝသ ရှာဖွေမှုများ: "Tokyo ရဲ့ မိုးလေဝသ ဘယ်လိုလဲ?"
-- အပူချိန် ပြောင်းလဲမှုများ: "25°C ကို Kelvin အဖြစ် ဘယ်လိုလဲ?"
-- ပေါင်းစပ် မေးခွန်းများ: "Paris ရဲ့ မိုးလေဝသ စစ်ဆေးပြီး 20°C ထက် အပူပိုမိုမလား ပြောပါ"
+Try various combinations:
+- Weather lookups: "What's the weather in Tokyo?"
+- Temperature conversions: "What is 25°C in Kelvin?"
+- Combined queries: "Check the weather in Paris and tell me if it's above 20°C"
 
-ကိုယ်စားလှယ်သည် သဘာဝဘာသာစကားကို ဘယ်လို အဓိပ္ပာယ်ဖွင့်ဆိုပြီး သင့်တော်သော ကိရိယာခေါ်ဆိုမှုများသို့ မျက်နှာပြင်ပြောင်းလဲသည်ကို သတိပြုပါ။
+Notice how the agent interprets natural language and maps it to appropriate tool calls.
 
-## အဓိက အယူအဆများ
+## Key Concepts
 
-**ReAct ပုံစံ (အကြောင်းပြချက်နှင့် လုပ်ဆောင်ခြင်း)**
+**ReAct Pattern (Reasoning and Acting)**
 
-ကိုယ်စားလှယ်သည် အကြောင်းပြချက် (ဘာလုပ်မည်ဆိုသည်ကို ဆုံးဖြတ်ခြင်း) နှင့် လုပ်ဆောင်ခြင်း (ကိရိယာများ အသုံးပြုခြင်း) အကြား အလဲအလှယ် လုပ်ဆောင်သည်။ ဤပုံစံသည် ညွှန်ကြားချက်များကိုသာ တုံ့ပြန်ခြင်းမဟုတ်ဘဲ ကိုယ်တိုင် ပြဿနာဖြေရှင်းနိုင်စေသည်။
+The agent alternates between reasoning (deciding what to do) and acting (using tools). This pattern enables autonomous problem-solving rather than just responding to instructions.
 
-**ကိရိယာ ဖော်ပြချက်များ အရေးကြီးသည်**
+**Tool Descriptions Matter**
 
-သင့်ကိရိယာ ဖော်ပြချက်များ၏ အရည်အသွေးသည် ကိုယ်စားလှယ်၏ အသုံးပြုမှုကို တိုက်ရိုက် သက်ရောက်သည်။ ဖော်ပြချက်ရှင်းလင်းပြီး သေချာမှုရှိသည်မှာ မော်ဒယ်အား ဘယ်အချိန်၊ ဘယ်လို ကိရိယာကို ခေါ်မည်ဆိုသည်ကို နားလည်ရန် ကူညီသည်။
+The quality of your tool descriptions directly affects how well the agent uses them. Clear, specific descriptions help the model understand when and how to call each tool.
 
-**အစည်းအဝေး စီမံခန့်ခွဲမှု**
+**Session Management**
 
-`@MemoryId` annotation သည် အလိုအလျောက် session-based memory စီမံခန့်ခွဲမှုကို ခွင့်ပြုသည်။ session ID တစ်ခုစီသည် `ChatMemory` instance ကို `ChatMemoryProvider` bean မှ စီမံခန့်ခွဲပြီး လက်ဖြင့် memory ကို ထိန်းသိမ်းရန် မလိုအပ်တော့ပါ။
+The `@MemoryId` annotation enables automatic session-based memory management. Each session ID gets its own `ChatMemory` instance managed by the `ChatMemoryProvider` bean, eliminating the need for manual memory tracking.
 
-**အမှား ကိုင်တွယ်မှု**
+**Error Handling**
 
-ကိရိယာများသည် မအောင်မြင်နိုင်သည်- API များ timeout ဖြစ်နိုင်သည်၊ parameter မမှန်ကန်နိုင်သည်၊ ပြင်ပ ဝန်ဆောင်မှုများ ပျက်ကွက်နိုင်သည်။ ထုတ်လုပ်မှု ကိုယ်စားလှယ်များသည် အမှားကိုင်တွယ်မှု လိုအပ်ပြီး မော်ဒယ်အား ပြဿနာများကို ရှင်းပြရန် သို့မဟုတ် အခြားနည်းလမ်းများ စမ်းသပ်ရန် ခွင့်ပြုရမည်။
+Tools can fail - APIs timeout, parameters might be invalid, external services go down. Production agents need error handling so the model can explain problems or try alternatives.
 
-## ရရှိနိုင်သော ကိရိယာများ
+## Available Tools
 
-**မိုးလေဝသ ကိရိယာများ** (ပြသရန် mock data အသုံးပြုသည်)-
-- တည်နေရာအလိုက် လက်ရှိ မိုးလေဝသ ရယူခြင်း
-- မိုးလေဝသ မျှော်မှန်းချက် များ ရယူခြင်း
+**Weather Tools** (mock data for demonstration):
+- Get current weather for a location
+- Get multi-day forecast
 
-**အပူချိန် ပြောင်းလဲမှု ကိရိယာများ**-
-- Celsius မှ Fahrenheit
-- Fahrenheit မှ Celsius
-- Celsius မှ Kelvin
-- Kelvin မှ Celsius
-- Fahrenheit မှ Kelvin
-- Kelvin မှ Fahrenheit
+**Temperature Conversion Tools**:
+- Celsius to Fahrenheit
+- Fahrenheit to Celsius
+- Celsius to Kelvin
+- Kelvin to Celsius
+- Fahrenheit to Kelvin
+- Kelvin to Fahrenheit
 
-ဤကိရိယာများသည် ရိုးရှင်းသော ဥပမာများဖြစ်သော်လည်း ပုံစံသည် function များအားလုံးတွင် ကျယ်ပြန့်စွာ အသုံးပြုနိုင်သည်- ဒေတာဘေ့စ် မေးမြန်းမှုများ၊ API ခေါ်ဆိုမှုများ၊ တွက်ချက်မှုများ၊ ဖိုင် လုပ်ဆောင်မှုများ သို့မဟုတ် စနစ် အမိန့်များ။
+These are simple examples, but the pattern extends to any function: database queries, API calls, calculations, file operations, or system commands.
 
-## ကိရိယာအခြေပြု ကိုယ်စားလှယ်များကို ဘယ်အချိန် အသုံးပြုမလဲ
+## When to Use Tool-Based Agents
 
-**ကိရိယာများကို အသုံးပြုသင့်သောအခါ-**
-- အချိန်နှင့်တပြေးညီ ဒေတာလိုအပ်သောအခါ (မိုးလေဝသ၊ စတော့ရှယ်ယာ စျေးနှုန်းများ၊ စတော့ရှယ်ယာ စာရင်း)
-- ရိုးရှင်းသော သင်္ချာဆိုင်ရာ တွက်ချက်မှုများ ကျော်လွန်၍ တွက်ချက်ရန်လိုအပ်သောအခါ
-- ဒေတာဘေ့စ် သို့မဟုတ် API များကို ဝင်ရောက် အသုံးပြုရန်လိုအပ်သောအခါ
-- လုပ်ဆောင်ချက်များ (အီးမေးလ် ပို့ခြင်း၊ တစ်ကတ် ဖန်တီးခြင်း၊ မှတ်တမ်းများ ပြင်ဆင်ခြင်း) ပြုလုပ်ရန်လိုအပ်သောအခါ
-- ဒေတာ အရင်းအမြစ် များစွာ ပေါင်းစပ်ရန်လိုအပ်သောအခါ
+**Use tools when:**
+- Answering requires real-time data (weather, stock prices, inventory)
+- You need to perform calculations beyond simple math
+- Accessing databases or APIs
+- Taking actions (sending emails, creating tickets, updating records)
+- Combining multiple data sources
 
-**ကိရိယာများကို မသုံးသင့်သောအခါ-**
-- မေးခွန်းများကို အထွေထွေ သိမြင်မှုမှ ဖြေဆိုနိုင်သောအခါ
-- တုံ့ပြန်ချက်သည် စကားပြောသာဖြစ်သောအခါ
-- ကိရိယာ latency ကြောင့် အသုံးပြုသူ အတွေ့အကြုံ နှေးကွေးသွားနိုင်သောအခါ
+**Don't use tools when:**
+- Questions can be answered from general knowledge
+- Response is purely conversational
+- Tool latency would make the experience too slow
 
-## နောက်တစ်ဆင့်များ
+## Next Steps
 
-**နောက် Module:** [05-mcp - Model Context Protocol (MCP)](../05-mcp/README.md)
+**Next Module:** [05-mcp - Model Context Protocol (MCP)](../05-mcp/README.md)
 
 ---
 
-**လမ်းညွှန်:** [← ယခင်: Module 03 - RAG](../03-rag/README.md) | [ပင်မသို့ ပြန်သွားရန်](../README.md) | [နောက်တစ်ခု: Module 05 - MCP →](../05-mcp/README.md)
+**Navigation:** [← Previous: Module 03 - RAG](../03-rag/README.md) | [Back to Main](../README.md) | [Next: Module 05 - MCP →](../05-mcp/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**အကြောင်းကြားချက်**  
-ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ဖြင့် ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးစားနေသော်လည်း၊ အလိုအလျောက် ဘာသာပြန်ခြင်းများတွင် အမှားများ သို့မဟုတ် မှားယွင်းချက်များ ပါဝင်နိုင်ကြောင်း သတိပြုပါရန် မေတ္တာရပ်ခံအပ်ပါသည်။ မူရင်းစာတမ်းကို မိမိဘာသာစကားဖြင့်သာ တရားဝင်အချက်အလက်အဖြစ် သတ်မှတ်သင့်ပါသည်။ အရေးကြီးသော အချက်အလက်များအတွက် လူ့ဘာသာပြန်ပညာရှင်မှ ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုရာမှ ဖြစ်ပေါ်လာနိုင်သည့် နားလည်မှုမှားယွင်းမှုများအတွက် ကျွန်ုပ်တို့သည် တာဝန်မယူပါ။
+ငြင်းဆိုချက်:
+ဤစာတမ်းကို AI ဘာသာပြန်မှု ဝန်ဆောင်မှုဖြစ်သည့် [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားခြင်းဖြစ်သည်။ ကျွန်ုပ်တို့သည် တိကျစွာ ဘာသာပြန်ရန် ကြိုးပမ်းသော်လည်း အလိုအလျောက် ဘာသာပြန်ချက်များတွင် အမှားများ သို့မဟုတ် တိကျမှုလျော့နည်းချက်များ ပါဝင်နိုင်ကြောင်း သိရှိထားရန် မေတ္တာရပ်ခံအပ်ပါသည်။ မူရင်းစာတမ်းကို မိခင်ဘာသာစကားဖြင့် ရှိသည့်ပုံစံဖြင့် သတ်မှတ်ထားသည့် တရားဝင် အချက်အလက် အရင်းအမြစ်အဖြစ် ယူဆသင့်သည်။ အရေးကြီးသော သတင်းအချက်အလက်များအတွက်တော့ လူသား ပရော်ဖက်ရှင်နယ် ဘာသာပြန်အကို ဆောင်ရွက်ပေးရန် အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုမှုမှ ဖြစ်ပေါ်နိုင်သည့် နားလည်မှုမှားယွင်းခြင်းများ သို့မဟုတ် မမှန်ကန်သော အဓိပ္ပါယ်ဖော်ပြချက်များအတွက် ကျွန်ုပ်တို့၏ တာဝန်မထားကြောင်း မှတ်သားပါ။
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

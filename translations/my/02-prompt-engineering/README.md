@@ -52,7 +52,7 @@ Prompt engineering သည် သင်လိုအပ်သော ရလဒ်�
 
 ဤ module သည် ယခင် module များမှ LangChain4j အခြေခံကို အသုံးပြု၍ prompt ဖွဲ့စည်းပုံနှင့် reasoning control အပေါ် အာရုံစိုက်သော အဆင့်မြင့် prompting ပုံစံများကို ပြသသည်။
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.my.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.my.png" alt="LangChain4j Flow" width="800"/>
 
 *LangChain4j သည် သင့် prompt များကို Azure OpenAI GPT-5 နှင့် ချိတ်ဆက်ပေးသည်*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.my.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.my.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage သည် အမြဲတမ်း context ပေးပြီး UserMessages တွင် တစ်ခုချင်း တောင်းဆိုချက်များ ပါဝင်သည်*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 ပြဿနာအားလုံးသည် တူညီသော နည်းလမ်းတစ်ခုသာ မလိုအပ်ပါ။ မေးခွန်းတချို့သည် အမြန်ဖြေရှင်းချက်လိုအပ်ပြီး တချို့သည် နက်ရှိုင်းစွာ စဉ်းစားရန်လိုအပ်သည်။ တချို့တွင် reasoning ကို မြင်သာစေရန်လိုအပ်ပြီး တချို့တွင် ရလဒ်သာ လိုအပ်သည်။ ဤ module တွင် prompting ပုံစံ ၈ မျိုး ပါဝင်ပြီး မတူညီသော အခြေအနေများအတွက် အကောင်းဆုံးဖြစ်စေရန် optimize လုပ်ထားသည်။ သင်သည် ၎င်းတို့အားလုံးကို စမ်းသပ်ပြီး မည်သည့်နည်းလမ်းသည် ဘယ်အချိန်တွင် အကောင်းဆုံးဖြစ်သည်ကို သင်ယူမည်။
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.my.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.my.png" alt="Eight Prompting Patterns" width="800"/>
 
 *prompt engineering ပုံစံ ၈ မျိုးနှင့် ၎င်းတို့၏ အသုံးပြုမှုအခြေအနေများ အနှစ်ချုပ်*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.my.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.my.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *နည်းသော စိတ်အားထက်သန်မှု (အမြန်၊ တိုတောင်း) နှင့် မြင့်မားသော စိတ်အားထက်သန်မှု (နက်ရှိုင်း၊ စူးစမ်း) reasoning နည်းလမ်းများ*
 
@@ -163,7 +163,7 @@ Chain-of-Thought prompting သည် မော်ဒယ်အား ၎င်း
 > - "ထုတ်လုပ်မှု အပလီကေးရှင်းများတွင် ကိရိယာ မိတ်ဆက်စာများကို ဖွဲ့စည်းရာတွင် အကောင်းဆုံး လေ့လာမှုများက ဘာတွေလဲ?"
 > - "UI တွင် အလယ်အလတ် တိုးတက်မှု အချက်အလက်များကို မည်သို့ ဖမ်းယူ ပြသနိုင်မလဲ?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.my.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.my.png" alt="Task Execution Pattern" width="800"/>
 
 *အစီအစဉ် → ဆောင်ရွက် → အနှစ်ချုပ် လုပ်ငန်းစဉ် အဆင့်များစွာအတွက်*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.my.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.my.png" alt="Self-Reflection Cycle" width="800"/>
 
 *အဆက်မပြတ် တိုးတက်မှု လည်ပတ်မှု - ဖန်တီး၊ အကဲဖြတ်၊ ပြဿနာ ရှာဖွေ၊ တိုးတက်စေ၊ ထပ်မံလုပ်ဆောင်*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "ဖွဲ့စည်းထားသော ထွက်ရှိမှုကို ပရိုဂရမ်ဖြင့် မည်သို့ ဖော်ထုတ်ပြီး လုပ်ဆောင်နိုင်မလဲ?"
 > - "ကွဲပြားသော ပြန်လည်သုံးသပ်မှု အစည်းအဝေးများတွင် တင်းကြပ်မှု အဆင့်များကို မည်သို့ တည်ငြိမ်စေမလဲ?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.my.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.my.png" alt="Structured Analysis Pattern" width="800"/>
 
 *severity အဆင့်များနှင့်အတူ တည်ငြိမ်သော ကုဒ်ပြန်လည်သုံးသပ်မှုအတွက် အမျိုးအစား ၄ မျိုး ဖွဲ့စည်းမှု*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.my.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.my.png" alt="Context Memory" width="800"/>
 
 *စကားပြော context သည် token ကန့်သတ်ချက်ထိ အဆက်မပြတ် စုဆောင်းသည်*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.my.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.my.png" alt="Step-by-Step Pattern" width="800"/>
 
 *ပြဿနာများကို တိကျသော အဆင့်ဆင့် အတွေးအခေါ်များသို့ ခွဲခြမ်းခြင်း*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.my.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.my.png" alt="Constrained Output Pattern" width="800"/>
 
 *သတ်မှတ်ထားသော ဖော်မတ်၊ အရှည်နှင့် ဖွဲ့စည်းမှု စည်းမျဉ်းများကို အကောင်အထည်ဖော်ခြင်း*
 
@@ -300,7 +300,7 @@ Spring Boot Dashboard မှာ -
 
 "prompt-engineering" အနားရှိ play ခလုတ်ကို နှိပ်၍ ဤ module ကို စတင်ပါ၊ သို့မဟုတ် module အားလုံးကို တပြိုင်နက် စတင်နိုင်သည်။
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.my.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.my.png" alt="Spring Boot Dashboard" width="400"/>
 
 **ရွေးချယ်မှု ၂: shell script များ အသုံးပြုခြင်း**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 ## အပလီကေးရှင်း Screenshot များ
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.my.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.my.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *prompt engineering ပုံစံ ၈ မျိုးအားလုံးနှင့် ၎င်းတို့၏ လက္ခဏာများ၊ အသုံးပြုမှုအခြေအနေများကို ပြသသည့် မူလ dashboard*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 "200 ၏ 15%" ဆိုသော ရိုးရှင်းသော မေးခွန်းကို နည်းသော စိတ်အားထက်သန်မှုဖြင့် မေးပါ။ ချက်ချင်း တိုတောင်းသော ဖြေကြားချက် ရရှိမည်။ ယခု "high-traffic API အတွက် caching strategy ကို ဒီဇိုင်းဆွဲပါ" ဆိုသော ရှုပ်ထွေးသော မေးခွန်းကို မြင့်မားသော စိတ်အားထက်သန်မှုဖြင့် မေးပါ။ မော်ဒယ်သည် နှေးကွေးလာပြီး အသေးစိတ် reasoning ကို ပေးမည်ကို ကြည့်ရှုပါ။ မော်ဒယ်တူ၊ မေးခွန်းဖွဲ့စည်းပုံတူ - သို့သော် prompt သည် စဉ်းစားမှု အဆင့်ကို သတ်မှတ်ပေးသည်။
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.my.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.my.png" alt="Low Eagerness Demo" width="800"/>
 *အနည်းဆုံး အကြောင်းပြချက်ဖြင့် အမြန်တွက်ချက်ခြင်း*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.my.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.my.png" alt="High Eagerness Demo" width="800"/>
 
 *ကျယ်ပြန့်သော caching မဟာဗျူဟာ (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 အဆင့်များစွာပါဝင်သော workflow များသည် အစပိုင်း စီမံကိန်းရေးဆွဲခြင်းနှင့် တိုးတက်မှု ဖော်ပြခြင်းတို့မှ အကျိုးရှိသည်။ မော်ဒယ်သည် မည်သည်ကိုလုပ်မည်ကို ရှင်းပြပြီး၊ အဆင့်တိုင်းကို ဖော်ပြကာ နောက်ဆုံးတွင် ရလဒ်များကို အကျဉ်းချုပ်ပြသည်။
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.my.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.my.png" alt="Task Execution Demo" width="800"/>
 
 *အဆင့်ဆင့် ဖော်ပြချက်ဖြင့် REST endpoint တည်ဆောက်ခြင်း (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 "အီးမေးလ် စစ်ဆေးမှု ဝန်ဆောင်မှု တည်ဆောက်ပါ" ဟု ကြိုးစားကြည့်ပါ။ ကုဒ်ကို ဖန်တီးပြီး ရပ်တန့်ခြင်းမပြုဘဲ၊ မော်ဒယ်သည် ဖန်တီး၊ အရည်အသွေး စံချိန်များနှင့် နှိုင်းယှဉ်၊ အားနည်းချက်များကို ရှာဖွေကာ တိုးတက်အောင် ပြုလုပ်သည်။ သင်သည် ကုဒ်သည် ထုတ်လုပ်မှု စံချိန်များနှင့် ကိုက်ညီသည်အထိ ထပ်မံလုပ်ဆောင်သည့် အခြေအနေကို မြင်ရမည်။
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.my.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.my.png" alt="Self-Reflecting Code Demo" width="800"/>
 
 *အီးမေးလ် စစ်ဆေးမှု ဝန်ဆောင်မှု ပြည့်စုံစွာ (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 ကုဒ် ပြန်လည်သုံးသပ်မှုများတွင် တိကျသော အကဲဖြတ်မှု စနစ်များ လိုအပ်သည်။ မော်ဒယ်သည် ကုဒ်ကို တိကျမှု၊ လေ့လာမှု၊ စွမ်းဆောင်ရည်၊ လုံခြုံမှု စသည့် အမျိုးအစားများဖြင့် အဆင့်အတန်းများနှင့်အတူ ခွဲခြမ်းစိတ်ဖြာသည်။
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.my.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.my.png" alt="Structured Analysis Demo" width="800"/>
 
 *ဖွဲ့စည်းထားသော ကုဒ် ပြန်လည်သုံးသပ်မှု*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 "Spring Boot ဆိုတာဘာလဲ?" ဟု မေးပြီးနောက် "ဥပမာပြပါ" ဟု ချက်ချင်း ဆက်မေးပါ။ မော်ဒယ်သည် သင်၏ ပထမမေးခွန်းကို မှတ်မိပြီး Spring Boot ဥပမာကို အထူးပြု၍ ပေးသည်။ မှတ်ဉာဏ်မရှိပါက ဒုတိယမေးခွန်းသည် မရှင်းလင်းသော မေးခွန်းဖြစ်မည်။
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.my.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.my.png" alt="Multi-Turn Chat Demo" width="800"/>
 
 *မေးခွန်းများအတွင်း အကြောင်းအရာ ထိန်းသိမ်းခြင်း*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 သင် သင်္ချာပြဿနာတစ်ခုကို ရွေးပြီး Step-by-Step Reasoning နှင့် Low Eagerness နှစ်မျိုးဖြင့် ကြိုးစားကြည့်ပါ။ Low eagerness သည် ဖြေချက်ကိုသာ မြန်ဆန်စွာ ပေးသည် - အမြန်သော်လည်း မရှင်းလင်းပါ။ Step-by-step သည် တစ်ဆင့်ချင်းစီ တွက်ချက်မှုနှင့် ဆုံးဖြတ်ချက်များကို ပြသသည်။
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.my.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.my.png" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *အဆင့်များ ဖော်ပြထားသော သင်္ချာပြဿနာ*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 သင်သည် သတ်မှတ်ထားသော ပုံစံများ သို့မဟုတ် စကားလုံးရေများ လိုအပ်ပါက ဤပုံစံသည် တိကျစွာ လိုက်နာမှုကို အတင်းအကျပ် သတ်မှတ်ပေးသည်။ တိတိကျကျ ၁၀၀ စကားလုံးပါသော အကျဉ်းချုပ်ကို bullet point ပုံစံဖြင့် ဖန်တီးကြည့်ပါ။
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.my.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.my.png" alt="Constrained Output Demo" width="800"/>
 
 *ပုံစံထိန်းချုပ်မှုဖြင့် စက်သင်ယူမှု အကျဉ်းချုပ်*
 
@@ -445,7 +445,7 @@ GPT-5 သည် သင်၏ prompt များမှတဆင့် တွက�
 
 prompt များရှိ XML tag များကို သတိပြုပါ။ ၎င်းတို့သည် အလှဆင်မှု မဟုတ်ပါ။ မော်ဒယ်များသည် ဖွဲ့စည်းထားသော ညွှန်ကြားချက်များကို အခိုင်အမာ လိုက်နာသည်။ အဆင့်များစွာပါသော လုပ်ငန်းစဉ်များ သို့မဟုတ် ရှုပ်ထွေးသော အတွေးအခေါ်များ လိုအပ်သောအခါ ဖွဲ့စည်းမှုသည် မော်ဒယ်အား ၎င်း၏ တည်နေရာနှင့် နောက်တစ်ဆင့်ကို လိုက်လံစောင့်ကြည့်ရန် ကူညီပေးသည်။
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.my.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.my.png" alt="Prompt Structure" width="800"/>
 
 *ရှင်းလင်းသော အပိုင်းများနှင့် XML ပုံစံ စီမံခန့်ခွဲမှုဖြင့် ကောင်းမွန်စွာ ဖွဲ့စည်းထားသော prompt ၏ ဖွဲ့စည်းပုံ*
 

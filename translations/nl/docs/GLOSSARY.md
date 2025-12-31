@@ -1,65 +1,65 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T20:11:39+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-31T02:20:25+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "nl"
 }
 -->
-# LangChain4j Verklarende Woordenlijst
+# LangChain4j Woordenlijst
 
 ## Inhoudsopgave
 
-- [Kernconcepten](../../../docs)
-- [LangChain4j Componenten](../../../docs)
-- [AI/ML Concepten](../../../docs)
+- [Kernbegrippen](../../../docs)
+- [LangChain4j-componenten](../../../docs)
+- [AI/ML-concepten](../../../docs)
 - [Prompt Engineering](../../../docs)
 - [RAG (Retrieval-Augmented Generation)](../../../docs)
-- [Agenten en Tools](../../../docs)
+- [Agents en Tools](../../../docs)
 - [Model Context Protocol (MCP)](../../../docs)
-- [Azure Services](../../../docs)
-- [Testen en Ontwikkeling](../../../docs)
+- [Azure-diensten](../../../docs)
+- [Testen en ontwikkeling](../../../docs)
 
-Snelle referentie voor termen en concepten die door de hele cursus worden gebruikt.
+Snelle referentie voor termen en concepten die in de hele cursus worden gebruikt.
 
-## Kernconcepten
+## Core Concepts
 
 **AI Agent** - Systeem dat AI gebruikt om autonoom te redeneren en te handelen. [Module 04](../04-tools/README.md)
 
-**Chain** - Reeks bewerkingen waarbij de output in de volgende stap wordt gebruikt.
+**Chain** - Reeks bewerkingen waarbij de uitvoer in de volgende stap wordt gevoed.
 
-**Chunking** - Documenten opdelen in kleinere stukken. Typisch: 300-500 tokens met overlap. [Module 03](../03-rag/README.md)
+**Chunking** - Het opsplitsen van documenten in kleinere stukken. Typisch: 300-500 tokens met overlap. [Module 03](../03-rag/README.md)
 
-**Context Window** - Maximale tokens die een model kan verwerken. GPT-5: 400K tokens.
+**Context Window** - Maximale aantal tokens dat een model kan verwerken. GPT-5: 400K tokens.
 
-**Embeddings** - Numerieke vectoren die de betekenis van tekst representeren. [Module 03](../03-rag/README.md)
+**Embeddings** - Numerieke vectoren die de betekenis van tekst weergeven. [Module 03](../03-rag/README.md)
 
-**Function Calling** - Model genereert gestructureerde verzoeken om externe functies aan te roepen. [Module 04](../04-tools/README.md)
+**Function Calling** - Het model genereert gestructureerde verzoeken om externe functies aan te roepen. [Module 04](../04-tools/README.md)
 
-**Hallucinatie** - Wanneer modellen onjuiste maar plausibele informatie genereren.
+**Hallucination** - Wanneer modellen onjuiste maar plausibele informatie genereren.
 
-**Prompt** - Tekstinvoer voor een taalmodel. [Module 02](../02-prompt-engineering/README.md)
+**Prompt** - Tekstinvoer aan een taalmodel. [Module 02](../02-prompt-engineering/README.md)
 
-**Semantisch Zoeken** - Zoeken op betekenis met embeddings, niet op trefwoorden. [Module 03](../03-rag/README.md)
+**Semantic Search** - Zoeken op basis van betekenis met embeddings, niet op sleutelwoorden. [Module 03](../03-rag/README.md)
 
-**Stateful vs Stateless** - Stateless: geen geheugen. Stateful: onderhoudt gespreksgeschiedenis. [Module 01](../01-introduction/README.md)
+**Stateful vs Stateless** - Stateless: geen geheugen. Stateful: onderhoudt conversatiegeschiedenis. [Module 01](../01-introduction/README.md)
 
-**Tokens** - Basis tekstunits die modellen verwerken. Beïnvloedt kosten en limieten. [Module 01](../01-introduction/README.md)
+**Tokens** - Basiseenheden van tekst die door modellen worden verwerkt. Beïnvloedt kosten en limieten. [Module 01](../01-introduction/README.md)
 
-**Tool Chaining** - Opeenvolgende uitvoering van tools waarbij output de volgende aanroep informeert. [Module 04](../04-tools/README.md)
+**Tool Chaining** - Sequentiële uitvoering van tools waarbij de uitvoer de volgende aanroep informeert. [Module 04](../04-tools/README.md)
 
-## LangChain4j Componenten
+## LangChain4j Components
 
-**AiServices** - Maakt type-veilige AI service interfaces.
+**AiServices** - Maakt type-veilige AI-serviceinterfaces aan.
 
-**OpenAiOfficialChatModel** - Geünificeerde client voor OpenAI en Azure OpenAI modellen.
+**OpenAiOfficialChatModel** - Geünificeerde client voor OpenAI- en Azure OpenAI-modellen.
 
-**OpenAiOfficialEmbeddingModel** - Maakt embeddings met OpenAI Official client (ondersteunt zowel OpenAI als Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Maakt embeddings met behulp van de OpenAI Official-client (ondersteunt zowel OpenAI als Azure OpenAI).
 
 **ChatModel** - Kerninterface voor taalmodellen.
 
-**ChatMemory** - Onderhoudt gespreksgeschiedenis.
+**ChatMemory** - Onderhoudt conversatiegeschiedenis.
 
 **ContentRetriever** - Vindt relevante documentstukken voor RAG.
 
@@ -71,125 +71,117 @@ Snelle referentie voor termen en concepten die door de hele cursus worden gebrui
 
 **MessageWindowChatMemory** - Onderhoudt een schuivend venster van recente berichten.
 
-**PromptTemplate** - Maakt herbruikbare prompts met `{{variable}}` placeholders.
+**PromptTemplate** - Maakt herbruikbare prompts met `{{variable}}`-plaatsaanduidingen.
 
-**TextSegment** - Tekststuk met metadata. Gebruikt in RAG.
+**TextSegment** - Tekstfragment met metadata. Gebruikt in RAG.
 
-**ToolExecutionRequest** - Vertegenwoordigt een tool-uitvoeringsverzoek.
+**ToolExecutionRequest** - Vertegenwoordigt een verzoek tot uitvoering van een tool.
 
-**UserMessage / AiMessage / SystemMessage** - Gesprek berichttypes.
+**UserMessage / AiMessage / SystemMessage** - Typen conversatieberichten.
 
-## AI/ML Concepten
+## AI/ML Concepts
 
 **Few-Shot Learning** - Voorzien van voorbeelden in prompts. [Module 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - AI modellen getraind op enorme tekstdata.
+**Large Language Model (LLM)** - AI-modellen getraind op enorme hoeveelheden tekstdata.
 
-**Reasoning Effort** - GPT-5 parameter die de diepte van het denken regelt. [Module 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - GPT-5-parameter die de diepgang van het denken regelt. [Module 02](../02-prompt-engineering/README.md)
 
-**Temperature** - Regelt de willekeurigheid van output. Laag=deterministisch, hoog=creatief.
+**Temperature** - Regelt de willekeurigheid van de uitvoer. Laag=deterministisch, hoog=creatief.
 
 **Vector Database** - Gespecialiseerde database voor embeddings. [Module 03](../03-rag/README.md)
 
-**Zero-Shot Learning** - Taken uitvoeren zonder voorbeelden. [Module 02](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - Uitvoeren van taken zonder voorbeelden. [Module 02](../02-prompt-engineering/README.md)
 
 ## Prompt Engineering - [Module 02](../02-prompt-engineering/README.md)
 
-**Chain-of-Thought** - Stapsgewijze redenering voor betere nauwkeurigheid.
+**Chain-of-Thought** - Stap-voor-stap redenering voor betere nauwkeurigheid.
 
-**Constrained Output** - Afdwingen van een specifiek formaat of structuur.
+**Constrained Output** - Het afdwingen van een specifiek formaat of structuur.
 
-**High Eagerness** - GPT-5 patroon voor grondige redenering.
+**High Eagerness** - GPT-5-patroon voor grondige redenering.
 
-**Low Eagerness** - GPT-5 patroon voor snelle antwoorden.
+**Low Eagerness** - GPT-5-patroon voor snelle antwoorden.
 
 **Multi-Turn Conversation** - Context behouden over meerdere uitwisselingen.
 
-**Role-Based Prompting** - Instellen van modelpersona via systeemberichten.
+**Role-Based Prompting** - Het instellen van het persona van het model via system-berichten.
 
-**Self-Reflection** - Model evalueert en verbetert zijn output.
+**Self-Reflection** - Het model evalueert en verbetert zijn uitvoer.
 
-**Structured Analysis** - Vaste evaluatiekader.
+**Structured Analysis** - Vaste evaluatiekaders.
 
 **Task Execution Pattern** - Plannen → Uitvoeren → Samenvatten.
 
 ## RAG (Retrieval-Augmented Generation) - [Module 03](../03-rag/README.md)
 
-**Document Processing Pipeline** - Laden → opdelen → embedden → opslaan.
+**Document Processing Pipeline** - Laden → chunken → embedden → opslaan.
 
 **In-Memory Embedding Store** - Niet-persistente opslag voor testen.
 
-**RAG** - Combineert ophalen met genereren om antwoorden te onderbouwen.
+**RAG** - Combineert ophalen met generatie om antwoorden te funderen.
 
-**Similarity Score** - Maat (0-1) van semantische gelijkenis.
+**Similarity Score** - Maat (0-1) voor semantische gelijkenis.
 
 **Source Reference** - Metadata over opgehaalde inhoud.
 
-## Agenten en Tools - [Module 04](../04-tools/README.md)
+## Agents and Tools - [Module 04](../04-tools/README.md)
 
-**@Tool Annotatie** - Markeert Java-methoden als AI-aanroepbare tools.
+**@Tool Annotation** - Markeert Java-methoden als door AI aanroepbare tools.
 
-**ReAct Patroon** - Redeneren → Handelen → Observeren → Herhalen.
+**ReAct Pattern** - Redeneer → Handel → Observeer → Herhaal.
 
 **Session Management** - Gescheiden contexten voor verschillende gebruikers.
 
 **Tool** - Functie die een AI-agent kan aanroepen.
 
-**Tool Beschrijving** - Documentatie van tooldoel en parameters.
+**Tool Description** - Documentatie van het doel van een tool en de parameters.
 
 ## Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)
 
-**Docker Transport** - MCP server in Docker container.
-
 **MCP** - Standaard voor het verbinden van AI-apps met externe tools.
 
-**MCP Client** - Applicatie die verbinding maakt met MCP servers.
+**MCP Client** - Applicatie die verbindt met MCP-servers.
 
-**MCP Server** - Dienst die tools via MCP aanbiedt.
-
-**Server-Sent Events (SSE)** - Server-naar-client streaming via HTTP.
+**MCP Server** - Service die tools via MCP blootstelt.
 
 **Stdio Transport** - Server als subprocess via stdin/stdout.
 
-**Streamable HTTP Transport** - HTTP met SSE voor realtime communicatie.
-
-**Tool Discovery** - Client vraagt server om beschikbare tools.
+**Tool Discovery** - Client vraagt de server welke tools beschikbaar zijn.
 
 ## Azure Services - [Module 01](../01-introduction/README.md)
 
 **Azure AI Search** - Cloud-zoekdienst met vectormogelijkheden. [Module 03](../03-rag/README.md)
 
-**Azure Developer CLI (azd)** - Zet Azure resources uit.
+**Azure Developer CLI (azd)** - Deployt Azure-resources.
 
-**Azure OpenAI** - Microsofts enterprise AI-dienst.
+**Azure OpenAI** - Microsoft's enterprise AI-dienst.
 
-**Bicep** - Azure infrastructuur-als-code taal. [Infrastructure Guide](../01-introduction/infra/README.md)
+**Bicep** - Azure infrastructure-as-code-taal. [Infrastructure Guide](../01-introduction/infra/README.md)
 
-**Deployment Name** - Naam voor modeluitrol in Azure.
+**Deployment Name** - Naam voor modeldeployment in Azure.
 
-**GPT-5** - Laatste OpenAI model met redeneersturing. [Module 02](../02-prompt-engineering/README.md)
+**GPT-5** - Nieuwste OpenAI-model met regeling voor redenering. [Module 02](../02-prompt-engineering/README.md)
 
-## Testen en Ontwikkeling - [Testing Guide](TESTING.md)
+## Testing and Development - [Testing Guide](TESTING.md)
 
-**Dev Container** - Gecontaineriseerde ontwikkelomgeving. [Configuratie](../../../.devcontainer/devcontainer.json)
+**Dev Container** - Gepersonaliseerde ontwikkelomgeving in een container. [Configuration](../../../.devcontainer/devcontainer.json)
 
-**GitHub Models** - Gratis AI model speelveld. [Module 00](../00-quick-start/README.md)
+**GitHub Models** - Gratis AI-model speelomgeving. [Module 00](../00-quick-start/README.md)
 
 **In-Memory Testing** - Testen met in-memory opslag.
 
 **Integration Testing** - Testen met echte infrastructuur.
 
-**Maven** - Java build automatiseringstool.
+**Maven** - Java build-automatiseringstool.
 
-**Mockito** - Java mocking framework.
+**Mockito** - Java mocking-framework.
 
 **Spring Boot** - Java applicatieframework. [Module 01](../01-introduction/README.md)
-
-**Testcontainers** - Docker containers in tests.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+Disclaimer:
+Dit document is vertaald met behulp van de AI-vertalingsdienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, kunnen geautomatiseerde vertalingen fouten of onnauwkeurigheden bevatten. Het oorspronkelijke document in de oorspronkelijke taal moet als de gezaghebbende bron worden beschouwd. Voor cruciale informatie wordt een professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

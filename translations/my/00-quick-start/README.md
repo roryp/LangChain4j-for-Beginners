@@ -37,7 +37,7 @@ LangChain4j က Java library တစ်ခုဖြစ်ပြီး AI ပါ�
 
 LangChain4j ရဲ့ "chain" ဆိုတာက component အများကြားကို ဆက်သွယ်ခြင်းကို ဆိုလိုပါတယ် - prompt တစ်ခုကို model တစ်ခုဆီ၊ parser တစ်ခုဆီ ဆက်သွယ်ခြင်း၊ ဒါမှမဟုတ် AI call အများကြား output တစ်ခုက input နောက်တစ်ခုကို ပေးပို့ခြင်း စတဲ့ အရာတွေပါ။ ဒီ quick start မှာတော့ အခြေခံအချက်တွေကို အဓိကထားပြီး ပိုမိုရှုပ်ထွေးတဲ့ chain တွေကို နောက်ပိုင်းမှာ လေ့လာမှာ ဖြစ်ပါတယ်။
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.my.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.my.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *LangChain4j မှာ component တွေကို ဆက်သွယ်ခြင်း - အင်အားကြီးတဲ့ AI workflow တွေ ဖန်တီးရန် အခြေခံအဆောက်အအုံများ*
 
@@ -49,7 +49,7 @@ LangChain4j ရဲ့ "chain" ဆိုတာက component အများကြ
 
 **MessageWindowChatMemory** - စကားပြောသမိုင်းကို ထိန်းသိမ်းပေးပါတယ်။ ဒီ memory မရှိရင် တစ်ခုချင်း request တွေဟာ လွတ်လပ်ပါတယ်။ ရှိရင်တော့ AI က ယခင် message တွေကို မှတ်မိပြီး context ကို ထိန်းသိမ်းထားနိုင်ပါတယ်။
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.my.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.my.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j architecture - core component တွေ ပူးပေါင်းပြီး သင့် AI application တွေကို အားပေးနေသည်*
 

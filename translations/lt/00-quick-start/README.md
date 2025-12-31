@@ -37,7 +37,7 @@ LangChain4j yra Java biblioteka, kuri supaprastina DI pagrįstų programų kūri
 
 „Chain“ LangChain pavadinime reiškia kelių komponentų sujungimą – galite sujungti užklausą su modeliu ir su parseriu, arba sujungti kelis DI kvietimus, kai vieno išvestis tampa kito įvestimi. Šis greitas pradėjimas sutelktas į pagrindus prieš pereinant prie sudėtingesnių grandinių.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.lt.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.lt.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Komponentų sujungimas LangChain4j – statybiniai blokai jungiasi, kad sukurtų galingus DI darbo srautus*
 
@@ -49,7 +49,7 @@ Naudosime tris pagrindinius komponentus:
 
 **MessageWindowChatMemory** – palaiko pokalbio istoriją. Be to kiekvienas užklausimas yra nepriklausomas. Su juo DI prisimena ankstesnius pranešimus ir palaiko kontekstą per kelis pokalbio raundus.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.lt.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.lt.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j architektūra – pagrindiniai komponentai dirba kartu, kad maitintų jūsų DI programas*
 
