@@ -360,6 +360,8 @@ Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several
 
 ## Key Concepts
 
+Now that you've explored MCP and the agentic module in action, let's summarize when to use each approach.
+
 **MCP** is ideal when you want to leverage existing tool ecosystems, build tools that multiple applications can share, integrate third-party services with standard protocols, or swap tool implementations without changing code.
 
 **The Agentic Module** works best when you want declarative agent definitions with `@Agent` annotations, need workflow orchestration (sequential, loop, parallel), prefer interface-based agent design over imperative code, or are combining multiple agents that share outputs via `outputKey`.
