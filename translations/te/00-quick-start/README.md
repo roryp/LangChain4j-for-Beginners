@@ -37,7 +37,7 @@ LangChain4j అనేది AI-శక్తివంతమైన అప్లి
 
 LangChain లో "చైన్" అనగా అనేక భాగాలను ఒకదానితో ఒకటి చేర్చడం - మీరు ఒక ప్రాంప్ట్ ను మోడల్ కు, ఆ మోడల్ ను పార్సర్ కు చేర్చవచ్చు, లేదా అనేక AI కాల్స్ ను ఒకదాని అవుట్పుట్ ను తదుపరి ఇన్పుట్ గా ఉపయోగించి చేర్చవచ్చు. ఈ త్వరితప్రారంభం ప్రాథమిక అంశాలపై దృష్టి సారిస్తుంది, మరింత క్లిష్టమైన చైన్లను అన్వేషించే ముందు.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.te.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.te.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *LangChain4j లో భాగాలను చేర్చడం - శక్తివంతమైన AI వర్క్‌ఫ్లోలను సృష్టించడానికి బ్లాక్స్ కలిసిపోవడం*
 
@@ -49,7 +49,7 @@ LangChain లో "చైన్" అనగా అనేక భాగాలను 
 
 **MessageWindowChatMemory** - సంభాషణ చరిత్రను నిర్వహిస్తుంది. దీని లేకుండా ప్రతి అభ్యర్థన స్వతంత్రంగా ఉంటుంది. దీని తో AI గత సందేశాలను గుర్తుంచుకుంటుంది మరియు అనేక టర్న్లలో సందర్భాన్ని నిర్వహిస్తుంది.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.te.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.te.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j నిర్మాణం - మీ AI అప్లికేషన్లకు శక్తిని అందించడానికి ప్రధాన భాగాలు కలిసి పనిచేస్తున్నాయి*
 

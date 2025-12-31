@@ -37,7 +37,7 @@ LangChain4j je Java knjižnica, ki poenostavi gradnjo aplikacij, ki jih poganja 
 
 "Veriga" v LangChain se nanaša na povezovanje več komponent - lahko povežete poziv z modelom in z razčlenjevalnikom ali povežete več AI klicev skupaj, kjer en izhod napaja naslednji vhod. Ta hiter začetek se osredotoča na osnove, preden raziskuje bolj zapletene verige.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.sl.png" alt="Koncept povezovanja LangChain4j" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.sl.png" alt="Koncept povezovanja LangChain4j" width="800"/>
 
 *Povezovanje komponent v LangChain4j - gradniki se povezujejo za ustvarjanje zmogljivih AI potekov dela*
 
@@ -49,7 +49,7 @@ Uporabili bomo tri osnovne komponente:
 
 **MessageWindowChatMemory** - Ohranja zgodovino pogovora. Brez tega je vsak zahtevek neodvisen. Z njim si AI zapomni prejšnja sporočila in ohranja kontekst skozi več krogov.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.sl.png" alt="Arhitektura LangChain4j" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.sl.png" alt="Arhitektura LangChain4j" width="800"/>
 
 *Arhitektura LangChain4j - osnovne komponente, ki skupaj poganjajo vaše AI aplikacije*
 

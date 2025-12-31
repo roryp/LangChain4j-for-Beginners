@@ -37,7 +37,7 @@ LangChain4j ni maktaba ya Java inayorahisisha ujenzi wa programu zinazotumia AI.
 
 "Neno 'chain' katika LangChain linahusu kuunganisha vipengele vingi pamoja - unaweza kuunganisha maagizo kwa mfano, kisha kwa mchambuzi, au kuunganisha simu nyingi za AI ambapo matokeo ya moja huingia kama ingizo la nyingine. Kuanzia haraka hii inalenga misingi kabla ya kuchunguza minyororo tata zaidi.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.sw.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.sw.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Kuunganisha vipengele katika LangChain4j - vipande vya msingi vinavyoungana kuunda mtiririko wa kazi wenye nguvu wa AI*
 
@@ -49,7 +49,7 @@ Tutatumia vipengele vitatu vikuu:
 
 **MessageWindowChatMemory** - Huhifadhi historia ya mazungumzo. Bila hii, kila ombi ni huru. Ukiwa nayo, AI hukumbuka ujumbe wa awali na huendeleza muktadha katika mizunguko mingi.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.sw.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.sw.png" alt="LangChain4j Architecture" width="800"/>
 
 *Miundo ya LangChain4j - vipengele vikuu vinavyofanya kazi pamoja kuendesha programu zako za AI*
 

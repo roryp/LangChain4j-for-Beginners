@@ -49,7 +49,7 @@ RAG ஐ மாதிரிக்கு ஒரு குறிப்பு நூ
 
 இது மாதிரியின் பதில்களை அதன் பயிற்சி அறிவுக்கு பதிலாக உங்கள் உண்மையான தரவின் அடிப்படையில் நிலைநிறுத்துகிறது அல்லது பதில்களை உருவாக்குவதைக் குறைக்கிறது.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.ta.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ta.png" alt="RAG Architecture" width="800"/>
 
 *RAG வேலைநடை - பயனர் கேள்வியிலிருந்து அர்த்தவியல் தேடல் மற்றும் சூழல் சார்ந்த பதில் உருவாக்கம் வரை*
 
@@ -99,7 +99,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.ta.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ta.png" alt="Vector Embeddings Space" width="800"/>
 
 *எம்பெட்டிங் இடத்தில் வெக்டர்களாக பிரதிநிதித்துவம் செய்யப்பட்ட ஆவணங்கள் - ஒத்த உள்ளடக்கம் ஒன்றாக கூடி இருக்கும்*
 
@@ -153,7 +153,7 @@ Spring Boot Dashboard இல் இருந்து, நீங்கள்:
 
 "rag" பக்கத்தில் உள்ள பிளே பொத்தானை கிளிக் செய்து இந்த மாட்யூலை துவக்கலாம், அல்லது அனைத்து மாட்யூல்களையும் ஒரே நேரத்தில் துவக்கலாம்.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.ta.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ta.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # அனைத்து தொகுதிகளும்
 
 இந்த செயலி ஆவணங்களை பதிவேற்றவும் கேள்விகள் கேட்கவும் ஒரு வலை இடைமுகத்தை வழங்குகிறது.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.ta.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ta.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG செயலி இடைமுகம் - ஆவணங்களை பதிவேற்றவும் கேள்விகள் கேட்கவும்*
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # அனைத்து தொகுதிகளும்
 
 ஒவ்வொரு பதிலும் தொடர்புடைய மூல குறிப்புகளுடன் similarity மதிப்பெண்களையும் கொண்டிருக்கும். இந்த மதிப்பெண்கள் (0 முதல் 1 வரை) உங்கள் கேள்விக்கு ஒவ்வொரு துண்டும் எவ்வளவு தொடர்புடையது என்பதை காட்டும். அதிக மதிப்பெண்கள் சிறந்த பொருத்தத்தை குறிக்கும். இது பதிலை மூலப் பொருளுடன் ஒப்பிட உதவும்.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.ta.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ta.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *கேள்வி முடிவுகள் - பதில், மூல குறிப்புகள் மற்றும் தொடர்பு மதிப்பெண்களுடன்*
 

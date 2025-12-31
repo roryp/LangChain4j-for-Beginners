@@ -1,104 +1,88 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c25ec1f10ef156c53e190cdf8b0711ab",
-  "translation_date": "2025-12-13T18:04:59+00:00",
+  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
+  "translation_date": "2025-12-31T04:47:55+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "ro"
 }
 -->
-# Modulul 05: Protocolul Contextului Modelului (MCP)
+# Modulul 05: Model Context Protocol (MCP)
 
 ## Cuprins
 
-- [Ce Vei Învăța](../../../05-mcp)
-- [Înțelegerea MCP](../../../05-mcp)
-- [Cum Funcționează MCP](../../../05-mcp)
-  - [Arhitectura Server-Client](../../../05-mcp)
-  - [Descoperirea Uneltelor](../../../05-mcp)
-  - [Mecanisme de Transport](../../../05-mcp)
-- [Prerechizite](../../../05-mcp)
-- [Ce Acoperă Acest Modul](../../../05-mcp)
-- [Pornire Rapidă](../../../05-mcp)
-  - [Exemplul 1: Calculator la Distanță (HTTP Streamabil)](../../../05-mcp)
-  - [Exemplul 2: Operațiuni pe Fișiere (Stdio)](../../../05-mcp)
-  - [Exemplul 3: Analiză Git (Docker)](../../../05-mcp)
-- [Concepte Cheie](../../../05-mcp)
-  - [Selecția Transportului](../../../05-mcp)
-  - [Descoperirea Uneltelor](../../../05-mcp)
-  - [Gestionarea Sesiunii](../../../05-mcp)
-  - [Considerații Cross-Platform](../../../05-mcp)
-- [Când să Folosești MCP](../../../05-mcp)
-- [Ecosistemul MCP](../../../05-mcp)
+- [Ce vei învăța](../../../05-mcp)
+- [Ce este MCP?](../../../05-mcp)
+- [Cum funcționează MCP](../../../05-mcp)
+- [Modulul agențial](../../../05-mcp)
+- [Rularea exemplelor](../../../05-mcp)
+  - [Precondiții](../../../05-mcp)
+- [Pornire rapidă](../../../05-mcp)
+  - [Operațiuni pe fișiere (Stdio)](../../../05-mcp)
+  - [Agentul Supervisor](../../../05-mcp)
+    - [Înțelegerea rezultatului](../../../05-mcp)
+    - [Explicație a caracteristicilor modulului agențial](../../../05-mcp)
+- [Concepte cheie](../../../05-mcp)
 - [Felicitări!](../../../05-mcp)
-  - [Ce Urmează?](../../../05-mcp)
-- [Depanare](../../../05-mcp)
+  - [Ce urmează?](../../../05-mcp)
 
-## Ce Vei Învăța
+## Ce vei învăța
 
-Ai construit AI conversațional, ai stăpânit prompturile, ai fundamentat răspunsurile în documente și ai creat agenți cu unelte. Dar toate acele unelte au fost construite personalizat pentru aplicația ta specifică. Ce-ar fi dacă ai putea oferi AI-ului tău acces la un ecosistem standardizat de unelte pe care oricine le poate crea și partaja?
+Ai construit AI conversațional, ai stăpânit prompturile, ai fundamentat răspunsurile în documente și ai creat agenți cu instrumente. Dar toate acele instrumente au fost construite personalizat pentru aplicația ta specifică. Ce ai face dacă ai putea oferi AI-ului tău acces la un ecosistem standardizat de instrumente pe care oricine le poate crea și partaja? În acest modul vei învăța exact asta cu Model Context Protocol (MCP) și modulul agentic al LangChain4j. Mai întâi prezentăm un cititor de fișiere MCP simplu și apoi arătăm cum se integrează ușor în fluxuri de lucru agentice avansate folosind patternul Supervisor Agent.
 
-Protocolul Contextului Modelului (MCP) oferă exact asta - o modalitate standard de a descoperi și folosi unelte externe în aplicațiile AI. În loc să scrii integrări personalizate pentru fiecare sursă de date sau serviciu, te conectezi la servere MCP care expun capabilitățile lor într-un format consecvent. Agentul tău AI poate apoi să descopere și să folosească aceste unelte automat.
+## Ce este MCP?
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5448d2fa21a61218777ceb8010ea0390dd43924b26df35f61.ro.png" alt="Comparație MCP" width="800"/>
+Model Context Protocol (MCP) oferă exact asta - un mod standard pentru aplicațiile AI de a descoperi și utiliza instrumente externe. În loc să scrii integrări personalizate pentru fiecare sursă de date sau serviciu, te conectezi la servere MCP care își expun capabilitățile într-un format consecvent. Agentul tău AI poate apoi descoperi și folosi automat aceste instrumente.
 
-*Înainte de MCP: Integrări complexe punct-la-punct. După MCP: Un protocol, posibilități infinite.*
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.ro.png" alt="Comparație MCP" width="800"/>
 
-## Înțelegerea MCP
+*Înainte de MCP: integrări complexe punct-la-punct. După MCP: un protocol, posibilități nesfârșite.*
 
-MCP rezolvă o problemă fundamentală în dezvoltarea AI: fiecare integrare este personalizată. Vrei să accesezi GitHub? Cod personalizat. Vrei să citești fișiere? Cod personalizat. Vrei să interoghezi o bază de date? Cod personalizat. Și niciuna dintre aceste integrări nu funcționează cu alte aplicații AI.
+MCP rezolvă o problemă fundamentală în dezvoltarea AI: fiecare integrare este personalizată. Vrei acces la GitHub? Cod personalizat. Vrei să citești fișiere? Cod personalizat. Vrei să interoghezi o bază de date? Cod personalizat. Și niciuna dintre aceste integrări nu funcționează cu alte aplicații AI.
 
-MCP standardizează acest lucru. Un server MCP expune unelte cu descrieri clare și scheme. Orice client MCP se poate conecta, descoperi uneltele disponibile și le poate folosi. Construiești o dată, folosești peste tot.
+MCP standardizează acest lucru. Un server MCP expune instrumente cu descrieri clare și scheme de parametri. Orice client MCP se poate conecta, descoperi instrumentele disponibile și le poate folosi. Construiește o dată, folosește oriunde.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9814b7cffade208d4b0d97203c22df8d8e5504d8238fa7065.ro.png" alt="Arhitectura MCP" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.ro.png" alt="Arhitectura MCP" width="800"/>
 
-*Arhitectura Protocolului Contextului Modelului - descoperire și execuție standardizată a uneltelor*
+*Arhitectura Model Context Protocol - descoperire și execuție standardizate a instrumentelor*
 
-## Cum Funcționează MCP
+## Cum funcționează MCP
 
-**Arhitectura Server-Client**
+**Arhitectură Server-Client**
 
-MCP folosește un model client-server. Serverele oferă unelte - citirea fișierelor, interogarea bazelor de date, apelarea API-urilor. Clienții (aplicația ta AI) se conectează la servere și folosesc uneltele lor.
+MCP folosește un model client-server. Serverele furnizează instrumente - citirea fișierelor, interogarea bazelor de date, apelarea API-urilor. Clienții (aplicația ta AI) se conectează la servere și folosesc instrumentele lor.
 
-**Descoperirea Uneltelor**
+Pentru a folosi MCP cu LangChain4j, adaugă această dependență Maven:
 
-Când clientul tău se conectează la un server MCP, întreabă „Ce unelte ai?” Serverul răspunde cu o listă de unelte disponibile, fiecare cu descrieri și scheme de parametri. Agentul tău AI poate apoi decide ce unelte să folosească în funcție de cererile utilizatorului.
-
-**Mecanisme de Transport**
-
-MCP definește două mecanisme de transport: HTTP pentru servere la distanță, Stdio pentru procese locale (inclusiv containere Docker):
-
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020ed801b772b26ed69338e22739677aa017e0968f6538b09a2.ro.png" alt="Mecanisme de Transport" width="800"/>
-
-*Mecanisme de transport MCP: HTTP pentru servere la distanță, Stdio pentru procese locale (inclusiv containere Docker)*
-
-**Streamable HTTP** - [StreamableHttpDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-Pentru servere la distanță. Aplicația ta face cereri HTTP către un server care rulează undeva în rețea. Folosește Server-Sent Events pentru comunicare în timp real.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
 ```
 
-> **🤖 Încearcă cu [GitHub Copilot](https://github.com/features/copilot) Chat:** Deschide [`StreamableHttpDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) și întreabă:
-> - "Cum diferă MCP de integrarea directă a uneltelor ca în Modulul 04?"
-> - "Care sunt beneficiile folosirii MCP pentru partajarea uneltelor între aplicații?"
-> - "Cum gestionez eșecurile de conexiune sau timeout-urile către serverele MCP?"
+**Descoperirea instrumentelor**
+
+Când clientul tău se conectează la un server MCP, întreabă "Ce instrumente aveți?" Serverul răspunde cu o listă de instrumente disponibile, fiecare cu descrieri și scheme de parametri. Agentul tău AI poate apoi decide ce instrumente să folosească pe baza cererilor utilizatorului.
+
+**Mecanisme de transport**
+
+MCP suportă diferite mecanisme de transport. Acest modul demonstrează transportul Stdio pentru procese locale:
+
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.ro.png" alt="Mecanisme de transport" width="800"/>
+
+*Mecanisme de transport MCP: HTTP pentru servere la distanță, Stdio pentru procese locale*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Pentru procese locale. Aplicația ta pornește un server ca proces copil și comunică prin intrare/ieșire standard. Util pentru accesul la sistemul de fișiere sau unelte din linia de comandă.
+Pentru procese locale. Aplicația ta pornește un server ca subprocess și comunică prin intrare/ieșire standard. Util pentru acces la sistemul de fișiere sau instrumente din linia de comandă.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
@@ -106,105 +90,53 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
 ```
 
 > **🤖 Încearcă cu [GitHub Copilot](https://github.com/features/copilot) Chat:** Deschide [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) și întreabă:
-> - "Cum funcționează transportul Stdio și când ar trebui să-l folosesc în loc de HTTP?"
-> - "Cum gestionează LangChain4j ciclul de viață al proceselor server MCP pornite?"
-> - "Care sunt implicațiile de securitate ale oferirii accesului AI-ului la sistemul de fișiere?"
+> - "Cum funcționează transportul Stdio și când ar trebui să îl folosesc în locul HTTP?"
+> - "Cum gestionează LangChain4j ciclul de viață al proceselor server MCP pornite ca subprocess?"
+> - "Care sunt implicațiile de securitate ale acordării AI-ului acces la sistemul de fișiere?"
 
-**Docker (folosește Stdio)** - [GitRepositoryAnalyzer.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+## Modulul agențial
 
-Pentru servicii containerizate. Folosește transportul stdio pentru a comunica cu un container Docker prin `docker run`. Bun pentru dependențe complexe sau medii izolate.
+În timp ce MCP furnizează instrumente standardizate, modulul **agențial** al LangChain4j oferă o modalitate declarativă de a construi agenți care orchestrează acele instrumente. Anotarea `@Agent` și `AgenticServices` îți permit să definești comportamentul agenților prin interfețe în loc de cod imperativ.
 
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
+În acest modul, vei explora patternul **Supervisor Agent** — o abordare agentică avansată în care un agent „supervizor” decide dinamic ce sub-agenti să invoce pe baza cerințelor utilizatorului. Vom combina ambele concepte oferind unuia dintre sub-agenti capabilități de acces la fișiere alimentate de MCP.
+
+Pentru a folosi modulul agențial, adaugă această dependență Maven:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
 ```
 
-> **🤖 Încearcă cu [GitHub Copilot](https://github.com/features/copilot) Chat:** Deschide [`GitRepositoryAnalyzer.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) și întreabă:
-> - "Cum izolează transportul Docker serverele MCP și care sunt beneficiile?"
-> - "Cum configurez montările de volume pentru a partaja date între gazdă și containerele MCP?"
-> - "Care sunt cele mai bune practici pentru gestionarea ciclului de viață al serverelor MCP bazate pe Docker în producție?"
+> **⚠️ Experimental:** modulul `langchain4j-agentic` este **experimental** și poate suferi modificări. Modul stabil de a construi asistenți AI rămâne `langchain4j-core` cu instrumente personalizate (Modulul 04).
 
-## Rularea Exemplelor
+## Rularea exemplelor
 
-### Prerechizite
+### Precondiții
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ și npm (pentru serverele MCP)
-- **Docker Desktop** - Trebuie să fie **PORNIT** pentru Exemplul 3 (nu doar instalat)
-- Token de acces personal GitHub configurat în fișierul `.env` (din Modulul 00)
+- Variabile de mediu configurate în fișierul `.env` (din directorul rădăcină):
+  - **Pentru StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **Pentru SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (aceleași ca în Modulele 01-04)
 
-> **Notă:** Dacă nu ți-ai configurat încă tokenul GitHub, vezi [Modulul 00 - Pornire Rapidă](../00-quick-start/README.md) pentru instrucțiuni.
+> **Notă:** Dacă nu ți-ai configurat încă variabilele de mediu, vezi [Module 00 - Quick Start](../00-quick-start/README.md) pentru instrucțiuni, sau copiază `.env.example` în `.env` în directorul rădăcină și completează valorile tale.
 
-> **⚠️ Utilizatori Docker:** Înainte de a rula Exemplul 3, verifică dacă Docker Desktop este pornit cu `docker ps`. Dacă vezi erori de conexiune, pornește Docker Desktop și așteaptă ~30 de secunde pentru inițializare.
+## Pornire rapidă
 
-## Pornire Rapidă
-
-**Folosind VS Code:** Pur și simplu click dreapta pe orice fișier demo în Explorer și selectează **"Run Java"**, sau folosește configurațiile de lansare din panoul Run and Debug (asigură-te că ai adăugat tokenul în fișierul `.env` mai întâi).
+**Folosind VS Code:** Fă click dreapta pe orice fișier demo în Explorer și selectează **"Run Java"**, sau folosește configurațiile de lansare din panoul Run and Debug (asigură-te că ai adăugat mai întâi tokenul în fișierul `.env`).
 
 **Folosind Maven:** Alternativ, poți rula din linia de comandă cu exemplele de mai jos.
 
-**⚠️ Important:** Unele exemple au prerechizite (cum ar fi pornirea unui server MCP sau construirea imaginilor Docker). Verifică cerințele fiecărui exemplu înainte de rulare.
+### Operațiuni pe fișiere (Stdio)
 
-### Exemplul 1: Calculator la Distanță (HTTP Streamabil)
+Aceasta demonstrează instrumente bazate pe subprocessuri locale.
 
-Acesta demonstrează integrarea uneltelor bazată pe rețea.
+**✅ Fără precondiții necesare** - serverul MCP este pornit automat.
 
-**⚠️ Prerechizit:** Trebuie să pornești mai întâi serverul MCP (vezi Terminal 1 mai jos).
-
-**Terminal 1 - Pornește serverul MCP:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**Terminal 2 - Rulează exemplul:**
-
-**Folosind VS Code:** Click dreapta pe `StreamableHttpDemo.java` și selectează **"Run Java"**.
-
-**Folosind Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Urmărește cum agentul descoperă uneltele disponibile, apoi folosește calculatorul pentru a efectua adunări.
-
-### Exemplul 2: Operațiuni pe Fișiere (Stdio)
-
-Acesta demonstrează unelte locale bazate pe procese copil.
-
-**✅ Nu sunt necesare prerechizite** - serverul MCP este pornit automat.
-
-**Folosind VS Code:** Click dreapta pe `StdioTransportDemo.java` și selectează **"Run Java"**.
+**Folosind VS Code:** Fă click dreapta pe `StdioTransportDemo.java` și selectează **"Run Java"**.
 
 **Folosind Maven:**
 
@@ -222,123 +154,215 @@ cd 05-mcp
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
-Aplicația pornește automat un server MCP pentru sistemul de fișiere și citește un fișier local. Observă cum este gestionat ciclul de viață al procesului copil pentru tine.
+Aplicația pornește automat un server MCP pentru sistemul de fișiere și citește un fișier local. Observă cum gestionarea subprocessurilor este făcută pentru tine.
 
 **Ieșire așteptată:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Exemplul 3: Analiză Git (Docker)
+### Agentul Supervisor
 
-Acesta demonstrează servere de unelte containerizate.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.ro.png" alt="Modul agentic" width="800"/>
 
-**⚠️ Prerechizite:** 
-1. **Docker Desktop trebuie să fie PORNIT** (nu doar instalat)
-2. **Utilizatori Windows:** Mod WSL 2 recomandat (Setări Docker Desktop → General → „Use the WSL 2 based engine”). Modul Hyper-V necesită configurare manuală a partajării fișierelor.
-3. Trebuie să construiești mai întâi imaginea Docker (vezi Terminal 1 mai jos)
 
-**Verifică dacă Docker rulează:**
+Patternul **Supervisor Agent** este o formă **flexibilă** de AI agențial. Spre deosebire de fluxurile de lucru deterministe (secuențiale, buclă, paralele), un Supervisor folosește un LLM pentru a decide în mod autonom ce agenți să invoce pe baza cererii utilizatorului.
+
+**Combinarea Supervisor cu MCP:** În acest exemplu, îi oferim `FileAgent` acces la instrumentele sistemului de fișiere MCP prin `toolProvider(mcpToolProvider)`. Când un utilizator cere să „citească și să analizeze un fișier”, Supervisor analizează cererea și generează un plan de execuție. Apoi direcționează cererea către `FileAgent`, care folosește instrumentul MCP `read_file` pentru a recupera conținutul. Supervisor transmite acel conținut către `AnalysisAgent` pentru interpretare și, opțional, invocă `SummaryAgent` pentru a rezuma rezultatele.
+
+Acest lucru demonstrează cum instrumentele MCP se integrează perfect în fluxurile de lucru agențiale — Supervisor nu trebuie să știe *cum* sunt citite fișierele, doar că `FileAgent` le poate citi. Supervisor se adaptează dinamic la diferite tipuri de cereri și returnează fie răspunsul ultimului agent, fie un rezumat al tuturor operațiunilor.
+
+**Folosind scripturile de pornire (Recomandat):**
+
+Scripturile de pornire încarcă automat variabilele de mediu din fișierul `.env` din rădăcină:
 
 **Bash:**
 ```bash
-docker ps  # Ar trebui să afișeze lista containerelor, nu o eroare
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Ar trebui să afișeze lista containerelor, nu o eroare
-```
-
-Dacă vezi o eroare de genul „Cannot connect to Docker daemon” sau „The system cannot find the file specified”, pornește Docker Desktop și așteaptă să se inițializeze (~30 secunde).
-
-**Depanare:**
-- Dacă AI raportează un depozit gol sau fără fișiere, montarea volumului (`-v`) nu funcționează.
-- **Utilizatori Windows Hyper-V:** Adaugă directorul proiectului în Setările Docker Desktop → Resources → File sharing, apoi repornește Docker Desktop.
-- **Soluția recomandată:** Treci la modul WSL 2 pentru partajare automată a fișierelor (Setări → General → activează „Use the WSL 2 based engine”).
-
-**Terminal 1 - Construiește imaginea Docker:**
-
-**Bash:**
-```bash
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**Terminal 2 - Rulează analizorul:**
-
-**Folosind VS Code:** Click dreapta pe `GitRepositoryAnalyzer.java` și selectează **"Run Java"**.
-
-**Folosind Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+.\start.ps1
 ```
 
-Aplicația lansează un container Docker, montează depozitul tău și analizează structura și conținutul depozitului prin agentul AI.
+**Folosind VS Code:** Fă click dreapta pe `SupervisorAgentDemo.java` și selectează **"Run Java"** (asigură-te că fișierul `.env` este configurat).
 
-## Concepte Cheie
+**Cum funcționează Supervisor:**
 
-**Selecția Transportului**
+```java
+// Defineți mai mulți agenți cu capacități specifice
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)  // Dispune de instrumente MCP pentru operațiuni cu fișiere
+        .build();
 
-Alege în funcție de unde se află uneltele tale:
-- Servicii la distanță → HTTP Streamabil
-- Sistem de fișiere local → Stdio
-- Dependențe complexe → Docker
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
 
-**Descoperirea Uneltelor**
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
 
-Clienții MCP descoperă automat uneltele disponibile la conectare. Agentul tău AI vede descrierile uneltelor și decide care să le folosească în funcție de cererea utilizatorului.
+// Creați un Supraveghetor care orchestrează acești agenți
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // Modelul "planner"
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
 
-**Gestionarea Sesiunii**
+// Supraveghetorul decide în mod autonom ce agenți să invoce
+// Pur și simplu transmiteți o cerere în limbaj natural - LLM-ul planifică execuția
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+```
 
-Transportul HTTP Streamabil menține sesiuni, permițând interacțiuni cu stare cu serverele la distanță. Transporturile Stdio și Docker sunt de obicei fără stare.
+Vezi [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) pentru implementarea completă.
 
-**Considerații Cross-Platform**
+> **🤖 Încearcă cu [GitHub Copilot](https://github.com/features/copilot) Chat:** Deschide [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) și întreabă:
+> - "Cum decide Supervisor ce agenți să invoce?"
+> - "Care este diferența dintre Supervisor și patternurile de workflow Secvențial?"
+> - "Cum pot personaliza comportamentul de planificare al Supervisor-ului?"
 
-Exemplele gestionează automat diferențele de platformă (diferențe de comenzi Windows vs Unix, conversii de căi pentru Docker). Acest lucru este important pentru implementările în producție în medii diferite.
+#### Înțelegerea rezultatului
 
-## Când să Folosești MCP
+Când rulezi demo-ul, vei vedea o prezentare structurată a modului în care Supervisor orchestrează mai mulți agenți. Iată ce înseamnă fiecare secțiune:
 
-**Folosește MCP când:**
-- Vrei să valorifici ecosisteme de unelte existente
-- Construiești unelte pe care mai multe aplicații le vor folosi
-- Integrezi servicii terțe cu protocoale standard
-- Ai nevoie să schimbi implementările uneltelor fără modificări de cod
+```
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
 
-**Folosește unelte personalizate (Modulul 04) când:**
-- Construiești funcționalitate specifică aplicației
-- Performanța este critică (MCP adaugă overhead)
-- Uneltele tale sunt simple și nu vor fi reutilizate
-- Ai nevoie de control complet asupra execuției
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
+```
 
+**Antetul** introduce demo-ul și explică conceptul central: Supervisor folosește un LLM (nu reguli hardcodate) pentru a decide ce agenți să apeleze.
 
-## Ecosistemul MCP
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
 
-Protocolul Contextului Modelului este un standard deschis cu un ecosistem în creștere:
+**Agenți disponibili** arată cei trei agenți specializați dintre care Supervisor poate alege. Fiecare agent are o capacitate specifică:
+- **FileAgent** poate citi fișiere folosind instrumente MCP (capabilitate externă)
+- **AnalysisAgent** analizează conținutul (capabilitate pur LLM)
+- **SummaryAgent** creează rezumate (capabilitate pur LLM)
 
-- Servere MCP oficiale pentru sarcini comune (sistem de fișiere, Git, baze de date)
-- Servere contribuite de comunitate pentru diverse servicii
-- Descrieri și scheme standardizate ale uneltelor
-- Compatibilitate cross-framework (funcționează cu orice client MCP)
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
 
-Această standardizare înseamnă că uneltele construite pentru o aplicație AI funcționează și cu altele, creând un ecosistem comun de capabilități.
+**Cererea utilizatorului** arată ceea ce s-a cerut. Supervisor trebuie să interpreteze asta și să decidă ce agenți să invoce.
+
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
+
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
+
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: Structure: The content is organized into clear paragraphs that int...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
+
+**Orchestrarea Supervisor-ului** este locul unde are loc magia. Urmărește cum:
+1. Supervisor **a ales mai întâi FileAgent** deoarece cererea menționa „citește fișierul”
+2. FileAgent a folosit instrumentul MCP `read_file` pentru a prelua conținutul fișierului
+3. Supervisor apoi **a ales AnalysisAgent** și i-a transmis conținutul fișierului
+4. AnalysisAgent a analizat structura, tonul și temele
+
+Observă că Supervisor a luat aceste decizii **în mod autonom** pe baza cererii utilizatorului — fără workflow hardcodat!
+
+**Răspunsul final** este răspunsul sintetizat al Supervisor-ului, combinând output-urile tuturor agenților pe care i-a invocat. Exemplul afișează scope-ul agențial arătând rezumatul și rezultatele analizei stocate de fiecare agent.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: Structure: The content is organized into clear paragraphs that in...
+```
+
+### Explicație a caracteristicilor modulului agențial
+
+Exemplul demonstrează mai multe caracteristici avansate ale modulului agențial. Să aruncăm o privire mai atentă la Agentic Scope și la Agent Listeners.
+
+**Agentic Scope** afișează memoria partajată unde agenții și-au stocat rezultatele folosind `@Agent(outputKey="...")`. Aceasta permite:
+- Agenților care vin ulterior să acceseze output-urile agenților anteriori
+- Supervisor-ului să sintetizeze un răspuns final
+- Ție să inspectezi ce a produs fiecare agent
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** permit monitorizarea și depanarea execuției agenților. Ieșirea pas cu pas pe care o vezi în demo provine de la un AgentListener care se conectează la fiecare invocare de agent:
+- **beforeAgentInvocation** - Apelat când Supervisor selectează un agent, permițându-ți să vezi care agent a fost ales și de ce
+- **afterAgentInvocation** - Apelat când un agent se încheie, arătând rezultatul său
+- **inheritedBySubagents** - Când este true, listener-ul monitorizează toți agenții din ierarhie
+
+```java
+AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
+    @Override
+    public void beforeAgentInvocation(AgentRequest request) {
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Propagați către toți subagenții
+    }
+};
+```
+
+Dincolo de patternul Supervisor, modulul `langchain4j-agentic` oferă mai multe patternuri și caracteristici puternice de workflow:
+
+| Pattern | Descriere | Caz de utilizare |
+|---------|-------------|----------|
+| **Sequential** | Execută agenții în ordine, output-ul curge către următorul | Pipeline-uri: cercetare → analiză → raport |
+| **Parallel** | Rulează agenții simultan | Sarcini independente: vreme + știri + acțiuni |
+| **Loop** | Iterează până se îndeplinește o condiție | Scorare calitate: rafinează până când scor ≥ 0.8 |
+| **Conditional** | Direcționează pe baza condițiilor | Clasificare → direcționare către agent specialist |
+| **Human-in-the-Loop** | Adaugă puncte de control umane | Fluxuri de aprobare, revizuire conținut |
+
+## Concepte cheie
+
+**MCP** este ideal când vrei să valorifici ecosisteme existente de instrumente, să construiești instrumente pe care mai multe aplicații le pot partaja, să integrezi servicii terțe cu protocoale standard sau să schimbi implementările instrumentelor fără a modifica codul.
+
+**Modulul agențial** funcționează cel mai bine când vrei definiții declarative ale agenților cu anotări `@Agent`, ai nevoie de orchestrare a fluxului de lucru (secuențial, buclă, paralel), preferi designul bazat pe interfețe în loc de cod imperativ sau combini mai mulți agenți care partajează output-uri prin `outputKey`.
+
+**Patternul Supervisor Agent** strălucește când workflow-ul nu este predictibil dinainte și vrei ca LLM-ul să decidă, când ai mai mulți agenți specializați care necesită orchestrare dinamică, când construiești sisteme conversaționale care direcționează către diferite capabilități sau când vrei cel mai flexibil și adaptabil comportament al agenților.
 
 ## Felicitări!
 
@@ -347,74 +371,27 @@ Ai finalizat cursul LangChain4j pentru Începători. Ai învățat:
 - Cum să construiești AI conversațional cu memorie (Modulul 01)
 - Modele de inginerie a prompturilor pentru diferite sarcini (Modulul 02)
 - Fundamentarea răspunsurilor în documentele tale cu RAG (Modulul 03)
-- Crearea de agenți AI cu unelte personalizate (Modulul 04)
-- Integrarea uneltelor standardizate prin MCP (Modulul 05)
+- Crearea agenților AI de bază (asistenți) cu instrumente personalizate (Modulul 04)
+- Integrarea uneltelor standardizate cu modulele LangChain4j MCP și Agentic (Modul 05)
 
-Acum ai baza pentru a construi aplicații AI de producție. Conceptele învățate se aplică indiferent de framework-uri sau modele specifice - sunt modele fundamentale în ingineria AI.
+### Ce urmează?
 
-### Ce Urmează?
+După ce ați finalizat modulele, explorați [Ghidul de testare](../docs/TESTING.md) pentru a vedea conceptele de testare LangChain4j în acțiune.
 
-După ce ai terminat modulele, explorează [Ghidul de Testare](../docs/TESTING.md) pentru a vedea conceptele de testare LangChain4j în acțiune.
-
-**Resurse Oficiale:**
-- [Documentația LangChain4j](https://docs.langchain4j.dev/) - Ghiduri complete și referință API
-- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Cod sursă și exemple
+**Resurse oficiale:**
+- [Documentația LangChain4j](https://docs.langchain4j.dev/) - Ghiduri cuprinzătoare și referință API
+- [LangChain4j pe GitHub](https://github.com/langchain4j/langchain4j) - Cod sursă și exemple
 - [Tutoriale LangChain4j](https://docs.langchain4j.dev/tutorials/) - Tutoriale pas cu pas pentru diverse cazuri de utilizare
 
-Mulțumim că ai parcurs acest curs!
+Mulțumim că ați finalizat acest curs!
 
 ---
 
-**Navigare:** [← Anterior: Modulul 04 - Unelte](../04-tools/README.md) | [Înapoi la Principal](../README.md)
-
----
-
-## Depanare
-
-### Sintaxa Comenzii Maven în PowerShell
-**Problemă**: Comenzile Maven eșuează cu eroarea `Unknown lifecycle phase ".mainClass=..."`
-
-**Cauză**: PowerShell interpretează `=` ca operator de atribuire a variabilei, stricând sintaxa proprietății Maven
-
-**Soluție**: Folosiți operatorul de oprire a parsării `--%` înaintea comenzii Maven:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Operatorul `--%` spune PowerShell să transmită toate argumentele rămase literal către Maven fără interpretare.
-
-### Probleme de conectare Docker
-
-**Problemă**: Comenzile Docker eșuează cu mesajul "Cannot connect to Docker daemon" sau "The system cannot find the file specified"
-
-**Cauză**: Docker Desktop nu este pornit sau nu este complet inițializat
-
-**Soluție**: 
-1. Porniți Docker Desktop
-2. Așteptați ~30 de secunde pentru inițializare completă
-3. Verificați cu `docker ps` (ar trebui să afișeze lista containerelor, nu o eroare)
-4. Apoi rulați exemplul dvs.
-
-### Montarea volumelor Docker pe Windows
-
-**Problemă**: Analizatorul de depozite Git raportează depozit gol sau fără fișiere
-
-**Cauză**: Montarea volumului (`-v`) nu funcționează din cauza configurației de partajare a fișierelor
-
-**Soluție**:
-- **Recomandat:** Trecerea la modul WSL 2 (Setări Docker Desktop → General → "Use the WSL 2 based engine")
-- **Alternativ (Hyper-V):** Adăugați directorul proiectului în Setări Docker Desktop → Resources → File sharing, apoi reporniți Docker Desktop
+**Navigare:** [← Anterior: Modul 04 - Unelte](../04-tools/README.md) | [Înapoi la pagina principală](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
+Declinare de responsabilitate:
+Acest document a fost tradus folosind serviciul de traducere AI Co-op Translator (https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original, în limba sa nativă, trebuie considerat sursa autoritară. Pentru informații critice, se recomandă o traducere profesională realizată de un traducător uman. Nu ne asumăm nicio răspundere pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

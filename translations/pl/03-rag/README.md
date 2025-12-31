@@ -49,7 +49,7 @@ Pomyśl o RAG jak o bibliotece referencyjnej dla modelu. Gdy zadasz pytanie, sys
 
 Dzięki temu odpowiedzi modelu opierają się na Twoich rzeczywistych danych, a nie tylko na wiedzy z treningu czy wymyślaniu odpowiedzi.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.pl.png" alt="Architektura RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.pl.png" alt="Architektura RAG" width="800"/>
 
 *Przepływ pracy RAG – od zapytania użytkownika, przez wyszukiwanie semantyczne, do generowania odpowiedzi kontekstowej*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.pl.png" alt="Przestrzeń osadzeń wektorowych" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.pl.png" alt="Przestrzeń osadzeń wektorowych" width="800"/>
 
 *Dokumenty reprezentowane jako wektory w przestrzeni osadzeń – podobne treści grupują się razem*
 
@@ -152,7 +152,7 @@ Z poziomu Spring Boot Dashboard możesz:
 
 Wystarczy kliknąć przycisk odtwarzania obok "rag", aby uruchomić ten moduł, lub uruchomić wszystkie moduły naraz.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.pl.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.pl.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opcja 2: Korzystanie ze skryptów powłoki**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Wszystkie moduły
 
 Aplikacja udostępnia interfejs webowy do przesyłania dokumentów i zadawania pytań.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.pl.png" alt="Interfejs aplikacji RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.pl.png" alt="Interfejs aplikacji RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interfejs aplikacji RAG – przesyłaj dokumenty i zadawaj pytania*
 
@@ -240,7 +240,7 @@ Teraz zadaj konkretne pytania dotyczące zawartości dokumentu. Spróbuj czegoś
 
 Zauważ, że każda odpowiedź zawiera odniesienia do źródeł wraz z wynikami podobieństwa. Wyniki te (od 0 do 1) pokazują, jak bardzo dany fragment był istotny dla Twojego pytania. Wyższe wyniki oznaczają lepsze dopasowanie. Pozwala to zweryfikować odpowiedź względem materiału źródłowego.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.pl.png" alt="Wyniki zapytania RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.pl.png" alt="Wyniki zapytania RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Wyniki zapytania pokazujące odpowiedź z odniesieniami do źródeł i wynikami relewancji*
 
