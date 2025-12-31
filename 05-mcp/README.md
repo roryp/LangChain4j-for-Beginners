@@ -13,6 +13,7 @@
   - [Supervisor Agent](#supervisor-agent)
     - [Understanding the Output](#understanding-the-output)
     - [Explanation of Agentic Module Features](#explanation-of-agentic-module-features)
+    - [Response Strategies](#response-strategies)
 - [Key Concepts](#key-concepts)
 - [Congratulations!](#congratulations)
   - [What's Next?](#whats-next)
@@ -212,6 +213,16 @@ SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
 String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
 ```
 
+#### Response Strategies
+
+When you configure a `SupervisorAgent`, you specify how it should formulate its final answer to the user after the sub-agents have completed their tasks. The available strategies are:
+
+| Strategy | Description |
+|----------|-------------|
+| **LAST** | The supervisor returns the output of the last sub-agent or tool called. This is useful when the final agent in the workflow is specifically designed to produce the complete, final answer (e.g., a "Summary Agent" in a research pipeline). |
+| **SUMMARY** | The supervisor uses its own internal Language Model (LLM) to synthesize a summary of the entire interaction and all sub-agent outputs, then returns that summary as the final response. This provides a clean, aggregated answer to the user. |
+| **SCORED** | The system uses an internal LLM to score both the LAST response and the SUMMARY of the interaction against the original user request, returning whichever output receives the higher score. |
+
 See [SupervisorAgentDemo.java](src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) for the complete implementation.
 
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SupervisorAgentDemo.java`](src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) and ask:
@@ -294,7 +305,7 @@ large language models...
   * analysis: Structure: The content is organized into clear paragraphs that in...
 ```
 
-### Explanation of Agentic Module Features
+#### Explanation of Agentic Module Features
 
 The example demonstrates several advanced features of the agentic module. Let's have a closer look at Agentic Scope and Agent Listeners.
 
