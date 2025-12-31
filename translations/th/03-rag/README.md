@@ -49,7 +49,7 @@ RAG (Retrieval-Augmented Generation) แก้ปัญหานี้ แทน
 
 นี่ทำให้คำตอบของโมเดลมีพื้นฐานจากข้อมูลจริงของคุณ แทนที่จะพึ่งพาความรู้จากการฝึกสอนหรือการสร้างคำตอบขึ้นมาเอง
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.th.png" alt="สถาปัตยกรรม RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.th.png" alt="สถาปัตยกรรม RAG" width="800"/>
 
 *กระบวนการทำงานของ RAG - จากคำถามผู้ใช้ไปสู่การค้นหาเชิงความหมายและการสร้างคำตอบโดยมีบริบท*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.th.png" alt="พื้นที่เวกเตอร์ Embeddings" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.th.png" alt="พื้นที่เวกเตอร์ Embeddings" width="800"/>
 
 *เอกสารถูกแทนด้วยเวกเตอร์ในพื้นที่ embedding - เนื้อหาที่คล้ายกันจะรวมกลุ่มกัน*
 
@@ -152,7 +152,7 @@ cat ../.env  # ควรแสดง AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 
 เพียงคลิกปุ่มเล่นข้าง "rag" เพื่อเริ่มโมดูลนี้ หรือเริ่มทุกโมดูลพร้อมกัน
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.th.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.th.png" alt="Spring Boot Dashboard" width="400"/>
 
 **ตัวเลือกที่ 2: ใช้สคริปต์ shell**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # ทุกโมดูล
 
 แอปพลิเคชันมีอินเทอร์เฟซเว็บสำหรับอัปโหลดเอกสารและถามคำถาม
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.th.png" alt="อินเทอร์เฟซแอปพลิเคชัน RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.th.png" alt="อินเทอร์เฟซแอปพลิเคชัน RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *อินเทอร์เฟซแอปพลิเคชัน RAG - อัปโหลดเอกสารและถามคำถาม*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # ทุกโมดูล
 
 สังเกตว่าคำตอบแต่ละข้อจะมีแหล่งอ้างอิงพร้อมคะแนนความคล้ายคลึง คะแนนเหล่านี้ (0 ถึง 1) แสดงว่าชิ้นส่วนนั้นเกี่ยวข้องกับคำถามของคุณมากน้อยแค่ไหน คะแนนสูงหมายถึงการจับคู่ที่ดี ซึ่งช่วยให้คุณตรวจสอบคำตอบกับแหล่งข้อมูลต้นทางได้
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.th.png" alt="ผลลัพธ์การค้นหา RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.th.png" alt="ผลลัพธ์การค้นหา RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ผลลัพธ์การค้นหาแสดงคำตอบพร้อมแหล่งอ้างอิงและคะแนนความเกี่ยวข้อง*
 

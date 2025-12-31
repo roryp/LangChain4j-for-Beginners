@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 这对于简单的问答还可以，但对真实应用毫无用处。客服机器人需要记住你告诉它的内容。个人助理需要上下文。任何多轮对话都需要内存。
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.zh.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.zh.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *无状态（独立调用）与有状态（上下文感知）对话的区别*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 在深入对话之前，理解令牌很重要——它是语言模型处理的基本文本单位：
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.zh.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.zh.png" alt="Token Explanation" width="800"/>
 
 *文本如何被拆分成令牌的示例——“I love AI!” 被拆成4个独立处理单元*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j 提供了自动处理此功能的内存实现。你可以选择保留多少条消息，框架会管理上下文窗口。
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.zh.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.zh.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory 维护最近消息的滑动窗口，自动丢弃旧消息*
 
@@ -212,7 +212,7 @@ Get-Content ..\.env  # 应显示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只需点击“introduction”旁的播放按钮启动本模块，或一次启动所有模块。
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.zh.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.zh.png" alt="Spring Boot Dashboard" width="400"/>
 
 **选项 2：使用 shell 脚本**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 该应用提供了一个网页界面，左右并排展示两种聊天实现。
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.zh.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.zh.png" alt="Application Home Screen" width="800"/>
 
 *仪表盘显示简单聊天（无状态）和对话聊天（有状态）选项*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 先试试这个。先问“我叫 John”，然后立即问“我叫什么名字？”模型不会记得，因为每条消息都是独立的。这演示了基础语言模型集成的核心问题——没有对话上下文。
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.zh.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.zh.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI 不会记住你上一条消息中的名字*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 现在在这里试同样的顺序。先问“我叫 John”，再问“我叫什么名字？”这次它记得了。区别在于 MessageWindowChatMemory——它维护对话历史，并将其包含在每次请求中。这就是生产级对话式 AI 的工作方式。
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.zh.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.zh.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI 记得你之前对话中的名字*
 

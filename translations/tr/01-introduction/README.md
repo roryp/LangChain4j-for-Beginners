@@ -53,7 +53,7 @@ Dil modelleri durumsuzdur. Her API çağrısı bağımsızdır. "Adım John" yaz
 
 Bu basit SSS için uygundur ama gerçek uygulamalar için işe yaramaz. Müşteri hizmetleri botları söylediklerinizi hatırlamalıdır. Kişisel asistanlar bağlama ihtiyaç duyar. Çok turlu herhangi bir konuşma belleğe ihtiyaç duyar.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.tr.png" alt="Durumsuz ve Durumlu Konuşmalar" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.tr.png" alt="Durumsuz ve Durumlu Konuşmalar" width="800"/>
 
 *Durumsuz (bağımsız çağrılar) ve durumlu (bağlam farkında) konuşmalar arasındaki fark*
 
@@ -61,7 +61,7 @@ Bu basit SSS için uygundur ama gerçek uygulamalar için işe yaramaz. Müşter
 
 Konuşmalara dalmadan önce tokenları anlamak önemlidir - dil modellerinin işlediği temel metin birimleri:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.tr.png" alt="Token Açıklaması" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.tr.png" alt="Token Açıklaması" width="800"/>
 
 *Metnin tokenlara nasıl bölündüğüne örnek - "I love AI!" 4 ayrı işleme birimine dönüşür*
 
@@ -73,7 +73,7 @@ Sohbet belleği, durumsuz problemi konuşma geçmişini koruyarak çözer. İste
 
 LangChain4j, bunu otomatik yöneten bellek uygulamaları sağlar. Kaç mesaj saklayacağınızı seçersiniz ve çerçeve bağlam penceresini yönetir.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.tr.png" alt="Bellek Penceresi Kavramı" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.tr.png" alt="Bellek Penceresi Kavramı" width="800"/>
 
 *MessageWindowChatMemory, son mesajların kayan penceresini tutar, eski mesajları otomatik olarak düşürür*
 
@@ -212,7 +212,7 @@ Spring Boot Dashboard'dan:
 
 Bu modülü başlatmak için "introduction" yanındaki oynat düğmesine tıklayın veya tüm modülleri aynı anda başlatın.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.tr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.tr.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Seçenek 2: Shell betikleri kullanarak**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Tüm modüller
 
 Uygulama, yan yana iki sohbet uygulaması içeren bir web arayüzü sağlar.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.tr.png" alt="Uygulama Ana Ekranı" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.tr.png" alt="Uygulama Ana Ekranı" width="800"/>
 
 *Basit Sohbet (durumsuz) ve Konuşma Sohbeti (durumlu) seçeneklerini gösteren kontrol paneli*
 
@@ -290,7 +290,7 @@ Uygulama, yan yana iki sohbet uygulaması içeren bir web arayüzü sağlar.
 
 Önce bunu deneyin. "Adım John" deyin, hemen ardından "Adım ne?" diye sorun. Model hatırlamayacaktır çünkü her mesaj bağımsızdır. Bu, temel dil modeli entegrasyonundaki temel problemi gösterir - konuşma bağlamı yoktur.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.tr.png" alt="Durumsuz Sohbet Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.tr.png" alt="Durumsuz Sohbet Demo" width="800"/>
 
 *Yapay zeka önceki mesajdaki adınızı hatırlamaz*
 
@@ -298,7 +298,7 @@ Uygulama, yan yana iki sohbet uygulaması içeren bir web arayüzü sağlar.
 
 Şimdi aynı diziyi burada deneyin. "Adım John" deyin, sonra "Adım ne?" Bu sefer hatırlar. Fark MessageWindowChatMemory'dir - konuşma geçmişini tutar ve her isteğe dahil eder. Üretim konuşma yapay zekası böyle çalışır.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.tr.png" alt="Durumlu Sohbet Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.tr.png" alt="Durumlu Sohbet Demo" width="800"/>
 
 *Yapay zeka konuşmanın önceki kısmındaki adınızı hatırlar*
 

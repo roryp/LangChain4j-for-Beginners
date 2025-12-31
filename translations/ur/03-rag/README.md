@@ -49,7 +49,7 @@ RAG کو ماڈل کو ایک حوالہ جاتی لائبریری دینے کے
 
 یہ ماڈل کے جوابات کو آپ کے اصل ڈیٹا پر مبنی بناتا ہے بجائے اس کے کہ وہ اپنی تربیتی معلومات پر انحصار کرے یا جوابات گھڑے۔
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.ur.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ur.png" alt="RAG Architecture" width="800"/>
 
 *RAG ورک فلو - صارف کے سوال سے سمانٹک سرچ تک اور کانٹیکسچول جواب کی تخلیق تک*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.ur.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ur.png" alt="Vector Embeddings Space" width="800"/>
 
 *دستاویزات کو ایمبیڈنگ اسپیس میں ویکٹرز کے طور پر ظاہر کیا گیا ہے - ملتے جلتے مواد ایک ساتھ کلسٹر ہوتے ہیں*
 
@@ -152,7 +152,7 @@ Spring Boot ڈیش بورڈ سے آپ:
 
 بس "rag" کے ساتھ پلے بٹن پر کلک کریں تاکہ یہ ماڈیول شروع ہو جائے، یا تمام ماڈیولز کو ایک ساتھ شروع کریں۔
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.ur.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ur.png" alt="Spring Boot Dashboard" width="400"/>
 
 **اختیار 2: شیل اسکرپٹس کا استعمال**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 ایپلیکیشن دستاویز اپ لوڈ اور سوالات کے لیے ویب انٹرفیس فراہم کرتی ہے۔
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.ur.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ur.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG ایپلیکیشن انٹرفیس - دستاویزات اپ لوڈ کریں اور سوالات پوچھیں*
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 نوٹ کریں کہ ہر جواب میں ماخذ حوالہ جات شامل ہوتے ہیں جن کے ساتھ مشابہت کے اسکورز ہوتے ہیں۔ یہ اسکورز (0 سے 1 تک) دکھاتے ہیں کہ ہر چنک آپ کے سوال سے کتنا متعلقہ تھا۔ زیادہ اسکورز بہتر مماثلت ظاہر کرتے ہیں۔ اس سے آپ جواب کو ماخذ مواد کے خلاف تصدیق کر سکتے ہیں۔
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.ur.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ur.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *سوال کے نتائج جو جواب کے ساتھ ماخذ حوالہ جات اور مطابقت کے اسکورز دکھا رہے ہیں*
 

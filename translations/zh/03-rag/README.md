@@ -49,7 +49,7 @@ RAG（检索增强生成）解决了这个问题。它不是试图教模型你�
 
 这使模型的回答基于你的实际数据，而不是依赖其训练知识或编造答案。
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.zh.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.zh.png" alt="RAG Architecture" width="800"/>
 
 *RAG 工作流程 - 从用户查询到语义搜索再到上下文答案生成*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.zh.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.zh.png" alt="Vector Embeddings Space" width="800"/>
 
 *文档在嵌入空间中表示为向量——相似内容聚集在一起*
 
@@ -152,7 +152,7 @@ cat ../.env  # 应显示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只需点击 “rag” 旁的播放按钮启动此模块，或一次启动所有模块。
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.zh.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.zh.png" alt="Spring Boot Dashboard" width="400"/>
 
 **选项 2：使用 shell 脚本**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 该应用提供了文档上传和提问的网页界面。
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.zh.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.zh.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG 应用界面 - 上传文档并提问*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 注意每个答案都包含带有相似度分数的来源引用。这些分数（0 到 1）显示每个块与你问题的相关程度。分数越高，匹配越好。这样你可以根据源材料验证答案。
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.zh.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.zh.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *查询结果显示答案及来源引用和相关度分数*
 

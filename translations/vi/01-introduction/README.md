@@ -53,7 +53,7 @@ Các mô hình ngôn ngữ không có trạng thái. Mỗi lần gọi API là �
 
 Điều này ổn với các câu hỏi đơn giản nhưng vô dụng với ứng dụng thực tế. Bot dịch vụ khách hàng cần nhớ những gì bạn nói. Trợ lý cá nhân cần ngữ cảnh. Bất kỳ cuộc hội thoại nhiều lượt nào cũng cần bộ nhớ.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.vi.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.vi.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Sự khác biệt giữa hội thoại không trạng thái (gọi độc lập) và có trạng thái (nhận biết ngữ cảnh)*
 
@@ -61,7 +61,7 @@ Các mô hình ngôn ngữ không có trạng thái. Mỗi lần gọi API là �
 
 Trước khi đi sâu vào hội thoại, quan trọng là hiểu tokens - đơn vị cơ bản của văn bản mà mô hình ngôn ngữ xử lý:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.vi.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.vi.png" alt="Token Explanation" width="800"/>
 
 *Ví dụ về cách văn bản được chia thành tokens - "I love AI!" thành 4 đơn vị xử lý riêng biệt*
 
@@ -73,7 +73,7 @@ Bộ nhớ chat giải quyết vấn đề không trạng thái bằng cách duy
 
 LangChain4j cung cấp các triển khai bộ nhớ xử lý việc này tự động. Bạn chọn số lượng tin nhắn giữ lại và framework quản lý cửa sổ ngữ cảnh.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.vi.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.vi.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory duy trì cửa sổ trượt các tin nhắn gần đây, tự động loại bỏ tin nhắn cũ*
 
@@ -212,7 +212,7 @@ Từ Spring Boot Dashboard, bạn có thể:
 
 Chỉ cần nhấn nút play bên cạnh "introduction" để bắt đầu module này, hoặc khởi động tất cả các module cùng lúc.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.vi.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.vi.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Lựa chọn 2: Dùng script shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Tất cả các mô-đun
 
 Ứng dụng cung cấp giao diện web với hai triển khai chat đặt cạnh nhau.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.vi.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.vi.png" alt="Application Home Screen" width="800"/>
 
 *Bảng điều khiển hiển thị cả hai tùy chọn Simple Chat (không trạng thái) và Conversational Chat (có trạng thái)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # Tất cả các mô-đun
 
 Hãy thử trước. Hỏi "Tên tôi là John" rồi ngay lập tức hỏi "Tên tôi là gì?" Mô hình sẽ không nhớ vì mỗi tin nhắn là độc lập. Điều này minh họa vấn đề cốt lõi khi tích hợp mô hình ngôn ngữ cơ bản - không có ngữ cảnh hội thoại.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.vi.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.vi.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI không nhớ tên bạn từ tin nhắn trước*
 
@@ -298,7 +298,7 @@ Hãy thử trước. Hỏi "Tên tôi là John" rồi ngay lập tức hỏi "T�
 
 Bây giờ thử cùng chuỗi câu hỏi ở đây. Hỏi "Tên tôi là John" rồi "Tên tôi là gì?" Lần này nó nhớ. Sự khác biệt là MessageWindowChatMemory - nó duy trì lịch sử hội thoại và bao gồm nó với mỗi yêu cầu. Đây là cách AI hội thoại sản xuất hoạt động.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.vi.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.vi.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI nhớ tên bạn từ trước trong cuộc hội thoại*
 
