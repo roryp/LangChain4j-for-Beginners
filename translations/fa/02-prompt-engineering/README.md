@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 این ماژول الگوهای پیشرفته پرامپت‌دهی را با استفاده از همان پایه LangChain4j از ماژول‌های قبلی نشان می‌دهد، با تمرکز بر ساختار پرامپت و کنترل استدلال.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.fa.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.fa.png" alt="LangChain4j Flow" width="800"/>
 
 *چگونگی اتصال پرامپت‌های شما به Azure OpenAI GPT-5 توسط LangChain4j*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
   
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.fa.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.fa.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage زمینه ماندگار فراهم می‌کند در حالی که UserMessages درخواست‌های فردی را در بر دارند*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 همه مسائل به یک رویکرد نیاز ندارند. برخی سوالات نیاز به پاسخ سریع دارند، برخی نیاز به تفکر عمیق. برخی نیاز به استدلال قابل مشاهده دارند، برخی فقط به نتایج نیاز دارند. این ماژول هشت الگوی پرامپت‌دهی را پوشش می‌دهد - هر کدام برای سناریوهای مختلف بهینه شده‌اند. شما با همه آن‌ها آزمایش خواهید کرد تا بفهمید هر رویکرد چه زمانی بهترین عملکرد را دارد.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.fa.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.fa.png" alt="Eight Prompting Patterns" width="800"/>
 
 *مروری بر هشت الگوی مهندسی پرامپت و موارد استفاده آن‌ها*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.fa.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.fa.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *رویکردهای استدلال کم اشتیاق (سریع، مستقیم) در مقابل پر اشتیاق (کامل، اکتشافی)*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - "بهترین روش‌ها برای ساختاردهی مقدمات ابزار در برنامه‌های تولیدی چیست؟"  
 > - "چگونه می‌توانم به‌روزرسانی‌های پیشرفت میانی را در رابط کاربری ضبط و نمایش دهم؟"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.fa.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.fa.png" alt="Task Execution Pattern" width="800"/>
 
 *برنامه‌ریزی → اجرا → خلاصه‌سازی جریان کاری برای وظایف چند مرحله‌ای*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.fa.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.fa.png" alt="Self-Reflection Cycle" width="800"/>
 
 *چرخه بهبود تکراری - تولید، ارزیابی، شناسایی مشکلات، بهبود، تکرار*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "بهترین روش برای تجزیه و استفاده برنامه‌نویسی از خروجی ساختاریافته چیست؟"  
 > - "چگونه می‌توانم سطوح شدت را در جلسات بازبینی مختلف به طور مداوم حفظ کنم؟"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.fa.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.fa.png" alt="Structured Analysis Pattern" width="800"/>
 
 *چارچوب چهار دسته‌ای برای بازبینی‌های مداوم کد با سطوح شدت*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
   
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.fa.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.fa.png" alt="Context Memory" width="800"/>
 
 *چگونه زمینه مکالمه در چند مرحله جمع می‌شود تا به حد توکن برسد*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.fa.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.fa.png" alt="Step-by-Step Pattern" width="800"/>
 
 *شکستن مسائل به مراحل منطقی صریح*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.fa.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.fa.png" alt="Constrained Output Pattern" width="800"/>
 
 *اجرای الزامات قالب، طول و ساختار خاص*
 
@@ -300,7 +300,7 @@ cat ../.env  # باید AZURE_OPENAI_ENDPOINT، API_KEY، DEPLOYMENT را نشا
 
 فقط روی دکمه پخش کنار "prompt-engineering" کلیک کنید تا این ماژول شروع شود، یا همه ماژول‌ها را همزمان اجرا کنید.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.fa.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.fa.png" alt="Spring Boot Dashboard" width="400"/>
 
 **گزینه ۲: استفاده از اسکریپت‌های شل**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
   
 ## تصاویر برنامه
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.fa.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.fa.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *داشبورد اصلی که همه ۸ الگوی مهندسی پرامپت را با ویژگی‌ها و موارد استفاده آن‌ها نشان می‌دهد*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 یک سوال ساده مانند "۱۵٪ از ۲۰۰ چقدر است؟" با کم‌اشتیاق بپرسید. پاسخ فوری و مستقیم دریافت خواهید کرد. حالا سوالی پیچیده مانند "یک استراتژی کشینگ برای یک API با ترافیک بالا طراحی کن" با پر اشتیاق بپرسید. ببینید چگونه مدل کند می‌شود و استدلال دقیق ارائه می‌دهد. همان مدل، همان ساختار سوال - اما پرامپت به آن می‌گوید چقدر باید فکر کند.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.fa.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.fa.png" alt="Low Eagerness Demo" width="800"/>
 *محاسبه سریع با حداقل استدلال*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.fa.png" alt="نمایش اشتیاق بالا" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.fa.png" alt="نمایش اشتیاق بالا" width="800"/>
 
 *استراتژی جامع کشینگ (۲.۸ مگابایت)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 جریان‌های کاری چندمرحله‌ای از برنامه‌ریزی اولیه و روایت پیشرفت بهره می‌برند. مدل توضیح می‌دهد که چه کاری انجام خواهد داد، هر مرحله را روایت می‌کند، سپس نتایج را خلاصه می‌کند.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.fa.png" alt="نمایش اجرای وظیفه" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.fa.png" alt="نمایش اجرای وظیفه" width="800"/>
 
 *ایجاد یک نقطه پایانی REST با روایت مرحله به مرحله (۳.۹ مگابایت)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 عبارت «ایجاد سرویس اعتبارسنجی ایمیل» را امتحان کنید. به جای فقط تولید کد و توقف، مدل تولید می‌کند، بر اساس معیارهای کیفیت ارزیابی می‌کند، نقاط ضعف را شناسایی می‌کند و بهبود می‌بخشد. خواهید دید که تا زمانی که کد به استانداردهای تولید برسد، تکرار می‌کند.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.fa.png" alt="نمایش کد خودبازتابی" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.fa.png" alt="نمایش کد خودبازتابی" width="800"/>
 
 *سرویس کامل اعتبارسنجی ایمیل (۵.۲ مگابایت)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 بازبینی کد نیازمند چارچوب‌های ارزیابی ثابت است. مدل کد را با استفاده از دسته‌بندی‌های ثابت (درستی، شیوه‌ها، عملکرد، امنیت) با سطوح شدت تحلیل می‌کند.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.fa.png" alt="نمایش تحلیل ساختاری" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.fa.png" alt="نمایش تحلیل ساختاری" width="800"/>
 
 *بازبینی کد مبتنی بر چارچوب*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 بپرسید «Spring Boot چیست؟» سپس بلافاصله دنبال کنید با «یک مثال نشان بده». مدل سوال اول شما را به خاطر می‌سپارد و به طور خاص یک مثال Spring Boot به شما می‌دهد. بدون حافظه، آن سوال دوم خیلی مبهم بود.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.fa.png" alt="نمایش چت چندمرحله‌ای" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.fa.png" alt="نمایش چت چندمرحله‌ای" width="800"/>
 
 *حفظ زمینه در سوالات مختلف*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 یک مسئله ریاضی انتخاب کنید و آن را با هر دو حالت استدلال مرحله به مرحله و اشتیاق کم امتحان کنید. اشتیاق کم فقط پاسخ را به شما می‌دهد - سریع اما مبهم. استدلال مرحله به مرحله هر محاسبه و تصمیم را به شما نشان می‌دهد.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.fa.png" alt="نمایش استدلال مرحله به مرحله" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.fa.png" alt="نمایش استدلال مرحله به مرحله" width="800"/>
 
 *مسئله ریاضی با مراحل صریح*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 وقتی به فرمت‌های خاص یا تعداد کلمات مشخص نیاز دارید، این الگو رعایت دقیق را تضمین می‌کند. امتحان کنید خلاصه‌ای با دقیقاً ۱۰۰ کلمه به صورت نکته‌وار تولید کنید.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.fa.png" alt="نمایش خروجی محدود شده" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.fa.png" alt="نمایش خروجی محدود شده" width="800"/>
 
 *خلاصه یادگیری ماشین با کنترل فرمت*
 
@@ -445,7 +445,7 @@ GPT-5 به شما اجازه می‌دهد تلاش محاسباتی را از �
 
 توجه کرده‌اید تگ‌های XML در درخواست‌ها؟ آن‌ها تزئینی نیستند. مدل‌ها دستورالعمل‌های ساختاریافته را قابل اطمینان‌تر از متن آزاد دنبال می‌کنند. وقتی به فرآیندهای چندمرحله‌ای یا منطق پیچیده نیاز دارید، ساختار به مدل کمک می‌کند بداند کجاست و بعد چه باید بکند.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.fa.png" alt="ساختار درخواست" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.fa.png" alt="ساختار درخواست" width="800"/>
 
 *آناتومی یک درخواست خوب ساختار یافته با بخش‌های واضح و سازماندهی به سبک XML*
 

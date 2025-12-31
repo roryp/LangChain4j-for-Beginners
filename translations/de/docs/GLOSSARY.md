@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T19:50:36+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-30T19:47:38+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "de"
 }
@@ -12,184 +12,176 @@ CO_OP_TRANSLATOR_METADATA:
 ## Inhaltsverzeichnis
 
 - [Kernkonzepte](../../../docs)
-- [LangChain4j Komponenten](../../../docs)
-- [KI/ML Konzepte](../../../docs)
-- [Prompt Engineering](../../../docs)
+- [LangChain4j-Komponenten](../../../docs)
+- [KI/ML-Konzepte](../../../docs)
+- [Prompt-Engineering](../../../docs)
 - [RAG (Retrieval-Augmented Generation)](../../../docs)
-- [Agenten und Werkzeuge](../../../docs)
+- [Agenten und Tools](../../../docs)
 - [Model Context Protocol (MCP)](../../../docs)
-- [Azure Dienste](../../../docs)
+- [Azure-Dienste](../../../docs)
 - [Testen und Entwicklung](../../../docs)
 
-Schnellreferenz für Begriffe und Konzepte, die im gesamten Kurs verwendet werden.
+Kurze Referenz für Begriffe und Konzepte, die im Kurs verwendet werden.
 
 ## Kernkonzepte
 
-**KI-Agent** – System, das KI nutzt, um autonom zu denken und zu handeln. [Modul 04](../04-tools/README.md)
+**AI Agent** - System, das KI verwendet, um eigenständig zu schlussfolgern und zu handeln. [Modul 04](../04-tools/README.md)
 
-**Kette** – Abfolge von Operationen, bei der die Ausgabe in den nächsten Schritt fließt.
+**Chain** - Folge von Operationen, bei der die Ausgabe in den nächsten Schritt einfließt.
 
-**Chunking** – Aufteilen von Dokumenten in kleinere Stücke. Typisch: 300-500 Tokens mit Überlappung. [Modul 03](../03-rag/README.md)
+**Chunking** - Aufteilen von Dokumenten in kleinere Stücke. Typisch: 300-500 Tokens mit Überlappung. [Modul 03](../03-rag/README.md)
 
-**Kontextfenster** – Maximale Anzahl Tokens, die ein Modell verarbeiten kann. GPT-5: 400K Tokens.
+**Context Window** - Maximale Anzahl an Tokens, die ein Modell verarbeiten kann. GPT-5: 400K Tokens.
 
-**Embeddings** – Numerische Vektoren, die die Bedeutung von Text repräsentieren. [Modul 03](../03-rag/README.md)
+**Embeddings** - Numerische Vektoren, die die Bedeutung von Text repräsentieren. [Modul 03](../03-rag/README.md)
 
-**Funktionsaufruf** – Modell generiert strukturierte Anfragen zum Aufrufen externer Funktionen. [Modul 04](../04-tools/README.md)
+**Function Calling** - Das Modell erzeugt strukturierte Anfragen zum Aufruf externer Funktionen. [Modul 04](../04-tools/README.md)
 
-**Halluzination** – Wenn Modelle falsche, aber plausible Informationen erzeugen.
+**Hallucination** - Wenn Modelle inkorrekte, aber plausibel wirkende Informationen erzeugen.
 
-**Prompt** – Texteingabe an ein Sprachmodell. [Modul 02](../02-prompt-engineering/README.md)
+**Prompt** - Texteingabe an ein Sprachmodell. [Modul 02](../02-prompt-engineering/README.md)
 
-**Semantische Suche** – Suche nach Bedeutung mittels Embeddings, nicht Schlüsselwörtern. [Modul 03](../03-rag/README.md)
+**Semantic Search** - Suche nach Bedeutung unter Verwendung von Embeddings, nicht nach Schlüsselwörtern. [Modul 03](../03-rag/README.md)
 
-**Zustandsbehaftet vs. Zustandslos** – Zustandslos: kein Gedächtnis. Zustandsbehaftet: pflegt Gesprächshistorie. [Modul 01](../01-introduction/README.md)
+**Stateful vs Stateless** - Stateless: kein Gedächtnis. Stateful: behält Gesprächshistorie bei. [Modul 01](../01-introduction/README.md)
 
-**Tokens** – Grundlegende Textelemente, die Modelle verarbeiten. Beeinflussen Kosten und Limits. [Modul 01](../01-introduction/README.md)
+**Tokens** - Grundlegende Texteinheiten, die Modelle verarbeiten. Beeinflussen Kosten und Limits. [Modul 01](../01-introduction/README.md)
 
-**Werkzeugverkettung** – Sequenzielle Ausführung von Werkzeugen, bei der Ausgabe den nächsten Aufruf informiert. [Modul 04](../04-tools/README.md)
+**Tool Chaining** - Sequenzielle Ausführung von Tools, bei der die Ausgabe den nächsten Aufruf informiert. [Modul 04](../04-tools/README.md)
 
-## LangChain4j Komponenten
+## LangChain4j-Komponenten
 
-**AiServices** – Erstellt typsichere KI-Service-Schnittstellen.
+**AiServices** - Erstellt typsichere AI-Service-Schnittstellen.
 
-**OpenAiOfficialChatModel** – Einheitlicher Client für OpenAI und Azure OpenAI Modelle.
+**OpenAiOfficialChatModel** - Vereinheitlichter Client für OpenAI- und Azure OpenAI-Modelle.
 
-**OpenAiOfficialEmbeddingModel** – Erstellt Embeddings mit OpenAI Official Client (unterstützt OpenAI und Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Erstellt Embeddings mithilfe des OpenAI Official Clients (unterstützt sowohl OpenAI als auch Azure OpenAI).
 
-**ChatModel** – Kernschnittstelle für Sprachmodelle.
+**ChatModel** - Kernschnittstelle für Sprachmodelle.
 
-**ChatMemory** – Pflegt Gesprächshistorie.
+**ChatMemory** - Verwaltet die Gesprächshistorie.
 
-**ContentRetriever** – Findet relevante Dokumentenabschnitte für RAG.
+**ContentRetriever** - Findet relevante Dokumentabschnitte für RAG.
 
-**DocumentSplitter** – Teilt Dokumente in Abschnitte.
+**DocumentSplitter** - Teilt Dokumente in Abschnitte.
 
-**EmbeddingModel** – Wandelt Text in numerische Vektoren um.
+**EmbeddingModel** - Wandelt Text in numerische Vektoren um.
 
-**EmbeddingStore** – Speichert und ruft Embeddings ab.
+**EmbeddingStore** - Speichert und ruft Embeddings ab.
 
-**MessageWindowChatMemory** – Pflegt ein gleitendes Fenster der letzten Nachrichten.
+**MessageWindowChatMemory** - Verwaltet ein gleitendes Fenster der letzten Nachrichten.
 
-**PromptTemplate** – Erstellt wiederverwendbare Prompts mit `{{variable}}` Platzhaltern.
+**PromptTemplate** - Erstellt wiederverwendbare Prompts mit `{{variable}}` Platzhaltern.
 
-**TextSegment** – Textabschnitt mit Metadaten. Verwendet in RAG.
+**TextSegment** - Textabschnitt mit Metadaten. Wird in RAG verwendet.
 
-**ToolExecutionRequest** – Repräsentiert Werkzeugausführungsanfrage.
+**ToolExecutionRequest** - Repräsentiert eine Anfrage zur Tool-Ausführung.
 
-**UserMessage / AiMessage / SystemMessage** – Nachrichtentypen im Gespräch.
+**UserMessage / AiMessage / SystemMessage** - Nachrichtentypen in Konversationen.
 
-## KI/ML Konzepte
+## KI/ML-Konzepte
 
-**Few-Shot Learning** – Beispiele in Prompts bereitstellen. [Modul 02](../02-prompt-engineering/README.md)
+**Few-Shot Learning** - Bereitstellung von Beispielen in Prompts. [Modul 02](../02-prompt-engineering/README.md)
 
-**Großes Sprachmodell (LLM)** – KI-Modelle, trainiert auf umfangreichen Textdaten.
+**Large Language Model (LLM)** - KI-Modelle, die auf umfangreichen Textdaten trainiert sind.
 
-**Reasoning Effort** – GPT-5 Parameter zur Steuerung der Denktiefe. [Modul 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - GPT-5-Parameter, der die Tiefe des Denkens steuert. [Modul 02](../02-prompt-engineering/README.md)
 
-**Temperatur** – Steuert Zufälligkeit der Ausgabe. Niedrig=deterministisch, hoch=kreativ.
+**Temperature** - Steuert die Zufälligkeit der Ausgabe. Niedrig=deterministisch, hoch=kreativ.
 
-**Vektor-Datenbank** – Spezialisierte Datenbank für Embeddings. [Modul 03](../03-rag/README.md)
+**Vector Database** - Spezialisierte Datenbank für Embeddings. [Modul 03](../03-rag/README.md)
 
-**Zero-Shot Learning** – Aufgaben ohne Beispiele ausführen. [Modul 02](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - Ausführen von Aufgaben ohne Beispiele. [Modul 02](../02-prompt-engineering/README.md)
 
 ## Prompt Engineering - [Modul 02](../02-prompt-engineering/README.md)
 
-**Chain-of-Thought** – Schrittweises Denken für bessere Genauigkeit.
+**Chain-of-Thought** - Schritt-für-Schritt-Denkweise für höhere Genauigkeit.
 
-**Eingeschränkte Ausgabe** – Erzwingt bestimmtes Format oder Struktur.
+**Constrained Output** - Erzwingen eines spezifischen Formats oder einer bestimmten Struktur.
 
-**Hohe Eifer** – GPT-5 Muster für gründliches Denken.
+**High Eagerness** - GPT-5-Muster für gründliches Denken.
 
-**Niedriger Eifer** – GPT-5 Muster für schnelle Antworten.
+**Low Eagerness** - GPT-5-Muster für schnelle Antworten.
 
-**Mehrfach-Runden-Gespräch** – Kontext über mehrere Austausche erhalten.
+**Multi-Turn Conversation** - Kontext über mehrere Austausche hinweg behalten.
 
-**Rollenbasiertes Prompting** – Modellpersona über Systemnachrichten festlegen.
+**Role-Based Prompting** - Festlegen einer Modellpersona über Systemnachrichten.
 
-**Selbstreflexion** – Modell bewertet und verbessert seine Ausgabe.
+**Self-Reflection** - Das Modell bewertet und verbessert seine Ausgabe.
 
-**Strukturierte Analyse** – Fester Bewertungsrahmen.
+**Structured Analysis** - Fester Bewertungsrahmen.
 
-**Aufgabenausführungsmuster** – Planen → Ausführen → Zusammenfassen.
+**Task Execution Pattern** - Plan → Ausführen → Zusammenfassen.
 
 ## RAG (Retrieval-Augmented Generation) - [Modul 03](../03-rag/README.md)
 
-**Dokumentenverarbeitungspipeline** – Laden → aufteilen → einbetten → speichern.
+**Document Processing Pipeline** - Laden → aufteilen → einbetten → speichern.
 
-**In-Memory Embedding Store** – Nicht-persistenter Speicher für Tests.
+**In-Memory Embedding Store** - Nicht-persistenter Speicher für Tests.
 
-**RAG** – Kombiniert Abruf mit Generierung zur fundierten Antwort.
+**RAG** - Kombiniert Retrieval mit Generierung, um Antworten zu untermauern.
 
-**Ähnlichkeitsscore** – Maß (0-1) für semantische Ähnlichkeit.
+**Similarity Score** - Maß (0-1) der semantischen Ähnlichkeit.
 
-**Quellenreferenz** – Metadaten über abgerufene Inhalte.
+**Source Reference** - Metadaten über abgerufene Inhalte.
 
-## Agenten und Werkzeuge - [Modul 04](../04-tools/README.md)
+## Agenten und Tools - [Modul 04](../04-tools/README.md)
 
-**@Tool Annotation** – Markiert Java-Methoden als KI-aufrufbare Werkzeuge.
+**@Tool Annotation** - Markiert Java-Methoden als von KI aufrufbare Tools.
 
-**ReAct Muster** – Denken → Handeln → Beobachten → Wiederholen.
+**ReAct Pattern** - Überlegen → Handeln → Beobachten → Wiederholen.
 
-**Sitzungsverwaltung** – Getrennte Kontexte für verschiedene Nutzer.
+**Session Management** - Getrennte Kontexte für verschiedene Benutzer.
 
-**Werkzeug** – Funktion, die ein KI-Agent aufrufen kann.
+**Tool** - Funktion, die ein KI-Agent aufrufen kann.
 
-**Werkzeugbeschreibung** – Dokumentation von Zweck und Parametern.
+**Tool Description** - Dokumentation des Zwecks und der Parameter eines Tools.
 
 ## Model Context Protocol (MCP) - [Modul 05](../05-mcp/README.md)
 
-**Docker Transport** – MCP-Server im Docker-Container.
+**MCP** - Standard zur Verbindung von KI-Anwendungen mit externen Tools.
 
-**MCP** – Standard zur Verbindung von KI-Apps mit externen Werkzeugen.
+**MCP Client** - Anwendung, die sich mit MCP-Servern verbindet.
 
-**MCP Client** – Anwendung, die sich mit MCP-Servern verbindet.
+**MCP Server** - Dienst, der Tools über MCP bereitstellt.
 
-**MCP Server** – Dienst, der Werkzeuge über MCP bereitstellt.
+**Stdio Transport** - Server als Subprozess über stdin/stdout.
 
-**Server-Sent Events (SSE)** – Server-zu-Client Streaming über HTTP.
+**Tool Discovery** - Client fragt den Server nach verfügbaren Tools.
 
-**Stdio Transport** – Server als Unterprozess via stdin/stdout.
+## Azure-Dienste - [Modul 01](../01-introduction/README.md)
 
-**Streamable HTTP Transport** – HTTP mit SSE für Echtzeitkommunikation.
+**Azure AI Search** - Cloud-Suche mit Vektor-Funktionen. [Modul 03](../03-rag/README.md)
 
-**Werkzeugerkennung** – Client fragt Server nach verfügbaren Werkzeugen ab.
+**Azure Developer CLI (azd)** - Stellt Azure-Ressourcen bereit.
 
-## Azure Dienste - [Modul 01](../01-introduction/README.md)
+**Azure OpenAI** - Microsofts Enterprise-KI-Dienst.
 
-**Azure AI Search** – Cloud-Suche mit Vektor-Funktionalität. [Modul 03](../03-rag/README.md)
+**Bicep** - Azure Infrastructure-as-Code-Sprache. [Infrastrukturleitfaden](../01-introduction/infra/README.md)
 
-**Azure Developer CLI (azd)** – Stellt Azure-Ressourcen bereit.
+**Deployment Name** - Name für die Bereitstellung eines Modells in Azure.
 
-**Azure OpenAI** – Microsofts Enterprise-KI-Dienst.
-
-**Bicep** – Azure Infrastructure-as-Code Sprache. [Infrastrukturleitfaden](../01-introduction/infra/README.md)
-
-**Bereitstellungsname** – Name für Modellbereitstellung in Azure.
-
-**GPT-5** – Neuestes OpenAI-Modell mit Steuerung der Denkweise. [Modul 02](../02-prompt-engineering/README.md)
+**GPT-5** - Aktuellstes OpenAI-Modell mit Steuerung des Reasoning. [Modul 02](../02-prompt-engineering/README.md)
 
 ## Testen und Entwicklung - [Testanleitung](TESTING.md)
 
-**Dev Container** – Containerisierte Entwicklungsumgebung. [Konfiguration](../../../.devcontainer/devcontainer.json)
+**Dev Container** - Containerisierte Entwicklungsumgebung. [Konfiguration](../../../.devcontainer/devcontainer.json)
 
-**GitHub Modelle** – Kostenloser KI-Modell-Spielplatz. [Modul 00](../00-quick-start/README.md)
+**GitHub Models** - Kostenlose KI-Modell-Sandbox. [Modul 00](../00-quick-start/README.md)
 
-**In-Memory Testing** – Testen mit In-Memory-Speicher.
+**In-Memory Testing** - Tests mit In-Memory-Speicher.
 
-**Integrationstests** – Testen mit echter Infrastruktur.
+**Integration Testing** - Tests mit realer Infrastruktur.
 
-**Maven** – Java Build-Automatisierungstool.
+**Maven** - Build-Automatisierungstool für Java.
 
-**Mockito** – Java Mocking-Framework.
+**Mockito** - Java Mocking-Framework.
 
-**Spring Boot** – Java-Anwendungsframework. [Modul 01](../01-introduction/README.md)
-
-**Testcontainers** – Docker-Container in Tests.
+**Spring Boot** - Java-Anwendungsframework. [Modul 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache ist als maßgebliche Quelle zu betrachten. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
+**Haftungsausschluss**:
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ausgangssprache ist als maßgebliche Quelle zu betrachten. Bei kritischen Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

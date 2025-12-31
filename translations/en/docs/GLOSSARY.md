@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T19:48:39+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-30T19:05:26+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "en"
 }
@@ -139,19 +139,13 @@ Quick reference for terms and concepts used throughout the course.
 
 ## Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)
 
-**Docker Transport** - MCP server in Docker container.
-
 **MCP** - Standard for connecting AI apps to external tools.
 
 **MCP Client** - Application that connects to MCP servers.
 
 **MCP Server** - Service exposing tools via MCP.
 
-**Server-Sent Events (SSE)** - Server-to-client streaming over HTTP.
-
 **Stdio Transport** - Server as subprocess via stdin/stdout.
-
-**Streamable HTTP Transport** - HTTP with SSE for real-time communication.
 
 **Tool Discovery** - Client queries server for available tools.
 
@@ -185,11 +179,9 @@ Quick reference for terms and concepts used throughout the course.
 
 **Spring Boot** - Java application framework. [Module 01](../01-introduction/README.md)
 
-**Testcontainers** - Docker containers in tests.
-
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+Disclaimer:
+This document has been translated using the AI translation service Co-op Translator (https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

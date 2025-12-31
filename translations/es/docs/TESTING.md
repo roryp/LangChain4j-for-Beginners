@@ -1,29 +1,29 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b975537560c404d5f254331832811e78",
-  "translation_date": "2025-12-13T20:33:02+00:00",
+  "original_hash": "ed93b3c14d58734ac10162967da958c1",
+  "translation_date": "2025-12-30T19:34:19+00:00",
   "source_file": "docs/TESTING.md",
   "language_code": "es"
 }
 -->
-# Pruebas de Aplicaciones LangChain4j
+# Pruebas de aplicaciones LangChain4j
 
-## Tabla de Contenidos
+## Tabla de contenidos
 
-- [Inicio Rápido](../../../docs)
-- [Qué Cubren las Pruebas](../../../docs)
-- [Ejecutando las Pruebas](../../../docs)
-- [Ejecutando Pruebas en VS Code](../../../docs)
-- [Patrones de Prueba](../../../docs)
-- [Filosofía de Pruebas](../../../docs)
-- [Próximos Pasos](../../../docs)
+- [Inicio rápido](../../../docs)
+- [Qué cubren las pruebas](../../../docs)
+- [Ejecutar las pruebas](../../../docs)
+- [Ejecutar pruebas en VS Code](../../../docs)
+- [Patrones de prueba](../../../docs)
+- [Filosofía de las pruebas](../../../docs)
+- [Siguientes pasos](../../../docs)
 
-Esta guía te lleva a través de las pruebas que demuestran cómo probar aplicaciones de IA sin requerir claves API o servicios externos.
+Esta guía te lleva a través de las pruebas que demuestran cómo probar aplicaciones de IA sin requerir claves de API ni servicios externos.
 
-## Inicio Rápido
+## Quick Start
 
-Ejecuta todas las pruebas con un solo comando:
+Ejecute todas las pruebas con un solo comando:
 
 **Bash:**
 ```bash
@@ -35,30 +35,30 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043bdfde5c208f8c0760a88a818f6846763583b614a5de37d52.es.png" alt="Resultados de Pruebas Exitosas" width="800"/>
+<img src="../../../translated_images/test-results.ea5c98d8f3642043.es.png" alt="Resultados de pruebas exitosas" width="800"/>
 
-*Ejecución exitosa de pruebas mostrando todas las pruebas aprobadas sin fallos*
+*Ejecución de pruebas exitosa que muestra todas las pruebas pasando con cero fallos*
 
-## Qué Cubren las Pruebas
+## What the Tests Cover
 
-Este curso se enfoca en **pruebas unitarias** que se ejecutan localmente. Cada prueba demuestra un concepto específico de LangChain4j de forma aislada.
+Este curso se centra en **pruebas unitarias** que se ejecutan localmente. Cada prueba demuestra un concepto específico de LangChain4j de forma aislada.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e4da944aec40169f37adf86fd932d3dfd56a4a86b37401ab9.es.png" alt="Pirámide de Pruebas" width="800"/>
+<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.es.png" alt="Pirámide de pruebas" width="800"/>
 
-*Pirámide de pruebas mostrando el equilibrio entre pruebas unitarias (rápidas, aisladas), pruebas de integración (componentes reales) y pruebas end-to-end (sistema completo con Docker). Esta capacitación cubre pruebas unitarias.*
+*Pirámide de pruebas que muestra el equilibrio entre pruebas unitarias (rápidas, aisladas), pruebas de integración (componentes reales) y pruebas end-to-end. Esta formación cubre las pruebas unitarias.*
 
-| Módulo | Pruebas | Enfoque | Archivos Clave |
-|--------|---------|---------|----------------|
-| **00 - Inicio Rápido** | 6 | Plantillas de prompt y sustitución de variables | `SimpleQuickStartTest.java` |
-| **01 - Introducción** | 8 | Memoria de conversación y chat con estado | `SimpleConversationTest.java` |
-| **02 - Ingeniería de Prompt** | 12 | Patrones GPT-5, niveles de entusiasmo, salida estructurada | `SimpleGpt5PromptTest.java` |
+| Módulo | Pruebas | Enfoque | Archivos clave |
+|--------|-------|-------|-----------|
+| **00 - Quick Start** | 6 | Plantillas de prompt y sustitución de variables | `SimpleQuickStartTest.java` |
+| **01 - Introduction** | 8 | Memoria de conversación y chat con estado | `SimpleConversationTest.java` |
+| **02 - Prompt Engineering** | 12 | Patrones de GPT-5, niveles de eagerness, salida estructurada | `SimpleGpt5PromptTest.java` |
 | **03 - RAG** | 10 | Ingesta de documentos, embeddings, búsqueda por similitud | `DocumentServiceTest.java` |
-| **04 - Herramientas** | 12 | Llamadas a funciones y encadenamiento de herramientas | `SimpleToolsTest.java` |
-| **05 - MCP** | 15 | Protocolo de Contexto de Modelo con Docker | `SimpleMcpTest.java`, `McpDockerTransportTest.java` |
+| **04 - Tools** | 12 | Llamadas a funciones y encadenamiento de herramientas | `SimpleToolsTest.java` |
+| **05 - MCP** | 8 | Model Context Protocol con transporte StdIO | `SimpleMcpTest.java` |
 
-## Ejecutando las Pruebas
+## Running the Tests
 
-**Ejecuta todas las pruebas desde la raíz:**
+**Ejecute todas las pruebas desde la raíz:**
 
 **Bash:**
 ```bash
@@ -70,23 +70,23 @@ mvn test
 mvn --% test
 ```
 
-**Ejecuta pruebas para un módulo específico:**
+**Ejecute las pruebas de un módulo específico:**
 
 **Bash:**
 ```bash
 cd 01-introduction && mvn test
-# O desde la raíz
+# O desde root
 mvn test -pl 01-introduction
 ```
 
 **PowerShell:**
 ```powershell
 cd 01-introduction; mvn --% test
-# O desde la raíz
+# O desde root
 mvn --% test -pl 01-introduction
 ```
 
-**Ejecuta una sola clase de prueba:**
+**Ejecute una sola clase de prueba:**
 
 **Bash:**
 ```bash
@@ -98,49 +98,45 @@ mvn test -Dtest=SimpleConversationTest
 mvn --% test -Dtest=SimpleConversationTest
 ```
 
-**Ejecuta un método de prueba específico:**
+**Ejecute un método de prueba específico:**
 
 **Bash:**
 ```bash
-mvn test -Dtest=SimpleConversationTest#deberíaMantenerHistorialDeConversación
+mvn test -Dtest=SimpleConversationTest#debería mantener el historial de la conversación
 ```
 
 **PowerShell:**
 ```powershell
-mvn --% test -Dtest=SimpleConversationTest#deberíaMantenerHistorialDeConversación
+mvn --% test -Dtest=SimpleConversationTest#debería mantener el historial de conversación
 ```
 
-## Ejecutando Pruebas en VS Code
+## Running Tests in VS Code
 
-Si usas Visual Studio Code, el Explorador de Pruebas proporciona una interfaz gráfica para ejecutar y depurar pruebas.
+Si usas Visual Studio Code, el Test Explorer proporciona una interfaz gráfica para ejecutar y depurar pruebas.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dcedbacf98a3539218c1d0c700307ab77c031590ae63d0be59b6.es.png" alt="Explorador de Pruebas de VS Code" width="800"/>
+<img src="../../../translated_images/vscode-testing.f02dd5917289dced.es.png" alt="Explorador de pruebas de VS Code" width="800"/>
 
-*Explorador de Pruebas de VS Code mostrando el árbol de pruebas con todas las clases de prueba Java y métodos individuales*
+*VS Code Test Explorer mostrando el árbol de pruebas con todas las clases de prueba Java y métodos de prueba individuales*
 
 **Para ejecutar pruebas en VS Code:**
 
-1. Abre el Explorador de Pruebas haciendo clic en el ícono de matraz en la Barra de Actividades
+1. Abre el Test Explorer haciendo clic en el icono del matraz en la Activity Bar
 2. Expande el árbol de pruebas para ver todos los módulos y clases de prueba
 3. Haz clic en el botón de reproducir junto a cualquier prueba para ejecutarla individualmente
-4. Haz clic en "Run All Tests" para ejecutar toda la suite
-5. Haz clic derecho en cualquier prueba y selecciona "Debug Test" para establecer puntos de interrupción y depurar el código
+4. Haz clic en "Run All Tests" para ejecutar todo el conjunto
+5. Haz clic derecho en cualquier prueba y selecciona "Debug Test" para poner puntos de interrupción y depurar paso a paso
 
-El Explorador de Pruebas muestra marcas verdes para pruebas aprobadas y proporciona mensajes detallados de fallos cuando las pruebas fallan.
+El Test Explorer muestra marcas verdes para las pruebas que pasan y proporciona mensajes detallados de fallo cuando las pruebas fallan.
 
-## Patrones de Prueba
+## Testing Patterns
 
-<img src="../../../translated_images/testing-patterns.02581af1c9ef742460887004e9940994dba342ec726efc4ddb2b0215b56a1d89.es.png" alt="Seis Patrones de Prueba" width="800"/>
+### Pattern 1: Testing Prompt Templates
 
-*Seis patrones de prueba para aplicaciones LangChain4j: plantillas de prompt, simulación de modelos, aislamiento de conversación, pruebas de herramientas, RAG en memoria e integración con Docker*
+El patrón más simple prueba las plantillas de prompt sin llamar a ningún modelo de IA. Verificas que la sustitución de variables funcione correctamente y que los prompts estén formateados según lo esperado.
 
-### Patrón 1: Pruebas de Plantillas de Prompt
+<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.es.png" alt="Pruebas de plantillas de prompt" width="800"/>
 
-El patrón más simple prueba plantillas de prompt sin llamar a ningún modelo de IA. Verificas que la sustitución de variables funcione correctamente y que los prompts estén formateados como se espera.
-
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee3dfceaa5fa903098bdb174674acc5009a2f3d60cb07eb4e9.es.png" alt="Pruebas de Plantillas de Prompt" width="800"/>
-
-*Pruebas de plantillas de prompt mostrando el flujo de sustitución de variables: plantilla con marcadores → valores aplicados → salida formateada verificada*
+*Prueba de plantillas de prompt mostrando el flujo de sustitución de variables: plantilla con marcadores → valores aplicados → salida formateada verificada*
 
 ```java
 @Test
@@ -161,25 +157,25 @@ void testPromptTemplateFormatting() {
 
 Esta prueba se encuentra en `00-quick-start/src/test/java/com/example/langchain4j/quickstart/SimpleQuickStartTest.java`.
 
-**Ejecuta la prueba:**
+**Ejecutarla:**
 
 **Bash:**
 ```bash
-cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#pruebaDeFormatoDePlantillaDeSolicitud
+cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#pruebaFormatoPlantillaDePrompt
 ```
 
 **PowerShell:**
 ```powershell
-cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#pruebaDeFormatoDePlantillaDeSolicitud
+cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#prueba de formato de plantilla de prompt
 ```
 
-### Patrón 2: Simulación de Modelos de Lenguaje
+### Pattern 2: Mocking Language Models
 
-Al probar la lógica de conversación, usa Mockito para crear modelos falsos que devuelven respuestas predeterminadas. Esto hace que las pruebas sean rápidas, gratuitas y deterministas.
+Al probar la lógica de conversación, usa Mockito para crear modelos falsos que devuelvan respuestas predeterminadas. Esto hace que las pruebas sean rápidas, gratuitas y deterministas.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845ee07556f9520ac45c7f776d0879434315756020cd8b1d5b73.es.png" alt="Comparación Mock vs API Real" width="800"/>
+<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.es.png" alt="Comparación Mock vs Real API" width="800"/>
 
-*Comparación mostrando por qué se prefieren los mocks para pruebas: son rápidos, gratuitos, deterministas y no requieren claves API*
+*Comparación que muestra por qué se prefieren los mocks para las pruebas: son rápidos, gratuitos, deterministas y no requieren claves de API*
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -229,15 +225,15 @@ class SimpleConversationTest {
 }
 ```
 
-Este patrón aparece en `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. El mock asegura un comportamiento consistente para que puedas verificar que la gestión de memoria funciona correctamente.
+Este patrón aparece en `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. El mock asegura un comportamiento consistente para que puedas verificar que la gestión de la memoria funcione correctamente.
 
-### Patrón 3: Pruebas de Aislamiento de Conversación
+### Pattern 3: Testing Conversation Isolation
 
-La memoria de conversación debe mantener separados a múltiples usuarios. Esta prueba verifica que las conversaciones no mezclen contextos.
+La memoria de la conversación debe mantener separados a múltiples usuarios. Esta prueba verifica que las conversaciones no mezclen contextos.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f860d81c37a97181c0e0a2ff996d38f314f06b35cc1e08ca3.es.png" alt="Aislamiento de Conversación" width="800"/>
+<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.es.png" alt="Aislamiento de conversación" width="800"/>
 
-*Pruebas de aislamiento de conversación mostrando almacenes de memoria separados para diferentes usuarios para evitar mezcla de contextos*
+*Prueba de aislamiento de conversación mostrando almacenes de memoria separados para diferentes usuarios para evitar la mezcla de contextos*
 
 ```java
 @Test
@@ -263,13 +259,13 @@ void shouldIsolateConversationsByid() {
 
 Cada conversación mantiene su propio historial independiente. En sistemas de producción, este aislamiento es crítico para aplicaciones multiusuario.
 
-### Patrón 4: Pruebas Independientes de Herramientas
+### Pattern 4: Testing Tools Independently
 
-Las herramientas son funciones que la IA puede llamar. Pruébalas directamente para asegurar que funcionen correctamente sin importar las decisiones de la IA.
+Las herramientas son funciones que la IA puede invocar. Pruébalas directamente para asegurarte de que funcionan correctamente independientemente de las decisiones de la IA.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924e7e7cd41be8ba5ccb62f16962b85f53953d46cc6317d2972.es.png" alt="Pruebas de Herramientas" width="800"/>
+<img src="../../../translated_images/tools-testing.3e1706817b0b3924.es.png" alt="Pruebas de herramientas" width="800"/>
 
-*Pruebas de herramientas independientemente mostrando ejecución simulada de herramientas sin llamadas a IA para verificar la lógica de negocio*
+*Pruebas de herramientas de forma independiente mostrando la ejecución de la herramienta con mocks sin llamadas a la IA para verificar la lógica de negocio*
 
 ```java
 @Test
@@ -292,15 +288,15 @@ void shouldDemonstrateToolChaining() {
 }
 ```
 
-Estas pruebas de `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` validan la lógica de herramientas sin involucrar IA. El ejemplo de encadenamiento muestra cómo la salida de una herramienta alimenta la entrada de otra.
+Estas pruebas de `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` validan la lógica de las herramientas sin intervención de IA. El ejemplo de encadenamiento muestra cómo la salida de una herramienta alimenta la entrada de otra.
 
-### Patrón 5: Pruebas RAG en Memoria
+### Pattern 5: In-Memory RAG Testing
 
-Los sistemas RAG tradicionalmente requieren bases de datos vectoriales y servicios de embeddings. El patrón en memoria te permite probar toda la canalización sin dependencias externas.
+Los sistemas RAG tradicionalmente requieren bases de datos vectoriales y servicios de embeddings. El patrón en memoria te permite probar todo el pipeline sin dependencias externas.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b14fcda9103bba011864f1d0882b27a9886c3cf5b446522ce3.es.png" alt="Pruebas RAG en Memoria" width="800"/>
+<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.es.png" alt="Pruebas RAG en memoria" width="800"/>
 
-*Flujo de trabajo de pruebas RAG en memoria mostrando análisis de documentos, almacenamiento de embeddings y búsqueda por similitud sin requerir base de datos*
+*Flujo de trabajo de pruebas RAG en memoria mostrando el parseo de documentos, almacenamiento de embeddings y búsqueda por similitud sin requerir una base de datos*
 
 ```java
 @Test
@@ -317,19 +313,15 @@ void testProcessTextDocument() {
 }
 ```
 
-Esta prueba de `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` crea un documento en memoria y verifica el fragmentado y manejo de metadatos.
+Esta prueba de `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` crea un documento en memoria y verifica el chunking y el manejo de metadatos.
 
-### Patrón 6: Pruebas de Integración con Docker
+### Pattern 6: MCP Integration Testing
 
-Algunas características necesitan infraestructura real. El módulo MCP usa Testcontainers para levantar contenedores Docker para pruebas de integración. Estas validan que tu código funcione con servicios reales manteniendo el aislamiento de pruebas.
+El módulo MCP prueba la integración del Model Context Protocol usando transporte stdio. Estas pruebas verifican que tu aplicación pueda lanzar y comunicarse con servidores MCP como subprocesos.
 
-<img src="../../../translated_images/mcp-testing.bb3b3e92e47acb4b3dfb12715b4e113655f16c11ba39c2ffabae557bc6c3734c.es.png" alt="Pruebas de Integración MCP con Docker" width="800"/>
+Las pruebas en `05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` validan el comportamiento del cliente MCP.
 
-*Pruebas de integración MCP con Testcontainers mostrando ciclo de vida automatizado de contenedores: inicio, ejecución de pruebas, parada y limpieza*
-
-Las pruebas en `05-mcp/src/test/java/com/example/langchain4j/mcp/McpDockerTransportTest.java` requieren que Docker esté en ejecución.
-
-**Ejecuta las pruebas:**
+**Ejecutarlas:**
 
 **Bash:**
 ```bash
@@ -341,38 +333,38 @@ cd 05-mcp && mvn test
 cd 05-mcp; mvn --% test
 ```
 
-## Filosofía de Pruebas
+## Testing Philosophy
 
-Prueba tu código, no la IA. Tus pruebas deben validar el código que escribes verificando cómo se construyen los prompts, cómo se gestiona la memoria y cómo se ejecutan las herramientas. Las respuestas de IA varían y no deberían formar parte de las aserciones de prueba. Pregúntate si tu plantilla de prompt sustituye variables correctamente, no si la IA da la respuesta correcta.
+Prueba tu código, no la IA. Tus pruebas deben validar el código que escribes comprobando cómo se construyen los prompts, cómo se gestiona la memoria y cómo se ejecutan las herramientas. Las respuestas de la IA varían y no deberían formar parte de las aserciones de las pruebas. Pregúntate si tu plantilla de prompt sustituye correctamente las variables, no si la IA da la respuesta correcta.
 
-Usa mocks para modelos de lenguaje. Son dependencias externas que son lentas, costosas y no deterministas. Simularlas hace que las pruebas sean rápidas con milisegundos en lugar de segundos, gratuitas sin costos de API y deterministas con el mismo resultado cada vez.
+Usa mocks para los modelos de lenguaje. Son dependencias externas que son lentas, costosas y no deterministas. El mocking hace que las pruebas sean rápidas en milisegundos en lugar de segundos, gratuitas sin costes de API y deterministas con el mismo resultado cada vez.
 
-Mantén las pruebas independientes. Cada prueba debe configurar sus propios datos, no depender de otras pruebas y limpiar después de sí misma. Las pruebas deben pasar sin importar el orden de ejecución.
+Mantén las pruebas independientes. Cada prueba debe configurar sus propios datos, no depender de otras pruebas y limpiar después de sí misma. Las pruebas deben pasar independientemente del orden de ejecución.
 
-Prueba casos límite más allá del camino feliz. Prueba entradas vacías, entradas muy grandes, caracteres especiales, parámetros inválidos y condiciones de frontera. Estos a menudo revelan errores que el uso normal no expone.
+Prueba casos límite más allá del camino feliz. Prueba entradas vacías, entradas muy grandes, caracteres especiales, parámetros inválidos y condiciones límite. Estos suelen revelar errores que el uso normal no expone.
 
-Usa nombres descriptivos. Compara `shouldMaintainConversationHistoryAcrossMultipleMessages()` con `test1()`. El primero te dice exactamente qué se está probando, facilitando mucho la depuración de fallos.
+Usa nombres descriptivos. Compara shouldMaintainConversationHistoryAcrossMultipleMessages() con test1(). El primero te dice exactamente qué se está probando, haciendo que depurar fallos sea mucho más fácil.
 
-## Próximos Pasos
+## Next Steps
 
 Ahora que entiendes los patrones de prueba, profundiza en cada módulo:
 
-- **[00 - Inicio Rápido](../00-quick-start/README.md)** - Comienza con los conceptos básicos de plantillas de prompt
-- **[01 - Introducción](../01-introduction/README.md)** - Aprende gestión de memoria de conversación
-- **[02 - Ingeniería de Prompt](../02-prompt-engineering/README.md)** - Domina patrones de prompting GPT-5
+- **[00 - Quick Start](../00-quick-start/README.md)** - Comienza con los conceptos básicos de plantillas de prompt
+- **[01 - Introduction](../01-introduction/README.md)** - Aprende la gestión de memoria de conversación
+- **[02 - Prompt Engineering](../02-prompt-engineering/README.md)** - Domina los patrones de prompting para GPT-5
 - **[03 - RAG](../03-rag/README.md)** - Construye sistemas de generación aumentada por recuperación
-- **[04 - Herramientas](../04-tools/README.md)** - Implementa llamadas a funciones y cadenas de herramientas
-- **[05 - MCP](../05-mcp/README.md)** - Integra el Protocolo de Contexto de Modelo con Docker
+- **[04 - Tools](../04-tools/README.md)** - Implementa llamadas a funciones y cadenas de herramientas
+- **[05 - MCP](../05-mcp/README.md)** - Integra Model Context Protocol
 
-El README de cada módulo proporciona explicaciones detalladas de los conceptos probados aquí.
+El README de cada módulo proporciona explicaciones detalladas de los conceptos aquí probados.
 
 ---
 
-**Navegación:** [← Volver al Inicio](../README.md)
+**Navegación:** [← Volver al inicio](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Aviso legal**:
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas derivadas del uso de esta traducción.
+Descargo de responsabilidad:
+Este documento ha sido traducido utilizando un servicio de traducción automática con IA [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la exactitud, tenga en cuenta que las traducciones automatizadas pueden contener errores o inexactitudes. El documento original en su idioma original debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por traductores humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas que surjan del uso de esta traducción.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

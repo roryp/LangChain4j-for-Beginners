@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1e85afe0b0ee47fc09b20442b0ee4ca5",
-  "translation_date": "2025-12-23T08:06:53+00:00",
+  "original_hash": "d61ab6c245562094cc3dddecf08b50d3",
+  "translation_date": "2025-12-30T19:01:10+00:00",
   "source_file": "README.md",
   "language_code": "en"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.en.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.en.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 Multi-Language Support
 
@@ -29,8 +29,8 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 2. [Introduction](01-introduction/README.md) - Learn the fundamentals of LangChain4j
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Master effective prompt design
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Build intelligent knowledge-based systems
-5. [Tools](04-tools/README.md) - Integrate external tools and APIs with AI agents
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work with the Model Context Protocol
+5. [Tools](04-tools/README.md) - Integrate external tools and simple assistants
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work with the Model Context Protocol (MCP) and Agentic modules
 ---
 
 ##  Learning Path
@@ -53,10 +53,6 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
 > This gives you everything you need to complete the course with a much faster download.
-
-Start with the [Quick Start](00-quick-start/README.md) module and progress through each module to build your skills step-by-step. You'll try basic examples to understand the fundamentals before moving to the [Introduction](01-introduction/README.md) module for a deeper dive with GPT-5.
-
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.en.png" alt="Learning Path" width="800"/>
 
 After completing the modules, explore the [Testing Guide](docs/TESTING.md) to see LangChain4j testing concepts in action.
 
@@ -137,5 +133,5 @@ MIT License - See [LICENSE](../../LICENSE) file for details.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 Disclaimer:
-This document has been translated using AI translation service Co-op Translator (https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using the AI translation service Co-op Translator (https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b975537560c404d5f254331832811e78",
-  "translation_date": "2025-12-13T21:20:17+00:00",
+  "original_hash": "ed93b3c14d58734ac10162967da958c1",
+  "translation_date": "2025-12-31T04:26:00+00:00",
   "source_file": "docs/TESTING.md",
   "language_code": "cs"
 }
@@ -13,13 +13,13 @@ CO_OP_TRANSLATOR_METADATA:
 
 - [Rychlý start](../../../docs)
 - [Co testy pokrývají](../../../docs)
-- [Spuštění testů](../../../docs)
-- [Spuštění testů ve VS Code](../../../docs)
-- [Testovací vzory](../../../docs)
-- [Testovací filozofie](../../../docs)
+- [Spouštění testů](../../../docs)
+- [Spouštění testů ve VS Code](../../../docs)
+- [Vzorové postupy testování](../../../docs)
+- [Filozofie testování](../../../docs)
 - [Další kroky](../../../docs)
 
-Tento průvodce vás provede testy, které ukazují, jak testovat AI aplikace bez potřeby API klíčů nebo externích služeb.
+Tento průvodce vás provede testy, které ukazují, jak testovat AI aplikace, aniž byste potřebovali API klíče nebo externí služby.
 
 ## Rychlý start
 
@@ -35,28 +35,28 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043bdfde5c208f8c0760a88a818f6846763583b614a5de37d52.cs.png" alt="Successful Test Results" width="800"/>
+<img src="../../../translated_images/test-results.ea5c98d8f3642043.cs.png" alt="Úspěšné výsledky testů" width="800"/>
 
-*Úspěšné spuštění testů ukazující všechny testy s nulovým počtem chyb*
+*Úspěšné spuštění testů ukazující, že všechny testy proběhly bez chyb*
 
 ## Co testy pokrývají
 
 Tento kurz se zaměřuje na **jednotkové testy**, které běží lokálně. Každý test demonstruje konkrétní koncept LangChain4j izolovaně.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e4da944aec40169f37adf86fd932d3dfd56a4a86b37401ab9.cs.png" alt="Testing Pyramid" width="800"/>
+<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.cs.png" alt="Testovací pyramida" width="800"/>
 
-*Testovací pyramida ukazující rovnováhu mezi jednotkovými testy (rychlé, izolované), integračními testy (reálné komponenty) a end-to-end testy (celý systém s Dockerem). Tento kurz pokrývá jednotkové testování.*
+*Testovací pyramida ukazující vyváženost mezi jednotkovými testy (rychlé, izolované), integračními testy (skutečné komponenty) a end-to-end testy. Tento kurz pokrývá jednotkové testování.*
 
-| Modul | Testy | Zaměření | Klíčové soubory |
-|--------|-------|----------|-----------------|
+| Modul | Testy | Zaměření | Hlavní soubory |
+|--------|-------|-------|-----------|
 | **00 - Rychlý start** | 6 | Šablony promptů a nahrazování proměnných | `SimpleQuickStartTest.java` |
 | **01 - Úvod** | 8 | Paměť konverzace a stavový chat | `SimpleConversationTest.java` |
-| **02 - Prompt Engineering** | 12 | Vzory GPT-5, úrovně ochoty, strukturovaný výstup | `SimpleGpt5PromptTest.java` |
-| **03 - RAG** | 10 | Zpracování dokumentů, embeddingy, vyhledávání podobnosti | `DocumentServiceTest.java` |
+| **02 - Návrh promptů** | 12 | Vzory GPT-5, úrovně ochoty, strukturovaný výstup | `SimpleGpt5PromptTest.java` |
+| **03 - RAG** | 10 | Import dokumentů, embeddings, vyhledávání podle podobnosti | `DocumentServiceTest.java` |
 | **04 - Nástroje** | 12 | Volání funkcí a řetězení nástrojů | `SimpleToolsTest.java` |
-| **05 - MCP** | 15 | Model Context Protocol s Dockerem | `SimpleMcpTest.java`, `McpDockerTransportTest.java` |
+| **05 - MCP** | 8 | Model Context Protocol s přenosem přes stdio | `SimpleMcpTest.java` |
 
-## Spuštění testů
+## Spouštění testů
 
 **Spusťte všechny testy z kořenového adresáře:**
 
@@ -75,14 +75,14 @@ mvn --% test
 **Bash:**
 ```bash
 cd 01-introduction && mvn test
-# Nebo z kořene
+# Nebo z kořenového adresáře
 mvn test -pl 01-introduction
 ```
 
 **PowerShell:**
 ```powershell
 cd 01-introduction; mvn --% test
-# Nebo z kořene
+# Nebo z kořenového adresáře
 mvn --% test -pl 01-introduction
 ```
 
@@ -102,45 +102,41 @@ mvn --% test -Dtest=SimpleConversationTest
 
 **Bash:**
 ```bash
-mvn test -Dtest=SimpleConversationTest#měl by udržovat historii konverzace
+mvn test -Dtest=SimpleConversationTest#mělo by uchovat historii konverzace
 ```
 
 **PowerShell:**
 ```powershell
-mvn --% test -Dtest=SimpleConversationTest#měl by udržovat historii konverzace
+mvn --% test -Dtest=SimpleConversationTest#mělo by uchovávat historii konverzace
 ```
 
-## Spuštění testů ve VS Code
+## Spouštění testů ve VS Code
 
 Pokud používáte Visual Studio Code, Test Explorer poskytuje grafické rozhraní pro spouštění a ladění testů.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dcedbacf98a3539218c1d0c700307ab77c031590ae63d0be59b6.cs.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/vscode-testing.f02dd5917289dced.cs.png" alt="Prohlížeč testů VS Code" width="800"/>
 
-*Test Explorer ve VS Code ukazující strom testů se všemi Java testovacími třídami a jednotlivými testovacími metodami*
+*Prohlížeč testů VS Code ukazující strom testů se všemi Java testovacími třídami a jednotlivými testovacími metodami*
 
 **Pro spuštění testů ve VS Code:**
 
-1. Otevřete Test Explorer kliknutím na ikonu odměrky v Activity Bar
+1. Otevřete Test Explorer kliknutím na ikonu zkumavky v postranním panelu aktivit
 2. Rozbalte strom testů, abyste viděli všechny moduly a testovací třídy
-3. Klikněte na tlačítko přehrávání vedle libovolného testu pro jeho individuální spuštění
+3. Klikněte na tlačítko přehrát vedle libovolného testu pro jeho spuštění jednotlivě
 4. Klikněte na "Run All Tests" pro spuštění celé sady
-5. Klikněte pravým tlačítkem na jakýkoli test a vyberte "Debug Test" pro nastavení breakpointů a krokování kódem
+5. Klikněte pravým tlačítkem na jakýkoliv test a vyberte "Debug Test" pro nastavení breakpointů a krokování kódem
 
-Test Explorer zobrazuje zelené fajfky u úspěšných testů a poskytuje podrobné zprávy o chybách, pokud testy selžou.
+Test Explorer zobrazuje zelené fajfky pro úspěšné testy a poskytuje podrobné chybové zprávy při selháních.
 
-## Testovací vzory
-
-<img src="../../../translated_images/testing-patterns.02581af1c9ef742460887004e9940994dba342ec726efc4ddb2b0215b56a1d89.cs.png" alt="Six Testing Patterns" width="800"/>
-
-*Šest testovacích vzorů pro aplikace LangChain4j: šablony promptů, mockování modelů, izolace konverzace, testování nástrojů, in-memory RAG a integrace s Dockerem*
+## Vzorové postupy testování
 
 ### Vzor 1: Testování šablon promptů
 
-Nejjednodušší vzor testuje šablony promptů bez volání jakéhokoli AI modelu. Ověřujete, že nahrazování proměnných funguje správně a prompt je formátován podle očekávání.
+Nejjednodušší vzor testuje šablony promptů bez volání jakéhokoli AI modelu. Ověříte, že nahrazování proměnných funguje správně a prompt je naformátován podle očekávání.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee3dfceaa5fa903098bdb174674acc5009a2f3d60cb07eb4e9.cs.png" alt="Prompt Template Testing" width="800"/>
+<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.cs.png" alt="Testování šablon promptů" width="800"/>
 
-*Testování šablon promptů ukazující tok nahrazování proměnných: šablona s místy pro proměnné → aplikované hodnoty → ověřený formátovaný výstup*
+*Testování šablon promptů ukazující tok nahrazování proměnných: šablona s placeholdery → aplikované hodnoty → ověřený naformátovaný výstup*
 
 ```java
 @Test
@@ -170,16 +166,16 @@ cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testFormátováníŠab
 
 **PowerShell:**
 ```powershell
-cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testFormátováníŠablonyVýzvy
+cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testování formátování šablony promptu
 ```
 
 ### Vzor 2: Mockování jazykových modelů
 
-Při testování logiky konverzace použijte Mockito k vytvoření falešných modelů, které vrací předem dané odpovědi. To dělá testy rychlými, zdarma a deterministickými.
+Při testování logiky konverzace použijte Mockito k vytvoření falešných modelů, které vracejí předem určené odpovědi. Díky tomu jsou testy rychlé, zdarma a deterministické.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845ee07556f9520ac45c7f776d0879434315756020cd8b1d5b73.cs.png" alt="Mock vs Real API Comparison" width="800"/>
+<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.cs.png" alt="Porovnání mock vs reálné API" width="800"/>
 
-*Porovnání ukazující, proč jsou mocky preferované pro testování: jsou rychlé, zdarma, deterministické a nevyžadují API klíče*
+*Porovnání ukazující, proč jsou mocky preferovány pro testování: jsou rychlé, zdarma, deterministické a nevyžadují API klíče*
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -224,20 +220,20 @@ class SimpleConversationTest {
         conversationService.chat(conversationId, "Third message");
 
         List<ChatMessage> history = conversationService.getHistory(conversationId);
-        assertThat(history).hasSize(6); // 3 zprávy uživatele + 3 zprávy AI
+        assertThat(history).hasSize(6); // 3 uživatelské zprávy + 3 zprávy AI
     }
 }
 ```
 
-Tento vzor se objevuje v `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. Mock zajišťuje konzistentní chování, takže můžete ověřit správu paměti.
+Tento vzor se objevuje v `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. Mock zajišťuje konzistentní chování, takže můžete ověřit, že správa paměti funguje správně.
 
-### Vzor 3: Testování izolace konverzace
+### Vzor 3: Testování izolace konverzací
 
-Paměť konverzace musí udržovat uživatele oddělené. Tento test ověřuje, že se konverzace nekombinují.
+Paměť konverzace musí udržovat oddělené uživatele. Tento test ověřuje, že se kontexty nekombinují.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f860d81c37a97181c0e0a2ff996d38f314f06b35cc1e08ca3.cs.png" alt="Conversation Isolation" width="800"/>
+<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.cs.png" alt="Izolace konverzací" width="800"/>
 
-*Testování izolace konverzace ukazující oddělené paměťové úložiště pro různé uživatele, aby se zabránilo míchání kontextů*
+*Testování izolace konverzací ukazující oddělené úložiště paměti pro různé uživatele, aby se zabránilo míchání kontextu*
 
 ```java
 @Test
@@ -261,15 +257,15 @@ void shouldIsolateConversationsByid() {
 }
 ```
 
-Každá konverzace si udržuje vlastní nezávislou historii. V produkčních systémech je tato izolace kritická pro aplikace s více uživateli.
+Každá konverzace si udržuje vlastní nezávislou historii. V produkčních systémech je tato izolace kritická pro víceuživatelské aplikace.
 
-### Vzor 4: Testování nástrojů samostatně
+### Vzor 4: Testování nástrojů nezávisle
 
-Nástroje jsou funkce, které může AI volat. Testujte je přímo, abyste zajistili, že fungují správně bez ohledu na rozhodnutí AI.
+Nástroje jsou funkce, které může AI volat. Testujte je přímo, abyste zajistili, že fungují správně nezávisle na rozhodnutích AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924e7e7cd41be8ba5ccb62f16962b85f53953d46cc6317d2972.cs.png" alt="Tools Testing" width="800"/>
+<img src="../../../translated_images/tools-testing.3e1706817b0b3924.cs.png" alt="Testování nástrojů" width="800"/>
 
-*Testování nástrojů samostatně ukazující spuštění mock nástroje bez volání AI pro ověření obchodní logiky*
+*Testování nástrojů nezávisle ukazující spuštění mock nástroje bez volání AI pro ověření business logiky*
 
 ```java
 @Test
@@ -292,15 +288,15 @@ void shouldDemonstrateToolChaining() {
 }
 ```
 
-Tyto testy z `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` ověřují logiku nástrojů bez zapojení AI. Příklad řetězení ukazuje, jak výstup jednoho nástroje slouží jako vstup pro jiný.
+Tyto testy z `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` ověřují logiku nástrojů bez zapojení AI. Příklad řetězení ukazuje, jak výstup jednoho nástroje vstupuje do dalšího.
 
-### Vzor 5: Testování in-memory RAG
+### Vzor 5: Testování RAG v paměti
 
-RAG systémy tradičně vyžadují vektorové databáze a embeddingové služby. In-memory vzor umožňuje testovat celý proces bez externích závislostí.
+Systémy RAG tradičně vyžadují vektorové databáze a embedding služby. Vzor v paměti vám umožní otestovat celý pipeline bez externích závislostí.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b14fcda9103bba011864f1d0882b27a9886c3cf5b446522ce3.cs.png" alt="In-Memory RAG Testing" width="800"/>
+<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.cs.png" alt="Testování RAG v paměti" width="800"/>
 
-*Workflow testování in-memory RAG ukazující parsování dokumentů, ukládání embeddingů a vyhledávání podobnosti bez potřeby databáze*
+*Workflow testování RAG v paměti ukazující parsování dokumentů, ukládání embeddingů a vyhledávání podle podobnosti bez nutnosti databáze*
 
 ```java
 @Test
@@ -317,17 +313,13 @@ void testProcessTextDocument() {
 }
 ```
 
-Tento test z `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` vytváří dokument v paměti a ověřuje dělení na části a zpracování metadat.
+Tento test z `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` vytvoří dokument v paměti a ověří dělení na části a zpracování metadat.
 
-### Vzor 6: Integrační testování s Dockerem
+### Vzor 6: Integrační testování MCP
 
-Některé funkce vyžadují reálnou infrastrukturu. Modul MCP používá Testcontainers k roztočení Docker kontejnerů pro integrační testy. Ty ověřují, že váš kód funguje s reálnými službami a zároveň zachovávají izolaci testů.
+Modul MCP testuje integraci Model Context Protocol pomocí stdio transportu. Tyto testy ověřují, že vaše aplikace může spawnout a komunikovat se servery MCP jako podprocesy.
 
-<img src="../../../translated_images/mcp-testing.bb3b3e92e47acb4b3dfb12715b4e113655f16c11ba39c2ffabae557bc6c3734c.cs.png" alt="MCP Docker Integration Testing" width="800"/>
-
-*Integrační testování MCP s Testcontainers ukazující automatizovaný životní cyklus kontejneru: start, spuštění testů, zastavení a úklid*
-
-Testy v `05-mcp/src/test/java/com/example/langchain4j/mcp/McpDockerTransportTest.java` vyžadují běžící Docker.
+Testy v `05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` ověřují chování MCP klienta.
 
 **Spusťte je:**
 
@@ -341,38 +333,38 @@ cd 05-mcp && mvn test
 cd 05-mcp; mvn --% test
 ```
 
-## Testovací filozofie
+## Filozofie testování
 
-Testujte svůj kód, ne AI. Vaše testy by měly ověřovat kód, který píšete, kontrolou, jak jsou prompt šablony sestaveny, jak je spravována paměť a jak nástroje fungují. Odpovědi AI se liší a neměly by být součástí testovacích tvrzení. Ptejte se, zda vaše šablona promptu správně nahrazuje proměnné, ne zda AI dává správnou odpověď.
+Testujte svůj kód, ne AI. Vaše testy by měly validovat kód, který píšete, tím, že kontrolují, jak jsou prompt šablony konstruovány, jak je spravována paměť a jak nástroje fungují. Odpovědi AI se mění a neměly by být součástí testovacích asercí. Zeptejte se sami sebe, zda vaše šablona promptu správně nahrazuje proměnné, ne zda AI dává „správnou“ odpověď.
 
-Používejte mocky pro jazykové modely. Jsou to externí závislosti, které jsou pomalé, drahé a nedeterministické. Mockování dělá testy rychlými s milisekundami místo sekund, zdarma bez nákladů na API a deterministickými se stejným výsledkem pokaždé.
+Používejte mocky pro jazykové modely. Jsou to externí závislosti, které jsou pomalé, drahé a nedeterministické. Mockování dělá testy rychlými v milisekundách místo sekund, bez nákladů na API a deterministickými se stejným výsledkem pokaždé.
 
-Udržujte testy nezávislé. Každý test by měl nastavit svá vlastní data, nespoléhat na jiné testy a uklidit po sobě. Testy by měly projít bez ohledu na pořadí spuštění.
+Udržujte testy nezávislé. Každý test by měl nastavit vlastní data, neměl by spoléhat na jiné testy a měl by se po sobě uklidit. Testy by měly projít bez ohledu na pořadí spuštění.
 
-Testujte okrajové případy mimo šťastnou cestu. Zkoušejte prázdné vstupy, velmi velké vstupy, speciální znaky, neplatné parametry a hraniční podmínky. Ty často odhalí chyby, které běžné použití neukáže.
+Testujte hraniční případy mimo šťastnou cestu. Zkuste prázdné vstupy, velmi velké vstupy, speciální znaky, neplatné parametry a hraniční podmínky. Tyto případy často odhalí chyby, které běžné používání neukáže.
 
-Používejte popisné názvy. Porovnejte `shouldMaintainConversationHistoryAcrossMultipleMessages()` s `test1()`. První vám přesně řekne, co se testuje, což usnadňuje ladění chyb.
+Používejte popisná jména. Porovnejte `shouldMaintainConversationHistoryAcrossMultipleMessages()` s `test1()`. První přesně říká, co se testuje, což výrazně usnadňuje hledání chyb.
 
 ## Další kroky
 
-Nyní, když rozumíte testovacím vzorům, ponořte se hlouběji do každého modulu:
+Nyní, když rozumíte vzorům testování, ponořte se hlouběji do každého modulu:
 
 - **[00 - Rychlý start](../00-quick-start/README.md)** - Začněte se základy šablon promptů
-- **[01 - Úvod](../01-introduction/README.md)** - Naučte se správu paměti konverzace
-- **[02 - Prompt Engineering](../02-prompt-engineering/README.md)** - Ovládněte vzory promptování GPT-5
-- **[03 - RAG](../03-rag/README.md)** - Vytvářejte systémy pro retrieval-augmented generation
-- **[04 - Nástroje](../04-tools/README.md)** - Implementujte volání funkcí a řetězení nástrojů
-- **[05 - MCP](../05-mcp/README.md)** - Integrujte Model Context Protocol s Dockerem
+- **[01 - Úvod](../01-introduction/README.md)** - Naučte se správu paměti konverzací
+- **[02 - Návrh promptů](../02-prompt-engineering/README.md)** - Ovládněte vzory promptování pro GPT-5
+- **[03 - RAG](../03-rag/README.md)** - Vytvořte systémy retrieval-augmented generation
+- **[04 - Nástroje](../04-tools/README.md)** - Implementujte volání funkcí a řetězce nástrojů
+- **[05 - MCP](../05-mcp/README.md)** - Integrujte Model Context Protocol
 
-README každého modulu poskytuje podrobné vysvětlení konceptů testovaných zde.
+Každé README modulu poskytuje podrobné vysvětlení konceptů testovaných zde.
 
 ---
 
-**Navigace:** [← Zpět na hlavní stránku](../README.md)
+**Navigace:** [← Zpět na hlavní](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Prohlášení o vyloučení odpovědnosti**:  
-Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo nesprávné výklady vyplývající z použití tohoto překladu.
+**Prohlášení o vyloučení odpovědnosti**:
+Tento dokument byl přeložen pomocí služby pro překlad s využitím umělé inteligence [Co-op Translator](https://github.com/Azure/co-op-translator). I když usilujeme o přesnost, vezměte prosím na vědomí, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za rozhodující zdroj. Pro kritické informace se doporučuje využít profesionální lidský překlad. Nezodpovídáme za jakákoli nedorozumění nebo chybné výklady vyplývající z použití tohoto překladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

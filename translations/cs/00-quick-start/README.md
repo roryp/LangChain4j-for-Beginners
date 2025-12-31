@@ -37,7 +37,7 @@ LangChain4j je Java knihovna, která zjednodušuje tvorbu aplikací poháněnýc
 
 „Chain“ v LangChain znamená řetězení více komponent – můžete například spojit prompt s modelem a parserem, nebo řetězit více AI volání, kde výstup jednoho je vstupem dalšího. Tento rychlý start se zaměřuje na základy před tím, než prozkoumáte složitější řetězce.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.cs.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.cs.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Řetězení komponent v LangChain4j – stavební bloky se spojují k vytvoření výkonných AI pracovních toků*
 
@@ -49,7 +49,7 @@ Použijeme tři základní komponenty:
 
 **MessageWindowChatMemory** – udržuje historii konverzace. Bez toho je každá žádost nezávislá. S tímto si AI pamatuje předchozí zprávy a udržuje kontext přes více kol.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.cs.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.cs.png" alt="LangChain4j Architecture" width="800"/>
 
 *Architektura LangChain4j – základní komponenty spolupracují na pohánění vašich AI aplikací*
 

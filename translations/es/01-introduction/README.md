@@ -53,7 +53,7 @@ Los modelos de lenguaje son sin estado. Cada llamada a la API es independiente. 
 
 Esto está bien para preguntas y respuestas simples, pero es inútil para aplicaciones reales. Los bots de servicio al cliente necesitan recordar lo que les dijiste. Los asistentes personales necesitan contexto. Cualquier conversación de múltiples turnos requiere memoria.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.es.png" alt="Conversaciones sin estado vs con estado" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.es.png" alt="Conversaciones sin estado vs con estado" width="800"/>
 
 *La diferencia entre conversaciones sin estado (llamadas independientes) y con estado (consciente del contexto)*
 
@@ -61,7 +61,7 @@ Esto está bien para preguntas y respuestas simples, pero es inútil para aplica
 
 Antes de sumergirte en las conversaciones, es importante entender los tokens: las unidades básicas de texto que procesan los modelos de lenguaje:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.es.png" alt="Explicación de tokens" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.es.png" alt="Explicación de tokens" width="800"/>
 
 *Ejemplo de cómo el texto se divide en tokens - "I love AI!" se convierte en 4 unidades separadas para procesar*
 
@@ -73,7 +73,7 @@ La memoria de chat resuelve el problema de ser sin estado manteniendo el histori
 
 LangChain4j provee implementaciones de memoria que manejan esto automáticamente. Tú eliges cuántos mensajes conservar y el framework gestiona la ventana de contexto.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.es.png" alt="Concepto de ventana de memoria" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.es.png" alt="Concepto de ventana de memoria" width="800"/>
 
 *MessageWindowChatMemory mantiene una ventana deslizante de mensajes recientes, descartando automáticamente los antiguos*
 
@@ -212,7 +212,7 @@ Desde el Spring Boot Dashboard, puedes:
 
 Simplemente haz clic en el botón de reproducir junto a "introduction" para iniciar este módulo, o inicia todos los módulos a la vez.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.es.png" alt="Panel de control Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.es.png" alt="Panel de control Spring Boot" width="400"/>
 
 **Opción 2: Usando scripts de shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Todos los módulos
 
 La aplicación provee una interfaz web con dos implementaciones de chat lado a lado.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.es.png" alt="Pantalla principal de la aplicación" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.es.png" alt="Pantalla principal de la aplicación" width="800"/>
 
 *Panel mostrando opciones de Chat Simple (sin estado) y Chat Conversacional (con estado)*
 
@@ -290,7 +290,7 @@ La aplicación provee una interfaz web con dos implementaciones de chat lado a l
 
 Prueba esto primero. Pregunta "Mi nombre es John" y luego inmediatamente pregunta "¿Cuál es mi nombre?" El modelo no recordará porque cada mensaje es independiente. Esto demuestra el problema central con la integración básica de modelos de lenguaje: no hay contexto de conversación.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.es.png" alt="Demo de chat sin estado" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.es.png" alt="Demo de chat sin estado" width="800"/>
 
 *La IA no recuerda tu nombre del mensaje anterior*
 
@@ -298,7 +298,7 @@ Prueba esto primero. Pregunta "Mi nombre es John" y luego inmediatamente pregunt
 
 Ahora prueba la misma secuencia aquí. Pregunta "Mi nombre es John" y luego "¿Cuál es mi nombre?" Esta vez lo recuerda. La diferencia es MessageWindowChatMemory: mantiene el historial de la conversación e incluye ese contexto con cada solicitud. Así funciona la IA conversacional en producción.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.es.png" alt="Demo de chat con estado" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.es.png" alt="Demo de chat con estado" width="800"/>
 
 *La IA recuerda tu nombre de antes en la conversación*
 
