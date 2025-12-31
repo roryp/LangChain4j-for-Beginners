@@ -49,7 +49,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 هذا يؤسس ردود النموذج على بياناتك الفعلية بدلاً من الاعتماد على معرفته التدريبية أو اختلاق الإجابات.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.ar.png" alt="بنية RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ar.png" alt="بنية RAG" width="800"/>
 
 *سير عمل RAG - من استعلام المستخدم إلى البحث الدلالي إلى توليد الإجابة السياقية*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.ar.png" alt="فضاء التضمينات المتجهية" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ar.png" alt="فضاء التضمينات المتجهية" width="800"/>
 
 *المستندات ممثلة كمتجهات في فضاء التضمين - المحتوى المتشابه يتجمع معًا*
 
@@ -152,7 +152,7 @@ cat ../.env  # يجب أن يعرض AZURE_OPENAI_ENDPOINT و API_KEY و DEPLOYME
 
 فقط انقر على زر التشغيل بجانب "rag" لبدء هذه الوحدة، أو ابدأ جميع الوحدات دفعة واحدة.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.ar.png" alt="لوحة تحكم Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ar.png" alt="لوحة تحكم Spring Boot" width="400"/>
 
 **الخيار 2: استخدام سكربتات الشل**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 يوفر التطبيق واجهة ويب لتحميل المستندات وطرح الأسئلة.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.ar.png" alt="واجهة تطبيق RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ar.png" alt="واجهة تطبيق RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *واجهة تطبيق RAG - قم بتحميل المستندات واطرح الأسئلة*
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 لاحظ أن كل إجابة تتضمن مراجع للمصدر مع درجات التشابه. تظهر هذه الدرجات (من 0 إلى 1) مدى صلة كل جزء بسؤالك. الدرجات الأعلى تعني تطابقًا أفضل. هذا يتيح لك التحقق من الإجابة مقابل المادة المصدر.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.ar.png" alt="نتائج استعلام RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ar.png" alt="نتائج استعلام RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *نتائج الاستعلام تظهر الإجابة مع مراجع المصدر ودرجات الصلة*
 

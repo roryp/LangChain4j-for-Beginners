@@ -49,7 +49,7 @@ RAG (Генериране с подсилено извличане) решава
 
 Това основава отговорите на модела на вашите реални данни, вместо да разчита на знанията от обучението си или да измисля отговори.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.bg.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.bg.png" alt="RAG Architecture" width="800"/>
 
 *Работен процес на RAG - от потребителския въпрос до семантично търсене и генериране на контекстуален отговор*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.bg.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.bg.png" alt="Vector Embeddings Space" width="800"/>
 
 *Документи, представени като вектори в пространството на вгражданията - сходно съдържание се групира*
 
@@ -152,7 +152,7 @@ cat ../.env  # Трябва да показва AZURE_OPENAI_ENDPOINT, API_KEY, 
 
 Просто кликнете върху бутона за пускане до "rag", за да стартирате този модул, или стартирайте всички модули наведнъж.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.bg.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.bg.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Опция 2: Използване на shell скриптове**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Приложението предоставя уеб интерфейс за качване на документи и задаване на въпроси.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.bg.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.bg.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Интерфейс на приложението RAG - качвайте документи и задавайте въпроси*
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Забележете, че всеки отговор включва препратки към източници с оценки за сходство. Тези оценки (от 0 до 1) показват колко релевантна е била всяка част за вашия въпрос. По-високите оценки означават по-добри съвпадения. Това ви позволява да проверите отговора спрямо изходния материал.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.bg.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.bg.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Резултати от заявка, показващи отговор с препратки към източници и оценки за релевантност*
 
