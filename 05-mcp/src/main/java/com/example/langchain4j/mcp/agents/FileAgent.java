@@ -9,7 +9,7 @@ import dev.langchain4j.service.V;
  * FileAgent - An agent that reads files using MCP filesystem tools.
  * 
  * This agent is equipped with MCP filesystem tools and can read files from the
- * allowed directory. It's the entry point in the file→report workflow:
+ * allowed directory. It's the entry point in the file → report workflow:
  * 
  *   FileAgent (reads file) → ReportAgent (generates report)
  * 
