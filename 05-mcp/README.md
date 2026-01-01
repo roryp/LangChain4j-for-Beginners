@@ -161,9 +161,18 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
 
-**Combining Supervisor with MCP:** In this example, we give the `FileAgent` access to MCP file system tools via `toolProvider(mcpToolProvider)`. When a user asks to "read and analyze a file," the Supervisor analyzes the request and generates an execution plan. It then routes the request to `FileAgent`, which uses MCP's `read_file` tool to retrieve the content. The Supervisor passes that content to `AnalysisAgent` for interpretation, and optionally invokes `SummaryAgent` to condense the results.
+**File → Report Workflow:** This demo showcases a clean 2-step workflow where `FileAgent` reads a file using MCP filesystem tools, and `ReportAgent` generates a structured report from the content. The Supervisor orchestrates this flow automatically:
 
-This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it. The Supervisor adapts dynamically to different types of requests and returns either the last agent's response or a summary of all operations.
+```
+┌─────────────┐      ┌──────────────┐
+│  FileAgent  │ ───▶ │ ReportAgent  │
+│ (MCP tools) │      │  (pure LLM)  │
+└─────────────┘      └──────────────┘
+ outputKey:           outputKey:
+ 'fileContent'        'report'
+```
+
+Each agent stores its output in the **Agentic Scope** (shared memory), allowing downstream agents to access previous results. This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it.
 
 **Using the Start Scripts (Recommended):**
 
@@ -187,30 +196,26 @@ cd 05-mcp
 **How the Supervisor Works:**
 
 ```java
-// Define multiple agents with specific capabilities
+// Step 1: FileAgent reads files using MCP tools
 FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
         .chatModel(model)
         .toolProvider(mcpToolProvider)  // Has MCP tools for file operations
         .build();
 
-AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+// Step 2: ReportAgent generates structured reports
+ReportAgent reportAgent = AgenticServices.agentBuilder(ReportAgent.class)
         .chatModel(model)
         .build();
 
-SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
-        .chatModel(model)
-        .build();
-
-// Create a Supervisor that orchestrates these agents
+// Supervisor orchestrates the file → report workflow
 SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
-        .chatModel(model)  // The "planner" model
-        .subAgents(fileAgent, analysisAgent, summaryAgent)
-        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .chatModel(model)
+        .subAgents(fileAgent, reportAgent)
+        .responseStrategy(SupervisorResponseStrategy.LAST)  // Return the final report
         .build();
 
-// The Supervisor autonomously decides which agents to invoke
-// Just pass a natural language request - the LLM plans the execution
-String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+// The Supervisor decides which agents to invoke based on the request
+String response = supervisor.invoke("Read the file at /path/file.txt and generate a report");
 ```
 
 #### Response Strategies
@@ -238,71 +243,84 @@ When you run the demo, you'll see a structured walkthrough of how the Supervisor
 ======================================================================
   SUPERVISOR AGENT DEMO
 ======================================================================
+  FILE → REPORT WORKFLOW DEMO
+======================================================================
 
-This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
-The Supervisor uses an LLM to decide which agent to call based on the task.
+This demo shows a clear 2-step workflow: read a file, then generate a report.
+The Supervisor orchestrates the agents automatically based on the request.
 ```
 
-**The header** introduces the demo and explains the core concept: the Supervisor uses an LLM (not hardcoded rules) to decide which agents to call.
+**The header** introduces the workflow concept: a focused pipeline from file reading to report generation.
 
 ```
+--- WORKFLOW ---------------------------------------------------------
+  ┌─────────────┐      ┌──────────────┐
+  │  FileAgent  │ ───▶ │ ReportAgent  │
+  │ (MCP tools) │      │  (pure LLM)  │
+  └─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+   'fileContent'        'report'
+
 --- AVAILABLE AGENTS -------------------------------------------------
-  [FILE]     FileAgent     - Reads files using MCP filesystem tools
-  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
-  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+  [FILE]   FileAgent   - Reads files via MCP → stores in 'fileContent'
+  [REPORT] ReportAgent - Generates structured report → stores in 'report'
 ```
 
-**Available Agents** shows the three specialized agents the Supervisor can choose from. Each agent has a specific capability:
-- **FileAgent** can read files using MCP tools (external capability)
-- **AnalysisAgent** analyzes content (pure LLM capability)
-- **SummaryAgent** creates summaries (pure LLM capability)
+**Workflow Diagram** shows the data flow between agents. Each agent has a specific role:
+- **FileAgent** reads files using MCP tools and stores raw content in `fileContent`
+- **ReportAgent** consumes that content and produces a structured report in `report`
 
 ```
 --- USER REQUEST -----------------------------------------------------
-  "Read the file at .../file.txt and analyze what it's about"
+  "Read the file at .../file.txt and generate a report on its contents"
 ```
 
-**User Request** shows what was asked. The Supervisor must parse this and decide which agents to invoke.
+**User Request** shows the task. The Supervisor parses this and decides to invoke FileAgent → ReportAgent.
 
 ```
 --- SUPERVISOR ORCHESTRATION -----------------------------------------
-  The Supervisor will now decide which agents to invoke and in what order...
+  The Supervisor decides which agents to invoke and passes data between them...
 
   +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
   |
   |   Input: .../file.txt
   |
-  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  |   Result: LangChain4j is an open-source Java library that simplifies the integration of LL...
   +-- [OK] FileAgent (reading file via MCP) completed
 
-  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  +-- STEP 2: Supervisor chose -> ReportAgent (generating structured report)
   |
-  |   Input: LangChain4j is an open-source Java library...
+  |   Input: LangChain4j is an open-source Java library that simplifies t...
   |
-  |   Result: Structure: The content is organized into clear paragraphs that int...
-  +-- [OK] AnalysisAgent (analyzing content) completed
+  |   Result: Executive Summary
+LangChain4j is an open-source Java library that streamlines th...
+  +-- [OK] ReportAgent (generating structured report) completed
 ```
 
-**Supervisor Orchestration** is where the magic happens. Watch how:
-1. The Supervisor **chose FileAgent first** because the request mentioned "read the file"
-2. FileAgent used MCP's `read_file` tool to retrieve the file contents
-3. The Supervisor then **chose AnalysisAgent** and passed the file contents to it
-4. AnalysisAgent analyzed the structure, tone, and themes
+**Supervisor Orchestration** shows the 2-step flow in action:
+1. **FileAgent** reads the file via MCP and stores the content
+2. **ReportAgent** receives the content and generates a structured report
 
-Notice the Supervisor made these decisions **autonomously** based on the user's request — no hardcoded workflow!
-
-**Final Response** is the Supervisor's synthesized answer, combining outputs from all agents it invoked. The example dumps the agentic scope showing the summary and analysis results stored by each agent.
+The Supervisor made these decisions **autonomously** based on the user's request.
 
 ```
 --- FINAL RESPONSE ---------------------------------------------------
-I read the contents of the file and analyzed its structure, tone, and key themes.
-The file introduces LangChain4j as an open-source Java library for integrating
-large language models...
+Executive Summary
+LangChain4j is an open-source Java library that streamlines the integration of 
+large language models (LLMs) into Java applications through a unified API, 
+broad provider support, and seamless enterprise framework integration.
 
---- AGENTIC SCOPE (Shared Memory) ------------------------------------
-  Agents store their results in a shared scope for other agents to use:
-  * summary: LangChain4j is an open-source Java library...
-  * analysis: Structure: The content is organized into clear paragraphs that in...
+Key Points
+- Purpose: Simplify LLM integration in Java applications via a unified, consistent API.
+- Provider Coverage: Supports 20+ popular LLM providers (e.g., OpenAI, Google Vertex AI).
+- Embedding Stores: Integrates with 30+ vector databases under a unified abstraction.
+- Features: Built-in support for RAG, tool calling (including MCP), agents, and more.
+...
+
+--- AGENTIC SCOPE (Data Flow) ----------------------------------------
+  Each agent stores its output for downstream agents to consume:
+  * fileContent: LangChain4j is an open-source Java library...
+  * report: Executive Summary...
 ```
 
 #### Explanation of Agentic Module Features
@@ -317,8 +335,8 @@ The example demonstrates several advanced features of the agentic module. Let's 
 ```java
 ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
 AgenticScope scope = result.agenticScope();
-String story = scope.readState("story");
-List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+String fileContent = scope.readState("fileContent");  // Raw file data from FileAgent
+String report = scope.readState("report");            // Structured report from ReportAgent
 ```
 
 **Agent Listeners** enable monitoring and debugging of agent execution. The step-by-step output you see in the demo comes from an AgentListener that hooks into each agent invocation:
