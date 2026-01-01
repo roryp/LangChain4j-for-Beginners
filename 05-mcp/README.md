@@ -161,7 +161,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
 
-**File → Report Workflow:** This demo showcases a clean 2-step workflow where `FileAgent` reads a file using MCP filesystem tools, and `ReportAgent` generates a structured report from the content. The Supervisor orchestrates this flow automatically:
+**File → Report Workflow:** This demo showcases a clean 2-step workflow where `FileAgent` reads a file using MCP filesystem tools, and `ReportAgent` generates a structured report with an executive summary (1 sentence), 3 key points, and recommendations. The Supervisor orchestrates this flow automatically:
 
 ```
 ┌─────────────┐      ┌──────────────┐
@@ -241,8 +241,6 @@ When you run the demo, you'll see a structured walkthrough of how the Supervisor
 
 ```
 ======================================================================
-  SUPERVISOR AGENT DEMO
-======================================================================
   FILE → REPORT WORKFLOW DEMO
 ======================================================================
 
@@ -285,15 +283,15 @@ The Supervisor orchestrates the agents automatically based on the request.
   |
   |   Input: .../file.txt
   |
-  |   Result: LangChain4j is an open-source Java library that simplifies the integration of LL...
+  |   Result: LangChain4j is an open-source, provider-agnostic Java framework for building LLM...
   +-- [OK] FileAgent (reading file via MCP) completed
 
   +-- STEP 2: Supervisor chose -> ReportAgent (generating structured report)
   |
-  |   Input: LangChain4j is an open-source Java library that simplifies t...
+  |   Input: LangChain4j is an open-source, provider-agnostic Java framew...
   |
   |   Result: Executive Summary
-LangChain4j is an open-source Java library that streamlines th...
+LangChain4j is a provider-agnostic Java framework that normali...
   +-- [OK] ReportAgent (generating structured report) completed
 ```
 
@@ -306,20 +304,17 @@ The Supervisor made these decisions **autonomously** based on the user's request
 ```
 --- FINAL RESPONSE ---------------------------------------------------
 Executive Summary
-LangChain4j is an open-source Java library that streamlines the integration of 
-large language models (LLMs) into Java applications through a unified API, 
-broad provider support, and seamless enterprise framework integration.
+LangChain4j is a provider-agnostic Java framework...
 
 Key Points
-- Purpose: Simplify LLM integration in Java applications via a unified, consistent API.
-- Provider Coverage: Supports 20+ popular LLM providers (e.g., OpenAI, Google Vertex AI).
-- Embedding Stores: Integrates with 30+ vector databases under a unified abstraction.
-- Features: Built-in support for RAG, tool calling (including MCP), agents, and more.
+...
+
+Recommendations
 ...
 
 --- AGENTIC SCOPE (Data Flow) ----------------------------------------
   Each agent stores its output for downstream agents to consume:
-  * fileContent: LangChain4j is an open-source Java library...
+  * fileContent: LangChain4j is an open-source, provider-agnostic Java framework...
   * report: Executive Summary...
 ```
 
