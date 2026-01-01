@@ -8,7 +8,7 @@ import dev.langchain4j.service.V;
 /**
  * ReportAgent - An agent that generates structured reports from content.
  * 
- * This agent is the second step in the file→report workflow:
+ * This agent is the second step in the file → report workflow:
  * 
  *   FileAgent (reads file) → ReportAgent (generates report)
  * 
