@@ -172,7 +172,7 @@ public class SupervisorAgentDemo {
         System.out.println("--- " + title + " " + "-".repeat(Math.max(0, 65 - title.length())));
     }
 
-    private static void printScopeValue(AgenticScope scope, String key, String source) {
+    private static void printScopeValue(AgenticScope scope, String key) {
         Object value = scope.readState(key);
         if (value != null) {
             String strValue = stripMarkdown(value.toString());

@@ -22,8 +22,8 @@ import dev.langchain4j.service.V;
 public interface ReportAgent {
     
     @SystemMessage("You are a report writer. Generate clear, structured reports with: " +
-                   "1) Executive Summary (2-3 sentences), " +
-                   "2) Key Points (bullet list), " +
+                   "1) Executive Summary (1 summary sentence), " +
+                   "2) 3 Key Points (bullet list), " +
                    "3) Recommendations (if applicable). " +
                    "Keep it concise but informative.")
     @UserMessage("Generate a structured report based on the following content:\n\n{{content}}")
