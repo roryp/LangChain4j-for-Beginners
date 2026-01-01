@@ -3,9 +3,8 @@ package com.example.langchain4j.mcp;
 import java.time.Duration;
 import java.util.List;
 
-import com.example.langchain4j.mcp.agents.AnalysisAgent;
 import com.example.langchain4j.mcp.agents.FileAgent;
-import com.example.langchain4j.mcp.agents.SummaryAgent;
+import com.example.langchain4j.mcp.agents.ReportAgent;
 
 import dev.langchain4j.agentic.AgenticServices;
 import dev.langchain4j.agentic.observability.AgentInvocationError;
@@ -53,46 +52,54 @@ public class SupervisorAgentDemo {
                     .mcpClients(List.of(mcpClient))
                     .build();
 
-            // Build agents
+            // Build agents with clear separation of concerns:
+            // FileAgent: reads files (has MCP tools)
+            // ReportAgent: generates structured reports (pure LLM)
             FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
                     .chatModel(model)
                     .toolProvider(mcpTools)
                     .build();
 
-            AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+            ReportAgent reportAgent = AgenticServices.agentBuilder(ReportAgent.class)
                     .chatModel(model)
                     .build();
 
-            SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
-                    .chatModel(model)
-                    .build();
-
-            // Build supervisor that returns ResultWithAgenticScope to access shared context
+            // Build supervisor for the file → report workflow
+            // Uses only 2 agents to demonstrate clear data flow:
+            //   FileAgent (reads file → stores in 'fileContent')
+            //   ReportAgent (reads 'fileContent' → generates 'report')
             SupervisorAgent supervisor = ((SupervisorAgentServiceImpl<SupervisorAgent>) AgenticServices.supervisorBuilder())
                     .chatModel(model)
-                    .subAgents(fileAgent, analysisAgent, summaryAgent)
-                    .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+                    .subAgents(fileAgent, reportAgent)
+                    .responseStrategy(SupervisorResponseStrategy.LAST)
                     .listener(createAgentListener())
                     .build();
 
             // Invoke supervisor - the AgenticScope is automatically created and managed
             String filePath = ALLOWED_DIRECTORY + "/src/main/resources/file.txt";
-            String request = "Read the file at " + filePath + " and analyze what it's about";
+            String request = "Read the file at " + filePath + " and generate a report on its contents";
 
-            printHeader("SUPERVISOR AGENT DEMO");
-            System.out.println("This demo shows how a Supervisor Agent orchestrates multiple specialized agents.");
-            System.out.println("The Supervisor uses an LLM to decide which agent to call based on the task.\n");
+            printHeader("FILE → REPORT WORKFLOW DEMO");
+            System.out.println("This demo shows a clear 2-step workflow: read a file, then generate a report.");
+            System.out.println("The Supervisor orchestrates the agents automatically based on the request.\n");
+            
+            printSection("WORKFLOW");
+            System.out.println("  ┌─────────────┐      ┌──────────────┐");
+            System.out.println("  │  FileAgent  │ ───▶ │ ReportAgent  │");
+            System.out.println("  │ (MCP tools) │      │  (pure LLM)  │");
+            System.out.println("  └─────────────┘      └──────────────┘");
+            System.out.println("   outputKey:           outputKey:");
+            System.out.println("   'fileContent'        'report'\n");
             
             printSection("AVAILABLE AGENTS");
-            System.out.println("  [FILE]     FileAgent     - Reads files using MCP filesystem tools");
-            System.out.println("  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes");
-            System.out.println("  [SUMMARY]  SummaryAgent  - Creates concise summaries of content\n");
+            System.out.println("  [FILE]   FileAgent   - Reads files via MCP → stores in 'fileContent'");
+            System.out.println("  [REPORT] ReportAgent - Generates structured report → stores in 'report'\n");
             
             printSection("USER REQUEST");
             System.out.println("  \"" + request + "\"\n");
             
             printSection("SUPERVISOR ORCHESTRATION");
-            System.out.println("  The Supervisor will now decide which agents to invoke and in what order...\n");
+            System.out.println("  The Supervisor decides which agents to invoke and passes data between them...\n");
 
             // ResultWithAgenticScope provides access to both the result and the shared scope
             ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
@@ -102,10 +109,10 @@ public class SupervisorAgentDemo {
 
             // Access agent outputs from the AgenticScope
             AgenticScope scope = result.agenticScope();
-            printSection("AGENTIC SCOPE (Shared Memory)");
-            System.out.println("  Agents store their results in a shared scope for other agents to use:");
-            printScopeValue(scope, "summary", "FileAgent/SummaryAgent");
-            printScopeValue(scope, "analysis", "AnalysisAgent");
+            printSection("AGENTIC SCOPE (Data Flow)");
+            System.out.println("  Each agent stores its output for downstream agents to consume:");
+            printScopeValue(scope, "fileContent", "FileAgent → raw file data");
+            printScopeValue(scope, "report", "ReportAgent → final structured report");
             
             System.out.println("\n" + "=".repeat(70));
         }
@@ -141,7 +148,7 @@ public class SupervisorAgentDemo {
                 .transport(transport)
                 .clientName("supervisor-agent-demo")
                 .clientVersion("1.0.0")
-                .toolExecutionTimeout(Duration.ofSeconds(60))
+                .toolExecutionTimeout(Duration.ofSeconds(120))
                 .build();
     }
 
@@ -150,8 +157,8 @@ public class SupervisorAgentDemo {
                 .baseUrl(AZURE_OPENAI_ENDPOINT)
                 .apiKey(AZURE_OPENAI_API_KEY)
                 .modelName(AZURE_OPENAI_DEPLOYMENT)
-                .timeout(Duration.ofMinutes(5))
-                .maxRetries(3)
+                .timeout(Duration.ofMinutes(10))
+                .maxRetries(5)
                 .build();
     }
 
@@ -252,8 +259,7 @@ public class SupervisorAgentDemo {
             private String getAgentDisplayName(String agentName) {
                 return switch (agentName) {
                     case "readFile" -> "FileAgent (reading file via MCP)";
-                    case "analyzeContent" -> "AnalysisAgent (analyzing content)";
-                    case "summarize" -> "SummaryAgent (creating summary)";
+                    case "generateReport" -> "ReportAgent (generating structured report)";
                     default -> agentName;
                 };
             }
