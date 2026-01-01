@@ -111,8 +111,8 @@ public class SupervisorAgentDemo {
             AgenticScope scope = result.agenticScope();
             printSection("AGENTIC SCOPE (Data Flow)");
             System.out.println("  Each agent stores its output for downstream agents to consume:");
-            printScopeValue(scope, "fileContent", "FileAgent → raw file data");
-            printScopeValue(scope, "report", "ReportAgent → final structured report");
+            printScopeValue(scope, "fileContent");
+            printScopeValue(scope, "report");
             
             System.out.println("\n" + "=".repeat(70));
         }
