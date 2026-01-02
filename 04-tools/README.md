@@ -16,7 +16,6 @@
   - [Try Simple Tool Usage](#try-simple-tool-usage)
   - [Test Tool Chaining](#test-tool-chaining)
   - [See Conversation Flow](#see-conversation-flow)
-  - [Observe the Reasoning](#observe-the-reasoning)
   - [Experiment with Different Requests](#experiment-with-different-requests)
 - [Key Concepts](#key-concepts)
   - [ReAct Pattern (Reasoning and Acting)](#react-pattern-reasoning-and-acting)
@@ -61,7 +60,9 @@ This happens automatically. You define the tools and their descriptions. The mod
 
 ## How Tool Calling Works
 
-**Tool Definitions** - [WeatherTool.java](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
+### Tool Definitions
+
+[WeatherTool.java](src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
 
 You define functions with clear descriptions and parameter specifications. The model sees these descriptions in its system prompt and understands what each tool does.
 
@@ -92,11 +93,13 @@ public interface Assistant {
 > - "What makes a good tool description that helps the AI use it correctly?"
 > - "How do I handle API errors and rate limits in tool implementations?"
 
-**Decision Making**
+### Decision Making
 
 When a user asks "What's the weather in Seattle?", the model recognizes it needs the weather tool. It generates a function call with the location parameter set to "Seattle".
 
-**Execution** - [AgentService.java](src/main/java/com/example/langchain4j/agents/service/AgentService.java)
+### Execution
+
+[AgentService.java](src/main/java/com/example/langchain4j/agents/service/AgentService.java)
 
 Spring Boot auto-wires the declarative `@AiService` interface with all registered tools, and LangChain4j executes tool calls automatically.
 
@@ -105,7 +108,7 @@ Spring Boot auto-wires the declarative `@AiService` interface with all registere
 > - "How does the agent decide which tool to use and in what order?"
 > - "What happens if a tool execution fails - how should I handle errors robustly?"
 
-**Response Generation**
+### Response Generation
 
 The model receives the weather data and formats it into a natural language response for the user.
 
@@ -233,15 +236,15 @@ The application provides a web interface where you can interact with an AI agent
 
 *The AI Agent Tools interface - quick examples and chat interface for interacting with tools*
 
-**Try Simple Tool Usage**
+### Try Simple Tool Usage
 
 Start with a straightforward request: "Convert 100 degrees Fahrenheit to Celsius". The agent recognizes it needs the temperature conversion tool, calls it with the right parameters, and returns the result. Notice how natural this feels - you didn't specify which tool to use or how to call it.
 
-**Test Tool Chaining**
+### Test Tool Chaining
 
 Now try something more complex: "What's the weather in Seattle and convert it to Fahrenheit?" Watch the agent work through this in steps. It first gets the weather (which returns Celsius), recognizes it needs to convert to Fahrenheit, calls the conversion tool, and combines both results into one response.
 
-**See Conversation Flow**
+### See Conversation Flow
 
 The chat interface maintains conversation history, allowing you to have multi-turn interactions. You can see all previous queries and responses, making it easy to track the conversation and understand how the agent builds context over multiple exchanges.
 
@@ -249,7 +252,7 @@ The chat interface maintains conversation history, allowing you to have multi-tu
 
 *Multi-turn conversation showing simple conversions, weather lookups, and tool chaining*
 
-**Experiment with Different Requests**
+### Experiment with Different Requests
 
 Try various combinations:
 - Weather lookups: "What's the weather in Tokyo?"
@@ -260,19 +263,19 @@ Notice how the agent interprets natural language and maps it to appropriate tool
 
 ## Key Concepts
 
-**ReAct Pattern (Reasoning and Acting)**
+### ReAct Pattern (Reasoning and Acting)
 
 The agent alternates between reasoning (deciding what to do) and acting (using tools). This pattern enables autonomous problem-solving rather than just responding to instructions.
 
-**Tool Descriptions Matter**
+### Tool Descriptions Matter
 
 The quality of your tool descriptions directly affects how well the agent uses them. Clear, specific descriptions help the model understand when and how to call each tool.
 
-**Session Management**
+### Session Management
 
 The `@MemoryId` annotation enables automatic session-based memory management. Each session ID gets its own `ChatMemory` instance managed by the `ChatMemoryProvider` bean, eliminating the need for manual memory tracking.
 
-**Error Handling**
+### Error Handling
 
 Tools can fail - APIs timeout, parameters might be invalid, external services go down. Production agents need error handling so the model can explain problems or try alternatives.
 
