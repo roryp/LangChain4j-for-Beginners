@@ -111,8 +111,7 @@ To use the agentic module, add this Maven dependency:
 - Java 21+, Maven 3.9+
 - Node.js 16+ and npm (for MCP servers)
 - Environment variables configured in `.env` file (from the root directory):
-  - **For StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
-  - **For SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (same as Modules 01-04)
+  - `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (same as Modules 01-04)
 
 > **Note:** If you haven't set up your environment variables yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions, or copy `.env.example` to `.env` in the root directory and fill in your values.
 
@@ -128,23 +127,24 @@ This demonstrates local subprocess-based tools.
 
 **✅ No prerequisites needed** - the MCP server is spawned automatically.
 
-**Using VS Code:** Right-click on `StdioTransportDemo.java` and select **"Run Java"**.
+**Using the Start Scripts (Recommended):**
 
-**Using Maven:**
+The start scripts automatically load environment variables from the root `.env` file:
 
 **Bash:**
 ```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+chmod +x start-stdio.sh
+./start-stdio.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+.\start-stdio.ps1
 ```
+
+**Using VS Code:** Right-click on `StdioTransportDemo.java` and select **"Run Java"** (ensure your `.env` file is configured).
 
 The application spawns a filesystem MCP server automatically and reads a local file. Notice how the subprocess management is handled for you.
 
@@ -181,14 +181,14 @@ The start scripts automatically load environment variables from the root `.env` 
 **Bash:**
 ```bash
 cd 05-mcp
-chmod +x start.sh
-./start.sh
+chmod +x start-supervisor.sh
+./start-supervisor.sh
 ```
 
 **PowerShell:**
 ```powershell
 cd 05-mcp
-.\start.ps1
+.\start-supervisor.ps1
 ```
 
 **Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"** (ensure your `.env` file is configured).

@@ -26,12 +26,13 @@ import dev.langchain4j.service.tool.ToolProvider;
  * 
  * Prerequisites:
  * - npm installed
- * - GITHUB_TOKEN environment variable set
+ * - Azure OpenAI environment variables configured (same as Modules 01-04):
+ *   AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_KEY, AZURE_OPENAI_DEPLOYMENT
  * 
  * Run this example:
- * 1. export GITHUB_TOKEN=your_token_here
+ * 1. Configure .env file with Azure OpenAI variables
  * 2. cd 05-mcp
- * 3. mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+ * 3. ./start-stdio.ps1 (PowerShell) or ./start-stdio.sh (Bash)
  * 
  * Key Concepts:
  * - StdioMcpTransport for local subprocess servers
@@ -48,10 +49,14 @@ import dev.langchain4j.service.tool.ToolProvider;
 public class StdioTransportDemo {
 
     private static final String TARGET_FILE = "src/main/resources/file.txt";
-    private static final String GITHUB_MODELS_URL = "https://models.github.ai/inference";
-    private static final String MODEL_NAME = "gpt-4.1-nano";
+    
+    // Azure OpenAI configuration (same as modules 01-04)
+    private static final String AZURE_OPENAI_ENDPOINT = System.getenv("AZURE_OPENAI_ENDPOINT");
+    private static final String AZURE_OPENAI_API_KEY = System.getenv("AZURE_OPENAI_API_KEY");
+    private static final String AZURE_OPENAI_DEPLOYMENT = System.getenv("AZURE_OPENAI_DEPLOYMENT");
 
     public static void main(String[] args) throws Exception {
+        validateEnvironment();
 
         // Configure chat model
         ChatModel chatModel = buildChatModel();
@@ -86,12 +91,26 @@ public class StdioTransportDemo {
         System.exit(0);
     }
 
+    private static void validateEnvironment() {
+        if (AZURE_OPENAI_ENDPOINT == null || AZURE_OPENAI_ENDPOINT.isBlank()) {
+            System.err.println("Error: AZURE_OPENAI_ENDPOINT environment variable not set");
+            System.exit(1);
+        }
+        if (AZURE_OPENAI_API_KEY == null || AZURE_OPENAI_API_KEY.isBlank()) {
+            System.err.println("Error: AZURE_OPENAI_API_KEY environment variable not set");
+            System.exit(1);
+        }
+        if (AZURE_OPENAI_DEPLOYMENT == null || AZURE_OPENAI_DEPLOYMENT.isBlank()) {
+            System.err.println("Error: AZURE_OPENAI_DEPLOYMENT environment variable not set");
+            System.exit(1);
+        }
+    }
+
     private static ChatModel buildChatModel() {
         return OpenAiOfficialChatModel.builder()
-                .baseUrl(GITHUB_MODELS_URL)
-                .apiKey(System.getenv("GITHUB_TOKEN"))
-                .modelName(MODEL_NAME)
-                .timeout(Duration.ofSeconds(20))
+                .baseUrl(AZURE_OPENAI_ENDPOINT)
+                .apiKey(AZURE_OPENAI_API_KEY)
+                .modelName(AZURE_OPENAI_DEPLOYMENT)
                 .strictTools(false)
                 .build();
     }
