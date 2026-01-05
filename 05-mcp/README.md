@@ -156,6 +156,8 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 ### Supervisor Agent
 
+<img src="images/agentic.png" alt="Agentic Module" width="800"/>
+
 The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
 
 **File → Report Workflow:** This demo showcases a clean 2-step workflow where `FileAgent` reads a file using MCP filesystem tools, and `ReportAgent` generates a structured report with an executive summary (1 sentence), 3 key points, and recommendations. The Supervisor orchestrates this flow automatically:
