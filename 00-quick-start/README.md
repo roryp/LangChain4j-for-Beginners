@@ -286,9 +286,9 @@ Build AI safety with defense in depth. This demo shows two layers of protection 
 ```java
 class DangerousContentGuardrail implements InputGuardrail {
     @Override
-    public InputGuardrailResult validate(InputGuardrailRequest request) {
-        String userMessage = request.userMessage().singleText().toLowerCase();
-        if (userMessage.contains("explosives")) {
+    public InputGuardrailResult validate(UserMessage userMessage) {
+        String text = userMessage.singleText().toLowerCase();
+        if (text.contains("explosives")) {
             return fatal("Blocked: contains prohibited keyword");
         }
         return success();
