@@ -181,12 +181,12 @@ Ask questions about content in `document.txt`.
 
 **Bash:**
 ```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleGithubModels
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
 ```
 
 **PowerShell:**
 ```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleGithubModels
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
 ```
 
 See how AI safety filters block harmful content.
@@ -277,7 +277,7 @@ String response = model.chat(prompt);
 > - "How would I scale this to handle multiple documents or larger knowledge bases?"
 > - "What are best practices for structuring the prompt to ensure the AI uses only the provided context?"
 
-**Responsible AI** - [ResponsibleGithubModels.java](src/main/java/com/example/langchain4j/quickstart/ResponsibleGithubModels.java)
+**Responsible AI** - [ResponsibleAIDemo.java](src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java)
 
 Build AI safety with defense in depth. This demo shows two layers of protection working together:
 
@@ -298,7 +298,7 @@ class DangerousContentGuardrail implements InputGuardrail {
 
 **Part 2: Provider Safety Filters** - GitHub Models has built-in filters that catch what your guardrails might miss. You'll see hard blocks (HTTP 400 errors) for severe violations and soft refusals where the AI politely declines.
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ResponsibleGithubModels.java`](src/main/java/com/example/langchain4j/quickstart/ResponsibleGithubModels.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ResponsibleAIDemo.java`](src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java) and ask:
 > - "What is InputGuardrail and how do I create my own?"
 > - "What is the difference between a hard block and a soft refusal?"
 > - "Why use both guardrails and provider filters together?"
