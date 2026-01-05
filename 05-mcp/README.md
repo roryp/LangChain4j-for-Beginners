@@ -167,13 +167,13 @@ In the demo, `FileAgent` reads a file using MCP filesystem tools, and `ReportAge
 │  FileAgent  │ ───▶ │ ReportAgent  │
 │ (MCP tools) │      │  (pure LLM)  │
 └─────────────┘      └──────────────┘
- outputKey:           outputKey:
- 'fileContent'        'report'
+   outputKey:           outputKey:
+  'fileContent'         'report'
 ```
 
 Each agent stores its output in the **Agentic Scope** (shared memory), allowing downstream agents to access previous results. This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it.
 
-**Using the Start Scripts (Recommended):**
+#### Running the Demo
 
 The start scripts automatically load environment variables from the root `.env` file:
 
@@ -192,7 +192,7 @@ cd 05-mcp
 
 **Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"** (ensure your `.env` file is configured).
 
-**How the Supervisor Works:**
+#### How the Supervisor Works
 
 ```java
 // Step 1: FileAgent reads files using MCP tools
@@ -289,8 +289,7 @@ The Supervisor orchestrates the agents automatically based on the request.
   |
   |   Input: LangChain4j is an open-source, provider-agnostic Java framew...
   |
-  |   Result: Executive Summary
-LangChain4j is a provider-agnostic Java framework that normali...
+  |   Result: Executive Summary...
   +-- [OK] ReportAgent (generating structured report) completed
 ```
 
