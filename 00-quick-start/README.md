@@ -303,10 +303,6 @@ class DangerousContentGuardrail implements InputGuardrail {
 > - "What is the difference between a hard block and a soft refusal?"
 > - "Why use both guardrails and provider filters together?"
 
-## Debugging
-
-The examples include `.logRequests(true)` and `.logResponses(true)` to show API calls in the console. This helps troubleshoot authentication errors, rate limits, or unexpected responses. Remove these flags in production to reduce log noise.
-
 ## Next Steps
 
 **Next Module:** [01-introduction - Getting Started with LangChain4j and gpt-5 on Azure](../01-introduction/README.md)
@@ -359,3 +355,9 @@ chcp 65001
 ```
 
 This forces UTF-8 encoding in the terminal. Alternatively, use Windows Terminal which has better Unicode support.
+
+### Debugging API Calls
+
+**Issue**: Authentication errors, rate limits, or unexpected responses from the AI model
+
+**Solution**: The examples include `.logRequests(true)` and `.logResponses(true)` to show API calls in the console. This helps troubleshoot authentication errors, rate limits, or unexpected responses. Remove these flags in production to reduce log noise.
