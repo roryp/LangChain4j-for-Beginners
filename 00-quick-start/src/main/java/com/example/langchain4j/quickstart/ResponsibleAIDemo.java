@@ -8,8 +8,8 @@ import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.SystemMessage;
 
 /**
- * ResponsibleGithubModels - Responsible AI Safety Demonstration
- * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.ResponsibleGithubModels"
+ * ResponsibleAIDemo - Responsible AI Safety Demonstration
+ * Run: mvn exec:java -Dexec.mainClass="com.example.langchain4j.quickstart.ResponsibleAIDemo"
  * 
  * This example demonstrates TWO levels of AI safety:
  * 1. LangChain4j Guardrails - Application-level input validation before calling the LLM
@@ -26,7 +26,7 @@ import dev.langchain4j.service.SystemMessage;
  * - "What is the difference between a hard block and a soft refusal?"
  * - "How do I create an output guardrail to check AI responses?"
  */
-public class ResponsibleGithubModels {
+public class ResponsibleAIDemo {
     
     private final OpenAiOfficialChatModel model;
     private final SafeAssistant safeAssistant;
@@ -61,7 +61,7 @@ public class ResponsibleGithubModels {
         }
     }
     
-    public ResponsibleGithubModels() {
+    public ResponsibleAIDemo() {
         String githubToken = System.getenv("GITHUB_TOKEN");
         if (githubToken == null || githubToken.isBlank()) {
             throw new IllegalStateException("Set GITHUB_TOKEN to a token with models:read scope.");
@@ -83,7 +83,7 @@ public class ResponsibleGithubModels {
     }
     
     public static void main(String[] args) {
-        ResponsibleGithubModels demo = new ResponsibleGithubModels();
+        ResponsibleAIDemo demo = new ResponsibleAIDemo();
         
         System.out.println("╔══════════════════════════════════════════════════════════╗");
         System.out.println("║       Responsible AI Safety Demonstration                ║");

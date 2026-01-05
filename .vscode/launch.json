@@ -2,9 +2,9 @@
     "configurations": [
         {
             "type": "java",
-            "name": "ResponsibleGithubModels",
+            "name": "ResponsibleAIDemo",
             "request": "launch",
-            "mainClass": "com.example.langchain4j.quickstart.ResponsibleGithubModels",
+            "mainClass": "com.example.langchain4j.quickstart.ResponsibleAIDemo",
             "projectName": "langchain4j-quickstart",
             "envFile": "${workspaceFolder}/.env"
         },
