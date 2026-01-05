@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b975537560c404d5f254331832811e78",
-  "translation_date": "2025-12-13T21:22:57+00:00",
+  "original_hash": "ed93b3c14d58734ac10162967da958c1",
+  "translation_date": "2025-12-31T04:55:39+00:00",
   "source_file": "docs/TESTING.md",
   "language_code": "ro"
 }
@@ -19,9 +19,9 @@ CO_OP_TRANSLATOR_METADATA:
 - [Filosofia testării](../../../docs)
 - [Pașii următori](../../../docs)
 
-Acest ghid te conduce prin testele care demonstrează cum să testezi aplicații AI fără a necesita chei API sau servicii externe.
+Acest ghid te parcurge prin testele care demonstrează cum să testezi aplicații AI fără a necesita chei API sau servicii externe.
 
-## Pornire rapidă
+## Quick Start
 
 Rulează toate testele cu o singură comandă:
 
@@ -35,30 +35,30 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043bdfde5c208f8c0760a88a818f6846763583b614a5de37d52.ro.png" alt="Rezultate test reușit" width="800"/>
+<img src="../../../translated_images/test-results.ea5c98d8f3642043.ro.png" alt="Rezultate reușite ale testelor" width="800"/>
 
-*Executare reușită a testelor arătând toate testele trecute fără erori*
+*Execuție reușită a testelor arătând toate testele trecute fără niciun eșec*
 
 ## Ce acoperă testele
 
-Acest curs se concentrează pe **teste unitare** care rulează local. Fiecare test demonstrează un concept specific LangChain4j în izolare.
+Acursul se concentrează pe **teste unitare** care rulează local. Fiecare test demonstrează un concept specific LangChain4j izolat.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e4da944aec40169f37adf86fd932d3dfd56a4a86b37401ab9.ro.png" alt="Piramida testării" width="800"/>
+<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.ro.png" alt="Piramida testării" width="800"/>
 
-*Piramida testării arătând echilibrul între testele unitare (rapide, izolate), testele de integrare (componente reale) și testele end-to-end (sistem complet cu Docker). Acest training acoperă testarea unitară.*
+*Piramida testării arătând echilibrul între teste unitare (rapide, izolate), teste de integrare (componente reale) și teste end-to-end. Această instruire acoperă testarea unitară.*
 
-| Modul | Teste | Focus | Fișiere cheie |
+| Modul | Teste | Scop | Fișiere cheie |
 |--------|-------|-------|-----------|
 | **00 - Pornire rapidă** | 6 | Șabloane de prompt și substituirea variabilelor | `SimpleQuickStartTest.java` |
-| **01 - Introducere** | 8 | Memorie conversațională și chat cu stare | `SimpleConversationTest.java` |
-| **02 - Ingineria promptului** | 12 | Modele GPT-5, niveluri de entuziasm, output structurat | `SimpleGpt5PromptTest.java` |
-| **03 - RAG** | 10 | Ingestia documentelor, embedding-uri, căutare după similaritate | `DocumentServiceTest.java` |
-| **04 - Unelte** | 12 | Apelarea funcțiilor și concatenarea uneltelor | `SimpleToolsTest.java` |
-| **05 - MCP** | 15 | Protocolul Contextului Modelului cu Docker | `SimpleMcpTest.java`, `McpDockerTransportTest.java` |
+| **01 - Introducere** | 8 | Memoria conversației și chat cu stare | `SimpleConversationTest.java` |
+| **02 - Ingineria prompturilor** | 12 | Modele GPT-5, niveluri de entuziasm, ieșire structurată | `SimpleGpt5PromptTest.java` |
+| **03 - RAG** | 10 | Ingestia documentelor, embeddings, căutare prin similaritate | `DocumentServiceTest.java` |
+| **04 - Instrumente** | 12 | Apelarea funcțiilor și concatenarea instrumentelor | `SimpleToolsTest.java` |
+| **05 - MCP** | 8 | Model Context Protocol cu transport stdio | `SimpleMcpTest.java` |
 
 ## Rularea testelor
 
-**Rulează toate testele din rădăcină:**
+**Rulează toate testele din directorul root:**
 
 **Bash:**
 ```bash
@@ -75,14 +75,14 @@ mvn --% test
 **Bash:**
 ```bash
 cd 01-introduction && mvn test
-# Sau din rădăcină
+# Sau ca root
 mvn test -pl 01-introduction
 ```
 
 **PowerShell:**
 ```powershell
 cd 01-introduction; mvn --% test
-# Sau din rădăcină
+# Sau din root
 mvn --% test -pl 01-introduction
 ```
 
@@ -102,7 +102,7 @@ mvn --% test -Dtest=SimpleConversationTest
 
 **Bash:**
 ```bash
-mvn test -Dtest=SimpleConversationTest#ar trebui să păstreze istoricul conversației
+mvn test -Dtest=SimpleConversationTest#ar trebui să mențină istoricul conversației
 ```
 
 **PowerShell:**
@@ -114,33 +114,29 @@ mvn --% test -Dtest=SimpleConversationTest#ar trebui să păstreze istoricul con
 
 Dacă folosești Visual Studio Code, Test Explorer oferă o interfață grafică pentru rularea și depanarea testelor.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dcedbacf98a3539218c1d0c700307ab77c031590ae63d0be59b6.ro.png" alt="Exploratorul de teste VS Code" width="800"/>
+<img src="../../../translated_images/vscode-testing.f02dd5917289dced.ro.png" alt="Exploratorul de teste VS Code" width="800"/>
 
-*Exploratorul de teste VS Code arătând arborele testelor cu toate clasele de test Java și metodele individuale de test*
+*VS Code Test Explorer arătând arborele de teste cu toate clasele de test Java și metodele individuale de test*
 
 **Pentru a rula testele în VS Code:**
 
-1. Deschide Test Explorer făcând clic pe pictograma eprubetei din bara de activități
-2. Extinde arborele testelor pentru a vedea toate modulele și clasele de test
+1. Deschide Test Explorer făcând clic pe pictograma cu eprubetă din Activity Bar
+2. Extinde arborele de teste pentru a vedea toate modulele și clasele de test
 3. Fă clic pe butonul de redare de lângă orice test pentru a-l rula individual
-4. Fă clic pe „Run All Tests” pentru a executa întregul set
-5. Click dreapta pe orice test și selectează „Debug Test” pentru a seta puncte de întrerupere și a parcurge codul
+4. Fă clic pe "Run All Tests" pentru a executa întreaga suită
+5. Fă clic dreapta pe orice test și selectează "Debug Test" pentru a seta puncte de întrerupere și a parcurge codul pas cu pas
 
-Exploratorul de teste afișează bife verzi pentru testele trecute și oferă mesaje detaliate de eroare când testele eșuează.
+Test Explorer afișează bifele verzi pentru testele trecute și oferă mesaje detaliate la eșec.
 
 ## Modele de testare
 
-<img src="../../../translated_images/testing-patterns.02581af1c9ef742460887004e9940994dba342ec726efc4ddb2b0215b56a1d89.ro.png" alt="Șase modele de testare" width="800"/>
-
-*Șase modele de testare pentru aplicațiile LangChain4j: șabloane de prompt, simularea modelelor, izolare conversațională, testarea uneltelor, RAG în memorie și integrarea Docker*
-
-### Modelul 1: Testarea șabloanelor de prompt
+### Model 1: Testarea șabloanelor de prompt
 
 Cel mai simplu model testează șabloanele de prompt fără a apela vreun model AI. Verifici că substituirea variabilelor funcționează corect și că prompturile sunt formatate conform așteptărilor.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee3dfceaa5fa903098bdb174674acc5009a2f3d60cb07eb4e9.ro.png" alt="Testarea șabloanelor de prompt" width="800"/>
+<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.ro.png" alt="Testarea șabloanelor de prompt" width="800"/>
 
-*Testarea șabloanelor de prompt arătând fluxul de substituire a variabilelor: șablon cu locuri rezervate → valori aplicate → output formatat verificat*
+*Testarea șabloanelor de prompt arătând fluxul de substituție a variabilelor: șablon cu locuri rezervate → valori aplicate → ieșire formatată verificată*
 
 ```java
 @Test
@@ -165,21 +161,21 @@ Acest test se află în `00-quick-start/src/test/java/com/example/langchain4j/qu
 
 **Bash:**
 ```bash
-cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testareaFormatăriiȘablonuluiPrompt
+cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testarea formatării șablonului de prompt
 ```
 
 **PowerShell:**
 ```powershell
-cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testareaFormatăriiȘablonuluiPrompt
+cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testare a formatării șablonului de prompt
 ```
 
-### Modelul 2: Simularea modelelor de limbaj
+### Model 2: Simularea modelelor de limbaj (mocking)
 
-Când testezi logica conversației, folosește Mockito pentru a crea modele false care returnează răspunsuri prestabilite. Acest lucru face testele rapide, gratuite și deterministe.
+Când testezi logica conversațiilor, folosește Mockito pentru a crea modele false care returnează răspunsuri predeterminate. Acest lucru face testele rapide, gratuite și deterministe.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845ee07556f9520ac45c7f776d0879434315756020cd8b1d5b73.ro.png" alt="Comparație Mock vs API real" width="800"/>
+<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.ro.png" alt="Comparație mock vs API real" width="800"/>
 
-*Comparație arătând de ce mock-urile sunt preferate pentru testare: sunt rapide, gratuite, deterministe și nu necesită chei API*
+*Comparație care arată de ce mock-urile sunt preferate pentru testare: sunt rapide, gratuite, deterministe și nu necesită chei API*
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -224,20 +220,20 @@ class SimpleConversationTest {
         conversationService.chat(conversationId, "Third message");
 
         List<ChatMessage> history = conversationService.getHistory(conversationId);
-        assertThat(history).hasSize(6); // 3 mesaje de la utilizator + 3 mesaje AI
+        assertThat(history).hasSize(6); // 3 mesaje de utilizator + 3 mesaje AI
     }
 }
 ```
 
-Acest model apare în `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. Mock-ul asigură un comportament consistent pentru a verifica corectitudinea gestionării memoriei.
+Acest model apare în `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. Mock-ul asigură un comportament consecvent astfel încât poți verifica corect gestionarea memoriei.
 
-### Modelul 3: Testarea izolării conversației
+### Model 3: Testarea izolării conversațiilor
 
-Memoria conversațională trebuie să păstreze utilizatorii multipli separați. Acest test verifică că conversațiile nu amestecă contexte.
+Memoria conversației trebuie să păstreze utilizatorii separați. Acest test verifică că conversațiile nu amestecă contexte.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f860d81c37a97181c0e0a2ff996d38f314f06b35cc1e08ca3.ro.png" alt="Izolarea conversației" width="800"/>
+<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.ro.png" alt="Izolarea conversațiilor" width="800"/>
 
-*Testarea izolării conversației arătând stocări de memorie separate pentru utilizatori diferiți pentru a preveni amestecul de contexte*
+*Testarea izolării conversațiilor care arată magazine de memorie separate pentru utilizatori diferiți pentru a preveni amestecarea contextelor*
 
 ```java
 @Test
@@ -263,13 +259,13 @@ void shouldIsolateConversationsByid() {
 
 Fiecare conversație își menține propria istorie independentă. În sistemele de producție, această izolare este critică pentru aplicațiile multi-utilizator.
 
-### Modelul 4: Testarea uneltelor independent
+### Model 4: Testarea instrumentelor în mod independent
 
-Uneltele sunt funcții pe care AI le poate apela. Testează-le direct pentru a te asigura că funcționează corect indiferent de deciziile AI.
+Instrumentele sunt funcții pe care AI le poate apela. Testează-le direct pentru a te asigura că funcționează corect indiferent de deciziile AI-ului.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924e7e7cd41be8ba5ccb62f16962b85f53953d46cc6317d2972.ro.png" alt="Testarea uneltelor" width="800"/>
+<img src="../../../translated_images/tools-testing.3e1706817b0b3924.ro.png" alt="Testarea instrumentelor" width="800"/>
 
-*Testarea uneltelor independent arătând execuția uneltei mock fără apeluri AI pentru a verifica logica de business*
+*Testarea instrumentelor în mod independent arătând executarea mock a instrumentelor fără apeluri AI pentru a verifica logica de business*
 
 ```java
 @Test
@@ -292,15 +288,15 @@ void shouldDemonstrateToolChaining() {
 }
 ```
 
-Aceste teste din `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` validează logica uneltelor fără implicarea AI. Exemplul de concatenare arată cum output-ul unei unelte alimentează input-ul alteia.
+Aceste teste din `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` validează logica instrumentelor fără implicarea AI. Exemplul de chaining arată cum ieșirea unui instrument alimentează intrarea altuia.
 
-### Modelul 5: Testarea RAG în memorie
+### Model 5: Testarea RAG în memorie
 
-Sistemele RAG necesită în mod tradițional baze de date vectoriale și servicii de embedding. Modelul în memorie îți permite să testezi întregul flux fără dependențe externe.
+Sistemele RAG necesită în mod tradițional baze de date vectoriale și servicii de embedding. Modelul în memorie îți permite să testezi întregul pipeline fără dependențe externe.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b14fcda9103bba011864f1d0882b27a9886c3cf5b446522ce3.ro.png" alt="Testarea RAG în memorie" width="800"/>
+<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.ro.png" alt="Testarea RAG în memorie" width="800"/>
 
-*Fluxul de testare RAG în memorie arătând parsarea documentelor, stocarea embedding-urilor și căutarea după similaritate fără a necesita o bază de date*
+*Fluxul de testare RAG în memorie arătând parsarea documentelor, stocarea embedding-urilor și căutarea prin similaritate fără a necesita o bază de date*
 
 ```java
 @Test
@@ -317,17 +313,13 @@ void testProcessTextDocument() {
 }
 ```
 
-Acest test din `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` creează un document în memorie și verifică fragmentarea și gestionarea metadatelor.
+Acest test din `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` creează un document în memorie și verifică chunking-ul și gestionarea metadata.
 
-### Modelul 6: Testarea de integrare cu Docker
+### Model 6: Testarea integrării MCP
 
-Unele funcționalități necesită infrastructură reală. Modulul MCP folosește Testcontainers pentru a porni containere Docker pentru testele de integrare. Acestea validează că codul tău funcționează cu servicii reale, menținând în același timp izolarea testelor.
+Modulul MCP testează integrarea Model Context Protocol folosind transportul stdio. Aceste teste verifică că aplicația ta poate porni și comunica cu servere MCP ca subprocessuri.
 
-<img src="../../../translated_images/mcp-testing.bb3b3e92e47acb4b3dfb12715b4e113655f16c11ba39c2ffabae557bc6c3734c.ro.png" alt="Testarea integrării MCP cu Docker" width="800"/>
-
-*Testarea integrării MCP cu Testcontainers arătând ciclul automatizat al containerelor: pornire, execuție test, oprire și curățare*
-
-Testele din `05-mcp/src/test/java/com/example/langchain4j/mcp/McpDockerTransportTest.java` necesită ca Docker să fie pornit.
+Teste din `05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` validează comportamentul clientului MCP.
 
 **Rulează-le:**
 
@@ -343,36 +335,36 @@ cd 05-mcp; mvn --% test
 
 ## Filosofia testării
 
-Testează codul tău, nu AI-ul. Testele tale ar trebui să valideze codul pe care îl scrii verificând cum sunt construite prompturile, cum este gestionată memoria și cum execută uneltele. Răspunsurile AI variază și nu ar trebui să facă parte din aserțiile testelor. Întreabă-te dacă șablonul tău de prompt substituie corect variabilele, nu dacă AI oferă răspunsul corect.
+Testează codul tău, nu AI-ul. Testele tale ar trebui să valideze codul pe care îl scrii verificând cum sunt construite prompturile, cum este gestionată memoria și cum execută instrumentele. Răspunsurile AI variază și nu ar trebui să facă parte din aserțiuni. Întreabă-te dacă șablonul tău de prompt substituie corect variabilele, nu dacă AI oferă răspunsul corect.
 
-Folosește mock-uri pentru modelele de limbaj. Sunt dependențe externe care sunt lente, costisitoare și nedeterministe. Simularea face testele rapide cu milisecunde în loc de secunde, gratuite fără costuri API și deterministe cu același rezultat de fiecare dată.
+Folosește mock-uri pentru modelele de limbaj. Sunt dependențe externe care sunt lente, costisitoare și nedeterministe. Mockarea face testele rapide în milisecunde în loc de secunde, gratuite fără costuri API și deterministe cu același rezultat de fiecare dată.
 
-Păstrează testele independente. Fiecare test ar trebui să-și configureze propriile date, să nu depindă de alte teste și să se curețe după sine. Testele ar trebui să treacă indiferent de ordinea de execuție.
+Păstrează testele independente. Fiecare test ar trebui să își configureze propriile date, să nu se bazeze pe alte teste și să curețe după sine. Testele ar trebui să treacă indiferent de ordinea de execuție.
 
-Testează cazuri limită dincolo de calea fericită. Încearcă inputuri goale, inputuri foarte mari, caractere speciale, parametri invalizi și condiții de margine. Acestea dezvăluie adesea bug-uri pe care utilizarea normală nu le expune.
+Testează cazurile limită dincolo de căile fericite. Încearcă intrări goale, intrări foarte mari, caractere speciale, parametri invalizi și condiții de margine. Acestea adesea dezvăluie bug-uri pe care utilizarea normală nu le expune.
 
-Folosește nume descriptive. Compară `shouldMaintainConversationHistoryAcrossMultipleMessages()` cu `test1()`. Primul îți spune exact ce se testează, făcând depanarea erorilor mult mai ușoară.
+Folosește nume descriptive. Compară `shouldMaintainConversationHistoryAcrossMultipleMessages()` cu `test1()`. Primul îți spune exact ce se testează, făcând mult mai ușoară depanarea eșecurilor.
 
 ## Pașii următori
 
-Acum că înțelegi modelele de testare, aprofundează fiecare modul:
+Acum că ai înțeles modelele de testare, aprofundează fiecare modul:
 
-- **[00 - Pornire rapidă](../00-quick-start/README.md)** - Începe cu bazele șabloanelor de prompt
-- **[01 - Introducere](../01-introduction/README.md)** - Învață gestionarea memoriei conversaționale
-- **[02 - Ingineria promptului](../02-prompt-engineering/README.md)** - Stăpânește modelele de prompting GPT-5
+- **[00 - Pornire rapidă](../00-quick-start/README.md)** - Începe cu elementele de bază ale șabloanelor de prompt
+- **[01 - Introducere](../01-introduction/README.md)** - Învață gestionarea memoriei conversației
+- **[02 - Ingineria prompturilor](../02-prompt-engineering/README.md)** - Stăpânește modelele de prompting GPT-5
 - **[03 - RAG](../03-rag/README.md)** - Construiește sisteme de generare augmentată prin recuperare
-- **[04 - Unelte](../04-tools/README.md)** - Implementează apelarea funcțiilor și lanțuri de unelte
-- **[05 - MCP](../05-mcp/README.md)** - Integrează Protocolul Contextului Modelului cu Docker
+- **[04 - Instrumente](../04-tools/README.md)** - Implementează apelarea funcțiilor și lanțuri de instrumente
+- **[05 - MCP](../05-mcp/README.md)** - Integrează Model Context Protocol
 
 README-ul fiecărui modul oferă explicații detaliate ale conceptelor testate aici.
 
 ---
 
-**Navigare:** [← Înapoi la Principal](../README.md)
+**Navigation:** [← Înapoi la principal](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm răspunderea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși depunem eforturi pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original, în limba sa originală, trebuie considerat sursa autorizată. Pentru informații critice, se recomandă o traducere profesională realizată de un traducător uman. Nu ne asumăm responsabilitatea pentru eventuale neînțelegeri sau interpretări greșite care decurg din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

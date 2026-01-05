@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b975537560c404d5f254331832811e78",
-  "translation_date": "2025-12-13T21:26:44+00:00",
+  "original_hash": "ed93b3c14d58734ac10162967da958c1",
+  "translation_date": "2025-12-31T05:44:34+00:00",
   "source_file": "docs/TESTING.md",
   "language_code": "hr"
 }
@@ -12,14 +12,14 @@ CO_OP_TRANSLATOR_METADATA:
 ## Sadržaj
 
 - [Brzi početak](../../../docs)
-- [Što testovi pokrivaju](../../../docs)
+- [Što testovi obuhvaćaju](../../../docs)
 - [Pokretanje testova](../../../docs)
-- [Pokretanje testova u VS Codeu](../../../docs)
+- [Pokretanje testova u VS Code](../../../docs)
 - [Obrasci testiranja](../../../docs)
 - [Filozofija testiranja](../../../docs)
 - [Sljedeći koraci](../../../docs)
 
-Ovaj vodič vodi vas kroz testove koji pokazuju kako testirati AI aplikacije bez potrebe za API ključevima ili vanjskim uslugama.
+Ovaj vodič vodi vas kroz testove koji pokazuju kako testirati AI aplikacije bez potrebe za API ključevima ili vanjskim servisima.
 
 ## Brzi početak
 
@@ -35,30 +35,30 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043bdfde5c208f8c0760a88a818f6846763583b614a5de37d52.hr.png" alt="Successful Test Results" width="800"/>
+<img src="../../../translated_images/test-results.ea5c98d8f3642043.hr.png" alt="Uspješni rezultati testiranja" width="800"/>
 
-*Uspješno izvršavanje testova koje pokazuje da su svi testovi prošli bez grešaka*
+*Uspješno izvršavanje testova koje prikazuje da su svi testovi prošli bez neuspjeha*
 
-## Što testovi pokrivaju
+## Što testovi obuhvaćaju
 
-Ovaj tečaj se fokusira na **jedinične testove** koji se izvode lokalno. Svaki test demonstrira određeni LangChain4j koncept u izolaciji.
+Ovaj tečaj fokusira se na **jedinične testove** koji se izvode lokalno. Svaki test demonstrira određeni LangChain4j koncept u izolaciji.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e4da944aec40169f37adf86fd932d3dfd56a4a86b37401ab9.hr.png" alt="Testing Pyramid" width="800"/>
+<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.hr.png" alt="Piramida testiranja" width="800"/>
 
-*Piramida testiranja koja prikazuje ravnotežu između jediničnih testova (brzi, izolirani), integracijskih testova (stvarne komponente) i end-to-end testova (cijeli sustav s Dockerom). Ova obuka pokriva jedinično testiranje.*
+*Piramida testiranja koja prikazuje ravnotežu između jediničnih testova (brzi, izolirani), integracijskih testova (stvarne komponente) i end-to-end testova. Ova obuka pokriva jedinično testiranje.*
 
 | Modul | Testovi | Fokus | Ključne datoteke |
 |--------|-------|-------|-----------|
-| **00 - Brzi početak** | 6 | Predlošci upita i zamjena varijabli | `SimpleQuickStartTest.java` |
-| **01 - Uvod** | 8 | Memorija razgovora i stanje chata | `SimpleConversationTest.java` |
-| **02 - Inženjering upita** | 12 | GPT-5 obrasci, razine želje, strukturirani izlaz | `SimpleGpt5PromptTest.java` |
-| **03 - RAG** | 10 | Učitavanje dokumenata, ugradnje, pretraživanje sličnosti | `DocumentServiceTest.java` |
+| **00 - Brzi početak** | 6 | Predlošci promptova i zamjena varijabli | `SimpleQuickStartTest.java` |
+| **01 - Uvod** | 8 | Memorija konverzacije i chat s održavanjem stanja | `SimpleConversationTest.java` |
+| **02 - Prompt Engineering** | 12 | Uzorci GPT-5, razine "eagerness", strukturirani izlaz | `SimpleGpt5PromptTest.java` |
+| **03 - RAG** | 10 | Učitavanje dokumenata, embeddings, pretraživanje po sličnosti | `DocumentServiceTest.java` |
 | **04 - Alati** | 12 | Pozivanje funkcija i povezivanje alata | `SimpleToolsTest.java` |
-| **05 - MCP** | 15 | Model Context Protocol s Dockerom | `SimpleMcpTest.java`, `McpDockerTransportTest.java` |
+| **05 - MCP** | 8 | Model Context Protocol s stdio transportom | `SimpleMcpTest.java` |
 
 ## Pokretanje testova
 
-**Pokrenite sve testove iz korijena:**
+**Pokreni sve testove iz root direktorija:**
 
 **Bash:**
 ```bash
@@ -70,23 +70,23 @@ mvn test
 mvn --% test
 ```
 
-**Pokrenite testove za određeni modul:**
+**Pokreni testove za određeni modul:**
 
 **Bash:**
 ```bash
 cd 01-introduction && mvn test
-# Ili iz korijena
+# Ili kao root
 mvn test -pl 01-introduction
 ```
 
 **PowerShell:**
 ```powershell
 cd 01-introduction; mvn --% test
-# Ili iz korijena
+# Ili iz root-a
 mvn --% test -pl 01-introduction
 ```
 
-**Pokrenite pojedinačnu test klasu:**
+**Pokreni jednu test klasu:**
 
 **Bash:**
 ```bash
@@ -98,49 +98,45 @@ mvn test -Dtest=SimpleConversationTest
 mvn --% test -Dtest=SimpleConversationTest
 ```
 
-**Pokrenite određenu test metodu:**
+**Pokreni određeni test metod:**
 
 **Bash:**
 ```bash
-mvn test -Dtest=SimpleConversationTest#trebaOdržavatiPovijestRazgovora
+mvn test -Dtest=SimpleConversationTest#treba održavati povijest razgovora
 ```
 
 **PowerShell:**
 ```powershell
-mvn --% test -Dtest=SimpleConversationTest#trebaOdržavatiPovijestRazgovora
+mvn --% test -Dtest=SimpleConversationTest#trebao bi održavati povijest razgovora
 ```
 
-## Pokretanje testova u VS Codeu
+## Pokretanje testova u VS Code
 
 Ako koristite Visual Studio Code, Test Explorer pruža grafičko sučelje za pokretanje i otklanjanje pogrešaka testova.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dcedbacf98a3539218c1d0c700307ab77c031590ae63d0be59b6.hr.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/vscode-testing.f02dd5917289dced.hr.png" alt="Istraživač testova u VS Codeu" width="800"/>
 
-*VS Code Test Explorer prikazuje stablo testova sa svim Java test klasama i pojedinačnim test metodama*
+*VS Code Test Explorer koji prikazuje stablo testova sa svim Java test klasama i pojedinačnim test metodama*
 
 **Za pokretanje testova u VS Codeu:**
 
 1. Otvorite Test Explorer klikom na ikonu epruvete u Activity Baru
 2. Proširite stablo testova da vidite sve module i test klase
-3. Kliknite na gumb za reprodukciju pored bilo kojeg testa da ga pokrenete pojedinačno
-4. Kliknite "Run All Tests" za izvršavanje cijelog skupa
-5. Desni klik na bilo koji test i odaberite "Debug Test" za postavljanje točaka prekida i korak po korak pregled koda
+3. Kliknite gumb za pokretanje pored bilo kojeg testa da ga pokrenete pojedinačno
+4. Kliknite "Run All Tests" da izvršite cijeli skup
+5. Desni klik na bilo koji test i odaberite "Debug Test" da postavite breakpointe i korak po korak pratite kod
 
-Test Explorer prikazuje zelene kvačice za uspješne testove i daje detaljne poruke o pogreškama kada testovi ne uspiju.
+Istraživač testova prikazuje zelene kvačice za uspješne testove i daje detaljne poruke o pogreškama kada testovi padnu.
 
 ## Obrasci testiranja
 
-<img src="../../../translated_images/testing-patterns.02581af1c9ef742460887004e9940994dba342ec726efc4ddb2b0215b56a1d89.hr.png" alt="Six Testing Patterns" width="800"/>
+### Obrazac 1: Testiranje predložaka promptova
 
-*Šest obrazaca testiranja za LangChain4j aplikacije: predlošci upita, lažni modeli, izolacija razgovora, testiranje alata, RAG u memoriji i Docker integracija*
+Najjednostavniji obrazac testira predloške promptova bez pozivanja ikakvog AI modela. Provjeravate da zamjena varijabli radi ispravno i da su promptovi formatirani kako se očekuje.
 
-### Obrazac 1: Testiranje predložaka upita
+<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.hr.png" alt="Testiranje predložaka prompta" width="800"/>
 
-Najjednostavniji obrazac testira predloške upita bez pozivanja bilo kojeg AI modela. Provjeravate da zamjena varijabli radi ispravno i da su upiti formatirani kako se očekuje.
-
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee3dfceaa5fa903098bdb174674acc5009a2f3d60cb07eb4e9.hr.png" alt="Prompt Template Testing" width="800"/>
-
-*Testiranje predložaka upita koje prikazuje tijek zamjene varijabli: predložak s rezerviranim mjestima → primijenjene vrijednosti → provjeren formatirani izlaz*
+*Testiranje predložaka prompta koje prikazuje tok zamjene varijabli: predložak s rezerviranim mjestima → primijenjene vrijednosti → provjeren formatirani izlaz*
 
 ```java
 @Test
@@ -161,25 +157,25 @@ void testPromptTemplateFormatting() {
 
 Ovaj test se nalazi u `00-quick-start/src/test/java/com/example/langchain4j/quickstart/SimpleQuickStartTest.java`.
 
-**Pokrenite ga:**
+**Pokreni ga:**
 
 **Bash:**
 ```bash
-cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testiranjeFormatiranjaPredloškaUpita
+cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testFormatiranjaPredloškaUpita
 ```
 
 **PowerShell:**
 ```powershell
-cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testiranjeFormatiranjaPredloškaUpita
+cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testiranje formatiranja predloška upita
 ```
 
-### Obrazac 2: Lažni jezični modeli
+### Obrazac 2: Mockiranje jezičnih modela
 
-Kod testiranja logike razgovora, koristite Mockito za stvaranje lažnih modela koji vraćaju unaprijed određene odgovore. To čini testove brzim, besplatnim i determinističkim.
+Prilikom testiranja logike razgovora koristite Mockito za stvaranje lažnih modela koji vraćaju unaprijed određene odgovore. To čini testove brzim, besplatnim i determinističkim.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845ee07556f9520ac45c7f776d0879434315756020cd8b1d5b73.hr.png" alt="Mock vs Real API Comparison" width="800"/>
+<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.hr.png" alt="Usporedba mocka i stvarnog API-ja" width="800"/>
 
-*Usporedba koja pokazuje zašto su lažni modeli poželjniji za testiranje: brzi su, besplatni, deterministički i ne zahtijevaju API ključeve*
+*Usporedba koja pokazuje zašto su mockovi preferirani za testiranje: brzi su, besplatni, deterministični i ne zahtijevaju API ključeve*
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -224,20 +220,20 @@ class SimpleConversationTest {
         conversationService.chat(conversationId, "Third message");
 
         List<ChatMessage> history = conversationService.getHistory(conversationId);
-        assertThat(history).hasSize(6); // 3 korisnička + 3 AI poruke
+        assertThat(history).hasSize(6); // 3 poruke korisnika + 3 AI poruke
     }
 }
 ```
 
-Ovaj obrazac se pojavljuje u `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. Lažni model osigurava dosljedno ponašanje kako biste mogli provjeriti ispravno upravljanje memorijom.
+Ovaj obrazac se pojavljuje u `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. Mock osigurava konzistentno ponašanje tako da možete provjeriti ispravno upravljanje memorijom.
 
 ### Obrazac 3: Testiranje izolacije razgovora
 
-Memorija razgovora mora držati više korisnika odvojenima. Ovaj test provjerava da se konteksti razgovora ne miješaju.
+Memorija konverzacije mora držati više korisnika odvojenima. Ovaj test provjerava da se konteksti razgovora ne miješaju.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f860d81c37a97181c0e0a2ff996d38f314f06b35cc1e08ca3.hr.png" alt="Conversation Isolation" width="800"/>
+<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.hr.png" alt="Izolacija razgovora" width="800"/>
 
-*Testiranje izolacije razgovora koje prikazuje odvojene memorijske pohrane za različite korisnike kako bi se spriječilo miješanje konteksta*
+*Testiranje izolacije razgovaja koje prikazuje odvojene spremišta memorije za različite korisnike kako bi se spriječilo miješanje konteksta*
 
 ```java
 @Test
@@ -261,15 +257,15 @@ void shouldIsolateConversationsByid() {
 }
 ```
 
-Svaki razgovor održava vlastitu neovisnu povijest. U produkcijskim sustavima, ta izolacija je ključna za aplikacije s više korisnika.
+Svaka konverzacija održava vlastitu neovisnu povijest. U proizvodnim sustavima ta je izolacija kritična za aplikacije s više korisnika.
 
-### Obrazac 4: Nezavisno testiranje alata
+### Obrazac 4: Testiranje alata neovisno
 
-Alati su funkcije koje AI može pozvati. Testirajte ih izravno kako biste osigurali da rade ispravno bez obzira na AI odluke.
+Alati su funkcije koje AI može pozvati. Testirajte ih izravno kako biste bili sigurni da rade ispravno bez obzira na odluke AI-ja.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924e7e7cd41be8ba5ccb62f16962b85f53953d46cc6317d2972.hr.png" alt="Tools Testing" width="800"/>
+<img src="../../../translated_images/tools-testing.3e1706817b0b3924.hr.png" alt="Testiranje alata" width="800"/>
 
-*Nezavisno testiranje alata koje prikazuje izvršavanje lažnog alata bez AI poziva za provjeru poslovne logike*
+*Neovisno testiranje alata koje prikazuje izvršavanje mock alata bez AI poziva kako bi se provjerila poslovna logika*
 
 ```java
 @Test
@@ -292,15 +288,15 @@ void shouldDemonstrateToolChaining() {
 }
 ```
 
-Ovi testovi iz `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` potvrđuju logiku alata bez uključivanja AI. Primjer povezivanja pokazuje kako izlaz jednog alata ulazi kao ulaz drugog.
+Ovi testovi iz `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` provjeravaju logiku alata bez uključivanja AI-ja. Primjer povezivanja pokazuje kako izlaz jednog alata ulazi kao ulaz drugog.
 
 ### Obrazac 5: RAG testiranje u memoriji
 
-RAG sustavi tradicionalno zahtijevaju vektorske baze podataka i usluge ugradnje. Obrazac u memoriji omogućuje testiranje cijelog procesa bez vanjskih ovisnosti.
+RAG sustavi tradicionalno zahtijevaju vektorske baze podataka i servis za embeddinge. Obrazac u memoriji omogućuje testiranje cijelog pipelinea bez vanjskih ovisnosti.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b14fcda9103bba011864f1d0882b27a9886c3cf5b446522ce3.hr.png" alt="In-Memory RAG Testing" width="800"/>
+<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.hr.png" alt="Testiranje RAG-a u memoriji" width="800"/>
 
-*Radni tijek RAG testiranja u memoriji koji prikazuje parsiranje dokumenata, pohranu ugradnji i pretraživanje sličnosti bez potrebe za bazom podataka*
+*RAG testiranje u memoriji koje prikazuje parsiranje dokumenata, pohranu embeddinga i pretraživanje po sličnosti bez potrebe za bazom podataka*
 
 ```java
 @Test
@@ -317,19 +313,15 @@ void testProcessTextDocument() {
 }
 ```
 
-Ovaj test iz `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` stvara dokument u memoriji i provjerava dijeljenje i rukovanje metapodacima.
+Ovaj test iz `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` stvara dokument u memoriji i provjerava chunking i rukovanje metapodacima.
 
-### Obrazac 6: Integracijsko testiranje s Dockerom
+### Obrazac 6: MCP integracijsko testiranje
 
-Neke značajke zahtijevaju stvarnu infrastrukturu. MCP modul koristi Testcontainers za pokretanje Docker kontejnera za integracijske testove. Oni potvrđuju da vaš kod radi sa stvarnim uslugama uz održavanje izolacije testova.
+MCP modul testira integraciju Model Context Protocol-a koristeći stdio transport. Ovi testovi provjeravaju da vaša aplikacija može spawnati i komunicirati s MCP serverima kao podprocesima.
 
-<img src="../../../translated_images/mcp-testing.bb3b3e92e47acb4b3dfb12715b4e113655f16c11ba39c2ffabae557bc6c3734c.hr.png" alt="MCP Docker Integration Testing" width="800"/>
+Testovi u `05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` provjeravaju ponašanje MCP klijenta.
 
-*Integracijsko testiranje MCP-a s Testcontainers koje prikazuje automatizirani životni ciklus kontejnera: pokretanje, izvršavanje testa, zaustavljanje i čišćenje*
-
-Testovi u `05-mcp/src/test/java/com/example/langchain4j/mcp/McpDockerTransportTest.java` zahtijevaju da Docker radi.
-
-**Pokrenite ih:**
+**Pokreni ih:**
 
 **Bash:**
 ```bash
@@ -343,26 +335,26 @@ cd 05-mcp; mvn --% test
 
 ## Filozofija testiranja
 
-Testirajte svoj kod, ne AI. Vaši testovi trebaju potvrditi kod koji pišete provjeravajući kako se upiti konstruiraju, kako se upravlja memorijom i kako se izvršavaju alati. AI odgovori variraju i ne bi trebali biti dio testnih tvrdnji. Pitajte se radi li vaš predložak upita ispravno zamjenu varijabli, a ne daje li AI točan odgovor.
+Testirajte svoj kod, ne AI. Vaši testovi trebaju validirati kod koji napišete provjeravajući kako su prompti konstruirani, kako se upravlja memorijom i kako se izvršavaju alati. AI odgovori variraju i ne bi trebali biti dio tvrdnji u testovima. Zapitajte se je li vaš predložak prompta ispravno zamijenio varijable, a ne daje li AI ispravan odgovor.
 
-Koristite lažne modele za jezik. Oni su vanjske ovisnosti koje su spore, skupe i nedeterminističke. Lažno modeliranje čini testove brzim s milisekundama umjesto sekundi, besplatnim bez troškova API-ja i determinističkim s istim rezultatom svaki put.
+Koristite mockove za jezične modele. Oni su vanjski ovisnici koji su spori, skupi i nedeterministični. Mockiranje čini testove brzim s milisekundama umjesto sekundi, besplatnim bez troškova API-ja i determinističnim s istim rezultatom svaki put.
 
-Održavajte testove neovisnima. Svaki test treba postaviti vlastite podatke, ne oslanjati se na druge testove i očistiti nakon sebe. Testovi trebaju prolaziti bez obzira na redoslijed izvođenja.
+Držite testove neovisnima. Svaki test bi trebao postaviti vlastite podatke, ne oslanjati se na druge testove i očistiti za sobom. Testovi bi trebali prolaziti neovisno o redoslijedu izvođenja.
 
-Testirajte rubne slučajeve izvan sretnih putanja. Isprobajte prazne ulaze, vrlo velike ulaze, posebne znakove, nevažeće parametre i granične uvjete. Oni često otkrivaju greške koje normalna upotreba ne otkriva.
+Testirajte rubne slučajeve izvan sretnog puta. Isprobajte prazne ulaze, vrlo velike ulaze, posebne znakove, nevažeće parametre i granične uvjete. Oni često otkrivaju bugove koje normalna uporaba ne otkriva.
 
-Koristite opisna imena. Usporedite `shouldMaintainConversationHistoryAcrossMultipleMessages()` s `test1()`. Prvo vam točno govori što se testira, što olakšava otklanjanje pogrešaka.
+Koristite opisne nazive. Usporedite shouldMaintainConversationHistoryAcrossMultipleMessages() s test1(). Prvi vam točno govori što se testira, olakšavajući otklanjanje pogrešaka kada test padne.
 
 ## Sljedeći koraci
 
-Sada kada razumijete obrasce testiranja, zaronite dublje u svaki modul:
+Sada kada razumijete obrasce testiranja, uronite dublje u svaki modul:
 
-- **[00 - Brzi početak](../00-quick-start/README.md)** - Počnite s osnovama predložaka upita
-- **[01 - Uvod](../01-introduction/README.md)** - Naučite upravljanje memorijom razgovora
-- **[02 - Inženjering upita](../02-prompt-engineering/README.md)** - Ovladavanje GPT-5 obrascima upita
-- **[03 - RAG](../03-rag/README.md)** - Izgradnja sustava za generiranje s podrškom pretraživanja
-- **[04 - Alati](../04-tools/README.md)** - Implementacija pozivanja funkcija i lanaca alata
-- **[05 - MCP](../05-mcp/README.md)** - Integracija Model Context Protocol s Dockerom
+- **[00 - Brzi početak](../00-quick-start/README.md)** - Počnite s osnovama predložaka promptova
+- **[01 - Uvod](../01-introduction/README.md)** - Naučite upravljanje memorijom konverzacije
+- **[02 - Prompt Engineering](../02-prompt-engineering/README.md)** - Svladajte GPT-5 obrasce za promptanje
+- **[03 - RAG](../03-rag/README.md)** - Izgradite sustave s retrieval-augmented generation
+- **[04 - Alati](../04-tools/README.md)** - Implementirajte pozivanje funkcija i lance alata
+- **[05 - MCP](../05-mcp/README.md)** - Integrirajte Model Context Protocol
 
 README svakog modula pruža detaljna objašnjenja koncepata testiranih ovdje.
 
@@ -373,6 +365,6 @@ README svakog modula pruža detaljna objašnjenja koncepata testiranih ovdje.
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Odricanje od odgovornosti**:
-Ovaj dokument preveden je pomoću AI usluge za prevođenje [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakva nesporazuma ili pogrešna tumačenja koja proizlaze iz korištenja ovog prijevoda.
+Odricanje odgovornosti:
+Ovaj dokument preveden je pomoću AI usluge prevođenja [Co-op Translator](https://github.com/Azure/co-op-translator). Iako nastojimo postići točnost, imajte na umu da automatski prijevodi mogu sadržavati pogreške ili netočnosti. Izvorni dokument na njegovu izvornom jeziku treba smatrati autoritativnim izvorom. Za kritične informacije preporučuje se profesionalni ljudski prijevod. Ne snosimo odgovornost za bilo kakve nesporazume ili krive interpretacije koje proizlaze iz upotrebe ovog prijevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

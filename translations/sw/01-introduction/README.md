@@ -53,7 +53,7 @@ Mifano ya lugha haina hali. Kila simu ya API ni huru. Ikiwa utatuma "Jina langu 
 
 Hii ni sawa kwa maswali na majibu rahisi lakini haifai kwa programu halisi. Bots za huduma kwa wateja zinahitaji kukumbuka uliyowaambia. Msaidizi wa kibinafsi anahitaji muktadha. Mazungumzo yoyote yenye mizunguko mingi yanahitaji kumbukumbu.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.sw.png" alt="Mazungumzo Yasiyo na Hali dhidi ya Yenye Hali" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.sw.png" alt="Mazungumzo Yasiyo na Hali dhidi ya Yenye Hali" width="800"/>
 
 *Tofauti kati ya mazungumzo yasiyo na hali (simu huru) na yenye hali (yanayojua muktadha)*
 
@@ -61,7 +61,7 @@ Hii ni sawa kwa maswali na majibu rahisi lakini haifai kwa programu halisi. Bots
 
 Kabla ya kuingia kwenye mazungumzo, ni muhimu kuelewa tokeni - vitengo vya msingi vya maandishi ambavyo mifano ya lugha huchakata:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.sw.png" alt="Maelezo ya Tokeni" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.sw.png" alt="Maelezo ya Tokeni" width="800"/>
 
 *Mfano wa jinsi maandishi yanavyogawanywa kuwa tokeni - "Ninapenda AI!" inakuwa vitengo 4 tofauti vya usindikaji*
 
@@ -73,7 +73,7 @@ Kumbukumbu ya mazungumzo inatatua tatizo la kutokuwa na hali kwa kudumisha histo
 
 LangChain4j hutoa utekelezaji wa kumbukumbu unaoshughulikia hili moja kwa moja. Unachagua ni ujumbe wangapi kuhifadhi na mfumo hudhibiti dirisha la muktadha.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.sw.png" alt="Dhana ya Dirisha la Kumbukumbu" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.sw.png" alt="Dhana ya Dirisha la Kumbukumbu" width="800"/>
 
 *MessageWindowChatMemory hudumisha dirisha linalosogea la ujumbe wa hivi karibuni, likiacha zile za zamani moja kwa moja*
 
@@ -212,7 +212,7 @@ Kutoka Spring Boot Dashboard, unaweza:
 
 Bonyeza kitufe cha kucheza kando ya "introduction" kuanzisha moduli hii, au anzisha moduli zote kwa pamoja.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.sw.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.sw.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Chaguo 2: Kutumia skripti za shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Moduli zote
 
 Programu hutoa kiolesura cha wavuti chenye utekelezaji wa mazungumzo mawili pembeni kwa pembeni.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.sw.png" alt="Skrini Kuu ya Programu" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.sw.png" alt="Skrini Kuu ya Programu" width="800"/>
 
 *Dashibodi inaonyesha chaguzi za Mazungumzo Rahisi (yasiyo na hali) na Mazungumzo ya Mazungumzo (yenye hali)*
 
@@ -290,7 +290,7 @@ Programu hutoa kiolesura cha wavuti chenye utekelezaji wa mazungumzo mawili pemb
 
 Jaribu hii kwanza. Uliza "Jina langu ni John" kisha mara moja uliza "Jina langu ni nani?" Mfano hautakumbuka kwa sababu kila ujumbe ni huru. Hii inaonyesha tatizo kuu la ushirikiano wa mfano wa lugha wa msingi - hakuna muktadha wa mazungumzo.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.sw.png" alt="Onyesho la Mazungumzo Yasiyo na Hali" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.sw.png" alt="Onyesho la Mazungumzo Yasiyo na Hali" width="800"/>
 
 *AI haikumbuki jina lako kutoka ujumbe uliopita*
 
@@ -298,7 +298,7 @@ Jaribu hii kwanza. Uliza "Jina langu ni John" kisha mara moja uliza "Jina langu 
 
 Sasa jaribu mfuatano huo hapa. Uliza "Jina langu ni John" kisha "Jina langu ni nani?" Mara hii inakumbuka. Tofauti ni MessageWindowChatMemory - hudumisha historia ya mazungumzo na hujumuisha muktadha huo kwa kila ombi. Hivi ndivyo AI ya mazungumzo ya uzalishaji inavyofanya kazi.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.sw.png" alt="Onyesho la Mazungumzo Yenye Hali" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.sw.png" alt="Onyesho la Mazungumzo Yenye Hali" width="800"/>
 
 *AI inakumbuka jina lako kutoka mwanzo wa mazungumzo*
 

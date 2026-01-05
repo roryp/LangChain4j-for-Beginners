@@ -1,23 +1,23 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T20:07:11+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-31T00:53:08+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "el"
 }
 -->
-# Λεξικό LangChain4j
+# Γλωσσάριο LangChain4j
 
-## Περιεχόμενα
+## Πίνακας Περιεχομένων
 
 - [Βασικές Έννοιες](../../../docs)
-- [Συστατικά LangChain4j](../../../docs)
+- [Συστατικά του LangChain4j](../../../docs)
 - [Έννοιες AI/ML](../../../docs)
-- [Μηχανική Προτροπής](../../../docs)
+- [Μηχανική προτροπών](../../../docs)
 - [RAG (Ανάκτηση-Ενισχυμένη Γενιά)](../../../docs)
 - [Πράκτορες και Εργαλεία](../../../docs)
-- [Πρωτόκολλο Πλαισίου Μοντέλου (MCP)](../../../docs)
+- [Πρωτόκολλο Συμφραζόμενου Μοντέλου (MCP)](../../../docs)
 - [Υπηρεσίες Azure](../../../docs)
 - [Δοκιμές και Ανάπτυξη](../../../docs)
 
@@ -25,53 +25,53 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Βασικές Έννοιες
 
-**AI Agent** - Σύστημα που χρησιμοποιεί AI για να συλλογιστεί και να δράσει αυτόνομα. [Module 04](../04-tools/README.md)
+**AI Agent** - Σύστημα που χρησιμοποιεί τεχνητή νοημοσύνη για να συλλογίζεται και να ενεργεί αυτόνομα. [Μονάδα 04](../04-tools/README.md)
 
 **Chain** - Ακολουθία λειτουργιών όπου η έξοδος τροφοδοτεί το επόμενο βήμα.
 
-**Chunking** - Διάσπαση εγγράφων σε μικρότερα κομμάτια. Τυπικά: 300-500 tokens με επικάλυψη. [Module 03](../03-rag/README.md)
+**Chunking** - Διάσπαση εγγράφων σε μικρότερα κομμάτια. Τυπικά: 300-500 tokens με overlap. [Μονάδα 03](../03-rag/README.md)
 
-**Context Window** - Μέγιστος αριθμός tokens που μπορεί να επεξεργαστεί ένα μοντέλο. GPT-5: 400K tokens.
+**Context Window** - Το μέγιστο πλήθος token που ένα μοντέλο μπορεί να επεξεργαστεί. GPT-5: 400K tokens.
 
-**Embeddings** - Αριθμητικοί διανύσματα που αναπαριστούν το νόημα κειμένου. [Module 03](../03-rag/README.md)
+**Embeddings** - Αριθμητικοί διανύσματα που αντιπροσωπεύουν το νόημα κειμένου. [Μονάδα 03](../03-rag/README.md)
 
-**Function Calling** - Το μοντέλο δημιουργεί δομημένα αιτήματα για κλήση εξωτερικών συναρτήσεων. [Module 04](../04-tools/README.md)
+**Function Calling** - Το μοντέλο δημιουργεί δομημένα αιτήματα για να καλέσει εξωτερικές συναρτήσεις. [Μονάδα 04](../04-tools/README.md)
 
-**Hallucination** - Όταν τα μοντέλα παράγουν λανθασμένες αλλά πιθανές πληροφορίες.
+**Hallucination** - Όταν τα μοντέλα παράγουν λανθασμένες αλλά πιθανοφανείς πληροφορίες.
 
-**Prompt** - Κείμενο εισόδου σε ένα γλωσσικό μοντέλο. [Module 02](../02-prompt-engineering/README.md)
+**Prompt** - Κείμενο εισόδου σε ένα γλωσσικό μοντέλο. [Μονάδα 02](../02-prompt-engineering/README.md)
 
-**Semantic Search** - Αναζήτηση με βάση το νόημα χρησιμοποιώντας embeddings, όχι λέξεις-κλειδιά. [Module 03](../03-rag/README.md)
+**Semantic Search** - Αναζήτηση με βάση το νόημα χρησιμοποιώντας embeddings, όχι λέξεις-κλειδιά. [Μονάδα 03](../03-rag/README.md)
 
-**Stateful vs Stateless** - Stateless: χωρίς μνήμη. Stateful: διατηρεί ιστορικό συνομιλίας. [Module 01](../01-introduction/README.md)
+**Stateful vs Stateless** - Stateless: χωρίς μνήμη. Stateful: διατηρεί ιστορικό συνομιλίας. [Μονάδα 01](../01-introduction/README.md)
 
-**Tokens** - Βασικές μονάδες κειμένου που επεξεργάζονται τα μοντέλα. Επηρεάζουν κόστη και όρια. [Module 01](../01-introduction/README.md)
+**Tokens** - Βασικές μονάδες κειμένου που επεξεργάζονται τα μοντέλα. Επηρεάζει κόστη και όρια. [Μονάδα 01](../01-introduction/README.md)
 
-**Tool Chaining** - Αλληλουχία εκτέλεσης εργαλείων όπου η έξοδος ενημερώνει την επόμενη κλήση. [Module 04](../04-tools/README.md)
+**Tool Chaining** - Διαδοχική εκτέλεση εργαλείων όπου η έξοδος ενημερώνει την επόμενη κλήση. [Μονάδα 04](../04-tools/README.md)
 
-## Συστατικά LangChain4j
+## Συστατικά του LangChain4j
 
-**AiServices** - Δημιουργεί τύπου ασφαλείς διεπαφές υπηρεσιών AI.
+**AiServices** - Δημιουργεί type-safe interfaces για υπηρεσίες AI.
 
 **OpenAiOfficialChatModel** - Ενοποιημένος πελάτης για μοντέλα OpenAI και Azure OpenAI.
 
-**OpenAiOfficialEmbeddingModel** - Δημιουργεί embeddings χρησιμοποιώντας τον επίσημο πελάτη OpenAI (υποστηρίζει και OpenAI και Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Δημιουργεί embeddings χρησιμοποιώντας τον επίσημο πελάτη OpenAI (υποστηρίζει τόσο OpenAI όσο και Azure OpenAI).
 
-**ChatModel** - Κύρια διεπαφή για γλωσσικά μοντέλα.
+**ChatModel** - Κεντρικό interface για γλωσσικά μοντέλα.
 
 **ChatMemory** - Διατηρεί ιστορικό συνομιλίας.
 
 **ContentRetriever** - Βρίσκει σχετικά κομμάτια εγγράφων για RAG.
 
-**DocumentSplitter** - Διασπά έγγραφα σε κομμάτια.
+**DocumentSplitter** - Διαιρεί έγγραφα σε κομμάτια.
 
 **EmbeddingModel** - Μετατρέπει κείμενο σε αριθμητικά διανύσματα.
 
 **EmbeddingStore** - Αποθηκεύει και ανακτά embeddings.
 
-**MessageWindowChatMemory** - Διατηρεί παράθυρο ολισθαίνουσας μνήμης πρόσφατων μηνυμάτων.
+**MessageWindowChatMemory** - Διατηρεί παράθυρο ολίσθησης πρόσφατων μηνυμάτων.
 
-**PromptTemplate** - Δημιουργεί επαναχρησιμοποιήσιμες προτροπές με `{{variable}}` θέσεις.
+**PromptTemplate** - Δημιουργεί επαναχρησιμοποιήσιμες προτροπές με `{{variable}}` placeholders.
 
 **TextSegment** - Κομμάτι κειμένου με μεταδεδομένα. Χρησιμοποιείται στο RAG.
 
@@ -81,19 +81,19 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Έννοιες AI/ML
 
-**Few-Shot Learning** - Παροχή παραδειγμάτων στις προτροπές. [Module 02](../02-prompt-engineering/README.md)
+**Few-Shot Learning** - Παροχή παραδειγμάτων μέσα στις προτροπές. [Μονάδα 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - Μοντέλα AI εκπαιδευμένα σε τεράστια δεδομένα κειμένου.
+**Large Language Model (LLM)** - Μοντέλα τεχνητής νοημοσύνης εκπαιδευμένα σε τεράστια σύνολα κειμένου.
 
-**Reasoning Effort** - Παράμετρος GPT-5 που ελέγχει το βάθος σκέψης. [Module 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - Παράμετρος GPT-5 που ελέγχει το βάθος της σκέψης. [Μονάδα 02](../02-prompt-engineering/README.md)
 
 **Temperature** - Ελέγχει την τυχαιότητα της εξόδου. Χαμηλό=ντετερμινιστικό, υψηλό=δημιουργικό.
 
-**Vector Database** - Εξειδικευμένη βάση δεδομένων για embeddings. [Module 03](../03-rag/README.md)
+**Vector Database** - Εξειδικευμένη βάση δεδομένων για embeddings. [Μονάδα 03](../03-rag/README.md)
 
-**Zero-Shot Learning** - Εκτέλεση εργασιών χωρίς παραδείγματα. [Module 02](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - Εκτέλεση εργασιών χωρίς παραδείγματα. [Μονάδα 02](../02-prompt-engineering/README.md)
 
-## Μηχανική Προτροπής - [Module 02](../02-prompt-engineering/README.md)
+## Μηχανική προτροπών - [Μονάδα 02](../02-prompt-engineering/README.md)
 
 **Chain-of-Thought** - Βήμα-βήμα συλλογισμός για καλύτερη ακρίβεια.
 
@@ -103,43 +103,41 @@ CO_OP_TRANSLATOR_METADATA:
 
 **Low Eagerness** - Πρότυπο GPT-5 για γρήγορες απαντήσεις.
 
-**Multi-Turn Conversation** - Διατήρηση πλαισίου σε πολλαπλές ανταλλαγές.
+**Multi-Turn Conversation** - Διατήρηση συμφραζομένων κατά τη διάρκεια ανταλλαγών.
 
-**Role-Based Prompting** - Ορισμός προσωπικότητας μοντέλου μέσω συστημικών μηνυμάτων.
+**Role-Based Prompting** - Ρύθμιση προσωπείου μοντέλου μέσω system messages.
 
 **Self-Reflection** - Το μοντέλο αξιολογεί και βελτιώνει την έξοδό του.
 
 **Structured Analysis** - Σταθερό πλαίσιο αξιολόγησης.
 
-**Task Execution Pattern** - Σχεδιάζω → Εκτελώ → Περίληψη.
+**Task Execution Pattern** - Σχεδιάζω → Εκτελώ → Συνοψίζω.
 
-## RAG (Ανάκτηση-Ενισχυμένη Γενιά) - [Module 03](../03-rag/README.md)
+## RAG (Retrieval-Augmented Generation) - [Μονάδα 03](../03-rag/README.md)
 
-**Document Processing Pipeline** - Φόρτωση → διάσπαση → ενσωμάτωση → αποθήκευση.
+**Document Processing Pipeline** - Φόρτωση → διάσπαση σε κομμάτια → embedding → αποθήκευση.
 
-**In-Memory Embedding Store** - Μη μόνιμη αποθήκευση για δοκιμές.
+**In-Memory Embedding Store** - Μη-επίμονη αποθήκευση για δοκιμές.
 
-**RAG** - Συνδυάζει ανάκτηση με γενιά για τεκμηρίωση απαντήσεων.
+**RAG** - Συνδυάζει ανάκτηση με γενιά για να τεκμηριώνει τις απαντήσεις.
 
-**Similarity Score** - Μέτρο (0-1) σημασιολογικής ομοιότητας.
+**Similarity Score** - Μέτρο (0-1) της σημασιολογικής ομοιότητας.
 
-**Source Reference** - Μεταδεδομένα για το ανακτηθέν περιεχόμενο.
+**Source Reference** - Μεταδεδομένα σχετικά με το ανακτηθέν περιεχόμενο.
 
-## Πράκτορες και Εργαλεία - [Module 04](../04-tools/README.md)
+## Πράκτορες και Εργαλεία - [Μονάδα 04](../04-tools/README.md)
 
-**@Tool Annotation** - Σημειώνει μεθόδους Java ως εργαλεία που καλούνται από AI.
+**@Tool Annotation** - Σηματοδοτεί μεθόδους Java ως callable εργαλεία από AI.
 
-**ReAct Pattern** - Συλλογίζομαι → Δρω → Παρατηρώ → Επαναλαμβάνω.
+**ReAct Pattern** - Συλλογισμός → Δράση → Παρατήρηση → Επανάληψη.
 
-**Session Management** - Ξεχωριστά πλαίσια για διαφορετικούς χρήστες.
+**Session Management** - Διαχωρισμένα συμφραζόμενα για διαφορετικούς χρήστες.
 
-**Tool** - Συνάρτηση που μπορεί να καλέσει ένας πράκτορας AI.
+**Tool** - Συνάρτηση που μπορεί να καλέσει ένας AI πράκτορας.
 
-**Tool Description** - Τεκμηρίωση σκοπού και παραμέτρων εργαλείου.
+**Tool Description** - Τεκμηρίωση του σκοπού και των παραμέτρων του εργαλείου.
 
-## Πρωτόκολλο Πλαισίου Μοντέλου (MCP) - [Module 05](../05-mcp/README.md)
-
-**Docker Transport** - MCP server σε κοντέινερ Docker.
+## Πρωτόκολλο Συμφραζόμενου Μοντέλου (MCP) - [Μονάδα 05](../05-mcp/README.md)
 
 **MCP** - Πρότυπο για σύνδεση εφαρμογών AI με εξωτερικά εργαλεία.
 
@@ -147,49 +145,43 @@ CO_OP_TRANSLATOR_METADATA:
 
 **MCP Server** - Υπηρεσία που εκθέτει εργαλεία μέσω MCP.
 
-**Server-Sent Events (SSE)** - Ροή από server σε client μέσω HTTP.
+**Stdio Transport** - Server ως subprocess μέσω stdin/stdout.
 
-**Stdio Transport** - Server ως υποδιαδικασία μέσω stdin/stdout.
+**Tool Discovery** - Ο client ρωτάει τον server για διαθέσιμα εργαλεία.
 
-**Streamable HTTP Transport** - HTTP με SSE για επικοινωνία σε πραγματικό χρόνο.
+## Υπηρεσίες Azure - [Μονάδα 01](../01-introduction/README.md)
 
-**Tool Discovery** - Ο πελάτης ρωτά τον server για διαθέσιμα εργαλεία.
-
-## Υπηρεσίες Azure - [Module 01](../01-introduction/README.md)
-
-**Azure AI Search** - Αναζήτηση στο cloud με δυνατότητες διανυσμάτων. [Module 03](../03-rag/README.md)
+**Azure AI Search** - Cloud αναζήτηση με δυνατότητες vector. [Μονάδα 03](../03-rag/README.md)
 
 **Azure Developer CLI (azd)** - Αναπτύσσει πόρους Azure.
 
 **Azure OpenAI** - Επιχειρησιακή υπηρεσία AI της Microsoft.
 
-**Bicep** - Γλώσσα υποδομής ως κώδικα για Azure. [Infrastructure Guide](../01-introduction/infra/README.md)
+**Bicep** - Γλώσσα infrastructure-as-code για Azure. [Infrastructure Guide](../01-introduction/infra/README.md)
 
-**Deployment Name** - Όνομα ανάπτυξης μοντέλου στο Azure.
+**Deployment Name** - Όνομα για το deployment μοντέλου στο Azure.
 
-**GPT-5** - Νεότερο μοντέλο OpenAI με έλεγχο συλλογισμού. [Module 02](../02-prompt-engineering/README.md)
+**GPT-5** - Το πιο πρόσφατο μοντέλο OpenAI με έλεγχο συλλογιστικής. [Μονάδα 02](../02-prompt-engineering/README.md)
 
 ## Δοκιμές και Ανάπτυξη - [Testing Guide](TESTING.md)
 
-**Dev Container** - Περιβάλλον ανάπτυξης σε κοντέινερ. [Configuration](../../../.devcontainer/devcontainer.json)
+**Dev Container** - Περιβάλλον ανάπτυξης σε container. [Configuration](../../../.devcontainer/devcontainer.json)
 
-**GitHub Models** - Δωρεάν πλατφόρμα μοντέλων AI. [Module 00](../00-quick-start/README.md)
+**GitHub Models** - Δωρεάν playground για AI μοντέλα. [Μονάδα 00](../00-quick-start/README.md)
 
-**In-Memory Testing** - Δοκιμές με αποθήκευση στη μνήμη.
+**In-Memory Testing** - Δοκιμές με in-memory αποθήκευση.
 
 **Integration Testing** - Δοκιμές με πραγματική υποδομή.
 
-**Maven** - Εργαλείο αυτοματοποίησης κατασκευής Java.
+**Maven** - Εργαλείο αυτοματοποίησης build για Java.
 
-**Mockito** - Πλαίσιο mocking για Java.
+**Mockito** - Framework για mocking σε Java.
 
-**Spring Boot** - Πλαίσιο εφαρμογών Java. [Module 01](../01-introduction/README.md)
-
-**Testcontainers** - Κοντέινερ Docker σε δοκιμές.
+**Spring Boot** - Πλαίσιο εφαρμογών Java. [Μονάδα 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Αποποίηση ευθυνών**:  
-Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης AI [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που επιδιώκουμε την ακρίβεια, παρακαλούμε να λάβετε υπόψη ότι οι αυτόματες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη γλώσσα του θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή λανθασμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
+Αποποίηση ευθύνης:
+Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης με τεχνητή νοημοσύνη Co‑op Translator (https://github.com/Azure/co-op-translator). Παρά τις προσπάθειές μας για ακρίβεια, παρακαλούμε να λάβετε υπόψη ότι οι αυτοματοποιημένες μεταφράσεις ενδέχεται να περιέχουν σφάλματα ή ανακρίβειες. Το πρωτότυπο έγγραφο στην αρχική του γλώσσα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται η χρήση επαγγελματικής μετάφρασης από επαγγελματία μεταφραστή. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή λανθασμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

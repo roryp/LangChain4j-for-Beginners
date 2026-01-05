@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b975537560c404d5f254331832811e78",
-  "translation_date": "2025-12-13T20:30:45+00:00",
+  "original_hash": "ed93b3c14d58734ac10162967da958c1",
+  "translation_date": "2025-12-30T19:06:37+00:00",
   "source_file": "docs/TESTING.md",
   "language_code": "en"
 }
@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043bdfde5c208f8c0760a88a818f6846763583b614a5de37d52.en.png" alt="Successful Test Results" width="800"/>
+<img src="../../../translated_images/test-results.ea5c98d8f3642043.en.png" alt="Successful Test Results" width="800"/>
 
 *Successful test execution showing all tests passing with zero failures*
 
@@ -43,9 +43,9 @@ mvn --% test
 
 This course focuses on **unit tests** that run locally. Each test demonstrates a specific LangChain4j concept in isolation.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e4da944aec40169f37adf86fd932d3dfd56a4a86b37401ab9.en.png" alt="Testing Pyramid" width="800"/>
+<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.en.png" alt="Testing Pyramid" width="800"/>
 
-*Testing pyramid showing the balance between unit tests (fast, isolated), integration tests (real components), and end-to-end tests (full system with Docker). This training covers unit testing.*
+*Testing pyramid showing the balance between unit tests (fast, isolated), integration tests (real components), and end-to-end tests. This training covers unit testing.*
 
 | Module | Tests | Focus | Key Files |
 |--------|-------|-------|-----------|
@@ -54,7 +54,7 @@ This course focuses on **unit tests** that run locally. Each test demonstrates a
 | **02 - Prompt Engineering** | 12 | GPT-5 patterns, eagerness levels, structured output | `SimpleGpt5PromptTest.java` |
 | **03 - RAG** | 10 | Document ingestion, embeddings, similarity search | `DocumentServiceTest.java` |
 | **04 - Tools** | 12 | Function calling and tool chaining | `SimpleToolsTest.java` |
-| **05 - MCP** | 15 | Model Context Protocol with Docker | `SimpleMcpTest.java`, `McpDockerTransportTest.java` |
+| **05 - MCP** | 8 | Model Context Protocol with Stdio transport | `SimpleMcpTest.java` |
 
 ## Running the Tests
 
@@ -102,19 +102,19 @@ mvn --% test -Dtest=SimpleConversationTest
 
 **Bash:**
 ```bash
-mvn test -Dtest=SimpleConversationTest#shouldMaintainConversationHistory
+mvn test -Dtest=SimpleConversationTest#should maintain conversation history
 ```
 
 **PowerShell:**
 ```powershell
-mvn --% test -Dtest=SimpleConversationTest#shouldMaintainConversationHistory
+mvn --% test -Dtest=SimpleConversationTest#should maintain conversation history
 ```
 
 ## Running Tests in VS Code
 
 If you're using Visual Studio Code, the Test Explorer provides a graphical interface for running and debugging tests.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dcedbacf98a3539218c1d0c700307ab77c031590ae63d0be59b6.en.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/vscode-testing.f02dd5917289dced.en.png" alt="VS Code Test Explorer" width="800"/>
 
 *VS Code Test Explorer showing the test tree with all Java test classes and individual test methods*
 
@@ -130,15 +130,11 @@ The Test Explorer shows green checkmarks for passing tests and provides detailed
 
 ## Testing Patterns
 
-<img src="../../../translated_images/testing-patterns.02581af1c9ef742460887004e9940994dba342ec726efc4ddb2b0215b56a1d89.en.png" alt="Six Testing Patterns" width="800"/>
-
-*Six testing patterns for LangChain4j applications: prompt templates, mocking models, conversation isolation, tools testing, in-memory RAG, and Docker integration*
-
 ### Pattern 1: Testing Prompt Templates
 
 The simplest pattern tests prompt templates without calling any AI model. You verify that variable substitution works correctly and prompts are formatted as expected.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee3dfceaa5fa903098bdb174674acc5009a2f3d60cb07eb4e9.en.png" alt="Prompt Template Testing" width="800"/>
+<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.en.png" alt="Prompt Template Testing" width="800"/>
 
 *Testing prompt templates showing variable substitution flow: template with placeholders → values applied → formatted output verified*
 
@@ -165,7 +161,7 @@ This test lives in `00-quick-start/src/test/java/com/example/langchain4j/quickst
 
 **Bash:**
 ```bash
-cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testPromptTemplateFormatting
+cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#Test prompt template formatting
 ```
 
 **PowerShell:**
@@ -177,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testPromptTemplateFo
 
 When testing conversation logic, use Mockito to create fake models that return predetermined responses. This makes tests fast, free, and deterministic.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845ee07556f9520ac45c7f776d0879434315756020cd8b1d5b73.en.png" alt="Mock vs Real API Comparison" width="800"/>
+<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.en.png" alt="Mock vs Real API Comparison" width="800"/>
 
 *Comparison showing why mocks are preferred for testing: they're fast, free, deterministic, and require no API keys*
 
@@ -235,7 +231,7 @@ This pattern appears in `01-introduction/src/test/java/com/example/langchain4j/s
 
 Conversation memory must keep multiple users separate. This test verifies that conversations don't mix contexts.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f860d81c37a97181c0e0a2ff996d38f314f06b35cc1e08ca3.en.png" alt="Conversation Isolation" width="800"/>
+<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.en.png" alt="Conversation Isolation" width="800"/>
 
 *Testing conversation isolation showing separate memory stores for different users to prevent context mixing*
 
@@ -267,7 +263,7 @@ Each conversation maintains its own independent history. In production systems, 
 
 Tools are functions the AI can call. Test them directly to ensure they work correctly regardless of AI decisions.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924e7e7cd41be8ba5ccb62f16962b85f53953d46cc6317d2972.en.png" alt="Tools Testing" width="800"/>
+<img src="../../../translated_images/tools-testing.3e1706817b0b3924.en.png" alt="Tools Testing" width="800"/>
 
 *Testing tools independently showing mock tool execution without AI calls to verify business logic*
 
@@ -298,7 +294,7 @@ These tests from `04-tools/src/test/java/com/example/langchain4j/agents/tools/Si
 
 RAG systems traditionally require vector databases and embedding services. The in-memory pattern lets you test the entire pipeline without external dependencies.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b14fcda9103bba011864f1d0882b27a9886c3cf5b446522ce3.en.png" alt="In-Memory RAG Testing" width="800"/>
+<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.en.png" alt="In-Memory RAG Testing" width="800"/>
 
 *In-memory RAG testing workflow showing document parsing, embedding storage, and similarity search without requiring a database*
 
@@ -319,15 +315,11 @@ void testProcessTextDocument() {
 
 This test from `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` creates a document in memory and verifies chunking and metadata handling.
 
-### Pattern 6: Integration Testing with Docker
+### Pattern 6: MCP Integration Testing
 
-Some features need real infrastructure. The MCP module uses Testcontainers to spin up Docker containers for integration tests. These validate your code works with actual services while maintaining test isolation.
+The MCP module tests the Model Context Protocol integration using stdio transport. These tests verify that your application can spawn and communicate with MCP servers as subprocesses.
 
-<img src="../../../translated_images/mcp-testing.bb3b3e92e47acb4b3dfb12715b4e113655f16c11ba39c2ffabae557bc6c3734c.en.png" alt="MCP Docker Integration Testing" width="800"/>
-
-*MCP integration testing with Testcontainers showing automated container lifecycle: start, test execution, stop, and cleanup*
-
-The tests in `05-mcp/src/test/java/com/example/langchain4j/mcp/McpDockerTransportTest.java` require Docker to be running.
+The tests in `05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` validate MCP client behavior.
 
 **Run them:**
 
@@ -362,7 +354,7 @@ Now that you understand the testing patterns, dive deeper into each module:
 - **[02 - Prompt Engineering](../02-prompt-engineering/README.md)** - Master GPT-5 prompting patterns
 - **[03 - RAG](../03-rag/README.md)** - Build retrieval-augmented generation systems
 - **[04 - Tools](../04-tools/README.md)** - Implement function calling and tool chains
-- **[05 - MCP](../05-mcp/README.md)** - Integrate Model Context Protocol with Docker
+- **[05 - MCP](../05-mcp/README.md)** - Integrate Model Context Protocol
 
 Each module's README provides detailed explanations of the concepts tested here.
 
@@ -373,6 +365,6 @@ Each module's README provides detailed explanations of the concepts tested here.
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+Disclaimer:
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

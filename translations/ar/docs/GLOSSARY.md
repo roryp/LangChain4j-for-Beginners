@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T19:52:01+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-30T20:20:13+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "ar"
 }
@@ -13,183 +13,175 @@ CO_OP_TRANSLATOR_METADATA:
 
 - [المفاهيم الأساسية](../../../docs)
 - [مكونات LangChain4j](../../../docs)
-- [مفاهيم الذكاء الاصطناعي/التعلم الآلي](../../../docs)
-- [هندسة المطالبات](../../../docs)
-- [RAG (التوليد المعزز بالاسترجاع)](../../../docs)
-- [الوكلاء والأدوات](../../../docs)
-- [بروتوكول سياق النموذج (MCP)](../../../docs)
-- [خدمات Azure](../../../docs)
-- [الاختبار والتطوير](../../../docs)
+- [مفاهيم AI/ML](../../../docs)
+- [هندسة المطالبات - [الوحدة 02](../02-prompt-engineering/README.md)](#prompt-engineering---module-02)
+- [RAG (التوليد المعزز بالاسترجاع) - [الوحدة 03](../03-rag/README.md)](#rag-retrieval-augmented-generation---module-03)
+- [الوكلاء والأدوات - [الوحدة 04](../04-tools/README.md)](#agents-and-tools---module-04)
+- [بروتوكول سياق النموذج (MCP) - [الوحدة 05](../05-mcp/README.md)](#model-context-protocol-mcp---module-05)
+- [خدمات Azure - [الوحدة 01](../01-introduction/README.md)](#azure-services---module-01)
+- [الاختبار والتطوير - [دليل الاختبار](TESTING.md)](#testing-and-development---testing-guide)
 
 مرجع سريع للمصطلحات والمفاهيم المستخدمة في جميع أنحاء الدورة.
 
-## المفاهيم الأساسية
+## Core Concepts
 
-**وكيل الذكاء الاصطناعي** - نظام يستخدم الذكاء الاصطناعي للتفكير والتصرف بشكل مستقل. [الوحدة 04](../04-tools/README.md)
+**AI Agent** - نظام يستخدم الذكاء الاصطناعي للاستدلال والتصرف بشكل مستقل. [الوحدة 04](../04-tools/README.md)
 
-**السلسلة** - تسلسل من العمليات حيث يتم تغذية الناتج إلى الخطوة التالية.
+**Chain** - سلسلة من العمليات حيث تغذي المخرجات الخطوة التالية.
 
-**التقسيم** - تقسيم المستندات إلى قطع أصغر. النموذجي: 300-500 رمز مع تداخل. [الوحدة 03](../03-rag/README.md)
+**Chunking** - تقسيم المستندات إلى أجزاء أصغر. المعتاد: 300-500 توكن مع تداخل. [الوحدة 03](../03-rag/README.md)
 
-**نافذة السياق** - الحد الأقصى للرموز التي يمكن للنموذج معالجتها. GPT-5: 400 ألف رمز.
+**Context Window** - الحد الأقصى لعدد التوكنات التي يمكن للنموذج معالجتها. GPT-5: 400K توكن.
 
-**التضمينات** - متجهات رقمية تمثل معنى النص. [الوحدة 03](../03-rag/README.md)
+**Embeddings** - متجهات رقمية تمثل معنى النص. [الوحدة 03](../03-rag/README.md)
 
-**استدعاء الدالة** - النموذج يولد طلبات منظمة لاستدعاء دوال خارجية. [الوحدة 04](../04-tools/README.md)
+**Function Calling** - النموذج يولد طلبات مُهيكلة لاستدعاء دوال خارجية. [الوحدة 04](../04-tools/README.md)
 
-**الهلاوس** - عندما تولد النماذج معلومات غير صحيحة لكنها معقولة.
+**Hallucination** - عندما تنتج النماذج معلومات غير صحيحة لكنها تبدو معقولة.
 
-**المطالبة** - نص الإدخال إلى نموذج اللغة. [الوحدة 02](../02-prompt-engineering/README.md)
+**Prompt** - نص الإدخال لنموذج اللغة. [الوحدة 02](../02-prompt-engineering/README.md)
 
-**البحث الدلالي** - البحث حسب المعنى باستخدام التضمينات، وليس الكلمات المفتاحية. [الوحدة 03](../03-rag/README.md)
+**Semantic Search** - البحث حسب المعنى باستخدام المتجهات، وليس الكلمات المفتاحية. [الوحدة 03](../03-rag/README.md)
 
-**حالة الحالة مقابل عدم الحالة** - عدم الحالة: بدون ذاكرة. حالة الحالة: يحتفظ بتاريخ المحادثة. [الوحدة 01](../01-introduction/README.md)
+**Stateful vs Stateless** - Stateless: لا ذاكرة. Stateful: يحتفظ بتاريخ المحادثة. [الوحدة 01](../01-introduction/README.md)
 
-**الرموز** - وحدات النص الأساسية التي تعالجها النماذج. تؤثر على التكاليف والحدود. [الوحدة 01](../01-introduction/README.md)
+**Tokens** - وحدات النص الأساسية التي تعالجها النماذج. تؤثر على التكاليف والقيود. [الوحدة 01](../01-introduction/README.md)
 
-**تسلسل الأدوات** - تنفيذ الأدوات بشكل متسلسل حيث يُعلم الناتج الاستدعاء التالي. [الوحدة 04](../04-tools/README.md)
+**Tool Chaining** - تنفيذ أدوات متسلسل حيث تُعلم المخرجات الاستدعاء التالي. [الوحدة 04](../04-tools/README.md)
 
-## مكونات LangChain4j
+## LangChain4j Components
 
-**AiServices** - ينشئ واجهات خدمات ذكاء اصطناعي آمنة النوع.
+**AiServices** - Creates type-safe AI service interfaces.
 
-**OpenAiOfficialChatModel** - عميل موحد لنماذج OpenAI وAzure OpenAI.
+**OpenAiOfficialChatModel** - Unified client for OpenAI and Azure OpenAI models.
 
-**OpenAiOfficialEmbeddingModel** - ينشئ التضمينات باستخدام عميل OpenAI الرسمي (يدعم كل من OpenAI وAzure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Creates embeddings using OpenAI Official client (supports both OpenAI and Azure OpenAI).
 
-**ChatModel** - الواجهة الأساسية لنماذج اللغة.
+**ChatModel** - Core interface for language models.
 
-**ChatMemory** - يحتفظ بتاريخ المحادثة.
+**ChatMemory** - Maintains conversation history.
 
-**ContentRetriever** - يعثر على قطع المستندات ذات الصلة لـ RAG.
+**ContentRetriever** - Finds relevant document chunks for RAG.
 
-**DocumentSplitter** - يقسم المستندات إلى قطع.
+**DocumentSplitter** - Breaks documents into chunks.
 
-**EmbeddingModel** - يحول النص إلى متجهات رقمية.
+**EmbeddingModel** - Converts text into numerical vectors.
 
-**EmbeddingStore** - يخزن ويسترجع التضمينات.
+**EmbeddingStore** - Stores and retrieves embeddings.
 
-**MessageWindowChatMemory** - يحتفظ بنافذة منزلقة من الرسائل الأخيرة.
+**MessageWindowChatMemory** - Maintains sliding window of recent messages.
 
-**PromptTemplate** - ينشئ مطالبات قابلة لإعادة الاستخدام مع أماكن `{{variable}}`.
+**PromptTemplate** - Creates reusable prompts with `{{variable}}` placeholders.
 
-**TextSegment** - قطعة نص مع بيانات وصفية. تُستخدم في RAG.
+**TextSegment** - Text chunk with metadata. Used in RAG.
 
-**ToolExecutionRequest** - يمثل طلب تنفيذ أداة.
+**ToolExecutionRequest** - Represents tool execution request.
 
-**UserMessage / AiMessage / SystemMessage** - أنواع رسائل المحادثة.
+**UserMessage / AiMessage / SystemMessage** - Conversation message types.
 
-## مفاهيم الذكاء الاصطناعي/التعلم الآلي
+## AI/ML Concepts
 
-**التعلم بعدد قليل من الأمثلة** - تقديم أمثلة في المطالبات. [الوحدة 02](../02-prompt-engineering/README.md)
+**Few-Shot Learning** - توفير أمثلة داخل المطالبات. [الوحدة 02](../02-prompt-engineering/README.md)
 
-**النموذج اللغوي الكبير (LLM)** - نماذج ذكاء اصطناعي مدربة على بيانات نصية ضخمة.
+**Large Language Model (LLM)** - نماذج ذكاء اصطناعي مدربة على كميات ضخمة من النصوص.
 
-**جهد الاستدلال** - معلمة GPT-5 تتحكم في عمق التفكير. [الوحدة 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - معامل GPT-5 الذي يتحكم في عمق التفكير. [الوحدة 02](../02-prompt-engineering/README.md)
 
-**درجة الحرارة** - تتحكم في عشوائية الناتج. منخفض = حتمي، مرتفع = إبداعي.
+**Temperature** - يتحكم في عشوائية المخرجات. منخفض = حتمي، مرتفع = إبداعي.
 
-**قاعدة بيانات المتجهات** - قاعدة بيانات متخصصة للتضمينات. [الوحدة 03](../03-rag/README.md)
+**Vector Database** - قاعدة بيانات متخصصة للمتجهات. [الوحدة 03](../03-rag/README.md)
 
-**التعلم بدون أمثلة** - أداء المهام بدون أمثلة. [الوحدة 02](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - أداء مهام بدون أمثلة. [الوحدة 02](../02-prompt-engineering/README.md)
 
-## هندسة المطالبات - [الوحدة 02](../02-prompt-engineering/README.md)
+## Prompt Engineering - [الوحدة 02](../02-prompt-engineering/README.md)
 
-**سلسلة التفكير** - التفكير خطوة بخطوة لدقة أفضل.
+**Chain-of-Thought** - التفكير خطوة بخطوة لتحسين الدقة.
 
-**الناتج المقيد** - فرض تنسيق أو هيكل محدد.
+**Constrained Output** - فرض تنسيق أو بنية محددة.
 
-**الحماس العالي** - نمط GPT-5 للتفكير المتعمق.
+**High Eagerness** - نمط GPT-5 للتفكير المتعمق والشامل.
 
-**الحماس المنخفض** - نمط GPT-5 للإجابات السريعة.
+**Low Eagerness** - نمط GPT-5 للإجابات السريعة.
 
-**المحادثة متعددة الأدوار** - الحفاظ على السياق عبر التبادلات.
+**Multi-Turn Conversation** - الحفاظ على السياق عبر تبادلات متعددة.
 
-**المطالبة بناءً على الدور** - تعيين شخصية النموذج عبر رسائل النظام.
+**Role-Based Prompting** - ضبط شخصية النموذج عبر رسائل النظام.
 
-**التفكير الذاتي** - النموذج يقيم ويحسن ناتجه.
+**Self-Reflection** - النموذج يقيم ويحسن مخرجاته.
 
-**التحليل المنظم** - إطار تقييم ثابت.
+**Structured Analysis** - إطار تقييم ثابت.
 
-**نمط تنفيذ المهمة** - خطط → نفذ → لخّص.
+**Task Execution Pattern** - التخطيط → التنفيذ → التلخيص.
 
-## RAG (التوليد المعزز بالاسترجاع) - [الوحدة 03](../03-rag/README.md)
+## RAG (Retrieval-Augmented Generation) - [الوحدة 03](../03-rag/README.md)
 
-**خط أنابيب معالجة المستندات** - تحميل → تقسيم → تضمين → تخزين.
+**Document Processing Pipeline** - التحميل → التقسيم → التضمين → التخزين.
 
-**مخزن التضمين في الذاكرة** - تخزين غير دائم للاختبار.
+**In-Memory Embedding Store** - تخزين غير دائم للاختبار.
 
-**RAG** - يجمع بين الاسترجاع والتوليد لتأسيس الردود.
+**RAG** - يجمع بين الاسترجاع والتوليد لإسناد الإجابات.
 
-**درجة التشابه** - مقياس (0-1) للتشابه الدلالي.
+**Similarity Score** - مقياس (0-1) للتشابه الدلالي.
 
-**مرجع المصدر** - بيانات وصفية عن المحتوى المسترجع.
+**Source Reference** - بيانات وصفية حول المحتوى المسترجع.
 
-## الوكلاء والأدوات - [الوحدة 04](../04-tools/README.md)
+## Agents and Tools - [الوحدة 04](../04-tools/README.md)
 
-**@Tool Annotation** - يعلّم طرق جافا كأدوات قابلة للاستدعاء بالذكاء الاصطناعي.
+**@Tool Annotation** - يعلّم طرق Java لتكون أدوات قابلة للاستدعاء من الذكاء الاصطناعي.
 
-**نمط ReAct** - فكر → تصرف → راقب → كرر.
+**ReAct Pattern** - Reason → Act → Observe → Repeat.
 
-**إدارة الجلسة** - سياقات منفصلة لمستخدمين مختلفين.
+**Session Management** - سياقات منفصلة لمستخدمين مختلفين.
 
-**الأداة** - دالة يمكن لوكيل الذكاء الاصطناعي استدعاؤها.
+**Tool** - دالة يمكن للوكيل الذكي استدعاؤها.
 
-**وصف الأداة** - توثيق غرض الأداة ومعلماتها.
+**Tool Description** - توثيق غرض الأداة ومعاملاتها.
 
-## بروتوكول سياق النموذج (MCP) - [الوحدة 05](../05-mcp/README.md)
-
-**نقل Docker** - خادم MCP في حاوية Docker.
+## Model Context Protocol (MCP) - [الوحدة 05](../05-mcp/README.md)
 
 **MCP** - معيار لربط تطبيقات الذكاء الاصطناعي بالأدوات الخارجية.
 
-**عميل MCP** - تطبيق يتصل بخوادم MCP.
+**MCP Client** - تطبيق يتصل بخوادم MCP.
 
-**خادم MCP** - خدمة تعرض الأدوات عبر MCP.
+**MCP Server** - خدمة تعرض الأدوات عبر MCP.
 
-**الأحداث المرسلة من الخادم (SSE)** - بث من الخادم إلى العميل عبر HTTP.
+**Stdio Transport** - الخادم كعملية فرعية عبر stdin/stdout.
 
-**نقل Stdio** - الخادم كعملية فرعية عبر stdin/stdout.
+**Tool Discovery** - العميل يستعلم الخادم عن الأدوات المتاحة.
 
-**نقل HTTP القابل للبث** - HTTP مع SSE للاتصال في الوقت الحقيقي.
+## Azure Services - [الوحدة 01](../01-introduction/README.md)
 
-**اكتشاف الأدوات** - العميل يستعلم الخادم عن الأدوات المتاحة.
-
-## خدمات Azure - [الوحدة 01](../01-introduction/README.md)
-
-**Azure AI Search** - بحث سحابي مع قدرات المتجهات. [الوحدة 03](../03-rag/README.md)
+**Azure AI Search** - بحث سحابي مع قدرات متجهية. [الوحدة 03](../03-rag/README.md)
 
 **Azure Developer CLI (azd)** - ينشر موارد Azure.
 
-**Azure OpenAI** - خدمة الذكاء الاصطناعي المؤسسية من مايكروسوفت.
+**Azure OpenAI** - خدمة مايكروسوفت للمؤسسات في مجال الذكاء الاصطناعي.
 
-**Bicep** - لغة البنية التحتية ككود لـ Azure. [دليل البنية التحتية](../01-introduction/infra/README.md)
+**Bicep** - لغة البنية التحتية كرمز في Azure. [دليل البنية التحتية](../01-introduction/infra/README.md)
 
-**اسم النشر** - اسم لنشر النموذج في Azure.
+**Deployment Name** - اسم نشر النموذج في Azure.
 
 **GPT-5** - أحدث نموذج OpenAI مع تحكم في الاستدلال. [الوحدة 02](../02-prompt-engineering/README.md)
 
-## الاختبار والتطوير - [دليل الاختبار](TESTING.md)
+## Testing and Development - [دليل الاختبار](TESTING.md)
 
-**حاوية التطوير** - بيئة تطوير محوسبة بالحاويات. [التكوين](../../../.devcontainer/devcontainer.json)
+**Dev Container** - بيئة تطوير معزولة بالحاويات. [Configuration](../../../.devcontainer/devcontainer.json)
 
-**نماذج GitHub** - ملعب مجاني لنماذج الذكاء الاصطناعي. [الوحدة 00](../00-quick-start/README.md)
+**GitHub Models** - ملعب مجاني لنماذج الذكاء الاصطناعي. [الوحدة 00](../00-quick-start/README.md)
 
-**الاختبار في الذاكرة** - اختبار باستخدام التخزين في الذاكرة.
+**In-Memory Testing** - اختبار باستخدام تخزين في الذاكرة.
 
-**اختبار التكامل** - اختبار باستخدام البنية التحتية الحقيقية.
+**Integration Testing** - اختبار باستخدام البنية التحتية الحقيقية.
 
-**Maven** - أداة أتمتة بناء جافا.
+**Maven** - أداة أتمتة بناء Java.
 
-**Mockito** - إطار عمل محاكاة جافا.
+**Mockito** - إطار عمل محاكاة لـ Java.
 
-**Spring Boot** - إطار عمل تطبيقات جافا. [الوحدة 01](../01-introduction/README.md)
-
-**Testcontainers** - حاويات Docker في الاختبارات.
+**Spring Boot** - إطار تطبيقات Java. [الوحدة 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**إخلاء المسؤولية**:  
-تمت ترجمة هذا المستند باستخدام خدمة الترجمة الآلية [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الموثوق به. للمعلومات الهامة، يُنصح بالاستعانة بترجمة بشرية محترفة. نحن غير مسؤولين عن أي سوء فهم أو تفسير ناتج عن استخدام هذه الترجمة.
+إخلاء المسؤولية:
+تمت ترجمة هذا المستند باستخدام خدمة الترجمة الآلية Co-op Translator (https://github.com/Azure/co-op-translator). على الرغم من أننا نسعى إلى الدقة، يُرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية هو المصدر المعتمد. للمعلومات الحرجة، يُنصح باللجوء إلى ترجمة بشرية محترفة. لسنا مسؤولين عن أي سوء فهم أو تفسيرات خاطئة تنشأ عن استخدام هذه الترجمة.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

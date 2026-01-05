@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b975537560c404d5f254331832811e78",
-  "translation_date": "2025-12-13T20:45:53+00:00",
+  "original_hash": "ed93b3c14d58734ac10162967da958c1",
+  "translation_date": "2025-12-30T22:06:08+00:00",
   "source_file": "docs/TESTING.md",
   "language_code": "ja"
 }
 -->
-# LangChain4jアプリケーションのテスト
+# LangChain4j アプリケーションのテスト
 
 ## 目次
 
@@ -23,7 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## クイックスタート
 
-すべてのテストを一つのコマンドで実行します：
+単一のコマンドで全テストを実行します:
 
 **Bash:**
 ```bash
@@ -35,30 +35,30 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043bdfde5c208f8c0760a88a818f6846763583b614a5de37d52.ja.png" alt="Successful Test Results" width="800"/>
+<img src="../../../translated_images/test-results.ea5c98d8f3642043.ja.png" alt="成功したテスト結果" width="800"/>
 
-*すべてのテストが失敗ゼロで成功したテスト実行の例*
+*すべてのテストが失敗ゼロで合格した成功したテスト実行の表示*
 
 ## テストの対象範囲
 
-このコースはローカルで実行される**ユニットテスト**に焦点を当てています。各テストはLangChain4jの特定の概念を単独で示します。
+このコースはローカルで実行される**ユニットテスト**に焦点を当てています。各テストはLangChain4jの特定の概念を独立して示します。
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e4da944aec40169f37adf86fd932d3dfd56a4a86b37401ab9.ja.png" alt="Testing Pyramid" width="800"/>
+<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.ja.png" alt="テストピラミッド" width="800"/>
 
-*ユニットテスト（高速で独立）、統合テスト（実際のコンポーネント）、エンドツーエンドテスト（Dockerを使った完全なシステム）のバランスを示すテストピラミッド。このトレーニングはユニットテストをカバーしています。*
+*ユニットテスト（高速、独立）、統合テスト（実際のコンポーネント）、エンドツーエンドテストのバランスを示すテストピラミッド。このトレーニングではユニットテストをカバーします。*
 
-| モジュール | テスト数 | フォーカス | 主要ファイル |
+| モジュール | テスト数 | 重点 | 主要ファイル |
 |--------|-------|-------|-----------|
 | **00 - クイックスタート** | 6 | プロンプトテンプレートと変数置換 | `SimpleQuickStartTest.java` |
-| **01 - はじめに** | 8 | 会話メモリと状態を持つチャット | `SimpleConversationTest.java` |
-| **02 - プロンプトエンジニアリング** | 12 | GPT-5パターン、熱意レベル、構造化出力 | `SimpleGpt5PromptTest.java` |
+| **01 - 導入** | 8 | 会話メモリと状態を持つチャット | `SimpleConversationTest.java` |
+| **02 - プロンプトエンジニアリング** | 12 | GPT-5パターン、積極性レベル、構造化された出力 | `SimpleGpt5PromptTest.java` |
 | **03 - RAG** | 10 | ドキュメント取り込み、埋め込み、類似検索 | `DocumentServiceTest.java` |
-| **04 - ツール** | 12 | 関数呼び出しとツールの連鎖 | `SimpleToolsTest.java` |
-| **05 - MCP** | 15 | Dockerを使ったモデルコンテキストプロトコル | `SimpleMcpTest.java`, `McpDockerTransportTest.java` |
+| **04 - ツール** | 12 | 関数呼び出しとツールのチェイン | `SimpleToolsTest.java` |
+| **05 - MCP** | 8 | Stdioトランスポートを用いたModel Context Protocol | `SimpleMcpTest.java` |
 
 ## テストの実行
 
-**ルートからすべてのテストを実行：**
+**ルートから全テストを実行する:**
 
 **Bash:**
 ```bash
@@ -70,7 +70,7 @@ mvn test
 mvn --% test
 ```
 
-**特定のモジュールのテストを実行：**
+**特定のモジュールのテストを実行する:**
 
 **Bash:**
 ```bash
@@ -86,7 +86,7 @@ cd 01-introduction; mvn --% test
 mvn --% test -pl 01-introduction
 ```
 
-**単一のテストクラスを実行：**
+**単一のテストクラスを実行する:**
 
 **Bash:**
 ```bash
@@ -98,49 +98,45 @@ mvn test -Dtest=SimpleConversationTest
 mvn --% test -Dtest=SimpleConversationTest
 ```
 
-**特定のテストメソッドを実行：**
+**特定のテストメソッドを実行する:**
 
 **Bash:**
 ```bash
-mvn test -Dtest=SimpleConversationTest#会話履歴を維持する必要があります
+mvn test -Dtest=SimpleConversationTest#会話履歴を保持するべき
 ```
 
 **PowerShell:**
 ```powershell
-mvn --% test -Dtest=SimpleConversationTest#会話履歴を維持する必要があります
+mvn --% test -Dtest=SimpleConversationTest#会話履歴を維持すべき
 ```
 
 ## VS Codeでのテスト実行
 
-Visual Studio Codeを使用している場合、Test Explorerはテストの実行とデバッグのためのグラフィカルインターフェースを提供します。
+Visual Studio Codeを使用している場合、Test Explorerはテストの実行とデバッグのためのグラフィカルなインターフェースを提供します。
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dcedbacf98a3539218c1d0c700307ab77c031590ae63d0be59b6.ja.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/vscode-testing.f02dd5917289dced.ja.png" alt="VS Code テストエクスプローラー" width="800"/>
 
-*すべてのJavaテストクラスと個別のテストメソッドを表示するVS CodeのTest Explorerのテストツリー*
+*VS Code Test Explorerが、すべてのJavaテストクラスと個々のテストメソッドを含むテストツリーを表示している様子*
 
-**VS Codeでテストを実行するには：**
+**VS Codeでテストを実行するには:**
 
-1. アクティビティバーのビーカーアイコンをクリックしてTest Explorerを開く
-2. テストツリーを展開してすべてのモジュールとテストクラスを表示
-3. 任意のテストの横にある再生ボタンをクリックして個別に実行
-4. 「すべてのテストを実行」をクリックして全スイートを実行
-5. 任意のテストを右クリックし「テストのデバッグ」を選択してブレークポイントを設定しコードをステップ実行
+1. アクティビティバーのビーカーアイコンをクリックして Test Explorer を開きます
+2. テストツリーを展開して、すべてのモジュールとテストクラスを表示します
+3. 任意のテストの横にある再生ボタンをクリックして個別に実行します
+4. 「Run All Tests」をクリックしてスイート全体を実行します
+5. 任意のテストを右クリックして「Debug Test」を選択すると、ブレークポイントを設定してコードをステップ実行できます
 
-Test Explorerは合格したテストに緑のチェックマークを表示し、失敗した場合は詳細な失敗メッセージを提供します。
+Test Explorer は合格したテストに緑のチェックマークを表示し、テストが失敗したときは詳細な失敗メッセージを提供します。
 
 ## テストパターン
 
-<img src="../../../translated_images/testing-patterns.02581af1c9ef742460887004e9940994dba342ec726efc4ddb2b0215b56a1d89.ja.png" alt="Six Testing Patterns" width="800"/>
+### パターン 1: プロンプトテンプレートのテスト
 
-*LangChain4jアプリケーションの6つのテストパターン：プロンプトテンプレート、モデルのモック、会話の分離、ツールのテスト、インメモリRAG、Docker統合*
+最も単純なパターンはAIモデルを呼び出さずにプロンプトテンプレートをテストします。変数置換が正しく機能するか、プロンプトが期待どおりにフォーマットされているかを検証します。
 
-### パターン1：プロンプトテンプレートのテスト
+<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.ja.png" alt="プロンプトテンプレートのテスト" width="800"/>
 
-最も単純なパターンはAIモデルを呼び出さずにプロンプトテンプレートをテストします。変数置換が正しく機能し、プロンプトが期待通りにフォーマットされていることを検証します。
-
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee3dfceaa5fa903098bdb174674acc5009a2f3d60cb07eb4e9.ja.png" alt="Prompt Template Testing" width="800"/>
-
-*変数置換の流れを示すプロンプトテンプレートのテスト：プレースホルダー付きテンプレート → 値の適用 → フォーマット済み出力の検証*
+*プレースホルダのあるテンプレート → 値の適用 → フォーマットされた出力を検証、という変数置換フローを示すプロンプトテンプレートのテスト*
 
 ```java
 @Test
@@ -159,27 +155,27 @@ void testPromptTemplateFormatting() {
 }
 ```
 
-このテストは`00-quick-start/src/test/java/com/example/langchain4j/quickstart/SimpleQuickStartTest.java`にあります。
+このテストは `00-quick-start/src/test/java/com/example/langchain4j/quickstart/SimpleQuickStartTest.java` にあります。
 
-**実行方法：**
+**実行方法:**
 
 **Bash:**
 ```bash
-cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#テストプロンプトテンプレートのフォーマット
+cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#プロンプトテンプレートの書式設定をテスト
 ```
 
 **PowerShell:**
 ```powershell
-cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#テストプロンプトテンプレートのフォーマット
+cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#プロンプトテンプレートのフォーマットをテスト
 ```
 
-### パターン2：言語モデルのモック
+### パターン 2: 言語モデルのモック化
 
-会話ロジックをテストする際は、Mockitoを使って事前に決められた応答を返す偽モデルを作成します。これによりテストは高速で無料、かつ決定論的になります。
+会話ロジックをテストする際は、Mockitoを使って事前に定義した応答を返すフェイクモデルを作成します。これによりテストは高速で、無料かつ決定論的になります。
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845ee07556f9520ac45c7f776d0879434315756020cd8b1d5b73.ja.png" alt="Mock vs Real API Comparison" width="800"/>
+<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.ja.png" alt="モックと実APIの比較" width="800"/>
 
-*テストにモックが好まれる理由の比較：高速、無料、決定論的でAPIキー不要*
+*モックがテストに好まれる理由を示す比較: 高速、無料、決定論的、APIキー不要*
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -224,20 +220,20 @@ class SimpleConversationTest {
         conversationService.chat(conversationId, "Third message");
 
         List<ChatMessage> history = conversationService.getHistory(conversationId);
-        assertThat(history).hasSize(6); // 3つのユーザーと3つのAIメッセージ
+        assertThat(history).hasSize(6); // ユーザー3件 + AI3件のメッセージ
     }
 }
 ```
 
-このパターンは`01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`にあります。モックは一貫した動作を保証し、メモリ管理が正しく機能することを検証できます。
+このパターンは `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java` にあります。モックは一貫した動作を保証するため、メモリ管理が正しく機能することを検証できます。
 
-### パターン3：会話の分離テスト
+### パターン 3: 会話の分離テスト
 
-会話メモリは複数ユーザーを分離して保持する必要があります。このテストは会話がコンテキストを混ぜないことを検証します。
+会話メモリは複数のユーザーを分離して保持する必要があります。このテストは会話がコンテキストを混合しないことを検証します。
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f860d81c37a97181c0e0a2ff996d38f314f06b35cc1e08ca3.ja.png" alt="Conversation Isolation" width="800"/>
+<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.ja.png" alt="会話の隔離" width="800"/>
 
-*異なるユーザーのために別々のメモリストアを保持し、コンテキストの混在を防ぐ会話分離のテスト*
+*異なるユーザーのために独立したメモリストアを示し、コンテキストの混入を防ぐ会話分離のテスト*
 
 ```java
 @Test
@@ -261,15 +257,15 @@ void shouldIsolateConversationsByid() {
 }
 ```
 
-各会話は独立した履歴を保持します。実運用システムでは、この分離がマルチユーザーアプリケーションにとって重要です。
+各会話は独自の履歴を保持します。本番システムでは、この分離はマルチユーザーアプリケーションにとって重要です。
 
-### パターン4：ツールの独立テスト
+### パターン 4: ツールの独立テスト
 
-ツールはAIが呼び出せる関数です。AIの判断に関係なく正しく動作することを直接テストします。
+ツールはAIが呼び出せる関数です。AIの決定に関係なく正しく動作することを確認するために、直接テストします。
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924e7e7cd41be8ba5ccb62f16962b85f53953d46cc6317d2972.ja.png" alt="Tools Testing" width="800"/>
+<img src="../../../translated_images/tools-testing.3e1706817b0b3924.ja.png" alt="ツールのテスト" width="800"/>
 
-*AI呼び出しなしでモックツールを実行し、ビジネスロジックを検証するツールの独立テスト*
+*AI呼び出しなしでモックツール実行を示し、ビジネスロジックを検証するツールの独立テスト*
 
 ```java
 @Test
@@ -292,15 +288,15 @@ void shouldDemonstrateToolChaining() {
 }
 ```
 
-これらのテストは`04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java`にあり、AIを介さずにツールロジックを検証します。連鎖の例は一つのツールの出力が別のツールの入力になる様子を示します。
+これらのテストは `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` にあり、AIの関与なしでツールロジックを検証します。チェイニングの例は、あるツールの出力が別のツールの入力にどのように渡されるかを示します。
 
-### パターン5：インメモリRAGテスト
+### パターン 5: インメモリRAGテスト
 
-RAGシステムは通常ベクターデータベースや埋め込みサービスを必要とします。インメモリパターンは外部依存なしにパイプライン全体をテスト可能にします。
+RAGシステムは通常、ベクトルデータベースや埋め込みサービスを必要とします。インメモリパターンでは外部依存なしでパイプライン全体をテストできます。
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b14fcda9103bba011864f1d0882b27a9886c3cf5b446522ce3.ja.png" alt="In-Memory RAG Testing" width="800"/>
+<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.ja.png" alt="インメモリRAGテスト" width="800"/>
 
-*データベース不要でドキュメント解析、埋め込み保存、類似検索を行うインメモリRAGテストのワークフロー*
+*ドキュメント解析、埋め込みの保存、データベース不要の類似検索を示すインメモリRAGテストワークフロー*
 
 ```java
 @Test
@@ -317,19 +313,15 @@ void testProcessTextDocument() {
 }
 ```
 
-このテストは`03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java`にあり、メモリ内でドキュメントを作成しチャンク分割やメタデータ処理を検証します。
+このテストは `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` にあり、メモリ内でドキュメントを作成し、チャンク化とメタデータ処理を検証します。
 
-### パターン6：Dockerを使った統合テスト
+### パターン 6: MCP 統合テスト
 
-一部の機能は実際のインフラが必要です。MCPモジュールはTestcontainersを使いDockerコンテナを起動して統合テストを行います。これにより実サービスとの連携を検証しつつテストの分離も保ちます。
+MCPモジュールはstdioトランスポートを使用したModel Context Protocolの統合をテストします。これらのテストは、アプリケーションがMCPサーバーをサブプロセスとして起動し通信できることを検証します。
 
-<img src="../../../translated_images/mcp-testing.bb3b3e92e47acb4b3dfb12715b4e113655f16c11ba39c2ffabae557bc6c3734c.ja.png" alt="MCP Docker Integration Testing" width="800"/>
+`05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` のテストはMCPクライアントの動作を検証します。
 
-*Testcontainersを使ったMCP統合テストの自動コンテナライフサイクル：起動、テスト実行、停止、クリーンアップ*
-
-`05-mcp/src/test/java/com/example/langchain4j/mcp/McpDockerTransportTest.java`のテストはDockerが起動している必要があります。
-
-**実行方法：**
+**実行方法:**
 
 **Bash:**
 ```bash
@@ -343,36 +335,36 @@ cd 05-mcp; mvn --% test
 
 ## テストの哲学
 
-AIではなくコードをテストしましょう。テストはプロンプトの構築方法、メモリ管理、ツールの実行を検証するべきです。AIの応答は変動するためテストのアサーションに含めるべきではありません。プロンプトテンプレートが正しく変数を置換しているかを問うべきで、AIが正しい答えを出すかどうかではありません。
+AIではなくコードをテストしてください。テストは、プロンプトがどのように構築されるか、メモリがどのように管理されるか、ツールがどのように実行されるかを確認することで、あなたが書いたコードを検証するべきです。AIの応答は変動するため、テストのアサーションに含めるべきではありません。AIが正しい答えを出すかどうかではなく、プロンプトテンプレートが変数を正しく置換しているかを自問してください。
 
-言語モデルにはモックを使いましょう。外部依存で遅く、高価で、非決定論的だからです。モックを使うことでテストはミリ秒単位で高速、APIコストなしで無料、毎回同じ結果で決定論的になります。
+言語モデルにはモックを使ってください。外部依存は遅く、高価で、非決定論的です。モックにするとテストはミリ秒単位で高速に実行され、APIコストはかからず、毎回同じ結果が得られます。
 
-テストは独立させましょう。各テストは自身のデータをセットアップし、他のテストに依存せず、実行後にクリーンアップします。実行順序に関わらずテストは合格すべきです。
+テストを独立させてください。各テストは自身のデータをセットアップし、他のテストに依存せず、終了後にクリーンアップするべきです。テストは実行順に関係なく合格するべきです。
 
-ハッピーパス以外の境界ケースもテストしましょう。空入力、非常に大きな入力、特殊文字、無効なパラメータ、境界条件などです。これらは通常の使用では見つからないバグを明らかにします。
+ハッピーパス以外のエッジケースもテストしてください。空の入力、非常に大きな入力、特殊文字、無効なパラメータ、境界条件などを試してください。これらは通常の使用では露見しないバグを明らかにすることが多いです。
 
-説明的な名前を使いましょう。`shouldMaintainConversationHistoryAcrossMultipleMessages()`と`test1()`を比べてください。前者は何をテストしているか正確に示し、失敗時のデバッグを容易にします。
+説明的な名前を使ってください。`shouldMaintainConversationHistoryAcrossMultipleMessages()` と `test1()` を比較してください。最初の例は何がテストされているかを正確に示すため、失敗時のデバッグがはるかに容易になります。
 
 ## 次のステップ
 
-テストパターンを理解したら、各モジュールをさらに深く学びましょう：
+テストパターンを理解したら、各モジュールをさらに詳しく確認してください:
 
 - **[00 - クイックスタート](../00-quick-start/README.md)** - プロンプトテンプレートの基本から始める
-- **[01 - はじめに](../01-introduction/README.md)** - 会話メモリ管理を学ぶ
-- **[02 - プロンプトエンジニアリング](../02-prompt-engineering/README.md)** - GPT-5のプロンプトパターンを習得
-- **[03 - RAG](../03-rag/README.md)** - 検索強化生成システムを構築
-- **[04 - ツール](../04-tools/README.md)** - 関数呼び出しとツールチェーンを実装
-- **[05 - MCP](../05-mcp/README.md)** - Dockerとモデルコンテキストプロトコルを統合
+- **[01 - 導入](../01-introduction/README.md)** - 会話メモリ管理を学ぶ
+- **[02 - プロンプトエンジニアリング](../02-prompt-engineering/README.md)** - GPT-5のプロンプトパターンを習得する
+- **[03 - RAG](../03-rag/README.md)** - 情報検索強化生成システムを構築する
+- **[04 - ツール](../04-tools/README.md)** - 関数呼び出しとツールチェーンを実装する
+- **[05 - MCP](../05-mcp/README.md)** - Model Context Protocolを統合する
 
-各モジュールのREADMEにはここでテストされている概念の詳細な説明があります。
+各モジュールのREADMEにはここでテストされている概念の詳細な説明が記載されています。
 
 ---
 
-**ナビゲーション：** [← メインに戻る](../README.md)
+**ナビゲーション:** [← メインに戻る](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責事項**：  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性を期しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は責任を負いかねます。
+免責事項：
+本書は AI 翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を用いて翻訳されました。正確性には努めていますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があることをご承知おきください。重要な情報については、原文（原言語版）を正本とみなしてください。重要な内容に関しては、専門の人間による翻訳を推奨します。本翻訳の利用に起因する誤解や解釈の相違について、当社は一切の責任を負いません。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -49,7 +49,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Αυτό θεμελιώνει τις απαντήσεις του μοντέλου στα πραγματικά σας δεδομένα αντί να βασίζεται στη γνώση εκπαίδευσης ή να επινοεί απαντήσεις.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.el.png" alt="Αρχιτεκτονική RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.el.png" alt="Αρχιτεκτονική RAG" width="800"/>
 
 *Ροή εργασίας RAG - από την ερώτηση χρήστη στη σημασιολογική αναζήτηση και στη δημιουργία απάντησης με πλαίσιο*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.el.png" alt="Χώρος Ενσωματώσεων Διανυσμάτων" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.el.png" alt="Χώρος Ενσωματώσεων Διανυσμάτων" width="800"/>
 
 *Έγγραφα αναπαριστώνται ως διανύσματα στον χώρο ενσωματώσεων - παρόμοιο περιεχόμενο ομαδοποιείται*
 
@@ -152,7 +152,7 @@ cat ../.env  # Πρέπει να εμφανίζει το AZURE_OPENAI_ENDPOINT, 
 
 Απλά κάντε κλικ στο κουμπί αναπαραγωγής δίπλα στο "rag" για να ξεκινήσετε αυτό το module, ή ξεκινήστε όλα τα modules μαζί.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.el.png" alt="Πίνακας Ελέγχου Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.el.png" alt="Πίνακας Ελέγχου Spring Boot" width="400"/>
 
 **Επιλογή 2: Χρήση shell scripts**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Η εφαρμογή παρέχει web περιβάλλον για ανέβασμα εγγράφων και ερωτήσεις.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.el.png" alt="Διεπαφή Εφαρμογής RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.el.png" alt="Διεπαφή Εφαρμογής RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Η διεπαφή της εφαρμογής RAG - ανεβάστε έγγραφα και κάντε ερωτήσεις*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Παρατηρήστε ότι κάθε απάντηση περιλαμβάνει αναφορές πηγών με βαθμολογίες ομοιότητας. Αυτές οι βαθμολογίες (0 έως 1) δείχνουν πόσο σχετικό ήταν κάθε τμήμα με την ερώτησή σας. Υψηλότερες βαθμολογίες σημαίνουν καλύτερες αντιστοιχίες. Αυτό σας επιτρέπει να επαληθεύσετε την απάντηση με το αρχικό υλικό.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.el.png" alt="Αποτελέσματα Ερωτήματος RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.el.png" alt="Αποτελέσματα Ερωτήματος RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Αποτελέσματα ερωτήματος που δείχνουν απάντηση με αναφορές πηγών και βαθμολογίες σχετικότητας*
 

@@ -37,7 +37,7 @@ LangChain4j ist eine Java-Bibliothek, die das Erstellen KI-gestützter Anwendung
 
 Die „Chain“ in LangChain bezieht sich auf das Verketten mehrerer Komponenten – Sie können eine Eingabeaufforderung an ein Modell an einen Parser ketten oder mehrere KI-Aufrufe verketten, bei denen eine Ausgabe in die nächste Eingabe fließt. Dieser Schnellstart konzentriert sich auf die Grundlagen, bevor komplexere Ketten erkundet werden.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.de.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.de.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Verkettung von Komponenten in LangChain4j – Bausteine verbinden sich, um leistungsstarke KI-Workflows zu erstellen*
 
@@ -49,7 +49,7 @@ Wir verwenden drei Kernkomponenten:
 
 **MessageWindowChatMemory** – Pflegt den Gesprächsverlauf. Ohne dies ist jede Anfrage unabhängig. Mit ihm erinnert sich die KI an vorherige Nachrichten und behält den Kontext über mehrere Runden.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.de.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.de.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j-Architektur – Kernkomponenten arbeiten zusammen, um Ihre KI-Anwendungen zu betreiben*
 

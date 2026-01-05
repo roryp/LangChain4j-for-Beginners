@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c25ec1f10ef156c53e190cdf8b0711ab",
-  "translation_date": "2025-12-13T17:56:43+00:00",
+  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
+  "translation_date": "2025-12-31T01:58:40+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "fi"
 }
@@ -12,93 +12,77 @@ CO_OP_TRANSLATOR_METADATA:
 ## Sisällysluettelo
 
 - [Mitä opit](../../../05-mcp)
-- [MCP:n ymmärtäminen](../../../05-mcp)
+- [Mikä on MCP?](../../../05-mcp)
 - [Miten MCP toimii](../../../05-mcp)
-  - [Palvelin-asiakasarkkitehtuuri](../../../05-mcp)
-  - [Työkalujen löytäminen](../../../05-mcp)
-  - [Siirtomekanismit](../../../05-mcp)
-- [Esivaatimukset](../../../05-mcp)
-- [Mitä tämä moduuli kattaa](../../../05-mcp)
-- [Pika-aloitus](../../../05-mcp)
-  - [Esimerkki 1: Etälaskin (Streamable HTTP)](../../../05-mcp)
-  - [Esimerkki 2: Tiedostotoiminnot (Stdio)](../../../05-mcp)
-  - [Esimerkki 3: Git-analyysi (Docker)](../../../05-mcp)
+- [Agenttinen moduuli](../../../05-mcp)
+- [Esimerkkien ajaminen](../../../05-mcp)
+  - [Esivaatimukset](../../../05-mcp)
+- [Pikaopas](../../../05-mcp)
+  - [Tiedostotoiminnot (Stdio)](../../../05-mcp)
+  - [Valvoja-agentti](../../../05-mcp)
+    - [Tuloksen ymmärtäminen](../../../05-mcp)
+    - [Selitys agenttisesta moduulista](../../../05-mcp)
 - [Keskeiset käsitteet](../../../05-mcp)
-  - [Siirron valinta](../../../05-mcp)
-  - [Työkalujen löytäminen](../../../05-mcp)
-  - [Istunnon hallinta](../../../05-mcp)
-  - [Monialustaiset näkökohdat](../../../05-mcp)
-- [Milloin käyttää MCP:tä](../../../05-mcp)
-- [MCP-ekosysteemi](../../../05-mcp)
 - [Onnittelut!](../../../05-mcp)
   - [Mitä seuraavaksi?](../../../05-mcp)
-- [Vianetsintä](../../../05-mcp)
 
 ## Mitä opit
 
-Olet rakentanut keskustelevaa tekoälyä, hallinnut kehotteita, perustanut vastaukset dokumentteihin ja luonut agentteja työkaluilla. Mutta kaikki nämä työkalut olivat räätälöityjä juuri sinun sovellustasi varten. Entä jos voisit antaa tekoälyllesi pääsyn standardoituun työkaluekosysteemiin, jonka kuka tahansa voi luoda ja jakaa?
+Olet rakentanut keskustelullisen tekoälyn, hallinnut kehotteita, perustanut vastaukset dokumentteihin ja luonut agentteja työkaluilla. Mutta kaikki nuo työkalut olivat räätälöityjä tiettyä sovellusta varten. Entä jos voisit antaa tekoälyllesi pääsyn vakiomuotoiseen työkalujen ekosysteemiin, jonka kuka tahansa voi luoda ja jakaa? Tässä moduulissa opit tekemään juuri sen Model Context Protocolin (MCP) ja LangChain4j:n agenttisen moduulin avulla. Esittelemme ensin yksinkertaisen MCP-tiedostonlukijan ja näytämme sitten, miten se integroidaan helposti edistyneisiin agenttipohjaisiin työnkulkuihin käyttämällä Valvoja-agentti-mallia.
 
-Model Context Protocol (MCP) tarjoaa juuri tämän – standardoidun tavan tekoälysovelluksille löytää ja käyttää ulkoisia työkaluja. Sen sijaan, että kirjoittaisit räätälöityjä integraatioita jokaiselle tietolähteelle tai palvelulle, yhdistyt MCP-palvelimiin, jotka tarjoavat ominaisuutensa yhtenäisessä muodossa. Tekoälyagenttisi voi sitten automaattisesti löytää ja käyttää näitä työkaluja.
+## Mikä on MCP?
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5448d2fa21a61218777ceb8010ea0390dd43924b26df35f61.fi.png" alt="MCP Comparison" width="800"/>
+Model Context Protocol (MCP) tarjoaa juuri sen — standardoidun tavan, jolla tekoälysovellukset löytävät ja käyttävät ulkoisia työkaluja. Sen sijaan, että kirjoittaisit räätälöityjä integraatioita jokaista tietolähdettä tai palvelua varten, yhdistät MCP-palvelimiin, jotka paljastavat kykynsä yhtenäisessä muodossa. Tekoälyagenttisi voi sitten löytää ja käyttää näitä työkaluja automaattisesti.
 
-*Ennen MCP:tä: Monimutkaiset pisteestä pisteeseen -integraatiot. MCP:n jälkeen: Yksi protokolla, loputtomat mahdollisuudet.*
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.fi.png" alt="MCP-vertailu" width="800"/>
 
-## MCP:n ymmärtäminen
+*Ennen MCP:tä: Monimutkaisia pisteestä pisteeseen -integraatioita. MCP:n jälkeen: Yksi protokolla, loputtomia mahdollisuuksia.*
 
-MCP ratkaisee perustavanlaatuisen ongelman tekoälyn kehityksessä: jokainen integraatio on räätälöity. Haluatko käyttää GitHubia? Räätälöity koodi. Haluatko lukea tiedostoja? Räätälöity koodi. Haluatko kysyä tietokantaa? Räätälöity koodi. Eikä mikään näistä integraatioista toimi muiden tekoälysovellusten kanssa.
+MCP ratkaisee perusongelman tekoälyn kehityksessä: jokainen integraatio on räätälöity. Haluatko käyttää GitHubia? Räätälöity koodi. Haluatko lukea tiedostoja? Räätälöity koodi. Haluatko kysellä tietokantaa? Räätälöity koodi. Eikä mikään näistä integraatioista toimi muiden tekoälysovellusten kanssa.
 
-MCP standardisoi tämän. MCP-palvelin tarjoaa työkalut selkeillä kuvauksilla ja skeemoilla. Mikä tahansa MCP-asiakas voi yhdistää, löytää saatavilla olevat työkalut ja käyttää niitä. Rakenna kerran, käytä kaikkialla.
+MCP standardisoi tämän. MCP-palvelin paljastaa työkalut selkeillä kuvauksilla ja skeemoilla. Mikä tahansa MCP-asiakas voi yhdistää, löytää käytettävissä olevat työkalut ja käyttää niitä. Rakenna kerran, käytä kaikkialla.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9814b7cffade208d4b0d97203c22df8d8e5504d8238fa7065.fi.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.fi.png" alt="MCP-arkkitehtuuri" width="800"/>
 
-*Model Context Protocol -arkkitehtuuri – standardoitu työkalujen löytäminen ja suorittaminen*
+*Model Context Protocol -arkkitehtuuri — standardoitu työkalujen löytäminen ja suoritus*
 
 ## Miten MCP toimii
 
-**Palvelin-asiakasarkkitehtuuri**
+**Palvelin-asiakas -arkkitehtuuri**
 
-MCP käyttää asiakas-palvelin-mallia. Palvelimet tarjoavat työkaluja – tiedostojen lukemista, tietokantakyselyjä, API-kutsuja. Asiakkaat (tekoälysovelluksesi) yhdistävät palvelimiin ja käyttävät niiden työkaluja.
+MCP käyttää asiakas-palvelin-mallia. Palvelimet tarjoavat työkaluja — tiedostojen lukemista, tietokantakyselyjä, API-kutsuja. Asiakkaat (sinun tekoälysovelluksesi) yhdistävät palvelimiin ja käyttävät niiden työkaluja.
+
+Käyttääksesi MCP:tä LangChain4j:n kanssa, lisää tämä Maven-riippuvuus:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
+```
 
 **Työkalujen löytäminen**
 
-Kun asiakkaasi yhdistää MCP-palvelimeen, se kysyy "Mitä työkaluja sinulla on?" Palvelin vastaa luettelolla saatavilla olevista työkaluista, jokaisella kuvaukset ja parametrien skeemat. Tekoälyagenttisi voi sitten päättää, mitä työkaluja käyttää käyttäjän pyyntöjen perusteella.
+Kun asiakas yhdistää MCP-palvelimeen, se kysyy "Mitä työkaluja teillä on?" Palvelin vastaa listalla saatavilla olevista työkaluista, jokaisella kuvaus ja parametriskeema. Tekoälyagenttisi voi sitten päättää, mitä työkaluja käyttää käyttäjän pyyntöjen perusteella.
 
 **Siirtomekanismit**
 
-MCP määrittelee kaksi siirtomekanismia: HTTP etäpalvelimille, Stdio paikallisille prosesseille (mukaan lukien Docker-kontit):
+MCP tukee eri siirtomekanismeja. Tässä moduulissa demonstroidaan Stdio-siirtoa paikallisprosesseille:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020ed801b772b26ed69338e22739677aa017e0968f6538b09a2.fi.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.fi.png" alt="Siirtomekanismit" width="800"/>
 
-*MCP:n siirtomekanismit: HTTP etäpalvelimille, Stdio paikallisille prosesseille (mukaan lukien Docker-kontit)*
-
-**Streamable HTTP** - [StreamableHttpDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-Etäpalvelimille. Sovelluksesi tekee HTTP-pyyntöjä jossain verkossa toimivalle palvelimelle. Käyttää Server-Sent Events -tekniikkaa reaaliaikaiseen viestintään.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
-```
-
-> **🤖 Kokeile [GitHub Copilot](https://github.com/features/copilot) Chatin kanssa:** Avaa [`StreamableHttpDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) ja kysy:
-> - "Miten MCP eroaa suorasta työkalun integraatiosta kuten Moduulissa 04?"
-> - "Mitkä ovat MCP:n käytön edut työkalujen jakamisessa sovellusten välillä?"
-> - "Miten käsittelen yhteysvirheitä tai aikakatkaisuja MCP-palvelimiin?"
+*MCP:n siirtomekanismit: HTTP etäpalvelimille, Stdio paikallisprosesseille*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Paikallisille prosesseille. Sovelluksesi käynnistää palvelimen aliprosessina ja kommunikoi standardin sisään- ja ulostulon kautta. Hyödyllinen tiedostojärjestelmän käyttöön tai komentorivityökaluihin.
+Paikallisprosesseille. Sovelluksesi käynnistää palvelimen aliprosessina ja kommunikoi standard input/output -virtojen kautta. Hyödyllinen tiedostojärjestelmän käyttöön tai komentorivityökaluihin.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
@@ -106,107 +90,55 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
 ```
 
 > **🤖 Kokeile [GitHub Copilot](https://github.com/features/copilot) Chatin kanssa:** Avaa [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) ja kysy:
-> - "Miten Stdio-siirto toimii ja milloin sitä pitäisi käyttää HTTP:n sijaan?"
-> - "Miten LangChain4j hallitsee MCP-palvelinprosessien elinkaaren?"
-> - "Mitkä ovat turvallisuusnäkökohdat, kun annetaan tekoälylle pääsy tiedostojärjestelmään?"
+> - "Miten Stdio-siirto toimii ja milloin sitä pitäisi käyttää verrattuna HTTP:hen?"
+> - "Miten LangChain4j hallitsee käynnistettyjen MCP-palvelinprosessien elinkaaren?"
+> - "Mitkä ovat turvallisuusvaikutukset, kun tekoälylle annetaan pääsy tiedostojärjestelmään?"
 
-**Docker (käyttää Stdioa)** - [GitRepositoryAnalyzer.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+## Agenttinen moduuli
 
-Konttien palveluille. Käyttää stdio-siirtoa kommunikoidakseen Docker-kontin kanssa `docker run` -komennolla. Hyvä monimutkaisiin riippuvuuksiin tai eristettyihin ympäristöihin.
+Vaikka MCP tarjoaa standardoituja työkaluja, LangChain4j:n **agenttinen moduuli** tarjoaa deklaratiivisen tavan rakentaa agentteja, jotka orkestroivat näitä työkaluja. `@Agent`-annotaatio ja `AgenticServices` antavat sinun määritellä agentin käyttäytymisen rajapintojen kautta sen sijaan, että kirjoittaisit imperatiivista koodia.
 
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
+Tässä moduulissa tutustut **Valvoja-agentti**-malliin — edistyneeseen agenttipohjaiseen tekoälylähestymistapaan, jossa "valvoja" päättää dynaamisesti, mitä al-agentteja kutsutaan käyttäjän pyynnön perusteella. Yhdistämme molemmat käsitteet antamalla yhdelle al-agenteistamme MCP-pohjaiset tiedostojärjestelmäkäyttömahdollisuudet.
+
+Käyttääksesi agenttista moduulia, lisää tämä Maven-riippuvuus:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
 ```
 
-> **🤖 Kokeile [GitHub Copilot](https://github.com/features/copilot) Chatin kanssa:** Avaa [`GitRepositoryAnalyzer.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) ja kysy:
-> - "Miten Docker-siirto eristää MCP-palvelimet ja mitkä ovat hyödyt?"
-> - "Miten konfiguroin volyymien liitokset datan jakamiseksi isännän ja MCP-konttien välillä?"
-> - "Mitkä ovat parhaat käytännöt Docker-pohjaisten MCP-palvelinprosessien hallintaan tuotannossa?"
+> **⚠️ Kokeellinen:** `langchain4j-agentic`-moduuli on **kokeellinen** ja saattaa muuttua. Vakaa tapa rakentaa tekoälyavustajia on edelleen `langchain4j-core` räätälöidyillä työkaluilla (Moduuli 04).
 
-## Esimerkkien suorittaminen
+## Esimerkkien ajaminen
 
 ### Esivaatimukset
 
 - Java 21+, Maven 3.9+
-- Node.js 16+ ja npm (MCP-palvelimille)
-- **Docker Desktop** – Täytyy olla **KÄYTÖSSÄ** Esimerkkiä 3 varten (ei pelkästään asennettuna)
-- GitHubin henkilökohtainen käyttöoikeustunnus konfiguroituna `.env`-tiedostossa (Moduulista 00)
+- Node.js 16+ ja npm (MCP-palvelimia varten)
+- Ympäristömuuttujat konfiguroitu `.env`-tiedostoon (projektin juurihakemistosta):
+  - **StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (samat kuin Moduuleissa 01-04)
 
-> **Huom:** Jos et ole vielä asettanut GitHub-tunnustasi, katso [Moduuli 00 - Pika-aloitus](../00-quick-start/README.md) ohjeita.
+> **Huom:** Jos et ole vielä määrittänyt ympäristömuuttujiasi, katso ohjeet [Module 00 - Quick Start](../00-quick-start/README.md) -sivulta, tai kopioi `.env.example` tiedostoksi `.env` juurihakemistoon ja täytä arvosi.
 
-> **⚠️ Docker-käyttäjille:** Ennen Esimerkkiä 3 varmista, että Docker Desktop on käynnissä komennolla `docker ps`. Jos näet yhteysvirheitä, käynnistä Docker Desktop ja odota noin 30 sekuntia alustuksen valmistumista.
+## Pikaopas
 
-## Pika-aloitus
+**VS Code -käyttö:** Napsauta hiiren oikealla mitä tahansa demo-tiedostoa Explorerissa ja valitse **"Run Java"**, tai käytä Run and Debug -paneelin käynnistyskonfiguraatioita (varmista, että olet lisännyt tokenisi `.env`-tiedostoon ensin).
 
-**VS Code -käytössä:** Napsauta hiiren oikealla mitä tahansa demotiedostoa Explorerissa ja valitse **"Run Java"**, tai käytä Run and Debug -paneelin käynnistyskonfiguraatioita (muista lisätä tunnuksesi `.env`-tiedostoon ensin).
+**Mavenilla:** Vaihtoehtoisesti voit ajaa esimerkit komentoriviltä alla olevien ohjeiden mukaan.
 
-**Mavenilla:** Vaihtoehtoisesti voit ajaa komentoriviltä alla olevilla esimerkeillä.
+### Tiedostotoiminnot (Stdio)
 
-**⚠️ Tärkeää:** Joillakin esimerkeillä on esivaatimuksia (kuten MCP-palvelimen käynnistys tai Docker-kuvien rakentaminen). Tarkista kunkin esimerkin vaatimukset ennen ajoa.
+Tämä demonstroi paikalliseen aliprosessiin perustuvia työkaluja.
 
-### Esimerkki 1: Etälaskin (Streamable HTTP)
+**✅ Ei esivaatimuksia** - MCP-palvelin käynnistetään automaattisesti.
 
-Tämä demonstroi verkkoon perustuvaa työkalujen integraatiota.
+**VS Code -käyttö:** Napsauta hiiren oikealla `StdioTransportDemo.java` ja valitse **"Run Java"**.
 
-**⚠️ Esivaatimus:** MCP-palvelin täytyy käynnistää ensin (katso Terminaali 1 alla).
-
-**Terminaali 1 – Käynnistä MCP-palvelin:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**Terminaali 2 – Aja esimerkki:**
-
-**VS Code:** Napsauta hiiren oikealla `StreamableHttpDemo.java` ja valitse **"Run Java"**.
-
-**Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Seuraa, kuinka agentti löytää saatavilla olevat työkalut ja käyttää laskinta yhteenlaskun suorittamiseen.
-
-### Esimerkki 2: Tiedostotoiminnot (Stdio)
-
-Tämä demonstroi paikallisia aliprosessipohjaisia työkaluja.
-
-**✅ Ei esivaatimuksia** – MCP-palvelin käynnistyy automaattisesti.
-
-**VS Code:** Napsauta hiiren oikealla `StdioTransportDemo.java` ja valitse **"Run Java"**.
-
-**Maven:**
+**Mavenilla:**
 
 **Bash:**
 ```bash
@@ -222,145 +154,236 @@ cd 05-mcp
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
-Sovellus käynnistää tiedostojärjestelmän MCP-palvelimen automaattisesti ja lukee paikallisen tiedoston. Huomaa, miten aliprosessien hallinta hoidetaan puolestasi.
+Sovellus käynnistää tiedostojärjestelmä-MCP-palvelimen automaattisesti ja lukee paikallisen tiedoston. Huomaa, miten aliprosessien hallinta hoidetaan puolestasi.
 
 **Odotettu tulos:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Esimerkki 3: Git-analyysi (Docker)
+### Valvoja-agentti
 
-Tämä demonstroi konttien palvelimia.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.fi.png" alt="Agenttinen moduuli" width="800"/>
 
-**⚠️ Esivaatimukset:** 
-1. **Docker Desktopin täytyy olla KÄYTÖSSÄ** (ei pelkästään asennettuna)
-2. **Windows-käyttäjät:** WSL 2 -tila suositeltu (Docker Desktop Settings → General → "Use the WSL 2 based engine"). Hyper-V-tila vaatii manuaalisen tiedostojen jakamisen konfiguroinnin.
-3. Docker-kuva täytyy rakentaa ensin (katso Terminaali 1 alla)
 
-**Varmista, että Docker on käynnissä:**
+**Valvoja-agentti-kuvio** on **joustava** muoto agenttisesta tekoälystä. Toisin kuin deterministisissä työnkuluissa (sequentiaalinen, silmukka, rinnakkaisuus), valvoja käyttää LLM:ää itsenäisesti päättämään, mitä agentteja kutsutaan käyttäjän pyynnön perusteella.
+
+**Valvoja yhdistettynä MCP:hen:** Tässä esimerkissä annamme `FileAgent`-agentille pääsyn MCP:n tiedostojärjestmätyökaluihin käyttämällä `toolProvider(mcpToolProvider)`. Kun käyttäjä pyytää "lue ja analysoi tiedosto", Valvoja analysoi pyynnön ja luo suoritussuunnitelman. Se ohjaa pyynnön sitten `FileAgent`-agentille, joka käyttää MCP:n `read_file`-työkalua hakemaan sisällön. Valvoja välittää tuon sisällön `AnalysisAgent`-agentille tulkintaa varten, ja tarvittaessa kutsuu `SummaryAgent`-agenttia tiivistämään tulokset.
+
+Tämä osoittaa, kuinka MCP-työkalut integroituvat sujuvasti agenttisiin työnkulkuihin — Valvojan ei tarvitse tietää *miten* tiedostot luetaan, ainoastaan että `FileAgent` osaa tehdä sen. Valvoja mukautuu dynaamisesti erilaisiin pyyntöihin ja palauttaa joko viimeisen agentin vastauksen tai yhteenvedon kaikista toiminnoista.
+
+**Käynnistysskriptien käyttö (suositeltavaa):**
+
+Käynnistysskriptit lataavat automaattisesti ympäristömuuttujat juurin `.env`-tiedostosta:
 
 **Bash:**
 ```bash
-docker ps  # Pitäisi näyttää konttiluettelo, ei virhettä
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Pitäisi näyttää konttiluettelo, ei virhettä
-```
-
-Jos näet virheen kuten "Cannot connect to Docker daemon" tai "The system cannot find the file specified", käynnistä Docker Desktop ja odota alustuksen valmistumista (~30 sekuntia).
-
-**Vianetsintä:**
-- Jos tekoäly raportoi tyhjän repositorion tai ei tiedostoja, volyymiliitos (`-v`) ei toimi.
-- **Windows Hyper-V -käyttäjät:** Lisää projektihakemisto Docker Desktop Settings → Resources → File sharing -kohtaan ja käynnistä Docker Desktop uudelleen.
-- **Suositeltu ratkaisu:** Vaihda WSL 2 -tilaan automaattista tiedostojen jakamista varten (Settings → General → ota käyttöön "Use the WSL 2 based engine").
-
-**Terminaali 1 – Rakenna Docker-kuva:**
-
-**Bash:**
-```bash
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**Terminaali 2 – Aja analyysi:**
-
-**VS Code:** Napsauta hiiren oikealla `GitRepositoryAnalyzer.java` ja valitse **"Run Java"**.
-
-**Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+.\start.ps1
 ```
 
-Sovellus käynnistää Docker-kontin, liittää repositoriosi ja analysoi repositorion rakenteen ja sisällön tekoälyagentin kautta.
+**VS Code -käyttö:** Napsauta hiiren oikealla `SupervisorAgentDemo.java` ja valitse **"Run Java"** (varmista, että `.env`-tiedostosi on konfiguroitu).
+
+**Miten Valvoja toimii:**
+
+```java
+// Määrittele useita agenteja, joilla on erityisiä kykyjä
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)  // Sisältää MCP-työkaluja tiedostotoimintoihin
+        .build();
+
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
+
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
+
+// Luo Supervisor, joka orkestroi näitä agenteja
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // "planner"-malli
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
+
+// Supervisor päättää itsenäisesti, mitkä agentit otetaan käyttöön
+// Syötä vain luonnollisen kielen pyyntö - LLM suunnittelee toteutuksen
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+```
+
+Katso [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) täydellinen toteutus.
+
+> **🤖 Kokeile [GitHub Copilot](https://github.com/features/copilot) Chatin kanssa:** Avaa [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) ja kysy:
+> - "Miten Valvoja päättää, mitä agentteja kutsutaan?"
+> - "Mikä on ero Valvoja-mallin ja Sekventiaalisen työnkulun välillä?"
+> - "Miten voin mukauttaa Valvojan suunnittelukäyttäytymistä?"
+
+#### Tuloksen ymmärtäminen
+
+Kun ajat demon, näet rakenteellisen läpikäynnin siitä, miten Valvoja orkestroi useita agentteja. Tässä mitä kukin osa tarkoittaa:
+
+```
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
+
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
+```
+
+**Otsikko** esittelee demon ja selittää ydinkäsitteen: Valvoja käyttää LLM:ää (ei kovakoodattuja sääntöjä) päättääkseen, mitä agentteja kutsutaan.
+
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
+
+**Saatavilla olevat agentit** näyttää kolme erikoistunutta agenttia, joista Valvoja voi valita. Jokaisella agentilla on erityinen kyky:
+- **FileAgent** voi lukea tiedostoja MCP-työkalujen avulla (ulkoinen kyvykkyys)
+- **AnalysisAgent** analysoi sisältöä (puhtaasti LLM-kyvykkyys)
+- **SummaryAgent** luo tiivistelmiä (puhtaasti LLM-kyvykkyys)
+
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
+
+**Käyttäjän pyyntö** näyttää, mitä pyydettiin. Valvojan täytyy jäsentää tämä ja päättää, mitä agentteja kutsutaan.
+
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
+
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
+
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: Structure: The content is organized into clear paragraphs that int...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
+
+**Valvojan orkestrointi** on se kohta, missä taika tapahtuu. Katso miten:
+1. Valvoja **valitsi ensin FileAgentin**, koska pyynnössä mainittiin "lue tiedosto"
+2. FileAgent käytti MCP:n `read_file`-työkalua noutaakseen tiedoston sisällön
+3. Valvoja sitten **valitsi AnalysisAgentin** ja välitti tiedoston sisällön sille
+4. AnalysisAgent analysoi rakennetta, sävyä ja teemoja
+
+Huomaa, että Valvoja teki nämä päätökset **itsenäisesti** käyttäjän pyynnön perusteella — ei kovakoodattua työnkulkua!
+
+**Lopullinen vastaus** on Valvojan yhdistetty vastaus, joka kokoaa yhteen kaikkien kutsuttujen agenttien tuotokset. Esimerkki tulostaa agenttisen skoopin, jossa näkyvät kunkin agentin tallentamat tiivistelmät ja analyysitulokset.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: Structure: The content is organized into clear paragraphs that in...
+```
+
+### Selitys agenttisesta moduulista
+
+Esimerkki demonstroi useita agenttisen moduulin edistyneitä ominaisuuksia. Tarkastellaan lähemmin Agenttiskoopin ja Agenttikuuntelijoiden toimintaa.
+
+**Agenttiskooppi** näyttää jaetun muistin, johon agentit tallensivat tuloksensa käyttäen `@Agent(outputKey="...")`. Tämä mahdollistaa:
+- Myöhempien agenttien pääsyn aikaisempien agenttien tuotoksiin
+- Valvojan yhdistelemään lopullisen vastauksen
+- Sinun tarkastella, mitä kukin agentti tuotti
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agenttikuuntelijat** mahdollistavat agentin suorituksen seurannan ja virheenkorjauksen. Demon vaiheittainen tulostus tulee AgentListeneriltä, joka kytkeytyy jokaiseen agentin kutsuun:
+- **beforeAgentInvocation** - Kutsutaan, kun Valvoja valitsee agentin, jolloin näet, mikä agentti valittiin ja miksi
+- **afterAgentInvocation** - Kutsutaan, kun agentti suorittaa tehtävänsä, näyttää sen tuloksen
+- **inheritedBySubagents** - Kun true, kuuntelija seuraa koko agenttipuuta
+
+```java
+AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
+    @Override
+    public void beforeAgentInvocation(AgentRequest request) {
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Levitä kaikille ala-agenteille
+    }
+};
+```
+
+Valvoja-mallin lisäksi `langchain4j-agentic`-moduuli tarjoaa useita tehokkaita työnkulku- ja ominaisuusmalleja:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Sekventiaalinen** | Suorita agentit järjestyksessä, tulos virtaa seuraavalle | Putket: tutkimus → analyysi → raportti |
+| **Rinnakkainen** | Aja agentit samanaikaisesti | Itsestä riippumattomat tehtävät: sää + uutiset + osakkeet |
+| **Silmukka** | Toista kunnes ehto täyttyy | Laadun parantaminen: hienosäädä kunnes piste ≥ 0.8 |
+| **Ehdollinen** | Reititä ehtojen perusteella | Luokittelu → ohjaa spesialistille |
+| **Ihminen-välissä** | Lisää ihmisen tarkastuspisteitä | Hyväksyntätyönkulut, sisällön tarkastus |
 
 ## Keskeiset käsitteet
 
-**Siirron valinta**
+**MCP** on ihanteellinen, kun haluat hyödyntää olemassa olevia työkaluekosysteemejä, rakentaa työkaluja, joita useat sovellukset voivat jakaa, integroida kolmansien osapuolten palveluja standardiprotokollilla tai vaihtaa työkalujen toteutuksia muuttamatta koodia.
 
-Valitse sen mukaan, missä työkalusi sijaitsevat:
-- Etäpalvelut → Streamable HTTP
-- Paikallinen tiedostojärjestelmä → Stdio
-- Monimutkaiset riippuvuudet → Docker
+**Agenttinen moduuli** sopii parhaiten, kun haluat deklaratiivisia agenttimääritelmiä `@Agent`-annotaatioilla, tarvitset työnkulun orkestrointia (sekventiaalinen, silmukka, rinnakkainen), suositte rajapintapohjaista agenttisuunnittelua imperatiivisen koodin sijaan, tai yhdistät useita agentteja, jotka jakavat tuotoksia `outputKey`-avaimen kautta.
 
-**Työkalujen löytäminen**
-
-MCP-asiakkaat löytävät automaattisesti saatavilla olevat työkalut yhdistäessään. Tekoälyagenttisi näkee työkalujen kuvaukset ja päättää, mitä käyttää käyttäjän pyynnön perusteella.
-
-**Istunnon hallinta**
-
-Streamable HTTP -siirto ylläpitää istuntoja, mahdollistaen tilalliset vuorovaikutukset etäpalvelimien kanssa. Stdio- ja Docker-siirrot ovat tyypillisesti tilattomia.
-
-**Monialustaiset näkökohdat**
-
-Esimerkit käsittelevät automaattisesti alustan eroja (Windowsin ja Unix-komentojen erot, polkujen muunnokset Dockerille). Tämä on tärkeää tuotantokäyttöön eri ympäristöissä.
-
-## Milloin käyttää MCP:tä
-
-**Käytä MCP:tä, kun:**
-- Haluat hyödyntää olemassa olevia työkaluekosysteemejä
-- Rakennat työkaluja, joita useat sovellukset käyttävät
-- Integroi kolmannen osapuolen palveluita standardiprotokollilla
-- Tarvitset työkalujen toteutusten vaihtoa ilman koodimuutoksia
-
-**Käytä räätälöityjä työkaluja (Moduuli 04), kun:**
-- Rakennat sovelluskohtaisia toiminnallisuuksia
-- Suorituskyky on kriittistä (MCP lisää ylikuormitusta)
-- Työkalusi ovat yksinkertaisia eivätkä tule uudelleenkäytetyiksi
-- Tarvitset täydellisen hallinnan suoritukseen
-
-## MCP-ekosysteemi
-
-Model Context Protocol on avoin standardi kasvavalla ekosysteemillä:
-
-- Viralliset MCP-palvelimet yleisiin tehtäviin (tiedostojärjestelmä, Git, tietokannat)
-- Yhteisön tuottamat palvelimet erilaisiin palveluihin
-- Standardoidut työkalukuvaus- ja skeemat
-- Yhteensopivuus eri kehysten kanssa (toimii minkä tahansa MCP-asiakkaan kanssa)
-
-Tämä standardisointi tarkoittaa, että yhdelle tekoälysovellukselle rakennetut työkalut toimivat myös muiden kanssa, luoden jaetun kyvykkyysekosysteemin.
+**Valvoja-agentti-malli** loistaa, kun työnkulkua ei voi ennustaa etukäteen ja haluat LLM:n tekevän päätökset, kun sinulla on useita erikoistuneita agentteja, jotka vaativat dynaamista orkestrointia, kun rakennat keskustelujärjestelmiä, jotka ohjaavat eri kyvykkyyksiin, tai kun haluat joustavimman ja mukautuvimman agenttikäyttäytymisen.
 
 ## Onnittelut!
 
-Olet suorittanut LangChain4j aloittelijoille -kurssin. Olet oppinut:
+Olet suorittanut LangChain4j for Beginners -kurssin. Olet oppinut:
 
-- Kuinka rakentaa keskusteleva tekoäly muistilla (Moduuli 01)
-- Kehotetekniikoita eri tehtäviin (Moduuli 02)
-- Vastausten perustamisen dokumentteihin RAG:n avulla (Moduuli 03)
-- Tekoälyagenttien luomisen räätälöidyillä työkaluilla (Moduuli 04)
-- Standardoitujen työkalujen integroinnin MCP:n kautta (Moduuli 05)
-
-Sinulla on nyt perusta tuotantotason tekoälysovellusten rakentamiseen. Oppimasi käsitteet pätevät riippumatta erityisistä kehyksistä tai malleista – ne ovat tekoälytekniikan perustavanlaatuisia malleja.
+- Miten rakentaa keskustelullinen tekoäly muistilla (Moduuli 01)
+- Kehote- eli prompt-tekniikoita eri tehtäviin (Moduuli 02)
+- Miten perustaa vastaukset dokumentteihin RAGin avulla (Moduuli 03)
+- Perusagenttien (avustajien) luominen räätälöidyillä työkaluilla (Moduuli 04)
+- Standardoitujen työkalujen integroiminen LangChain4j:n MCP- ja Agentic-moduuleihin (Moduuli 05)
 
 ### Mitä seuraavaksi?
 
-Moduulien suorittamisen jälkeen tutustu [Testausoppaaseen](../docs/TESTING.md) nähdäksesi LangChain4j:n testauskonseptit käytännössä.
+Moduulien suorittamisen jälkeen tutustu [Testausoppaaseen](../docs/TESTING.md) nähdäksesi LangChain4j:n testauskonsepteja käytännössä.
 
 **Viralliset resurssit:**
-- [LangChain4j Dokumentaatio](https://docs.langchain4j.dev/) – Kattavat oppaat ja API-viite
-- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) – Lähdekoodi ja esimerkit
-- [LangChain4j Opetusohjelmat](https://docs.langchain4j.dev/tutorials/) – Vaiheittaiset opetusohjelmat eri käyttötarkoituksiin
+- [LangChain4j Documentation](https://docs.langchain4j.dev/) - Laajat oppaat ja API-viite
+- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Lähdekoodi ja esimerkit
+- [LangChain4j Tutorials](https://docs.langchain4j.dev/tutorials/) - Vaiheittaiset oppaat eri käyttötapauksiin
 
-Kiitos, että suoristit tämän kurssin!
+Kiitos kurssin suorittamisesta!
 
 ---
 
@@ -368,52 +391,7 @@ Kiitos, että suoristit tämän kurssin!
 
 ---
 
-## Vianetsintä
-
-### PowerShellin Maven-komentojen syntaksi
-**Ongelma**: Maven-komennot epäonnistuvat virheellä `Unknown lifecycle phase ".mainClass=..."`
-
-**Syy**: PowerShell tulkitsee `=` muuttujan arvon asetusoperaattorina, mikä rikkoo Mavenin ominaisuuksien syntaksin
-
-**Ratkaisu**: Käytä pysäytyksen jäsentämisoperaattoria `--%` ennen Maven-komentoa:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-`--%`-operaattori kertoo PowerShellille, että kaikki jäljellä olevat argumentit välitetään kirjaimellisesti Mavenille ilman tulkintaa.
-
-### Docker-yhteysongelmat
-
-**Ongelma**: Docker-komennot epäonnistuvat virheellä "Cannot connect to Docker daemon" tai "The system cannot find the file specified"
-
-**Syy**: Docker Desktop ei ole käynnissä tai ei ole täysin alustautunut
-
-**Ratkaisu**: 
-1. Käynnistä Docker Desktop
-2. Odota noin 30 sekuntia täyteen alustautumiseen
-3. Tarkista komennolla `docker ps` (näyttää konttien listan, ei virhettä)
-4. Suorita sitten esimerkkisi
-
-### Windows Docker -volyymin liittäminen
-
-**Ongelma**: Git-repositorion analysoija raportoi tyhjän repositorion tai ei tiedostoja
-
-**Syy**: Volyymin liittäminen (`-v`) ei toimi tiedostojen jakamisasetusten vuoksi
-
-**Ratkaisu**:
-- **Suositeltu:** Vaihda WSL 2 -tilaan (Docker Desktop Settings → General → "Use the WSL 2 based engine")
-- **Vaihtoehto (Hyper-V):** Lisää projektihakemisto Docker Desktop Settings → Resources → File sharing -kohtaan, ja käynnistä Docker Desktop uudelleen
-
----
-
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vastuuvapauslauseke**:
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+Vastuuvapauslauseke:
+Tämä asiakirja on käännetty tekoälykäännöspalvelulla (Co-op Translator) https://github.com/Azure/co-op-translator. Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää auktoritatiivisena lähteenä. Kriittisten tietojen osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä johtuvista väärinymmärryksistä tai virheellisistä tulkinnoista.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

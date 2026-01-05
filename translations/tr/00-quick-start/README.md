@@ -37,7 +37,7 @@ LangChain4j, AI destekli uygulamalar oluşturmayı basitleştiren bir Java küt�
 
 LangChain'deki "zincir", birden çok bileşeni birbirine bağlamayı ifade eder - bir istemi modele, modele bir ayrıştırıcıya bağlayabilir veya bir çıktının sonraki girdiye beslendiği birden çok AI çağrısını zincirleyebilirsiniz. Bu hızlı başlangıç, daha karmaşık zincirleri keşfetmeden önce temelleri ele alır.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.tr.png" alt="LangChain4j Zincirleme Konsepti" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.tr.png" alt="LangChain4j Zincirleme Konsepti" width="800"/>
 
 *LangChain4j'de bileşenlerin zincirlenmesi - yapı taşları güçlü AI iş akışları oluşturmak için bağlanır*
 
@@ -49,7 +49,7 @@ LangChain'deki "zincir", birden çok bileşeni birbirine bağlamayı ifade eder 
 
 **MessageWindowChatMemory** - Konuşma geçmişini korur. Bunu kullanmazsanız, her istek bağımsızdır. Kullanırsanız, AI önceki mesajları hatırlar ve birden çok tur boyunca bağlamı sürdürür.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.tr.png" alt="LangChain4j Mimarisi" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.tr.png" alt="LangChain4j Mimarisi" width="800"/>
 
 *LangChain4j mimarisi - temel bileşenler AI uygulamalarınızı güçlendirmek için birlikte çalışır*
 

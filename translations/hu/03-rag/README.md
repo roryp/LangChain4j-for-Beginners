@@ -49,7 +49,7 @@ Gondolj a RAG-ra úgy, mint egy hivatkozási könyvtár biztosítására a model
 
 Ez a modell válaszait a tényleges adataidra alapozza, nem csak a tanítási tudására vagy kitalált válaszokra.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.hu.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.hu.png" alt="RAG Architecture" width="800"/>
 
 *RAG munkafolyamat – a felhasználói kérdéstől a szemantikus keresésen át a kontextuális válaszgenerálásig*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.hu.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.hu.png" alt="Vector Embeddings Space" width="800"/>
 
 *Dokumentumok vektorokként ábrázolva a beágyazási térben – hasonló tartalmak csoportosulnak*
 
@@ -152,7 +152,7 @@ A Spring Boot Dashboard segítségével:
 
 Egyszerűen kattints a "rag" melletti lejátszás gombra a modul indításához, vagy indítsd el az összes modult egyszerre.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.hu.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.hu.png" alt="Spring Boot Dashboard" width="400"/>
 
 **2. lehetőség: Shell szkriptek használata**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Minden modul
 
 Az alkalmazás webes felületet biztosít dokumentum feltöltéshez és kérdések feltevéséhez.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.hu.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.hu.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *A RAG alkalmazás felülete – dokumentumok feltöltése és kérdések feltevése*
 
@@ -240,7 +240,7 @@ Most tegyél fel konkrét kérdéseket a dokumentum tartalmáról. Próbálj meg
 
 Figyeld meg, hogy minden válasz tartalmaz forrás hivatkozásokat hasonlósági pontszámokkal. Ezek a pontszámok (0-tól 1-ig) megmutatják, mennyire volt releváns az adott darab a kérdésedhez. A magasabb pontszám jobb egyezést jelent. Ez lehetővé teszi, hogy ellenőrizd a választ az eredeti anyag alapján.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.hu.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.hu.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Kérdezési eredmények, válasz forrás hivatkozásokkal és relevancia pontszámokkal*
 

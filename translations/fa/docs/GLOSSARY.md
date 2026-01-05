@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T19:52:52+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-30T20:34:59+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "fa"
 }
 -->
-# فرهنگ لغت LangChain4j
+# واژه‌نامه LangChain4j
 
 ## فهرست مطالب
 
@@ -17,179 +17,171 @@ CO_OP_TRANSLATOR_METADATA:
 - [مهندسی پرامپت](../../../docs)
 - [RAG (تولید تقویت‌شده با بازیابی)](../../../docs)
 - [عامل‌ها و ابزارها](../../../docs)
-- [پروتکل زمینه مدل (MCP)](../../../docs)
+- [پروتکل کانتکست مدل (MCP)](../../../docs)
 - [خدمات Azure](../../../docs)
-- [آزمایش و توسعه](../../../docs)
+- [تست و توسعه](../../../docs)
 
-مرجع سریع برای اصطلاحات و مفاهیم استفاده شده در سراسر دوره.
+مرجع سریع برای اصطلاحات و مفاهیمی که در سراسر دوره استفاده شده‌اند.
 
-## مفاهیم اصلی
+## Core Concepts
 
-**عامل هوش مصنوعی** - سیستمی که از هوش مصنوعی برای استدلال و عمل به صورت خودکار استفاده می‌کند. [ماژول ۰۴](../04-tools/README.md)
+**AI Agent** - سیستمی که از هوش مصنوعی برای استنتاج و انجام اقدامات به‌طور خودکار استفاده می‌کند. [ماژول 04](../04-tools/README.md)
 
-**زنجیره** - دنباله‌ای از عملیات که خروجی به مرحله بعدی وارد می‌شود.
+**Chain** - توالی عملیات که خروجی یک مرحله به مرحله بعدی داده می‌شود.
 
-**تقسیم‌بندی** - شکستن اسناد به قطعات کوچکتر. معمولاً: ۳۰۰-۵۰۰ توکن با همپوشانی. [ماژول ۰۳](../03-rag/README.md)
+**Chunking** - شکستن سندها به قطعات کوچکتر. معمولاً: 300-500 توکن با همپوشانی. [ماژول 03](../03-rag/README.md)
 
-**پنجره زمینه** - حداکثر تعداد توکنی که یک مدل می‌تواند پردازش کند. GPT-5: ۴۰۰ هزار توکن.
+**Context Window** - حداکثر توکنی که یک مدل می‌تواند پردازش کند. GPT-5: 400K توکن.
 
-**بردارهای جاسازی** - بردارهای عددی که معنای متن را نشان می‌دهند. [ماژول ۰۳](../03-rag/README.md)
+**Embeddings** - بردارهای عددی که مفهوم متن را نمایش می‌دهند. [ماژول 03](../03-rag/README.md)
 
-**فراخوانی تابع** - مدلی که درخواست‌های ساختاریافته برای فراخوانی توابع خارجی تولید می‌کند. [ماژول ۰۴](../04-tools/README.md)
+**Function Calling** - مدلی که درخواست‌های ساختاریافته برای فراخوانی توابع خارجی تولید می‌کند. [ماژول 04](../04-tools/README.md)
 
-**توهم** - زمانی که مدل‌ها اطلاعات نادرست اما قابل قبول تولید می‌کنند.
+**Hallucination** - زمانی که مدل‌ها اطلاعات نادرست اما محتمل تولید می‌کنند.
 
-**پرامپت** - ورودی متنی به مدل زبان. [ماژول ۰۲](../02-prompt-engineering/README.md)
+**Prompt** - ورودی متنی به یک مدل زبانی. [ماژول 02](../02-prompt-engineering/README.md)
 
-**جستجوی معنایی** - جستجو بر اساس معنا با استفاده از بردارهای جاسازی، نه کلمات کلیدی. [ماژول ۰۳](../03-rag/README.md)
+**Semantic Search** - جستجو بر اساس معنی با استفاده از embeddings، نه کلمات کلیدی. [ماژول 03](../03-rag/README.md)
 
-**حالت‌دار در مقابل بدون حالت** - بدون حالت: بدون حافظه. حالت‌دار: تاریخچه گفتگو را حفظ می‌کند. [ماژول ۰۱](../01-introduction/README.md)
+**Stateful vs Stateless** - Stateless: بدون حافظه. Stateful: تاریخچه گفتگو را حفظ می‌کند. [ماژول 01](../01-introduction/README.md)
 
-**توکن‌ها** - واحدهای پایه متن که مدل‌ها پردازش می‌کنند. بر هزینه‌ها و محدودیت‌ها تأثیر می‌گذارد. [ماژول ۰۱](../01-introduction/README.md)
+**Tokens** - واحدهای پایه متن که مدل‌ها پردازش می‌کنند. بر هزینه‌ها و محدودیت‌ها تأثیر می‌گذارد. [ماژول 01](../01-introduction/README.md)
 
-**زنجیره ابزار** - اجرای متوالی ابزارها که خروجی به فراخوانی بعدی اطلاع می‌دهد. [ماژول ۰۴](../04-tools/README.md)
+**Tool Chaining** - اجرای متوالی ابزارها که خروجی یکی فراخوانی بعدی را اطلاع‌رسانی می‌کند. [ماژول 04](../04-tools/README.md)
 
-## اجزای LangChain4j
+## LangChain4j Components
 
-**AiServices** - ایجاد رابط‌های سرویس هوش مصنوعی نوع ایمن.
+**AiServices** - Creates type-safe AI service interfaces.
 
-**OpenAiOfficialChatModel** - کلاینت یکپارچه برای مدل‌های OpenAI و Azure OpenAI.
+**OpenAiOfficialChatModel** - Unified client for OpenAI and Azure OpenAI models.
 
-**OpenAiOfficialEmbeddingModel** - ایجاد بردارهای جاسازی با استفاده از کلاینت رسمی OpenAI (پشتیبانی از هر دو OpenAI و Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Creates embeddings using OpenAI Official client (supports both OpenAI and Azure OpenAI).
 
-**ChatModel** - رابط اصلی برای مدل‌های زبان.
+**ChatModel** - Core interface for language models.
 
-**ChatMemory** - حفظ تاریخچه گفتگو.
+**ChatMemory** - Maintains conversation history.
 
-**ContentRetriever** - یافتن قطعات سند مرتبط برای RAG.
+**ContentRetriever** - Finds relevant document chunks for RAG.
 
-**DocumentSplitter** - شکستن اسناد به قطعات.
+**DocumentSplitter** - Breaks documents into chunks.
 
-**EmbeddingModel** - تبدیل متن به بردارهای عددی.
+**EmbeddingModel** - Converts text into numerical vectors.
 
-**EmbeddingStore** - ذخیره و بازیابی بردارهای جاسازی.
+**EmbeddingStore** - Stores and retrieves embeddings.
 
-**MessageWindowChatMemory** - حفظ پنجره لغزنده پیام‌های اخیر.
+**MessageWindowChatMemory** - Maintains sliding window of recent messages.
 
-**PromptTemplate** - ایجاد پرامپت‌های قابل استفاده مجدد با جایگزین‌های `{{variable}}`.
+**PromptTemplate** - Creates reusable prompts with `{{variable}}` placeholders.
 
-**TextSegment** - قطعه متنی با فراداده. استفاده شده در RAG.
+**TextSegment** - Text chunk with metadata. Used in RAG.
 
-**ToolExecutionRequest** - نمایانگر درخواست اجرای ابزار.
+**ToolExecutionRequest** - Represents tool execution request.
 
-**UserMessage / AiMessage / SystemMessage** - انواع پیام‌های گفتگو.
+**UserMessage / AiMessage / SystemMessage** - Conversation message types.
 
-## مفاهیم AI/ML
+## AI/ML Concepts
 
-**یادگیری چندنمونه‌ای** - ارائه مثال‌ها در پرامپت‌ها. [ماژول ۰۲](../02-prompt-engineering/README.md)
+**Few-Shot Learning** - ارائه مثال‌ها در پرامپت‌ها. [ماژول 02](../02-prompt-engineering/README.md)
 
-**مدل زبان بزرگ (LLM)** - مدل‌های هوش مصنوعی آموزش‌دیده روی داده‌های متنی وسیع.
+**Large Language Model (LLM)** - مدل‌های هوش مصنوعی که روی مقادیر زیادی از داده‌های متنی آموزش دیده‌اند.
 
-**تلاش استدلال** - پارامتر GPT-5 که عمق تفکر را کنترل می‌کند. [ماژول ۰۲](../02-prompt-engineering/README.md)
+**Reasoning Effort** - پارامتری در GPT-5 که عمق تفکر را کنترل می‌کند. [ماژول 02](../02-prompt-engineering/README.md)
 
-**دمای مدل** - کنترل تصادفی بودن خروجی. کم=قطعی، زیاد=خلاقانه.
+**Temperature** - کنترل تصادفی بودن خروجی. پایین = قطعی، بالا = خلاقانه.
 
-**پایگاه داده برداری** - پایگاه داده تخصصی برای بردارهای جاسازی. [ماژول ۰۳](../03-rag/README.md)
+**Vector Database** - پایگاه‌داده تخصصی برای embeddings. [ماژول 03](../03-rag/README.md)
 
-**یادگیری بدون نمونه** - انجام وظایف بدون مثال. [ماژول ۰۲](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - انجام وظایف بدون مثال‌ها. [ماژول 02](../02-prompt-engineering/README.md)
 
-## مهندسی پرامپت - [ماژول ۰۲](../02-prompt-engineering/README.md)
+## Prompt Engineering - [ماژول 02](../02-prompt-engineering/README.md)
 
-**زنجیره تفکر** - استدلال گام به گام برای دقت بهتر.
+**Chain-of-Thought** - استدلال گام‌به‌گام برای دقت بهتر.
 
-**خروجی محدود** - اعمال فرمت یا ساختار خاص.
+**Constrained Output** - اِعمال فرمت یا ساختار خاص روی خروجی.
 
-**اشتیاق بالا** - الگوی GPT-5 برای استدلال کامل.
+**High Eagerness** - الگوی GPT-5 برای استدلال جامع.
 
-**اشتیاق پایین** - الگوی GPT-5 برای پاسخ‌های سریع.
+**Low Eagerness** - الگوی GPT-5 برای پاسخ‌های سریع.
 
-**گفتگوی چند نوبتی** - حفظ زمینه در طول تبادل‌ها.
+**Multi-Turn Conversation** - حفظ زمینه در تبادلات متعدد.
 
-**پرامپت مبتنی بر نقش** - تنظیم شخصیت مدل از طریق پیام‌های سیستمی.
+**Role-Based Prompting** - تنظیم شخصیت مدل از طریق پیام‌های سیستمی.
 
-**خودبازتابی** - مدل خروجی خود را ارزیابی و بهبود می‌بخشد.
+**Self-Reflection** - مدل خروجی را ارزیابی و بهبود می‌بخشد.
 
-**تحلیل ساختاریافته** - چارچوب ارزیابی ثابت.
+**Structured Analysis** - چارچوب ارزیابی ثابت.
 
-**الگوی اجرای وظیفه** - برنامه‌ریزی → اجرا → خلاصه‌سازی.
+**Task Execution Pattern** - برنامه‌ریزی → اجرا → خلاصه‌سازی.
 
-## RAG (تولید تقویت‌شده با بازیابی) - [ماژول ۰۳](../03-rag/README.md)
+## RAG (Retrieval-Augmented Generation) - [ماژول 03](../03-rag/README.md)
 
-**خط لوله پردازش سند** - بارگذاری → تقسیم → جاسازی → ذخیره.
+**Document Processing Pipeline** - بارگذاری → تقسیم → تبدیل به بردار → ذخیره.
 
-**ذخیره بردار در حافظه** - ذخیره‌سازی غیرپایدار برای آزمایش.
+**In-Memory Embedding Store** - ذخیره‌سازی غیرپایدار برای تست.
 
 **RAG** - ترکیب بازیابی با تولید برای پایه‌گذاری پاسخ‌ها.
 
-**امتیاز شباهت** - اندازه‌گیری (۰-۱) شباهت معنایی.
+**Similarity Score** - معیار (0-1) شباهت معنایی.
 
-**ارجاع منبع** - فراداده درباره محتوای بازیابی شده.
+**Source Reference** - فراداده درباره محتوای بازیابی‌شده.
 
-## عامل‌ها و ابزارها - [ماژول ۰۴](../04-tools/README.md)
+## Agents and Tools - [ماژول 04](../04-tools/README.md)
 
-**حاشیه‌نویسی @Tool** - علامت‌گذاری متدهای جاوا به عنوان ابزارهای قابل فراخوانی توسط هوش مصنوعی.
+**@Tool Annotation** - Marks Java methods as AI-callable tools.
 
-**الگوی ReAct** - استدلال → عمل → مشاهده → تکرار.
+**ReAct Pattern** - استدلال → عمل → مشاهده → تکرار.
 
-**مدیریت جلسه** - زمینه‌های جداگانه برای کاربران مختلف.
+**Session Management** - زمینه‌های جداگانه برای کاربران مختلف.
 
-**ابزار** - تابعی که یک عامل هوش مصنوعی می‌تواند فراخوانی کند.
+**Tool** - تابعی که یک عامل هوش مصنوعی می‌تواند فراخوانی کند.
 
-**توضیح ابزار** - مستندسازی هدف و پارامترهای ابزار.
+**Tool Description** - مستندسازی هدف ابزار و پارامترهای آن.
 
-## پروتکل زمینه مدل (MCP) - [ماژول ۰۵](../05-mcp/README.md)
+## Model Context Protocol (MCP) - [ماژول 05](../05-mcp/README.md)
 
-**انتقال داکر** - سرور MCP در کانتینر داکر.
+**MCP** - استانداردی برای اتصال برنامه‌های هوش مصنوعی به ابزارهای خارجی.
 
-**MCP** - استاندارد اتصال برنامه‌های هوش مصنوعی به ابزارهای خارجی.
+**MCP Client** - برنامه‌ای که به سرورهای MCP متصل می‌شود.
 
-**کلاینت MCP** - برنامه‌ای که به سرورهای MCP متصل می‌شود.
+**MCP Server** - سرویس ارائه‌دهنده ابزارها از طریق MCP.
 
-**سرور MCP** - سرویسی که ابزارها را از طریق MCP ارائه می‌دهد.
+**Stdio Transport** - سرور به‌عنوان زیرفرآیند از طریق stdin/stdout.
 
-**رویدادهای ارسال شده از سرور (SSE)** - پخش سرور به کلاینت از طریق HTTP.
+**Tool Discovery** - کلاینت ابزارهای موجود را از سرور پرس‌وجو می‌کند.
 
-**انتقال Stdio** - سرور به عنوان زیرفرآیند از طریق stdin/stdout.
+## Azure Services - [ماژول 01](../01-introduction/README.md)
 
-**انتقال HTTP قابل پخش** - HTTP با SSE برای ارتباط بلادرنگ.
+**Azure AI Search** - جستجوی ابری با قابلیت‌های برداری. [ماژول 03](../03-rag/README.md)
 
-**کشف ابزار** - کلاینت از سرور درباره ابزارهای موجود پرس‌وجو می‌کند.
+**Azure Developer CLI (azd)** - مستقرسازی منابع Azure.
 
-## خدمات Azure - [ماژول ۰۱](../01-introduction/README.md)
+**Azure OpenAI** - سرویس سازمانی هوش مصنوعی مایکروسافت.
 
-**جستجوی Azure AI** - جستجوی ابری با قابلیت‌های برداری. [ماژول ۰۳](../03-rag/README.md)
+**Bicep** - زبان Infrastructure-as-Code برای Azure. [Infrastructure Guide](../01-introduction/infra/README.md)
 
-**Azure Developer CLI (azd)** - استقرار منابع Azure.
+**Deployment Name** - نام استقرار مدل در Azure.
 
-**Azure OpenAI** - سرویس هوش مصنوعی سازمانی مایکروسافت.
+**GPT-5** - جدیدترین مدل OpenAI با کنترل استدلال. [ماژول 02](../02-prompt-engineering/README.md)
 
-**Bicep** - زبان زیرساخت به عنوان کد Azure. [راهنمای زیرساخت](../01-introduction/infra/README.md)
+## Testing and Development - [راهنمای تست](TESTING.md)
 
-**نام استقرار** - نام برای استقرار مدل در Azure.
+**Dev Container** - محیط توسعه کانتینری. [Configuration](../../../.devcontainer/devcontainer.json)
 
-**GPT-5** - جدیدترین مدل OpenAI با کنترل استدلال. [ماژول ۰۲](../02-prompt-engineering/README.md)
+**GitHub Models** - میدان بازی مدل‌های رایگان AI. [ماژول 00](../00-quick-start/README.md)
 
-## آزمایش و توسعه - [راهنمای آزمایش](TESTING.md)
+**In-Memory Testing** - تست با ذخیره‌سازی در حافظه.
 
-**کانتینر توسعه** - محیط توسعه کانتینری شده. [پیکربندی](../../../.devcontainer/devcontainer.json)
-
-**مدل‌های GitHub** - محیط بازی مدل هوش مصنوعی رایگان. [ماژول ۰۰](../00-quick-start/README.md)
-
-**آزمایش در حافظه** - آزمایش با ذخیره‌سازی در حافظه.
-
-**آزمایش یکپارچه‌سازی** - آزمایش با زیرساخت واقعی.
+**Integration Testing** - تست با زیرساخت واقعی.
 
 **Maven** - ابزار اتوماسیون ساخت جاوا.
 
-**Mockito** - چارچوب ماکینگ جاوا.
+**Mockito** - فریم‌ورک شبیه‌سازی جاوا.
 
-**Spring Boot** - چارچوب برنامه‌نویسی جاوا. [ماژول ۰۱](../01-introduction/README.md)
-
-**Testcontainers** - کانتینرهای داکر در آزمایش‌ها.
+**Spring Boot** - فریم‌ورک برنامه‌نویسی جاوا. [ماژول 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطاها یا نواقصی باشند. سند اصلی به زبان بومی خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما مسئول هیچ گونه سوءتفاهم یا تفسیر نادرستی که از استفاده این ترجمه ناشی شود، نیستیم.
+سلب مسئولیت:
+این سند با استفاده از سرویس ترجمهٔ هوش مصنوعی Co‑op Translator (https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است حاوی خطا یا نادرستی باشند. نسخهٔ اصلی سند به زبان اصلی‌اش باید به‌عنوان منبع معتبر و مرجع در نظر گرفته شود. برای اطلاعات حیاتی، استفاده از ترجمهٔ حرفه‌ای انسانی توصیه می‌شود. ما در قبال هرگونه سوءتفاهم یا تفسیر نادرستی که از استفاده از این ترجمه ناشی شود مسئولیتی نداریم.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

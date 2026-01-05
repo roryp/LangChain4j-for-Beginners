@@ -49,7 +49,7 @@ RAG ကို မော်ဒယ်အား ကိုးကားစာကြ�
 
 ဤနည်းဖြင့် မော်ဒယ်၏ ဖြေကြားချက်များကို သင်၏ အချက်အလက်များပေါ်တွင် အခြေခံစေပြီး သင်ကြားမှုသိပ္ပံပညာ သို့မဟုတ် မမှန်ကန်သော ဖြေကြားချက်များ မပေးစေပါ။
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.my.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.my.png" alt="RAG Architecture" width="800"/>
 
 *RAG workflow - user query မှ semantic search မှ context-based answer generation အထိ*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.my.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.my.png" alt="Vector Embeddings Space" width="800"/>
 
 *စာရွက်စာတမ်းများကို embedding အာကာသတွင် vector များအဖြစ် ကိုယ်စားပြုထားခြင်း - ဆင်တူသော အကြောင်းအရာများ သီးခြားစုစည်းထားသည်*
 
@@ -152,7 +152,7 @@ Spring Boot Dashboard မှာ -
 
 "rag" အနီးရှိ play button ကို နှိပ်၍ ဒီ module ကို စတင်ပါ၊ သို့မဟုတ် အားလုံးကို တပြိုင်နက် စတင်နိုင်သည်။
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.my.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.my.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 ဤ application သည် စာရွက်စာတမ်းတင်သွင်းခြင်းနှင့် မေးခွန်းမေးခြင်းအတွက် web interface ပေးသည်။
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.my.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.my.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG application interface - စာရွက်စာတမ်းတင်ပြီး မေးခွန်းမေးနိုင်သည်*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 ဖြေကြားချက်တိုင်းတွင် similarity score များပါသော အရင်းအမြစ် ကိုးကားချက်များ ပါဝင်သည်။ ဤ score များ (0 မှ 1 အထိ) သည် မေးခွန်းနှင့် chunk တစ်ခုချင်း၏ သက်ဆိုင်မှုကို ပြသသည်။ score မြင့်သည်ဆိုသည်မှာ ကိုက်ညီမှုကောင်းသည်။ ဤကဲ့သို့ဖြင့် ဖြေကြားချက်ကို အရင်းအမြစ်နှင့် နှိုင်းယှဉ်စစ်ဆေးနိုင်သည်။
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.my.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.my.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Query ရလဒ်များ - ဖြေကြားချက်နှင့် အရင်းအမြစ် ကိုးကားချက်များ၊ သက်ဆိုင်မှု score များ*
 

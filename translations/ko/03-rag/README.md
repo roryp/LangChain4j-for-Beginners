@@ -49,7 +49,7 @@ RAG를 모델에 참고 도서관을 주는 것이라고 생각하세요. 질문
 
 이렇게 모델의 답변을 훈련 지식이나 추측에 의존하지 않고 실제 데이터에 기반하도록 합니다.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.ko.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ko.png" alt="RAG Architecture" width="800"/>
 
 *RAG 워크플로우 - 사용자 질문에서 의미 기반 검색, 컨텍스트 답변 생성까지*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.ko.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ko.png" alt="Vector Embeddings Space" width="800"/>
 
 *임베딩 공간에서 벡터로 표현된 문서 - 유사한 내용이 클러스터를 이룸*
 
@@ -152,7 +152,7 @@ Spring Boot 대시보드에서:
 
 "rag" 옆의 재생 버튼을 클릭해 이 모듈을 시작하거나 모든 모듈을 한 번에 시작할 수 있습니다.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.ko.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ko.png" alt="Spring Boot Dashboard" width="400"/>
 
 **옵션 2: 셸 스크립트 사용**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 애플리케이션은 문서 업로드와 질문을 위한 웹 인터페이스를 제공합니다.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.ko.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ko.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG 애플리케이션 인터페이스 - 문서 업로드 및 질문하기*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 각 답변에는 유사도 점수가 포함된 출처 참조가 표시됩니다. 이 점수(0~1)는 각 청크가 질문과 얼마나 관련 있는지를 나타냅니다. 점수가 높을수록 더 좋은 매칭입니다. 이를 통해 답변을 출처 자료와 대조할 수 있습니다.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.ko.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ko.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *출처 참조 및 관련성 점수가 포함된 답변 쿼리 결과*
 

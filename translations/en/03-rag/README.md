@@ -49,7 +49,7 @@ Think of RAG as giving the model a reference library. When you ask a question, t
 
 This grounds the model's responses in your actual data instead of relying on its training knowledge or making up answers.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.en.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.en.png" alt="RAG Architecture" width="800"/>
 
 *RAG workflow - from user query to semantic search to contextual answer generation*
 
@@ -99,7 +99,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.en.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.en.png" alt="Vector Embeddings Space" width="800"/>
 
 *Documents represented as vectors in embedding space - similar content clusters together*
 
@@ -153,7 +153,7 @@ From the Spring Boot Dashboard, you can:
 
 Simply click the play button next to "rag" to start this module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.en.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.en.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # All modules
 
 The application provides a web interface for document upload and questioning.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.en.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.en.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *The RAG application interface - upload documents and ask questions*
 
@@ -241,7 +241,7 @@ Now ask specific questions about the document content. Try something factual tha
 
 Notice each answer includes source references with similarity scores. These scores (0 to 1) show how relevant each chunk was to your question. Higher scores mean better matches. This lets you verify the answer against the source material.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.en.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.en.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Query results showing answer with source references and relevance scores*
 

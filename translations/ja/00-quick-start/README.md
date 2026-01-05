@@ -37,7 +37,7 @@ LangChain4jは、AI搭載アプリケーションの構築を簡素化するJava
 
 LangChainの「チェーン」とは、複数のコンポーネントを連結することを指します。プロンプトをモデルに、モデルをパーサーに繋げたり、複数のAI呼び出しを連鎖させて一つの出力が次の入力になるようにします。このクイックスタートでは、より複雑なチェーンを探求する前に基本を学びます。
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.ja.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.ja.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *LangChain4jのコンポーネント連結 - ブロックをつなげて強力なAIワークフローを構築*
 
@@ -49,7 +49,7 @@ LangChainの「チェーン」とは、複数のコンポーネントを連結�
 
 **MessageWindowChatMemory** - 会話履歴を保持。これがないと各リクエストは独立しますが、これを使うとAIは過去のメッセージを記憶し複数ターンにわたりコンテキストを維持します。
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.ja.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.ja.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4jのアーキテクチャ - コアコンポーネントが連携してAIアプリケーションを支える*
 

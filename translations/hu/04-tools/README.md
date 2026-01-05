@@ -1,19 +1,19 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "aa23f106e7f53270924c9dd39c629004",
-  "translation_date": "2025-12-13T19:16:30+00:00",
+  "original_hash": "13ec450c12cdd1a863baa2b778f27cd7",
+  "translation_date": "2025-12-31T04:01:21+00:00",
   "source_file": "04-tools/README.md",
   "language_code": "hu"
 }
 -->
-# Modul 04: AI ügynökök eszközökkel
+# Modul 04: Eszközökkel rendelkező AI-ügynökök
 
 ## Tartalomjegyzék
 
 - [Mit fogsz megtanulni](../../../04-tools)
 - [Előfeltételek](../../../04-tools)
-- [Az AI ügynökök megértése eszközökkel](../../../04-tools)
+- [Az eszközökkel rendelkező AI-ügynökök megértése](../../../04-tools)
 - [Hogyan működik az eszközhívás](../../../04-tools)
   - [Eszközdefiníciók](../../../04-tools)
   - [Döntéshozatal](../../../04-tools)
@@ -22,55 +22,57 @@ CO_OP_TRANSLATOR_METADATA:
 - [Eszközláncolás](../../../04-tools)
 - [Az alkalmazás futtatása](../../../04-tools)
 - [Az alkalmazás használata](../../../04-tools)
-  - [Egyszerű eszközhasználat kipróbálása](../../../04-tools)
-  - [Eszközláncolás tesztelése](../../../04-tools)
-  - [A beszélgetés folyamatának megtekintése](../../../04-tools)
-  - [Az érvelés megfigyelése](../../../04-tools)
-  - [Kísérletezés különböző kérésekkel](../../../04-tools)
+  - [Próbálj egyszerű eszközhasználatot](../../../04-tools)
+  - [Teszteld az eszközláncolást](../../../04-tools)
+  - [Lásd a beszélgetés folyamatát](../../../04-tools)
+  - [Figyeld meg az érvelést](../../../04-tools)
+  - [Kísérletezz különböző kérésekkel](../../../04-tools)
 - [Kulcsfogalmak](../../../04-tools)
-  - [ReAct minta (érvelés és cselekvés)](../../../04-tools)
-  - [Az eszközleírások fontossága](../../../04-tools)
+  - [ReAct minta (Gondolkodás és Cselekvés)](../../../04-tools)
+  - [Az eszközleírások számítanak](../../../04-tools)
   - [Munkamenet-kezelés](../../../04-tools)
-  - [Hibakezelés](../../../04-tools)
+  - [Hiba kezelés](../../../04-tools)
 - [Elérhető eszközök](../../../04-tools)
-- [Mikor használjunk eszközalapú ügynököket](../../../04-tools)
+- [Mikor érdemes eszközalapú ügynököket használni](../../../04-tools)
 - [Következő lépések](../../../04-tools)
 
 ## Mit fogsz megtanulni
 
-Eddig megtanultad, hogyan folytass beszélgetéseket AI-val, hogyan strukturáld hatékonyan a promptokat, és hogyan alapozd válaszaidat a dokumentumaidra. De van egy alapvető korlát: a nyelvi modellek csak szöveget tudnak generálni. Nem tudják lekérdezni az időjárást, számításokat végezni, adatbázisokat lekérdezni vagy külső rendszerekkel kommunikálni.
+Eddig megtanultad, hogyan folytass beszélgetéseket az AI-val, hogyan strukturáld hatékonyan a promptokat, és hogyan alapozd meg a válaszokat a dokumentumaidban. Van azonban egy alapvető korlát: a nyelvi modellek csak szöveget tudnak generálni. Nem tudják ellenőrizni az időjárást, végezni számításokat, lekérdezni adatbázisokat vagy külső rendszerekkel kommunikálni.
 
-Az eszközök ezt megváltoztatják. Ha a modell hozzáférést kap olyan funkciókhoz, amelyeket meghívhat, akkor szöveggenerátorból olyan ügynökké válik, amely képes cselekedni. A modell eldönti, mikor van szüksége eszközre, melyiket használja, és milyen paramétereket ad át. A kódod végrehajtja a funkciót és visszaadja az eredményt. A modell beépíti ezt az eredményt a válaszába.
+Az eszközök ezt megváltoztatják. Ha a modellhez olyan függvényekhez való hozzáférést adsz, amelyeket meghívhat, akkor a modellt egy szöveggenerátorból olyan ügynökké alakítod, amely képes cselekedni. A modell eldönti, mikor van szüksége egy eszközre, melyik eszközt használja, és milyen paramétereket adjon át. A kódod végrehajtja a függvényt és visszaadja az eredményt. A modell beépíti az eredményt a válaszába.
 
 ## Előfeltételek
 
-- Az 01-es modul befejezése (Azure OpenAI erőforrások telepítve)
-- `.env` fájl a gyökérkönyvtárban Azure hitelesítő adatokkal (az `azd up` parancs hozta létre az 01-es modulban)
+- A 01. modul befejezve (Azure OpenAI erőforrások telepítve)
+- `.env` fájl a gyökérkönyvtárban Azure hitelesítő adatokkal (a `azd up` parancs hozza létre a 01. modulban)
 
-> **Megjegyzés:** Ha még nem fejezted be az 01-es modult, először kövesd ott a telepítési utasításokat.
+> **Megjegyzés:** Ha még nem végezted el az 01. modult, kövesd előbb ott a telepítési utasításokat.
 
-## Az AI ügynökök megértése eszközökkel
+## Az eszközökkel rendelkező AI-ügynökök megértése
 
-Az eszközökkel rendelkező AI ügynök egy érvelési és cselekvési mintát követ (ReAct):
+> **📝 Megjegyzés:** Ebben a modulban az "ügynökök" kifejezés olyan AI-asszisztenseket jelöl, amelyek eszközhívási képességekkel vannak kibővítve. Ez különbözik azoktól az Agentic AI mintáktól (autonóm ügynökök tervezéssel, memóriával és többlépéses érveléssel), amelyeket a [05-ös modul: MCP](../05-mcp/README.md) fog tárgyalni.
+
+Egy eszközökkel rendelkező AI-ügynök a gondolkodás és cselekvés mintát követi (ReAct):
 
 1. A felhasználó kérdez
 2. Az ügynök átgondolja, mire van szüksége
-3. Az ügynök eldönti, hogy szüksége van-e eszközre a válaszadáshoz
+3. Az ügynök eldönti, szüksége van-e eszközre a válaszhoz
 4. Ha igen, az ügynök meghívja a megfelelő eszközt a megfelelő paraméterekkel
-5. Az eszköz végrehajtja és adatokat ad vissza
+5. Az eszköz végrehajtódik és adatot ad vissza
 6. Az ügynök beépíti az eredményt és megadja a végső választ
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13ae5b0218d4e91befabc04e00f97539df14f93d1ad9b8516f.hu.png" alt="ReAct minta" width="800"/>
+<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.hu.png" alt="ReAct minta" width="800"/>
 
-*A ReAct minta – hogyan váltakoznak az AI ügynökök az érvelés és a cselekvés között a problémák megoldásához*
+*A ReAct minta – hogyan váltakoznak az AI-ügynökök a gondolkodás és a cselekvés között a problémamegoldás során*
 
-Ez automatikusan történik. Te definiálod az eszközöket és azok leírásait. A modell kezeli a döntéshozatalt arról, mikor és hogyan használja őket.
+Ez automatikusan történik. Te definiálod az eszközöket és a leírásaikat. A modell kezeli a döntéshozatalt arról, mikor és hogyan használja azokat.
 
 ## Hogyan működik az eszközhívás
 
 **Eszközdefiníciók** - [WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
 
-Funkciókat definiálsz világos leírásokkal és paraméter specifikációkkal. A modell ezeket a leírásokat látja a rendszer promptjában, és érti, mit csinál az egyes eszköz.
+Függvényeket definiálsz világos leírásokkal és paraméterspecifikációkkal. A modell ezeket a leírásokat látja a rendszer promptjában és megérti, mit csinál minden egyes eszköz.
 
 ```java
 @Component
@@ -88,87 +90,87 @@ public interface Assistant {
     String chat(@MemoryId String sessionId, @UserMessage String message);
 }
 
-// Az asszisztens automatikusan össze van kötve a Spring Boot által:
+// Az asszisztens a Spring Boot által automatikusan össze van kötve a következőkkel:
 // - ChatModel bean
 // - Minden @Tool metódus az @Component osztályokból
-// - ChatMemoryProvider a munkamenet kezeléséhez
+// - ChatMemoryProvider a munkamenet-kezeléshez
 ```
 
-> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg a [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) fájlt és kérdezd meg:
-> - "Hogyan integrálnék egy valódi időjárás API-t, mint az OpenWeatherMap a mock adatok helyett?"
-> - "Mi tesz egy jó eszközleírást, ami segíti az AI-t a helyes használatban?"
-> - "Hogyan kezelem az API hibákat és a lekérdezési korlátokat az eszköz implementációkban?"
+> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chat-tel:** Nyisd meg a [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) fájlt és kérdezd meg:
+> - "Hogyan integrálnék egy valós időjárás-API-t, például az OpenWeatherMap-et a mock adatok helyett?"
+> - "Mi tesz egy jó eszközleírást, ami segít az AI-nak helyesen használni az eszközt?"
+> - "Hogyan kezeljem az API hibákat és a sebességkorlátokat az eszközimplementációkban?"
 
 **Döntéshozatal**
 
-Amikor a felhasználó megkérdezi: "Milyen az időjárás Seattle-ben?", a modell felismeri, hogy szüksége van az időjárás eszközre. Létrehoz egy funkcióhívást a hely paraméterrel "Seattle" értékre állítva.
+Amikor egy felhasználó azt kérdezi, "Milyen az idő Seattle-ben?", a modell felismeri, hogy szüksége van az időjárás eszközre. Függvényhívást generál, ahol a location paraméter "Seattle"-re van állítva.
 
 **Végrehajtás** - [AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
 
-A Spring Boot automatikusan összekapcsolja a deklaratív `@AiService` interfészt az összes regisztrált eszközzel, és a LangChain4j automatikusan végrehajtja az eszközhívásokat.
+A Spring Boot automatikusan beágyazza a deklaratív `@AiService` interfészt az összes regisztrált eszközzel, és a LangChain4j automatikusan végrehajtja az eszközhívásokat.
 
-> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg az [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) fájlt és kérdezd meg:
-> - "Hogyan működik a ReAct minta és miért hatékony az AI ügynökök számára?"
-> - "Hogyan dönt az ügynök, melyik eszközt használja és milyen sorrendben?"
-> - "Mi történik, ha egy eszköz végrehajtása meghiúsul – hogyan kezeljem robosztusan a hibákat?"
+> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chat-tel:** Nyisd meg a [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) fájlt és kérdezd meg:
+> - "Hogyan működik a ReAct minta és miért hatékony az AI-ügynökök számára?"
+> - "Hogyan dönt az ügynök arról, melyik eszközt használja és milyen sorrendben?"
+> - "Mi történik, ha egy eszközvégrehajtás meghiúsul - hogyan kezeljem a hibákat robusztusan?"
 
 **Válaszgenerálás**
 
-A modell megkapja az időjárási adatokat és természetes nyelvű válaszba formázza a felhasználó számára.
+A modell megkapja az időjárás adatokat és természetes nyelvű válaszba formázza azokat a felhasználó számára.
 
 ### Miért használjunk deklaratív AI szolgáltatásokat?
 
 Ez a modul a LangChain4j Spring Boot integrációját használja deklaratív `@AiService` interfészekkel:
 
-- **Spring Boot automatikus összekapcsolás** – ChatModel és eszközök automatikusan injektálva
-- **@MemoryId minta** – Automatikus munkamenet-alapú memória kezelés
-- **Egyetlen példány** – Az asszisztens egyszer jön létre és újrahasznosul a jobb teljesítményért
-- **Típusbiztos végrehajtás** – Java metódusok közvetlen hívása típuskonverzióval
-- **Többkörös koordináció** – Automatikusan kezeli az eszközláncolást
-- **Nulla boilerplate** – Nincs kézi AiServices.builder() hívás vagy memória HashMap
+- **Spring Boot automatikus beágyazás** - ChatModel és az eszközök automatikusan injektálódnak
+- **@MemoryId minta** - Automatikus munkamenet-alapú memória kezelés
+- **Egyetlen példány** - Az asszisztens egyszer jön létre és újrafelhasználódik a jobb teljesítmény érdekében
+- **Típusbiztos végrehajtás** - Java metódusok közvetlen meghívása típuskonverzióval
+- **Többfordulós összehangolás** - Az eszközláncolást automatikusan kezeli
+- **Zéró boilerplate** - Nincs manuális AiServices.builder() hívás vagy memória HashMap
 
-Alternatív megközelítések (kézi `AiServices.builder()`) több kódot igényelnek és nem használják ki a Spring Boot integráció előnyeit.
+Alternatív megközelítések (manuális `AiServices.builder()`) több kódot igényelnek és nem élvezik a Spring Boot integráció előnyeit.
 
 ## Eszközláncolás
 
-**Eszközláncolás** – Az AI több eszközt is hívhat egymás után. Kérdezd meg: "Milyen az időjárás Seattle-ben és vigyek-e esernyőt?" és figyeld, ahogy összekapcsolja a `getCurrentWeather` hívást az esőfelszerelésről való érveléssel.
+**Eszközláncolás** - Az AI több eszközt is meghívhat egymás után. Kérdezd meg: "Milyen az idő Seattle-ben és vigyek esernyőt?" és figyeld, hogyan láncolja össze a `getCurrentWeather` hívást az esernyővel kapcsolatos érvelésével.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b1d54117d54ba382c21c51176aaf3800084cae2e7dfc82508.hu.png" alt="Eszközláncolás" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.hu.png" alt="Eszközláncolás" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Egymás utáni eszközhívások – az egyik eszköz kimenete a következő döntés bemenete*
+*Szekvenciális eszközhívások - az egyik eszköz kimenete befolyásolja a következő döntést*
 
-**Zökkenőmentes hibakezelés** – Kérdezz rá egy olyan város időjárására, ami nincs a mock adatok között. Az eszköz hibát jelez, az AI pedig elmagyarázza, hogy nem tud segíteni. Az eszközök biztonságosan hibáznak.
+**Zsákmányos hibakezelés** - Kérdezz egy olyan város időjárásáról, ami nincs a mock adatok között. Az eszköz hibát ad vissza, és az AI elmagyarázza, hogy nem tud segíteni. Az eszközök biztonságosan hibáznak.
 
-Ez egyetlen beszélgetési körben történik. Az ügynök önállóan koordinálja a több eszközhívást.
+Ez egyetlen beszélgetési körben történik. Az ügynök autonóm módon szervezi az egymást követő eszközhívásokat.
 
 ## Az alkalmazás futtatása
 
 **Ellenőrizd a telepítést:**
 
-Győződj meg róla, hogy a `.env` fájl létezik a gyökérkönyvtárban Azure hitelesítő adatokkal (az 01-es modul során jött létre):
+Győződj meg róla, hogy a `.env` fájl létezik a gyökérkönyvtárban Azure hitelesítő adatokkal (a 01. modul során jött létre):
 ```bash
-cat ../.env  # Meg kell jelenítenie az AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT értékeket
+cat ../.env  # Meg kell jelenítenie az AZURE_OPENAI_ENDPOINT, API_KEY és DEPLOYMENT értékeket
 ```
 
 **Indítsd el az alkalmazást:**
 
-> **Megjegyzés:** Ha már elindítottad az összes alkalmazást a `./start-all.sh` segítségével az 01-es modulból, ez a modul már fut a 8084-es porton. Kihagyhatod az alábbi indítási parancsokat és közvetlenül megnyithatod a http://localhost:8084 címet.
+> **Megjegyzés:** Ha már elindítottál minden alkalmazást a `./start-all.sh` használatával a 01. modulból, ez a modul már fut a 8084-es porton. Átugorhatod az alábbi indítási parancsokat és közvetlenül megnyithatod a http://localhost:8084 címet.
 
 **1. lehetőség: Spring Boot Dashboard használata (ajánlott VS Code felhasználóknak)**
 
-A fejlesztői konténer tartalmazza a Spring Boot Dashboard kiterjesztést, amely vizuális felületet biztosít az összes Spring Boot alkalmazás kezeléséhez. A VS Code bal oldali Activity Bar-ján találod (keresd a Spring Boot ikont).
+A fejlesztői konténer tartalmazza a Spring Boot Dashboard bővítményt, amely vizuális felületet biztosít az összes Spring Boot alkalmazás kezeléséhez. Megtalálod az Activity Bar bal oldalán a VS Code-ban (keresd a Spring Boot ikont).
 
-A Spring Boot Dashboard segítségével:
-- Megtekintheted az összes elérhető Spring Boot alkalmazást a munkaterületen
+A Spring Boot Dashboardból:
+- Láthatod az összes elérhető Spring Boot alkalmazást a workspace-ben
 - Egy kattintással indíthatod/leállíthatod az alkalmazásokat
-- Valós időben nézheted az alkalmazás naplóit
+- Valós időben megtekintheted az alkalmazás naplóit
 - Figyelheted az alkalmazás állapotát
 
-Egyszerűen kattints a "tools" melletti lejátszás gombra a modul indításához, vagy indítsd el az összes modult egyszerre.
+Egyszerűen kattints a lejátszás gombra a "tools" mellett ezen a modul elindításához, vagy indíts el minden modult egyszerre.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30af495a594f5c0213fecdbdf5bd9fb543d3c5467565773974a.hu.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.hu.png" alt="Spring Boot Dashboard" width="400"/>
 
-**2. lehetőség: Shell szkriptek használata**
+**2. lehetőség: Shell script-ek használata**
 
 Indítsd el az összes webalkalmazást (01-04 modulok):
 
@@ -184,7 +186,7 @@ cd ..  # A gyökérkönyvtárból
 .\start-all.ps1
 ```
 
-Vagy indítsd csak ezt a modult:
+Vagy indítsd el csak ezt a modult:
 
 **Bash:**
 ```bash
@@ -198,9 +200,9 @@ cd 04-tools
 .\start.ps1
 ```
 
-Mindkét szkript automatikusan betölti a környezeti változókat a gyökér `.env` fájlból és lefordítja a JAR fájlokat, ha még nem léteznek.
+Mindkét script automatikusan betölti a környezeti változókat a gyökér `.env` fájlból és felépíti a JAR-okat, ha azok nem léteznek.
 
-> **Megjegyzés:** Ha inkább manuálisan fordítanád le az összes modult indítás előtt:
+> **Megjegyzés:** Ha inkább manuálisan szeretnéd előre felépíteni az összes modult az indítás előtt:
 >
 > **Bash:**
 > ```bash
@@ -234,83 +236,83 @@ cd ..; .\stop-all.ps1  # Minden modul
 
 ## Az alkalmazás használata
 
-Az alkalmazás webes felületet biztosít, ahol egy AI ügynökkel kommunikálhatsz, amely hozzáfér az időjárás- és hőmérséklet átváltó eszközökhöz.
+Az alkalmazás webes felületet biztosít, ahol interakcióba léphetsz egy olyan AI-ügynökkel, amely hozzáfér az időjárás- és hőmérséklet-átváltó eszközökhöz.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f96216024b45b493ca1cd84935d6856416ea7a383b42f280d648c.hu.png" alt="AI ügynök eszközök felület" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.hu.png" alt="AI ügynök eszközök felülete" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Az AI ügynök eszközök felülete – gyors példák és chat felület az eszközökkel való interakcióhoz*
+*Az AI ügynök eszközök felülete - gyors példák és chat felület az eszközökkel való interakcióhoz*
 
-**Egyszerű eszközhasználat kipróbálása**
+**Próbálj egyszerű eszközhasználatot**
 
-Kezdj egy egyszerű kéréssel: "Alakítsd át a 100 Fahrenheit fokot Celsiusra". Az ügynök felismeri, hogy szüksége van a hőmérséklet átváltó eszközre, meghívja a megfelelő paraméterekkel, és visszaadja az eredményt. Figyeld meg, milyen természetes ez – nem kellett megadnod, melyik eszközt használja vagy hogyan hívja meg.
+Kezdd egy egyszerű kéréssel: "Konvertáld át a 100 Fahrenheit fokot Celsiusra". Az ügynök felismeri, hogy szüksége van a hőmérséklet-átváltó eszközre, meghívja a megfelelő paraméterekkel, és visszaadja az eredményt. Figyeld meg, milyen természetes ez az élmény - nem kellett megmondanod, melyik eszközt használd vagy hogyan hívd meg.
 
-**Eszközláncolás tesztelése**
+**Teszteld az eszközláncolást**
 
-Most próbálj valami összetettebbet: "Milyen az időjárás Seattle-ben és alakítsd át Fahrenheitre?" Figyeld, ahogy az ügynök lépésről lépésre dolgozza fel. Először lekéri az időjárást (ami Celsiusban van), felismeri, hogy át kell váltania Fahrenheitre, meghívja az átváltó eszközt, és mindkét eredményt egy válaszba foglalja.
+Most próbálj valami összetettebbet: "Milyen az idő Seattle-ben és konvertáld át Fahrenheitbe?" Figyeld, ahogy az ügynök lépésről lépésre dolgozik: először lekéri az időjárást (ami Celsiusban tér vissza), felismeri, hogy át kell váltani Fahrenheitbe, meghívja az átváltó eszközt, és egyesíti mindkét eredményt egy válaszban.
 
-**A beszélgetés folyamatának megtekintése**
+**Lásd a beszélgetés folyamatát**
 
-A chat felület megőrzi a beszélgetés előzményeit, így többkörös interakciókat folytathatsz. Láthatod az összes korábbi kérdést és választ, ami megkönnyíti a beszélgetés követését és megértését, hogyan építi az ügynök a kontextust több váltáson keresztül.
+A chat felület megőrzi a beszélgetés előzményeit, lehetővé téve többkörös interakciókat. Láthatod az összes korábbi lekérdezést és választ, így könnyű nyomon követni a beszélgetést és megérteni, hogyan építi az ügynök a kontextust több csere során.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f596acc43e227bf70f3c0d6030ad91d84df81070abf08848608.hu.png" alt="Beszélgetés több eszközhívással" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.hu.png" alt="Beszélgetés több eszközhívással" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Többkörös beszélgetés egyszerű átváltásokkal, időjárás lekérdezésekkel és eszközláncolással*
+*Többfordulós beszélgetés, amely egyszerű átváltásokat, időjárás-lekérdezéseket és eszközláncolást mutat be*
 
-**Kísérletezés különböző kérésekkel**
+**Kísérletezz különböző kérésekkel**
 
 Próbálj ki különféle kombinációkat:
-- Időjárás lekérdezések: "Milyen az időjárás Tokióban?"
-- Hőmérséklet átváltások: "Mennyi 25°C Kelvinben?"
-- Összetett kérdések: "Nézd meg Párizs időjárását és mondd meg, hogy 20°C felett van-e"
+- Időjárás-lekérdezések: "Milyen az idő Tokióban?"
+- Hőmérséklet-átváltások: "Mennyi 25°C Kelvinben?"
+- Összetett lekérdezések: "Nézd meg Párizs időjárását és mondd meg, hogy 20°C fölött van-e"
 
-Figyeld meg, hogyan értelmezi az ügynök a természetes nyelvet és hogyan térképezi le a megfelelő eszközhívásokra.
+Figyeld meg, hogyan értelmezi az ügynök a természetes nyelvet és hogyan térképezi azt megfelelő eszközhívásokra.
 
 ## Kulcsfogalmak
 
-**ReAct minta (érvelés és cselekvés)**
+**ReAct minta (Gondolkodás és Cselekvés)**
 
-Az ügynök váltakozik az érvelés (eldönti, mit tegyen) és a cselekvés (eszközök használata) között. Ez a minta lehetővé teszi az autonóm problémamegoldást, nem csak az utasításokra adott válaszokat.
+Az ügynök váltakozik a gondolkodás (eldönti, mit kell tenni) és a cselekvés (eszközök használata) között. Ez a minta lehetővé teszi az autonóm problémamegoldást, nem csupán az utasításokra adott reagálást.
 
-**Az eszközleírások fontossága**
+**Az eszközleírások számítanak**
 
-Az eszközleírások minősége közvetlenül befolyásolja, mennyire jól használja az ügynök azokat. Világos, specifikus leírások segítik a modellt megérteni, mikor és hogyan hívja meg az egyes eszközöket.
+Az eszközleírások minősége közvetlenül befolyásolja, hogy az ügynök mennyire jól használja őket. A világos, konkrét leírások segítik a modellt megérteni, mikor és hogyan hívjon meg egy eszközt.
 
 **Munkamenet-kezelés**
 
-Az `@MemoryId` annotáció automatikus munkamenet-alapú memória kezelést tesz lehetővé. Minden munkamenet azonosítóhoz saját `ChatMemory` példány tartozik, amelyet a `ChatMemoryProvider` bean kezel, így nincs szükség kézi memória követésre.
+A `@MemoryId` annotáció lehetővé teszi az automatikus munkamenet-alapú memória kezelést. Minden munkamenet azonosítóhoz saját `ChatMemory` példány tartozik, amelyet a `ChatMemoryProvider` bean kezel, így nincs szükség manuális memória követésre.
 
-**Hibakezelés**
+**Hiba kezelés**
 
-Az eszközök hibázhatnak – API-k időtúlléphetnek, paraméterek érvénytelenek lehetnek, külső szolgáltatások leállhatnak. A termelési ügynököknek hibakezelésre van szükségük, hogy a modell elmagyarázhassa a problémákat vagy alternatívákat próbálhasson.
+Az eszközök meghibásodhatnak - az API-k időtúlléphetnek, a paraméterek érvénytelenek lehetnek, vagy külső szolgáltatások leállhatnak. A termelési ügynököknek hiba kezelést kell beépíteniük, hogy a modell elmagyarázza a problémákat vagy megpróbáljon alternatívákat.
 
 ## Elérhető eszközök
 
-**Időjárás eszközök** (bemutatóhoz mock adatokkal):
-- Aktuális időjárás lekérése hely szerint
+**Időjárás eszközök** (mock adatok bemutatásra):
+- Aktuális időjárás lekérése egy helyhez
 - Többnapos előrejelzés lekérése
 
-**Hőmérséklet átváltó eszközök**:
+**Hőmérséklet-átváltó eszközök**:
 - Celsiusról Fahrenheitre
-- Fahrentheit-ről Celsiusra
+- Fahrenheitből Celsiusra
 - Celsiusról Kelvinre
 - Kelvinről Celsiusra
-- Fahrentheit-ről Kelvinre
-- Kelvinről Fahrentheit-re
+- Fahrenheitből Kelvinre
+- Kelvinről Fahrenheitre
 
-Ezek egyszerű példák, de a minta bármilyen funkcióra kiterjeszthető: adatbázis lekérdezések, API hívások, számítások, fájlműveletek vagy rendszerparancsok.
+Ezek egyszerű példák, de a minta kiterjeszthető bármilyen függvényre: adatbázis-lekérdezésekre, API-hívásokra, számításokra, fájműveletekre vagy rendszerparancsokra.
 
-## Mikor használjunk eszközalapú ügynököket
+## Mikor érdemes eszközalapú ügynököket használni
 
 **Használj eszközöket, ha:**
-- Valós idejű adatokra van szükség (időjárás, részvényárak, készlet)
-- Számításokat kell végezni az egyszerű matematikán túl
-- Adatbázisokat vagy API-kat kell elérni
+- A válasz valós idejű adatot igényel (időjárás, részvényárak, készlet)
+- Számításokat kell végezni komplexebb műveletekkel
+- Adatbázisokhoz vagy API-khoz kell hozzáférni
 - Műveleteket kell végrehajtani (e-mailek küldése, jegyek létrehozása, rekordok frissítése)
-- Több adatforrást kell kombinálni
+- Több adatforrást kell egyesíteni
 
 **Ne használj eszközöket, ha:**
-- A kérdések általános tudásból megválaszolhatók
-- A válasz kizárólag beszélgető jellegű
+- A kérdés általános tudásból megválaszolható
+- A válasz tisztán beszélgető jellegű
 - Az eszköz késleltetése túl lassúvá tenné a felhasználói élményt
 
 ## Következő lépések
@@ -324,6 +326,6 @@ Ezek egyszerű példák, de a minta bármilyen funkcióra kiterjeszthető: adatb
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Jogi nyilatkozat**:
-Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+Felelősségkizárás:
+Ez a dokumentum az AI fordító szolgáltatás, a Co‑op Translator (https://github.com/Azure/co-op-translator) segítségével készült. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelven tekintendő irányadónak. Kritikus fontosságú információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget a jelen fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

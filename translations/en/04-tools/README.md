@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "aa23f106e7f53270924c9dd39c629004",
-  "translation_date": "2025-12-13T18:17:31+00:00",
+  "original_hash": "13ec450c12cdd1a863baa2b778f27cd7",
+  "translation_date": "2025-12-30T19:04:08+00:00",
   "source_file": "04-tools/README.md",
   "language_code": "en"
 }
@@ -51,6 +51,8 @@ Tools change this. By giving the model access to functions it can call, you tran
 
 ## Understanding AI Agents with Tools
 
+> **📝 Note:** The term "agents" in this module refers to AI assistants enhanced with tool-calling capabilities. This is different from the **Agentic AI** patterns (autonomous agents with planning, memory, and multi-step reasoning) that we'll cover in [Module 05: MCP](../05-mcp/README.md).
+
 An AI agent with tools follows a reasoning and acting pattern (ReAct):
 
 1. User asks a question
@@ -60,7 +62,7 @@ An AI agent with tools follows a reasoning and acting pattern (ReAct):
 5. Tool executes and returns data
 6. Agent incorporates the result and provides the final answer
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13ae5b0218d4e91befabc04e00f97539df14f93d1ad9b8516f.en.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.en.png" alt="ReAct Pattern" width="800"/>
 
 *The ReAct pattern - how AI agents alternate between reasoning and acting to solve problems*
 
@@ -133,7 +135,7 @@ Alternative approaches (manual `AiServices.builder()`) require more code and mis
 
 **Tool Chaining** - The AI might call multiple tools in sequence. Ask "What's the weather in Seattle and should I bring an umbrella?" and watch it chain `getCurrentWeather` with reasoning about rain gear.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b1d54117d54ba382c21c51176aaf3800084cae2e7dfc82508.en.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.en.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sequential tool calls - one tool's output feeds into the next decision*
 
@@ -166,7 +168,7 @@ From the Spring Boot Dashboard, you can:
 
 Simply click the play button next to "tools" to start this module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30af495a594f5c0213fecdbdf5bd9fb543d3c5467565773974a.en.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.en.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -236,7 +238,7 @@ cd ..; .\stop-all.ps1  # All modules
 
 The application provides a web interface where you can interact with an AI agent that has access to weather and temperature conversion tools.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f96216024b45b493ca1cd84935d6856416ea7a383b42f280d648c.en.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.en.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *The AI Agent Tools interface - quick examples and chat interface for interacting with tools*
 
@@ -252,7 +254,7 @@ Now try something more complex: "What's the weather in Seattle and convert it to
 
 The chat interface maintains conversation history, allowing you to have multi-turn interactions. You can see all previous queries and responses, making it easy to track the conversation and understand how the agent builds context over multiple exchanges.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f596acc43e227bf70f3c0d6030ad91d84df81070abf08848608.en.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.en.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Multi-turn conversation showing simple conversions, weather lookups, and tool chaining*
 
@@ -324,6 +326,6 @@ These are simple examples, but the pattern extends to any function: database que
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+Disclaimer:
+This document has been translated using the AI translation service Co-op Translator (https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

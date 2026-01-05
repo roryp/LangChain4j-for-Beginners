@@ -49,7 +49,7 @@ Hãy nghĩ về RAG như việc cung cấp cho mô hình một thư viện tham 
 
 Điều này giúp câu trả lời của mô hình dựa trên dữ liệu thực tế của bạn thay vì dựa vào kiến thức huấn luyện hoặc tự tạo câu trả lời.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.vi.png" alt="Kiến Trúc RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.vi.png" alt="Kiến Trúc RAG" width="800"/>
 
 *Quy trình RAG - từ truy vấn người dùng đến tìm kiếm ngữ nghĩa đến tạo câu trả lời theo ngữ cảnh*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.vi.png" alt="Không Gian Embeddings Vector" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.vi.png" alt="Không Gian Embeddings Vector" width="800"/>
 
 *Tài liệu được biểu diễn dưới dạng vector trong không gian embedding - nội dung tương tự nhóm lại với nhau*
 
@@ -152,7 +152,7 @@ Từ Spring Boot Dashboard, bạn có thể:
 
 Chỉ cần nhấn nút play bên cạnh "rag" để khởi động module này, hoặc khởi động tất cả các module cùng lúc.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.vi.png" alt="Bảng Điều Khiển Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.vi.png" alt="Bảng Điều Khiển Spring Boot" width="400"/>
 
 **Lựa chọn 2: Sử dụng script shell**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Tất cả các mô-đun
 
 Ứng dụng cung cấp giao diện web để tải lên tài liệu và đặt câu hỏi.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.vi.png" alt="Giao Diện Ứng Dụng RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.vi.png" alt="Giao Diện Ứng Dụng RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Giao diện ứng dụng RAG - tải lên tài liệu và đặt câu hỏi*
 
@@ -240,7 +240,7 @@ Bây giờ hãy đặt các câu hỏi cụ thể về nội dung tài liệu. T
 
 Lưu ý mỗi câu trả lời bao gồm tham chiếu nguồn với điểm tương đồng. Các điểm này (từ 0 đến 1) cho thấy mức độ liên quan của mỗi đoạn với câu hỏi của bạn. Điểm cao hơn nghĩa là khớp tốt hơn. Điều này giúp bạn xác minh câu trả lời dựa trên tài liệu gốc.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.vi.png" alt="Kết Quả Truy Vấn RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.vi.png" alt="Kết Quả Truy Vấn RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Kết quả truy vấn hiển thị câu trả lời với tham chiếu nguồn và điểm liên quan*
 

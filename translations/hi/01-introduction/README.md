@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 यह सरल प्रश्नोत्तर के लिए ठीक है लेकिन वास्तविक एप्लिकेशन के लिए बेकार है। ग्राहक सेवा बॉट्स को याद रखना पड़ता है कि आपने क्या कहा था। व्यक्तिगत सहायक को संदर्भ की आवश्यकता होती है। कोई भी बहु-चरणीय बातचीत मेमोरी की मांग करती है।
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.hi.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.hi.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Stateless (स्वतंत्र कॉल) और Stateful (संदर्भ-सचेत) बातचीत के बीच का अंतर*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 बातचीत में जाने से पहले, टोकन को समझना महत्वपूर्ण है - वे मूल पाठ इकाइयाँ हैं जिन्हें भाषा मॉडल संसाधित करते हैं:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.hi.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.hi.png" alt="Token Explanation" width="800"/>
 
 *कैसे टेक्स्ट को टोकन में तोड़ा जाता है - "I love AI!" 4 अलग-अलग प्रोसेसिंग यूनिट्स बन जाता है*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j मेमोरी कार्यान्वयन प्रदान करता है जो इसे स्वचालित रूप से संभालता है। आप चुनते हैं कि कितने संदेश रखना है और फ्रेमवर्क संदर्भ विंडो का प्रबंधन करता है।
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.hi.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.hi.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory हाल के संदेशों की एक स्लाइडिंग विंडो बनाए रखता है, पुराने संदेशों को स्वचालित रूप से हटा देता है*
 
@@ -212,7 +212,7 @@ Spring Boot डैशबोर्ड से आप:
 
 बस "introduction" के बगल में प्ले बटन पर क्लिक करें इस मॉड्यूल को शुरू करने के लिए, या सभी मॉड्यूल एक साथ शुरू करें।
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.hi.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.hi.png" alt="Spring Boot Dashboard" width="400"/>
 
 **विकल्प 2: शेल स्क्रिप्ट्स का उपयोग करना**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # सभी मॉड्यूल
 
 एप्लिकेशन एक वेब इंटरफ़ेस प्रदान करता है जिसमें दो चैट कार्यान्वयन साइड-बाय-साइड हैं।
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.hi.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.hi.png" alt="Application Home Screen" width="800"/>
 
 *डैशबोर्ड जो Simple Chat (stateless) और Conversational Chat (stateful) विकल्प दोनों दिखाता है*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # सभी मॉड्यूल
 
 पहले इसे आज़माएं। पूछें "मेरा नाम जॉन है" और फिर तुरंत पूछें "मेरा नाम क्या है?" मॉडल याद नहीं रखेगा क्योंकि प्रत्येक संदेश स्वतंत्र है। यह मूल भाषा मॉडल एकीकरण की मुख्य समस्या को दर्शाता है - कोई बातचीत संदर्भ नहीं।
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.hi.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.hi.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI पिछले संदेश से आपका नाम याद नहीं रखता*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # सभी मॉड्यूल
 
 अब यहाँ वही क्रम आज़माएं। पूछें "मेरा नाम जॉन है" और फिर "मेरा नाम क्या है?" इस बार यह याद रखता है। अंतर है MessageWindowChatMemory - यह बातचीत का इतिहास बनाए रखता है और प्रत्येक अनुरोध के साथ इसे शामिल करता है। यही उत्पादन संवादात्मक AI का तरीका है।
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.hi.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.hi.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI बातचीत में पहले बताए गए आपके नाम को याद रखता है*
 

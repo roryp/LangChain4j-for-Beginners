@@ -49,7 +49,7 @@ RAG-നെ മോഡലിന് ഒരു റഫറൻസ് ലൈബ്രറ
 
 ഇത് മോഡലിന്റെ പ്രതികരണങ്ങളെ അതിന്റെ പരിശീലന അറിവിൽ അല്ല, നിങ്ങളുടെ യഥാർത്ഥ ഡാറ്റയിൽ ആധാരമാക്കുന്നു.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.ml.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ml.png" alt="RAG Architecture" width="800"/>
 
 *RAG പ്രവൃത്തി പ്രക്രിയ - ഉപയോക്തൃ ചോദ്യം മുതൽ സെമാന്റിക് സെർച്ച് വഴി കോൺടെക്സ്ച്വൽ ഉത്തരം സൃഷ്ടിക്കൽ വരെ*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.ml.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ml.png" alt="Vector Embeddings Space" width="800"/>
 
 *എംബെഡ്ഡിംഗ് സ്‌പേസിൽ വെക്ടറുകളായി പ്രതിനിധീകരിച്ച ഡോക്യുമെന്റുകൾ - സമാന ഉള്ളടക്കം കൂട്ടമായി കാണപ്പെടുന്നു*
 
@@ -152,7 +152,7 @@ Spring Boot ഡാഷ്ബോർഡിൽ നിന്ന് നിങ്ങൾ
 
 "rag" എന്നതിന് അടുത്തുള്ള പ്ലേ ബട്ടൺ ക്ലിക്കുചെയ്ത് ഈ മോഡ്യൂൾ ആരംഭിക്കാം, അല്ലെങ്കിൽ എല്ലാ മോഡ്യൂളുകളും ഒരുമിച്ച് ആരംഭിക്കാം.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.ml.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ml.png" alt="Spring Boot Dashboard" width="400"/>
 
 **ഓപ്ഷൻ 2: ഷെൽ സ്ക്രിപ്റ്റുകൾ ഉപയോഗിച്ച്**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 അപ്ലിക്കേഷൻ ഡോക്യുമെന്റ് അപ്‌ലോഡ് ചെയ്യാനും ചോദ്യങ്ങൾ ചോദിക്കാനും വെബ് ഇന്റർഫേസ് നൽകുന്നു.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.ml.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ml.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG അപ്ലിക്കേഷൻ ഇന്റർഫേസ് - ഡോക്യുമെന്റുകൾ അപ്‌ലോഡ് ചെയ്ത് ചോദ്യങ്ങൾ ചോദിക്കുക*
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 ഓരോ ഉത്തരം സ്രോതസ്സ് റഫറൻസുകളോടുകൂടി കാണിക്കുന്നു, അവയിൽ സാദൃശ്യ സ്കോറുകളും ഉൾപ്പെടുന്നു. ഈ സ്കോറുകൾ (0 മുതൽ 1 വരെ) ചോദ്യത്തിന് ഓരോ ചങ്കും എത്രത്തോളം ബന്ധപ്പെട്ടതാണെന്ന് കാണിക്കുന്നു. ഉയർന്ന സ്കോർ നല്ല പൊരുത്തം സൂചിപ്പിക്കുന്നു. ഇത് ഉത്തരം സ്രോതസ്സ് മെറ്റീരിയലുമായി താരതമ്യം ചെയ്യാൻ സഹായിക്കുന്നു.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.ml.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ml.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ചോദ്യ ഫലങ്ങൾ - ഉത്തരം, സ്രോതസ്സ് റഫറൻസുകൾ, പ്രസക്തി സ്കോറുകൾ*
 

@@ -37,7 +37,7 @@ LangChain4j na Java library wey make e easy to build AI-powered apps. Instead ma
 
 Di "chain" for LangChain mean say you fit join plenty components together - you fit join prompt to model to parser, or join many AI calls where one output go become next input. Dis quick start na to teach di basics before you go enter complex chains.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.pcm.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.pcm.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Chaining components for LangChain4j - building blocks wey connect to create strong AI workflows*
 
@@ -49,7 +49,7 @@ We go use three main components:
 
 **MessageWindowChatMemory** - E dey keep conversation history. Without am, each request na separate one. Wit am, di AI go remember previous messages and keep context for many turns.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.pcm.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.pcm.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j architecture - main components wey dey work together to power your AI apps*
 

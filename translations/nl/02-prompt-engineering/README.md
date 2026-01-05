@@ -52,7 +52,7 @@ Denk eraan als het geven van instructies aan een collega. "Los de bug op" is vaa
 
 Deze module demonstreert geavanceerde promptingpatronen met dezelfde LangChain4j basis als eerdere modules, met focus op promptstructuur en redeneervermogen.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.nl.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.nl.png" alt="LangChain4j Flow" width="800"/>
 
 *Hoe LangChain4j je prompts verbindt met Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.nl.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.nl.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage biedt blijvende context terwijl UserMessages individuele verzoeken bevatten*
 
@@ -104,11 +104,11 @@ De belangrijkste conclusie: LangChain4j biedt de infrastructuur (modelverbinding
 
 Niet alle problemen vragen om dezelfde aanpak. Sommige vragen hebben snelle antwoorden nodig, andere diep nadenken. Sommige hebben zichtbare redenering nodig, andere alleen resultaten. Deze module behandelt acht promptingpatronen - elk geoptimaliseerd voor verschillende scenario's. Je gaat met ze allemaal experimenteren om te leren wanneer welke aanpak het beste werkt.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.nl.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.nl.png" alt="Eight Prompting Patterns" width="800"/>
 
 *Overzicht van de acht prompt engineering patronen en hun gebruikssituaties*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.nl.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.nl.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *Lage bereidheid (snel, direct) vs Hoge bereidheid (grondig, verkennend) redeneerbenaderingen*
 
@@ -163,7 +163,7 @@ Chain-of-Thought prompting vraagt het model expliciet om zijn redeneerproces te 
 > - "Wat zijn best practices voor het structureren van tool preambles in productieapplicaties?"
 > - "Hoe kan ik tussentijdse voortgangsupdates vastleggen en weergeven in een UI?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.nl.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.nl.png" alt="Task Execution Pattern" width="800"/>
 
 *Plan → Uitvoeren → Samenvatten workflow voor taken met meerdere stappen*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.nl.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.nl.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Iteratieve verbeterlus - genereren, evalueren, problemen identificeren, verbeteren, herhalen*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Wat is de beste manier om gestructureerde output programmatisch te parsen en te gebruiken?"
 > - "Hoe zorg ik voor consistente ernstniveaus over verschillende review sessies?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.nl.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.nl.png" alt="Structured Analysis Pattern" width="800"/>
 
 *Vier-categorie kader voor consistente code reviews met ernstniveaus*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.nl.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.nl.png" alt="Context Memory" width="800"/>
 
 *Hoe gesprekcontext zich opbouwt over meerdere beurten tot de tokenlimiet is bereikt*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.nl.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.nl.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Problemen opdelen in expliciete logische stappen*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.nl.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.nl.png" alt="Constrained Output Pattern" width="800"/>
 
 *Handhaven van specifieke format-, lengte- en structuurvereisten*
 
@@ -300,7 +300,7 @@ Vanuit het Spring Boot Dashboard kun je:
 
 Klik simpelweg op de play-knop naast "prompt-engineering" om deze module te starten, of start alle modules tegelijk.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.nl.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.nl.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Optie 2: Gebruik shell scripts**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Alle modules
 
 ## Applicatie Screenshots
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.nl.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.nl.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Het hoofd dashboard toont alle 8 prompt engineering patronen met hun kenmerken en gebruikssituaties*
 
@@ -380,10 +380,10 @@ De webinterface laat je experimenteren met verschillende promptingstrategieën. 
 
 Stel een eenvoudige vraag zoals "Wat is 15% van 200?" met Lage Bereidheid. Je krijgt een direct, snel antwoord. Stel nu iets complexers zoals "Ontwerp een cachingstrategie voor een API met veel verkeer" met Hoge Bereidheid. Kijk hoe het model vertraagt en gedetailleerde redenering geeft. Zelfde model, zelfde vraagstructuur - maar de prompt vertelt hoeveel het moet nadenken.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.nl.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.nl.png" alt="Low Eagerness Demo" width="800"/>
 *Snelle berekening met minimale redenering*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.nl.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.nl.png" alt="High Eagerness Demo" width="800"/>
 
 *Uitgebreide cachingstrategie (2.8MB)*
 
@@ -391,7 +391,7 @@ Stel een eenvoudige vraag zoals "Wat is 15% van 200?" met Lage Bereidheid. Je kr
 
 Multi-stap workflows profiteren van vooraf plannen en voortgangsnarratie. Het model schetst wat het zal doen, vertelt elke stap, en vat dan de resultaten samen.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.nl.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.nl.png" alt="Task Execution Demo" width="800"/>
 
 *Een REST-endpoint maken met stapsgewijze narratie (3.9MB)*
 
@@ -399,7 +399,7 @@ Multi-stap workflows profiteren van vooraf plannen en voortgangsnarratie. Het mo
 
 Probeer "Maak een e-mailvalidatieservice". In plaats van alleen code te genereren en te stoppen, genereert het model, evalueert aan de hand van kwaliteitscriteria, identificeert zwaktes en verbetert. Je ziet het itereren totdat de code aan productienormen voldoet.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.nl.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.nl.png" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Volledige e-mailvalidatieservice (5.2MB)*
 
@@ -407,7 +407,7 @@ Probeer "Maak een e-mailvalidatieservice". In plaats van alleen code te generere
 
 Code reviews hebben consistente evaluatiekaders nodig. Het model analyseert code met vaste categorieën (correctheid, praktijken, prestaties, beveiliging) met ernstniveaus.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.nl.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.nl.png" alt="Structured Analysis Demo" width="800"/>
 
 *Framework-gebaseerde code review*
 
@@ -415,7 +415,7 @@ Code reviews hebben consistente evaluatiekaders nodig. Het model analyseert code
 
 Vraag "Wat is Spring Boot?" en volg direct op met "Laat me een voorbeeld zien". Het model onthoudt je eerste vraag en geeft je specifiek een Spring Boot voorbeeld. Zonder geheugen zou die tweede vraag te vaag zijn.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.nl.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.nl.png" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Contextbehoud over vragen heen*
 
@@ -423,7 +423,7 @@ Vraag "Wat is Spring Boot?" en volg direct op met "Laat me een voorbeeld zien". 
 
 Kies een wiskundeprobleem en probeer het met zowel Stapsgewijze Redenering als Lage Begeerte. Lage begeerte geeft je alleen het antwoord - snel maar ondoorzichtig. Stapsgewijs toont elke berekening en beslissing.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.nl.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.nl.png" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Wiskundeprobleem met expliciete stappen*
 
@@ -431,7 +431,7 @@ Kies een wiskundeprobleem en probeer het met zowel Stapsgewijze Redenering als L
 
 Wanneer je specifieke formaten of woordenaantallen nodig hebt, dwingt dit patroon strikte naleving af. Probeer een samenvatting te genereren met precies 100 woorden in opsomming.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.nl.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.nl.png" alt="Constrained Output Demo" width="800"/>
 
 *Machine learning samenvatting met formatcontrole*
 
@@ -445,7 +445,7 @@ GPT-5 laat je de rekeninspanning regelen via je prompts. Lage inspanning beteken
 
 Merk je de XML-tags in de prompts op? Ze zijn niet decoratief. Modellen volgen gestructureerde instructies betrouwbaarder dan vrije tekst. Wanneer je multi-stap processen of complexe logica nodig hebt, helpt structuur het model bijhouden waar het is en wat volgt.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.nl.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.nl.png" alt="Prompt Structure" width="800"/>
 
 *Anatomie van een goed gestructureerde prompt met duidelijke secties en XML-stijl organisatie*
 

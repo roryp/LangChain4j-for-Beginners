@@ -52,7 +52,7 @@ Pikirkan seperti memberi instruksi kepada rekan kerja. "Perbaiki bug" itu samar.
 
 Modul ini menunjukkan pola prompt lanjutan menggunakan fondasi LangChain4j yang sama dari modul sebelumnya, dengan fokus pada struktur prompt dan kontrol penalaran.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.id.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.id.png" alt="LangChain4j Flow" width="800"/>
 
 *Bagaimana LangChain4j menghubungkan prompt Anda ke Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.id.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.id.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage menyediakan konteks yang persisten sementara UserMessages berisi permintaan individual*
 
@@ -104,11 +104,11 @@ Inti yang perlu diingat: LangChain4j menyediakan infrastruktur (koneksi model me
 
 Tidak semua masalah membutuhkan pendekatan yang sama. Beberapa pertanyaan membutuhkan jawaban cepat, yang lain membutuhkan pemikiran mendalam. Beberapa membutuhkan penalaran yang terlihat, yang lain hanya hasil. Modul ini mencakup delapan pola prompt - masing-masing dioptimalkan untuk skenario berbeda. Anda akan bereksperimen dengan semuanya untuk belajar kapan setiap pendekatan paling efektif.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.id.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.id.png" alt="Eight Prompting Patterns" width="800"/>
 
 *Gambaran umum delapan pola rekayasa prompt dan kasus penggunaannya*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.id.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.id.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *Pendekatan penalaran keinginan rendah (cepat, langsung) vs keinginan tinggi (menyeluruh, eksploratif)*
 
@@ -163,7 +163,7 @@ Prompt Chain-of-Thought secara eksplisit meminta model untuk menunjukkan proses 
 > - "Apa praktik terbaik untuk menyusun preambul alat dalam aplikasi produksi?"
 > - "Bagaimana saya menangkap dan menampilkan pembaruan progres menengah di UI?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.id.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.id.png" alt="Task Execution Pattern" width="800"/>
 
 *Rencana → Eksekusi → Ringkas alur kerja untuk tugas multi-langkah*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.id.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.id.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Loop perbaikan iteratif - buat, evaluasi, identifikasi masalah, perbaiki, ulangi*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Apa cara terbaik untuk mengurai dan menindaklanjuti output terstruktur secara programatik?"
 > - "Bagaimana saya memastikan tingkat keparahan konsisten di berbagai sesi tinjauan?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.id.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.id.png" alt="Structured Analysis Pattern" width="800"/>
 
 *Kerangka kerja empat kategori untuk tinjauan kode konsisten dengan tingkat keparahan*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.id.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.id.png" alt="Context Memory" width="800"/>
 
 *Bagaimana konteks percakapan terakumulasi selama beberapa putaran hingga mencapai batas token*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.id.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.id.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Memecah masalah menjadi langkah logis eksplisit*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.id.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.id.png" alt="Constrained Output Pattern" width="800"/>
 
 *Menegakkan persyaratan format, panjang, dan struktur spesifik*
 
@@ -300,7 +300,7 @@ Dari Spring Boot Dashboard, Anda dapat:
 
 Cukup klik tombol play di sebelah "prompt-engineering" untuk memulai modul ini, atau mulai semua modul sekaligus.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.id.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.id.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opsi 2: Menggunakan skrip shell**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 ## Tangkapan Layar Aplikasi
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.id.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.id.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Dashboard utama yang menampilkan semua 8 pola rekayasa prompt dengan karakteristik dan kasus penggunaannya*
 
@@ -380,10 +380,10 @@ Antarmuka web memungkinkan Anda bereksperimen dengan berbagai strategi prompt. S
 
 Ajukan pertanyaan sederhana seperti "Berapa 15% dari 200?" menggunakan Keinginan Rendah. Anda akan mendapatkan jawaban langsung dan instan. Sekarang ajukan sesuatu yang kompleks seperti "Rancang strategi caching untuk API dengan lalu lintas tinggi" menggunakan Keinginan Tinggi. Perhatikan bagaimana model melambat dan memberikan penalaran rinci. Model sama, struktur pertanyaan sama - tapi prompt memberi tahu seberapa banyak berpikir yang harus dilakukan.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.id.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.id.png" alt="Low Eagerness Demo" width="800"/>
 *Perhitungan cepat dengan penalaran minimal*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.id.png" alt="Demo Antusiasme Tinggi" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.id.png" alt="Demo Antusiasme Tinggi" width="800"/>
 
 *Strategi caching komprehensif (2.8MB)*
 
@@ -391,7 +391,7 @@ Ajukan pertanyaan sederhana seperti "Berapa 15% dari 200?" menggunakan Keinginan
 
 Alur kerja multi-langkah mendapat manfaat dari perencanaan awal dan narasi kemajuan. Model menguraikan apa yang akan dilakukan, menceritakan setiap langkah, lalu meringkas hasilnya.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.id.png" alt="Demo Eksekusi Tugas" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.id.png" alt="Demo Eksekusi Tugas" width="800"/>
 
 *Membuat endpoint REST dengan narasi langkah demi langkah (3.9MB)*
 
@@ -399,7 +399,7 @@ Alur kerja multi-langkah mendapat manfaat dari perencanaan awal dan narasi kemaj
 
 Coba "Buat layanan validasi email". Alih-alih hanya menghasilkan kode dan berhenti, model menghasilkan, mengevaluasi berdasarkan kriteria kualitas, mengidentifikasi kelemahan, dan memperbaiki. Anda akan melihat iterasi sampai kode memenuhi standar produksi.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.id.png" alt="Demo Kode Merefleksikan Diri" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.id.png" alt="Demo Kode Merefleksikan Diri" width="800"/>
 
 *Layanan validasi email lengkap (5.2MB)*
 
@@ -407,7 +407,7 @@ Coba "Buat layanan validasi email". Alih-alih hanya menghasilkan kode dan berhen
 
 Tinjauan kode membutuhkan kerangka evaluasi yang konsisten. Model menganalisis kode menggunakan kategori tetap (kebenaran, praktik, performa, keamanan) dengan tingkat keparahan.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.id.png" alt="Demo Analisis Terstruktur" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.id.png" alt="Demo Analisis Terstruktur" width="800"/>
 
 *Tinjauan kode berbasis kerangka kerja*
 
@@ -415,7 +415,7 @@ Tinjauan kode membutuhkan kerangka evaluasi yang konsisten. Model menganalisis k
 
 Tanyakan "Apa itu Spring Boot?" lalu langsung lanjutkan dengan "Tunjukkan saya contoh". Model mengingat pertanyaan pertama Anda dan memberikan contoh Spring Boot secara spesifik. Tanpa memori, pertanyaan kedua itu akan terlalu samar.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.id.png" alt="Demo Obrolan Multi-Turn" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.id.png" alt="Demo Obrolan Multi-Turn" width="800"/>
 
 *Pelestarian konteks antar pertanyaan*
 
@@ -423,7 +423,7 @@ Tanyakan "Apa itu Spring Boot?" lalu langsung lanjutkan dengan "Tunjukkan saya c
 
 Pilih masalah matematika dan coba dengan Penalaran Langkah demi Langkah dan Antusiasme Rendah. Antusiasme rendah hanya memberikan jawaban - cepat tapi tidak transparan. Penalaran langkah demi langkah menunjukkan setiap perhitungan dan keputusan.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.id.png" alt="Demo Penalaran Langkah demi Langkah" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.id.png" alt="Demo Penalaran Langkah demi Langkah" width="800"/>
 
 *Masalah matematika dengan langkah eksplisit*
 
@@ -431,7 +431,7 @@ Pilih masalah matematika dan coba dengan Penalaran Langkah demi Langkah dan Antu
 
 Saat Anda membutuhkan format atau jumlah kata tertentu, pola ini menegakkan kepatuhan ketat. Coba buat ringkasan dengan tepat 100 kata dalam format poin-poin.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.id.png" alt="Demo Output Terbatas" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.id.png" alt="Demo Output Terbatas" width="800"/>
 
 *Ringkasan pembelajaran mesin dengan kontrol format*
 
@@ -445,7 +445,7 @@ GPT-5 memungkinkan Anda mengontrol upaya komputasi melalui prompt Anda. Upaya re
 
 Perhatikan tag XML dalam prompt? Mereka bukan hiasan. Model mengikuti instruksi terstruktur lebih andal daripada teks bebas. Saat Anda membutuhkan proses multi-langkah atau logika kompleks, struktur membantu model melacak posisinya dan apa yang berikutnya.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.id.png" alt="Struktur Prompt" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.id.png" alt="Struktur Prompt" width="800"/>
 
 *Anatomi prompt yang terstruktur dengan baik dengan bagian jelas dan organisasi gaya XML*
 

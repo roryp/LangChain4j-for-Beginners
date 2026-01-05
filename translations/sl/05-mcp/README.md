@@ -1,135 +1,116 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c25ec1f10ef156c53e190cdf8b0711ab",
-  "translation_date": "2025-12-13T18:08:28+00:00",
+  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
+  "translation_date": "2025-12-31T05:50:45+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "sl"
 }
 -->
 # Modul 05: Protokol konteksta modela (MCP)
 
-## Kazalo
+## Table of Contents
 
 - [Kaj se boste naučili](../../../05-mcp)
-- [Razumevanje MCP](../../../05-mcp)
+- [Kaj je MCP?](../../../05-mcp)
 - [Kako MCP deluje](../../../05-mcp)
-  - [Arhitektura strežnik-stranka](../../../05-mcp)
-  - [Odkritje orodij](../../../05-mcp)
-  - [Transportni mehanizmi](../../../05-mcp)
-- [Predpogoji](../../../05-mcp)
-- [Kaj zajema ta modul](../../../05-mcp)
+- [Agentni modul](../../../05-mcp)
+- [Zagon primerov](../../../05-mcp)
+  - [Predpogoji](../../../05-mcp)
 - [Hiter začetek](../../../05-mcp)
-  - [Primer 1: Oddaljeni kalkulator (Streamable HTTP)](../../../05-mcp)
-  - [Primer 2: Operacije z datotekami (Stdio)](../../../05-mcp)
-  - [Primer 3: Analiza Git (Docker)](../../../05-mcp)
+  - [Operacije z datotekami (Stdio)](../../../05-mcp)
+  - [Nadzorni agent](../../../05-mcp)
+    - [Razumevanje izhoda](../../../05-mcp)
+    - [Pojasnilo funkcij agentnega modula](../../../05-mcp)
 - [Ključni pojmi](../../../05-mcp)
-  - [Izbira transporta](../../../05-mcp)
-  - [Odkritje orodij](../../../05-mcp)
-  - [Upravljanje sej](../../../05-mcp)
-  - [Premisleki glede platform](../../../05-mcp)
-- [Kdaj uporabiti MCP](../../../05-mcp)
-- [Ecosistem MCP](../../../05-mcp)
-- [Čestitke!](../../../05-mcp)
+- [Čestitamo!](../../../05-mcp)
   - [Kaj sledi?](../../../05-mcp)
-- [Reševanje težav](../../../05-mcp)
 
 ## Kaj se boste naučili
 
-Zgradili ste pogovorno AI, obvladali pozive, utemeljili odgovore v dokumentih in ustvarili agente z orodji. Vsa ta orodja pa so bila prilagojena za vašo specifično aplikacijo. Kaj pa, če bi svoji AI omogočili dostop do standardiziranega ekosistema orodij, ki jih lahko kdorkoli ustvari in deli?
+Zgradili ste pogovorno AI, obvladali pozive, osnovali odgovore v dokumentih in ustvarili agente z orodji. Vsa ta orodja pa so bila po meri izdelana za vašo specifično aplikacijo. Kaj pa, če bi vaši AI dali dostop do standardiziranega ekosistema orodij, ki ga lahko kdorkoli ustvari in deli? V tem modulu se boste naučili prav to z Model Context Protocol (MCP) in agentnim modulom LangChain4j. Najprej prikažemo preprost MCP bralnik datotek in nato pokažemo, kako se zlahka integrira v napredne agentne delovne tokove z uporabo vzorca Supervisor Agent.
 
-Protokol konteksta modela (MCP) nudi prav to – standardiziran način, da AI aplikacije odkrijejo in uporabljajo zunanja orodja. Namesto pisanja prilagojenih integracij za vsak vir podatkov ali storitev se povežete s strežniki MCP, ki svoje zmogljivosti izpostavijo v dosledni obliki. Vaš AI agent lahko nato ta orodja samodejno odkrije in uporablja.
+## Kaj je MCP?
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5448d2fa21a61218777ceb8010ea0390dd43924b26df35f61.sl.png" alt="Primerjava MCP" width="800"/>
+Model Context Protocol (MCP) nudi prav to - standardiziran način, da AI aplikacije odkrijejo in uporabljajo zunanja orodja. Namesto pisanja prilagojenih integracij za vsak vir podatkov ali storitev se povežete s MCP strežniki, ki svoje zmogljivosti izpostavijo v dosledni obliki. Vaš AI agent lahko nato samodejno odkrije in uporabi ta orodja.
 
-*Pred MCP: Kompleksne integracije točka-do-točke. Po MCP: En protokol, neskončne možnosti.*
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.sl.png" alt="Primerjava MCP" width="800"/>
 
-## Razumevanje MCP
+*Pred MCP: zapletene točkovne integracije. Po MCP: eden protokol, neskončne možnosti.*
 
-MCP rešuje temeljni problem razvoja AI: vsaka integracija je prilagojena. Želite dostop do GitHub? Prilagojena koda. Želite brati datoteke? Prilagojena koda. Želite poizvedovati bazo podatkov? Prilagojena koda. In nobena od teh integracij ne deluje z drugimi AI aplikacijami.
+MCP rešuje temeljni problem pri razvoju AI: vsaka integracija je po meri. Želite dostop do GitHub-a? Prilagojena koda. Želite brati datoteke? Prilagojena koda. Želite poizvedovati bazo podatkov? Prilagojena koda. In nobena od teh integracij ne deluje z drugimi AI aplikacijami.
 
-MCP to standardizira. MCP strežnik izpostavi orodja z jasnimi opisi in shemami. Vsak MCP odjemalec se lahko poveže, odkrije razpoložljiva orodja in jih uporablja. Zgradi enkrat, uporabi povsod.
+MCP to standardizira. MCP strežnik izpostavi orodja z jasnimi opisi in shemami parametrov. Vsak MCP odjemalec se lahko poveže, odkrije razpoložljiva orodja in jih uporabi. Zgradi enkrat, uporabi povsod.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9814b7cffade208d4b0d97203c22df8d8e5504d8238fa7065.sl.png" alt="Arhitektura MCP" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.sl.png" alt="Arhitektura MCP" width="800"/>
 
-*Arhitektura protokola konteksta modela – standardizirano odkrivanje in izvajanje orodij*
+*Arhitektura Model Context Protocol - standardizirano odkrivanje in izvajanje orodij*
 
 ## Kako MCP deluje
 
-**Arhitektura strežnik-stranka**
+**Arhitektura strežnik-odjemalec**
 
-MCP uporablja model odjemalec-strežnik. Strežniki zagotavljajo orodja – branje datotek, poizvedovanje baz, klicanje API-jev. Odjemalci (vaša AI aplikacija) se povežejo s strežniki in uporabljajo njihova orodja.
+MCP uporablja model strežnik-odjemalec. Strežniki zagotavljajo orodja - branje datotek, poizvedovanje baz, klicanje API-jev. Odjemalci (vaša AI aplikacija) se povežejo s strežniki in uporabljajo njihova orodja.
+
+Za uporabo MCP z LangChain4j dodajte to Maven odvisnost:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
+```
 
 **Odkritje orodij**
 
-Ko se vaš odjemalec poveže z MCP strežnikom, vpraša "Katera orodja imate?" Strežnik odgovori s seznamom razpoložljivih orodij, vsako z opisi in shemami parametrov. Vaš AI agent se nato odloči, katera orodja bo uporabil glede na zahteve uporabnika.
+Ko se vaš odjemalec poveže z MCP strežnikom, vpraša "Katera orodja imate?" Strežnik odgovori s seznamom razpoložljivih orodij, vsako z opisi in shemami parametrov. Vaš AI agent se nato odloči, katera orodja uporabiti glede na uporabniške zahteve.
 
 **Transportni mehanizmi**
 
-MCP definira dva transportna mehanizma: HTTP za oddaljene strežnike, Stdio za lokalne procese (vključno z Docker kontejnerji):
+MCP podpira različne transportne mehanizme. Ta modul prikazuje Stdio transport za lokalne procese:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020ed801b772b26ed69338e22739677aa017e0968f6538b09a2.sl.png" alt="Transportni mehanizmi" width="800"/>
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.sl.png" alt="Mehanizmi transporta" width="800"/>
 
-*Transportni mehanizmi MCP: HTTP za oddaljene strežnike, Stdio za lokalne procese (vključno z Docker kontejnerji)*
-
-**Streamable HTTP** - [StreamableHttpDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-Za oddaljene strežnike. Vaša aplikacija pošilja HTTP zahteve strežniku, ki teče nekje v omrežju. Uporablja Server-Sent Events za komunikacijo v realnem času.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
-```
-
-> **🤖 Poskusi z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odpri [`StreamableHttpDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) in vprašaj:
-> - "Kako se MCP razlikuje od neposredne integracije orodij kot v Modulu 04?"
-> - "Kakšne so prednosti uporabe MCP za deljenje orodij med aplikacijami?"
-> - "Kako obravnavam napake povezave ali časovne omejitve do MCP strežnikov?"
+*MCP transportni mehanizmi: HTTP za oddaljene strežnike, Stdio za lokalne procese*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Za lokalne procese. Vaša aplikacija zažene strežnik kot podproces in komunicira prek standardnega vhoda/izhoda. Uporabno za dostop do datotečnega sistema ali ukaznih orodij.
+Za lokalne procese. Vaša aplikacija zažene strežnik kot podproces in komunicira preko standardnega vnosa/izhoda. Uporabno za dostop do datotečnega sistema ali orodij ukazne vrstice.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
     .build();
 ```
 
-> **🤖 Poskusi z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odpri [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) in vprašaj:
-> - "Kako deluje Stdio transport in kdaj ga uporabiti namesto HTTP?"
-> - "Kako LangChain4j upravlja življenjski cikel zagnanih MCP strežnikov?"
-> - "Kakšne so varnostne posledice, če AI omogočim dostop do datotečnega sistema?"
+> **🤖 Preizkusi z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odpri [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) in vprašaj:
+> - "Kako deluje Stdio transport in kdaj naj ga uporabim v primerjavi z HTTP?"
+> - "Kako LangChain4j upravlja življenjski cikel zaženih MCP strežniških procesov?"
+> - "Kakšne so varnostne posledice dajanja AI dostopa do datotečnega sistema?"
 
-**Docker (uporablja Stdio)** - [GitRepositoryAnalyzer.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+## Agentni modul
 
-Za storitve v kontejnerjih. Uporablja stdio transport za komunikacijo z Docker kontejnerjem preko `docker run`. Dobro za kompleksne odvisnosti ali izolirana okolja.
+Medtem ko MCP zagotavlja standardizirana orodja, agentni modul LangChain4j ponuja deklarativen način gradnje agentov, ki orkestrirajo ta orodja. Anotacija `@Agent` in `AgenticServices` vam omogočata, da določite vedenje agenta preko vmesnikov namesto imperativne kode.
 
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
+V tem modulu boste raziskali vzorec **Nadzorni agent (Supervisor Agent)** — napredni agentni AI pristop, kjer "nadzornik" dinamično odloča, katere podagente bo poklical glede na uporabnikovo zahtevo. Združili bomo oba koncepta tako, da bomo enemu izmed naših podagentov dali MCP-podprt dostop do datotečnega sistema.
+
+Za uporabo agentnega modula dodajte to Maven odvisnost:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
 ```
 
-> **🤖 Poskusi z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odpri [`GitRepositoryAnalyzer.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) in vprašaj:
-> - "Kako Docker transport izolira MCP strežnike in kakšne so prednosti?"
-> - "Kako konfiguriram priklope volumenov za deljenje podatkov med gostiteljem in MCP kontejnerji?"
-> - "Kakšne so najboljše prakse za upravljanje življenjskega cikla MCP strežnikov na osnovi Dockerja v produkciji?"
+> **⚠️ Eksperimentalno:** modul `langchain4j-agentic` je **eksperimentalni** in se lahko spremeni. Stabilen način gradnje AI asistentov ostaja `langchain4j-core` s prilagojenimi orodji (Modul 04).
 
 ## Zagon primerov
 
@@ -137,76 +118,27 @@ McpTransport dockerTransport = new StdioMcpTransport.Builder()
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ in npm (za MCP strežnike)
-- **Docker Desktop** - Mora biti **ZAGAN** za Primer 3 (ne samo nameščen)
-- GitHub osebni dostopni žeton konfiguriran v `.env` datoteki (iz Modula 00)
+- Spremenljivke okolja konfigurirane v datoteki `.env` (iz korenskega imenika):
+  - **Za StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **Za SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (enako kot v Modulih 01-04)
 
-> **Opomba:** Če še niste nastavili svoj GitHub žeton, glejte [Modul 00 - Hiter začetek](../00-quick-start/README.md) za navodila.
-
-> **⚠️ Uporabniki Dockerja:** Pred zagonom Primera 3 preverite, da je Docker Desktop zagnan z `docker ps`. Če vidite napake povezave, zaženite Docker Desktop in počakajte približno 30 sekund za inicializacijo.
+> **Opomba:** Če še niste nastavili svojih okoljskih spremenljivk, poglejte [Module 00 - Quick Start](../00-quick-start/README.md) za navodila, ali kopirajte `.env.example` v `.env` v korenskem imeniku in izpolnite svoje vrednosti.
 
 ## Hiter začetek
 
-**Uporaba VS Code:** Preprosto kliknite z desnim gumbom na katerokoli demo datoteko v Raziskovalcu in izberite **"Run Java"**, ali uporabite konfiguracije zagona iz panela Run and Debug (prepričajte se, da ste najprej dodali svoj žeton v `.env` datoteko).
+**Uporaba VS Code:** Enostavno kliknite z desnim gumbom na katero koli demo datoteko v Explorerju in izberite **"Run Java"**, ali uporabite zagonske konfiguracije iz pogleda Run and Debug (prepričajte se, da ste najprej dodali svoj token v datoteko `.env`).
 
-**Uporaba Maven:** Alternativno lahko zaženete iz ukazne vrstice z naslednjimi primeri.
+**Uporaba Mavena:** Alternativno lahko zaženete iz ukazne vrstice z zgledi spodaj.
 
-**⚠️ Pomembno:** Nekateri primeri imajo predpogoje (kot je zagon MCP strežnika ali gradnja Docker slik). Pred zagonom preverite zahteve vsakega primera.
+### Operacije z datotekami (Stdio)
 
-### Primer 1: Oddaljeni kalkulator (Streamable HTTP)
+To prikazuje orodja, ki temeljijo na lokalnih podprocesih.
 
-Ta primer prikazuje integracijo orodij preko omrežja.
-
-**⚠️ Predpogoj:** Najprej morate zagnati MCP strežnik (glejte Terminal 1 spodaj).
-
-**Terminal 1 - Zaženi MCP strežnik:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**Terminal 2 - Zaženi primer:**
-
-**Uporaba VS Code:** Kliknite z desnim gumbom na `StreamableHttpDemo.java` in izberite **"Run Java"**.
-
-**Uporaba Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Opazujte, kako agent odkrije razpoložljiva orodja, nato uporabi kalkulator za seštevanje.
-
-### Primer 2: Operacije z datotekami (Stdio)
-
-Ta primer prikazuje orodja, ki temeljijo na lokalnih podprocesih.
-
-**✅ Ni potrebnih predpogojev** - MCP strežnik se samodejno zažene.
+**✅ Ni potrebnih predpogojev** - MCP strežnik se zažene samodejno.
 
 **Uporaba VS Code:** Kliknite z desnim gumbom na `StdioTransportDemo.java` in izberite **"Run Java"**.
 
-**Uporaba Maven:**
+**Uporaba Mavena:**
 
 **Bash:**
 ```bash
@@ -224,141 +156,232 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTran
 
 Aplikacija samodejno zažene MCP strežnik za datotečni sistem in prebere lokalno datoteko. Opazite, kako je upravljanje podprocesov urejeno za vas.
 
-**Pričakovani izhod:**
+**Pričakovan izhod:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Primer 3: Analiza Git (Docker)
+### Nadzorni agent
 
-Ta primer prikazuje strežnike orodij v kontejnerjih.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.sl.png" alt="Agentni modul" width="800"/>
 
-**⚠️ Predpogoji:** 
-1. **Docker Desktop mora biti ZAGAN** (ne samo nameščen)
-2. **Uporabniki Windows:** Priporočen WSL 2 način (Nastavitve Docker Desktop → Splošno → "Use the WSL 2 based engine"). Hyper-V način zahteva ročno konfiguracijo deljenja datotek.
-3. Najprej morate zgraditi Docker sliko (glejte Terminal 1 spodaj)
 
-**Preverite, da je Docker zagnan:**
+Vzorec **Nadzorni agent** je **prilagodljiva** oblika agentnega AI. V nasprotju z determinističnimi delovnimi tokovi (zaporedno, zanko, vzporedno) nadzornik uporablja LLM, da avtonomno odloči, katere agente poklicati glede na uporabnikovo zahtevo.
+
+**Združevanje nadzornika z MCP:** V tem primeru damo `FileAgent` dostop do MCP orodij datotečnega sistema preko `toolProvider(mcpToolProvider)`. Ko uporabnik zaprosi, naj "prebere in analizira datoteko", nadzornik analizira zahtevo in ustvari načrt izvajanja. Nato usmeri zahtevo k `FileAgent`, ki uporabi MCP orodje `read_file` za pridobitev vsebine. Nadzornik to vsebino posreduje `AnalysisAgent` za interpretacijo in po potrebi pokliče `SummaryAgent`, da povzame rezultate.
+
+To prikazuje, kako se MCP orodja brezhibno vključijo v agentne delovne tokove — nadzornik ne potrebuje vedeti *kako* se datoteke berejo, le da `FileAgent` to zna. Nadzornik se dinamično prilagaja različnim vrstam zahtev in vrne bodisi odziv zadnjega agenta ali povzetek vseh operacij.
+
+**Uporaba zagonskih skript (priporočeno):**
+
+Zagonski skripti samodejno naložijo okoljske spremenljivke iz korenske datoteke `.env`:
 
 **Bash:**
 ```bash
-docker ps  # Prikazati bi moral seznam vsebnikov, ne napake
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Prikazati bi moral seznam vsebnikov, ne napake
-```
-
-Če vidite napako, kot je "Cannot connect to Docker daemon" ali "The system cannot find the file specified", zaženite Docker Desktop in počakajte, da se inicializira (~30 sekund).
-
-**Reševanje težav:**
-- Če AI poroča o praznem repozitoriju ali brez datotek, priklop volumna (`-v`) ne deluje.
-- **Uporabniki Windows Hyper-V:** Dodajte projektno mapo v Nastavitve Docker Desktop → Viri → Deljenje datotek, nato ponovno zaženite Docker Desktop.
-- **Priporočena rešitev:** Preklopite na WSL 2 način za samodejno deljenje datotek (Nastavitve → Splošno → omogočite "Use the WSL 2 based engine").
-
-**Terminal 1 - Zgradi Docker sliko:**
-
-**Bash:**
-```bash
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**Terminal 2 - Zaženi analizo:**
-
-**Uporaba VS Code:** Kliknite z desnim gumbom na `GitRepositoryAnalyzer.java` in izberite **"Run Java"**.
-
-**Uporaba Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+.\start.ps1
 ```
 
-Aplikacija zažene Docker kontejner, priklopi vaš repozitorij in analizira strukturo ter vsebino repozitorija preko AI agenta.
+**Uporaba VS Code:** Kliknite z desnim gumbom na `SupervisorAgentDemo.java` in izberite **"Run Java"** (poskrbite, da je vaša datoteka `.env` konfigurirana).
+
+**Kako deluje nadzornik:**
+
+```java
+// Določite več agentov z določenimi zmožnostmi
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)  // Ima MCP orodja za delo z datotekami
+        .build();
+
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
+
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
+
+// Ustvarite nadzornika, ki orkestrira te agente
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // Model "planner"
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
+
+// Nadzornik samostojno odloča, katere agente bo sprožil
+// Samo posredujte zahtevo v naravnem jeziku - LLM načrtuje izvedbo
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+```
+
+Poglejte [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) za popolno implementacijo.
+
+> **🤖 Preizkusi z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odpri [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) in vprašaj:
+> - "Kako nadzornik odloči, katere agente poklicati?"
+> - "Kakšna je razlika med vzorcem Supervisor in zaporednim (Sequential) delovnim tokom?"
+> - "Kako lahko prilagodim načrtovalno vedenje nadzornika?"
+
+#### Razumevanje izhoda
+
+Ko zaženete demo, boste videli strukturiran pregled, kako nadzornik orkestrira več agentov. Tukaj je, kaj pomeni vsak del:
+
+```
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
+
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
+```
+
+**Glava** predstavlja demo in pojasnjuje osnovni koncept: nadzornik uporablja LLM (ne trdo kodirana pravila), da odloči, katere agente poklicati.
+
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
+
+**Razpoložljivi agenti** prikazujejo tri specializirane agente, ki jih lahko nadzornik izbere. Vsak agent ima specifično zmožnost:
+- **FileAgent** zna brati datoteke z uporabo MCP orodij (zunanja zmožnost)
+- **AnalysisAgent** analizira vsebino (čista LLM zmožnost)
+- **SummaryAgent** ustvarja povzetke (čista LLM zmožnost)
+
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
+
+**Uporabniška zahteva** prikazuje, kaj je bilo zahtevano. Nadzornik mora to razčleniti in se odločiti, katere agente poklicati.
+
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
+
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
+
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: Structure: The content is organized into clear paragraphs that int...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
+
+**Orkestracija nadzornika** je mesto, kjer se zgodi čarovnija. Oglejte si, kako:
+1. Nadzornik je **najprej izbral FileAgent**, ker je bila v zahtevi omenjeno "preberi datoteko"
+2. FileAgent je uporabil MCP-ovo orodje `read_file`, da pridobi vsebino datoteke
+3. Nadzornik je nato **izbral AnalysisAgent** in mu poslal vsebino datoteke
+4. AnalysisAgent je analiziral strukturo, ton in teme
+
+Opazite, da je nadzornik te odločitve sprejel **avtonomno** glede na uporabnikovo zahtevo — brez trdo kodiranega delovnega toka!
+
+**Končni odziv** je sintetiziran odgovor nadzornika, ki združuje izhode vseh agentov, ki jih je poklical. Primer izpiše agentno področje (agentic scope), ki prikazuje povzetek in analizo rezultatov, shranjenih pri vsakem agentu.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: Structure: The content is organized into clear paragraphs that in...
+```
+
+### Pojasnilo funkcij agentnega modula
+
+Primer prikazuje več naprednih funkcij agentnega modula. Poglejmo si Agentic Scope in Agent Listeners bolj podrobno.
+
+**Agentic Scope** prikazuje deljeno pomnilniško območje, kamor so agenti shranili svoje rezultate z uporabo `@Agent(outputKey="...")`. To omogoča:
+- Kasnejšim agentom dostop do izhodov prej izvedenih agentov
+- Nadzorniku sintetiziranje končnega odgovora
+- Vam pregled, kaj je vsak agent ustvaril
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** omogočajo spremljanje in razhroščevanje izvajanja agentov. Korak-po-korak izhod, ki ga vidite v demu, prihaja iz AgentListener-ja, ki se pritrdi na vsako klicanje agenta:
+- **beforeAgentInvocation** - Pokliče se, ko nadzornik izbere agenta, kar vam omogoči videti, kateri agent je bil izbran in zakaj
+- **afterAgentInvocation** - Pokliče se, ko se agent zaključi, prikazuje njegov rezultat
+- **inheritedBySubagents** - Če je true, poslušalec spremlja vse agente v hierarhiji
+
+```java
+AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
+    @Override
+    public void beforeAgentInvocation(AgentRequest request) {
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Posreduj vsem podagentom
+    }
+};
+```
+
+Poleg vzorca Nadzornika, modul `langchain4j-agentic` ponuja več zmogljivih vzorcev delovnih tokov in funkcij:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
+| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
+| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
+| **Conditional** | Route based on conditions | Classify → route to specialist agent |
+| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
 
 ## Ključni pojmi
 
-**Izbira transporta**
+**MCP** je idealen, ko želite izkoristiti obstoječe ekosisteme orodij, graditi orodja, ki jih lahko deli več aplikacij, integrirati storitve tretjih oseb s standardnimi protokoli ali zamenjati implementacije orodij brez spreminjanja kode.
 
-Izberite glede na lokacijo vaših orodij:
-- Oddaljene storitve → Streamable HTTP
-- Lokalni datotečni sistem → Stdio
-- Kompleksne odvisnosti → Docker
+**Agentni modul** najbolje deluje, ko želite deklarativne definicije agentov z anotacijami `@Agent`, potrebujete orkestracijo delovnih tokov (zaporedno, zanka, vzporedno), raje obliko agentov na osnovi vmesnikov namesto imperativne kode, ali združujete več agentov, ki si delijo izhode preko `outputKey`.
 
-**Odkritje orodij**
+**Vzorec nadzornega agenta** izstopa, ko delovnega toka ni mogoče vnaprej natančno napovedati in želite, da LLM odloča, ko imate več specializiranih agentov, ki potrebujejo dinamično orkestracijo, pri gradnji pogovornih sistemov, ki usmerjajo k različnim zmožnostim, ali ko želite najbolj prilagodljivo, adaptivno vedenje agenta.
 
-MCP odjemalci samodejno odkrijejo razpoložljiva orodja ob povezavi. Vaš AI agent vidi opise orodij in se odloči, katera bo uporabil glede na zahtevo uporabnika.
+## Čestitamo!
 
-**Upravljanje sej**
+Dokončali ste LangChain4j za začetnike. Naučili ste se:
 
-Streamable HTTP transport ohranja seje, kar omogoča stanje med interakcijami z oddaljenimi strežniki. Stdio in Docker transporti so običajno brezstanjni.
-
-**Premisleki glede platform**
-
-Primeri samodejno obravnavajo razlike med platformami (razlike v ukazih Windows proti Unix, pretvorbe poti za Docker). To je pomembno za produkcijske namestitve v različnih okoljih.
-
-## Kdaj uporabiti MCP
-
-**Uporabite MCP, ko:**
-- Želite izkoristiti obstoječe ekosisteme orodij
-- Gradite orodja, ki jih bo uporabljalo več aplikacij
-- Integrirate storitve tretjih oseb s standardnimi protokoli
-- Potrebujete zamenjavo implementacij orodij brez sprememb kode
-
-**Uporabite prilagojena orodja (Modul 04), ko:**
-- Gradite funkcionalnost specifično za aplikacijo
-- Je zmogljivost ključna (MCP prinaša režijo)
-- Vaša orodja so preprosta in ne bodo ponovno uporabljena
-- Potrebujete popoln nadzor nad izvajanjem
-
-## Ecosistem MCP
-
-Protokol konteksta modela je odprt standard z rastočim ekosistemom:
-
-- Uradni MCP strežniki za pogoste naloge (datotečni sistem, Git, baze podatkov)
-- Skupnostni strežniki za različne storitve
-- Standardizirani opisi orodij in sheme
-- Združljivost med različnimi ogrodji (deluje z vsakim MCP odjemalcem)
-
-Ta standardizacija pomeni, da orodja, zgrajena za eno AI aplikacijo, delujejo tudi z drugimi, kar ustvarja skupni ekosistem zmogljivosti.
-
-## Čestitke!
-
-Zaključili ste tečaj LangChain4j za začetnike. Naučili ste se:
-
-- Kako zgraditi pogovorno AI z memorijo (Modul 01)
-- Vzorce inženiringa pozivov za različne naloge (Modul 02)
+- Kako graditi pogovno AI s pomnilnikom (Modul 01)
+- Vzorce za inženiring pozivov za različna opravila (Modul 02)
 - Utemeljitev odgovorov v vaših dokumentih z RAG (Modul 03)
-- Ustvarjanje AI agentov s prilagojenimi orodji (Modul 04)
-- Integracijo standardiziranih orodij preko MCP (Modul 05)
-
-Zdaj imate temelje za gradnjo produkcijskih AI aplikacij. Koncepti, ki ste jih spoznali, veljajo ne glede na specifična ogrodja ali modele – so temeljni vzorci v AI inženiringu.
+- Ustvarjanje osnovnih AI agentov (asistentov) s prilagojenimi orodji (Modul 04)
+- Integracija standardiziranih orodij z LangChain4j MCP in Agentic moduli (Modul 05)
 
 ### Kaj sledi?
 
-Po zaključku modulov raziščite [Vodnik za testiranje](../docs/TESTING.md), da vidite koncepte testiranja LangChain4j v praksi.
+Po zaključku modulov si oglejte [Vodnik za testiranje](../docs/TESTING.md), da vidite koncepte testiranja LangChain4j v praksi.
 
 **Uradni viri:**
-- [Dokumentacija LangChain4j](https://docs.langchain4j.dev/) – Celoviti vodiči in API referenca
-- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) – Izvorna koda in primeri
-- [LangChain4j Tutorials](https://docs.langchain4j.dev/tutorials/) – Korak za korakom vodiči za različne primere uporabe
+- [Dokumentacija LangChain4j](https://docs.langchain4j.dev/) - Celoviti vodiči in API-referenca
+- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Izvorna koda in primeri
+- [Vadnice LangChain4j](https://docs.langchain4j.dev/tutorials/) - Korak-po-koraku vadnice za različne primere uporabe
 
 Hvala, ker ste zaključili ta tečaj!
 
@@ -368,52 +391,7 @@ Hvala, ker ste zaključili ta tečaj!
 
 ---
 
-## Reševanje težav
-
-### Sintaksa ukaza Maven v PowerShellu
-**Težava**: Maven ukazi spodletijo z napako `Unknown lifecycle phase ".mainClass=..."`
-
-**Vzrok**: PowerShell interpretira `=` kot operator za dodeljevanje spremenljivke, kar prekine sintakso Maven lastnosti
-
-**Rešitev**: Uporabite operator za ustavitev razčlenjevanja `--%` pred Maven ukazom:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Operator `--%` pove PowerShellu, naj vse preostale argumente dobi dobesedno in jih ne interpretira.
-
-### Težave s povezavo Dockerja
-
-**Težava**: Docker ukazi spodletijo z "Cannot connect to Docker daemon" ali "The system cannot find the file specified"
-
-**Vzrok**: Docker Desktop ni zagnan ali ni popolnoma inicializiran
-
-**Rešitev**: 
-1. Zaženite Docker Desktop
-2. Počakajte približno 30 sekund za popolno inicializacijo
-3. Preverite z `docker ps` (naj pokaže seznam kontejnerjev, ne napako)
-4. Nato zaženite svoj primer
-
-### Montiranje Docker volumna v Windows
-
-**Težava**: Analizator Git repozitorija poroča o praznem repozitoriju ali brez datotek
-
-**Vzrok**: Montiranje volumna (`-v`) ne deluje zaradi konfiguracije deljenja datotek
-
-**Rešitev**:
-- **Priporočeno:** Preklopite na način WSL 2 (Docker Desktop Nastavitve → Splošno → "Use the WSL 2 based engine")
-- **Alternativa (Hyper-V):** Dodajte projektno mapo v Docker Desktop Nastavitve → Viri → Deljenje datotek, nato znova zaženite Docker Desktop
-
----
-
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
+Izjava o omejitvi odgovornosti:
+Ta dokument je bil preveden z uporabo storitve prevajanja z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, upoštevajte, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v izvirnem jeziku naj se šteje za avtoritativni vir. Za kritične informacije priporočamo strokovni prevod, opravljen s strani človeka. Ne odgovarjamo za morebitne nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

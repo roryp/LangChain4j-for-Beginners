@@ -49,7 +49,7 @@ RAG (יצירה משופרת באמצעות אחזור) פותר את הבעיה
 
 זה מייצב את התגובות של המודל על הנתונים האמיתיים שלכם במקום להסתמך על הידע מהאימון או להמציא תשובות.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.he.png" alt="ארכיטקטורת RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.he.png" alt="ארכיטקטורת RAG" width="800"/>
 
 *זרימת עבודה של RAG - משאילתת משתמש לחיפוש סמנטי ליצירת תשובה בהקשר*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.he.png" alt="מרחב הטמעות וקטוריות" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.he.png" alt="מרחב הטמעות וקטוריות" width="800"/>
 
 *מסמכים מיוצגים כוקטורים במרחב ההטמעות - תוכן דומה מתרכז יחד*
 
@@ -152,7 +152,7 @@ cat ../.env  # צריך להציג את AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYME
 
 פשוט לחצו על כפתור ההפעלה ליד "rag" כדי להפעיל את המודול הזה, או להפעיל את כל המודולים בבת אחת.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.he.png" alt="לוח בקרה של Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.he.png" alt="לוח בקרה של Spring Boot" width="400"/>
 
 **אפשרות 2: שימוש בסקריפטים של shell**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 היישום מספק ממשק אינטרנטי להעלאת מסמכים ושאילת שאלות.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.he.png" alt="ממשק יישום RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.he.png" alt="ממשק יישום RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ממשק יישום RAG - העלאת מסמכים ושאילת שאלות*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 שימו לב שכל תשובה כוללת הפניות למקורות עם ציוני דמיון. ציונים אלה (מ-0 עד 1) מראים עד כמה כל חלק היה רלוונטי לשאלתכם. ציונים גבוהים משמעותם התאמות טובות יותר. זה מאפשר לכם לאמת את התשובה מול חומר המקור.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.he.png" alt="תוצאות שאילתא ב-RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.he.png" alt="תוצאות שאילתא ב-RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *תוצאות שאילתא המציגות תשובה עם הפניות למקורות וציוני רלוונטיות*
 

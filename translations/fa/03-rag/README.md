@@ -49,7 +49,7 @@ RAG را مانند دادن یک کتابخانه مرجع به مدل در ن�
 
 این کار پاسخ‌های مدل را بر اساس داده‌های واقعی شما پایه‌گذاری می‌کند، نه صرفاً دانش آموزش یا ساختن پاسخ.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.fa.png" alt="معماری RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.fa.png" alt="معماری RAG" width="800"/>
 
 *جریان کاری RAG - از پرسش کاربر تا جستجوی معنایی و تولید پاسخ مبتنی بر زمینه*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.fa.png" alt="فضای تعبیه‌های برداری" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.fa.png" alt="فضای تعبیه‌های برداری" width="800"/>
 
 *اسناد به صورت بردارهایی در فضای تعبیه نمایش داده شده‌اند - محتواهای مشابه در کنار هم خوشه‌بندی شده‌اند*
 
@@ -152,7 +152,7 @@ cat ../.env  # باید AZURE_OPENAI_ENDPOINT، API_KEY، DEPLOYMENT را نشا
 
 فقط روی دکمه پخش کنار "rag" کلیک کنید تا این ماژول شروع شود، یا همه ماژول‌ها را همزمان اجرا کنید.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.fa.png" alt="داشبورد Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.fa.png" alt="داشبورد Spring Boot" width="400"/>
 
 **گزینه ۲: استفاده از اسکریپت‌های شل**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 برنامه یک رابط وب برای بارگذاری سند و پرسش فراهم می‌کند.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.fa.png" alt="رابط برنامه RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.fa.png" alt="رابط برنامه RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *رابط برنامه RAG - بارگذاری اسناد و پرسیدن سوالات*
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 توجه کنید هر پاسخ شامل مراجع منبع با امتیازهای شباهت است. این امتیازها (از ۰ تا ۱) نشان می‌دهند هر بخش چقدر به سوال شما مرتبط بوده است. امتیازهای بالاتر به معنای تطابق بهتر است. این امکان را به شما می‌دهد که پاسخ را با منبع اصلی بررسی کنید.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.fa.png" alt="نتایج پرسش RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.fa.png" alt="نتایج پرسش RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *نتایج پرسش که پاسخ را همراه با مراجع منبع و امتیازهای مرتبط نشان می‌دهد*
 

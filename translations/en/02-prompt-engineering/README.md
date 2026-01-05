@@ -52,7 +52,7 @@ Think of it like giving instructions to a colleague. "Fix the bug" is vague. "Fi
 
 This module demonstrates advanced prompting patterns using the same LangChain4j foundation from previous modules, with a focus on prompt structure and reasoning control.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.en.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.en.png" alt="LangChain4j Flow" width="800"/>
 
 *How LangChain4j connects your prompts to Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.en.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.en.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage provides persistent context while UserMessages contain individual requests*
 
@@ -104,11 +104,11 @@ The key takeaway: LangChain4j provides the infrastructure (model connection via 
 
 Not all problems need the same approach. Some questions need quick answers, others need deep thinking. Some need visible reasoning, others just need results. This module covers eight prompting patterns - each optimized for different scenarios. You'll experiment with all of them to learn when each approach works best.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.en.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.en.png" alt="Eight Prompting Patterns" width="800"/>
 
 *Overview of the eight prompt engineering patterns and their use cases*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.en.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.en.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *Low eagerness (fast, direct) vs High eagerness (thorough, exploratory) reasoning approaches*
 
@@ -163,7 +163,7 @@ Chain-of-Thought prompting explicitly asks the model to show its reasoning proce
 > - "What are best practices for structuring tool preambles in production applications?"
 > - "How can I capture and display intermediate progress updates in a UI?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.en.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.en.png" alt="Task Execution Pattern" width="800"/>
 
 *Plan → Execute → Summarize workflow for multi-step tasks*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.en.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.en.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Iterative improvement loop - generate, evaluate, identify issues, improve, repeat*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "What's the best way to parse and act on structured output programmatically?"
 > - "How do I ensure consistent severity levels across different review sessions?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.en.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.en.png" alt="Structured Analysis Pattern" width="800"/>
 
 *Four-category framework for consistent code reviews with severity levels*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.en.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.en.png" alt="Context Memory" width="800"/>
 
 *How conversation context accumulates over multiple turns until reaching the token limit*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.en.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.en.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Breaking down problems into explicit logical steps*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.en.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.en.png" alt="Constrained Output Pattern" width="800"/>
 
 *Enforcing specific format, length, and structure requirements*
 
@@ -300,7 +300,7 @@ From the Spring Boot Dashboard, you can:
 
 Simply click the play button next to "prompt-engineering" to start this module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.en.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.en.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # All modules
 
 ## Application Screenshots
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.en.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.en.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *The main dashboard showing all 8 prompt engineering patterns with their characteristics and use cases*
 
@@ -380,10 +380,10 @@ The web interface lets you experiment with different prompting strategies. Each 
 
 Ask a simple question like "What is 15% of 200?" using Low Eagerness. You'll get an instant, direct answer. Now ask something complex like "Design a caching strategy for a high-traffic API" using High Eagerness. Watch how the model slows down and provides detailed reasoning. Same model, same question structure - but the prompt tells it how much thinking to do.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.en.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.en.png" alt="Low Eagerness Demo" width="800"/>
 *Quick calculation with minimal reasoning*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.en.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.en.png" alt="High Eagerness Demo" width="800"/>
 
 *Comprehensive caching strategy (2.8MB)*
 
@@ -391,7 +391,7 @@ Ask a simple question like "What is 15% of 200?" using Low Eagerness. You'll get
 
 Multi-step workflows benefit from upfront planning and progress narration. The model outlines what it will do, narrates each step, then summarizes results.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.en.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.en.png" alt="Task Execution Demo" width="800"/>
 
 *Creating a REST endpoint with step-by-step narration (3.9MB)*
 
@@ -399,7 +399,7 @@ Multi-step workflows benefit from upfront planning and progress narration. The m
 
 Try "Create an email validation service". Instead of just generating code and stopping, the model generates, evaluates against quality criteria, identifies weaknesses, and improves. You'll see it iterate until the code meets production standards.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.en.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.en.png" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Complete email validation service (5.2MB)*
 
@@ -407,7 +407,7 @@ Try "Create an email validation service". Instead of just generating code and st
 
 Code reviews need consistent evaluation frameworks. The model analyzes code using fixed categories (correctness, practices, performance, security) with severity levels.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.en.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.en.png" alt="Structured Analysis Demo" width="800"/>
 
 *Framework-based code review*
 
@@ -415,7 +415,7 @@ Code reviews need consistent evaluation frameworks. The model analyzes code usin
 
 Ask "What is Spring Boot?" then immediately follow up with "Show me an example". The model remembers your first question and gives you a Spring Boot example specifically. Without memory, that second question would be too vague.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.en.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.en.png" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Context preservation across questions*
 
@@ -423,7 +423,7 @@ Ask "What is Spring Boot?" then immediately follow up with "Show me an example".
 
 Pick a math problem and try it with both Step-by-Step Reasoning and Low Eagerness. Low eagerness just gives you the answer - fast but opaque. Step-by-step shows you every calculation and decision.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.en.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.en.png" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Math problem with explicit steps*
 
@@ -431,7 +431,7 @@ Pick a math problem and try it with both Step-by-Step Reasoning and Low Eagernes
 
 When you need specific formats or word counts, this pattern enforces strict adherence. Try generating a summary with exactly 100 words in bullet point format.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.en.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.en.png" alt="Constrained Output Demo" width="800"/>
 
 *Machine learning summary with format control*
 
@@ -445,7 +445,7 @@ GPT-5 lets you control computational effort through your prompts. Low effort mea
 
 Notice the XML tags in the prompts? They're not decorative. Models follow structured instructions more reliably than freeform text. When you need multi-step processes or complex logic, structure helps the model track where it is and what comes next.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.en.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.en.png" alt="Prompt Structure" width="800"/>
 
 *Anatomy of a well-structured prompt with clear sections and XML-style organization*
 

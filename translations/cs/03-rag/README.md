@@ -49,7 +49,7 @@ Představte si RAG jako poskytnutí referenční knihovny modelu. Když položí
 
 Tímto způsobem jsou odpovědi modelu založené na vašich skutečných datech místo spoléhání se na znalosti z tréninku nebo vymýšlení odpovědí.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.cs.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.cs.png" alt="RAG Architecture" width="800"/>
 
 *Průběh RAG - od uživatelského dotazu přes sémantické vyhledávání až po generování odpovědi s kontextem*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.cs.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.cs.png" alt="Vector Embeddings Space" width="800"/>
 
 *Dokumenty reprezentované jako vektory v embeddingovém prostoru – podobný obsah se shlukuje*
 
@@ -152,7 +152,7 @@ Ze Spring Boot Dashboard můžete:
 
 Stačí kliknout na tlačítko přehrávání vedle "rag" pro spuštění tohoto modulu, nebo spustit všechny moduly najednou.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.cs.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.cs.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Možnost 2: Použití shell skriptů**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Všechny moduly
 
 Aplikace poskytuje webové rozhraní pro nahrávání dokumentů a kladení otázek.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.cs.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.cs.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Rozhraní aplikace RAG – nahrávejte dokumenty a pokládejte otázky*
 
@@ -240,7 +240,7 @@ Nyní položte konkrétní otázky týkající se obsahu dokumentu. Zkuste něco
 
 Všimněte si, že každá odpověď obsahuje odkazy na zdroje se skóre podobnosti. Toto skóre (od 0 do 1) ukazuje, jak relevantní byla každá část k vaší otázce. Vyšší skóre znamená lepší shodu. To vám umožní ověřit odpověď podle zdrojového materiálu.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.cs.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.cs.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Výsledky dotazu zobrazující odpověď se zdrojovými odkazy a skóre relevance*
 

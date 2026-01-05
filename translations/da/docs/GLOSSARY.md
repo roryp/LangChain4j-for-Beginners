@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T20:09:30+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-31T01:35:00+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "da"
 }
@@ -12,102 +12,102 @@ CO_OP_TRANSLATOR_METADATA:
 ## Indholdsfortegnelse
 
 - [Kernebegreber](../../../docs)
-- [LangChain4j Komponenter](../../../docs)
-- [AI/ML Begreber](../../../docs)
-- [Prompt Engineering](../../../docs)
+- [LangChain4j-komponenter](../../../docs)
+- [AI/ML-begreber](../../../docs)
+- [Prompt-udformning](../../../docs)
 - [RAG (Retrieval-Augmented Generation)](../../../docs)
-- [Agenter og Værktøjer](../../../docs)
+- [Agenter og værktøjer](../../../docs)
 - [Model Context Protocol (MCP)](../../../docs)
-- [Azure Tjenester](../../../docs)
-- [Test og Udvikling](../../../docs)
+- [Azure-tjenester](../../../docs)
+- [Test og udvikling](../../../docs)
 
-Hurtig reference for termer og begreber brugt gennem hele kurset.
+Hurtig reference for termer og begreber, der bruges i hele kurset.
 
 ## Kernebegreber
 
-**AI Agent** - System der bruger AI til at ræsonnere og handle autonomt. [Module 04](../04-tools/README.md)
+**AI-agent** - System der bruger AI til at ræsonnere og handle autonomt. [Module 04](../04-tools/README.md)
 
-**Chain** - Sekvens af operationer hvor output føres videre til næste trin.
+**Kæde** - Sekvens af operationer, hvor output bruges som input til næste trin.
 
 **Chunking** - Opdeling af dokumenter i mindre stykker. Typisk: 300-500 tokens med overlap. [Module 03](../03-rag/README.md)
 
-**Context Window** - Maksimalt antal tokens en model kan behandle. GPT-5: 400K tokens.
+**Kontekstvindue** - Maksimalt antal tokens en model kan håndtere. GPT-5: 400K tokens.
 
-**Embeddings** - Numeriske vektorer der repræsenterer teksts betydning. [Module 03](../03-rag/README.md)
+**Embeddings** - Numeriske vektorer, der repræsenterer tekstens betydning. [Module 03](../03-rag/README.md)
 
-**Function Calling** - Model genererer strukturerede forespørgsler for at kalde eksterne funktioner. [Module 04](../04-tools/README.md)
+**Function Calling** - Modellen genererer strukturerede forespørgsler for at kalde eksterne funktioner. [Module 04](../04-tools/README.md)
 
-**Hallucination** - Når modeller genererer ukorrekt men plausibel information.
+**Hallucination** - Når modeller genererer forkerte, men plausible oplysninger.
 
 **Prompt** - Tekstinput til en sprogmodel. [Module 02](../02-prompt-engineering/README.md)
 
-**Semantic Search** - Søgning efter mening ved brug af embeddings, ikke nøgleord. [Module 03](../03-rag/README.md)
+**Semantisk søgning** - Søgning efter betydning ved hjælp af embeddings, ikke nøgleord. [Module 03](../03-rag/README.md)
 
 **Stateful vs Stateless** - Stateless: ingen hukommelse. Stateful: bevarer samtalehistorik. [Module 01](../01-introduction/README.md)
 
-**Tokens** - Grundlæggende tekst-enheder som modeller behandler. Påvirker omkostninger og grænser. [Module 01](../01-introduction/README.md)
+**Tokens** - Grundlæggende tekstenheder, som modeller behandler. Påvirker omkostninger og begrænsninger. [Module 01](../01-introduction/README.md)
 
-**Tool Chaining** - Sekventiel udførelse af værktøjer hvor output informerer næste kald. [Module 04](../04-tools/README.md)
+**Tool Chaining** - Sekventiel udførelse af værktøjer, hvor output informerer næste kald. [Module 04](../04-tools/README.md)
 
-## LangChain4j Komponenter
+## LangChain4j Components
 
-**AiServices** - Opretter typesikre AI service interfaces.
+**AiServices** - Opretter typesikre AI-servicegrænseflader.
 
-**OpenAiOfficialChatModel** - Unified klient til OpenAI og Azure OpenAI modeller.
+**OpenAiOfficialChatModel** - Forenet klient til OpenAI- og Azure OpenAI-modeller.
 
-**OpenAiOfficialEmbeddingModel** - Opretter embeddings ved brug af OpenAI Official klient (understøtter både OpenAI og Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Opretter embeddings ved hjælp af OpenAI Official-clienten (understøtter både OpenAI og Azure OpenAI).
 
-**ChatModel** - Kerneinterface for sprogmodeller.
+**ChatModel** - Kernegrænseflade for sprogmodeller.
 
-**ChatMemory** - Bevarer samtalehistorik.
+**ChatMemory** - Vedligeholder samtalehistorik.
 
 **ContentRetriever** - Finder relevante dokumentstykker til RAG.
 
-**DocumentSplitter** - Opdeler dokumenter i stykker.
+**DocumentSplitter** - Splitter dokumenter i stykker.
 
 **EmbeddingModel** - Konverterer tekst til numeriske vektorer.
 
 **EmbeddingStore** - Gemmer og henter embeddings.
 
-**MessageWindowChatMemory** - Bevarer et glidende vindue af nylige beskeder.
+**MessageWindowChatMemory** - Vedligeholder et glidende vindue af nyere beskeder.
 
-**PromptTemplate** - Opretter genanvendelige prompts med `{{variable}}` pladsholdere.
+**PromptTemplate** - Opretter genanvendelige prompts med `{{variable}}`-pladsholdere.
 
 **TextSegment** - Tekststykke med metadata. Bruges i RAG.
 
-**ToolExecutionRequest** - Repræsenterer værktøjsudførelsesanmodning.
+**ToolExecutionRequest** - Repræsenterer en anmodning om værktøjsudførelse.
 
-**UserMessage / AiMessage / SystemMessage** - Samtale beskedtyper.
+**UserMessage / AiMessage / SystemMessage** - Samtalebesked-typer.
 
-## AI/ML Begreber
+## AI/ML-begreber
 
 **Few-Shot Learning** - At give eksempler i prompts. [Module 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - AI modeller trænet på enorme mængder tekstdata.
+**Large Language Model (LLM)** - AI-modeller trænet på enorme mængder tekstdata.
 
-**Reasoning Effort** - GPT-5 parameter der styrer tænkningsdybde. [Module 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - GPT-5-parameter der styrer dybden af ræsonnement. [Module 02](../02-prompt-engineering/README.md)
 
-**Temperature** - Styrer output tilfældighed. Lav=deterministisk, høj=kreativ.
+**Temperature** - Styrer output-tilfældighed. Lav = deterministisk, høj = kreativ.
 
 **Vector Database** - Specialiseret database til embeddings. [Module 03](../03-rag/README.md)
 
 **Zero-Shot Learning** - Udførelse af opgaver uden eksempler. [Module 02](../02-prompt-engineering/README.md)
 
-## Prompt Engineering - [Module 02](../02-prompt-engineering/README.md)
+## Prompt-udformning - [Module 02](../02-prompt-engineering/README.md)
 
-**Chain-of-Thought** - Trinvis ræsonnering for bedre nøjagtighed.
+**Chain-of-Thought** - Trinvis ræsonnement for bedre præcision.
 
-**Constrained Output** - Håndhævelse af specifikt format eller struktur.
+**Constrained Output** - Pålæggelse af specifikt format eller struktur.
 
-**High Eagerness** - GPT-5 mønster for grundig ræsonnering.
+**High Eagerness** - GPT-5-mønster for grundigt ræsonnement.
 
-**Low Eagerness** - GPT-5 mønster for hurtige svar.
+**Low Eagerness** - GPT-5-mønster for hurtige svar.
 
-**Multi-Turn Conversation** - Bevare kontekst på tværs af udvekslinger.
+**Multi-Turn Conversation** - Bevaring af kontekst på tværs af udvekslinger.
 
-**Role-Based Prompting** - Sæt modelpersona via systembeskeder.
+**Role-Based Prompting** - Indstilling af modelpersona via systembeskeder.
 
-**Self-Reflection** - Model evaluerer og forbedrer sit output.
+**Self-Reflection** - Modellen evaluerer og forbedrer sit output.
 
 **Structured Analysis** - Fast evalueringsramme.
 
@@ -115,7 +115,7 @@ Hurtig reference for termer og begreber brugt gennem hele kurset.
 
 ## RAG (Retrieval-Augmented Generation) - [Module 03](../03-rag/README.md)
 
-**Document Processing Pipeline** - Indlæs → opdel → embed → gem.
+**Document Processing Pipeline** - Indlæs → opdel → indlejre → gem.
 
 **In-Memory Embedding Store** - Ikke-permanent lager til test.
 
@@ -125,71 +125,63 @@ Hurtig reference for termer og begreber brugt gennem hele kurset.
 
 **Source Reference** - Metadata om hentet indhold.
 
-## Agenter og Værktøjer - [Module 04](../04-tools/README.md)
+## Agenter og værktøjer - [Module 04](../04-tools/README.md)
 
-**@Tool Annotation** - Marker Java metoder som AI-kaldbare værktøjer.
+**@Tool Annotation** - Marker Java-metoder som AI-opkaldelige værktøjer.
 
 **ReAct Pattern** - Ræsonner → Handl → Observer → Gentag.
 
 **Session Management** - Separate kontekster for forskellige brugere.
 
-**Tool** - Funktion en AI agent kan kalde.
+**Tool** - Et værktøj, som en AI-agent kan kalde.
 
 **Tool Description** - Dokumentation af værktøjets formål og parametre.
 
 ## Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)
 
-**Docker Transport** - MCP server i Docker container.
+**MCP** - Standard for at forbinde AI-apps til eksterne værktøjer.
 
-**MCP** - Standard for at forbinde AI apps til eksterne værktøjer.
+**MCP Client** - Applikation, der forbinder til MCP-servere.
 
-**MCP Client** - Applikation der forbinder til MCP servere.
+**MCP Server** - Service, der eksponerer værktøjer via MCP.
 
-**MCP Server** - Service der eksponerer værktøjer via MCP.
+**Stdio Transport** - Server som underproces via stdin/stdout.
 
-**Server-Sent Events (SSE)** - Server-til-klient streaming over HTTP.
+**Tool Discovery** - Klienten spørger serveren om tilgængelige værktøjer.
 
-**Stdio Transport** - Server som subprocess via stdin/stdout.
+## Azure-tjenester - [Module 01](../01-introduction/README.md)
 
-**Streamable HTTP Transport** - HTTP med SSE til realtidskommunikation.
+**Azure AI Search** - Cloud-søgning med vektorfunktionalitet. [Module 03](../03-rag/README.md)
 
-**Tool Discovery** - Client forespørger server om tilgængelige værktøjer.
+**Azure Developer CLI (azd)** - Udruller Azure-ressourcer.
 
-## Azure Tjenester - [Module 01](../01-introduction/README.md)
+**Azure OpenAI** - Microsofts enterprise AI-tjeneste.
 
-**Azure AI Search** - Cloud-søgning med vektor kapabiliteter. [Module 03](../03-rag/README.md)
-
-**Azure Developer CLI (azd)** - Udruller Azure ressourcer.
-
-**Azure OpenAI** - Microsofts enterprise AI service.
-
-**Bicep** - Azure infrastruktur-som-kode sprog. [Infrastructure Guide](../01-introduction/infra/README.md)
+**Bicep** - Azure-infrastruktur-som-kode-sprog. [Infrastructure Guide](../01-introduction/infra/README.md)
 
 **Deployment Name** - Navn for modeludrulning i Azure.
 
-**GPT-5** - Seneste OpenAI model med ræsonneringskontrol. [Module 02](../02-prompt-engineering/README.md)
+**GPT-5** - Seneste OpenAI-model med kontrol over ræsonnement. [Module 02](../02-prompt-engineering/README.md)
 
-## Test og Udvikling - [Testing Guide](TESTING.md)
+## Test og udvikling - [Testguide](TESTING.md)
 
 **Dev Container** - Containeriseret udviklingsmiljø. [Configuration](../../../.devcontainer/devcontainer.json)
 
-**GitHub Models** - Gratis AI model legeplads. [Module 00](../00-quick-start/README.md)
+**GitHub Models** - Gratis AI-model-legeplads. [Module 00](../00-quick-start/README.md)
 
-**In-Memory Testing** - Test med in-memory lager.
+**In-Memory Testing** - Testning med in-memory-lagring.
 
-**Integration Testing** - Test med rigtig infrastruktur.
+**Integration Testing** - Testning med reel infrastruktur.
 
-**Maven** - Java build automatiseringsværktøj.
+**Maven** - Java build-automatiseringsværktøj.
 
-**Mockito** - Java mocking framework.
+**Mockito** - Java-mocking-ramme.
 
-**Spring Boot** - Java applikationsframework. [Module 01](../01-introduction/README.md)
-
-**Testcontainers** - Docker containere i tests.
+**Spring Boot** - Java applikationsramme. [Module 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Ansvarsfraskrivelse**:
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, bedes du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets modersmål bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+Ansvarsfraskrivelse:
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi stræber efter nøjagtighed, bedes du være opmærksom på, at automatiske oversættelser kan indeholde fejl eller unøjagtigheder. Det oprindelige dokument på dets originalsprog bør betragtes som den autoritative kilde. For kritisk information anbefales en professionel menneskelig oversættelse. Vi er ikke ansvarlige for eventuelle misforståelser eller fejltolkninger, der måtte opstå som følge af brugen af denne oversættelse.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
