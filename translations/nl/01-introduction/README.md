@@ -53,7 +53,7 @@ Taalmodellen zijn stateless. Elke API-aanroep is onafhankelijk. Als je "Mijn naa
 
 Dit is prima voor eenvoudige Q&A, maar nutteloos voor echte applicaties. Klantenservicebots moeten onthouden wat je ze vertelde. Persoonlijke assistenten hebben context nodig. Elke multi-turn conversatie vereist geheugen.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.nl.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.nl.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Het verschil tussen stateless (onafhankelijke oproepen) en stateful (contextbewuste) gesprekken*
 
@@ -61,7 +61,7 @@ Dit is prima voor eenvoudige Q&A, maar nutteloos voor echte applicaties. Klanten
 
 Voordat je in gesprekken duikt, is het belangrijk tokens te begrijpen - de basiseenheden van tekst die taalmodellen verwerken:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.nl.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.nl.png" alt="Token Explanation" width="800"/>
 
 *Voorbeeld van hoe tekst wordt opgedeeld in tokens - "I love AI!" wordt 4 aparte verwerkingsunits*
 
@@ -73,7 +73,7 @@ Chatgeheugen lost het stateless probleem op door de gespreksgeschiedenis bij te 
 
 LangChain4j biedt geheugenimplementaties die dit automatisch afhandelen. Je kiest hoeveel berichten je wilt bewaren en het framework beheert het contextvenster.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.nl.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.nl.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory houdt een schuivend venster van recente berichten bij en verwijdert automatisch oude*
 
@@ -212,7 +212,7 @@ Vanaf het Spring Boot Dashboard kun je:
 
 Klik simpelweg op de afspeelknop naast "introduction" om deze module te starten, of start alle modules tegelijk.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.nl.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.nl.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Optie 2: Gebruik shell-scripts**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Alle modules
 
 De applicatie biedt een webinterface met twee chatimplementaties naast elkaar.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.nl.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.nl.png" alt="Application Home Screen" width="800"/>
 
 *Dashboard toont zowel Simple Chat (stateless) als Conversational Chat (stateful) opties*
 
@@ -290,7 +290,7 @@ De applicatie biedt een webinterface met twee chatimplementaties naast elkaar.
 
 Probeer dit eerst. Vraag "Mijn naam is John" en vraag dan direct "Wat is mijn naam?" Het model zal het niet onthouden omdat elk bericht onafhankelijk is. Dit toont het kernprobleem van basisintegratie van taalmodellen - geen gesprekcontext.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.nl.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.nl.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI herinnert zich je naam niet van het vorige bericht*
 
@@ -298,7 +298,7 @@ Probeer dit eerst. Vraag "Mijn naam is John" en vraag dan direct "Wat is mijn na
 
 Probeer nu dezelfde volgorde hier. Vraag "Mijn naam is John" en dan "Wat is mijn naam?" Deze keer onthoudt het. Het verschil is MessageWindowChatMemory - het houdt de gespreksgeschiedenis bij en voegt die toe aan elke aanvraag. Zo werkt productieconversatie-AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.nl.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.nl.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI herinnert zich je naam van eerder in het gesprek*
 

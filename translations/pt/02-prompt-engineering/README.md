@@ -52,7 +52,7 @@ Pense nisso como dar instruções a um colega. "Corrige o bug" é vago. "Corrige
 
 Este módulo demonstra padrões avançados de prompting usando a mesma base LangChain4j dos módulos anteriores, com foco na estrutura do prompt e controlo de raciocínio.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.pt.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.pt.png" alt="LangChain4j Flow" width="800"/>
 
 *Como o LangChain4j liga os seus prompts ao Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.pt.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.pt.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage fornece contexto persistente enquanto UserMessages contêm pedidos individuais*
 
@@ -104,11 +104,11 @@ A principal conclusão: LangChain4j fornece a infraestrutura (ligação ao model
 
 Nem todos os problemas precisam da mesma abordagem. Algumas perguntas precisam de respostas rápidas, outras de pensamento profundo. Algumas precisam de raciocínio visível, outras só dos resultados. Este módulo cobre oito padrões de prompting — cada um otimizado para diferentes cenários. Vai experimentar todos para aprender quando cada abordagem funciona melhor.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.pt.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.pt.png" alt="Eight Prompting Patterns" width="800"/>
 
 *Visão geral dos oito padrões de engenharia de prompts e seus casos de uso*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.pt.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.pt.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *Baixa vontade (rápido, direto) vs Alta vontade (minucioso, exploratório) abordagens de raciocínio*
 
@@ -163,7 +163,7 @@ O prompting Chain-of-Thought pede explicitamente ao modelo para mostrar o seu pr
 > - "Quais são as melhores práticas para estruturar preâmbulos de ferramentas em aplicações de produção?"
 > - "Como posso capturar e mostrar atualizações de progresso intermédias numa interface?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.pt.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.pt.png" alt="Task Execution Pattern" width="800"/>
 
 *Fluxo Planear → Executar → Resumir para tarefas multi-etapas*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.pt.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.pt.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Ciclo de melhoria iterativa – gerar, avaliar, identificar problemas, melhorar, repetir*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Qual é a melhor forma de analisar e atuar sobre saída estruturada programaticamente?"
 > - "Como garantir níveis de severidade consistentes em diferentes sessões de revisão?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.pt.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.pt.png" alt="Structured Analysis Pattern" width="800"/>
 
 *Estrutura de quatro categorias para revisões de código consistentes com níveis de severidade*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.pt.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.pt.png" alt="Context Memory" width="800"/>
 
 *Como o contexto da conversa se acumula ao longo de múltiplos turnos até atingir o limite de tokens*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.pt.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.pt.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Decompor problemas em passos lógicos explícitos*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.pt.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.pt.png" alt="Constrained Output Pattern" width="800"/>
 
 *Impor requisitos específicos de formato, comprimento e estrutura*
 
@@ -300,7 +300,7 @@ No Spring Boot Dashboard, pode:
 
 Basta clicar no botão de play ao lado de "prompt-engineering" para iniciar este módulo, ou iniciar todos os módulos de uma vez.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.pt.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.pt.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opção 2: Usar scripts shell**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Todos os módulos
 
 ## Capturas de Ecrã da Aplicação
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.pt.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.pt.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *O dashboard principal mostrando os 8 padrões de engenharia de prompts com as suas características e casos de uso*
 
@@ -380,10 +380,10 @@ A interface web permite experimentar diferentes estratégias de prompting. Cada 
 
 Faça uma pergunta simples como "Qual é 15% de 200?" usando Baixa Vontade. Vai obter uma resposta instantânea e direta. Agora pergunte algo complexo como "Desenha uma estratégia de cache para uma API de alto tráfego" usando Alta Vontade. Veja como o modelo desacelera e fornece raciocínio detalhado. Mesmo modelo, mesma estrutura de pergunta — mas o prompt diz-lhe quanto deve pensar.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.pt.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.pt.png" alt="Low Eagerness Demo" width="800"/>
 *Cálculo rápido com raciocínio mínimo*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.pt.png" alt="Demonstração de Alta Disposição" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.pt.png" alt="Demonstração de Alta Disposição" width="800"/>
 
 *Estratégia abrangente de cache (2,8MB)*
 
@@ -391,7 +391,7 @@ Faça uma pergunta simples como "Qual é 15% de 200?" usando Baixa Vontade. Vai 
 
 Fluxos de trabalho em múltiplas etapas beneficiam-se de planeamento prévio e narração do progresso. O modelo descreve o que vai fazer, narra cada passo e depois resume os resultados.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.pt.png" alt="Demonstração de Execução de Tarefas" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.pt.png" alt="Demonstração de Execução de Tarefas" width="800"/>
 
 *Criação de um endpoint REST com narração passo a passo (3,9MB)*
 
@@ -399,7 +399,7 @@ Fluxos de trabalho em múltiplas etapas beneficiam-se de planeamento prévio e n
 
 Experimente "Criar um serviço de validação de email". Em vez de apenas gerar código e parar, o modelo gera, avalia segundo critérios de qualidade, identifica fraquezas e melhora. Verá que itera até o código cumprir os padrões de produção.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.pt.png" alt="Demonstração de Código Auto-Reflexivo" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.pt.png" alt="Demonstração de Código Auto-Reflexivo" width="800"/>
 
 *Serviço completo de validação de email (5,2MB)*
 
@@ -407,7 +407,7 @@ Experimente "Criar um serviço de validação de email". Em vez de apenas gerar 
 
 Revisões de código precisam de quadros de avaliação consistentes. O modelo analisa o código usando categorias fixas (correção, práticas, desempenho, segurança) com níveis de severidade.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.pt.png" alt="Demonstração de Análise Estruturada" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.pt.png" alt="Demonstração de Análise Estruturada" width="800"/>
 
 *Revisão de código baseada em framework*
 
@@ -415,7 +415,7 @@ Revisões de código precisam de quadros de avaliação consistentes. O modelo a
 
 Pergunte "O que é Spring Boot?" e depois imediatamente "Mostra-me um exemplo". O modelo lembra-se da sua primeira pergunta e dá-lhe um exemplo específico de Spring Boot. Sem memória, essa segunda pergunta seria demasiado vaga.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.pt.png" alt="Demonstração de Chat Multi-Turno" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.pt.png" alt="Demonstração de Chat Multi-Turno" width="800"/>
 
 *Preservação do contexto entre perguntas*
 
@@ -423,7 +423,7 @@ Pergunte "O que é Spring Boot?" e depois imediatamente "Mostra-me um exemplo". 
 
 Escolha um problema de matemática e experimente tanto com Raciocínio Passo a Passo como com Baixa Disposição. Baixa disposição dá-lhe apenas a resposta - rápido mas opaco. Passo a passo mostra-lhe cada cálculo e decisão.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.pt.png" alt="Demonstração de Raciocínio Passo a Passo" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.pt.png" alt="Demonstração de Raciocínio Passo a Passo" width="800"/>
 
 *Problema matemático com passos explícitos*
 
@@ -431,7 +431,7 @@ Escolha um problema de matemática e experimente tanto com Raciocínio Passo a P
 
 Quando precisa de formatos específicos ou contagem de palavras, este padrão impõe estrita conformidade. Experimente gerar um resumo com exatamente 100 palavras em formato de pontos.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.pt.png" alt="Demonstração de Saída Constrangida" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.pt.png" alt="Demonstração de Saída Constrangida" width="800"/>
 
 *Resumo de machine learning com controlo de formato*
 
@@ -445,7 +445,7 @@ O GPT-5 permite controlar o esforço computacional através dos seus prompts. Ba
 
 Reparou nas tags XML nos prompts? Não são decorativas. Os modelos seguem instruções estruturadas de forma mais fiável do que texto livre. Quando precisa de processos em múltiplas etapas ou lógica complexa, a estrutura ajuda o modelo a saber onde está e o que vem a seguir.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.pt.png" alt="Estrutura do Prompt" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.pt.png" alt="Estrutura do Prompt" width="800"/>
 
 *Anatomia de um prompt bem estruturado com secções claras e organização ao estilo XML*
 

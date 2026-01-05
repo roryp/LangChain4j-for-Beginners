@@ -49,7 +49,7 @@ Fikirkan RAG sebagai memberikan model sebuah perpustakaan rujukan. Apabila anda 
 
 Ini menjadikan jawapan model berasaskan data sebenar anda dan bukannya bergantung pada pengetahuan latihan atau mereka-reka jawapan.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.ms.png" alt="Arkitektur RAG" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ms.png" alt="Arkitektur RAG" width="800"/>
 
 *Aliran kerja RAG - dari pertanyaan pengguna ke carian semantik ke penjanaan jawapan kontekstual*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.ms.png" alt="Ruang Embedding Vektor" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ms.png" alt="Ruang Embedding Vektor" width="800"/>
 
 *Dokumen diwakili sebagai vektor dalam ruang embedding - kandungan serupa berkumpul bersama*
 
@@ -152,7 +152,7 @@ Dari Spring Boot Dashboard, anda boleh:
 
 Klik butang main di sebelah "rag" untuk memulakan modul ini, atau mulakan semua modul sekaligus.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.ms.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ms.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Pilihan 2: Menggunakan skrip shell**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 Aplikasi menyediakan antara muka web untuk muat naik dokumen dan bertanya soalan.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.ms.png" alt="Antara Muka Aplikasi RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ms.png" alt="Antara Muka Aplikasi RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Antara muka aplikasi RAG - muat naik dokumen dan tanya soalan*
 
@@ -240,7 +240,7 @@ Sekarang tanya soalan khusus tentang kandungan dokumen. Cuba sesuatu yang faktua
 
 Perhatikan setiap jawapan termasuk rujukan sumber dengan skor kesamaan. Skor ini (0 hingga 1) menunjukkan betapa relevannya setiap potongan dengan soalan anda. Skor lebih tinggi bermakna padanan lebih baik. Ini membolehkan anda mengesahkan jawapan dengan bahan sumber.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.ms.png" alt="Keputusan Pertanyaan RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ms.png" alt="Keputusan Pertanyaan RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Keputusan pertanyaan menunjukkan jawapan dengan rujukan sumber dan skor relevan*
 

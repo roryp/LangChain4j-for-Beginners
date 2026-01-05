@@ -49,7 +49,7 @@ RAG কে ভাবুন মডেলকে একটি রেফারেন
 
 এটি মডেলের উত্তরগুলোকে তার প্রশিক্ষণের জ্ঞানের উপর নির্ভর না করে আপনার প্রকৃত ডেটার ভিত্তিতে স্থাপন করে।
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.bn.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.bn.png" alt="RAG Architecture" width="800"/>
 
 *RAG ওয়ার্কফ্লো - ব্যবহারকারীর প্রশ্ন থেকে সেমান্টিক সার্চ এবং প্রাসঙ্গিক উত্তর জেনারেশন পর্যন্ত*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.bn.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.bn.png" alt="Vector Embeddings Space" width="800"/>
 
 *এম্বেডিং স্পেসে ভেক্টর হিসেবে উপস্থাপিত ডকুমেন্ট - সাদৃশ্যপূর্ণ বিষয়বস্তু একত্রে ক্লাস্টার করে*
 
@@ -152,7 +152,7 @@ cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT দেখানো উ
 
 শুধুমাত্র "rag" এর পাশে প্লে বাটনে ক্লিক করে এই মডিউল শুরু করুন, অথবা সব মডিউল একসাথে শুরু করুন।
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.bn.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.bn.png" alt="Spring Boot Dashboard" width="400"/>
 
 **অপশন ২: শেল স্ক্রিপ্ট ব্যবহার**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # সমস্ত মডিউলগুলি
 
 অ্যাপ্লিকেশনটি ডকুমেন্ট আপলোড এবং প্রশ্ন করার জন্য একটি ওয়েব ইন্টারফেস প্রদান করে।
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.bn.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.bn.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG অ্যাপ্লিকেশন ইন্টারফেস - ডকুমেন্ট আপলোড করুন এবং প্রশ্ন করুন*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # সমস্ত মডিউলগুলি
 
 প্রতিটি উত্তরে সোর্স রেফারেন্স এবং সাদৃশ্য স্কোর অন্তর্ভুক্ত থাকে। এই স্কোরগুলো (০ থেকে ১) দেখায় প্রতিটি চাঙ্ক আপনার প্রশ্নের সাথে কতটা প্রাসঙ্গিক ছিল। উচ্চ স্কোর মানে ভালো মিল। এটি আপনাকে উত্তর সোর্স ম্যাটেরিয়ালের সাথে যাচাই করতে দেয়।
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.bn.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.bn.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *কোয়েরি ফলাফল যা উত্তর, সোর্স রেফারেন্স এবং প্রাসঙ্গিকতা স্কোর দেখায়*
 

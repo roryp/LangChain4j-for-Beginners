@@ -53,7 +53,7 @@ Sproglige modeller er stateless. Hver API-kald er uafhængigt. Hvis du sender "M
 
 Det er fint til simple Q&A, men ubrugeligt til rigtige applikationer. Kundeservicebots skal huske, hvad du har fortalt dem. Personlige assistenter har brug for kontekst. Enhver samtale med flere runder kræver hukommelse.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.da.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.da.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Forskellen mellem stateless (uafhængige kald) og stateful (kontekstbevidste) samtaler*
 
@@ -61,7 +61,7 @@ Det er fint til simple Q&A, men ubrugeligt til rigtige applikationer. Kundeservi
 
 Før vi dykker ned i samtaler, er det vigtigt at forstå tokens – de grundlæggende tekst-enheder, som sproglige modeller behandler:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.da.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.da.png" alt="Token Explanation" width="800"/>
 
 *Eksempel på, hvordan tekst opdeles i tokens – "I love AI!" bliver til 4 separate behandlingsenheder*
 
@@ -73,7 +73,7 @@ Chat-hukommelse løser det stateless problem ved at opretholde samtalehistorik. 
 
 LangChain4j leverer hukommelsesimplementeringer, der håndterer dette automatisk. Du vælger, hvor mange beskeder der skal gemmes, og frameworket styrer kontekstvinduet.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.da.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.da.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory opretholder et glidende vindue af nylige beskeder og fjerner automatisk gamle*
 
@@ -212,7 +212,7 @@ Fra Spring Boot Dashboard kan du:
 
 Klik blot på play-knappen ved siden af "introduction" for at starte dette modul, eller start alle moduler på én gang.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.da.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.da.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Mulighed 2: Brug shell-scripts**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Alle moduler
 
 Applikationen tilbyder en webgrænseflade med to chat-implementeringer side om side.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.da.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.da.png" alt="Application Home Screen" width="800"/>
 
 *Dashboard, der viser både Simple Chat (stateless) og Conversational Chat (stateful) muligheder*
 
@@ -290,7 +290,7 @@ Applikationen tilbyder en webgrænseflade med to chat-implementeringer side om s
 
 Prøv denne først. Spørg "Mit navn er John" og spørg så straks "Hvad er mit navn?" Modellen vil ikke huske, fordi hver besked er uafhængig. Dette demonstrerer kerneproblemet med basal integration af sproglige modeller – ingen samtalekontekst.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.da.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.da.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI husker ikke dit navn fra den forrige besked*
 
@@ -298,7 +298,7 @@ Prøv denne først. Spørg "Mit navn er John" og spørg så straks "Hvad er mit 
 
 Prøv nu samme sekvens her. Spørg "Mit navn er John" og så "Hvad er mit navn?" Denne gang husker den. Forskellen er MessageWindowChatMemory – den opretholder samtalehistorik og inkluderer den med hver forespørgsel. Sådan fungerer produktionsklar konverserende AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.da.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.da.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI husker dit navn fra tidligere i samtalen*
 

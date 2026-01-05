@@ -37,7 +37,7 @@ LangChain4j er et Java-bibliotek, der forenkler opbygningen af AI-drevne applika
 
 "Chain" i LangChain refererer til at kæde flere komponenter sammen – du kan kæde en prompt til en model til en parser, eller kæde flere AI-kald sammen, hvor output fra det ene bliver input til det næste. Denne hurtigstart fokuserer på det grundlæggende, før vi udforsker mere komplekse kæder.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.da.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.da.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Kædning af komponenter i LangChain4j – byggeklodser forbinder for at skabe kraftfulde AI-arbejdsgange*
 
@@ -49,7 +49,7 @@ Vi bruger tre kernekomponenter:
 
 **MessageWindowChatMemory** – Vedligeholder samtalehistorik. Uden dette er hver forespørgsel uafhængig. Med det husker AI tidligere beskeder og bevarer kontekst over flere runder.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.da.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.da.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j-arkitektur – kernekomponenter arbejder sammen for at drive dine AI-applikationer*
 

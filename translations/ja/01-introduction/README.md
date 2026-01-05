@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 これは単純なQ&Aには問題ありませんが、本格的なアプリケーションには役に立ちません。カスタマーサービスボットはユーザーが伝えた内容を覚えている必要があります。パーソナルアシスタントはコンテキストが必要です。複数ターンの会話にはメモリが不可欠です。
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.ja.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.ja.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *ステートレス（独立した呼び出し）とステートフル（コンテキスト認識）会話の違い*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 会話に入る前に、トークンの理解が重要です。トークンは言語モデルが処理するテキストの基本単位です：
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.ja.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.ja.png" alt="Token Explanation" width="800"/>
 
 *テキストがどのようにトークンに分割されるかの例 - "I love AI!" は4つの処理単位になる*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4jはこれを自動で処理するメモリ実装を提供します。保持するメッセージ数を選択し、フレームワークがコンテキストウィンドウを管理します。
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.ja.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.ja.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemoryは最近のメッセージのスライディングウィンドウを維持し、古いものを自動的に削除*
 
@@ -212,7 +212,7 @@ Spring Boot Dashboardでは：
 
 「introduction」の横にある再生ボタンをクリックしてこのモジュールを起動、またはすべてのモジュールを一括起動できます。
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.ja.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.ja.png" alt="Spring Boot Dashboard" width="400"/>
 
 **オプション2: シェルスクリプトを使用**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # すべてのモジュール
 
 アプリケーションは2つのチャット実装を並べて表示するWebインターフェースを提供します。
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.ja.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.ja.png" alt="Application Home Screen" width="800"/>
 
 *シンプルチャット（ステートレス）と会話チャット（ステートフル）の両方を示すダッシュボード*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # すべてのモジュール
 
 まずはこちらを試してください。「私の名前はジョンです」と言い、その直後に「私の名前は何ですか？」と尋ねてみてください。モデルは覚えていません。各メッセージが独立しているためです。これは基本的な言語モデル統合のコア問題を示しています - 会話コンテキストがないこと。
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.ja.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.ja.png" alt="Stateless Chat Demo" width="800"/>
 
 *AIは前のメッセージから名前を覚えていません*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # すべてのモジュール
 
 同じ順序でこちらを試してください。「私の名前はジョンです」と言い、その後「私の名前は何ですか？」と尋ねると、今回は覚えています。違いはMessageWindowChatMemoryです。会話履歴を維持し、各リクエストに含めています。これが本番の会話型AIの動作です。
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.ja.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.ja.png" alt="Stateful Chat Demo" width="800"/>
 
 *AIは会話の初めに言った名前を覚えています*
 

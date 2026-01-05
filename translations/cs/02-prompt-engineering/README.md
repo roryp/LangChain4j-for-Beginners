@@ -52,7 +52,7 @@ Představte si to jako dávání instrukcí kolegovi. „Oprav chybu“ je vágn
 
 Tento modul demonstruje pokročilé vzory promptování pomocí stejného základu LangChain4j z předchozích modulů, se zaměřením na strukturu promptů a řízení uvažování.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.cs.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.cs.png" alt="LangChain4j Flow" width="800"/>
 
 *Jak LangChain4j propojuje vaše prompty s Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.cs.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.cs.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage poskytuje trvalý kontext, zatímco UserMessages obsahují jednotlivé požadavky*
 
@@ -104,11 +104,11 @@ Hlavní závěr: LangChain4j poskytuje infrastrukturu (připojení k modelu pře
 
 Ne všechny problémy vyžadují stejný přístup. Některé otázky potřebují rychlé odpovědi, jiné hluboké přemýšlení. Některé vyžadují viditelné uvažování, jiné jen výsledky. Tento modul pokrývá osm vzorů promptování – každý optimalizovaný pro různé scénáře. Vyzkoušíte si je všechny, abyste pochopili, kdy který přístup funguje nejlépe.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.cs.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.cs.png" alt="Eight Prompting Patterns" width="800"/>
 
 *Přehled osmi vzorů prompt engineeringu a jejich použití*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.cs.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.cs.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *Nízká ochota (rychlé, přímé) vs vysoká ochota (důkladné, průzkumné) přístupy k uvažování*
 
@@ -163,7 +163,7 @@ Chain-of-Thought promptování explicitně žádá model, aby ukázal svůj proc
 > - „Jaké jsou nejlepší praktiky pro strukturování preamblů nástrojů v produkčních aplikacích?“
 > - „Jak mohu zachytit a zobrazit průběžné aktualizace pokroku v UI?“
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.cs.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.cs.png" alt="Task Execution Pattern" width="800"/>
 
 *Plán → Provedení → Shrnutí pracovního postupu pro vícekrokové úkoly*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.cs.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.cs.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Iterační smyčka zlepšování – generuj, vyhodnoť, identifikuj problémy, zlepši, opakuj*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - „Jak nejlépe programově zpracovat a reagovat na strukturovaný výstup?“
 > - „Jak zajistit konzistentní úrovně závažnosti napříč různými revizními sezeními?“
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.cs.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.cs.png" alt="Structured Analysis Pattern" width="800"/>
 
 *Rámec se čtyřmi kategoriemi pro konzistentní revize kódu s úrovněmi závažnosti*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.cs.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.cs.png" alt="Context Memory" width="800"/>
 
 *Jak se kontext konverzace hromadí přes více kol až do dosažení limitu tokenů*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.cs.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.cs.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Rozklad problémů na explicitní logické kroky*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.cs.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.cs.png" alt="Constrained Output Pattern" width="800"/>
 
 *Vynucování specifických požadavků na formát, délku a strukturu*
 
@@ -300,7 +300,7 @@ Ze Spring Boot Dashboard můžete:
 
 Jednoduše klikněte na tlačítko přehrávání vedle „prompt-engineering“ pro spuštění tohoto modulu, nebo spusťte všechny moduly najednou.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.cs.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.cs.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Možnost 2: Použití shell skriptů**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Všechny moduly
 
 ## Snímky obrazovky aplikace
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.cs.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.cs.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Hlavní dashboard zobrazující všech 8 vzorů prompt engineeringu s jejich charakteristikami a použitím*
 
@@ -380,10 +380,10 @@ Webové rozhraní vám umožní experimentovat s různými strategiemi promptov�
 
 Zeptejte se jednoduchou otázku jako „Kolik je 15 % z 200?“ pomocí Nízké ochoty. Dostanete okamžitou, přímou odpověď. Nyní se zeptejte na něco složitého jako „Navrhni caching strategii pro API s vysokou návštěvností“ pomocí Vysoké ochoty. Sledujte, jak model zpomalí a poskytne podrobné uvažování. Stejný model, stejná struktura otázky – ale prompt mu říká, kolik má přemýšlet.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.cs.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.cs.png" alt="Low Eagerness Demo" width="800"/>
 *Rychlý výpočet s minimálním uvažováním*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.cs.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.cs.png" alt="High Eagerness Demo" width="800"/>
 
 *Komplexní strategie cachování (2,8MB)*
 
@@ -391,7 +391,7 @@ Zeptejte se jednoduchou otázku jako „Kolik je 15 % z 200?“ pomocí Nízké 
 
 Vícekrokové pracovní postupy těží z předběžného plánování a komentování postupu. Model popisuje, co udělá, komentuje každý krok a pak shrnuje výsledky.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.cs.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.cs.png" alt="Task Execution Demo" width="800"/>
 
 *Vytvoření REST endpointu s komentováním krok za krokem (3,9MB)*
 
@@ -399,7 +399,7 @@ Vícekrokové pracovní postupy těží z předběžného plánování a komento
 
 Zkuste "Vytvořit službu pro ověření e-mailu". Místo pouhého generování kódu a zastavení model generuje, hodnotí podle kvalitativních kritérií, identifikuje slabiny a zlepšuje. Uvidíte, jak iteruje, dokud kód nesplní produkční standardy.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.cs.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.cs.png" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Kompletní služba pro ověření e-mailu (5,2MB)*
 
@@ -407,7 +407,7 @@ Zkuste "Vytvořit službu pro ověření e-mailu". Místo pouhého generování 
 
 Revize kódu potřebují konzistentní hodnotící rámce. Model analyzuje kód pomocí pevných kategorií (správnost, praktiky, výkon, bezpečnost) s úrovněmi závažnosti.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.cs.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.cs.png" alt="Structured Analysis Demo" width="800"/>
 
 *Revize kódu založená na rámcích*
 
@@ -415,7 +415,7 @@ Revize kódu potřebují konzistentní hodnotící rámce. Model analyzuje kód 
 
 Zeptejte se "Co je Spring Boot?" a hned potom "Ukaž mi příklad". Model si pamatuje první otázku a dá vám konkrétní příklad Spring Boot. Bez paměti by druhá otázka byla příliš vágní.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.cs.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.cs.png" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Zachování kontextu napříč otázkami*
 
@@ -423,7 +423,7 @@ Zeptejte se "Co je Spring Boot?" a hned potom "Ukaž mi příklad". Model si pam
 
 Vyberte matematický problém a zkuste ho s uvažováním krok za krokem a s nízkou ochotou. Nízká ochota vám dá jen odpověď – rychle, ale neprůhledně. Krok za krokem ukazuje každý výpočet a rozhodnutí.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.cs.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.cs.png" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Matematický problém s explicitními kroky*
 
@@ -431,7 +431,7 @@ Vyberte matematický problém a zkuste ho s uvažováním krok za krokem a s ní
 
 Když potřebujete specifické formáty nebo počet slov, tento vzor vynucuje přísné dodržení. Zkuste vygenerovat shrnutí přesně se 100 slovy v odrážkovém formátu.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.cs.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.cs.png" alt="Constrained Output Demo" width="800"/>
 
 *Shrnutí strojového učení s kontrolou formátu*
 
@@ -445,7 +445,7 @@ GPT-5 vám umožňuje řídit výpočetní úsilí pomocí vašich promptů. Ní
 
 Všimli jste si XML tagů v promptech? Nejsou jen dekorativní. Modely spolehlivěji následují strukturované instrukce než volný text. Když potřebujete vícekrokové procesy nebo složitou logiku, struktura pomáhá modelu sledovat, kde je a co přijde dál.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.cs.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.cs.png" alt="Prompt Structure" width="800"/>
 
 *Anatomie dobře strukturovaného promptu s jasnými sekcemi a organizací ve stylu XML*
 

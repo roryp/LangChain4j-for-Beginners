@@ -49,7 +49,7 @@ RAG（檢索增強生成）解決了這個問題。它不是試圖教模型你�
 
 這讓模型的回答基於你的實際資料，而不是依賴其訓練知識或憑空捏造答案。
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.tw.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.tw.png" alt="RAG Architecture" width="800"/>
 
 *RAG 工作流程 - 從使用者查詢到語意搜尋再到上下文答案生成*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.tw.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.tw.png" alt="Vector Embeddings Space" width="800"/>
 
 *文件在嵌入空間中以向量表示——相似內容會聚集在一起*
 
@@ -152,7 +152,7 @@ cat ../.env  # 應該顯示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只要點擊 "rag" 旁的播放按鈕即可啟動此模組，或一次啟動所有模組。
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.tw.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.tw.png" alt="Spring Boot Dashboard" width="400"/>
 
 **選項 2：使用 shell 腳本**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 此應用程式提供文件上傳與提問的網頁介面。
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.tw.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.tw.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG 應用介面 - 上傳文件並提問*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 注意每個答案都包含來源參考與相似度分數。這些分數（0 到 1）顯示每個分塊與你問題的相關程度。分數越高表示匹配越好。這讓你可以對照來源資料驗證答案。
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.tw.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.tw.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *查詢結果顯示答案及來源參考與相關分數*
 

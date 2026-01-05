@@ -1,63 +1,63 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T19:49:55+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-30T19:31:32+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "es"
 }
 -->
 # Glosario de LangChain4j
 
-## Tabla de Contenidos
+## Tabla de contenidos
 
-- [Conceptos Básicos](../../../docs)
+- [Conceptos clave](../../../docs)
 - [Componentes de LangChain4j](../../../docs)
 - [Conceptos de IA/ML](../../../docs)
-- [Ingeniería de Prompts](../../../docs)
-- [RAG (Generación Aumentada por Recuperación)](../../../docs)
+- [Ingeniería de prompts](../../../docs)
+- [RAG (Generación aumentada con recuperación)](../../../docs)
 - [Agentes y Herramientas](../../../docs)
 - [Protocolo de Contexto de Modelo (MCP)](../../../docs)
 - [Servicios de Azure](../../../docs)
 - [Pruebas y Desarrollo](../../../docs)
 
-Referencia rápida para términos y conceptos usados a lo largo del curso.
+Referencia rápida de términos y conceptos utilizados a lo largo del curso.
 
-## Conceptos Básicos
+## Conceptos clave
 
-**Agente de IA** - Sistema que usa IA para razonar y actuar de forma autónoma. [Módulo 04](../04-tools/README.md)
+**Agente de IA** - Sistema que utiliza IA para razonar y actuar de forma autónoma. [Módulo 04](../04-tools/README.md)
 
 **Cadena** - Secuencia de operaciones donde la salida alimenta el siguiente paso.
 
 **Fragmentación** - Dividir documentos en piezas más pequeñas. Típico: 300-500 tokens con solapamiento. [Módulo 03](../03-rag/README.md)
 
-**Ventana de Contexto** - Máximo de tokens que un modelo puede procesar. GPT-5: 400K tokens.
+**Ventana de contexto** - Máximo de tokens que un modelo puede procesar. GPT-5: 400K tokens.
 
 **Embeddings** - Vectores numéricos que representan el significado del texto. [Módulo 03](../03-rag/README.md)
 
-**Llamada a Función** - El modelo genera solicitudes estructuradas para llamar funciones externas. [Módulo 04](../04-tools/README.md)
+**Llamado de funciones** - El modelo genera solicitudes estructuradas para llamar funciones externas. [Módulo 04](../04-tools/README.md)
 
 **Alucinación** - Cuando los modelos generan información incorrecta pero plausible.
 
-**Prompt** - Entrada de texto para un modelo de lenguaje. [Módulo 02](../02-prompt-engineering/README.md)
+**Prompt** - Entrada de texto a un modelo de lenguaje. [Módulo 02](../02-prompt-engineering/README.md)
 
-**Búsqueda Semántica** - Búsqueda por significado usando embeddings, no palabras clave. [Módulo 03](../03-rag/README.md)
+**Búsqueda semántica** - Búsqueda por significado usando embeddings, no palabras clave. [Módulo 03](../03-rag/README.md)
 
-**Con Estado vs Sin Estado** - Sin estado: sin memoria. Con estado: mantiene historial de conversación. [Módulo 01](../01-introduction/README.md)
+**Con estado vs Sin estado** - Sin estado: sin memoria. Con estado: mantiene historial de conversación. [Módulo 01](../01-introduction/README.md)
 
 **Tokens** - Unidades básicas de texto que los modelos procesan. Afecta costos y límites. [Módulo 01](../01-introduction/README.md)
 
-**Encadenamiento de Herramientas** - Ejecución secuencial de herramientas donde la salida informa la siguiente llamada. [Módulo 04](../04-tools/README.md)
+**Encadenamiento de herramientas** - Ejecución secuencial de herramientas donde la salida informa la siguiente llamada. [Módulo 04](../04-tools/README.md)
 
 ## Componentes de LangChain4j
 
 **AiServices** - Crea interfaces de servicio de IA con tipado seguro.
 
-**OpenAiOfficialChatModel** - Cliente unificado para modelos OpenAI y Azure OpenAI.
+**OpenAiOfficialChatModel** - Cliente unificado para modelos de OpenAI y Azure OpenAI.
 
-**OpenAiOfficialEmbeddingModel** - Crea embeddings usando cliente oficial de OpenAI (soporta OpenAI y Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Crea embeddings usando el cliente oficial de OpenAI (soporta tanto OpenAI como Azure OpenAI).
 
-**ChatModel** - Interfaz principal para modelos de lenguaje.
+**ChatModel** - Interfaz central para modelos de lenguaje.
 
 **ChatMemory** - Mantiene el historial de conversación.
 
@@ -71,89 +71,83 @@ Referencia rápida para términos y conceptos usados a lo largo del curso.
 
 **MessageWindowChatMemory** - Mantiene una ventana deslizante de mensajes recientes.
 
-**PromptTemplate** - Crea prompts reutilizables con marcadores `{{variable}}`.
+**PromptTemplate** - Crea prompts reutilizables con `{{variable}}` placeholders.
 
 **TextSegment** - Fragmento de texto con metadatos. Usado en RAG.
 
 **ToolExecutionRequest** - Representa una solicitud de ejecución de herramienta.
 
-**UserMessage / AiMessage / SystemMessage** - Tipos de mensajes en la conversación.
+**UserMessage / AiMessage / SystemMessage** - Tipos de mensajes de conversación.
 
 ## Conceptos de IA/ML
 
-**Aprendizaje con Pocos Ejemplos** - Proveer ejemplos en los prompts. [Módulo 02](../02-prompt-engineering/README.md)
+**Aprendizaje Few-Shot** - Proporcionar ejemplos en los prompts. [Módulo 02](../02-prompt-engineering/README.md)
 
-**Modelo de Lenguaje Grande (LLM)** - Modelos de IA entrenados con grandes cantidades de texto.
+**Modelo de lenguaje grande (LLM)** - Modelos de IA entrenados en grandes cantidades de texto.
 
-**Esfuerzo de Razonamiento** - Parámetro de GPT-5 que controla la profundidad del pensamiento. [Módulo 02](../02-prompt-engineering/README.md)
+**Esfuerzo de razonamiento** - Parámetro de GPT-5 que controla la profundidad del pensamiento. [Módulo 02](../02-prompt-engineering/README.md)
 
 **Temperatura** - Controla la aleatoriedad de la salida. Bajo=determinista, alto=creativo.
 
-**Base de Datos Vectorial** - Base de datos especializada para embeddings. [Módulo 03](../03-rag/README.md)
+**Base de datos vectorial** - Base de datos especializada para embeddings. [Módulo 03](../03-rag/README.md)
 
-**Aprendizaje Sin Ejemplos** - Realizar tareas sin ejemplos. [Módulo 02](../02-prompt-engineering/README.md)
+**Aprendizaje Zero-Shot** - Realizar tareas sin ejemplos. [Módulo 02](../02-prompt-engineering/README.md)
 
-## Ingeniería de Prompts - [Módulo 02](../02-prompt-engineering/README.md)
+## Ingeniería de prompts - [Módulo 02](../02-prompt-engineering/README.md)
 
-**Cadena de Pensamiento** - Razonamiento paso a paso para mayor precisión.
+**Cadena de pensamiento** - Razonamiento paso a paso para mayor precisión.
 
-**Salida Restringida** - Imponer formato o estructura específica.
+**Salida restringida** - Imponer un formato o estructura específicos.
 
-**Alta Disposición** - Patrón GPT-5 para razonamiento exhaustivo.
+**Alta disposición** - Patrón de GPT-5 para razonamiento exhaustivo.
 
-**Baja Disposición** - Patrón GPT-5 para respuestas rápidas.
+**Baja disposición** - Patrón de GPT-5 para respuestas rápidas.
 
-**Conversación Multi-Turno** - Mantener contexto a través de intercambios.
+**Conversación de varios turnos** - Mantener el contexto a lo largo de los intercambios.
 
-**Prompt Basado en Roles** - Definir la persona del modelo mediante mensajes del sistema.
+**Prompts basados en roles** - Configurar la persona del modelo mediante mensajes del sistema.
 
 **Autorreflexión** - El modelo evalúa y mejora su salida.
 
-**Análisis Estructurado** - Marco fijo de evaluación.
+**Análisis estructurado** - Marco de evaluación fijo.
 
-**Patrón de Ejecución de Tareas** - Planificar → Ejecutar → Resumir.
+**Patrón de ejecución de tareas** - Plan → Ejecutar → Resumir.
 
-## RAG (Generación Aumentada por Recuperación) - [Módulo 03](../03-rag/README.md)
+## RAG (Generación aumentada con recuperación) - [Módulo 03](../03-rag/README.md)
 
-**Pipeline de Procesamiento de Documentos** - Cargar → fragmentar → embed → almacenar.
+**Pipeline de procesamiento de documentos** - Cargar → fragmentar → incrustar → almacenar.
 
-**Almacenamiento de Embeddings en Memoria** - Almacenamiento no persistente para pruebas.
+**Almacenamiento de embeddings en memoria** - Almacenamiento no persistente para pruebas.
 
-**RAG** - Combina recuperación con generación para fundamentar respuestas.
+**RAG** - Combina recuperación con generación para fundamentar las respuestas.
 
-**Puntaje de Similitud** - Medida (0-1) de similitud semántica.
+**Puntuación de similitud** - Medida (0-1) de similitud semántica.
 
-**Referencia de Fuente** - Metadatos sobre contenido recuperado.
+**Referencia de fuente** - Metadatos sobre el contenido recuperado.
 
 ## Agentes y Herramientas - [Módulo 04](../04-tools/README.md)
 
-**Anotación @Tool** - Marca métodos Java como herramientas llamables por IA.
+**Anotación @Tool** - Marca métodos Java como herramientas invocables por IA.
 
 **Patrón ReAct** - Razonar → Actuar → Observar → Repetir.
 
-**Gestión de Sesiones** - Contextos separados para diferentes usuarios.
+**Gestión de sesiones** - Contextos separados para diferentes usuarios.
 
 **Herramienta** - Función que un agente de IA puede llamar.
 
-**Descripción de Herramienta** - Documentación del propósito y parámetros de la herramienta.
+**Descripción de la herramienta** - Documentación del propósito y los parámetros de la herramienta.
 
 ## Protocolo de Contexto de Modelo (MCP) - [Módulo 05](../05-mcp/README.md)
 
-**Transporte Docker** - Servidor MCP en contenedor Docker.
-
-**MCP** - Estándar para conectar apps de IA con herramientas externas.
+**MCP** - Estándar para conectar aplicaciones de IA con herramientas externas.
 
 **Cliente MCP** - Aplicación que se conecta a servidores MCP.
 
 **Servidor MCP** - Servicio que expone herramientas vía MCP.
 
-**Eventos Enviados por el Servidor (SSE)** - Streaming servidor-cliente sobre HTTP.
-
 **Transporte Stdio** - Servidor como subproceso vía stdin/stdout.
 
-**Transporte HTTP Transmisible** - HTTP con SSE para comunicación en tiempo real.
-
-**Descubrimiento de Herramientas** - Cliente consulta al servidor por herramientas disponibles.
+**Descubrimiento de herramientas** - El cliente consulta al servidor por las herramientas disponibles.
 
 ## Servicios de Azure - [Módulo 01](../01-introduction/README.md)
 
@@ -161,35 +155,33 @@ Referencia rápida para términos y conceptos usados a lo largo del curso.
 
 **Azure Developer CLI (azd)** - Despliega recursos de Azure.
 
-**Azure OpenAI** - Servicio empresarial de IA de Microsoft.
+**Azure OpenAI** - Servicio de IA empresarial de Microsoft.
 
-**Bicep** - Lenguaje de infraestructura como código para Azure. [Guía de Infraestructura](../01-introduction/infra/README.md)
+**Bicep** - Lenguaje de infraestructura como código para Azure. [Guía de infraestructura](../01-introduction/infra/README.md)
 
-**Nombre de Despliegue** - Nombre para despliegue de modelo en Azure.
+**Nombre de despliegue** - Nombre para el despliegue del modelo en Azure.
 
 **GPT-5** - Último modelo de OpenAI con control de razonamiento. [Módulo 02](../02-prompt-engineering/README.md)
 
-## Pruebas y Desarrollo - [Guía de Pruebas](TESTING.md)
+## Pruebas y Desarrollo - [Guía de pruebas](TESTING.md)
 
-**Contenedor de Desarrollo** - Entorno de desarrollo en contenedor. [Configuración](../../../.devcontainer/devcontainer.json)
+**Dev Container** - Entorno de desarrollo en contenedor. [Configuración](../../../.devcontainer/devcontainer.json)
 
-**Modelos GitHub** - Playground gratuito de modelos de IA. [Módulo 00](../00-quick-start/README.md)
+**GitHub Models** - Entorno gratuito para modelos de IA. [Módulo 00](../00-quick-start/README.md)
 
-**Pruebas en Memoria** - Pruebas con almacenamiento en memoria.
+**Pruebas en memoria** - Pruebas con almacenamiento en memoria.
 
-**Pruebas de Integración** - Pruebas con infraestructura real.
+**Pruebas de integración** - Pruebas con infraestructura real.
 
 **Maven** - Herramienta de automatización de compilación para Java.
 
-**Mockito** - Framework de simulación para Java.
+**Mockito** - Framework de mocking para Java.
 
 **Spring Boot** - Framework de aplicaciones Java. [Módulo 01](../01-introduction/README.md)
-
-**Testcontainers** - Contenedores Docker en pruebas.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Aviso legal**:
-Este documento ha sido traducido utilizando el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por la precisión, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción profesional realizada por humanos. No nos hacemos responsables de malentendidos o interpretaciones erróneas derivadas del uso de esta traducción.
+**Descargo de responsabilidad**:
+Este documento ha sido traducido mediante el servicio de traducción automática [Co-op Translator](https://github.com/Azure/co-op-translator). Aunque nos esforzamos por lograr exactitud, tenga en cuenta que las traducciones automáticas pueden contener errores o inexactitudes. El documento original en su idioma nativo debe considerarse la fuente autorizada. Para información crítica, se recomienda una traducción humana profesional. No nos hacemos responsables de ningún malentendido o interpretación errónea que surja del uso de esta traducción.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

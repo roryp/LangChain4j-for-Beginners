@@ -1,76 +1,78 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "aa23f106e7f53270924c9dd39c629004",
-  "translation_date": "2025-12-13T19:10:10+00:00",
+  "original_hash": "13ec450c12cdd1a863baa2b778f27cd7",
+  "translation_date": "2025-12-31T03:02:30+00:00",
   "source_file": "04-tools/README.md",
   "language_code": "id"
 }
 -->
-# Modul 04: Agen AI dengan Alat
+# Module 04: Agen AI dengan Alat
 
-## Daftar Isi
+## Table of Contents
 
-- [Apa yang Akan Anda Pelajari](../../../04-tools)
-- [Prasyarat](../../../04-tools)
-- [Memahami Agen AI dengan Alat](../../../04-tools)
-- [Cara Kerja Pemanggilan Alat](../../../04-tools)
-  - [Definisi Alat](../../../04-tools)
-  - [Pengambilan Keputusan](../../../04-tools)
-  - [Eksekusi](../../../04-tools)
-  - [Pembuatan Respons](../../../04-tools)
-- [Rangkaian Alat](../../../04-tools)
-- [Jalankan Aplikasi](../../../04-tools)
-- [Menggunakan Aplikasi](../../../04-tools)
-  - [Coba Penggunaan Alat Sederhana](../../../04-tools)
-  - [Uji Rangkaian Alat](../../../04-tools)
-  - [Lihat Alur Percakapan](../../../04-tools)
-  - [Amati Penalaran](../../../04-tools)
-  - [Eksperimen dengan Permintaan Berbeda](../../../04-tools)
-- [Konsep Kunci](../../../04-tools)
-  - [Pola ReAct (Penalaran dan Bertindak)](../../../04-tools)
-  - [Deskripsi Alat Penting](../../../04-tools)
-  - [Manajemen Sesi](../../../04-tools)
-  - [Penanganan Kesalahan](../../../04-tools)
-- [Alat yang Tersedia](../../../04-tools)
-- [Kapan Menggunakan Agen Berbasis Alat](../../../04-tools)
-- [Langkah Selanjutnya](../../../04-tools)
+- [What You'll Learn](../../../04-tools)
+- [Prerequisites](../../../04-tools)
+- [Understanding AI Agents with Tools](../../../04-tools)
+- [How Tool Calling Works](../../../04-tools)
+  - [Tool Definitions](../../../04-tools)
+  - [Decision Making](../../../04-tools)
+  - [Execution](../../../04-tools)
+  - [Response Generation](../../../04-tools)
+- [Tool Chaining](../../../04-tools)
+- [Run the Application](../../../04-tools)
+- [Using the Application](../../../04-tools)
+  - [Try Simple Tool Usage](../../../04-tools)
+  - [Test Tool Chaining](../../../04-tools)
+  - [See Conversation Flow](../../../04-tools)
+  - [Observe the Reasoning](../../../04-tools)
+  - [Experiment with Different Requests](../../../04-tools)
+- [Key Concepts](../../../04-tools)
+  - [ReAct Pattern (Reasoning and Acting)](../../../04-tools)
+  - [Tool Descriptions Matter](../../../04-tools)
+  - [Session Management](../../../04-tools)
+  - [Error Handling](../../../04-tools)
+- [Available Tools](../../../04-tools)
+- [When to Use Tool-Based Agents](../../../04-tools)
+- [Next Steps](../../../04-tools)
 
-## Apa yang Akan Anda Pelajari
+## What You'll Learn
 
-Sejauh ini, Anda telah belajar bagaimana melakukan percakapan dengan AI, menyusun prompt secara efektif, dan mendasarkan respons pada dokumen Anda. Namun masih ada keterbatasan mendasar: model bahasa hanya dapat menghasilkan teks. Mereka tidak bisa memeriksa cuaca, melakukan perhitungan, mengquery basis data, atau berinteraksi dengan sistem eksternal.
+Sejauh ini, Anda telah belajar bagaimana melakukan percakapan dengan AI, menyusun prompt secara efektif, dan mengaitkan respons dengan dokumen Anda. Namun masih ada batasan mendasar: model bahasa hanya bisa menghasilkan teks. Mereka tidak bisa memeriksa cuaca, melakukan perhitungan, mengquery basis data, atau berinteraksi dengan sistem eksternal.
 
-Alat mengubah ini. Dengan memberikan model akses ke fungsi yang dapat dipanggil, Anda mengubahnya dari generator teks menjadi agen yang dapat mengambil tindakan. Model memutuskan kapan ia membutuhkan alat, alat mana yang digunakan, dan parameter apa yang diberikan. Kode Anda mengeksekusi fungsi dan mengembalikan hasilnya. Model menggabungkan hasil itu ke dalam responsnya.
+Alat mengubah hal ini. Dengan memberikan model akses ke fungsi yang dapat dipanggil, Anda mengubahnya dari generator teks menjadi agen yang dapat mengambil tindakan. Model memutuskan kapan ia membutuhkan alat, alat mana yang digunakan, dan parameter apa yang dikirim. Kode Anda mengeksekusi fungsi dan mengembalikan hasil. Model menggabungkan hasil itu ke dalam responsnya.
 
-## Prasyarat
+## Prerequisites
 
-- Menyelesaikan Modul 01 (sumber daya Azure OpenAI sudah dideploy)
-- File `.env` di direktori root dengan kredensial Azure (dibuat oleh `azd up` di Modul 01)
+- Menyelesaikan Module 01 (sumber daya Azure OpenAI dideploy)
+- File `.env` di direktori root dengan kredensial Azure (dibuat oleh `azd up` di Module 01)
 
-> **Catatan:** Jika Anda belum menyelesaikan Modul 01, ikuti instruksi deployment di sana terlebih dahulu.
+> **Note:** Jika Anda belum menyelesaikan Module 01, ikuti instruksi deployment di sana terlebih dahulu.
 
-## Memahami Agen AI dengan Alat
+## Understanding AI Agents with Tools
 
-Agen AI dengan alat mengikuti pola penalaran dan bertindak (ReAct):
+> **📝 Note:** Istilah "agents" dalam modul ini merujuk pada asisten AI yang ditingkatkan dengan kemampuan pemanggilan alat. Ini berbeda dari pola **Agentic AI** (agen otonom dengan perencanaan, memori, dan penalaran multi-langkah) yang akan kita bahas di [Module 05: MCP](../05-mcp/README.md).
+
+Agen AI dengan alat mengikuti pola penalaran dan tindakan (ReAct):
 
 1. Pengguna mengajukan pertanyaan
 2. Agen menganalisis apa yang perlu diketahuinya
-3. Agen memutuskan apakah perlu alat untuk menjawab
-4. Jika ya, agen memanggil alat yang sesuai dengan parameter yang tepat
+3. Agen memutuskan apakah dia membutuhkan alat untuk menjawab
+4. Jika ya, agen memanggil alat yang sesuai dengan parameter yang benar
 5. Alat mengeksekusi dan mengembalikan data
 6. Agen menggabungkan hasil dan memberikan jawaban akhir
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13ae5b0218d4e91befabc04e00f97539df14f93d1ad9b8516f.id.png" alt="Pola ReAct" width="800"/>
+<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.id.png" alt="Pola ReAct" width="800"/>
 
-*Pola ReAct - bagaimana agen AI bergantian antara penalaran dan bertindak untuk memecahkan masalah*
+*Pola ReAct - bagaimana agen AI bergantian antara menalar dan bertindak untuk menyelesaikan masalah*
 
 Ini terjadi secara otomatis. Anda mendefinisikan alat dan deskripsinya. Model menangani pengambilan keputusan tentang kapan dan bagaimana menggunakannya.
 
-## Cara Kerja Pemanggilan Alat
+## How Tool Calling Works
 
-**Definisi Alat** - [WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
+**Tool Definitions** - [WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
 
-Anda mendefinisikan fungsi dengan deskripsi yang jelas dan spesifikasi parameter. Model melihat deskripsi ini dalam prompt sistemnya dan memahami apa yang dilakukan setiap alat.
+Anda mendefinisikan fungsi dengan deskripsi yang jelas dan spesifikasi parameter. Model melihat deskripsi ini dalam system prompt dan memahami apa yang dilakukan setiap alat.
 
 ```java
 @Component
@@ -88,89 +90,89 @@ public interface Assistant {
     String chat(@MemoryId String sessionId, @UserMessage String message);
 }
 
-// Asisten secara otomatis dihubungkan oleh Spring Boot dengan:
-// - Bean ChatModel
+// Assistant secara otomatis dikonfigurasi oleh Spring Boot dengan:
+// - bean ChatModel
 // - Semua metode @Tool dari kelas @Component
 // - ChatMemoryProvider untuk manajemen sesi
 ```
 
-> **🤖 Coba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) dan tanyakan:
-> - "Bagaimana saya mengintegrasikan API cuaca nyata seperti OpenWeatherMap daripada data tiruan?"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) and ask:
+> - "Bagaimana saya mengintegrasikan API cuaca nyata seperti OpenWeatherMap alih-alih data tiruan?"
 > - "Apa yang membuat deskripsi alat yang baik sehingga membantu AI menggunakannya dengan benar?"
-> - "Bagaimana saya menangani kesalahan API dan batasan rate dalam implementasi alat?"
+> - "Bagaimana saya menangani error API dan batasan rate dalam implementasi alat?"
 
-**Pengambilan Keputusan**
+**Decision Making**
 
-Ketika pengguna bertanya "Bagaimana cuaca di Seattle?", model mengenali bahwa ia membutuhkan alat cuaca. Ia menghasilkan panggilan fungsi dengan parameter lokasi diatur ke "Seattle".
+Ketika pengguna bertanya "What's the weather in Seattle?", model mengenali bahwa ia membutuhkan alat cuaca. Ia menghasilkan pemanggilan fungsi dengan parameter lokasi diatur ke "Seattle".
 
-**Eksekusi** - [AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
+**Execution** - [AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
 
-Spring Boot secara otomatis menghubungkan interface deklaratif `@AiService` dengan semua alat yang terdaftar, dan LangChain4j mengeksekusi panggilan alat secara otomatis.
+Spring Boot meng-autowire antarmuka deklaratif `@AiService` dengan semua alat yang terdaftar, dan LangChain4j mengeksekusi pemanggilan alat secara otomatis.
 
-> **🤖 Coba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) dan tanyakan:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) and ask:
 > - "Bagaimana pola ReAct bekerja dan mengapa efektif untuk agen AI?"
 > - "Bagaimana agen memutuskan alat mana yang digunakan dan dalam urutan apa?"
-> - "Apa yang terjadi jika eksekusi alat gagal - bagaimana saya harus menangani kesalahan dengan kuat?"
+> - "Apa yang terjadi jika eksekusi alat gagal - bagaimana saya harus menangani error secara tangguh?"
 
-**Pembuatan Respons**
+**Response Generation**
 
 Model menerima data cuaca dan memformatnya menjadi respons bahasa alami untuk pengguna.
 
-### Mengapa Menggunakan Layanan AI Deklaratif?
+### Why Use Declarative AI Services?
 
-Modul ini menggunakan integrasi LangChain4j dengan Spring Boot melalui interface deklaratif `@AiService`:
+Modul ini menggunakan integrasi Spring Boot LangChain4j dengan antarmuka deklaratif `@AiService`:
 
-- **Spring Boot auto-wiring** - ChatModel dan alat disuntikkan otomatis
-- **Pola @MemoryId** - Manajemen memori berbasis sesi otomatis
-- **Instance tunggal** - Asisten dibuat sekali dan digunakan ulang untuk performa lebih baik
-- **Eksekusi tipe-aman** - Metode Java dipanggil langsung dengan konversi tipe
-- **Orkestrasi multi-turn** - Menangani rangkaian alat secara otomatis
-- **Tanpa boilerplate** - Tidak perlu panggilan manual AiServices.builder() atau HashMap memori
+- **Spring Boot auto-wiring** - ChatModel dan alat diinject secara otomatis
+- **@MemoryId pattern** - Manajemen memori berbasis sesi otomatis
+- **Single instance** - Asisten dibuat sekali dan digunakan ulang untuk kinerja lebih baik
+- **Type-safe execution** - Metode Java dipanggil langsung dengan konversi tipe
+- **Multi-turn orchestration** - Menangani chaining alat secara otomatis
+- **Zero boilerplate** - Tidak ada pemanggilan manual AiServices.builder() atau HashMap memori
 
-Pendekatan alternatif (manual `AiServices.builder()`) membutuhkan lebih banyak kode dan kehilangan manfaat integrasi Spring Boot.
+Pendekatan alternatif (manual `AiServices.builder()`) membutuhkan lebih banyak kode dan kehilangan keuntungan integrasi Spring Boot.
 
-## Rangkaian Alat
+## Tool Chaining
 
-**Rangkaian Alat** - AI mungkin memanggil beberapa alat secara berurutan. Tanyakan "Bagaimana cuaca di Seattle dan apakah saya harus membawa payung?" dan lihat bagaimana ia merangkai `getCurrentWeather` dengan penalaran tentang perlengkapan hujan.
+**Tool Chaining** - AI mungkin memanggil beberapa alat secara berurutan. Tanyakan "What's the weather in Seattle and should I bring an umbrella?" dan saksikan ia menggabungkan `getCurrentWeather` dengan penalaran tentang perlengkapan hujan.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b1d54117d54ba382c21c51176aaf3800084cae2e7dfc82508.id.png" alt="Rangkaian Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.id.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Panggilan alat berurutan - output satu alat menjadi input keputusan berikutnya*
+*Panggilan alat berurutan - keluaran satu alat memberi masukan ke keputusan berikutnya*
 
-**Kegagalan yang Anggun** - Minta cuaca di kota yang tidak ada dalam data tiruan. Alat mengembalikan pesan kesalahan, dan AI menjelaskan bahwa ia tidak bisa membantu. Alat gagal dengan aman.
+**Graceful Failures** - Minta cuaca di kota yang tidak ada di data tiruan. Alat mengembalikan pesan error, dan AI menjelaskan bahwa ia tidak bisa membantu. Alat gagal dengan aman.
 
-Ini terjadi dalam satu putaran percakapan. Agen mengorkestrasi beberapa panggilan alat secara mandiri.
+Ini terjadi dalam satu giliran percakapan. Agen mengorkestrasi beberapa pemanggilan alat secara otonom.
 
-## Jalankan Aplikasi
+## Run the Application
 
-**Verifikasi deployment:**
+**Verify deployment:**
 
-Pastikan file `.env` ada di direktori root dengan kredensial Azure (dibuat selama Modul 01):
+Pastikan file `.env` ada di direktori root dengan kredensial Azure (dibuat selama Module 01):
 ```bash
 cat ../.env  # Harus menampilkan AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
-**Mulai aplikasi:**
+**Start the application:**
 
-> **Catatan:** Jika Anda sudah memulai semua aplikasi menggunakan `./start-all.sh` dari Modul 01, modul ini sudah berjalan di port 8084. Anda bisa melewati perintah start di bawah dan langsung ke http://localhost:8084.
+> **Note:** Jika Anda sudah memulai semua aplikasi menggunakan `./start-all.sh` dari Module 01, modul ini sudah berjalan di port 8084. Anda dapat melewatkan perintah start di bawah dan langsung ke http://localhost:8084.
 
-**Opsi 1: Menggunakan Spring Boot Dashboard (Direkomendasikan untuk pengguna VS Code)**
+**Option 1: Using Spring Boot Dashboard (Recommended for VS Code users)**
 
-Dev container menyertakan ekstensi Spring Boot Dashboard, yang menyediakan antarmuka visual untuk mengelola semua aplikasi Spring Boot. Anda dapat menemukannya di Activity Bar di sisi kiri VS Code (cari ikon Spring Boot).
+Dev container menyertakan ekstensi Spring Boot Dashboard, yang menyediakan antarmuka visual untuk mengelola semua aplikasi Spring Boot. Anda dapat menemukannya di Activity Bar di sebelah kiri VS Code (cari ikon Spring Boot).
 
 Dari Spring Boot Dashboard, Anda dapat:
 - Melihat semua aplikasi Spring Boot yang tersedia di workspace
-- Memulai/menghentikan aplikasi dengan satu klik
+- Memulai/stop aplikasi dengan satu klik
 - Melihat log aplikasi secara real-time
 - Memantau status aplikasi
 
 Cukup klik tombol play di sebelah "tools" untuk memulai modul ini, atau mulai semua modul sekaligus.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30af495a594f5c0213fecdbdf5bd9fb543d3c5467565773974a.id.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.id.png" alt="Spring Boot Dashboard" width="400"/>
 
-**Opsi 2: Menggunakan skrip shell**
+**Option 2: Using shell scripts**
 
-Mulai semua aplikasi web (modul 01-04):
+Mulai semua aplikasi web (module 01-04):
 
 **Bash:**
 ```bash
@@ -198,9 +200,9 @@ cd 04-tools
 .\start.ps1
 ```
 
-Kedua skrip secara otomatis memuat variabel lingkungan dari file `.env` root dan akan membangun JAR jika belum ada.
+Kedua skrip otomatis memuat variabel lingkungan dari file `.env` root dan akan membangun JAR jika belum ada.
 
-> **Catatan:** Jika Anda lebih suka membangun semua modul secara manual sebelum memulai:
+> **Note:** Jika Anda lebih suka membangun semua modul secara manual sebelum memulai:
 >
 > **Bash:**
 > ```bash
@@ -216,7 +218,7 @@ Kedua skrip secara otomatis memuat variabel lingkungan dari file `.env` root dan
 
 Buka http://localhost:8084 di browser Anda.
 
-**Untuk menghentikan:**
+**To stop:**
 
 **Bash:**
 ```bash
@@ -232,64 +234,64 @@ cd .. && ./stop-all.sh  # Semua modul
 cd ..; .\stop-all.ps1  # Semua modul
 ```
 
-## Menggunakan Aplikasi
+## Using the Application
 
 Aplikasi menyediakan antarmuka web di mana Anda dapat berinteraksi dengan agen AI yang memiliki akses ke alat cuaca dan konversi suhu.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f96216024b45b493ca1cd84935d6856416ea7a383b42f280d648c.id.png" alt="Antarmuka Alat Agen AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.id.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Antarmuka Alat Agen AI - contoh cepat dan antarmuka chat untuk berinteraksi dengan alat*
+*Antarmuka AI Agent Tools - contoh cepat dan antarmuka chat untuk berinteraksi dengan alat*
 
-**Coba Penggunaan Alat Sederhana**
+**Try Simple Tool Usage**
 
-Mulailah dengan permintaan sederhana: "Konversi 100 derajat Fahrenheit ke Celsius". Agen mengenali bahwa ia membutuhkan alat konversi suhu, memanggilnya dengan parameter yang tepat, dan mengembalikan hasilnya. Perhatikan betapa alami rasanya - Anda tidak perlu menentukan alat mana yang digunakan atau bagaimana memanggilnya.
+Mulailah dengan permintaan sederhana: "Convert 100 degrees Fahrenheit to Celsius". Agen mengenali bahwa ia membutuhkan alat konversi suhu, memanggilnya dengan parameter yang tepat, dan mengembalikan hasil. Perhatikan betapa alami rasanya — Anda tidak menentukan alat mana yang digunakan atau bagaimana memanggilnya.
 
-**Uji Rangkaian Alat**
+**Test Tool Chaining**
 
-Sekarang coba sesuatu yang lebih kompleks: "Bagaimana cuaca di Seattle dan konversikan ke Fahrenheit?" Amati agen bekerja melalui langkah-langkah ini. Ia pertama mendapatkan cuaca (yang mengembalikan dalam Celsius), mengenali bahwa ia perlu mengonversi ke Fahrenheit, memanggil alat konversi, dan menggabungkan kedua hasil menjadi satu respons.
+Sekarang coba sesuatu yang lebih kompleks: "What's the weather in Seattle and convert it to Fahrenheit?" Saksikan agen bekerja melalui langkah-langkah ini. Pertama ia mendapatkan cuaca (yang mengembalikan Celsius), mengenali bahwa perlu mengonversi ke Fahrenheit, memanggil alat konversi, dan menggabungkan kedua hasil menjadi satu respons.
 
-**Lihat Alur Percakapan**
+**See Conversation Flow**
 
-Antarmuka chat menyimpan riwayat percakapan, memungkinkan Anda melakukan interaksi multi-putaran. Anda dapat melihat semua pertanyaan dan respons sebelumnya, memudahkan melacak percakapan dan memahami bagaimana agen membangun konteks selama beberapa pertukaran.
+Antarmuka chat mempertahankan riwayat percakapan, memungkinkan Anda melakukan interaksi multi-giliran. Anda dapat melihat semua kueri dan respons sebelumnya, membuatnya mudah untuk melacak percakapan dan memahami bagaimana agen membangun konteks selama beberapa pertukaran.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f596acc43e227bf70f3c0d6030ad91d84df81070abf08848608.id.png" alt="Percakapan dengan Beberapa Panggilan Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.id.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Percakapan multi-putaran yang menunjukkan konversi sederhana, pencarian cuaca, dan rangkaian alat*
+*Percakapan multi-giliran menunjukkan konversi sederhana, pencarian cuaca, dan chaining alat*
 
-**Eksperimen dengan Permintaan Berbeda**
+**Experiment with Different Requests**
 
 Coba berbagai kombinasi:
-- Pencarian cuaca: "Bagaimana cuaca di Tokyo?"
-- Konversi suhu: "Berapa 25°C dalam Kelvin?"
-- Query gabungan: "Periksa cuaca di Paris dan beri tahu saya jika di atas 20°C"
+- Pencarian cuaca: "What's the weather in Tokyo?"
+- Konversi suhu: "What is 25°C in Kelvin?"
+- Kueri gabungan: "Check the weather in Paris and tell me if it's above 20°C"
 
-Perhatikan bagaimana agen menginterpretasikan bahasa alami dan memetakan ke panggilan alat yang sesuai.
+Perhatikan bagaimana agen menginterpretasikan bahasa alami dan memetakan ke pemanggilan alat yang sesuai.
 
-## Konsep Kunci
+## Key Concepts
 
-**Pola ReAct (Penalaran dan Bertindak)**
+**ReAct Pattern (Reasoning and Acting)**
 
-Agen bergantian antara penalaran (memutuskan apa yang harus dilakukan) dan bertindak (menggunakan alat). Pola ini memungkinkan pemecahan masalah secara otonom daripada hanya merespons instruksi.
+Agen bergantian antara menalar (memutuskan apa yang harus dilakukan) dan bertindak (menggunakan alat). Pola ini memungkinkan pemecahan masalah secara otonom daripada sekadar menanggapi instruksi.
 
-**Deskripsi Alat Penting**
+**Tool Descriptions Matter**
 
 Kualitas deskripsi alat Anda secara langsung memengaruhi seberapa baik agen menggunakannya. Deskripsi yang jelas dan spesifik membantu model memahami kapan dan bagaimana memanggil setiap alat.
 
-**Manajemen Sesi**
+**Session Management**
 
-Anotasi `@MemoryId` memungkinkan manajemen memori berbasis sesi otomatis. Setiap ID sesi mendapatkan instance `ChatMemory` sendiri yang dikelola oleh bean `ChatMemoryProvider`, menghilangkan kebutuhan pelacakan memori manual.
+Annotasi `@MemoryId` memungkinkan manajemen memori berbasis sesi secara otomatis. Setiap ID sesi mendapatkan instans `ChatMemory` sendiri yang dikelola oleh bean `ChatMemoryProvider`, menghilangkan kebutuhan pelacakan memori manual.
 
-**Penanganan Kesalahan**
+**Error Handling**
 
-Alat bisa gagal - API timeout, parameter mungkin tidak valid, layanan eksternal turun. Agen produksi membutuhkan penanganan kesalahan agar model dapat menjelaskan masalah atau mencoba alternatif.
+Alat bisa gagal - API timeout, parameter mungkin tidak valid, layanan eksternal turun. Agen produksi membutuhkan penanganan error sehingga model dapat menjelaskan masalah atau mencoba alternatif.
 
-## Alat yang Tersedia
+## Available Tools
 
-**Alat Cuaca** (data tiruan untuk demonstrasi):
-- Mendapatkan cuaca saat ini untuk lokasi
-- Mendapatkan prakiraan multi-hari
+**Weather Tools** (data tiruan untuk demonstrasi):
+- Mendapatkan cuaca saat ini untuk suatu lokasi
+- Mendapatkan prakiraan beberapa hari
 
-**Alat Konversi Suhu**:
+**Temperature Conversion Tools**:
 - Celsius ke Fahrenheit
 - Fahrenheit ke Celsius
 - Celsius ke Kelvin
@@ -297,33 +299,33 @@ Alat bisa gagal - API timeout, parameter mungkin tidak valid, layanan eksternal 
 - Fahrenheit ke Kelvin
 - Kelvin ke Fahrenheit
 
-Ini adalah contoh sederhana, tetapi pola ini dapat diperluas ke fungsi apa pun: query basis data, panggilan API, perhitungan, operasi file, atau perintah sistem.
+Ini adalah contoh sederhana, tetapi pola ini dapat diperluas ke fungsi apa pun: query basis data, panggilan API, perhitungan, operasi berkas, atau perintah sistem.
 
-## Kapan Menggunakan Agen Berbasis Alat
+## When to Use Tool-Based Agents
 
 **Gunakan alat ketika:**
-- Menjawab membutuhkan data waktu nyata (cuaca, harga saham, inventaris)
-- Anda perlu melakukan perhitungan lebih dari matematika sederhana
+- Menjawab membutuhkan data waktu-nyata (cuaca, harga saham, inventaris)
+- Anda perlu melakukan perhitungan di luar matematika sederhana
 - Mengakses basis data atau API
 - Mengambil tindakan (mengirim email, membuat tiket, memperbarui catatan)
 - Menggabungkan beberapa sumber data
 
 **Jangan gunakan alat ketika:**
 - Pertanyaan dapat dijawab dari pengetahuan umum
-- Respons hanya bersifat percakapan
-- Latensi alat akan membuat pengalaman terlalu lambat
+- Respons murni bersifat percakapan
+- Latensi alat akan membuat pengalaman menjadi terlalu lambat
 
-## Langkah Selanjutnya
+## Next Steps
 
-**Modul Berikutnya:** [05-mcp - Model Context Protocol (MCP)](../05-mcp/README.md)
+**Next Module:** [05-mcp - Model Context Protocol (MCP)](../05-mcp/README.md)
 
 ---
 
-**Navigasi:** [← Sebelumnya: Modul 03 - RAG](../03-rag/README.md) | [Kembali ke Utama](../README.md) | [Berikutnya: Modul 05 - MCP →](../05-mcp/README.md)
+**Navigation:** [← Previous: Module 03 - RAG](../03-rag/README.md) | [Back to Main](../README.md) | [Next: Module 05 - MCP →](../05-mcp/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha untuk akurasi, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau salah tafsir yang timbul dari penggunaan terjemahan ini.
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai ketepatan, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang menjadi acuan. Untuk informasi yang bersifat penting, disarankan menggunakan terjemahan profesional oleh penerjemah manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

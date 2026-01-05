@@ -49,7 +49,7 @@ RAG (Retrieval-Augmented Generation) решава овај проблем. Ум�
 
 Ово осигурава да су одговори модела засновани на вашим стварним подацима уместо да се ослањају на знање из тренинга или да измишљају одговоре.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.sr.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.sr.png" alt="RAG Architecture" width="800"/>
 
 *RAG радни ток - од корисничког упита до семантичке претраге и генерисања одговора у контексту*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.sr.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.sr.png" alt="Vector Embeddings Space" width="800"/>
 
 *Документи представљени као вектори у простору угнежђивања - слични садржаји се групишу*
 
@@ -152,7 +152,7 @@ cat ../.env  # Требало би да прикаже AZURE_OPENAI_ENDPOINT, AP
 
 Једноставно кликните на дугме за покретање поред "rag" да бисте покренули овај модул, или покрените све модуле одједном.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.sr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.sr.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Опција 2: Коришћење shell скрипти**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Апликација пружа веб интерфејс за отпремање докумената и постављање питања.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.sr.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.sr.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Интерфејс RAG апликације - отпремите документе и постављајте питања*
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Обратите пажњу да сваки одговор укључује изворне референце са оценама сличности. Ове оцене (од 0 до 1) показују колико је сваки део био релевантан вашем питању. Веће оцене значе боље поклапање. Ово вам омогућава да проверите одговор у односу на изворни материјал.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.sr.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.sr.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Резултати упита који приказују одговор са изворним референцама и оценама релевантности*
 

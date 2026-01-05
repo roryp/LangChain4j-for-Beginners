@@ -1,212 +1,144 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c25ec1f10ef156c53e190cdf8b0711ab",
-  "translation_date": "2025-12-13T18:04:14+00:00",
+  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
+  "translation_date": "2025-12-31T04:32:59+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "sk"
 }
 -->
-# Modul 05: Protokol kontextu modelu (MCP)
+# Module 05: Model Context Protocol (MCP)
 
-## Obsah
+## Table of Contents
 
-- [Čo sa naučíte](../../../05-mcp)
-- [Pochopenie MCP](../../../05-mcp)
-- [Ako MCP funguje](../../../05-mcp)
-  - [Architektúra server-klient](../../../05-mcp)
-  - [Objavovanie nástrojov](../../../05-mcp)
-  - [Prenosové mechanizmy](../../../05-mcp)
-- [Predpoklady](../../../05-mcp)
-- [Čo tento modul pokrýva](../../../05-mcp)
-- [Rýchly štart](../../../05-mcp)
-  - [Príklad 1: Vzdialená kalkulačka (Streamable HTTP)](../../../05-mcp)
-  - [Príklad 2: Operácie so súbormi (Stdio)](../../../05-mcp)
-  - [Príklad 3: Git analýza (Docker)](../../../05-mcp)
-- [Kľúčové koncepty](../../../05-mcp)
-  - [Výber prenosu](../../../05-mcp)
-  - [Objavovanie nástrojov](../../../05-mcp)
-  - [Správa relácií](../../../05-mcp)
-  - [Medzi-platformové úvahy](../../../05-mcp)
-- [Kedy použiť MCP](../../../05-mcp)
-- [Ekosystém MCP](../../../05-mcp)
-- [Gratulujeme!](../../../05-mcp)
-  - [Čo ďalej?](../../../05-mcp)
-- [Riešenie problémov](../../../05-mcp)
+- [What You'll Learn](../../../05-mcp)
+- [What is MCP?](../../../05-mcp)
+- [How MCP Works](../../../05-mcp)
+- [The Agentic Module](../../../05-mcp)
+- [Running the Examples](../../../05-mcp)
+  - [Prerequisites](../../../05-mcp)
+- [Quick Start](../../../05-mcp)
+  - [File Operations (Stdio)](../../../05-mcp)
+  - [Supervisor Agent](../../../05-mcp)
+    - [Understanding the Output](../../../05-mcp)
+    - [Explanation of Agentic Module Features](../../../05-mcp)
+- [Key Concepts](../../../05-mcp)
+- [Congratulations!](../../../05-mcp)
+  - [What's Next?](../../../05-mcp)
 
-## Čo sa naučíte
+## What You'll Learn
 
-Vybudovali ste konverzačné AI, ovládli ste promptovanie, zakotvili odpovede v dokumentoch a vytvorili agentov s nástrojmi. Ale všetky tie nástroje boli špeciálne vytvorené pre vašu konkrétnu aplikáciu. Čo keby ste mohli dať svojej AI prístup k štandardizovanému ekosystému nástrojov, ktoré môže ktokoľvek vytvoriť a zdieľať?
+You've built conversational AI, mastered prompts, grounded responses in documents, and created agents with tools. But all those tools were custom-built for your specific application. What if you could give your AI access to a standardized ecosystem of tools that anyone can create and share? In this module, you'll learn how to do just that with the Model Context Protocol (MCP) and LangChain4j's agentic module. We first showcase a simple MCP file reader and then show how it easily integrates into advanced agentic workflows using the Supervisor Agent pattern.
 
-Protokol kontextu modelu (MCP) poskytuje presne to - štandardný spôsob, ako môžu AI aplikácie objavovať a používať externé nástroje. Namiesto písania vlastných integrácií pre každý zdroj dát alebo službu sa pripojíte k MCP serverom, ktoré vystavujú svoje schopnosti v konzistentnom formáte. Váš AI agent potom môže tieto nástroje automaticky objaviť a používať.
+## What is MCP?
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5448d2fa21a61218777ceb8010ea0390dd43924b26df35f61.sk.png" alt="Porovnanie MCP" width="800"/>
+The Model Context Protocol (MCP) provides exactly that - a standard way for AI applications to discover and use external tools. Instead of writing custom integrations for each data source or service, you connect to MCP servers that expose their capabilities in a consistent format. Your AI agent can then discover and use these tools automatically.
 
-*Pred MCP: Zložité bodové integrácie. Po MCP: Jeden protokol, nekonečné možnosti.*
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.sk.png" alt="Porovnanie MCP" width="800"/>
 
-## Pochopenie MCP
+*Before MCP: Complex point-to-point integrations. After MCP: One protocol, endless possibilities.*
 
-MCP rieši základný problém vo vývoji AI: každá integrácia je vlastná. Chcete pristupovať k GitHubu? Vlastný kód. Chcete čítať súbory? Vlastný kód. Chcete dotazovať databázu? Vlastný kód. A žiadna z týchto integrácií nefunguje s inými AI aplikáciami.
+MCP solves a fundamental problem in AI development: every integration is custom. Want to access GitHub? Custom code. Want to read files? Custom code. Want to query a database? Custom code. And none of these integrations work with other AI applications.
 
-MCP to štandardizuje. MCP server vystavuje nástroje s jasnými popismi a schémami. Akýkoľvek MCP klient sa môže pripojiť, objaviť dostupné nástroje a používať ich. Postav raz, používaj všade.
+MCP standardizes this. An MCP server exposes tools with clear descriptions and schemas. Any MCP client can connect, discover available tools, and use them. Build once, use everywhere.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9814b7cffade208d4b0d97203c22df8d8e5504d8238fa7065.sk.png" alt="Architektúra MCP" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.sk.png" alt="Architektúra MCP" width="800"/>
 
-*Architektúra protokolu kontextu modelu - štandardizované objavovanie a vykonávanie nástrojov*
+*Model Context Protocol architecture - standardized tool discovery and execution*
 
-## Ako MCP funguje
+## How MCP Works
 
-**Architektúra server-klient**
+**Server-Client Architecture**
 
-MCP používa model klient-server. Servery poskytujú nástroje - čítanie súborov, dotazovanie databáz, volanie API. Klienti (vaša AI aplikácia) sa pripájajú k serverom a používajú ich nástroje.
+MCP uses a client-server model. Servers provide tools - reading files, querying databases, calling APIs. Clients (your AI application) connect to servers and use their tools.
 
-**Objavovanie nástrojov**
+To use MCP with LangChain4j, add this Maven dependency:
 
-Keď sa váš klient pripojí k MCP serveru, pýta sa: „Aké nástroje máte?“ Server odpovie zoznamom dostupných nástrojov, každý s popismi a schémami parametrov. Váš AI agent potom môže rozhodnúť, ktoré nástroje použiť na základe požiadaviek používateľa.
-
-**Prenosové mechanizmy**
-
-MCP definuje dva prenosové mechanizmy: HTTP pre vzdialené servery, Stdio pre lokálne procesy (vrátane Docker kontajnerov):
-
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020ed801b772b26ed69338e22739677aa017e0968f6538b09a2.sk.png" alt="Prenosové mechanizmy" width="800"/>
-
-*Prenosové mechanizmy MCP: HTTP pre vzdialené servery, Stdio pre lokálne procesy (vrátane Docker kontajnerov)*
-
-**Streamable HTTP** - [StreamableHttpDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-Pre vzdialené servery. Vaša aplikácia robí HTTP požiadavky na server bežiaci niekde v sieti. Používa Server-Sent Events pre komunikáciu v reálnom čase.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
 ```
 
-> **🤖 Vyskúšajte s [GitHub Copilot](https://github.com/features/copilot) Chat:** Otvorte [`StreamableHttpDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) a opýtajte sa:
-> - "Ako sa MCP líši od priamej integrácie nástrojov ako v Module 04?"
-> - "Aké sú výhody použitia MCP pre zdieľanie nástrojov medzi aplikáciami?"
-> - "Ako riešim zlyhania pripojenia alebo časové limity na MCP servery?"
+**Tool Discovery**
+
+When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
+
+**Transport Mechanisms**
+
+MCP supports different transport mechanisms. This module demonstrates the Stdio transport for local processes:
+
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.sk.png" alt="Prenosové mechanizmy" width="800"/>
+
+*MCP transport mechanisms: HTTP for remote servers, Stdio for local processes*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Pre lokálne procesy. Vaša aplikácia spustí server ako podproces a komunikuje cez štandardný vstup/výstup. Užitočné pre prístup k súborovému systému alebo príkazové nástroje.
+For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
     .build();
 ```
 
-> **🤖 Vyskúšajte s [GitHub Copilot](https://github.com/features/copilot) Chat:** Otvorte [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) a opýtajte sa:
-> - "Ako funguje Stdio prenos a kedy ho použiť namiesto HTTP?"
-> - "Ako LangChain4j spravuje životný cyklus spustených MCP serverových procesov?"
-> - "Aké sú bezpečnostné dôsledky poskytnutia AI prístupu k súborovému systému?"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) and ask:
+> - "How does Stdio transport work and when should I use it vs HTTP?"
+> - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
+> - "What are the security implications of giving AI access to the file system?"
 
-**Docker (používa Stdio)** - [GitRepositoryAnalyzer.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+## The Agentic Module
 
-Pre kontajnerizované služby. Používa stdio prenos na komunikáciu s Docker kontajnerom cez `docker run`. Vhodné pre zložité závislosti alebo izolované prostredia.
+While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build agents that orchestrate those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code.
 
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
+In this module, you'll explore the **Supervisor Agent** pattern — an advanced agentic AI approach where a "supervisor" agent dynamically decides which sub-agents to invoke based on user requests. We'll combine both concepts by giving one of our sub-agents MCP-powered file access capabilities.
+
+To use the agentic module, add this Maven dependency:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
 ```
 
-> **🤖 Vyskúšajte s [GitHub Copilot](https://github.com/features/copilot) Chat:** Otvorte [`GitRepositoryAnalyzer.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) a opýtajte sa:
-> - "Ako Docker prenos izoluje MCP servery a aké sú výhody?"
-> - "Ako nakonfigurovať pripojenie zväzkov na zdieľanie dát medzi hostiteľom a MCP kontajnermi?"
-> - "Aké sú najlepšie postupy pre správu životného cyklu MCP serverov založených na Dockeri v produkcii?"
+> **⚠️ Experimental:** The `langchain4j-agentic` module is **experimental** and subject to change. The stable way to build AI assistants remains `langchain4j-core` with custom tools (Module 04).
 
-## Spustenie príkladov
+## Running the Examples
 
-### Predpoklady
+### Prerequisites
 
 - Java 21+, Maven 3.9+
-- Node.js 16+ a npm (pre MCP servery)
-- **Docker Desktop** - musí byť **SPUSTENÝ** pre Príklad 3 (nie len nainštalovaný)
-- GitHub osobný prístupový token nakonfigurovaný v súbore `.env` (z Modulu 00)
+- Node.js 16+ and npm (for MCP servers)
+- Environment variables configured in `.env` file (from the root directory):
+  - **For StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **For SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (same as Modules 01-04)
 
-> **Poznámka:** Ak ste ešte nenastavili svoj GitHub token, pozrite si [Modul 00 - Rýchly štart](../00-quick-start/README.md) pre inštrukcie.
+> **Note:** If you haven't set up your environment variables yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions, or copy `.env.example` to `.env` in the root directory and fill in your values.
 
-> **⚠️ Používatelia Dockeru:** Pred spustením Príkladu 3 overte, že Docker Desktop beží príkazom `docker ps`. Ak vidíte chyby pripojenia, spustite Docker Desktop a počkajte približne 30 sekúnd na inicializáciu.
+## Quick Start
 
-## Rýchly štart
+**Using VS Code:** Simply right-click on any demo file in the Explorer and select **"Run Java"**, or use the launch configurations from the Run and Debug panel (make sure you've added your token to the `.env` file first).
 
-**Použitie VS Code:** Jednoducho kliknite pravým tlačidlom na ľubovoľný demo súbor v Prieskumníkovi a vyberte **"Run Java"**, alebo použite spúšťacie konfigurácie z panela Run and Debug (najskôr si pridajte token do súboru `.env`).
+**Using Maven:** Alternatively, you can run from the command line with the examples below.
 
-**Použitie Maven:** Alternatívne môžete spustiť z príkazového riadku pomocou príkladov nižšie.
+### File Operations (Stdio)
 
-**⚠️ Dôležité:** Niektoré príklady majú predpoklady (ako spustenie MCP servera alebo zostavenie Docker obrazov). Skontrolujte požiadavky každého príkladu pred spustením.
+This demonstrates local subprocess-based tools.
 
-### Príklad 1: Vzdialená kalkulačka (Streamable HTTP)
+**✅ Nie sú potrebné žiadne predpoklady** - the MCP server is spawned automatically.
 
-Tento príklad demonštruje integráciu nástrojov cez sieť.
+**Using VS Code:** Right-click on `StdioTransportDemo.java` and select **"Run Java"**.
 
-**⚠️ Predpoklad:** Najskôr musíte spustiť MCP server (pozrite Terminál 1 nižšie).
-
-**Terminál 1 - Spustenie MCP servera:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**Terminál 2 - Spustenie príkladu:**
-
-**Použitie VS Code:** Kliknite pravým tlačidlom na `StreamableHttpDemo.java` a vyberte **"Run Java"**.
-
-**Použitie Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Sledujte, ako agent objaví dostupné nástroje a potom použije kalkulačku na vykonanie sčítania.
-
-### Príklad 2: Operácie so súbormi (Stdio)
-
-Tento príklad demonštruje nástroje založené na lokálnych podprocesoch.
-
-**✅ Nie sú potrebné žiadne predpoklady** - MCP server sa spustí automaticky.
-
-**Použitie VS Code:** Kliknite pravým tlačidlom na `StdioTransportDemo.java` a vyberte **"Run Java"**.
-
-**Použitie Maven:**
+**Using Maven:**
 
 **Bash:**
 ```bash
@@ -222,198 +154,244 @@ cd 05-mcp
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
-Aplikácia automaticky spustí MCP server pre súborový systém a prečíta lokálny súbor. Všimnite si, ako je správa podprocesov zaistená za vás.
+The application spawns a filesystem MCP server automatically and reads a local file. Notice how the subprocess management is handled for you.
 
-**Očakávaný výstup:**
+**Expected output:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Príklad 3: Git analýza (Docker)
+### Supervisor Agent
 
-Tento príklad demonštruje kontajnerizované servery nástrojov.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.sk.png" alt="Agentický modul" width="800"/>
 
-**⚠️ Predpoklady:** 
-1. **Docker Desktop musí byť SPUSTENÝ** (nie len nainštalovaný)
-2. **Používatelia Windows:** Odporúča sa režim WSL 2 (Nastavenia Docker Desktop → Všeobecné → "Použiť engine založený na WSL 2"). Režim Hyper-V vyžaduje manuálnu konfiguráciu zdieľania súborov.
-3. Najskôr musíte zostaviť Docker obraz (pozrite Terminál 1 nižšie)
 
-**Overenie, že Docker beží:**
+The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
+
+**Combining Supervisor with MCP:** In this example, we give the `FileAgent` access to MCP file system tools via `toolProvider(mcpToolProvider)`. When a user asks to "read and analyze a file," the Supervisor analyzes the request and generates an execution plan. It then routes the request to `FileAgent`, which uses MCP's `read_file` tool to retrieve the content. The Supervisor passes that content to `AnalysisAgent` for interpretation, and optionally invokes `SummaryAgent` to condense the results.
+
+This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it. The Supervisor adapts dynamically to different types of requests and returns either the last agent's response or a summary of all operations.
+
+**Using the Start Scripts (Recommended):**
+
+The start scripts automatically load environment variables from the root `.env` file:
 
 **Bash:**
 ```bash
-docker ps  # Malo by zobraziť zoznam kontajnerov, nie chybu
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Malo by zobraziť zoznam kontajnerov, nie chybu
-```
-
-Ak vidíte chybu ako "Cannot connect to Docker daemon" alebo "The system cannot find the file specified", spustite Docker Desktop a počkajte na inicializáciu (~30 sekúnd).
-
-**Riešenie problémov:**
-- Ak AI hlási prázdny repozitár alebo žiadne súbory, pripojenie zväzku (`-v`) nefunguje.
-- **Používatelia Windows Hyper-V:** Pridajte adresár projektu do Nastavení Docker Desktop → Zdroje → Zdieľanie súborov a potom reštartujte Docker Desktop.
-- **Odporúčané riešenie:** Prepnite na režim WSL 2 pre automatické zdieľanie súborov (Nastavenia → Všeobecné → povoliť "Použiť engine založený na WSL 2").
-
-**Terminál 1 - Zostavenie Docker obrazu:**
-
-**Bash:**
-```bash
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**Terminál 2 - Spustenie analyzátora:**
-
-**Použitie VS Code:** Kliknite pravým tlačidlom na `GitRepositoryAnalyzer.java` a vyberte **"Run Java"**.
-
-**Použitie Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+.\start.ps1
 ```
 
-Aplikácia spustí Docker kontajner, pripojí váš repozitár a analyzuje štruktúru a obsah repozitára cez AI agenta.
+**Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"** (ensure your `.env` file is configured).
 
-## Kľúčové koncepty
+**How the Supervisor Works:**
 
-**Výber prenosu**
+```java
+// Definujte viacerých agentov so špecifickými schopnosťami
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)  // Má MCP nástroje na operácie so súbormi
+        .build();
 
-Vyberte podľa toho, kde sa vaše nástroje nachádzajú:
-- Vzdialené služby → Streamable HTTP
-- Lokálny súborový systém → Stdio
-- Zložité závislosti → Docker
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
 
-**Objavovanie nástrojov**
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
 
-MCP klienti automaticky objavujú dostupné nástroje pri pripájaní. Váš AI agent vidí popisy nástrojov a rozhoduje, ktoré použiť podľa požiadavky používateľa.
+// Vytvorte Supervisora, ktorý orchestruje týchto agentov
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // Model "planner"
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
 
-**Správa relácií**
+// Supervisor autonómne rozhoduje, ktorých agentov vyvolať
+// Stačí zadať požiadavku v prirodzenom jazyku - LLM naplánuje vykonanie
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+```
 
-Streamable HTTP prenos udržiava relácie, čo umožňuje stavové interakcie s vzdialenými servermi. Prenosy Stdio a Docker sú zvyčajne bezstavové.
+See [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) for the complete implementation.
 
-**Medzi-platformové úvahy**
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) and ask:
+> - "How does the Supervisor decide which agents to invoke?"
+> - "What's the difference between Supervisor and Sequential workflow patterns?"
+> - "How can I customize the Supervisor's planning behavior?"
 
-Príklady automaticky riešia rozdiely medzi platformami (rozdiely v príkazoch Windows vs Unix, konverzie ciest pre Docker). To je dôležité pre produkčné nasadenia v rôznych prostrediach.
+#### Understanding the Output
 
-## Kedy použiť MCP
+When you run the demo, you'll see a structured walkthrough of how the Supervisor orchestrates multiple agents. Here's what each section means:
 
-**Použite MCP, keď:**
-- Chcete využiť existujúce ekosystémy nástrojov
-- Budujete nástroje, ktoré budú používať viaceré aplikácie
-- Integrujete služby tretích strán so štandardnými protokolmi
-- Potrebujete meniť implementácie nástrojov bez zmeny kódu
+```
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
 
-**Použite vlastné nástroje (Modul 04), keď:**
-- Budujete funkčnosť špecifickú pre aplikáciu
-- Výkon je kritický (MCP pridáva režijné náklady)
-- Vaše nástroje sú jednoduché a nebudú znovu použité
-- Potrebujete úplnú kontrolu nad vykonávaním
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
+```
 
-## Ekosystém MCP
+**The header** introduces the demo and explains the core concept: the Supervisor uses an LLM (not hardcoded rules) to decide which agents to call.
 
-Protokol kontextu modelu je otvorený štandard s rastúcim ekosystémom:
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
 
-- Oficiálne MCP servery pre bežné úlohy (súborový systém, Git, databázy)
-- Servery prispievané komunitou pre rôzne služby
-- Štandardizované popisy a schémy nástrojov
-- Kompatibilita medzi rámcami (funguje s akýmkoľvek MCP klientom)
+**Available Agents** shows the three specialized agents the Supervisor can choose from. Each agent has a specific capability:
+- **FileAgent** can read files using MCP tools (external capability)
+- **AnalysisAgent** analyzes content (pure LLM capability)
+- **SummaryAgent** creates summaries (pure LLM capability)
 
-Táto štandardizácia znamená, že nástroje vytvorené pre jednu AI aplikáciu fungujú aj s inými, čím vzniká zdieľaný ekosystém schopností.
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
 
-## Gratulujeme!
+**User Request** shows what was asked. The Supervisor must parse this and decide which agents to invoke.
 
-Dokončili ste kurz LangChain4j pre začiatočníkov. Naučili ste sa:
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
 
-- Ako vytvoriť konverzačné AI s pamäťou (Modul 01)
-- Vzory promptovania pre rôzne úlohy (Modul 02)
-- Zakotvenie odpovedí vo vašich dokumentoch pomocou RAG (Modul 03)
-- Vytváranie AI agentov s vlastnými nástrojmi (Modul 04)
-- Integráciu štandardizovaných nástrojov cez MCP (Modul 05)
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
 
-Máte teraz základy na tvorbu produkčných AI aplikácií. Koncepty, ktoré ste sa naučili, platia bez ohľadu na konkrétne rámce alebo modely - sú to základné vzory v AI inžinierstve.
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: Structure: The content is organized into clear paragraphs that int...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
+
+**Supervisor Orchestration** is where the magic happens. Watch how:
+1. The Supervisor **chose FileAgent first** because the request mentioned "read the file"
+2. FileAgent used MCP's `read_file` tool to retrieve the file contents
+3. The Supervisor then **chose AnalysisAgent** and passed the file contents to it
+4. AnalysisAgent analyzed the structure, tone, and themes
+
+Notice the Supervisor made these decisions **autonomously** based on the user's request — no hardcoded workflow!
+
+**Final Response** is the Supervisor's synthesized answer, combining outputs from all agents it invoked. The example dumps the agentic scope showing the summary and analysis results stored by each agent.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: Structure: The content is organized into clear paragraphs that in...
+```
+
+### Explanation of Agentic Module Features
+
+The example demonstrates several advanced features of the agentic module. Let's have a closer look at Agentic Scope and Agent Listeners.
+
+**Agentic Scope** shows the shared memory where agents stored their results using `@Agent(outputKey="...")`. This allows:
+- Later agents to access earlier agents' outputs
+- The Supervisor to synthesize a final response
+- You to inspect what each agent produced
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** enable monitoring and debugging of agent execution. The step-by-step output you see in the demo comes from an AgentListener that hooks into each agent invocation:
+- **beforeAgentInvocation** - Called when the Supervisor selects an agent, letting you see which agent was chosen and why
+- **afterAgentInvocation** - Called when an agent completes, showing its result
+- **inheritedBySubagents** - When true, the listener monitors all agents in the hierarchy
+
+```java
+AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
+    @Override
+    public void beforeAgentInvocation(AgentRequest request) {
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Propagovať všetkým podagentom
+    }
+};
+```
+
+Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
+| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
+| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
+| **Conditional** | Route based on conditions | Classify → route to specialist agent |
+| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
+
+## Key Concepts
+
+**MCP** is ideal when you want to leverage existing tool ecosystems, build tools that multiple applications can share, integrate third-party services with standard protocols, or swap tool implementations without changing code.
+
+**The Agentic Module** works best when you want declarative agent definitions with `@Agent` annotations, need workflow orchestration (sequential, loop, parallel), prefer interface-based agent design over imperative code, or are combining multiple agents that share outputs via `outputKey`.
+
+**The Supervisor Agent pattern** shines when the workflow isn't predictable in advance and you want the LLM to decide, when you have multiple specialized agents that need dynamic orchestration, when building conversational systems that route to different capabilities, or when you want the most flexible, adaptive agent behavior.
+
+## Congratulations!
+
+You've completed the LangChain4j for Beginners course. You've learned:
+
+- How to build conversational AI with memory (Module 01)
+- Prompt engineering patterns for different tasks (Module 02)
+- Grounding responses in your documents with RAG (Module 03)
+- Creating basic AI agents (assistants) with custom tools (Module 04)
+- Integrácia štandardizovaných nástrojov s modulmi LangChain4j MCP a Agentic (Modul 05)
 
 ### Čo ďalej?
 
-Po dokončení modulov preskúmajte [Testovací sprievodca](../docs/TESTING.md), aby ste videli koncepty testovania LangChain4j v praxi.
+Po dokončení modulov si prezrite [Sprievodcu testovaním](../docs/TESTING.md), aby ste videli koncepty testovania LangChain4j v praxi.
 
 **Oficiálne zdroje:**
-- [Dokumentácia LangChain4j](https://docs.langchain4j.dev/) - Komplexné návody a API referencie
+- [Dokumentácia LangChain4j](https://docs.langchain4j.dev/) - Obsiahle návody a referencie API
 - [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Zdrojový kód a príklady
-- [LangChain4j Tutoriály](https://docs.langchain4j.dev/tutorials/) - Krok za krokom návody pre rôzne použitia
+- [Tutoriály LangChain4j](https://docs.langchain4j.dev/tutorials/) - Krok za krokom návody pre rôzne prípady použitia
 
 Ďakujeme, že ste dokončili tento kurz!
 
 ---
 
-**Navigácia:** [← Predchádzajúci: Modul 04 - Nástroje](../04-tools/README.md) | [Späť na hlavnú stránku](../README.md)
-
----
-
-## Riešenie problémov
-
-### Syntax príkazu Maven v PowerShelli
-**Problém**: Príkazy Maven zlyhávajú s chybou `Unknown lifecycle phase ".mainClass=..."`
-
-**Príčina**: PowerShell interpretuje `=` ako operátor priradenia premennej, čo narušuje syntax vlastností Maven
-
-**Riešenie**: Použite operátor zastavenia parsovania `--%` pred príkazom Maven:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Operátor `--%` hovorí PowerShellu, aby všetky nasledujúce argumenty odovzdal Maven doslovne bez interpretácie.
-
-### Problémy s pripojením Dockeru
-
-**Problém**: Príkazy Docker zlyhávajú s hlásením "Cannot connect to Docker daemon" alebo "The system cannot find the file specified"
-
-**Príčina**: Docker Desktop nie je spustený alebo nie je úplne inicializovaný
-
-**Riešenie**: 
-1. Spustite Docker Desktop
-2. Počkajte približne 30 sekúnd na úplnú inicializáciu
-3. Overte príkazom `docker ps` (mal by zobraziť zoznam kontajnerov, nie chybu)
-4. Potom spustite svoj príklad
-
-### Pripájanie zväzkov Docker vo Windows
-
-**Problém**: Analyzátor Git repozitára hlási prázdny repozitár alebo žiadne súbory
-
-**Príčina**: Pripojenie zväzku (`-v`) nefunguje kvôli konfigurácii zdieľania súborov
-
-**Riešenie**:
-- **Odporúčané:** Prepnite na režim WSL 2 (Nastavenia Docker Desktop → Všeobecné → "Use the WSL 2 based engine")
-- **Alternatíva (Hyper-V):** Pridajte adresár projektu do Nastavení Docker Desktop → Zdroje → Zdieľanie súborov, potom reštartujte Docker Desktop
+**Navigácia:** [← Predchádzajúce: Modul 04 - Nástroje](../04-tools/README.md) | [Späť na hlavnú stránku](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Zrieknutie sa zodpovednosti**:
-Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Aj keď sa snažíme o presnosť, prosím, majte na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Originálny dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+Vylúčenie zodpovednosti:
+Tento dokument bol preložený pomocou AI prekladateľskej služby Co-op Translator (https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, majte prosím na pamäti, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku treba považovať za rozhodujúci zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu nenesieme zodpovednosť.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

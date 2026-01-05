@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Това е добре за прости въпроси и отговори, но безполезно за реални приложения. Ботовете за обслужване на клиенти трябва да помнят какво сте им казали. Личните асистенти се нуждаят от контекст. Всеки разговор с няколко хода изисква памет.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.bg.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.bg.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Разликата между безсъстояни (независими повиквания) и състояни (съобразени с контекста) разговори*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Преди да се потопите в разговорите, важно е да разберете токените - основните единици текст, които езиковите модели обработват:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.bg.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.bg.png" alt="Token Explanation" width="800"/>
 
 *Пример как текстът се разбива на токени - "Обичам AI!" става 4 отделни единици за обработка*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j предоставя реализации на памет, които се грижат за това автоматично. Вие избирате колко съобщения да се запазят, а рамката управлява контекстния прозорец.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.bg.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.bg.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory поддържа плъзгащ се прозорец с последните съобщения, автоматично премахвайки старите*
 
@@ -212,7 +212,7 @@ Dev контейнерът включва разширението Spring Boot D
 
 Просто кликнете бутона за пускане до "introduction", за да стартирате този модул, или стартирайте всички модули наведнъж.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.bg.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.bg.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Опция 2: Използване на shell скриптове**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Приложението предоставя уеб интерфейс с две реализации на чат една до друга.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.bg.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.bg.png" alt="Application Home Screen" width="800"/>
 
 *Табло, показващо опции за Прост чат (безсъстоянен) и Разговорен чат (състоянен)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Опитайте първо това. Попитайте "Казвам се Джон" и веднага след това "Как се казвам?" Моделът няма да запомни, защото всяко съобщение е независимо. Това демонстрира основния проблем при базовата интеграция на езиков модел - липса на контекст на разговора.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.bg.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.bg.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI не помни името ви от предишното съобщение*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Сега опитайте същата последователност тук. Попитайте "Казвам се Джон" и след това "Как се казвам?" Този път помни. Разликата е MessageWindowChatMemory - той поддържа история на разговора и я включва с всяка заявка. Така работи продукционният разговорен AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.bg.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.bg.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI помни името ви от по-рано в разговора*
 

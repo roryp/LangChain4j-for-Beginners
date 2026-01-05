@@ -1,17 +1,17 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1e85afe0b0ee47fc09b20442b0ee4ca5",
-  "translation_date": "2025-12-23T11:25:04+00:00",
+  "original_hash": "d61ab6c245562094cc3dddecf08b50d3",
+  "translation_date": "2025-12-31T07:26:46+00:00",
   "source_file": "README.md",
   "language_code": "pcm"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.pcm.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.pcm.png" alt="LangChain4j" width="800"/>
 
-### 🌐 Plenti Language Support
+### 🌐 Support for Plenty Languages
 
-#### Supported via GitHub Action (e dey automatic & always up-to-date)
+#### Dey supported via GitHub Action (Automatic & Always dey up-to-date)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
 [Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
@@ -19,62 +19,58 @@ CO_OP_TRANSLATOR_METADATA:
 
 # LangChain4j for Beginners
 
-Na course wey go teach you how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat reach AI agents.
+Na course wey dey teach how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat reach advanced AI agents.
 
-**You new for LangChain4j?** See the [Glossary](docs/GLOSSARY.md) to know wetin the main terms and concepts mean.
+**You new for LangChain4j?** Check the [Glossary](docs/GLOSSARY.md) to see wetin important words and concepts mean.
 
 ## Table of Contents
 
-1. [Quick Start](00-quick-start/README.md) - How to start wit LangChain4j
-2. [Introduction](01-introduction/README.md) - Learn di basics of LangChain4j
-3. [Prompt Engineering](02-prompt-engineering/README.md) - Make you sabi how to design prompts wey dey work well
-4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Build smart systems wey get knowledge base
-5. [Tools](04-tools/README.md) - Join external tools and APIs with AI agents
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work wit the Model Context Protocol
+1. [Quick Start](00-quick-start/README.md) - Make you start use LangChain4j
+2. [Introduction](01-introduction/README.md) - Learn the basics of LangChain4j
+3. [Prompt Engineering](02-prompt-engineering/README.md) - Learn how to design prompts wey dey work
+4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Build smart knowledge-based systems
+5. [Tools](04-tools/README.md) - Combine external tools and simple assistants
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work wit the Model Context Protocol (MCP) and Agentic modules
 ---
 
-##  Learning Path
+##  How You Go Learn
 
 > **Quick Start**
 
-1. Fork dis repository go your GitHub account
+1. Fork this repository to your GitHub account
 2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
-3. Use the defaults – dis go choose the Development container wey dem create for dis course
+3. Use the defaults – this go select the Development container wey dem create for this course
 4. Click **Create codespace**
 5. Wait 5-10 minutes make the environment ready
-6. Go straight to [Quick Start](./00-quick-start/README.md) to start!
+6. Jump straight to [Quick Start](./00-quick-start/README.md) to begin!
 
-> **You wan clone am for your machine?**
+> **Prefer to Clone Locally?**
 >
-> Dis repository get 50+ language translations wey dey make download size big. If you wan clone without translations, use sparse checkout:
+> This repository get 50+ language translations wey make the download size big. To clone without translations, use sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dis go give you everything wey you need to finish the course and e go download much faster.
+> This go give you everything wey you need to finish the course with much faster download.
 
-Start with the [Quick Start](00-quick-start/README.md) module and waka through each module to build your skills step-by-step. You go try basic examples to sabi the fundamentals before you move to the [Introduction](01-introduction/README.md) module for a deeper dive with GPT-5.
+After you don finish the modules, check the [Testing Guide](docs/TESTING.md) to see how LangChain4j testing concepts dey work for real.
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.pcm.png" alt="Learning Path" width="800"/>
-
-After you finish the modules, check the [Testing Guide](docs/TESTING.md) to see LangChain4j testing concepts for action.
-
-> **Note:** Dis training dey use both GitHub Models and Azure OpenAI. The [Quick Start](00-quick-start/README.md) and [MCP](05-mcp/README.md) modules use GitHub Models (no Azure subscription required), while modules 1-4 use Azure OpenAI GPT-5.
+> **Note:** Dis training dey use both GitHub Models and Azure OpenAI. The [Quick Start](00-quick-start/README.md) and [MCP](05-mcp/README.md) modules dey use GitHub Models (no Azure subscription needed), while modules 1-4 dey use Azure OpenAI GPT-5.
 
 
 ## Learning with GitHub Copilot
 
-To quickly start coding, open this project in a GitHub Codespace or your local IDE with the provided devcontainer. The devcontainer wey this course use don come pre-configured with GitHub Copilot for AI paired programming.
+To quickly start coding, open this project inside a GitHub Codespace or your local IDE wey get the devcontainer. The devcontainer wey dem use for this course don pre-configure GitHub Copilot for AI paired programming.
 
-Each code example get suggested questions wey you fit ask GitHub Copilot to deepen your understanding. Look for the 💡/🤖 prompts in:
+Each code example get suggested questions wey you fit ask GitHub Copilot to understand more. Look out for the 💡/🤖 prompts for:
 
-- **Java file headers** - Questions wey specific to each example
-- **Module READMEs** - Exploration prompts wey dey after code examples
+- **Java file headers** - Questions wey relate to each example
+- **Module READMEs** - Exploration prompts after the code examples
 
 **How to use:** Open any code file and ask Copilot the suggested questions. E get full context of the codebase and fit explain, extend, and suggest alternatives.
 
-If you wan learn more? Check out [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
+Want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
 
 ## Additional Resources
@@ -114,28 +110,28 @@ If you wan learn more? Check out [Copilot for AI Paired Programming](https://aka
 ---
  
 ### Copilot Series
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Wey Dem Pair Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## Getting Help
+## How to Take Help
 
-If you jam or get any questions about how to build AI apps, join:
+If you get stuck or get any question about how to build AI apps, make you join:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-If you get product feedback or you dey see errors while you dey build, visit:
+If you get product feedback or you see errors while you dey build, visit:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## License
 
-MIT License - Check di [LICENSE](../../LICENSE) file for details.
+MIT License - Make you check [LICENSE](../../LICENSE) file for details.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 Disclaimer:
-Dis document don translate wit AI translation service [Co-op Translator] (https://github.com/Azure/co-op-translator). Even tho we dey try make am accurate, abeg note say machine translation fit get mistakes or wrong meaning. Di original document for im own language suppose be di official source. For serious or critical mata, make una use professional human translator. We no dey liable for any misunderstanding or wrong interpretation wey fit happen because of dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am accurate, abeg note say automated translations fit get errors or inaccuracies. Di original document for im native language na di official/authoritative source. For important or critical information, e better make you use professional human translation. We no dey liable for any misunderstandings or wrong interpretations wey fit come from di use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

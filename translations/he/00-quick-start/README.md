@@ -37,7 +37,7 @@ LangChain4j היא ספריית Java שמפשטת את בניית יישומי A
 
 המונח "chain" ב-LangChain מתייחס לקישור בין רכיבים מרובים - ייתכן שתקשר פרומפט למודל, למנתח, או תקשר קריאות AI מרובות שבהן פלט אחד מזין את הקלט הבא. התחלה מהירה זו מתמקדת ביסודות לפני חקירת שרשראות מורכבות יותר.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.he.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.he.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *שרשור רכיבים ב-LangChain4j - אבני בניין שמתחברות ליצירת זרימות עבודה חזקות של AI*
 
@@ -49,7 +49,7 @@ LangChain4j היא ספריית Java שמפשטת את בניית יישומי A
 
 **MessageWindowChatMemory** - שומר היסטוריית שיחה. בלעדיו, כל בקשה היא עצמאית. איתו, ה-AI זוכר הודעות קודמות ושומר על הקשר לאורך מספר סבבים.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.he.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.he.png" alt="LangChain4j Architecture" width="800"/>
 
 *ארכיטקטורת LangChain4j - רכיבים מרכזיים שעובדים יחד כדי להפעיל את יישומי ה-AI שלך*
 

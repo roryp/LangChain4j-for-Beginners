@@ -53,7 +53,7 @@ Kielimallit ovat tilattomia. Jokainen API-kutsu on itsenäinen. Jos lähetät "N
 
 Tämä toimii yksinkertaisissa kysymys-vastaus -tilanteissa, mutta on hyödytöntä todellisissa sovelluksissa. Asiakaspalvelubottien täytyy muistaa, mitä kerroit niille. Henkilökohtaisten avustajien täytyy ymmärtää konteksti. Mikä tahansa monivuoroinen keskustelu vaatii muistia.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.fi.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.fi.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Ero tilattomien (itsenäisten kutsujen) ja tilallisten (kontekstia ymmärtävien) keskustelujen välillä*
 
@@ -61,7 +61,7 @@ Tämä toimii yksinkertaisissa kysymys-vastaus -tilanteissa, mutta on hyödytön
 
 Ennen kuin sukellat keskusteluihin, on tärkeää ymmärtää tokenit – tekstin perusyksiköt, joita kielimallit käsittelevät:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.fi.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.fi.png" alt="Token Explanation" width="800"/>
 
 *Esimerkki siitä, miten teksti pilkotaan tokeneiksi – "I love AI!" muodostuu neljästä erillisestä käsittelyyksiköstä*
 
@@ -73,7 +73,7 @@ Keskustelumuisti ratkaisee tilattomuuden ongelman ylläpitämällä keskusteluhi
 
 LangChain4j tarjoaa muistiratkaisuja, jotka hoitavat tämän automaattisesti. Valitset, kuinka monta viestiä säilytetään, ja kehys hallinnoi konteksti-ikkunaa.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.fi.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.fi.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory ylläpitää liukuvaa ikkunaa viimeisimmistä viesteistä, pudottaen automaattisesti vanhoja*
 
@@ -212,7 +212,7 @@ Spring Boot Dashboardista voit:
 
 Klikkaa vain toistopainiketta "introduction" käynnistääksesi tämän moduulin tai käynnistä kaikki moduulit kerralla.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.fi.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.fi.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Vaihtoehto 2: Shell-skriptien käyttäminen**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Kaikki moduulit
 
 Sovellus tarjoaa web-käyttöliittymän, jossa on kaksi chat-toteutusta rinnakkain.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.fi.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.fi.png" alt="Application Home Screen" width="800"/>
 
 *Hallintapaneeli, jossa on sekä Simple Chat (tilaton) että Conversational Chat (tilallinen) -vaihtoehdot*
 
@@ -290,7 +290,7 @@ Sovellus tarjoaa web-käyttöliittymän, jossa on kaksi chat-toteutusta rinnakka
 
 Kokeile tätä ensin. Kysy "Nimeni on John" ja heti perään "Mikä nimeni on?" Malli ei muista, koska jokainen viesti on itsenäinen. Tämä havainnollistaa perusongelman kielimallien integroinnissa – ei keskustelukontekstia.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.fi.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.fi.png" alt="Stateless Chat Demo" width="800"/>
 
 *Tekoäly ei muista nimeäsi edellisestä viestistä*
 
@@ -298,7 +298,7 @@ Kokeile tätä ensin. Kysy "Nimeni on John" ja heti perään "Mikä nimeni on?" 
 
 Kokeile samaa sekvenssiä täällä. Kysy "Nimeni on John" ja sitten "Mikä nimeni on?" Tällä kertaa se muistaa. Erona on MessageWindowChatMemory – se ylläpitää keskusteluhistoriaa ja liittää sen jokaiseen pyyntöön. Näin tuotantokeskustelutekoäly toimii.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.fi.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.fi.png" alt="Stateful Chat Demo" width="800"/>
 
 *Tekoäly muistaa nimesi aiemmasta keskustelusta*
 

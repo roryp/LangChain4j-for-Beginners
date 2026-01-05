@@ -37,7 +37,7 @@ LangChain4j on Java-kirjasto, joka yksinkertaistaa tekoälypohjaisten sovelluste
 
 LangChainin "ketju" viittaa useiden komponenttien ketjuttamiseen – voit ketjuttaa kehotteen malliin ja parseriin tai ketjuttaa useita tekoälykutsuja, joissa yhden tulos syötetään seuraavaan syötteeseen. Tämä pikaopas keskittyy perusteisiin ennen monimutkaisempien ketjujen tutkimista.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.fi.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.fi.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Komponenttien ketjuttaminen LangChain4j:ssä – rakennuspalikat yhdistyvät luodakseen tehokkaita tekoälytyönkulkuja*
 
@@ -49,7 +49,7 @@ Käytämme kolmea ydinkomponenttia:
 
 **MessageWindowChatMemory** – Säilyttää keskusteluhistorian. Ilman tätä jokainen pyyntö on itsenäinen. Tämän kanssa tekoäly muistaa aiemmat viestit ja ylläpitää kontekstia useiden vuorojen ajan.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.fi.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.fi.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j-arkkitehtuuri – ydinkomponentit toimivat yhdessä tehostaakseen tekoälysovelluksiasi*
 

@@ -49,7 +49,7 @@ Tænk på RAG som at give modellen et referencebibliotek. Når du stiller et sp�
 
 Dette forankrer modellens svar i dine faktiske data i stedet for at stole på dens træningsviden eller finde på svar.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.da.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.da.png" alt="RAG Architecture" width="800"/>
 
 *RAG workflow - fra brugerforespørgsel til semantisk søgning til kontekstuel svar generering*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.da.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.da.png" alt="Vector Embeddings Space" width="800"/>
 
 *Dokumenter repræsenteret som vektorer i embedding-rum - lignende indhold samles i klynger*
 
@@ -152,7 +152,7 @@ Fra Spring Boot Dashboard kan du:
 
 Klik blot på play-knappen ved siden af "rag" for at starte dette modul, eller start alle moduler på én gang.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.da.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.da.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Mulighed 2: Brug shell scripts**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Alle moduler
 
 Applikationen tilbyder en webgrænseflade til dokumentupload og spørgsmål.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.da.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.da.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG applikationsgrænseflade - upload dokumenter og stil spørgsmål*
 
@@ -240,7 +240,7 @@ Stil nu specifikke spørgsmål om dokumentindholdet. Prøv noget faktuelt, der k
 
 Bemærk at hvert svar inkluderer kildehenvisninger med lighedsscores. Disse scores (0 til 1) viser, hvor relevant hvert stykke var for dit spørgsmål. Højere scores betyder bedre match. Dette giver dig mulighed for at verificere svaret mod kildematerialet.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.da.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.da.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Forespørgselsresultater viser svar med kildehenvisninger og relevansscores*
 

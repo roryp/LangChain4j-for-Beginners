@@ -49,7 +49,7 @@ RAG'i modele bir referans kütüphanesi vermek gibi düşünün. Bir soru sordu�
 
 Bu, modelin yanıtlarını eğitim bilgisine veya uydurulan cevaplara dayanmak yerine gerçek verilerinize dayandırır.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.tr.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.tr.png" alt="RAG Architecture" width="800"/>
 
 *RAG iş akışı - kullanıcı sorgusundan anlamsal aramaya ve bağlamsal cevap üretimine*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.tr.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.tr.png" alt="Vector Embeddings Space" width="800"/>
 
 *Belgeler gömülü temsil alanında vektörler olarak gösterilir - benzer içerikler kümelenir*
 
@@ -152,7 +152,7 @@ Spring Boot Dashboard'dan:
 
 "rag" yanındaki oynat düğmesine tıklayarak bu modülü başlatabilir veya tüm modülleri aynı anda başlatabilirsiniz.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.tr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.tr.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Seçenek 2: Shell betikleri kullanarak**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # Tüm modüller
 
 Uygulama, belge yükleme ve soru sorma için web arayüzü sağlar.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.tr.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.tr.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG uygulama arayüzü - belgeleri yükleyin ve sorular sorun*
 
@@ -240,7 +240,7 @@ Sistem belgenizi işler, parçalara böler ve her parça için gömülü temsill
 
 Her cevabın benzerlik puanları ile kaynak referansları içerdiğine dikkat edin. Bu puanlar (0 ile 1 arasında) her parçanın sorunuzla ne kadar alakalı olduğunu gösterir. Daha yüksek puanlar daha iyi eşleşme demektir. Bu, cevabı kaynak materyale karşı doğrulamanızı sağlar.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.tr.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.tr.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sorgu sonuçları, cevap ile kaynak referansları ve alaka puanlarını gösterir*
 

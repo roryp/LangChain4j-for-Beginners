@@ -1,212 +1,144 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c25ec1f10ef156c53e190cdf8b0711ab",
-  "translation_date": "2025-12-13T17:59:01+00:00",
+  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
+  "translation_date": "2025-12-31T02:46:31+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "vi"
 }
 -->
-# Module 05: Giao Thức Ngữ Cảnh Mô Hình (MCP)
+# Module 05: Model Context Protocol (MCP)
 
-## Mục Lục
+## Table of Contents
 
-- [Bạn Sẽ Học Gì](../../../05-mcp)
-- [Hiểu Về MCP](../../../05-mcp)
-- [Cách MCP Hoạt Động](../../../05-mcp)
-  - [Kiến Trúc Máy Chủ-Khách](../../../05-mcp)
-  - [Khám Phá Công Cụ](../../../05-mcp)
-  - [Cơ Chế Vận Chuyển](../../../05-mcp)
-- [Yêu Cầu Tiền Đề](../../../05-mcp)
-- [Nội Dung Module Này](../../../05-mcp)
-- [Bắt Đầu Nhanh](../../../05-mcp)
-  - [Ví Dụ 1: Máy Tính Từ Xa (Streamable HTTP)](../../../05-mcp)
-  - [Ví Dụ 2: Thao Tác Tệp (Stdio)](../../../05-mcp)
-  - [Ví Dụ 3: Phân Tích Git (Docker)](../../../05-mcp)
-- [Khái Niệm Chính](../../../05-mcp)
-  - [Lựa Chọn Vận Chuyển](../../../05-mcp)
-  - [Khám Phá Công Cụ](../../../05-mcp)
-  - [Quản Lý Phiên Làm Việc](../../../05-mcp)
-  - [Cân Nhắc Đa Nền Tảng](../../../05-mcp)
-- [Khi Nào Nên Dùng MCP](../../../05-mcp)
-- [Hệ Sinh Thái MCP](../../../05-mcp)
-- [Chúc Mừng!](../../../05-mcp)
-  - [Tiếp Theo Là Gì?](../../../05-mcp)
-- [Khắc Phục Sự Cố](../../../05-mcp)
+- [Những gì bạn sẽ học](../../../05-mcp)
+- [MCP là gì?](../../../05-mcp)
+- [MCP hoạt động như thế nào](../../../05-mcp)
+- [Mô-đun Agentic](../../../05-mcp)
+- [Chạy các ví dụ](../../../05-mcp)
+  - [Yêu cầu trước](../../../05-mcp)
+- [Bắt đầu nhanh](../../../05-mcp)
+  - [Thao tác tệp (Stdio)](../../../05-mcp)
+  - [Supervisor Agent](../../../05-mcp)
+    - [Hiểu kết quả đầu ra](../../../05-mcp)
+    - [Giải thích các tính năng của mô-đun Agentic](../../../05-mcp)
+- [Khái niệm chính](../../../05-mcp)
+- [Chúc mừng!](../../../05-mcp)
+  - [Tiếp theo là gì?](../../../05-mcp)
 
-## Bạn Sẽ Học Gì
+## What You'll Learn
 
-Bạn đã xây dựng AI hội thoại, thành thạo các prompt, căn cứ câu trả lời dựa trên tài liệu, và tạo các agent với công cụ. Nhưng tất cả các công cụ đó đều được xây dựng riêng cho ứng dụng cụ thể của bạn. Nếu bạn có thể cho AI của mình truy cập vào một hệ sinh thái công cụ chuẩn hóa mà ai cũng có thể tạo và chia sẻ thì sao?
+Bạn đã xây dựng AI hội thoại, làm chủ prompts, gắn kết phản hồi trong tài liệu và tạo các agent với công cụ. Nhưng tất cả những công cụ đó đều được xây dựng tùy chỉnh cho ứng dụng cụ thể của bạn. Nếu bạn có thể cung cấp cho AI quyền truy cập vào một hệ sinh thái công cụ chuẩn mà bất kỳ ai cũng có thể tạo và chia sẻ thì sao? Trong module này, bạn sẽ học cách làm điều đó với Model Context Protocol (MCP) và mô-đun agentic của LangChain4j. Chúng tôi trước tiên trình bày một trình đọc tệp MCP đơn giản và sau đó cho thấy cách nó dễ dàng tích hợp vào các luồng công việc agentic nâng cao bằng mẫu Supervisor Agent.
 
-Giao Thức Ngữ Cảnh Mô Hình (MCP) cung cấp chính xác điều đó - một cách tiêu chuẩn để các ứng dụng AI khám phá và sử dụng các công cụ bên ngoài. Thay vì viết tích hợp tùy chỉnh cho từng nguồn dữ liệu hoặc dịch vụ, bạn kết nối với các máy chủ MCP cung cấp khả năng của họ theo định dạng nhất quán. Agent AI của bạn có thể tự động khám phá và sử dụng các công cụ này.
+## What is MCP?
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5448d2fa21a61218777ceb8010ea0390dd43924b26df35f61.vi.png" alt="So sánh MCP" width="800"/>
+Model Context Protocol (MCP) cung cấp chính xác điều đó - một cách chuẩn để các ứng dụng AI khám phá và sử dụng các công cụ bên ngoài. Thay vì viết tích hợp tùy chỉnh cho từng nguồn dữ liệu hoặc dịch vụ, bạn kết nối với các máy chủ MCP mà công bố khả năng của chúng theo một định dạng nhất quán. Agent AI của bạn sau đó có thể tự động khám phá và sử dụng các công cụ này.
+
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.vi.png" alt="So sánh MCP" width="800"/>
 
 *Trước MCP: Tích hợp phức tạp điểm-điểm. Sau MCP: Một giao thức, vô vàn khả năng.*
 
-## Hiểu Về MCP
+MCP giải quyết một vấn đề cơ bản trong phát triển AI: mọi tích hợp đều là tùy chỉnh. Muốn truy cập GitHub? Mã tùy chỉnh. Muốn đọc tệp? Mã tùy chỉnh. Muốn truy vấn cơ sở dữ liệu? Mã tùy chỉnh. Và không tích hợp nào trong số này làm việc với các ứng dụng AI khác.
 
-MCP giải quyết một vấn đề cơ bản trong phát triển AI: mỗi tích hợp đều tùy chỉnh. Muốn truy cập GitHub? Mã tùy chỉnh. Muốn đọc tệp? Mã tùy chỉnh. Muốn truy vấn cơ sở dữ liệu? Mã tùy chỉnh. Và không tích hợp nào trong số này hoạt động với các ứng dụng AI khác.
+MCP tiêu chuẩn hóa điều này. Một máy chủ MCP công bố các công cụ với mô tả rõ ràng và schema tham số. Bất kỳ client MCP nào cũng có thể kết nối, khám phá các công cụ có sẵn và sử dụng chúng. Xây dựng một lần, dùng khắp nơi.
 
-MCP chuẩn hóa điều này. Một máy chủ MCP cung cấp các công cụ với mô tả rõ ràng và sơ đồ. Bất kỳ client MCP nào cũng có thể kết nối, khám phá công cụ có sẵn và sử dụng chúng. Xây dựng một lần, dùng mọi nơi.
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.vi.png" alt="Kiến trúc MCP" width="800"/>
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9814b7cffade208d4b0d97203c22df8d8e5504d8238fa7065.vi.png" alt="Kiến trúc MCP" width="800"/>
+*Kiến trúc Model Context Protocol - khám phá và thực thi công cụ được chuẩn hóa*
 
-*Kiến trúc Giao Thức Ngữ Cảnh Mô Hình - khám phá và thực thi công cụ chuẩn hóa*
+## How MCP Works
 
-## Cách MCP Hoạt Động
+**Server-Client Architecture**
 
-**Kiến Trúc Máy Chủ-Khách**
+MCP sử dụng mô hình client-server. Các server cung cấp công cụ - đọc tệp, truy vấn cơ sở dữ liệu, gọi API. Các client (ứng dụng AI của bạn) kết nối tới server và sử dụng công cụ của chúng.
 
-MCP sử dụng mô hình client-server. Máy chủ cung cấp công cụ - đọc tệp, truy vấn cơ sở dữ liệu, gọi API. Client (ứng dụng AI của bạn) kết nối với máy chủ và sử dụng công cụ của họ.
+Để sử dụng MCP với LangChain4j, thêm dependency Maven sau:
 
-**Khám Phá Công Cụ**
-
-Khi client của bạn kết nối với máy chủ MCP, nó hỏi "Bạn có công cụ gì?" Máy chủ trả lời với danh sách công cụ có sẵn, mỗi công cụ có mô tả và sơ đồ tham số. Agent AI của bạn có thể quyết định công cụ nào dùng dựa trên yêu cầu người dùng.
-
-**Cơ Chế Vận Chuyển**
-
-MCP định nghĩa hai cơ chế vận chuyển: HTTP cho máy chủ từ xa, Stdio cho tiến trình cục bộ (bao gồm container Docker):
-
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020ed801b772b26ed69338e22739677aa017e0968f6538b09a2.vi.png" alt="Cơ chế Vận Chuyển" width="800"/>
-
-*Cơ chế vận chuyển MCP: HTTP cho máy chủ từ xa, Stdio cho tiến trình cục bộ (bao gồm container Docker)*
-
-**Streamable HTTP** - [StreamableHttpDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-Dành cho máy chủ từ xa. Ứng dụng của bạn gửi yêu cầu HTTP đến máy chủ chạy ở đâu đó trên mạng. Sử dụng Server-Sent Events cho giao tiếp thời gian thực.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
 ```
 
-> **🤖 Thử với [GitHub Copilot](https://github.com/features/copilot) Chat:** Mở [`StreamableHttpDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) và hỏi:
-> - "MCP khác gì so với tích hợp công cụ trực tiếp như trong Module 04?"
-> - "Lợi ích của việc dùng MCP để chia sẻ công cụ giữa các ứng dụng là gì?"
-> - "Làm sao xử lý lỗi kết nối hoặc timeout với máy chủ MCP?"
+**Tool Discovery**
+
+Khi client của bạn kết nối tới một máy chủ MCP, nó hỏi "Bạn có công cụ gì?" Máy chủ trả lời với danh sách các công cụ có sẵn, mỗi công cụ có mô tả và schema tham số. Agent AI của bạn sau đó có thể quyết định các công cụ nào cần dùng dựa trên yêu cầu của người dùng.
+
+**Transport Mechanisms**
+
+MCP hỗ trợ các cơ chế truyền tải khác nhau. Module này minh họa transport Stdio cho các tiến trình cục bộ:
+
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.vi.png" alt="Cơ chế truyền tải" width="800"/>
+
+*Cơ chế truyền tải MCP: HTTP cho máy chủ từ xa, Stdio cho tiến trình cục bộ*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Dành cho tiến trình cục bộ. Ứng dụng của bạn khởi tạo máy chủ như một tiến trình con và giao tiếp qua đầu vào/đầu ra chuẩn. Hữu ích cho truy cập hệ thống tệp hoặc công cụ dòng lệnh.
+Cho các tiến trình cục bộ. Ứng dụng của bạn khởi tạo một server như một subprocess và giao tiếp qua input/output tiêu chuẩn. Hữu ích cho truy cập hệ thống tệp hoặc công cụ dòng lệnh.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
     .build();
 ```
 
-> **🤖 Thử với [GitHub Copilot](https://github.com/features/copilot) Chat:** Mở [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) và hỏi:
-> - "Cơ chế vận chuyển Stdio hoạt động thế nào và khi nào nên dùng thay vì HTTP?"
-> - "LangChain4j quản lý vòng đời tiến trình máy chủ MCP sinh ra thế nào?"
-> - "Những rủi ro bảo mật khi cho AI truy cập hệ thống tệp là gì?"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) and ask:
+> - "How does Stdio transport work and when should I use it vs HTTP?"
+> - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
+> - "What are the security implications of giving AI access to the file system?"
 
-**Docker (dùng Stdio)** - [GitRepositoryAnalyzer.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+## The Agentic Module
 
-Dành cho dịch vụ container hóa. Dùng vận chuyển stdio để giao tiếp với container Docker qua `docker run`. Tốt cho phụ thuộc phức tạp hoặc môi trường cô lập.
+While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build agents that orchestrate those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code.
 
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
+In this module, you'll explore the **Supervisor Agent** pattern — an advanced agentic AI approach where a "supervisor" agent dynamically decides which sub-agents to invoke based on user requests. We'll combine both concepts by giving one of our sub-agents MCP-powered file access capabilities.
+
+To use the agentic module, add this Maven dependency:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
 ```
 
-> **🤖 Thử với [GitHub Copilot](https://github.com/features/copilot) Chat:** Mở [`GitRepositoryAnalyzer.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) và hỏi:
-> - "Cơ chế vận chuyển Docker cô lập máy chủ MCP thế nào và lợi ích ra sao?"
-> - "Làm sao cấu hình mount volume để chia sẻ dữ liệu giữa host và container MCP?"
-> - "Thực hành tốt nhất để quản lý vòng đời máy chủ MCP dựa trên Docker trong sản xuất là gì?"
+> **⚠️ Experimental:** The `langchain4j-agentic` module is **experimental** and subject to change. The stable way to build AI assistants remains `langchain4j-core` with custom tools (Module 04).
 
-## Chạy Các Ví Dụ
+## Running the Examples
 
-### Yêu Cầu Tiền Đề
+### Prerequisites
 
 - Java 21+, Maven 3.9+
-- Node.js 16+ và npm (cho máy chủ MCP)
-- **Docker Desktop** - Phải **ĐANG CHẠY** cho Ví dụ 3 (không chỉ cài đặt)
-- Token Truy Cập Cá Nhân GitHub được cấu hình trong file `.env` (từ Module 00)
+- Node.js 16+ and npm (for MCP servers)
+- Environment variables configured in `.env` file (from the root directory):
+  - **For StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **For SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (same as Modules 01-04)
 
-> **Lưu ý:** Nếu bạn chưa thiết lập token GitHub, xem [Module 00 - Bắt Đầu Nhanh](../00-quick-start/README.md) để biết hướng dẫn.
+> **Note:** If you haven't set up your environment variables yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions, or copy `.env.example` to `.env` in the root directory and fill in your values.
 
-> **⚠️ Người dùng Docker:** Trước khi chạy Ví dụ 3, kiểm tra Docker Desktop đang chạy bằng lệnh `docker ps`. Nếu gặp lỗi kết nối, khởi động Docker Desktop và chờ khoảng 30 giây để khởi tạo.
+## Quick Start
 
-## Bắt Đầu Nhanh
+**Using VS Code:** Simply right-click on any demo file in the Explorer and select **"Run Java"**, or use the launch configurations from the Run and Debug panel (make sure you've added your token to the `.env` file first).
 
-**Dùng VS Code:** Nhấp chuột phải vào bất kỳ file demo nào trong Explorer và chọn **"Run Java"**, hoặc dùng cấu hình launch từ bảng Run and Debug (đảm bảo bạn đã thêm token vào file `.env` trước).
+**Using Maven:** Alternatively, you can run from the command line with the examples below.
 
-**Dùng Maven:** Ngoài ra, bạn có thể chạy từ dòng lệnh với các ví dụ dưới đây.
+### File Operations (Stdio)
 
-**⚠️ Quan trọng:** Một số ví dụ có yêu cầu tiền đề (như khởi động máy chủ MCP hoặc build image Docker). Kiểm tra yêu cầu từng ví dụ trước khi chạy.
+This demonstrates local subprocess-based tools.
 
-### Ví Dụ 1: Máy Tính Từ Xa (Streamable HTTP)
+**✅ No prerequisites needed** - the MCP server is spawned automatically.
 
-Ví dụ này minh họa tích hợp công cụ qua mạng.
+**Using VS Code:** Right-click on `StdioTransportDemo.java` and select **"Run Java"**.
 
-**⚠️ Yêu cầu:** Bạn cần khởi động máy chủ MCP trước (xem Terminal 1 bên dưới).
-
-**Terminal 1 - Khởi động máy chủ MCP:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**Terminal 2 - Chạy ví dụ:**
-
-**Dùng VS Code:** Nhấp chuột phải vào `StreamableHttpDemo.java` và chọn **"Run Java"**.
-
-**Dùng Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Quan sát agent khám phá công cụ có sẵn, sau đó dùng máy tính để thực hiện phép cộng.
-
-### Ví Dụ 2: Thao Tác Tệp (Stdio)
-
-Ví dụ này minh họa công cụ dựa trên tiến trình con cục bộ.
-
-**✅ Không cần yêu cầu tiền đề** - máy chủ MCP được sinh tự động.
-
-**Dùng VS Code:** Nhấp chuột phải vào `StdioTransportDemo.java` và chọn **"Run Java"**.
-
-**Dùng Maven:**
+**Using Maven:**
 
 **Bash:**
 ```bash
@@ -222,198 +154,244 @@ cd 05-mcp
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
-Ứng dụng tự động sinh máy chủ MCP hệ thống tệp và đọc một tệp cục bộ. Chú ý cách quản lý tiến trình con được xử lý cho bạn.
+The application spawns a filesystem MCP server automatically and reads a local file. Notice how the subprocess management is handled for you.
 
-**Kết quả mong đợi:**
+**Expected output:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Ví Dụ 3: Phân Tích Git (Docker)
+### Supervisor Agent
 
-Ví dụ này minh họa máy chủ công cụ container hóa.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.vi.png" alt="Mô-đun Agentic" width="800"/>
 
-**⚠️ Yêu cầu:** 
-1. **Docker Desktop phải ĐANG CHẠY** (không chỉ cài đặt)
-2. **Người dùng Windows:** Khuyến nghị chế độ WSL 2 (Docker Desktop Settings → General → "Use the WSL 2 based engine"). Chế độ Hyper-V cần cấu hình chia sẻ tệp thủ công.
-3. Bạn cần build image Docker trước (xem Terminal 1 bên dưới)
 
-**Kiểm tra Docker đang chạy:**
+The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
+
+**Combining Supervisor with MCP:** In this example, we give the `FileAgent` access to MCP file system tools via `toolProvider(mcpToolProvider)`. When a user asks to "read and analyze a file," the Supervisor analyzes the request and generates an execution plan. It then routes the request to `FileAgent`, which uses MCP's `read_file` tool to retrieve the content. The Supervisor passes that content to `AnalysisAgent` for interpretation, and optionally invokes `SummaryAgent` to condense the results.
+
+This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it. The Supervisor adapts dynamically to different types of requests and returns either the last agent's response or a summary of all operations.
+
+**Using the Start Scripts (Recommended):**
+
+The start scripts automatically load environment variables from the root `.env` file:
 
 **Bash:**
 ```bash
-docker ps  # Nên hiển thị danh sách container, không phải lỗi
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Nên hiển thị danh sách container, không phải lỗi
-```
-
-Nếu bạn thấy lỗi như "Cannot connect to Docker daemon" hoặc "The system cannot find the file specified", hãy khởi động Docker Desktop và chờ khởi tạo (~30 giây).
-
-**Khắc phục sự cố:**
-- Nếu AI báo kho lưu trữ trống hoặc không có tệp, mount volume (`-v`) không hoạt động.
-- **Người dùng Windows Hyper-V:** Thêm thư mục dự án vào Docker Desktop Settings → Resources → File sharing, sau đó khởi động lại Docker Desktop.
-- **Giải pháp khuyến nghị:** Chuyển sang chế độ WSL 2 để chia sẻ tệp tự động (Settings → General → bật "Use the WSL 2 based engine").
-
-**Terminal 1 - Build image Docker:**
-
-**Bash:**
-```bash
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**Terminal 2 - Chạy trình phân tích:**
-
-**Dùng VS Code:** Nhấp chuột phải vào `GitRepositoryAnalyzer.java` và chọn **"Run Java"**.
-
-**Dùng Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+.\start.ps1
 ```
 
-Ứng dụng khởi chạy container Docker, mount kho lưu trữ của bạn, và phân tích cấu trúc cùng nội dung kho qua agent AI.
+**Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"** (ensure your `.env` file is configured).
 
-## Khái Niệm Chính
+**How the Supervisor Works:**
 
-**Lựa Chọn Vận Chuyển**
+```java
+// Định nghĩa nhiều tác nhân với các khả năng cụ thể
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)  // Có các công cụ MCP để thao tác tệp
+        .build();
 
-Chọn dựa trên nơi công cụ của bạn tồn tại:
-- Dịch vụ từ xa → Streamable HTTP
-- Hệ thống tệp cục bộ → Stdio
-- Phụ thuộc phức tạp → Docker
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
 
-**Khám Phá Công Cụ**
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
 
-Client MCP tự động khám phá công cụ có sẵn khi kết nối. Agent AI của bạn thấy mô tả công cụ và quyết định dùng công cụ nào dựa trên yêu cầu người dùng.
+// Tạo một bộ giám sát điều phối các tác nhân này
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // Mô hình "planner"
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
 
-**Quản Lý Phiên Làm Việc**
+// Supervisor tự động quyết định tác nhân nào sẽ được gọi
+// Chỉ cần truyền một yêu cầu bằng ngôn ngữ tự nhiên - LLM sẽ lập kế hoạch thực thi
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+```
 
-Vận chuyển Streamable HTTP duy trì phiên làm việc, cho phép tương tác có trạng thái với máy chủ từ xa. Vận chuyển Stdio và Docker thường không trạng thái.
+See [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) for the complete implementation.
 
-**Cân Nhắc Đa Nền Tảng**
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) and ask:
+> - "How does the Supervisor decide which agents to invoke?"
+> - "What's the difference between Supervisor and Sequential workflow patterns?"
+> - "How can I customize the Supervisor's planning behavior?"
 
-Các ví dụ xử lý khác biệt nền tảng tự động (khác biệt lệnh Windows vs Unix, chuyển đổi đường dẫn cho Docker). Điều này quan trọng cho triển khai sản xuất trên nhiều môi trường.
+#### Understanding the Output
 
-## Khi Nào Nên Dùng MCP
+When you run the demo, you'll see a structured walkthrough of how the Supervisor orchestrates multiple agents. Here's what each section means:
 
-**Dùng MCP khi:**
-- Bạn muốn tận dụng hệ sinh thái công cụ hiện có
-- Xây dựng công cụ mà nhiều ứng dụng sẽ dùng chung
-- Tích hợp dịch vụ bên thứ ba với giao thức chuẩn
-- Cần thay đổi triển khai công cụ mà không đổi mã
+```
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
 
-**Dùng công cụ tùy chỉnh (Module 04) khi:**
-- Xây dựng chức năng riêng cho ứng dụng
-- Hiệu năng là yếu tố quan trọng (MCP có thêm chi phí)
-- Công cụ của bạn đơn giản và không tái sử dụng
-- Cần kiểm soát hoàn toàn việc thực thi
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
+```
 
-## Hệ Sinh Thái MCP
+**The header** introduces the demo and explains the core concept: the Supervisor uses an LLM (not hardcoded rules) to decide which agents to call.
 
-Giao Thức Ngữ Cảnh Mô Hình là chuẩn mở với hệ sinh thái ngày càng phát triển:
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
 
-- Máy chủ MCP chính thức cho các tác vụ phổ biến (hệ thống tệp, Git, cơ sở dữ liệu)
-- Máy chủ do cộng đồng đóng góp cho nhiều dịch vụ khác nhau
-- Mô tả công cụ và sơ đồ chuẩn hóa
-- Tương thích đa framework (hoạt động với bất kỳ client MCP nào)
+**Available Agents** shows the three specialized agents the Supervisor can choose from. Each agent has a specific capability:
+- **FileAgent** can read files using MCP tools (external capability)
+- **AnalysisAgent** analyzes content (pure LLM capability)
+- **SummaryAgent** creates summaries (pure LLM capability)
 
-Sự chuẩn hóa này có nghĩa công cụ xây cho một ứng dụng AI cũng hoạt động với ứng dụng khác, tạo thành hệ sinh thái chia sẻ khả năng.
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
 
-## Chúc Mừng!
+**User Request** shows what was asked. The Supervisor must parse this and decide which agents to invoke.
 
-Bạn đã hoàn thành khóa học LangChain4j cho Người Mới Bắt Đầu. Bạn đã học:
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
 
-- Cách xây dựng AI hội thoại có bộ nhớ (Module 01)
-- Mẫu kỹ thuật prompt cho các tác vụ khác nhau (Module 02)
-- Căn cứ câu trả lời dựa trên tài liệu với RAG (Module 03)
-- Tạo agent AI với công cụ tùy chỉnh (Module 04)
-- Tích hợp công cụ chuẩn hóa qua MCP (Module 05)
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
 
-Bạn đã có nền tảng để xây dựng ứng dụng AI sản xuất. Các khái niệm bạn học áp dụng bất kể framework hay mô hình cụ thể - đó là các mẫu cơ bản trong kỹ thuật AI.
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: Structure: The content is organized into clear paragraphs that int...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
 
-### Tiếp Theo Là Gì?
+**Supervisor Orchestration** is where the magic happens. Watch how:
+1. The Supervisor **chose FileAgent first** because the request mentioned "read the file"
+2. FileAgent used MCP's `read_file` tool to retrieve the file contents
+3. The Supervisor then **chose AnalysisAgent** and passed the file contents to it
+4. AnalysisAgent analyzed the structure, tone, and themes
 
-Sau khi hoàn thành các module, khám phá [Hướng Dẫn Kiểm Thử](../docs/TESTING.md) để xem các khái niệm kiểm thử LangChain4j trong thực tế.
+Notice the Supervisor made these decisions **autonomously** based on the user's request — no hardcoded workflow!
 
-**Tài Nguyên Chính Thức:**
-- [Tài liệu LangChain4j](https://docs.langchain4j.dev/) - Hướng dẫn toàn diện và tham khảo API
-- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Mã nguồn và ví dụ
-- [Hướng dẫn LangChain4j](https://docs.langchain4j.dev/tutorials/) - Hướng dẫn từng bước cho nhiều trường hợp sử dụng
+**Final Response** is the Supervisor's synthesized answer, combining outputs from all agents it invoked. The example dumps the agentic scope showing the summary and analysis results stored by each agent.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: Structure: The content is organized into clear paragraphs that in...
+```
+
+### Explanation of Agentic Module Features
+
+The example demonstrates several advanced features of the agentic module. Let's have a closer look at Agentic Scope and Agent Listeners.
+
+**Agentic Scope** shows the shared memory where agents stored their results using `@Agent(outputKey="...")`. This allows:
+- Later agents to access earlier agents' outputs
+- The Supervisor to synthesize a final response
+- You to inspect what each agent produced
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** enable monitoring and debugging of agent execution. The step-by-step output you see in the demo comes from an AgentListener that hooks into each agent invocation:
+- **beforeAgentInvocation** - Called when the Supervisor selects an agent, letting you see which agent was chosen and why
+- **afterAgentInvocation** - Called when an agent completes, showing its result
+- **inheritedBySubagents** - When true, the listener monitors all agents in the hierarchy
+
+```java
+AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
+    @Override
+    public void beforeAgentInvocation(AgentRequest request) {
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Truyền tới tất cả các tác nhân con
+    }
+};
+```
+
+Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
+
+| Mẫu | Mô tả | Trường hợp sử dụng |
+|---------|-------------|----------|
+| **Tuần tự (Sequential)** | Thực thi các agent theo thứ tự, đầu ra chuyển sang bước tiếp theo | Pipeline: nghiên cứu → phân tích → báo cáo |
+| **Song song (Parallel)** | Chạy các agent đồng thời | Nhiệm vụ độc lập: thời tiết + tin tức + cổ phiếu |
+| **Vòng lặp (Loop)** | Lặp lại cho đến khi đạt điều kiện | Đánh giá chất lượng: tinh chỉnh đến khi điểm ≥ 0.8 |
+| **Có điều kiện (Conditional)** | Chuyển hướng dựa trên điều kiện | Phân loại → chuyển đến agent chuyên gia |
+| **Con người can thiệp (Human-in-the-Loop)** | Thêm các điểm kiểm tra do con người thực hiện | Luồng phê duyệt, rà soát nội dung |
+
+## Key Concepts
+
+**MCP** phù hợp khi bạn muốn tận dụng hệ sinh thái công cụ hiện có, xây dựng công cụ mà nhiều ứng dụng có thể chia sẻ, tích hợp dịch vụ bên thứ ba với giao thức chuẩn, hoặc hoán đổi triển khai công cụ mà không thay đổi mã nguồn.
+
+**Mô-đun Agentic** hoạt động tốt nhất khi bạn muốn định nghĩa agent theo cách khai báo với chú thích `@Agent`, cần điều phối luồng công việc (tuần tự, vòng lặp, song song), ưu tiên thiết kế agent dựa trên interface thay vì mã lệnh, hoặc khi bạn kết hợp nhiều agent chia sẻ đầu ra thông qua `outputKey`.
+
+**Mẫu Supervisor Agent** tỏa sáng khi luồng công việc không thể dự đoán trước và bạn muốn LLM quyết định, khi bạn có nhiều agent chuyên biệt cần điều phối động, khi xây dựng hệ thống hội thoại chuyển hướng tới các khả năng khác nhau, hoặc khi bạn muốn hành vi agent linh hoạt và thích ứng nhất.
+
+## Congratulations!
+
+Bạn đã hoàn thành khóa LangChain4j for Beginners. Bạn đã học được:
+
+- Cách xây dựng AI hội thoại với bộ nhớ (Module 01)
+- Các mẫu prompt engineering cho các nhiệm vụ khác nhau (Module 02)
+- Gắn kết phản hồi trong tài liệu của bạn bằng RAG (Module 03)
+- Tạo các agent AI cơ bản (trợ lý) với công cụ tùy chỉnh (Module 04)
+- Tích hợp các công cụ chuẩn hóa với các mô-đun LangChain4j MCP và Agentic (Mô-đun 05)
+
+### Tiếp theo?
+
+Sau khi hoàn thành các mô-đun, hãy khám phá [Hướng dẫn Kiểm thử](../docs/TESTING.md) để xem các khái niệm kiểm thử của LangChain4j trong thực tế.
+
+**Tài nguyên chính thức:**
+- [Tài liệu LangChain4j](https://docs.langchain4j.dev/) - Hướng dẫn toàn diện và tài liệu tham khảo API
+- [LangChain4j trên GitHub](https://github.com/langchain4j/langchain4j) - Mã nguồn và ví dụ
+- [Hướng dẫn LangChain4j](https://docs.langchain4j.dev/tutorials/) - Hướng dẫn từng bước cho các trường hợp sử dụng khác nhau
 
 Cảm ơn bạn đã hoàn thành khóa học này!
 
 ---
 
-**Điều Hướng:** [← Trước: Module 04 - Công Cụ](../04-tools/README.md) | [Quay Lại Trang Chính](../README.md)
-
----
-
-## Khắc Phục Sự Cố
-
-### Cú Pháp Lệnh Maven PowerShell
-**Vấn đề**: Các lệnh Maven thất bại với lỗi `Unknown lifecycle phase ".mainClass=..."`
-
-**Nguyên nhân**: PowerShell hiểu `=` như toán tử gán biến, làm hỏng cú pháp thuộc tính Maven
-
-**Giải pháp**: Sử dụng toán tử dừng phân tích cú pháp `--%` trước lệnh Maven:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Toán tử `--%` báo cho PowerShell truyền tất cả các đối số còn lại nguyên văn cho Maven mà không giải thích.
-
-### Vấn đề kết nối Docker
-
-**Vấn đề**: Các lệnh Docker thất bại với thông báo "Cannot connect to Docker daemon" hoặc "The system cannot find the file specified"
-
-**Nguyên nhân**: Docker Desktop không chạy hoặc chưa khởi tạo đầy đủ
-
-**Giải pháp**: 
-1. Khởi động Docker Desktop
-2. Chờ khoảng ~30 giây để khởi tạo đầy đủ
-3. Kiểm tra với `docker ps` (nên hiển thị danh sách container, không phải lỗi)
-4. Sau đó chạy ví dụ của bạn
-
-### Gắn kết Volume Docker trên Windows
-
-**Vấn đề**: Trình phân tích kho Git báo kho trống hoặc không có file
-
-**Nguyên nhân**: Gắn kết volume (`-v`) không hoạt động do cấu hình chia sẻ file
-
-**Giải pháp**:
-- **Khuyến nghị:** Chuyển sang chế độ WSL 2 (Docker Desktop Settings → General → "Use the WSL 2 based engine")
-- **Thay thế (Hyper-V):** Thêm thư mục dự án vào Docker Desktop Settings → Resources → File sharing, sau đó khởi động lại Docker Desktop
+**Điều hướng:** [← Trước: Mô-đun 04 - Công cụ](../04-tools/README.md) | [Quay lại Trang chính](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Tuyên bố từ chối trách nhiệm**:  
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo độ chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ gốc của nó nên được coi là nguồn chính xác và đáng tin cậy. Đối với thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
+Miễn trừ trách nhiệm:
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo tính chính xác, xin lưu ý rằng các bản dịch tự động có thể chứa lỗi hoặc không chính xác. Tài liệu gốc bằng ngôn ngữ nguyên bản nên được coi là nguồn chính thức. Đối với thông tin quan trọng, nên sử dụng bản dịch chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -37,7 +37,7 @@ LangChain4j is een Java-bibliotheek die het bouwen van AI-gestuurde toepassingen
 
 De "chain" in LangChain verwijst naar het aaneenschakelen van meerdere componenten - je kunt een prompt koppelen aan een model, dat weer aan een parser, of meerdere AI-aanroepen aan elkaar schakelen waarbij de output van de ene de input van de volgende voedt. Deze snelstart richt zich op de basisprincipes voordat complexere ketens worden verkend.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.nl.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.nl.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Componenten aaneenschakelen in LangChain4j - bouwstenen verbinden om krachtige AI-workflows te creëren*
 
@@ -49,7 +49,7 @@ We gebruiken drie kerncomponenten:
 
 **MessageWindowChatMemory** - Houdt de gespreksgeschiedenis bij. Zonder dit is elk verzoek onafhankelijk. Met deze component onthoudt de AI eerdere berichten en behoudt context over meerdere beurten.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.nl.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.nl.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j architectuur - kerncomponenten werken samen om je AI-toepassingen aan te drijven*
 

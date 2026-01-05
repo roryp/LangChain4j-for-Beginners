@@ -1,195 +1,187 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "5d497142c580b4f2bb6f4f314af8ccee",
-  "translation_date": "2025-12-13T19:56:20+00:00",
+  "original_hash": "52815c169081c357fd1cec7b260f37e4",
+  "translation_date": "2025-12-30T21:49:10+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "tw"
 }
 -->
 # LangChain4j 詞彙表
 
-## 目錄
+## Table of Contents
 
 - [核心概念](../../../docs)
 - [LangChain4j 元件](../../../docs)
 - [AI/ML 概念](../../../docs)
-- [提示工程](../../../docs)
-- [RAG（檢索增強生成）](../../../docs)
-- [代理與工具](../../../docs)
-- [模型上下文協議（MCP）](../../../docs)
-- [Azure 服務](../../../docs)
-- [測試與開發](../../../docs)
+- [Prompt Engineering - [Module 02](../02-prompt-engineering/README.md)](#prompt-engineering---module-02)
+- [RAG (檢索增強生成)](../../../docs)
+- [Agents and Tools - [Module 04](../04-tools/README.md)](#agents-and-tools---module-04)
+- [Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)](#model-context-protocol-mcp---module-05)
+- [Azure 服務 - [Module 01](../01-introduction/README.md)](#azure-services---module-01)
+- [測試與開發 - [Testing Guide](TESTING.md)](#testing-and-development---testing-guide)
 
-課程中使用的術語和概念快速參考。
+本課程中使用的術語與概念快速參考。
 
-## 核心概念
+## Core Concepts
 
-**AI 代理** - 使用 AI 進行推理並自主行動的系統。[模組 04](../04-tools/README.md)
+**AI Agent** - 使用 AI 進行推理並自主行動的系統。 [Module 04](../04-tools/README.md)
 
-**鏈（Chain）** - 輸出作為下一步輸入的操作序列。
+**Chain** - 一連串的操作，輸出作為下一步的輸入。
 
-**分塊（Chunking）** - 將文件拆分成較小片段。典型大小：300-500 個標記，帶重疊。[模組 03](../03-rag/README.md)
+**Chunking** - 將文件切分成較小的片段。典型大小：300–500 個 token，並有重疊。 [Module 03](../03-rag/README.md)
 
-**上下文視窗** - 模型可處理的最大標記數。GPT-5：400K 標記。
+**Context Window** - 模型可處理的最大 token 數量。GPT-5：400K token。
 
-**嵌入（Embeddings）** - 表示文本意義的數值向量。[模組 03](../03-rag/README.md)
+**Embeddings** - 代表文字意義的數值向量。 [Module 03](../03-rag/README.md)
 
-**函數調用** - 模型生成結構化請求以調用外部函數。[模組 04](../04-tools/README.md)
+**Function Calling** - 模型產生結構化請求以呼叫外部函式。 [Module 04](../04-tools/README.md)
 
-**幻覺（Hallucination）** - 模型生成錯誤但看似合理的信息。
+**Hallucination** - 模型生成不正確但看似合理的資訊。
 
-**提示（Prompt）** - 輸入給語言模型的文本。[模組 02](../02-prompt-engineering/README.md)
+**Prompt** - 輸入給語言模型的文字。 [Module 02](../02-prompt-engineering/README.md)
 
-**語義搜索** - 使用嵌入按意義搜索，而非關鍵字。[模組 03](../03-rag/README.md)
+**Semantic Search** - 使用 embeddings 依語意搜尋，而非關鍵字。 [Module 03](../03-rag/README.md)
 
-**有狀態與無狀態** - 無狀態：無記憶。有狀態：維持對話歷史。[模組 01](../01-introduction/README.md)
+**Stateful vs Stateless** - 無狀態：沒有記憶。有狀態：維持對話歷史。 [Module 01](../01-introduction/README.md)
 
-**標記（Tokens）** - 模型處理的基本文本單位。影響成本與限制。[模組 01](../01-introduction/README.md)
+**Tokens** - 模型處理的基本文字單位。影響成本與限制。 [Module 01](../01-introduction/README.md)
 
-**工具鏈接** - 依序執行工具，輸出用於下一次調用。[模組 04](../04-tools/README.md)
+**Tool Chaining** - 工具的序列化執行，輸出用於下一次呼叫。 [Module 04](../04-tools/README.md)
 
-## LangChain4j 元件
+## LangChain4j Components
 
-**AiServices** - 建立類型安全的 AI 服務介面。
+**AiServices** - 建立型別安全的 AI 服務介面。
 
-**OpenAiOfficialChatModel** - OpenAI 與 Azure OpenAI 模型的統一客戶端。
+**OpenAiOfficialChatModel** - 統一的 OpenAI 與 Azure OpenAI 模型用戶端。
 
-**OpenAiOfficialEmbeddingModel** - 使用 OpenAI 官方客戶端建立嵌入（支援 OpenAI 與 Azure OpenAI）。
+**OpenAiOfficialEmbeddingModel** - 使用 OpenAI Official 用戶端建立 embeddings（支援 OpenAI 與 Azure OpenAI）。
 
 **ChatModel** - 語言模型的核心介面。
 
 **ChatMemory** - 維持對話歷史。
 
-**ContentRetriever** - 尋找 RAG 相關的文件片段。
+**ContentRetriever** - 為 RAG 找出相關的文件片段。
 
 **DocumentSplitter** - 將文件拆分成片段。
 
-**EmbeddingModel** - 將文本轉換為數值向量。
+**EmbeddingModel** - 將文字轉換為數值向量。
 
-**EmbeddingStore** - 儲存與檢索嵌入。
+**EmbeddingStore** - 儲存與檢索 embeddings。
 
-**MessageWindowChatMemory** - 維持最近訊息的滑動視窗。
+**MessageWindowChatMemory** - 維持最近訊息的滑動視窗記憶。
 
-**PromptTemplate** - 使用 `{{variable}}` 佔位符建立可重用提示。
+**PromptTemplate** - 使用 `{{variable}}` 佔位符建立可重用的 prompt。
 
-**TextSegment** - 帶有元資料的文本片段。用於 RAG。
+**TextSegment** - 帶有 metadata 的文字片段。用於 RAG。
 
 **ToolExecutionRequest** - 代表工具執行請求。
 
 **UserMessage / AiMessage / SystemMessage** - 對話訊息類型。
 
-## AI/ML 概念
+## AI/ML Concepts
 
-**少量示例學習（Few-Shot Learning）** - 在提示中提供範例。[模組 02](../02-prompt-engineering/README.md)
+**Few-Shot Learning** - 在 prompt 中提供示例。 [Module 02](../02-prompt-engineering/README.md)
 
-**大型語言模型（LLM）** - 在大量文本資料上訓練的 AI 模型。
+**Large Language Model (LLM)** - 在大量文字資料上訓練的 AI 模型。
 
-**推理努力（Reasoning Effort）** - GPT-5 控制思考深度的參數。[模組 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - GPT-5 控制思考深度的參數。 [Module 02](../02-prompt-engineering/README.md)
 
-**溫度（Temperature）** - 控制輸出隨機性。低＝確定性，高＝創造性。
+**Temperature** - 控制輸出隨機性。低＝較確定性，高＝較有創意。
 
-**向量資料庫** - 專門用於嵌入的資料庫。[模組 03](../03-rag/README.md)
+**Vector Database** - 專門用來儲存 embeddings 的資料庫。 [Module 03](../03-rag/README.md)
 
-**零示例學習（Zero-Shot Learning）** - 無範例執行任務。[模組 02](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - 在沒有示例的情況下執行任務。 [Module 02](../02-prompt-engineering/README.md)
 
-## 提示工程 - [模組 02](../02-prompt-engineering/README.md)
+## Prompt Engineering - [Module 02](../02-prompt-engineering/README.md)
 
-**思維鏈（Chain-of-Thought）** - 逐步推理以提升準確度。
+**Chain-of-Thought** - 逐步推理以提升準確性。
 
-**受限輸出** - 強制特定格式或結構。
+**Constrained Output** - 強制輸出為特定格式或結構。
 
-**高積極性** - GPT-5 用於徹底推理的模式。
+**High Eagerness** - GPT-5 用於深入推理的模式。
 
-**低積極性** - GPT-5 用於快速回答的模式。
+**Low Eagerness** - GPT-5 用於快速回應的模式。
 
-**多輪對話** - 維持跨輪交換的上下文。
+**Multi-Turn Conversation** - 在多次交換中維持上下文。
 
-**角色基礎提示** - 透過系統訊息設定模型角色。
+**Role-Based Prompting** - 透過 system 訊息設定模型角色或人設。
 
-**自我反思** - 模型評估並改進其輸出。
+**Self-Reflection** - 模型自我評估並改進其輸出。
 
-**結構化分析** - 固定的評估框架。
+**Structured Analysis** - 固定的評估框架。
 
-**任務執行模式** - 計劃 → 執行 → 總結。
+**Task Execution Pattern** - 計畫 → 執行 → 摘要。
 
-## RAG（檢索增強生成） - [模組 03](../03-rag/README.md)
+## RAG (檢索增強生成) - [Module 03](../03-rag/README.md)
 
-**文件處理流程** - 載入 → 分塊 → 嵌入 → 儲存。
+**Document Processing Pipeline** - 載入 → 切片 → 產生 embeddings → 儲存。
 
-**記憶體內嵌入儲存** - 用於測試的非持久性儲存。
+**In-Memory Embedding Store** - 用於測試的非持久性儲存。
 
-**RAG** - 結合檢索與生成以提供依據的回答。
+**RAG** - 結合檢索與生成以為回應提供依據。
 
-**相似度分數** - 語義相似度的度量（0-1）。
+**Similarity Score** - 量測語意相似度的指標（0–1）。
 
-**來源參考** - 檢索內容的元資料。
+**Source Reference** - 有關擷取內容的來源 metadata。
 
-## 代理與工具 - [模組 04](../04-tools/README.md)
+## Agents and Tools - [Module 04](../04-tools/README.md)
 
-**@Tool 註解** - 標記 Java 方法為 AI 可調用工具。
+**@Tool Annotation** - 標記 Java 方法為可由 AI 呼叫的工具。
 
-**ReAct 模式** - 推理 → 行動 → 觀察 → 重複。
+**ReAct Pattern** - 推理 → 行動 → 觀察 → 重複。
 
-**會話管理** - 為不同用戶分離上下文。
+**Session Management** - 為不同使用者維持獨立的上下文。
 
-**工具** - AI 代理可調用的功能。
+**Tool** - AI agent 可以呼叫的函式。
 
-**工具說明** - 工具用途與參數的文件。
+**Tool Description** - 針對工具目的與參數的文件說明。
 
-## 模型上下文協議（MCP） - [模組 05](../05-mcp/README.md)
+## Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)
 
-**Docker 傳輸** - MCP 伺服器運行於 Docker 容器中。
+**MCP** - 連接 AI 應用程式與外部工具的標準。
 
-**MCP** - 連接 AI 應用與外部工具的標準。
+**MCP Client** - 連接至 MCP 伺服器的應用程式。
 
-**MCP 客戶端** - 連接 MCP 伺服器的應用程式。
+**MCP Server** - 透過 MCP 揭露工具的服務。
 
-**MCP 伺服器** - 透過 MCP 暴露工具的服務。
+**Stdio Transport** - 將伺服器以子程序方式透過 stdin/stdout 運行。
 
-**伺服器發送事件（SSE）** - 伺服器透過 HTTP 向客戶端串流。
+**Tool Discovery** - 用戶端查詢伺服器以得知可用工具。
 
-**Stdio 傳輸** - 伺服器作為子程序透過 stdin/stdout。
+## Azure Services - [Module 01](../01-introduction/README.md)
 
-**可串流 HTTP 傳輸** - 使用 SSE 的 HTTP 實時通訊。
+**Azure AI Search** - 具向量功能的雲端搜尋服務。 [Module 03](../03-rag/README.md)
 
-**工具發現** - 客戶端查詢伺服器可用工具。
+**Azure Developer CLI (azd)** - 用於部署 Azure 資源的工具。
 
-## Azure 服務 - [模組 01](../01-introduction/README.md)
+**Azure OpenAI** - 微軟的企業級 AI 服務。
 
-**Azure AI 搜尋** - 具向量功能的雲端搜尋。[模組 03](../03-rag/README.md)
+**Bicep** - Azure 的基礎設施即程式碼語言。 [Infrastructure Guide](../01-introduction/infra/README.md)
 
-**Azure Developer CLI (azd)** - 部署 Azure 資源。
+**Deployment Name** - 在 Azure 中為模型部署命名的名稱。
 
-**Azure OpenAI** - 微軟的企業 AI 服務。
+**GPT-5** - 具備推理控制的最新 OpenAI 模型。 [Module 02](../02-prompt-engineering/README.md)
 
-**Bicep** - Azure 基礎架構即程式碼語言。[基礎架構指南](../01-introduction/infra/README.md)
+## Testing and Development - [Testing Guide](TESTING.md)
 
-**部署名稱** - Azure 中模型部署的名稱。
+**Dev Container** - 容器化的開發環境。 [Configuration](../../../.devcontainer/devcontainer.json)
 
-**GPT-5** - 最新 OpenAI 模型，具推理控制功能。[模組 02](../02-prompt-engineering/README.md)
+**GitHub Models** - 免費的 AI 模型試驗場。 [Module 00](../00-quick-start/README.md)
 
-## 測試與開發 - [測試指南](TESTING.md)
+**In-Memory Testing** - 使用記憶體儲存進行測試。
 
-**開發容器** - 容器化開發環境。[設定](../../../.devcontainer/devcontainer.json)
+**Integration Testing** - 使用真實基礎設施進行測試。
 
-**GitHub 模型** - 免費 AI 模型遊樂場。[模組 00](../00-quick-start/README.md)
+**Maven** - Java 的建置自動化工具。
 
-**記憶體內測試** - 使用記憶體儲存進行測試。
+**Mockito** - Java 的模擬框架。
 
-**整合測試** - 使用真實基礎架構的測試。
-
-**Maven** - Java 建置自動化工具。
-
-**Mockito** - Java 模擬框架。
-
-**Spring Boot** - Java 應用框架。[模組 01](../01-introduction/README.md)
-
-**Testcontainers** - 測試中的 Docker 容器。
+**Spring Boot** - Java 應用框架。 [Module 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責聲明**：  
-本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於確保翻譯的準確性，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤譯負責。
+**免責聲明**：
+本文件係使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們力求準確，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件之母語版本應視為具有權威性的資料來源。對於重要資訊，建議採用專業人工翻譯。我們不對因使用本翻譯而導致的任何誤解或誤譯承擔責任。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

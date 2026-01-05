@@ -52,7 +52,7 @@ Bunu bir meslektaşınıza talimat vermek gibi düşünün. "Hatanı düzelt" be
 
 Bu modül, önceki modüllerden aynı LangChain4j temelini kullanarak gelişmiş istek desenlerini gösterir; odak noktası istek yapısı ve akıl yürütme kontrolüdür.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.tr.png" alt="LangChain4j Akışı" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.tr.png" alt="LangChain4j Akışı" width="800"/>
 
 *LangChain4j isteklerinizi Azure OpenAI GPT-5'e nasıl bağlar*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
   
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.tr.png" alt="Mesaj Türleri Mimarisi" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.tr.png" alt="Mesaj Türleri Mimarisi" width="800"/>
 
 *SystemMessage kalıcı bağlam sağlar, UserMessages ise bireysel istekleri içerir*
 
@@ -104,11 +104,11 @@ Ana çıkarım: LangChain4j altyapıyı sağlar (model bağlantısı için [Lang
 
 Tüm problemler aynı yaklaşımı gerektirmez. Bazı sorular hızlı yanıt ister, bazıları derin düşünce. Bazıları görünür akıl yürütme ister, bazıları sadece sonuç. Bu modül sekiz istek desenini kapsar - her biri farklı senaryolara optimize edilmiştir. Hepsini deneyerek hangi yaklaşımın ne zaman işe yaradığını öğreneceksiniz.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.tr.png" alt="Sekiz İstek Mühendisliği Deseni" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.tr.png" alt="Sekiz İstek Mühendisliği Deseni" width="800"/>
 
 *Sekiz istek mühendisliği deseninin genel görünümü ve kullanım alanları*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.tr.png" alt="Akıl Yürütme Çabası Karşılaştırması" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.tr.png" alt="Akıl Yürütme Çabası Karşılaştırması" width="800"/>
 
 *Düşük isteklilik (hızlı, doğrudan) vs Yüksek isteklilik (detaylı, keşifçi) akıl yürütme yaklaşımları*
 
@@ -163,7 +163,7 @@ Zincirleme Düşünce (Chain-of-Thought) istekleri, modelden akıl yürütme sü
 > - "Üretim uygulamalarında araç ön yazılarını yapılandırmanın en iyi uygulamaları nelerdir?"  
 > - "Ara ilerleme güncellemelerini bir kullanıcı arayüzünde nasıl yakalar ve gösteririm?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.tr.png" alt="Görev Yürütme Deseni" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.tr.png" alt="Görev Yürütme Deseni" width="800"/>
 
 *Planla → Yürüt → Özetle iş akışı çok adımlı görevler için*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.tr.png" alt="Kendi Kendini Yansıtma Döngüsü" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.tr.png" alt="Kendi Kendini Yansıtma Döngüsü" width="800"/>
 
 *İteratif iyileştirme döngüsü - üret, değerlendir, sorunları belirle, geliştir, tekrarla*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Yapılandırılmış çıktıyı programatik olarak ayrıştırıp işlememenin en iyi yolu nedir?"  
 > - "Farklı inceleme oturumlarında tutarlı şiddet seviyelerini nasıl sağlarım?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.tr.png" alt="Yapılandırılmış Analiz Deseni" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.tr.png" alt="Yapılandırılmış Analiz Deseni" width="800"/>
 
 *Tutarlı kod incelemeleri için dört kategorili çerçeve ve şiddet seviyeleri*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
   
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.tr.png" alt="Bağlam Belleği" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.tr.png" alt="Bağlam Belleği" width="800"/>
 
 *Konuşma bağlamı, token sınırına ulaşana kadar çok turlu birikim*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.tr.png" alt="Adım Adım Desen" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.tr.png" alt="Adım Adım Desen" width="800"/>
 
 *Problemleri açık mantıksal adımlara bölme*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.tr.png" alt="Kısıtlı Çıktı Deseni" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.tr.png" alt="Kısıtlı Çıktı Deseni" width="800"/>
 
 *Belirli format, uzunluk ve yapı gereksinimlerini zorunlu kılma*
 
@@ -300,7 +300,7 @@ Spring Boot Dashboard'dan:
 
 "prompt-engineering" yanındaki oynat düğmesine tıklayarak bu modülü başlatabilir veya tüm modülleri aynı anda başlatabilirsiniz.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.tr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.tr.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Seçenek 2: Shell betikleri kullanmak**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Tüm modüller
   
 ## Uygulama Ekran Görüntüleri
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.tr.png" alt="Dashboard Ana Sayfa" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.tr.png" alt="Dashboard Ana Sayfa" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Tüm 8 istek mühendisliği desenini, özelliklerini ve kullanım alanlarını gösteren ana kontrol paneli*
 
@@ -380,10 +380,10 @@ Web arayüzü, farklı istek stratejileriyle denemeler yapmanızı sağlar. Her 
 
 "Düşük İsteklilik" kullanarak "200'ün %15'i nedir?" gibi basit bir soru sorun. Anında, doğrudan yanıt alırsınız. Şimdi "Yüksek trafikli bir API için önbellekleme stratejisi tasarla" gibi karmaşık bir soruyu "Yüksek İsteklilik" ile sorun. Modelin nasıl yavaşlayıp detaylı akıl yürütme sunduğunu izleyin. Aynı model, aynı soru yapısı - ama istek ne kadar düşünmesi gerektiğini söylüyor.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.tr.png" alt="Düşük İsteklilik Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.tr.png" alt="Düşük İsteklilik Demo" width="800"/>
 *Minimal akıl yürütme ile hızlı hesaplama*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.tr.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.tr.png" alt="High Eagerness Demo" width="800"/>
 
 *Kapsamlı önbellekleme stratejisi (2.8MB)*
 
@@ -391,7 +391,7 @@ Web arayüzü, farklı istek stratejileriyle denemeler yapmanızı sağlar. Her 
 
 Çok adımlı iş akışları, önceden planlama ve ilerleme anlatımı ile fayda sağlar. Model ne yapacağını özetler, her adımı anlatır, sonra sonuçları özetler.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.tr.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.tr.png" alt="Task Execution Demo" width="800"/>
 
 *Adım adım anlatımla REST uç noktası oluşturma (3.9MB)*
 
@@ -399,7 +399,7 @@ Web arayüzü, farklı istek stratejileriyle denemeler yapmanızı sağlar. Her 
 
 "Bir e-posta doğrulama servisi oluştur" deneyin. Sadece kod üretip durmak yerine, model üretir, kalite kriterlerine göre değerlendirir, zayıf yönleri belirler ve geliştirir. Kod üretim standartlarına ulaşana kadar yinelemeyi göreceksiniz.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.tr.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.tr.png" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Tam e-posta doğrulama servisi (5.2MB)*
 
@@ -407,7 +407,7 @@ Web arayüzü, farklı istek stratejileriyle denemeler yapmanızı sağlar. Her 
 
 Kod incelemeleri tutarlı değerlendirme çerçeveleri gerektirir. Model, kodu sabit kategorilerle (doğruluk, uygulamalar, performans, güvenlik) ve şiddet seviyeleriyle analiz eder.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.tr.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.tr.png" alt="Structured Analysis Demo" width="800"/>
 
 *Çerçeve tabanlı kod incelemesi*
 
@@ -415,7 +415,7 @@ Kod incelemeleri tutarlı değerlendirme çerçeveleri gerektirir. Model, kodu s
 
 "Spring Boot nedir?" diye sorun, ardından hemen "Bana bir örnek göster" deyin. Model ilk soruyu hatırlar ve size özel bir Spring Boot örneği verir. Bellek olmasaydı, ikinci soru çok belirsiz olurdu.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.tr.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.tr.png" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Sorular arasında bağlam koruma*
 
@@ -423,7 +423,7 @@ Kod incelemeleri tutarlı değerlendirme çerçeveleri gerektirir. Model, kodu s
 
 Bir matematik problemi seçin ve hem Adım Adım Akıl Yürütme hem de Düşük İsteklilik ile deneyin. Düşük isteklilik sadece cevabı verir - hızlı ama şeffaf değil. Adım adım size her hesaplamayı ve kararı gösterir.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.tr.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.tr.png" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Açık adımlarla matematik problemi*
 
@@ -431,7 +431,7 @@ Bir matematik problemi seçin ve hem Adım Adım Akıl Yürütme hem de Düşük
 
 Belirli formatlar veya kelime sayıları gerektiğinde, bu desen sıkı uyumu sağlar. Tam olarak 100 kelimelik madde işaretli bir özet üretmeyi deneyin.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.tr.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.tr.png" alt="Constrained Output Demo" width="800"/>
 
 *Format kontrolü ile makine öğrenimi özeti*
 
@@ -445,7 +445,7 @@ GPT-5, hesaplama çabasını istemlerinizle kontrol etmenizi sağlar. Düşük �
 
 İstemlerdeki XML etiketlerini fark ettiniz mi? Süs amaçlı değiller. Modeller, serbest metinden daha güvenilir şekilde yapılandırılmış talimatları takip eder. Çok adımlı süreçler veya karmaşık mantık gerektiğinde, yapı modelin nerede olduğunu ve sıradakini takip etmesine yardımcı olur.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.tr.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.tr.png" alt="Prompt Structure" width="800"/>
 
 *Açık bölümler ve XML tarzı organizasyonla iyi yapılandırılmış bir istemin anatomisi*
 

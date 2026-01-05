@@ -53,7 +53,7 @@ Jezični modeli su bez stanja. Svaki API poziv je neovisan. Ako pošaljete "Moj
 
 To je u redu za jednostavna pitanja i odgovore, ali beskorisno za stvarne aplikacije. Botovi za korisničku podršku trebaju pamtiti što ste im rekli. Osobni asistenti trebaju kontekst. Svaki višekratni razgovor zahtijeva memoriju.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.hr.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.hr.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Razlika između stateless (neovisnih poziva) i stateful (svjesnih konteksta) razgovora*
 
@@ -61,7 +61,7 @@ To je u redu za jednostavna pitanja i odgovore, ali beskorisno za stvarne aplika
 
 Prije nego što zaronimo u razgovore, važno je razumjeti tokene - osnovne jedinice teksta koje jezični modeli obrađuju:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.hr.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.hr.png" alt="Token Explanation" width="800"/>
 
 *Primjer kako se tekst razbija na tokene - "I love AI!" postaje 4 zasebne jedinice za obradu*
 
@@ -73,7 +73,7 @@ Memorija chata rješava problem bez stanja održavanjem povijesti razgovora. Pri
 
 LangChain4j pruža implementacije memorije koje to automatski upravljaju. Vi birate koliko poruka želite zadržati, a okvir upravlja kontekstnim prozorom.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.hr.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.hr.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory održava klizni prozor nedavnih poruka, automatski odbacujući stare*
 
@@ -212,7 +212,7 @@ Iz Spring Boot Dashboarda možete:
 
 Jednostavno kliknite gumb za pokretanje pored "introduction" da pokrenete ovaj modul, ili pokrenite sve module odjednom.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.hr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.hr.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opcija 2: Korištenje shell skripti**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Svi moduli
 
 Aplikacija pruža web sučelje s dvije implementacije chata jedna pored druge.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.hr.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.hr.png" alt="Application Home Screen" width="800"/>
 
 *Nadzorna ploča prikazuje opcije Simple Chat (stateless) i Conversational Chat (stateful)*
 
@@ -290,7 +290,7 @@ Aplikacija pruža web sučelje s dvije implementacije chata jedna pored druge.
 
 Isprobajte prvo ovo. Recite "Moje ime je John" i odmah zatim pitajte "Kako se zovem?" Model neće zapamtiti jer je svaka poruka neovisna. Ovo demonstrira osnovni problem integracije jezičnih modela - nema konteksta razgovora.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.hr.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.hr.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI ne pamti vaše ime iz prethodne poruke*
 
@@ -298,7 +298,7 @@ Isprobajte prvo ovo. Recite "Moje ime je John" i odmah zatim pitajte "Kako se zo
 
 Sada isprobajte isti niz ovdje. Recite "Moje ime je John" i zatim "Kako se zovem?" Ovaj put se pamti. Razlika je MessageWindowChatMemory - održava povijest razgovora i uključuje je sa svakim zahtjevom. Tako funkcionira produkcijski konverzacijski AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.hr.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.hr.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI pamti vaše ime iz ranijeg dijela razgovora*
 

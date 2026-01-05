@@ -49,7 +49,7 @@ RAG ला मॉडेलला संदर्भ ग्रंथालय द
 
 हे मॉडेलच्या प्रतिसादांना त्याच्या प्रशिक्षण ज्ञानावर अवलंबून न राहता तुमच्या वास्तविक डेटावर आधारित करते.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.mr.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.mr.png" alt="RAG Architecture" width="800"/>
 
 *RAG कार्यप्रवाह - वापरकर्त्याच्या प्रश्नापासून सेमॅंटिक शोध आणि संदर्भात्मक उत्तर निर्मितीपर्यंत*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.mr.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.mr.png" alt="Vector Embeddings Space" width="800"/>
 
 *दस्तऐवज एम्बेडिंग स्पेसमधील व्हेक्टर म्हणून सादर - समान सामग्री एकत्र क्लस्टर होते*
 
@@ -152,7 +152,7 @@ Spring Boot Dashboard मधून, तुम्ही:
 
 "rag" च्या बाजूला प्ले बटणावर क्लिक करा हा मॉड्यूल सुरू करण्यासाठी, किंवा सर्व मॉड्यूल एकत्र सुरू करा.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.mr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.mr.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -222,7 +222,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 अ‍ॅप्लिकेशन दस्तऐवज अपलोड आणि प्रश्न विचारण्यासाठी वेब इंटरफेस प्रदान करते.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.mr.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.mr.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG अ‍ॅप्लिकेशन इंटरफेस - दस्तऐवज अपलोड करा आणि प्रश्न विचारा*
 
@@ -240,7 +240,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 प्रत्येक उत्तरात स्रोत संदर्भ आणि समानता गुणधर्म असतात. हे गुणधर्म (0 ते 1 पर्यंत) दर्शवतात की प्रत्येक चंक तुमच्या प्रश्नाशी कितपत संबंधित होता. जास्त गुणधर्म म्हणजे चांगले जुळणारे. यामुळे तुम्ही उत्तर स्रोत सामग्रीशी तपासू शकता.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.mr.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.mr.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *प्रश्नांचे निकाल जे उत्तर स्रोत संदर्भ आणि संबंधित गुणांसह दाखवतात*
 

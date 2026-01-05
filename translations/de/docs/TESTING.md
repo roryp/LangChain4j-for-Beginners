@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "b975537560c404d5f254331832811e78",
-  "translation_date": "2025-12-13T20:34:20+00:00",
+  "original_hash": "ed93b3c14d58734ac10162967da958c1",
+  "translation_date": "2025-12-30T19:50:27+00:00",
   "source_file": "docs/TESTING.md",
   "language_code": "de"
 }
@@ -11,7 +11,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Inhaltsverzeichnis
 
-- [Schnellstart](../../../docs)
+- [Quick Start](../../../docs)
 - [Was die Tests abdecken](../../../docs)
 - [Tests ausführen](../../../docs)
 - [Tests in VS Code ausführen](../../../docs)
@@ -35,30 +35,30 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043bdfde5c208f8c0760a88a818f6846763583b614a5de37d52.de.png" alt="Successful Test Results" width="800"/>
+<img src="../../../translated_images/test-results.ea5c98d8f3642043.de.png" alt="Erfolgreiche Testergebnisse" width="800"/>
 
-*Erfolgreiche Testausführung, die zeigt, dass alle Tests ohne Fehler bestanden wurden*
+*Erfolgreiche Testausführung, bei der alle Tests ohne Fehler bestanden wurden*
 
 ## Was die Tests abdecken
 
-Dieser Kurs konzentriert sich auf **Unit-Tests**, die lokal ausgeführt werden. Jeder Test demonstriert ein spezifisches LangChain4j-Konzept isoliert.
+Dieser Kurs konzentriert sich auf **Unit-Tests**, die lokal ausgeführt werden. Jeder Test demonstriert ein bestimmtes LangChain4j-Konzept isoliert.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e4da944aec40169f37adf86fd932d3dfd56a4a86b37401ab9.de.png" alt="Testing Pyramid" width="800"/>
+<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.de.png" alt="Testpyramide" width="800"/>
 
-*Testpyramide, die das Gleichgewicht zwischen Unit-Tests (schnell, isoliert), Integrationstests (reale Komponenten) und End-to-End-Tests (vollständiges System mit Docker) zeigt. Dieses Training behandelt Unit-Tests.*
+*Testpyramide, die das Verhältnis zwischen Unit-Tests (schnell, isoliert), Integrationstests (reale Komponenten) und End-to-End-Tests zeigt. Dieses Training behandelt Unit-Tests.*
 
-| Modul | Tests | Fokus | Wichtige Dateien |
+| Module | Tests | Fokus | Key Files |
 |--------|-------|-------|-----------|
-| **00 - Schnellstart** | 6 | Prompt-Vorlagen und Variablensubstitution | `SimpleQuickStartTest.java` |
-| **01 - Einführung** | 8 | Gesprächsspeicher und zustandsbehafteter Chat | `SimpleConversationTest.java` |
-| **02 - Prompt Engineering** | 12 | GPT-5-Muster, Eifer-Level, strukturierte Ausgabe | `SimpleGpt5PromptTest.java` |
-| **03 - RAG** | 10 | Dokumentenaufnahme, Einbettungen, Ähnlichkeitssuche | `DocumentServiceTest.java` |
-| **04 - Tools** | 12 | Funktionsaufrufe und Tool-Verkettung | `SimpleToolsTest.java` |
-| **05 - MCP** | 15 | Model Context Protocol mit Docker | `SimpleMcpTest.java`, `McpDockerTransportTest.java` |
+| **00 - Schnellstart** | 6 | Prompt-Vorlagen und Variablenersetzung | `SimpleQuickStartTest.java` |
+| **01 - Einführung** | 8 | Konversationsspeicher und zustandsbehafteter Chat | `SimpleConversationTest.java` |
+| **02 - Prompt-Engineering** | 12 | GPT-5-Muster, Eifer-Stufen, strukturierte Ausgabe | `SimpleGpt5PromptTest.java` |
+| **03 - RAG** | 10 | Dokumentaufnahme, Embeddings, Ähnlichkeitssuche | `DocumentServiceTest.java` |
+| **04 - Tools** | 12 | Function calling und Tool-Chaining | `SimpleToolsTest.java` |
+| **05 - MCP** | 8 | Model Context Protocol mit Stdio-Transport | `SimpleMcpTest.java` |
 
 ## Tests ausführen
 
-**Alle Tests vom Root-Verzeichnis aus ausführen:**
+**Führen Sie alle Tests vom Projektstamm aus:**
 
 **Bash:**
 ```bash
@@ -70,23 +70,23 @@ mvn test
 mvn --% test
 ```
 
-**Tests für ein bestimmtes Modul ausführen:**
+**Führen Sie Tests für ein bestimmtes Modul aus:**
 
 **Bash:**
 ```bash
 cd 01-introduction && mvn test
-# Oder vom Stammverzeichnis
+# Oder als root
 mvn test -pl 01-introduction
 ```
 
 **PowerShell:**
 ```powershell
 cd 01-introduction; mvn --% test
-# Oder vom Stammverzeichnis
+# Oder als Root
 mvn --% test -pl 01-introduction
 ```
 
-**Eine einzelne Testklasse ausführen:**
+**Führen Sie eine einzelne Testklasse aus:**
 
 **Bash:**
 ```bash
@@ -98,49 +98,45 @@ mvn test -Dtest=SimpleConversationTest
 mvn --% test -Dtest=SimpleConversationTest
 ```
 
-**Eine bestimmte Testmethode ausführen:**
+**Führen Sie eine bestimmte Testmethode aus:**
 
 **Bash:**
 ```bash
-mvn test -Dtest=SimpleConversationTest#sollteGesprächsverlaufBeibehalten
+mvn test -Dtest=SimpleConversationTest#Gesprächsverlauf beibehalten
 ```
 
 **PowerShell:**
 ```powershell
-mvn --% test -Dtest=SimpleConversationTest#sollteGesprächsverlaufBeibehalten
+mvn --% test -Dtest=SimpleConversationTest#sollKonversationsverlaufBeibehalten
 ```
 
 ## Tests in VS Code ausführen
 
-Wenn Sie Visual Studio Code verwenden, bietet der Test-Explorer eine grafische Oberfläche zum Ausführen und Debuggen von Tests.
+Wenn Sie Visual Studio Code verwenden, bietet der Test Explorer eine grafische Oberfläche zum Ausführen und Debuggen von Tests.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dcedbacf98a3539218c1d0c700307ab77c031590ae63d0be59b6.de.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/vscode-testing.f02dd5917289dced.de.png" alt="VS Code Test-Explorer" width="800"/>
 
-*VS Code Test-Explorer zeigt den Testbaum mit allen Java-Testklassen und einzelnen Testmethoden*
+*VS Code Test-Explorer, der den Testbaum mit allen Java-Testklassen und einzelnen Testmethoden anzeigt*
 
 **So führen Sie Tests in VS Code aus:**
 
-1. Öffnen Sie den Test-Explorer, indem Sie auf das Reagenzglas-Symbol in der Aktivitätsleiste klicken
+1. Öffnen Sie den Test Explorer, indem Sie auf das Kolben-Symbol in der Aktivitätsleiste klicken
 2. Erweitern Sie den Testbaum, um alle Module und Testklassen zu sehen
 3. Klicken Sie auf die Wiedergabetaste neben einem Test, um ihn einzeln auszuführen
-4. Klicken Sie auf „Alle Tests ausführen“, um die gesamte Suite auszuführen
-5. Klicken Sie mit der rechten Maustaste auf einen Test und wählen Sie „Test debuggen“, um Haltepunkte zu setzen und den Code schrittweise zu durchlaufen
+4. Klicken Sie auf "Run All Tests", um die gesamte Suite auszuführen
+5. Klicken Sie mit der rechten Maustaste auf einen Test und wählen Sie "Debug Test", um Haltepunkte zu setzen und schrittweise durch den Code zu gehen
 
-Der Test-Explorer zeigt grüne Häkchen für bestandene Tests und liefert detaillierte Fehlermeldungen, wenn Tests fehlschlagen.
+Der Test Explorer zeigt grüne Häkchen für bestandene Tests und liefert detaillierte Fehlermeldungen, wenn Tests fehlschlagen.
 
 ## Testmuster
 
-<img src="../../../translated_images/testing-patterns.02581af1c9ef742460887004e9940994dba342ec726efc4ddb2b0215b56a1d89.de.png" alt="Six Testing Patterns" width="800"/>
-
-*Sechs Testmuster für LangChain4j-Anwendungen: Prompt-Vorlagen, Mocking von Modellen, Gesprächs-Isolation, Tool-Tests, In-Memory RAG und Docker-Integration*
-
 ### Muster 1: Testen von Prompt-Vorlagen
 
-Das einfachste Muster testet Prompt-Vorlagen, ohne ein KI-Modell aufzurufen. Sie überprüfen, ob die Variablensubstitution korrekt funktioniert und die Prompts wie erwartet formatiert sind.
+Das einfachste Muster testet Prompt-Vorlagen, ohne ein KI-Modell aufzurufen. Sie prüfen, dass die Variablenersetzung korrekt funktioniert und die Prompts wie erwartet formatiert sind.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee3dfceaa5fa903098bdb174674acc5009a2f3d60cb07eb4e9.de.png" alt="Prompt Template Testing" width="800"/>
+<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.de.png" alt="Testen von Prompt-Vorlagen" width="800"/>
 
-*Testen von Prompt-Vorlagen, das den Ablauf der Variablensubstitution zeigt: Vorlage mit Platzhaltern → Werte angewendet → formatierte Ausgabe überprüft*
+*Testen von Prompt-Vorlagen, die den Ablauf der Variablenersetzung zeigen: Vorlage mit Platzhaltern → Werte angewendet → formatiertes Ausgabeergebnis überprüft*
 
 ```java
 @Test
@@ -161,25 +157,25 @@ void testPromptTemplateFormatting() {
 
 Dieser Test befindet sich in `00-quick-start/src/test/java/com/example/langchain4j/quickstart/SimpleQuickStartTest.java`.
 
-**Ausführen:**
+**Führen Sie ihn aus:**
 
 **Bash:**
 ```bash
-cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#testPromptTemplateFormatierung
+cd 00-quick-start && mvn test -Dtest=SimpleQuickStartTest#Test der Formatierung der Prompt-Vorlage
 ```
 
 **PowerShell:**
 ```powershell
-cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testPromptTemplateFormatierung
+cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#Test der Formatierung von Prompt-Vorlagen
 ```
 
 ### Muster 2: Mocking von Sprachmodellen
 
-Beim Testen der Gesprächslogik verwenden Sie Mockito, um gefälschte Modelle zu erstellen, die vorbestimmte Antworten zurückgeben. Das macht Tests schnell, kostenlos und deterministisch.
+Beim Testen von Konversationslogik verwenden Sie Mockito, um gefälschte Modelle zu erstellen, die vorbestimmte Antworten zurückgeben. Dadurch werden die Tests schnell, kostenlos und deterministisch.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845ee07556f9520ac45c7f776d0879434315756020cd8b1d5b73.de.png" alt="Mock vs Real API Comparison" width="800"/>
+<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.de.png" alt="Mock vs. Real API Vergleich" width="800"/>
 
-*Vergleich, der zeigt, warum Mocks für Tests bevorzugt werden: Sie sind schnell, kostenlos, deterministisch und benötigen keine API-Schlüssel*
+*Vergleich, der zeigt, warum Mocks für Tests bevorzugt werden: Sie sind schnell, kostenfrei, deterministisch und erfordern keine API-Schlüssel*
 
 ```java
 @ExtendWith(MockitoExtension.class)
@@ -224,20 +220,20 @@ class SimpleConversationTest {
         conversationService.chat(conversationId, "Third message");
 
         List<ChatMessage> history = conversationService.getHistory(conversationId);
-        assertThat(history).hasSize(6); // 3 Benutzer- + 3 KI-Nachrichten
+        assertThat(history).hasSize(6); // 3 Benutzernachrichten + 3 KI-Nachrichten
     }
 }
 ```
 
-Dieses Muster erscheint in `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. Das Mock sorgt für konsistentes Verhalten, sodass Sie überprüfen können, ob das Speichermanagement korrekt funktioniert.
+Dieses Muster findet sich in `01-introduction/src/test/java/com/example/langchain4j/service/SimpleConversationTest.java`. Der Mock gewährleistet konsistentes Verhalten, sodass Sie die Speicherverwaltung korrekt verifizieren können.
 
-### Muster 3: Testen der Gesprächs-Isolation
+### Muster 3: Testen der Konversationsisolation
 
-Der Gesprächsspeicher muss mehrere Benutzer getrennt halten. Dieser Test überprüft, dass Gespräche keine Kontexte vermischen.
+Der Konversationsspeicher muss mehrere Benutzer getrennt halten. Dieser Test verifiziert, dass Kontexte nicht vermischt werden.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f860d81c37a97181c0e0a2ff996d38f314f06b35cc1e08ca3.de.png" alt="Conversation Isolation" width="800"/>
+<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.de.png" alt="Konversationsisolation" width="800"/>
 
-*Testen der Gesprächs-Isolation, das separate Speicherbereiche für verschiedene Benutzer zeigt, um Kontextvermischung zu verhindern*
+*Testen der Konversationsisolation, die separate Speichersysteme für verschiedene Benutzer zeigt, um Kontextvermischung zu verhindern*
 
 ```java
 @Test
@@ -261,15 +257,15 @@ void shouldIsolateConversationsByid() {
 }
 ```
 
-Jedes Gespräch führt seine eigene unabhängige Historie. In Produktionssystemen ist diese Isolation für Multi-User-Anwendungen entscheidend.
+Jede Konversation führt ihre eigene, unabhängige Historie. In Produktionssystemen ist diese Isolation für Multi-User-Anwendungen kritisch.
 
 ### Muster 4: Tools unabhängig testen
 
 Tools sind Funktionen, die die KI aufrufen kann. Testen Sie sie direkt, um sicherzustellen, dass sie unabhängig von KI-Entscheidungen korrekt funktionieren.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924e7e7cd41be8ba5ccb62f16962b85f53953d46cc6317d2972.de.png" alt="Tools Testing" width="800"/>
+<img src="../../../translated_images/tools-testing.3e1706817b0b3924.de.png" alt="Testen von Tools" width="800"/>
 
-*Unabhängiges Testen von Tools, das die Ausführung von Mock-Tools ohne KI-Aufrufe zeigt, um die Geschäftslogik zu überprüfen*
+*Unabhängiges Testen von Tools, das die mock-basierte Ausführung von Tools ohne KI-Aufrufe zeigt, um die Geschäftslogik zu überprüfen*
 
 ```java
 @Test
@@ -292,15 +288,15 @@ void shouldDemonstrateToolChaining() {
 }
 ```
 
-Diese Tests aus `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` validieren die Tool-Logik ohne KI-Beteiligung. Das Verkettungsbeispiel zeigt, wie die Ausgabe eines Tools in die Eingabe eines anderen fließt.
+Diese Tests aus `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleToolsTest.java` validieren die Tool-Logik ohne KI-Beteiligung. Das Chaining-Beispiel zeigt, wie die Ausgabe eines Tools als Eingabe für ein anderes verwendet wird.
 
-### Muster 5: In-Memory RAG-Test
+### Muster 5: In-Memory RAG-Tests
 
-RAG-Systeme benötigen traditionell Vektordatenbanken und Einbettungsdienste. Das In-Memory-Muster ermöglicht es, die gesamte Pipeline ohne externe Abhängigkeiten zu testen.
+RAG-Systeme erfordern traditionell Vektor-Datenbanken und Embedding-Services. Das In-Memory-Muster ermöglicht es, die gesamte Pipeline ohne externe Abhängigkeiten zu testen.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b14fcda9103bba011864f1d0882b27a9886c3cf5b446522ce3.de.png" alt="In-Memory RAG Testing" width="800"/>
+<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.de.png" alt="In-Memory RAG-Tests" width="800"/>
 
-*In-Memory RAG-Testablauf, der Dokumentenparsing, Einbettungsspeicherung und Ähnlichkeitssuche zeigt, ohne eine Datenbank zu benötigen*
+*In-Memory-RAG-Testworkflow, der das Parsen von Dokumenten, die Speicherung von Embeddings und die Ähnlichkeitssuche ohne Datenbank zeigt*
 
 ```java
 @Test
@@ -317,19 +313,15 @@ void testProcessTextDocument() {
 }
 ```
 
-Dieser Test aus `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` erstellt ein Dokument im Speicher und überprüft Chunking und Metadatenverarbeitung.
+Dieser Test aus `03-rag/src/test/java/com/example/langchain4j/rag/service/DocumentServiceTest.java` erstellt ein Dokument im Speicher und verifiziert Chunking und Metadatenverarbeitung.
 
-### Muster 6: Integrationstests mit Docker
+### Muster 6: MCP-Integrationstests
 
-Einige Funktionen benötigen echte Infrastruktur. Das MCP-Modul verwendet Testcontainers, um Docker-Container für Integrationstests zu starten. Diese validieren, dass Ihr Code mit echten Diensten funktioniert und gleichzeitig Testisolation gewährleistet ist.
+Das MCP-Modul testet die Integration des Model Context Protocols unter Verwendung des stdio-Transports. Diese Tests verifizieren, dass Ihre Anwendung MCP-Server als Subprozesse starten und mit ihnen kommunizieren kann.
 
-<img src="../../../translated_images/mcp-testing.bb3b3e92e47acb4b3dfb12715b4e113655f16c11ba39c2ffabae557bc6c3734c.de.png" alt="MCP Docker Integration Testing" width="800"/>
+Die Tests in `05-mcp/src/test/java/com/example/langchain4j/mcp/SimpleMcpTest.java` validieren das Verhalten des MCP-Clients.
 
-*MCP-Integrationstest mit Testcontainers, der den automatisierten Container-Lebenszyklus zeigt: Start, Testausführung, Stopp und Bereinigung*
-
-Die Tests in `05-mcp/src/test/java/com/example/langchain4j/mcp/McpDockerTransportTest.java` erfordern, dass Docker läuft.
-
-**Ausführen:**
+**Führen Sie sie aus:**
 
 **Bash:**
 ```bash
@@ -343,26 +335,26 @@ cd 05-mcp; mvn --% test
 
 ## Testphilosophie
 
-Teste deinen Code, nicht die KI. Deine Tests sollten den von dir geschriebenen Code validieren, indem sie überprüfen, wie Prompts konstruiert werden, wie Speicher verwaltet wird und wie Tools ausgeführt werden. KI-Antworten variieren und sollten nicht Teil von Testbehauptungen sein. Frage dich, ob deine Prompt-Vorlage Variablen korrekt ersetzt, nicht ob die KI die richtige Antwort gibt.
+Testen Sie Ihren Code, nicht die KI. Ihre Tests sollten den von Ihnen geschriebenen Code validieren, indem sie prüfen, wie Prompts konstruiert werden, wie Speicher verwaltet wird und wie Tools ausgeführt werden. KI-Antworten variieren und sollten nicht Teil von Testassertionen sein. Fragen Sie sich, ob Ihre Prompt-Vorlage Variablen korrekt ersetzt, nicht, ob die KI die richtige Antwort gibt.
 
-Verwende Mocks für Sprachmodelle. Sie sind externe Abhängigkeiten, die langsam, teuer und nicht deterministisch sind. Mocking macht Tests schnell mit Millisekunden statt Sekunden, kostenlos ohne API-Kosten und deterministisch mit immer demselben Ergebnis.
+Verwenden Sie Mocks für Sprachmodelle. Sie sind externe Abhängigkeiten, die langsam, teuer und nicht deterministisch sind. Mocking macht Tests schnell (Millisekunden statt Sekunden), kostenfrei (keine API-Kosten) und deterministisch (immer dasselbe Ergebnis).
 
-Halte Tests unabhängig. Jeder Test sollte seine eigenen Daten einrichten, sich nicht auf andere Tests verlassen und sich selbst aufräumen. Tests sollten unabhängig von der Ausführungsreihenfolge bestehen.
+Halten Sie Tests unabhängig. Jeder Test sollte seine eigenen Daten einrichten, sich nicht auf andere Tests verlassen und nach sich selbst aufräumen. Tests sollten unabhängig von der Ausführungsreihenfolge bestehen.
 
-Teste Randfälle über den Happy Path hinaus. Probiere leere Eingaben, sehr große Eingaben, Sonderzeichen, ungültige Parameter und Grenzwerte. Diese decken oft Fehler auf, die bei normaler Nutzung nicht sichtbar sind.
+Testen Sie Grenzfälle über den Happy Path hinaus. Probieren Sie leere Eingaben, sehr große Eingaben, Sonderzeichen, ungültige Parameter und Randbedingungen. Diese decken oft Fehler auf, die bei normaler Nutzung nicht sichtbar werden.
 
-Verwende beschreibende Namen. Vergleiche `shouldMaintainConversationHistoryAcrossMultipleMessages()` mit `test1()`. Der erste Name sagt genau, was getestet wird, und erleichtert das Debuggen von Fehlern erheblich.
+Verwenden Sie aussagekräftige Namen. Vergleichen Sie `shouldMaintainConversationHistoryAcrossMultipleMessages()` mit `test1()`. Der erste Name sagt genau, was getestet wird, und erleichtert das Debuggen von Fehlern erheblich.
 
 ## Nächste Schritte
 
-Jetzt, da Sie die Testmuster verstehen, vertiefen Sie sich in jedes Modul:
+Jetzt, da Sie die Testmuster verstanden haben, vertiefen Sie sich in jedes Modul:
 
-- **[00 - Schnellstart](../00-quick-start/README.md)** - Beginnen Sie mit den Grundlagen der Prompt-Vorlagen
-- **[01 - Einführung](../01-introduction/README.md)** - Lernen Sie das Gesprächsspeichermanagement kennen
-- **[02 - Prompt Engineering](../02-prompt-engineering/README.md)** - Meistern Sie GPT-5-Prompting-Muster
-- **[03 - RAG](../03-rag/README.md)** - Bauen Sie retrieval-augmented generation Systeme
-- **[04 - Tools](../04-tools/README.md)** - Implementieren Sie Funktionsaufrufe und Tool-Ketten
-- **[05 - MCP](../05-mcp/README.md)** - Integrieren Sie Model Context Protocol mit Docker
+- **[00 - Schnellstart](../00-quick-start/README.md)** - Beginnen Sie mit den Grundlagen von Prompt-Vorlagen
+- **[01 - Einführung](../01-introduction/README.md)** - Erfahren Sie mehr über das Management des Konversationsspeichers
+- **[02 - Prompt-Engineering](../02-prompt-engineering/README.md)** - Meistern Sie die GPT-5-Prompting-Muster
+- **[03 - RAG](../03-rag/README.md)** - Erstellen Sie Retrieval-augmented-Generation-Systeme
+- **[04 - Tools](../04-tools/README.md)** - Implementieren Sie Funktionsaufrufe und Tool-Chains
+- **[05 - MCP](../05-mcp/README.md)** - Integrieren Sie das Model Context Protocol
 
 Das README jedes Moduls bietet detaillierte Erklärungen der hier getesteten Konzepte.
 
@@ -373,6 +365,6 @@ Das README jedes Moduls bietet detaillierte Erklärungen der hier getesteten Kon
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache gilt als maßgebliche Quelle. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
+Haftungsausschluss:
+Dieses Dokument wurde mithilfe des KI-Übersetzungsdienstes Co-op Translator (https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatische Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Originalsprache ist als maßgebliche Quelle zu betrachten. Für kritische Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Verwendung dieser Übersetzung entstehen.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ово је у реду за једноставна питања и одговоре, али бескорисно за праве апликације. Ботови за корисничку подршку морају да памте шта сте им рекли. Лични асистенти захтевају контекст. Сваки разговор са више корака захтева меморију.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a9edc2ee46cc997aae9055c2d7b4d37e785f5747879a405d8.sr.png" alt="Бесдржавни у односу на државни разговори" width="800"/>
+<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.sr.png" alt="Бесдржавни у односу на државни разговори" width="800"/>
 
 *Разлика између бесдржавних (независних позива) и државних (свесних контекста) разговора*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Пре него што зароните у разговоре, важно је разумети токене - основне јединице текста које језички модели обрађују:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec6501817a47717a2caf355f251dbfa38ee244b425c89c207068fab8.sr.png" alt="Објашњење токена" width="800"/>
+<img src="../../../translated_images/token-explanation.c39760d8ec650181.sr.png" alt="Објашњење токена" width="800"/>
 
 *Пример како се текст дели на токене - "Волим AI!" постаје 4 одвојене јединице за обраду*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j пружа имплементације меморије које ово аутоматски обрађују. Ви бирајте колико порука да задржите, а оквир управља контекстним прозором.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3cce8f622a1239f2aa5e3a22a2d35a7baddb5ec6e5f12d78a.sr.png" alt="Концепт меморијског прозора" width="800"/>
+<img src="../../../translated_images/memory-window.bbe67f597eadabb3.sr.png" alt="Концепт меморијског прозора" width="800"/>
 
 *MessageWindowChatMemory одржава клизни прозор недавних порука, аутоматски одбацујући старе*
 
@@ -212,7 +212,7 @@ Get-Content ..\.env  # Треба да прикаже AZURE_OPENAI_ENDPOINT, API
 
 Једноставно кликните на дугме за покретање поред "introduction" да бисте покренули овај модул, или покрените све модуле одједном.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6bfac595fccc531dfc0cf87d02f3222492c0b1a324538275bd.sr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.69c7479aef09ff6b.sr.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Опција 2: Коришћење shell скрипти**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Апликација пружа веб интерфејс са две имплементације ћаскања једна поред друге.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0e3a995fa310d86090166e80121096dcc23e89549548426ea.sr.png" alt="Почетни екран апликације" width="800"/>
+<img src="../../../translated_images/home-screen.121a03206ab910c0.sr.png" alt="Почетни екран апликације" width="800"/>
 
 *Контролна табла која приказује опције Једноставног ћаскања (бесдржавно) и Конверзационог ћаскања (државно)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Прво пробајте ово. Реците "Зовем се Џон" и одмах затим питајте "Како се зовем?" Модел неће памтити јер је свака порука независна. Ово демонстрира основни проблем интеграције језичког модела - нема контекста разговора.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab32345806f17ba5438891e8b8295576f9857fe7fcb81376437fe2.sr.png" alt="Демо бесдржавног ћаскања" width="800"/>
+<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.sr.png" alt="Демо бесдржавног ћаскања" width="800"/>
 
 *AI не памти ваше име из претходне поруке*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Сада пробајте исти низ овде. Реците "Зовем се Џон" и онда "Како се зовем?" Овог пута памти. Разлика је MessageWindowChatMemory - одржава историју разговора и укључује је у сваки захтев. Ово је начин на који производни конверзациони AI функционише.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59f255427e2422b6a60bd331f1546cb28a4662571a3915e88f.sr.png" alt="Демо државног ћаскања" width="800"/>
+<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.sr.png" alt="Демо државног ћаскања" width="800"/>
 
 *AI памти ваше име из ранијег дела разговора*
 

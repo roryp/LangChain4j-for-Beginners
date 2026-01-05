@@ -37,7 +37,7 @@ LangChain4j هي مكتبة جافا تبسط بناء تطبيقات مدعوم
 
 تشير كلمة "chain" في LangChain إلى ربط مكونات متعددة معًا - قد تربط مطالبة بنموذج ثم بمحلل، أو تربط عدة استدعاءات ذكاء اصطناعي حيث تغذي مخرجات واحدة الإدخال التالي. تركز هذه البداية السريعة على الأساسيات قبل استكشاف سلاسل أكثر تعقيدًا.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.ar.png" alt="مفهوم ربط LangChain4j" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.ar.png" alt="مفهوم ربط LangChain4j" width="800"/>
 
 *ربط المكونات في LangChain4j - كتل البناء تتصل لإنشاء سير عمل ذكاء اصطناعي قوي*
 
@@ -49,7 +49,7 @@ LangChain4j هي مكتبة جافا تبسط بناء تطبيقات مدعوم
 
 **MessageWindowChatMemory** - يحافظ على سجل المحادثة. بدون هذا، كل طلب مستقل. معه، يتذكر الذكاء الاصطناعي الرسائل السابقة ويحافظ على السياق عبر عدة جولات.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.ar.png" alt="هندسة LangChain4j" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.ar.png" alt="هندسة LangChain4j" width="800"/>
 
 *هندسة LangChain4j - المكونات الأساسية تعمل معًا لتشغيل تطبيقات الذكاء الاصطناعي الخاصة بك*
 

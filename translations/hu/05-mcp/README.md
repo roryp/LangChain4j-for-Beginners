@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c25ec1f10ef156c53e190cdf8b0711ab",
-  "translation_date": "2025-12-13T18:02:38+00:00",
+  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
+  "translation_date": "2025-12-31T03:57:38+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "hu"
 }
@@ -12,124 +12,105 @@ CO_OP_TRANSLATOR_METADATA:
 ## Tartalomjegyzék
 
 - [Mit fogsz megtanulni](../../../05-mcp)
-- [Az MCP megértése](../../../05-mcp)
+- [Mi az MCP?](../../../05-mcp)
 - [Hogyan működik az MCP](../../../05-mcp)
-  - [Szerver-kliens architektúra](../../../05-mcp)
-  - [Eszközfelismerés](../../../05-mcp)
-  - [Átvitel mechanizmusok](../../../05-mcp)
-- [Előfeltételek](../../../05-mcp)
-- [Mit fed le ez a modul](../../../05-mcp)
+- [Az agentikus modul](../../../05-mcp)
+- [A példák futtatása](../../../05-mcp)
+  - [Előfeltételek](../../../05-mcp)
 - [Gyors kezdés](../../../05-mcp)
-  - [Példa 1: Távoli számológép (Streamable HTTP)](../../../05-mcp)
-  - [Példa 2: Fájlműveletek (Stdio)](../../../05-mcp)
-  - [Példa 3: Git elemzés (Docker)](../../../05-mcp)
+  - [Fájlműveletek (Stdio)](../../../05-mcp)
+  - [Supervisor Agent](../../../05-mcp)
+    - [A kimenet megértése](../../../05-mcp)
+    - [Az agentikus modul funkcióinak magyarázata](../../../05-mcp)
 - [Kulcsfogalmak](../../../05-mcp)
-  - [Átvitel kiválasztása](../../../05-mcp)
-  - [Eszközfelismerés](../../../05-mcp)
-  - [Munkamenet-kezelés](../../../05-mcp)
-  - [Platformok közötti megfontolások](../../../05-mcp)
-- [Mikor használd az MCP-t](../../../05-mcp)
-- [MCP ökoszisztéma](../../../05-mcp)
 - [Gratulálunk!](../../../05-mcp)
-  - [Mi következik?](../../../05-mcp)
-- [Hibaelhárítás](../../../05-mcp)
+  - [Mi a következő lépés?](../../../05-mcp)
 
 ## Mit fogsz megtanulni
 
-Beszélgető AI-t építettél, elsajátítottad a promptokat, dokumentumok alapján megalapozott válaszokat készítettél, és eszközökkel rendelkező ügynököket hoztál létre. De ezek az eszközök mind az adott alkalmazásodra szabottak voltak. Mi lenne, ha az AI-d hozzáférést kapna egy szabványosított eszközök ökoszisztémájához, amelyet bárki létrehozhat és megoszthat?
+Elsajátítottad a beszélgetés-alapú MI építését, a promptolást, a válaszok dokumentumokhoz való igazítását és eszközökkel rendelkező ügynökök létrehozását. De ezek az eszközök mind egyedi alkalmazásodra voltak szabva. Mi lenne, ha az MI-nek hozzáférése lenne egy szabványos, bárki által létrehozható és megosztható eszközökkel teli ökoszisztémához? Ebben a modulban pontosan ezt tanulod meg a Model Context Protocol (MCP) és a LangChain4j agentikus modulja segítségével. Először bemutatunk egy egyszerű MCP fájlolvasót, majd megmutatjuk, hogyan illeszthető ez be könnyen fejlettebb agentikus munkafolyamatokba a Supervisor Agent mintával.
 
-A Model Context Protocol (MCP) pontosan ezt nyújtja – egy szabványos módot arra, hogy az AI alkalmazások felfedezzék és használják a külső eszközöket. Ahelyett, hogy minden adatforráshoz vagy szolgáltatáshoz egyedi integrációt írnál, MCP szerverekhez csatlakozol, amelyek képességeiket egységes formátumban teszik elérhetővé. Az AI ügynököd így automatikusan felfedezheti és használhatja ezeket az eszközöket.
+## Mi az MCP?
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5448d2fa21a61218777ceb8010ea0390dd43924b26df35f61.hu.png" alt="MCP Comparison" width="800"/>
+A Model Context Protocol (MCP) pontosan ezt nyújtja - egy szabványos módot arra, hogy MI-alkalmazások felfedezzék és használják a külső eszközöket. Egyedi integrációk írása helyett minden adatforráshoz vagy szolgáltatáshoz, kapcsolódhatsz MCP szerverekhez, amelyek következetes formátumban tárják fel képességeiket. Az MI ügynököd ezután automatikusan felfedezheti és használhatja ezeket az eszközöket.
 
-*MCP előtt: bonyolult pont-pont integrációk. MCP után: Egy protokoll, végtelen lehetőségek.*
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.hu.png" alt="MCP összehasonlítás" width="800"/>
 
-## Az MCP megértése
+*Az MCP előtt: bonyolult pont-pont integrációk. Az MCP után: egy protokoll, végtelen lehetőségek.*
 
-Az MCP egy alapvető problémát old meg az AI fejlesztésben: minden integráció egyedi. GitHub-hoz akarsz hozzáférni? Egyedi kód. Fájlokat olvasni? Egyedi kód. Adatbázist lekérdezni? Egyedi kód. És ezek az integrációk nem működnek más AI alkalmazásokkal.
+Az MCP megold egy alapvető problémát az MI fejlesztésben: minden integráció egyedi. GitHub-hoz szeretnél hozzáférni? Egyedi kód. Fájlokat olvasnál? Egyedi kód. Adatbázist lekérdeznél? Egyedi kód. És egyik ilyen integráció sem működik más MI-alkalmazásokkal.
 
-Az MCP ezt szabványosítja. Egy MCP szerver eszközöket tesz elérhetővé világos leírásokkal és sémákkal. Bármely MCP kliens csatlakozhat, felfedezheti az elérhető eszközöket, és használhatja azokat. Egyszer építsd meg, bárhol használd.
+Az MCP ezt szabványosítja. Egy MCP szerver világosan leírt leírásokkal és sémákkal adja meg az eszközöket. Bármely MCP kliens csatlakozhat, felfedezheti a rendelkezésre álló eszközöket, és használhatja azokat. Egyszer építsd meg, bárhol használd.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9814b7cffade208d4b0d97203c22df8d8e5504d8238fa7065.hu.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.hu.png" alt="MCP architektúra" width="800"/>
 
-*Model Context Protocol architektúra – szabványosított eszközfelismerés és végrehajtás*
+*Model Context Protocol architektúra - szabványosított eszközfelfedezés és végrehajtás*
 
 ## Hogyan működik az MCP
 
 **Szerver-kliens architektúra**
 
-Az MCP kliens-szerver modellt használ. A szerverek eszközöket biztosítanak – fájlok olvasása, adatbázis lekérdezése, API hívások. A kliensek (az AI alkalmazásod) csatlakoznak a szerverekhez és használják az eszközeiket.
+Az MCP kliens-szerver modellt használ. A szerverek eszközöket biztosítanak - fájlolvasás, adatbázis-lekérdezés, API-hívások. A kliensek (a te MI alkalmazásod) csatlakoznak a szerverekhez és használják az eszközeiket.
 
-**Eszközfelismerés**
+A LangChain4j-vel való használathoz add hozzá ezt a Maven függőséget:
 
-Amikor a kliensed csatlakozik egy MCP szerverhez, megkérdezi: „Milyen eszközeid vannak?” A szerver válaszként elérhető eszközök listáját adja meg, mindegyikhez leírással és paramétersémával. Az AI ügynököd ezután eldöntheti, mely eszközöket használja a felhasználói kérések alapján.
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
+```
+
+**Eszközfelfedezés**
+
+Amikor a kliensed csatlakozik egy MCP szerverhez, megkérdezi: "Milyen eszközeid vannak?" A szerver egy listát ad vissza a rendelkezésre álló eszközökről, mindegyikhez leírásokkal és paramétersémákkal. Az MI ügynököd ezután eldöntheti, mely eszközöket használja a felhasználói kérések alapján.
 
 **Átvitel mechanizmusok**
 
-Az MCP két átvitel mechanizmust definiál: HTTP távoli szerverekhez, Stdio helyi folyamatokhoz (beleértve a Docker konténereket):
+Az MCP különböző átvitel mechanizmusokat támogat. Ez a modul a helyi folyamatokhoz használható Stdio átvitelt mutatja be:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020ed801b772b26ed69338e22739677aa017e0968f6538b09a2.hu.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.hu.png" alt="Átvitel mechanizmusok" width="800"/>
 
-*MCP átvitel mechanizmusok: HTTP távoli szerverekhez, Stdio helyi folyamatokhoz (beleértve Docker konténereket)*
-
-**Streamable HTTP** - [StreamableHttpDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-Távoli szerverekhez. Az alkalmazás HTTP kéréseket küld egy hálózaton futó szerverhez. Server-Sent Events-t használ valós idejű kommunikációhoz.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
-```
-
-> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg a [`StreamableHttpDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) fájlt és kérdezd meg:
-> - "Miben különbözik az MCP a közvetlen eszközintegrációtól, mint a Modul 04-ben?"
-> - "Milyen előnyei vannak az MCP használatának az eszközmegosztásban alkalmazások között?"
-> - "Hogyan kezelem a kapcsolatmegszakadásokat vagy időtúllépéseket az MCP szerverekhez?"
+*MCP átvitel mechanizmusok: HTTP távoli szerverekhez, Stdio helyi folyamatokhoz*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Helyi folyamatokhoz. Az alkalmazás egy alfolyamatként indít szervert, és a szabványos bemeneten/kimeneten keresztül kommunikál. Hasznos fájlrendszer eléréshez vagy parancssori eszközökhöz.
+Helyi folyamatokhoz. Az alkalmazásod egy szervert indít alfolyamatként és a szabványos bemeneten/kimeneten keresztül kommunikál vele. Hasznos fájlrendszer-hozzáféréshez vagy parancssori eszközökhöz.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
     .build();
 ```
 
-> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg a [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) fájlt és kérdezd meg:
-> - "Hogyan működik a Stdio átvitel és mikor érdemes használni a HTTP-vel szemben?"
-> - "Hogyan kezeli a LangChain4j az MCP szerver folyamatok életciklusát?"
-> - "Milyen biztonsági kockázatokkal jár, ha az AI hozzáfér a fájlrendszerhez?"
+> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chat-tel:** Nyisd meg a [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) fájlt és kérdezd:
+> - "Hogyan működik a Stdio átvitel, és mikor érdemes HTTP helyett használni?"
+> - "Hogyan kezeli a LangChain4j az indított MCP szerverfolyamatok életciklusát?"
+> - "Milyen biztonsági következményei vannak annak, ha az MI-nek hozzáférést adunk a fájlrendszerhez?"
 
-**Docker (Stdio-t használ)** - [GitRepositoryAnalyzer.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+## Az agentikus modul
 
-Konténerizált szolgáltatásokhoz. Stdio átvitel segítségével kommunikál egy Docker konténerrel a `docker run` parancson keresztül. Jó összetett függőségekhez vagy izolált környezetekhez.
+Míg az MCP szabványos eszközöket biztosít, a LangChain4j **agentikus modulja** deklaratív módot ad az olyan ügynökök felépítéséhez, amelyek ezen eszközöket összehangolják. Az `@Agent` annotáció és az `AgenticServices` lehetővé teszi, hogy interfészeken keresztül, imperatív kód írása helyett határozd meg az ügynök viselkedését.
 
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
+Ebben a modulban megismerkedsz a **Supervisor Agent** mintával — egy fejlett agentikus MI megközelítéssel, ahol egy "supervisor" ügynök dinamikusan dönt arról, mely al-ügynököket hívja meg a felhasználói kérések alapján. Mindkét koncepciót kombináljuk azáltal, hogy egyik al-ügynökünk MCP-alapú fájlhozzáférést kap.
+
+Az agentikus modul használatához add hozzá ezt a Maven függőséget:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
 ```
 
-> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg a [`GitRepositoryAnalyzer.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) fájlt és kérdezd meg:
-> - "Hogyan izolálja a Docker az MCP szervereket és mik az előnyei?"
-> - "Hogyan konfiguráljam a volume mountokat az adatok megosztásához a host és az MCP konténerek között?"
-> - "Mik a legjobb gyakorlatok a Docker alapú MCP szerverek életciklusának kezelésére éles környezetben?"
+> **⚠️ Kísérleti:** a `langchain4j-agentic` modul **kísérleti**, és változhat. A stabil mód AI asszisztensek építésére továbbra is a `langchain4j-core` egyedi eszközökkel (Modul 04).
 
 ## A példák futtatása
 
@@ -137,74 +118,25 @@ McpTransport dockerTransport = new StdioMcpTransport.Builder()
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ és npm (az MCP szerverekhez)
-- **Docker Desktop** – Futnia kell az 3. példához (nem elég csak telepítve)
-- GitHub személyes hozzáférési token beállítva a `.env` fájlban (a Modul 00-ból)
+- Környezeti változók beállítva a `.env` fájlban (a gyökérkönyvtárból):
+  - **A StdioTransportDemo-hoz:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **A SupervisorAgentDemo-hoz:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (ugyanaz, mint a 01–04 modulokban)
 
-> **Megjegyzés:** Ha még nem állítottad be a GitHub tokened, lásd a [Modul 00 - Gyors kezdés](../00-quick-start/README.md) útmutatót.
-
-> **⚠️ Docker felhasználók:** Az 3. példa futtatása előtt ellenőrizd, hogy a Docker Desktop fut a `docker ps` paranccsal. Ha kapcsolat hibákat látsz, indítsd el a Docker Desktopot és várj kb. 30 másodpercet az inicializálásra.
+> **Megjegyzés:** Ha még nem állítottad be a környezeti változókat, lásd a [Module 00 - Quick Start](../00-quick-start/README.md) útmutatót, vagy másold a `.env.example` fájlt `.env` néven a gyökérkönyvtárba és töltsd ki az értékeket.
 
 ## Gyors kezdés
 
-**VS Code használata:** Egyszerűen kattints jobb gombbal bármelyik demo fájlra a Felfedezőben és válaszd a **"Run Java"** opciót, vagy használd a Futtatás és Hibakeresés panel indítási konfigurációit (előtte győződj meg róla, hogy a tokened hozzáadtad a `.env` fájlhoz).
+**VS Code használata:** Egyszerűen kattints jobb gombbal bármely demo fájlra az Explorer-ben és válaszd a **"Run Java"** lehetőséget, vagy használd a Run and Debug panel indítási konfigurációit (győződj meg róla, hogy előbb hozzáadtad a tokened a `.env` fájlhoz).
 
-**Maven használata:** Alternatívaként a parancssorból is futtathatod az alábbi példákat.
+**Maven használata:** Alternatívaként parancssorból is futtathatod az alábbi példákat.
 
-**⚠️ Fontos:** Néhány példához előfeltételek szükségesek (pl. MCP szerver indítása vagy Docker képek építése). Ellenőrizd az egyes példák követelményeit futtatás előtt.
+### Fájlműveletek (Stdio)
 
-### Példa 1: Távoli számológép (Streamable HTTP)
+Ez helyi, alfolyamat-alapú eszközöket demonstrál.
 
-Ez a hálózati alapú eszközintegrációt mutatja be.
+**✅ Nincs szükség előfeltételekre** - az MCP szerver automatikusan elindul.
 
-**⚠️ Előfeltétel:** Először el kell indítanod az MCP szervert (lásd az 1. terminált lent).
-
-**1. terminál – MCP szerver indítása:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**2. terminál – Példa futtatása:**
-
-**VS Code használata:** Kattints jobb gombbal a `StreamableHttpDemo.java` fájlra és válaszd a **"Run Java"** opciót.
-
-**Maven használata:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Figyeld, ahogy az ügynök felfedezi az elérhető eszközöket, majd használja a számológépet összeadás végrehajtására.
-
-### Példa 2: Fájlműveletek (Stdio)
-
-Ez a helyi alfolyamat alapú eszközöket mutatja be.
-
-**✅ Nincs szükség előfeltételre** – az MCP szerver automatikusan elindul.
-
-**VS Code használata:** Kattints jobb gombbal a `StdioTransportDemo.java` fájlra és válaszd a **"Run Java"** opciót.
+**VS Code használata:** Kattints jobb gombbal a `StdioTransportDemo.java` fájlra és válaszd a **"Run Java"** lehetőséget.
 
 **Maven használata:**
 
@@ -222,198 +154,244 @@ cd 05-mcp
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
-Az alkalmazás automatikusan elindít egy fájlrendszer MCP szervert és beolvas egy helyi fájlt. Figyeld meg, hogyan kezeli helyetted az alfolyamat menedzsmentet.
+Az alkalmazás automatikusan elindít egy fájlrendszer MCP szervert és beolvas egy helyi fájlt. Figyeld meg, hogyan kezelik helyetted az alfolyamat menedzsmentet.
 
 **Várt kimenet:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Példa 3: Git elemzés (Docker)
+### Supervisor Agent
 
-Ez a konténerizált eszközszervereket mutatja be.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.hu.png" alt="Agentikus modul" width="800"/>
 
-**⚠️ Előfeltételek:** 
-1. **Docker Desktopnak FUTNIA kell** (nem elég csak telepítve)
-2. **Windows felhasználók:** Ajánlott a WSL 2 mód (Docker Desktop Beállítások → Általános → „Use the WSL 2 based engine”). A Hyper-V mód kézi fájlmegosztás konfigurációt igényel.
-3. Először építened kell a Docker képet (lásd az 1. terminált lent)
 
-**Ellenőrizd, hogy a Docker fut:**
+A **Supervisor Agent minta** egy **rugalmas** formája az agentikus MI-nek. A determinisztikus munkafolyamatokkal (sorrend, ciklus, párhuzamos) ellentétben a Supervisor egy LLM-et használ, hogy autonóm módon döntsön arról, mely ügynököket hívja meg a felhasználó kérésének alapján.
+
+**Supervisor és MCP kombinálása:** Ebben a példában a `FileAgent` MCP alapú fájlrendszer-eszközökhöz kap hozzáférést a `toolProvider(mcpToolProvider)` beállítással. Amikor a felhasználó azt kéri, hogy "olvasson és elemezzen egy fájlt", a Supervisor elemezi a kérést és végrehajtási tervet generál. Ezután továbbítja a kérést a `FileAgent`-hez, amely az MCP `read_file` eszközét használja a tartalom lekéréséhez. A Supervisor ezt a tartalmat átadja az `AnalysisAgent`-nek értelmezésre, és opcionálisan meghívja a `SummaryAgent`-et az eredmények tömörítésére.
+
+Ez megmutatja, hogyan illeszkednek az MCP eszközök zökkenőmentesen az agentikus munkafolyamatokba — a Supervisornak nem kell tudnia, hogy a fájlok hogyan kerülnek beolvasásra, csak azt, hogy a `FileAgent` képes ezt megtenni. A Supervisor dinamikusan alkalmazkodik a különböző típusú kérésekhez, és visszaadja vagy az utolsó ügynök válaszát, vagy az összes művelet összegzését.
+
+**Ajánlott: indító script-ek használata**
+
+Az indító script-ek automatikusan betöltik a környezeti változókat a gyökér `.env` fájlból:
 
 **Bash:**
 ```bash
-docker ps  # Konténerlistát kellene mutatnia, nem hibát
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Konténerlistát kellene mutatnia, nem hibát
-```
-
-Ha olyan hibát látsz, hogy „Cannot connect to Docker daemon” vagy „The system cannot find the file specified”, indítsd el a Docker Desktopot és várj az inicializálásra (~30 másodperc).
-
-**Hibaelhárítás:**
-- Ha az AI üres repót vagy fájlok hiányát jelzi, a volume mount (`-v`) nem működik.
-- **Windows Hyper-V felhasználók:** Add hozzá a projekt könyvtárat a Docker Desktop Beállítások → Erőforrások → Fájlmegosztás menüben, majd indítsd újra a Docker Desktopot.
-- **Ajánlott megoldás:** Váltás WSL 2 módra az automatikus fájlmegosztásért (Beállítások → Általános → engedélyezd a „Use the WSL 2 based engine” opciót).
-
-**1. terminál – Docker kép építése:**
-
-**Bash:**
-```bash
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**2. terminál – Elemző futtatása:**
-
-**VS Code használata:** Kattints jobb gombbal a `GitRepositoryAnalyzer.java` fájlra és válaszd a **"Run Java"** opciót.
-
-**Maven használata:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+.\start.ps1
 ```
 
-Az alkalmazás elindít egy Docker konténert, csatolja a repódat, és az AI ügynökön keresztül elemzi a repó szerkezetét és tartalmát.
+**VS Code használata:** Kattints jobb gombbal a `SupervisorAgentDemo.java` fájlra és válaszd a **"Run Java"** lehetőséget (győződj meg róla, hogy a `.env` fájl be van állítva).
+
+**Hogyan működik a Supervisor:**
+
+```java
+// Határozzon meg több ügynököt konkrét képességekkel
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)  // MCP eszközökkel rendelkezik fájlműveletekhez
+        .build();
+
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
+
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
+
+// Hozzon létre egy Felügyelőt, amely ezeket az ügynököket összehangolja
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // A "tervező" modell
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
+
+// A Felügyelő önállóan dönt arról, mely ügynököket hívjon meg
+// Egyszerűen adjon meg egy természetes nyelvű kérést - az LLM tervezi a végrehajtást
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+```
+
+Lásd a [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) fájlt a teljes megvalósításhoz.
+
+> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chat-tel:** Nyisd meg a [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) fájlt és kérdezd:
+> - "Hogyan dönt a Supervisor arról, mely ügynököket hívja meg?"
+> - "Mi a különbség a Supervisor és a Szekvenciális munkafolyamat minták között?"
+> - "Hogyan testreszabhatom a Supervisor tervezési viselkedését?"
+
+#### A kimenet megértése
+
+Amikor lefuttatod a demót, strukturált bemutatót látsz arról, hogyan hangolja össze a Supervisor a több ügynök munkáját. Itt van, mit jelentenek az egyes részek:
+
+```
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
+
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
+```
+
+**A fejléc** bemutatja a demót és elmagyarázza az alapvető koncepciót: a Supervisor egy LLM-et használ (nem keménykódolt szabályokat) annak eldöntésére, mely ügynököket hívja meg.
+
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
+
+**Elérhető ügynökök** megmutatja a három specializált ügynököt, közülük választhat a Supervisor. Minden ügynöknek specifikus képessége van:
+- **FileAgent** képes fájlokat olvasni MCP eszközök segítségével (külső képesség)
+- **AnalysisAgent** elemez tartalmakat (tiszta LLM képesség)
+- **SummaryAgent** összegzéseket készít (tiszta LLM képesség)
+
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
+
+**Felhasználói kérés** mutatja, mit kértek. A Supervisornak ezt fel kell dolgoznia és el kell döntenie, mely ügynököket hívja meg.
+
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
+
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
+
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: Structure: The content is organized into clear paragraphs that int...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
+
+**Supervisor orchestration** az a rész, ahol a varázslat történik. Figyeld meg, hogyan:
+1. A Supervisor **először a FileAgent-et választotta**, mert a kérés említette a "fájl olvasását"
+2. A FileAgent az MCP `read_file` eszközét használta a fájl tartalmának lekérésére
+3. A Supervisor ezután **az AnalysisAgent-et választotta**, és átadta neki a fájl tartalmát
+4. Az AnalysisAgent elemezte a struktúrát, hangvételt és témákat
+
+Vedd észre, hogy a Supervisor ezeket a döntéseket **önállóan** hozta meg a felhasználói kérés alapján — nincs keménykódolt munkafolyamat!
+
+**Végső válasz** a Supervisor szintetizált válasza, amely egyesíti az összes meghívott ügynök eredményét. A példa kiírja az agentikus scope-ot, megmutatva az összegzést és az egyes ügynökök által tárolt elemzési eredményeket.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: Structure: The content is organized into clear paragraphs that in...
+```
+
+### Az agentikus modul funkcióinak magyarázata
+
+A példa több fejlett funkciót demonstrál az agentikus modulból. Nézzük meg közelebbről az Agentic Scope-ot és az Agent Listeners-t.
+
+**Agentic Scope** mutatja a megosztott memóriát, ahol az ügynökök az eredményeiket tárolták `@Agent(outputKey="...")` segítségével. Ez lehetővé teszi:
+- Hogy későbbi ügynökök hozzáférjenek korábbi ügynökök kimenetéhez
+- Hogy a Supervisor egy végső választ szintetizáljon
+- Hogy megtekinthesd, mit hozott létre minden egyes ügynök
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** lehetővé teszik az ügynökök végrehajtásának monitorozását és hibakeresését. A demóban látható lépésről-lépésre kimenet egy AgentListenerből származik, amely minden ügynök meghívásába beépül:
+- **beforeAgentInvocation** - Meghívásra kerül, amikor a Supervisor kiválaszt egy ügynököt, így láthatod, melyik ügynököt választották és miért
+- **afterAgentInvocation** - Meghívásra kerül, amikor egy ügynök befejeződik, és megmutatja az eredményét
+- **inheritedBySubagents** - Ha igaz, a listener figyeli a hierarchiában lévő összes ügynököt is
+
+```java
+AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
+    @Override
+    public void beforeAgentInvocation(AgentRequest request) {
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Terjessze az összes alügynökhöz
+    }
+};
+```
+
+A Supervisor mintán túl, a `langchain4j-agentic` modul számos erőteljes munkafolyamat-mintát és funkciót biztosít:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Sequential** | Végrehajtja az ügynököket sorrendben, az egyik kimenete a következő bemenete | Csővezetékek: kutatás → elemzés → jelentés |
+| **Parallel** | Egyidejűleg futtatja az ügynököket | Független feladatok: időjárás + hírek + részvények |
+| **Loop** | Ismétel, amíg a feltétel teljesül | Minőségértékelés: finomítás, amíg a pontszám ≥ 0.8 |
+| **Conditional** | Feltételek alapján irányítja a munkát | Osztályozás → továbbítás szakértő ügynökhöz |
+| **Human-in-the-Loop** | Emberi ellenőrzőpontok hozzáadása | Jóváhagyási munkafolyamatok, tartalomellenőrzés |
 
 ## Kulcsfogalmak
 
-**Átvitel kiválasztása**
+**MCP** ideális, ha létező eszközök ökoszisztémáit szeretnéd kihasználni, olyan eszközöket építeni, amelyeket több alkalmazás megoszthat, harmadik fél szolgáltatásait szabványos protokollokkal integrálni, vagy eszközimplementációkat cserélni a kód módosítása nélkül.
 
-Válassz az eszközeid helye alapján:
-- Távoli szolgáltatások → Streamable HTTP
-- Helyi fájlrendszer → Stdio
-- Összetett függőségek → Docker
+**Az agentikus modul** akkor működik a legjobban, ha deklaratív ügynökdefiníciókat szeretnél `@Agent` annotációkkal, munkafolyamat-orchestrationre van szükséged (sorrend, ciklus, párhuzamos), interfész-alapú ügynöktervezést részesítesz előnyben az imperatív kóddal szemben, vagy több ügynök kombinálásával dolgozol, amelyek megosztott kimeneteket használnak `outputKey` segítségével.
 
-**Eszközfelismerés**
-
-Az MCP kliensek automatikusan felfedezik az elérhető eszközöket csatlakozáskor. Az AI ügynök látja az eszközleírásokat és a felhasználói kérés alapján dönt, melyeket használja.
-
-**Munkamenet-kezelés**
-
-A Streamable HTTP átvitel munkameneteket tart fenn, lehetővé téve az állapotfüggő interakciókat távoli szerverekkel. A Stdio és Docker átvitelek általában állapotmentesek.
-
-**Platformok közötti megfontolások**
-
-A példák automatikusan kezelik a platformok közötti különbségeket (Windows vs Unix parancsok, útvonal konverziók Dockerhez). Ez fontos a különböző környezetekben történő éles telepítésekhez.
-
-## Mikor használd az MCP-t
-
-**Használd az MCP-t, ha:**
-- Ki akarod használni a meglévő eszközök ökoszisztémáját
-- Több alkalmazás által használt eszközöket építesz
-- Harmadik fél szolgáltatásait integrálod szabványos protokollokkal
-- Szeretnéd eszköz implementációkat cserélni kódmódosítás nélkül
-
-**Használj egyedi eszközöket (Modul 04), ha:**
-- Alkalmazás-specifikus funkciókat építesz
-- Kritikus a teljesítmény (az MCP többletterhet jelent)
-- Egyszerű eszközöket készítesz, amiket nem használnak újra
-- Teljes kontrollra van szükséged a végrehajtás felett
-
-## MCP ökoszisztéma
-
-A Model Context Protocol egy nyílt szabvány növekvő ökoszisztémával:
-
-- Hivatalos MCP szerverek gyakori feladatokra (fájlrendszer, Git, adatbázisok)
-- Közösségi hozzájárulású szerverek különféle szolgáltatásokhoz
-- Szabványosított eszközleírások és sémák
-- Keretrendszer-független kompatibilitás (bármely MCP klienssel működik)
-
-Ez a szabványosítás azt jelenti, hogy egy AI alkalmazásra épített eszközök másokkal is működnek, létrehozva egy megosztott képesség-ökoszisztémát.
+**A Supervisor Agent minta** akkor kiváló, amikor a munkafolyamat előre nem kiszámítható és szeretnéd, hogy az LLM döntsön; amikor több specializált ügynököd van, amelyek dinamikus összehangolást igényelnek; amikor beszélgetés-alapú rendszereket építesz, amelyek különböző képességekhez irányítanak; vagy amikor a lehető leg rugalmasabb, adaptív ügynökviselkedést szeretnéd.
 
 ## Gratulálunk!
 
-Befejezted a LangChain4j kezdőknek tanfolyamot. Megtanultad:
+Sikeresen teljesítetted a LangChain4j for Beginners kurzust. Megtanultad:
 
-- Hogyan építs beszélgető AI-t memóriával (Modul 01)
-- Prompt tervezési mintákat különböző feladatokra (Modul 02)
-- Válaszok megalapozását dokumentumokban RAG segítségével (Modul 03)
-- AI ügynökök létrehozását egyedi eszközökkel (Modul 04)
-- Szabványosított eszközök integrálását MCP-n keresztül (Modul 05)
-
-Most már megvan az alapod éles AI alkalmazások építéséhez. A tanult fogalmak függetlenek a konkrét keretrendszerektől vagy modellektől – alapvető minták az AI mérnökségben.
+- Hogyan építs beszélgetés-alapú MI-t memóriával (Modul 01)
+- Prompt engineering mintákat különböző feladatokra (Modul 02)
+- Hogyan igazítsd a válaszokat dokumentumokhoz RAG segítségével (Modul 03)
+- Alapvető MI ügynökök (asszisztensek) létrehozását egyedi eszközökkel (Modul 04)
+- Szabványos eszközök integrálása a LangChain4j MCP és Agentic modulokkal (Module 05)
 
 ### Mi következik?
 
-A modulok elvégzése után fedezd fel a [Tesztelési útmutatót](../docs/TESTING.md), hogy lásd a LangChain4j tesztelési koncepcióit működés közben.
+A modulok elvégzése után tekintsd meg a [Tesztelési útmutatót](../docs/TESTING.md), hogy lásd a LangChain4j tesztelési koncepcióit működés közben.
 
 **Hivatalos források:**
-- [LangChain4j dokumentáció](https://docs.langchain4j.dev/) – Átfogó útmutatók és API referencia
-- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) – Forráskód és példák
-- [LangChain4j oktatóanyagok](https://docs.langchain4j.dev/tutorials/) – Lépésről lépésre oktatóanyagok különböző felhasználási esetekhez
+- [LangChain4j dokumentáció](https://docs.langchain4j.dev/) - Átfogó útmutatók és API referencia
+- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Forráskód és példák
+- [LangChain4j Oktatóanyagok](https://docs.langchain4j.dev/tutorials/) - Lépésről lépésre útmutatók különféle felhasználási esetekhez
 
 Köszönjük, hogy elvégezted ezt a tanfolyamot!
 
 ---
 
-**Navigáció:** [← Előző: Modul 04 - Eszközök](../04-tools/README.md) | [Vissza a főoldalra](../README.md)
-
----
-
-## Hibaelhárítás
-
-### PowerShell Maven parancs szintaxis
-**Probléma**: A Maven parancsok hibával leállnak: `Unknown lifecycle phase ".mainClass=..."`
-
-**Ok**: A PowerShell az `=` jelet változó hozzárendelésként értelmezi, ami megszakítja a Maven tulajdonság szintaxisát
-
-**Megoldás**: Használja a stop-parsing operátort `--%` a Maven parancs előtt:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-A `--%` operátor azt mondja a PowerShellnek, hogy az összes további argumentumot szó szerint adja át a Mavennek értelmezés nélkül.
-
-### Docker kapcsolódási problémák
-
-**Probléma**: A Docker parancsok hibával leállnak: "Cannot connect to Docker daemon" vagy "The system cannot find the file specified"
-
-**Ok**: A Docker Desktop nem fut vagy nincs teljesen inicializálva
-
-**Megoldás**: 
-1. Indítsa el a Docker Desktopot
-2. Várjon kb. 30 másodpercet a teljes inicializálásra
-3. Ellenőrizze a `docker ps` paranccsal (konténerlista jelenjen meg, ne hiba)
-4. Ezután futtassa a példáját
-
-### Windows Docker kötet csatolás
-
-**Probléma**: A Git repository elemző üres tárolót vagy fájlok hiányát jelzi
-
-**Ok**: A kötet csatolás (`-v`) nem működik a fájlmegosztási beállítás miatt
-
-**Megoldás**:
-- **Ajánlott:** Váltson WSL 2 módra (Docker Desktop Beállítások → Általános → "Use the WSL 2 based engine")
-- **Alternatíva (Hyper-V):** Adja hozzá a projekt könyvtárát a Docker Desktop Beállítások → Erőforrások → Fájlmegosztás menüben, majd indítsa újra a Docker Desktopot
+**Navigáció:** [← Előző: Module 04 - Tools](../04-tools/README.md) | [Vissza a főoldalhoz](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Jogi nyilatkozat**:
-Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
+Felelősségkizárás:
+Ezt a dokumentumot az AI fordító szolgáltatás, a Co-op Translator (https://github.com/Azure/co-op-translator) segítségével fordítottuk. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő a hiteles forrásnak. Kritikus fontosságú információk esetén professzionális, emberi fordítást javaslunk. Nem vállalunk felelősséget az e fordítás használatából eredő félreértésekért vagy félreértelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

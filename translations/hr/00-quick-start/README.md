@@ -37,7 +37,7 @@ LangChain4j je Java biblioteka koja pojednostavljuje izgradnju AI-pokretanih apl
 
 "Chain" u LangChain odnosi se na povezivanje više komponenti - možete povezati prompt s modelom, zatim s parserom, ili povezati više AI poziva gdje jedan izlaz služi kao ulaz za sljedeći. Ovaj brzi početak fokusira se na osnove prije nego što istražimo složenije lance.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1e961a13c73d45cfa305fd03d81bd11e5d34d0e36ed28a44d.hr.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.hr.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Povezivanje komponenti u LangChain4j - gradivni blokovi se povezuju za stvaranje moćnih AI tijekova rada*
 
@@ -49,7 +49,7 @@ Koristit ćemo tri osnovne komponente:
 
 **MessageWindowChatMemory** - održava povijest razgovora. Bez toga, svaki zahtjev je neovisan. S njim, AI pamti prethodne poruke i održava kontekst kroz više okretaja.
 
-<img src="../../../translated_images/architecture.eedc993a1c57683951f20244f652fc7a9853f571eea835bc2b2828cf0dbf62d0.hr.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/architecture.eedc993a1c576839.hr.png" alt="LangChain4j Architecture" width="800"/>
 
 *Arhitektura LangChain4j - osnovne komponente koje zajedno pokreću vaše AI aplikacije*
 

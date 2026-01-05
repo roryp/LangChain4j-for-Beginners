@@ -1,212 +1,144 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c25ec1f10ef156c53e190cdf8b0711ab",
-  "translation_date": "2025-12-13T18:10:06+00:00",
+  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
+  "translation_date": "2025-12-31T06:21:40+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "uk"
 }
 -->
-# Модуль 05: Протокол Контексту Моделі (MCP)
+# Module 05: Model Context Protocol (MCP)
 
-## Зміст
+## Table of Contents
 
-- [Чому ви навчитеся](../../../05-mcp)
-- [Розуміння MCP](../../../05-mcp)
-- [Як працює MCP](../../../05-mcp)
-  - [Архітектура Сервер-Клієнт](../../../05-mcp)
-  - [Виявлення Інструментів](../../../05-mcp)
-  - [Механізми Транспорту](../../../05-mcp)
-- [Вимоги](../../../05-mcp)
-- [Що охоплює цей модуль](../../../05-mcp)
-- [Швидкий старт](../../../05-mcp)
-  - [Приклад 1: Віддалений калькулятор (Streamable HTTP)](../../../05-mcp)
-  - [Приклад 2: Операції з файлами (Stdio)](../../../05-mcp)
-  - [Приклад 3: Аналіз Git (Docker)](../../../05-mcp)
-- [Ключові поняття](../../../05-mcp)
-  - [Вибір транспорту](../../../05-mcp)
-  - [Виявлення інструментів](../../../05-mcp)
-  - [Управління сесіями](../../../05-mcp)
-  - [Кросплатформені особливості](../../../05-mcp)
-- [Коли використовувати MCP](../../../05-mcp)
-- [Екосистема MCP](../../../05-mcp)
-- [Вітаємо!](../../../05-mcp)
-  - [Що далі?](../../../05-mcp)
-- [Вирішення проблем](../../../05-mcp)
+- [What You'll Learn](../../../05-mcp)
+- [What is MCP?](../../../05-mcp)
+- [How MCP Works](../../../05-mcp)
+- [The Agentic Module](../../../05-mcp)
+- [Running the Examples](../../../05-mcp)
+  - [Prerequisites](../../../05-mcp)
+- [Quick Start](../../../05-mcp)
+  - [File Operations (Stdio)](../../../05-mcp)
+  - [Supervisor Agent](../../../05-mcp)
+    - [Understanding the Output](../../../05-mcp)
+    - [Explanation of Agentic Module Features](../../../05-mcp)
+- [Key Concepts](../../../05-mcp)
+- [Congratulations!](../../../05-mcp)
+  - [What's Next?](../../../05-mcp)
 
-## Чому ви навчитеся
+## What You'll Learn
 
-Ви створили розмовний ШІ, опанували промпти, закріпили відповіді у документах і створили агентів з інструментами. Але всі ці інструменти були спеціально створені для вашого конкретного застосунку. А що як ви могли б надати вашому ШІ доступ до стандартизованої екосистеми інструментів, які кожен може створювати та ділитися?
+You've built conversational AI, mastered prompts, grounded responses in documents, and created agents with tools. But all those tools were custom-built for your specific application. What if you could give your AI access to a standardized ecosystem of tools that anyone can create and share? In this module, you'll learn how to do just that with the Model Context Protocol (MCP) and LangChain4j's agentic module. We first showcase a simple MCP file reader and then show how it easily integrates into advanced agentic workflows using the Supervisor Agent pattern.
 
-Протокол Контексту Моделі (MCP) саме це і забезпечує — стандартний спосіб для ШІ-застосунків знаходити та використовувати зовнішні інструменти. Замість написання індивідуальних інтеграцій для кожного джерела даних або сервісу, ви підключаєтесь до MCP серверів, які відкривають свої можливості у послідовному форматі. Ваш ШІ-агент може автоматично знаходити та використовувати ці інструменти.
+## What is MCP?
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5448d2fa21a61218777ceb8010ea0390dd43924b26df35f61.uk.png" alt="Порівняння MCP" width="800"/>
+The Model Context Protocol (MCP) provides exactly that - a standard way for AI applications to discover and use external tools. Instead of writing custom integrations for each data source or service, you connect to MCP servers that expose their capabilities in a consistent format. Your AI agent can then discover and use these tools automatically.
 
-*До MCP: складні точкові інтеграції. Після MCP: один протокол, безмежні можливості.*
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.uk.png" alt="Порівняння MCP" width="800"/>
 
-## Розуміння MCP
+*До MCP: складні інтеграції типу «точка-до-точки». Після MCP: один протокол — безліч можливостей.*
 
-MCP вирішує фундаментальну проблему в розробці ШІ: кожна інтеграція — унікальна. Хочете отримати доступ до GitHub? Потрібен власний код. Хочете читати файли? Власний код. Хочете робити запити до бази даних? Власний код. І жодна з цих інтеграцій не працює з іншими ШІ-застосунками.
+MCP solves a fundamental problem in AI development: every integration is custom. Want to access GitHub? Custom code. Want to read files? Custom code. Want to query a database? Custom code. And none of these integrations work with other AI applications.
 
-MCP стандартизує це. MCP сервер відкриває інструменти з чіткими описами та схемами. Будь-який MCP клієнт може підключитися, знайти доступні інструменти та використовувати їх. Побудував один раз — використовуй скрізь.
+MCP standardizes this. An MCP server exposes tools with clear descriptions and schemas. Any MCP client can connect, discover available tools, and use them. Build once, use everywhere.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9814b7cffade208d4b0d97203c22df8d8e5504d8238fa7065.uk.png" alt="Архітектура MCP" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.uk.png" alt="Архітектура MCP" width="800"/>
 
-*Архітектура Протоколу Контексту Моделі — стандартизоване виявлення та виконання інструментів*
+*Архітектура Model Context Protocol — стандартизоване виявлення та виконання інструментів*
 
-## Як працює MCP
+## How MCP Works
 
-**Архітектура Сервер-Клієнт**
+**Server-Client Architecture**
 
-MCP використовує модель клієнт-сервер. Сервери надають інструменти — читання файлів, запити до баз даних, виклики API. Клієнти (ваш ШІ-застосунок) підключаються до серверів і використовують їхні інструменти.
+MCP uses a client-server model. Servers provide tools - reading files, querying databases, calling APIs. Clients (your AI application) connect to servers and use their tools.
 
-**Виявлення Інструментів**
+To use MCP with LangChain4j, add this Maven dependency:
 
-Коли ваш клієнт підключається до MCP сервера, він питає: "Які у вас є інструменти?" Сервер відповідає списком доступних інструментів, кожен з описами та схемами параметрів. Ваш ШІ-агент може вирішити, які інструменти використовувати, на основі запитів користувача.
-
-**Механізми Транспорту**
-
-MCP визначає два механізми транспорту: HTTP для віддалених серверів, Stdio для локальних процесів (включно з Docker контейнерами):
-
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020ed801b772b26ed69338e22739677aa017e0968f6538b09a2.uk.png" alt="Механізми транспорту" width="800"/>
-
-*Механізми транспорту MCP: HTTP для віддалених серверів, Stdio для локальних процесів (включно з Docker контейнерами)*
-
-**Streamable HTTP** — [StreamableHttpDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-Для віддалених серверів. Ваш застосунок робить HTTP-запити до сервера, що працює десь у мережі. Використовує Server-Sent Events для комунікації в реальному часі.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
 ```
 
-> **🤖 Спробуйте з [GitHub Copilot](https://github.com/features/copilot) Chat:** Відкрийте [`StreamableHttpDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) і запитайте:
-> - "Чим MCP відрізняється від прямої інтеграції інструментів, як у Модулі 04?"
-> - "Які переваги використання MCP для спільного використання інструментів між застосунками?"
-> - "Як обробляти збої з’єднання або таймаути з MCP серверами?"
+**Tool Discovery**
 
-**Stdio** — [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
+When your client connects to an MCP server, it asks "What tools do you have?" The server responds with a list of available tools, each with descriptions and parameter schemas. Your AI agent can then decide which tools to use based on user requests.
 
-Для локальних процесів. Ваш застосунок запускає сервер як підпроцес і спілкується через стандартний ввід/вивід. Корисно для доступу до файлової системи або командних інструментів.
+**Transport Mechanisms**
+
+MCP supports different transport mechanisms. This module demonstrates the Stdio transport for local processes:
+
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.uk.png" alt="Механізми передачі" width="800"/>
+
+*Mеханізми передачі MCP: HTTP для віддалених серверів, Stdio для локальних процесів*
+
+**Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
+
+For local processes. Your application spawns a server as a subprocess and communicates through standard input/output. Useful for filesystem access or command-line tools.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
     .build();
 ```
 
-> **🤖 Спробуйте з [GitHub Copilot](https://github.com/features/copilot) Chat:** Відкрийте [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) і запитайте:
-> - "Як працює транспорт Stdio і коли його слід використовувати замість HTTP?"
-> - "Як LangChain4j керує життєвим циклом запущених MCP серверних процесів?"
-> - "Які наслідки для безпеки при наданні ШІ доступу до файлової системи?"
+> **🤖 Спробуйте з [GitHub Copilot](https://github.com/features/copilot) чат:** Open [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) and ask:
+> - "How does Stdio transport work and when should I use it vs HTTP?"
+> - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
+> - "What are the security implications of giving AI access to the file system?"
 
-**Docker (використовує Stdio)** — [GitRepositoryAnalyzer.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+## The Agentic Module
 
-Для контейнеризованих сервісів. Використовує транспорт stdio для спілкування з Docker контейнером через `docker run`. Добре підходить для складних залежностей або ізольованих середовищ.
+While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build agents that orchestrate those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code.
 
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
+In this module, you'll explore the **Supervisor Agent** pattern — an advanced agentic AI approach where a "supervisor" agent dynamically decides which sub-agents to invoke based on user requests. We'll combine both concepts by giving one of our sub-agents MCP-powered file access capabilities.
+
+To use the agentic module, add this Maven dependency:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
 ```
 
-> **🤖 Спробуйте з [GitHub Copilot](https://github.com/features/copilot) Chat:** Відкрийте [`GitRepositoryAnalyzer.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) і запитайте:
-> - "Як транспорт Docker ізолює MCP сервери і які переваги це дає?"
-> - "Як налаштувати монтування томів для обміну даними між хостом і MCP контейнерами?"
-> - "Які найкращі практики управління життєвим циклом MCP серверів на базі Docker у продакшені?"
+> **⚠️ Experimental:** The `langchain4j-agentic` module is **experimental** and subject to change. The stable way to build AI assistants remains `langchain4j-core` with custom tools (Module 04).
 
-## Запуск прикладів
+## Running the Examples
 
-### Вимоги
+### Prerequisites
 
 - Java 21+, Maven 3.9+
-- Node.js 16+ та npm (для MCP серверів)
-- **Docker Desktop** — має бути **запущений** для Прикладу 3 (не лише встановлений)
-- Особистий токен доступу GitHub, налаштований у файлі `.env` (з Модуля 00)
+- Node.js 16+ and npm (for MCP servers)
+- Environment variables configured in `.env` file (from the root directory):
+  - **For StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **For SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (same as Modules 01-04)
 
-> **Примітка:** Якщо ви ще не налаштували свій GitHub токен, дивіться [Модуль 00 - Швидкий старт](../00-quick-start/README.md) для інструкцій.
+> **Note:** If you haven't set up your environment variables yet, see [Module 00 - Quick Start](../00-quick-start/README.md) for instructions, or copy `.env.example` to `.env` in the root directory and fill in your values.
 
-> **⚠️ Користувачі Docker:** Перед запуском Прикладу 3 перевірте, що Docker Desktop запущений командою `docker ps`. Якщо бачите помилки з’єднання, запустіть Docker Desktop і зачекайте ~30 секунд для ініціалізації.
+## Quick Start
 
-## Швидкий старт
+**Using VS Code:** Simply right-click on any demo file in the Explorer and select **"Run Java"**, or use the launch configurations from the Run and Debug panel (make sure you've added your token to the `.env` file first).
 
-**Використання VS Code:** Просто клацніть правою кнопкою миші на будь-якому демонстраційному файлі в Провіднику і виберіть **"Run Java"**, або використовуйте конфігурації запуску з панелі Run and Debug (переконайтеся, що спочатку додали токен у файл `.env`).
+**Using Maven:** Alternatively, you can run from the command line with the examples below.
 
-**Використання Maven:** Альтернативно, можна запускати з командного рядка за допомогою наведених нижче прикладів.
+### File Operations (Stdio)
 
-**⚠️ Важливо:** Деякі приклади мають вимоги (наприклад, запуск MCP сервера або збірка Docker образів). Перевірте вимоги кожного прикладу перед запуском.
+This demonstrates local subprocess-based tools.
 
-### Приклад 1: Віддалений калькулятор (Streamable HTTP)
+**✅ No prerequisites needed** - the MCP server is spawned automatically.
 
-Це демонструє інтеграцію інструментів через мережу.
+**Using VS Code:** Right-click on `StdioTransportDemo.java` and select **"Run Java"**.
 
-**⚠️ Вимога:** Спочатку потрібно запустити MCP сервер (див. Термінал 1 нижче).
-
-**Термінал 1 — Запуск MCP сервера:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**Термінал 2 — Запуск прикладу:**
-
-**Використання VS Code:** Клацніть правою кнопкою на `StreamableHttpDemo.java` і виберіть **"Run Java"**.
-
-**Використання Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Спостерігайте, як агент знаходить доступні інструменти, а потім використовує калькулятор для виконання додавання.
-
-### Приклад 2: Операції з файлами (Stdio)
-
-Це демонструє інструменти на основі локальних підпроцесів.
-
-**✅ Вимоги відсутні** — MCP сервер запускається автоматично.
-
-**Використання VS Code:** Клацніть правою кнопкою на `StdioTransportDemo.java` і виберіть **"Run Java"**.
-
-**Використання Maven:**
+**Using Maven:**
 
 **Bash:**
 ```bash
@@ -222,145 +154,236 @@ cd 05-mcp
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
-Застосунок автоматично запускає MCP сервер файлової системи і читає локальний файл. Зверніть увагу, як керується підпроцес.
+The application spawns a filesystem MCP server automatically and reads a local file. Notice how the subprocess management is handled for you.
 
-**Очікуваний вивід:**
+**Expected output:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Приклад 3: Аналіз Git (Docker)
+### Supervisor Agent
 
-Це демонструє сервери інструментів у контейнерах.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.uk.png" alt="Agentic Module" width="800"/>
 
-**⚠️ Вимоги:** 
-1. **Docker Desktop має бути ЗАПУЩЕНИМ** (не лише встановленим)
-2. **Користувачі Windows:** рекомендовано режим WSL 2 (Налаштування Docker Desktop → Загальні → "Use the WSL 2 based engine"). Режим Hyper-V вимагає ручного налаштування спільного доступу до файлів.
-3. Спочатку потрібно зібрати Docker образ (див. Термінал 1 нижче)
 
-**Перевірка запуску Docker:**
+The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
+
+**Combining Supervisor with MCP:** In this example, we give the `FileAgent` access to MCP file system tools via `toolProvider(mcpToolProvider)`. When a user asks to "read and analyze a file," the Supervisor analyzes the request and generates an execution plan. It then routes the request to `FileAgent`, which uses MCP's `read_file` tool to retrieve the content. The Supervisor passes that content to `AnalysisAgent` for interpretation, and optionally invokes `SummaryAgent` to condense the results.
+
+This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it. The Supervisor adapts dynamically to different types of requests and returns either the last agent's response or a summary of all operations.
+
+**Using the Start Scripts (Recommended):**
+
+The start scripts automatically load environment variables from the root `.env` file:
 
 **Bash:**
 ```bash
-docker ps  # Повинен показувати список контейнерів, а не помилку
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Повинен показувати список контейнерів, а не помилку
-```
-
-Якщо бачите помилку на кшталт "Cannot connect to Docker daemon" або "The system cannot find the file specified", запустіть Docker Desktop і зачекайте ініціалізації (~30 секунд).
-
-**Вирішення проблем:**
-- Якщо ШІ повідомляє про порожній репозиторій або відсутність файлів, монтування тому (`-v`) не працює.
-- **Користувачі Windows Hyper-V:** Додайте директорію проекту в Налаштування Docker Desktop → Ресурси → Спільний доступ до файлів, потім перезапустіть Docker Desktop.
-- **Рекомендоване рішення:** Переключіться на режим WSL 2 для автоматичного спільного доступу до файлів (Налаштування → Загальні → увімкніть "Use the WSL 2 based engine").
-
-**Термінал 1 — Збірка Docker образу:**
-
-**Bash:**
-```bash
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**Термінал 2 — Запуск аналізатора:**
-
-**Використання VS Code:** Клацніть правою кнопкою на `GitRepositoryAnalyzer.java` і виберіть **"Run Java"**.
-
-**Використання Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+.\start.ps1
 ```
 
-Застосунок запускає Docker контейнер, монтує ваш репозиторій і аналізує структуру та вміст репозиторію через ШІ-агента.
+**Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"** (ensure your `.env` file is configured).
 
-## Ключові поняття
+**How the Supervisor Works:**
 
-**Вибір транспорту**
+```java
+// Визначте кілька агентів із конкретними можливостями
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)  // Має інструменти MCP для роботи з файлами
+        .build();
 
-Обирайте залежно від розташування ваших інструментів:
-- Віддалені сервіси → Streamable HTTP
-- Локальна файлова система → Stdio
-- Складні залежності → Docker
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
 
-**Виявлення інструментів**
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
 
-MCP клієнти автоматично знаходять доступні інструменти при підключенні. Ваш ШІ-агент бачить описи інструментів і вирішує, які використовувати, на основі запиту користувача.
+// Створіть Супервайзера, який координує цих агентів
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // Модель "planner"
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
 
-**Управління сесіями**
+// Супервайзер автономно вирішує, яких агентів викликати
+// Просто передайте запит природною мовою — LLM планує виконання
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+```
 
-Транспорт Streamable HTTP підтримує сесії, дозволяючи станозалежні взаємодії з віддаленими серверами. Транспорти Stdio і Docker зазвичай безстанні.
+See [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) for the complete implementation.
 
-**Кросплатформені особливості**
+> **🤖 Спробуйте з [GitHub Copilot](https://github.com/features/copilot) чат:** Open [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) and ask:
+> - "How does the Supervisor decide which agents to invoke?"
+> - "What's the difference between Supervisor and Sequential workflow patterns?"
+> - "How can I customize the Supervisor's planning behavior?"
 
-Приклади автоматично враховують відмінності платформ (різниця команд Windows і Unix, конвертація шляхів для Docker). Це важливо для розгортання у різних середовищах.
+#### Understanding the Output
 
-## Коли використовувати MCP
+When you run the demo, you'll see a structured walkthrough of how the Supervisor orchestrates multiple agents. Here's what each section means:
 
-**Використовуйте MCP, коли:**
-- Хочете скористатися існуючими екосистемами інструментів
-- Створюєте інструменти, які використовуватимуть кілька застосунків
-- Інтегруєте сторонні сервіси зі стандартними протоколами
-- Потрібно змінювати реалізації інструментів без змін коду
+```
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
 
-**Використовуйте власні інструменти (Модуль 04), коли:**
-- Створюєте функціонал, специфічний для застосунку
-- Важлива висока продуктивність (MCP додає накладні витрати)
-- Ваші інструменти прості і не будуть повторно використовуватися
-- Потрібен повний контроль над виконанням
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
+```
 
-## Екосистема MCP
+**The header** introduces the demo and explains the core concept: the Supervisor uses an LLM (not hardcoded rules) to decide which agents to call.
 
-Протокол Контексту Моделі — відкритий стандарт з розвиваючоюся екосистемою:
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
 
-- Офіційні MCP сервери для поширених завдань (файлова система, Git, бази даних)
-- Сервери, створені спільнотою, для різних сервісів
-- Стандартизовані описи інструментів і схеми
-- Крос-фреймворк сумісність (працює з будь-яким MCP клієнтом)
+**Available Agents** shows the three specialized agents the Supervisor can choose from. Each agent has a specific capability:
+- **FileAgent** can read files using MCP tools (external capability)
+- **AnalysisAgent** analyzes content (pure LLM capability)
+- **SummaryAgent** creates summaries (pure LLM capability)
 
-Ця стандартизація означає, що інструменти, створені для одного ШІ-застосунку, працюють з іншими, створюючи спільну екосистему можливостей.
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
 
-## Вітаємо!
+**User Request** shows what was asked. The Supervisor must parse this and decide which agents to invoke.
 
-Ви завершили курс LangChain4j для початківців. Ви навчилися:
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
 
-- Як створювати розмовний ШІ з пам’яттю (Модуль 01)
-- Шаблони промптів для різних завдань (Модуль 02)
-- Закріплення відповідей у ваших документах за допомогою RAG (Модуль 03)
-- Створення ШІ-агентів з власними інструментами (Модуль 04)
-- Інтеграція стандартизованих інструментів через MCP (Модуль 05)
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
 
-Тепер у вас є основа для створення продуктивних ШІ-застосунків. Концепції, які ви вивчили, застосовні незалежно від конкретних фреймворків чи моделей — це фундаментальні патерни в інженерії ШІ.
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: Structure: The content is organized into clear paragraphs that int...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
+
+**Supervisor Orchestration** is where the magic happens. Watch how:
+1. The Supervisor **chose FileAgent first** because the request mentioned "read the file"
+2. FileAgent used MCP's `read_file` tool to retrieve the file contents
+3. The Supervisor then **chose AnalysisAgent** and passed the file contents to it
+4. AnalysisAgent analyzed the structure, tone, and themes
+
+Notice the Supervisor made these decisions **autonomously** based on the user's request — no hardcoded workflow!
+
+**Final Response** is the Supervisor's synthesized answer, combining outputs from all agents it invoked. The example dumps the agentic scope showing the summary and analysis results stored by each agent.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: Structure: The content is organized into clear paragraphs that in...
+```
+
+### Explanation of Agentic Module Features
+
+The example demonstrates several advanced features of the agentic module. Let's have a closer look at Agentic Scope and Agent Listeners.
+
+**Agentic Scope** shows the shared memory where agents stored their results using `@Agent(outputKey="...")`. This allows:
+- Later agents to access earlier agents' outputs
+- The Supervisor to synthesize a final response
+- You to inspect what each agent produced
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** enable monitoring and debugging of agent execution. The step-by-step output you see in the demo comes from an AgentListener that hooks into each agent invocation:
+- **beforeAgentInvocation** - Called when the Supervisor selects an agent, letting you see which agent was chosen and why
+- **afterAgentInvocation** - Called when an agent completes, showing its result
+- **inheritedBySubagents** - When true, the listener monitors all agents in the hierarchy
+
+```java
+AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
+    @Override
+    public void beforeAgentInvocation(AgentRequest request) {
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Поширити на всіх підагентів
+    }
+};
+```
+
+Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
+| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
+| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
+| **Conditional** | Route based on conditions | Classify → route to specialist agent |
+| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
+
+## Key Concepts
+
+**MCP** is ideal when you want to leverage existing tool ecosystems, build tools that multiple applications can share, integrate third-party services with standard protocols, or swap tool implementations without changing code.
+
+**The Agentic Module** works best when you want declarative agent definitions with `@Agent` annotations, need workflow orchestration (sequential, loop, parallel), prefer interface-based agent design over imperative code, or are combining multiple agents that share outputs via `outputKey`.
+
+**The Supervisor Agent pattern** shines when the workflow isn't predictable in advance and you want the LLM to decide, when you have multiple specialized agents that need dynamic orchestration, when building conversational systems that route to different capabilities, or when you want the most flexible, adaptive agent behavior.
+
+## Congratulations!
+
+You've completed the LangChain4j for Beginners course. You've learned:
+
+- How to build conversational AI with memory (Module 01)
+- Prompt engineering patterns for different tasks (Module 02)
+- Grounding responses in your documents with RAG (Module 03)
+- Creating basic AI agents (assistants) with custom tools (Module 04)
+- Інтеграція стандартизованих інструментів з модулями LangChain4j MCP та Agentic (Модуль 05)
 
 ### Що далі?
 
 Після завершення модулів ознайомтеся з [Посібником з тестування](../docs/TESTING.md), щоб побачити концепції тестування LangChain4j у дії.
 
 **Офіційні ресурси:**
-- [Документація LangChain4j](https://docs.langchain4j.dev/) — повні посібники та API довідник
-- [LangChain4j на GitHub](https://github.com/langchain4j/langchain4j) — вихідний код та приклади
-- [Навчальні матеріали LangChain4j](https://docs.langchain4j.dev/tutorials/) — покрокові уроки для різних випадків використання
+- [Документація LangChain4j](https://docs.langchain4j.dev/) - Вичерпні посібники та довідник API
+- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Вихідний код та приклади
+- [Підручники LangChain4j](https://docs.langchain4j.dev/tutorials/) - Покрокові підручники для різних випадків використання
 
-Дякуємо за проходження курсу!
+Дякуємо за проходження цього курсу!
 
 ---
 
@@ -368,52 +391,7 @@ MCP клієнти автоматично знаходять доступні і
 
 ---
 
-## Вирішення проблем
-
-### Синтаксис команди Maven у PowerShell
-**Проблема**: Команди Maven завершуються помилкою `Unknown lifecycle phase ".mainClass=..."`
-
-**Причина**: PowerShell інтерпретує `=` як оператор присвоєння змінної, що порушує синтаксис властивостей Maven
-
-**Рішення**: Використовуйте оператор припинення парсингу `--%` перед командою Maven:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Оператор `--%` вказує PowerShell передати всі наступні аргументи буквально Maven без інтерпретації.
-
-### Проблеми з підключенням Docker
-
-**Проблема**: Команди Docker завершуються помилкою "Cannot connect to Docker daemon" або "The system cannot find the file specified"
-
-**Причина**: Docker Desktop не запущено або він не повністю ініціалізований
-
-**Рішення**: 
-1. Запустіть Docker Desktop
-2. Зачекайте приблизно 30 секунд для повної ініціалізації
-3. Перевірте за допомогою `docker ps` (повинен показати список контейнерів, а не помилку)
-4. Потім виконайте ваш приклад
-
-### Монтування томів Docker у Windows
-
-**Проблема**: Аналізатор репозиторію Git повідомляє про порожній репозиторій або відсутність файлів
-
-**Причина**: Монтування тому (`-v`) не працює через налаштування спільного доступу до файлів
-
-**Рішення**:
-- **Рекомендовано:** Переключіться на режим WSL 2 (Налаштування Docker Desktop → Загальні → "Use the WSL 2 based engine")
-- **Альтернатива (Hyper-V):** Додайте директорію проекту в Налаштування Docker Desktop → Ресурси → Спільний доступ до файлів, потім перезапустіть Docker Desktop
-
----
-
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Відмова від відповідальності**:  
-Цей документ було перекладено за допомогою сервісу автоматичного перекладу [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, будь ласка, майте на увазі, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ рідною мовою слід вважати авторитетним джерелом. Для критично важливої інформації рекомендується звертатися до професійного людського перекладу. Ми не несемо відповідальності за будь-які непорозуміння або неправильні тлумачення, що виникли внаслідок використання цього перекладу.
+Відмова від відповідальності:
+Цей документ було перекладено із використанням сервісу перекладу на основі ШІ [Co-op Translator](https://github.com/Azure/co-op-translator). Хоча ми прагнемо до точності, просимо врахувати, що автоматичні переклади можуть містити помилки або неточності. Оригінальний документ мовою оригіналу слід вважати авторитетним джерелом. Для критичної інформації рекомендується скористатися послугами професійного перекладача. Ми не несемо відповідальності за будь-які непорозуміння чи хибні тлумачення, що виникли внаслідок використання цього перекладу.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

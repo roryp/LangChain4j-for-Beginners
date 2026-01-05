@@ -1,104 +1,88 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "c25ec1f10ef156c53e190cdf8b0711ab",
-  "translation_date": "2025-12-13T17:59:47+00:00",
+  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
+  "translation_date": "2025-12-31T02:59:50+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "id"
 }
 -->
-# Modul 05: Model Context Protocol (MCP)
+# Module 05: Model Context Protocol (MCP)
 
-## Daftar Isi
+## Table of Contents
 
-- [Apa yang Akan Anda Pelajari](../../../05-mcp)
-- [Memahami MCP](../../../05-mcp)
-- [Cara Kerja MCP](../../../05-mcp)
-  - [Arsitektur Server-Klien](../../../05-mcp)
-  - [Penemuan Alat](../../../05-mcp)
-  - [Mekanisme Transport](../../../05-mcp)
-- [Prasyarat](../../../05-mcp)
-- [Apa yang Dicakup Modul Ini](../../../05-mcp)
-- [Mulai Cepat](../../../05-mcp)
-  - [Contoh 1: Kalkulator Jarak Jauh (Streamable HTTP)](../../../05-mcp)
-  - [Contoh 2: Operasi Berkas (Stdio)](../../../05-mcp)
-  - [Contoh 3: Analisis Git (Docker)](../../../05-mcp)
-- [Konsep Kunci](../../../05-mcp)
-  - [Pemilihan Transport](../../../05-mcp)
-  - [Penemuan Alat](../../../05-mcp)
-  - [Manajemen Sesi](../../../05-mcp)
-  - [Pertimbangan Lintas Platform](../../../05-mcp)
-- [Kapan Menggunakan MCP](../../../05-mcp)
-- [Ekosistem MCP](../../../05-mcp)
-- [Selamat!](../../../05-mcp)
-  - [Apa Selanjutnya?](../../../05-mcp)
-- [Pemecahan Masalah](../../../05-mcp)
+- [What You'll Learn](../../../05-mcp)
+- [What is MCP?](../../../05-mcp)
+- [How MCP Works](../../../05-mcp)
+- [The Agentic Module](../../../05-mcp)
+- [Running the Examples](../../../05-mcp)
+  - [Prerequisites](../../../05-mcp)
+- [Quick Start](../../../05-mcp)
+  - [File Operations (Stdio)](../../../05-mcp)
+  - [Supervisor Agent](../../../05-mcp)
+    - [Understanding the Output](../../../05-mcp)
+    - [Explanation of Agentic Module Features](../../../05-mcp)
+- [Key Concepts](../../../05-mcp)
+- [Congratulations!](../../../05-mcp)
+  - [What's Next?](../../../05-mcp)
 
-## Apa yang Akan Anda Pelajari
+## What You'll Learn
 
-Anda telah membangun AI percakapan, menguasai prompt, mendasarkan respons pada dokumen, dan membuat agen dengan alat. Namun semua alat itu dibuat khusus untuk aplikasi spesifik Anda. Bagaimana jika Anda bisa memberikan AI Anda akses ke ekosistem alat standar yang bisa dibuat dan dibagikan siapa saja?
+Anda telah membangun AI percakapan, menguasai prompt, membumikan respons dalam dokumen, dan membuat agen dengan alat. Namun semua alat itu dibuat khusus untuk aplikasi Anda. Bagaimana jika Anda dapat memberi AI akses ke ekosistem alat standar yang bisa dibuat dan dibagikan siapa saja? Dalam modul ini, Anda akan belajar cara melakukan hal itu dengan Model Context Protocol (MCP) dan modul agentic LangChain4j. Kami pertama-tama menampilkan pembaca file MCP sederhana dan kemudian menunjukkan bagaimana itu mudah diintegrasikan ke dalam alur kerja agentic tingkat lanjut menggunakan pola Supervisor Agent.
 
-Model Context Protocol (MCP) menyediakan tepat itu - cara standar bagi aplikasi AI untuk menemukan dan menggunakan alat eksternal. Alih-alih menulis integrasi khusus untuk setiap sumber data atau layanan, Anda terhubung ke server MCP yang mengekspos kapabilitas mereka dalam format yang konsisten. Agen AI Anda kemudian dapat menemukan dan menggunakan alat ini secara otomatis.
+## What is MCP?
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5448d2fa21a61218777ceb8010ea0390dd43924b26df35f61.id.png" alt="Perbandingan MCP" width="800"/>
+Model Context Protocol (MCP) memberikan tepat itu - cara standar bagi aplikasi AI untuk menemukan dan menggunakan alat eksternal. Alih-alih menulis integrasi khusus untuk setiap sumber data atau layanan, Anda menghubungkan ke server MCP yang mengekspos kapabilitas mereka dalam format yang konsisten. Agen AI Anda kemudian dapat menemukan dan menggunakan alat-alat ini secara otomatis.
+
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.id.png" alt="Perbandingan MCP" width="800"/>
 
 *Sebelum MCP: Integrasi titik-ke-titik yang kompleks. Setelah MCP: Satu protokol, kemungkinan tak terbatas.*
 
-## Memahami MCP
+MCP memecahkan masalah mendasar dalam pengembangan AI: setiap integrasi bersifat kustom. Ingin mengakses GitHub? Kode khusus. Ingin membaca file? Kode khusus. Ingin mengkueri basis data? Kode khusus. Dan tak satu pun dari integrasi ini bekerja dengan aplikasi AI lainnya.
 
-MCP memecahkan masalah mendasar dalam pengembangan AI: setiap integrasi adalah khusus. Ingin mengakses GitHub? Kode khusus. Ingin membaca berkas? Kode khusus. Ingin mengquery database? Kode khusus. Dan tidak ada integrasi ini yang bekerja dengan aplikasi AI lain.
+MCP menstandarisasi ini. Server MCP mengekspos alat dengan deskripsi dan skema parameter yang jelas. Klien MCP mana pun dapat terhubung, menemukan alat yang tersedia, dan menggunakannya. Bangun sekali, gunakan di mana-mana.
 
-MCP menstandarisasi ini. Server MCP mengekspos alat dengan deskripsi dan skema yang jelas. Klien MCP mana pun dapat terhubung, menemukan alat yang tersedia, dan menggunakannya. Bangun sekali, gunakan di mana saja.
-
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9814b7cffade208d4b0d97203c22df8d8e5504d8238fa7065.id.png" alt="Arsitektur MCP" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.id.png" alt="Arsitektur MCP" width="800"/>
 
 *Arsitektur Model Context Protocol - penemuan dan eksekusi alat yang distandarisasi*
 
-## Cara Kerja MCP
+## How MCP Works
 
-**Arsitektur Server-Klien**
+**Server-Client Architecture**
 
-MCP menggunakan model klien-server. Server menyediakan alat - membaca berkas, mengquery database, memanggil API. Klien (aplikasi AI Anda) terhubung ke server dan menggunakan alat mereka.
+MCP menggunakan model klien-server. Server menyediakan alat - membaca file, mengkueri basis data, memanggil API. Klien (aplikasi AI Anda) terhubung ke server dan menggunakan alat-alatnya.
 
-**Penemuan Alat**
+Untuk menggunakan MCP dengan LangChain4j, tambahkan dependensi Maven ini:
 
-Saat klien Anda terhubung ke server MCP, ia bertanya "Alat apa yang Anda miliki?" Server merespons dengan daftar alat yang tersedia, masing-masing dengan deskripsi dan skema parameter. Agen AI Anda kemudian dapat memutuskan alat mana yang akan digunakan berdasarkan permintaan pengguna.
-
-**Mekanisme Transport**
-
-MCP mendefinisikan dua mekanisme transport: HTTP untuk server jarak jauh, Stdio untuk proses lokal (termasuk kontainer Docker):
-
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020ed801b772b26ed69338e22739677aa017e0968f6538b09a2.id.png" alt="Mekanisme Transport" width="800"/>
-
-*Mekanisme transport MCP: HTTP untuk server jarak jauh, Stdio untuk proses lokal (termasuk kontainer Docker)*
-
-**Streamable HTTP** - [StreamableHttpDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java)
-
-Untuk server jarak jauh. Aplikasi Anda membuat permintaan HTTP ke server yang berjalan di jaringan. Menggunakan Server-Sent Events untuk komunikasi real-time.
-
-```java
-McpTransport httpTransport = new StreamableHttpMcpTransport.Builder()
-    .url("http://localhost:3001/mcp")
-    .timeout(Duration.ofSeconds(60))
-    .logRequests(true)
-    .logResponses(true)
-    .build();
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-mcp</artifactId>
+    <version>${langchain4j.version}</version>
+</dependency>
 ```
 
-> **🤖 Coba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`StreamableHttpDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StreamableHttpDemo.java) dan tanyakan:
-> - "Bagaimana MCP berbeda dari integrasi alat langsung seperti di Modul 04?"
-> - "Apa manfaat menggunakan MCP untuk berbagi alat antar aplikasi?"
-> - "Bagaimana saya menangani kegagalan koneksi atau timeout ke server MCP?"
+**Tool Discovery**
+
+Saat klien Anda terhubung ke server MCP, ia menanyakan "Alat apa yang kamu miliki?" Server merespons dengan daftar alat yang tersedia, masing-masing dengan deskripsi dan skema parameter. Agen AI Anda kemudian dapat memutuskan alat mana yang akan digunakan berdasarkan permintaan pengguna.
+
+**Transport Mechanisms**
+
+MCP mendukung berbagai mekanisme transport. Modul ini menunjukkan transport Stdio untuk proses lokal:
+
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.id.png" alt="Mekanisme Transport" width="800"/>
+
+*Mekanisme transport MCP: HTTP untuk server jarak jauh, Stdio untuk proses lokal*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Untuk proses lokal. Aplikasi Anda menjalankan server sebagai subprocess dan berkomunikasi melalui input/output standar. Berguna untuk akses sistem berkas atau alat baris perintah.
+Untuk proses lokal. Aplikasi Anda membuat server sebagai subprocess dan berkomunikasi melalui standard input/output. Berguna untuk akses filesystem atau alat baris perintah.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .command(List.of(
         npmCmd, "exec",
-        "@modelcontextprotocol/server-filesystem@0.6.2",
+        "@modelcontextprotocol/server-filesystem@2025.12.18",
         resourcesDir
     ))
     .logEvents(false)
@@ -106,103 +90,51 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
 ```
 
 > **🤖 Coba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) dan tanyakan:
-> - "Bagaimana transport Stdio bekerja dan kapan saya harus menggunakannya dibanding HTTP?"
-> - "Bagaimana LangChain4j mengelola siklus hidup proses server MCP yang dijalankan?"
-> - "Apa implikasi keamanan memberikan AI akses ke sistem berkas?"
+> - "Bagaimana transport Stdio bekerja dan kapan saya harus menggunakannya dibandingkan HTTP?"
+> - "Bagaimana LangChain4j mengelola siklus hidup proses server MCP yang dibuat?"
+> - "Apa implikasi keamanan dari memberi AI akses ke sistem file?"
 
-**Docker (menggunakan Stdio)** - [GitRepositoryAnalyzer.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java)
+## The Agentic Module
 
-Untuk layanan terkontainerisasi. Menggunakan transport stdio untuk berkomunikasi dengan kontainer Docker melalui `docker run`. Baik untuk dependensi kompleks atau lingkungan terisolasi.
+Sementara MCP menyediakan alat yang distandarisasi, modul **agentic** LangChain4j menyediakan cara deklaratif untuk membangun agen yang mengorkestrasi alat-alat tersebut. Anotasi `@Agent` dan `AgenticServices` memungkinkan Anda mendefinisikan perilaku agen melalui antarmuka daripada kode imperatif.
 
-```java
-McpTransport dockerTransport = new StdioMcpTransport.Builder()
-    .command(List.of(
-        "docker", "run",
-        "-e", "GITHUB_PERSONAL_ACCESS_TOKEN=" + System.getenv("GITHUB_TOKEN"),
-        "-v", volumeMapping,
-        "-i", "mcp/git"
-    ))
-    .logEvents(true)
-    .build();
+Dalam modul ini, Anda akan mengeksplor pola **Supervisor Agent** — pendekatan AI agentic tingkat lanjut di mana agen "supervisor" memutuskan secara dinamis sub-agen mana yang akan dipanggil berdasarkan permintaan pengguna. Kami akan menggabungkan kedua konsep dengan memberi salah satu sub-agen kami kemampuan akses file berbasis MCP.
+
+Untuk menggunakan modul agentic, tambahkan dependensi Maven ini:
+
+```xml
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-agentic</artifactId>
+    <version>${langchain4j.mcp.version}</version>
+</dependency>
 ```
 
-> **🤖 Coba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`GitRepositoryAnalyzer.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/GitRepositoryAnalyzer.java) dan tanyakan:
-> - "Bagaimana transport Docker mengisolasi server MCP dan apa manfaatnya?"
-> - "Bagaimana saya mengonfigurasi volume mount untuk berbagi data antara host dan kontainer MCP?"
-> - "Apa praktik terbaik mengelola siklus hidup server MCP berbasis Docker di produksi?"
+> **⚠️ Eksperimental:** Modul `langchain4j-agentic` bersifat **eksperimental** dan dapat berubah. Cara stabil membangun asisten AI tetap `langchain4j-core` dengan alat kustom (Module 04).
 
-## Menjalankan Contoh
+## Running the Examples
 
-### Prasyarat
+### Prerequisites
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ dan npm (untuk server MCP)
-- **Docker Desktop** - Harus **BERJALAN** untuk Contoh 3 (tidak hanya terpasang)
-- Token Akses Pribadi GitHub dikonfigurasi di file `.env` (dari Modul 00)
+- Variabel lingkungan dikonfigurasi di file `.env` (dari direktori root):
+  - **Untuk StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
+  - **Untuk SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (sama seperti Modules 01-04)
 
-> **Catatan:** Jika Anda belum mengatur token GitHub Anda, lihat [Modul 00 - Mulai Cepat](../00-quick-start/README.md) untuk petunjuk.
+> **Catatan:** Jika Anda belum mengatur variabel lingkungan, lihat [Module 00 - Quick Start](../00-quick-start/README.md) untuk instruksi, atau salin `.env.example` ke `.env` di direktori root dan isi nilainya.
 
-> **⚠️ Pengguna Docker:** Sebelum menjalankan Contoh 3, pastikan Docker Desktop berjalan dengan `docker ps`. Jika Anda melihat kesalahan koneksi, mulai Docker Desktop dan tunggu sekitar 30 detik untuk inisialisasi.
+## Quick Start
 
-## Mulai Cepat
+**Menggunakan VS Code:** Cukup klik kanan pada file demo apa saja di Explorer dan pilih **"Run Java"**, atau gunakan konfigurasi peluncuran dari panel Run and Debug (pastikan Anda telah menambahkan token ke file `.env` terlebih dahulu).
 
-**Menggunakan VS Code:** Klik kanan pada file demo mana pun di Explorer dan pilih **"Run Java"**, atau gunakan konfigurasi peluncuran dari panel Run and Debug (pastikan Anda sudah menambahkan token ke file `.env` terlebih dahulu).
+**Menggunakan Maven:** Sebagai alternatif, Anda dapat menjalankan dari baris perintah dengan contoh di bawah.
 
-**Menggunakan Maven:** Alternatifnya, Anda dapat menjalankan dari baris perintah dengan contoh di bawah.
-
-**⚠️ Penting:** Beberapa contoh memiliki prasyarat (seperti memulai server MCP atau membangun image Docker). Periksa persyaratan setiap contoh sebelum menjalankan.
-
-### Contoh 1: Kalkulator Jarak Jauh (Streamable HTTP)
-
-Ini mendemonstrasikan integrasi alat berbasis jaringan.
-
-**⚠️ Prasyarat:** Anda harus memulai server MCP terlebih dahulu (lihat Terminal 1 di bawah).
-
-**Terminal 1 - Mulai server MCP:**
-
-**Bash:**
-```bash
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**PowerShell:**
-```powershell
-git clone https://github.com/modelcontextprotocol/servers.git
-cd servers/src/everything
-npm install
-node dist/streamableHttp.js
-```
-
-**Terminal 2 - Jalankan contoh:**
-
-**Menggunakan VS Code:** Klik kanan pada `StreamableHttpDemo.java` dan pilih **"Run Java"**.
-
-**Menggunakan Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**PowerShell:**
-```powershell
-$env:GITHUB_TOKEN=your_token_here
-cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Amati agen menemukan alat yang tersedia, lalu gunakan kalkulator untuk melakukan penjumlahan.
-
-### Contoh 2: Operasi Berkas (Stdio)
+### File Operations (Stdio)
 
 Ini mendemonstrasikan alat berbasis subprocess lokal.
 
-**✅ Tidak perlu prasyarat** - server MCP dijalankan otomatis.
+**✅ Tidak perlu prasyarat** - server MCP akan dibuat secara otomatis.
 
 **Menggunakan VS Code:** Klik kanan pada `StdioTransportDemo.java` dan pilih **"Run Java"**.
 
@@ -222,199 +154,244 @@ cd 05-mcp
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
 ```
 
-Aplikasi menjalankan server MCP sistem berkas secara otomatis dan membaca berkas lokal. Perhatikan bagaimana manajemen subprocess ditangani untuk Anda.
+Aplikasi membuat server MCP filesystem secara otomatis dan membaca file lokal. Perhatikan bagaimana manajemen subprocess ditangani untuk Anda.
 
 **Output yang diharapkan:**
 ```
-Assistant response: The content of the file is "Kaboom!".
+Assistant response: The file provides an overview of LangChain4j, an open-source Java library
+for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Contoh 3: Analisis Git (Docker)
+### Supervisor Agent
 
-Ini mendemonstrasikan server alat terkontainerisasi.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.id.png" alt="Modul Agentic" width="800"/>
 
-**⚠️ Prasyarat:** 
-1. **Docker Desktop harus BERJALAN** (tidak hanya terpasang)
-2. **Pengguna Windows:** Mode WSL 2 direkomendasikan (Pengaturan Docker Desktop → General → "Use the WSL 2 based engine"). Mode Hyper-V memerlukan konfigurasi berbagi berkas manual.
-3. Anda harus membangun image Docker terlebih dahulu (lihat Terminal 1 di bawah)
 
-**Verifikasi Docker berjalan:**
+Pola **Supervisor Agent** adalah bentuk AI agentic yang **fleksibel**. Berbeda dengan alur kerja deterministik (berurutan, loop, paralel), Supervisor menggunakan LLM untuk memutuskan secara otonom agen mana yang dipanggil berdasarkan permintaan pengguna.
+
+**Menggabungkan Supervisor dengan MCP:** Dalam contoh ini, kami memberi `FileAgent` akses ke alat sistem file MCP melalui `toolProvider(mcpToolProvider)`. Ketika pengguna meminta untuk "membaca dan menganalisis file," Supervisor menganalisis permintaan dan menghasilkan rencana eksekusi. Ia kemudian mengarahkan permintaan ke `FileAgent`, yang menggunakan alat MCP `read_file` untuk mengambil konten. Supervisor meneruskan konten itu ke `AnalysisAgent` untuk interpretasi, dan opsional memanggil `SummaryAgent` untuk meringkas hasil.
+
+Ini menunjukkan bagaimana alat MCP terintegrasi mulus ke dalam alur kerja agentic — Supervisor tidak perlu tahu *bagaimana* file dibaca, hanya bahwa `FileAgent` dapat melakukannya. Supervisor beradaptasi secara dinamis terhadap berbagai jenis permintaan dan mengembalikan baik respons agen terakhir atau ringkasan dari semua operasi.
+
+**Menggunakan Skrip Mulai (Direkomendasikan):**
+
+Skrip mulai memuat variabel lingkungan dari file `.env` root secara otomatis:
 
 **Bash:**
 ```bash
-docker ps  # Harus menampilkan daftar kontainer, bukan kesalahan
-```
-
-**PowerShell:**
-```powershell
-docker ps  # Harus menampilkan daftar kontainer, bukan kesalahan
-```
-
-Jika Anda melihat kesalahan seperti "Cannot connect to Docker daemon" atau "The system cannot find the file specified", mulai Docker Desktop dan tunggu inisialisasi (~30 detik).
-
-**Pemecahan Masalah:**
-- Jika AI melaporkan repositori kosong atau tidak ada berkas, volume mount (`-v`) tidak berfungsi.
-- **Pengguna Windows Hyper-V:** Tambahkan direktori proyek ke Pengaturan Docker Desktop → Resources → File sharing, lalu restart Docker Desktop.
-- **Solusi yang direkomendasikan:** Beralih ke mode WSL 2 untuk berbagi berkas otomatis (Pengaturan → General → aktifkan "Use the WSL 2 based engine").
-
-**Terminal 1 - Bangun image Docker:**
-
-**Bash:**
-```bash
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**PowerShell:**
-```powershell
-cd servers/src/git
-docker build -t mcp/git .
-```
-
-**Terminal 2 - Jalankan analyzer:**
-
-**Menggunakan VS Code:** Klik kanan pada `GitRepositoryAnalyzer.java` dan pilih **"Run Java"**.
-
-**Menggunakan Maven:**
-
-**Bash:**
-```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+chmod +x start.sh
+./start.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.GitRepositoryAnalyzer
+.\start.ps1
 ```
 
-Aplikasi meluncurkan kontainer Docker, memasang repositori Anda, dan menganalisis struktur serta isi repositori melalui agen AI.
+**Menggunakan VS Code:** Klik kanan pada `SupervisorAgentDemo.java` dan pilih **"Run Java"** (pastikan file `.env` Anda dikonfigurasi).
 
-## Konsep Kunci
+**Bagaimana Supervisor Bekerja:**
 
-**Pemilihan Transport**
+```java
+// Definisikan beberapa agen dengan kemampuan spesifik
+FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
+        .chatModel(model)
+        .toolProvider(mcpToolProvider)  // Memiliki alat MCP untuk operasi berkas
+        .build();
 
-Pilih berdasarkan lokasi alat Anda:
-- Layanan jarak jauh → Streamable HTTP
-- Sistem berkas lokal → Stdio
-- Dependensi kompleks → Docker
+AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+        .chatModel(model)
+        .build();
 
-**Penemuan Alat**
+SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
+        .chatModel(model)
+        .build();
 
-Klien MCP secara otomatis menemukan alat yang tersedia saat terhubung. Agen AI Anda melihat deskripsi alat dan memutuskan mana yang digunakan berdasarkan permintaan pengguna.
+// Buat Supervisor yang mengoordinasikan agen-agen ini
+SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
+        .chatModel(model)  // Model "perencana"
+        .subAgents(fileAgent, analysisAgent, summaryAgent)
+        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .build();
 
-**Manajemen Sesi**
+// Supervisor secara otonom memutuskan agen mana yang akan dipanggil
+// Cukup berikan permintaan dalam bahasa alami - LLM merencanakan pelaksanaannya
+String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+```
 
-Transport Streamable HTTP mempertahankan sesi, memungkinkan interaksi stateful dengan server jarak jauh. Transport Stdio dan Docker biasanya stateless.
+Lihat [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) untuk implementasi lengkapnya.
 
-**Pertimbangan Lintas Platform**
+> **🤖 Coba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) dan tanyakan:
+> - "Bagaimana Supervisor memutuskan agen mana yang harus dipanggil?"
+> - "Apa perbedaan antara pola Supervisor dan pola alur kerja Berurutan?"
+> - "Bagaimana saya dapat menyesuaikan perilaku perencanaan Supervisor?"
 
-Contoh menangani perbedaan platform secara otomatis (perbedaan perintah Windows vs Unix, konversi path untuk Docker). Ini penting untuk deployment produksi di berbagai lingkungan.
+#### Understanding the Output
 
-## Kapan Menggunakan MCP
+Saat Anda menjalankan demo, Anda akan melihat walkthrough terstruktur tentang bagaimana Supervisor mengorkestrasi beberapa agen. Berikut arti tiap bagian:
 
-**Gunakan MCP ketika:**
-- Anda ingin memanfaatkan ekosistem alat yang sudah ada
-- Membangun alat yang akan digunakan banyak aplikasi
-- Mengintegrasikan layanan pihak ketiga dengan protokol standar
-- Anda perlu mengganti implementasi alat tanpa mengubah kode
+```
+======================================================================
+  SUPERVISOR AGENT DEMO
+======================================================================
 
-**Gunakan alat khusus (Modul 04) ketika:**
-- Membangun fungsi aplikasi spesifik
-- Performa sangat penting (MCP menambah overhead)
-- Alat Anda sederhana dan tidak akan digunakan ulang
-- Anda perlu kontrol penuh atas eksekusi
+This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
+The Supervisor uses an LLM to decide which agent to call based on the task.
+```
 
+**Header** memperkenalkan demo dan menjelaskan konsep inti: Supervisor menggunakan LLM (bukan aturan yang dikodekan) untuk memutuskan agen mana yang akan dipanggil.
 
-## Ekosistem MCP
+```
+--- AVAILABLE AGENTS -------------------------------------------------
+  [FILE]     FileAgent     - Reads files using MCP filesystem tools
+  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
+  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+```
 
-Model Context Protocol adalah standar terbuka dengan ekosistem yang berkembang:
+**Available Agents** menunjukkan tiga agen khusus yang dapat dipilih Supervisor. Setiap agen memiliki kapabilitas spesifik:
+- **FileAgent** dapat membaca file menggunakan alat MCP (kapabilitas eksternal)
+- **AnalysisAgent** menganalisis konten (kapabilitas murni LLM)
+- **SummaryAgent** membuat ringkasan (kapabilitas murni LLM)
 
-- Server MCP resmi untuk tugas umum (sistem berkas, Git, database)
-- Server kontribusi komunitas untuk berbagai layanan
-- Deskripsi dan skema alat yang distandarisasi
-- Kompatibilitas lintas framework (bekerja dengan klien MCP mana pun)
+```
+--- USER REQUEST -----------------------------------------------------
+  "Read the file at .../file.txt and analyze what it's about"
+```
 
-Standarisasi ini berarti alat yang dibuat untuk satu aplikasi AI bekerja dengan aplikasi lain, menciptakan ekosistem kapabilitas bersama.
+**User Request** menunjukkan apa yang diminta. Supervisor harus mengurai ini dan memutuskan agen mana yang akan dipanggil.
 
-## Selamat!
+```
+--- SUPERVISOR ORCHESTRATION -----------------------------------------
+  The Supervisor will now decide which agents to invoke and in what order...
 
-Anda telah menyelesaikan kursus LangChain4j untuk Pemula. Anda telah belajar:
+  +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
+  |
+  |   Input: .../file.txt
+  |
+  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  +-- [OK] FileAgent (reading file via MCP) completed
 
-- Cara membangun AI percakapan dengan memori (Modul 01)
-- Pola rekayasa prompt untuk berbagai tugas (Modul 02)
-- Mendasarkan respons pada dokumen dengan RAG (Modul 03)
-- Membuat agen AI dengan alat khusus (Modul 04)
-- Mengintegrasikan alat standar melalui MCP (Modul 05)
+  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  |
+  |   Input: LangChain4j is an open-source Java library...
+  |
+  |   Result: Structure: The content is organized into clear paragraphs that int...
+  +-- [OK] AnalysisAgent (analyzing content) completed
+```
 
-Anda sekarang memiliki dasar untuk membangun aplikasi AI produksi. Konsep yang Anda pelajari berlaku tanpa tergantung framework atau model spesifik - ini pola fundamental dalam rekayasa AI.
+**Supervisor Orchestration** adalah tempat terjadinya keajaiban. Perhatikan bagaimana:
+1. Supervisor **memilih FileAgent terlebih dahulu** karena permintaan menyebut "baca file"
+2. FileAgent menggunakan alat MCP `read_file` untuk mengambil isi file
+3. Supervisor kemudian **memilih AnalysisAgent** dan meneruskan isi file kepadanya
+4. AnalysisAgent menganalisis struktur, nada, dan tema
+
+Perhatikan Supervisor membuat keputusan ini **secara otonom** berdasarkan permintaan pengguna — tidak ada alur kerja yang dikodekan!
+
+**Final Response** adalah jawaban sintetis dari Supervisor, menggabungkan keluaran dari semua agen yang dipanggil. Contoh menampilkan scope agentic yang menunjukkan ringkasan dan hasil analisis yang disimpan oleh setiap agen.
+
+```
+--- FINAL RESPONSE ---------------------------------------------------
+I read the contents of the file and analyzed its structure, tone, and key themes.
+The file introduces LangChain4j as an open-source Java library for integrating
+large language models...
+
+--- AGENTIC SCOPE (Shared Memory) ------------------------------------
+  Agents store their results in a shared scope for other agents to use:
+  * summary: LangChain4j is an open-source Java library...
+  * analysis: Structure: The content is organized into clear paragraphs that in...
+```
+
+### Explanation of Agentic Module Features
+
+Contoh ini menunjukkan beberapa fitur lanjutan dari modul agentic. Mari lihat lebih dekat Agentic Scope dan Agent Listeners.
+
+**Agentic Scope** menunjukkan memori bersama di mana agen menyimpan hasil mereka menggunakan `@Agent(outputKey="...")`. Ini memungkinkan:
+- Agen berikutnya mengakses keluaran agen sebelumnya
+- Supervisor mensintesis respons akhir
+- Anda memeriksa apa yang dihasilkan masing-masing agen
+
+```java
+ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
+AgenticScope scope = result.agenticScope();
+String story = scope.readState("story");
+List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+```
+
+**Agent Listeners** memungkinkan pemantauan dan debugging eksekusi agen. Output langkah-demi-langkah yang Anda lihat dalam demo berasal dari AgentListener yang menempel pada setiap pemanggilan agen:
+- **beforeAgentInvocation** - Dipanggil ketika Supervisor memilih agen, memungkinkan Anda melihat agen mana yang dipilih dan mengapa
+- **afterAgentInvocation** - Dipanggil ketika agen selesai, menunjukkan hasilnya
+- **inheritedBySubagents** - Ketika true, listener memantau semua agen dalam hierarki
+
+```java
+AgentListener monitor = new AgentListener() {
+    private int step = 0;
+    
+    @Override
+    public void beforeAgentInvocation(AgentRequest request) {
+        step++;
+        System.out.println("  +-- STEP " + step + ": " + request.agentName());
+    }
+    
+    @Override
+    public void afterAgentInvocation(AgentResponse response) {
+        System.out.println("  +-- [OK] " + response.agentName() + " completed");
+    }
+    
+    @Override
+    public boolean inheritedBySubagents() {
+        return true; // Sebarkan ke semua sub-agen
+    }
+};
+```
+
+Selain pola Supervisor, modul `langchain4j-agentic` menyediakan beberapa pola dan fitur alur kerja yang kuat:
+
+| Pattern | Description | Use Case |
+|---------|-------------|----------|
+| **Berurutan** | Eksekusi agen secara berurutan, keluaran mengalir ke selanjutnya | Pipeline: riset → analisis → laporan |
+| **Paralel** | Menjalankan agen secara bersamaan | Tugas independen: cuaca + berita + saham |
+| **Perulangan** | Iterasi sampai kondisi terpenuhi | Penilaian kualitas: perbaiki sampai skor ≥ 0.8 |
+| **Kondisional** | Mengarahkan berdasarkan kondisi | Klasifikasi → arahkan ke agen spesialis |
+| **Manusia-dalam-Lingkaran** | Menambahkan titik pemeriksaan manusia | Alur kerja persetujuan, tinjauan konten |
+
+## Key Concepts
+
+**MCP** ideal ketika Anda ingin memanfaatkan ekosistem alat yang sudah ada, membangun alat yang bisa dibagikan oleh banyak aplikasi, mengintegrasikan layanan pihak ketiga dengan protokol standar, atau mengganti implementasi alat tanpa mengubah kode.
+
+**Modul Agentic** bekerja paling baik ketika Anda menginginkan definisi agen deklaratif dengan anotasi `@Agent`, membutuhkan orkestrasi alur kerja (berurutan, loop, paralel), lebih menyukai desain agen berbasis antarmuka daripada kode imperatif, atau menggabungkan beberapa agen yang berbagi keluaran melalui `outputKey`.
+
+**Pola Supervisor Agent** unggul ketika alur kerja tidak dapat diprediksi sebelumnya dan Anda ingin LLM yang memutuskan, ketika Anda memiliki beberapa agen khusus yang perlu orkestrasi dinamis, ketika membangun sistem percakapan yang mengarahkan ke berbagai kapabilitas, atau ketika Anda menginginkan perilaku agen yang paling fleksibel dan adaptif.
+
+## Congratulations!
+
+Anda telah menyelesaikan kursus LangChain4j for Beginners. Anda telah mempelajari:
+
+- Cara membangun AI percakapan dengan memori (Module 01)
+- Pola rekayasa prompt untuk berbagai tugas (Module 02)
+- Membumikan respons dalam dokumen Anda dengan RAG (Module 03)
+- Membuat agen AI dasar (asisten) dengan alat kustom (Module 04)
+- Mengintegrasikan alat terstandarisasi dengan modul LangChain4j MCP dan Agentic (Module 05)
 
 ### Apa Selanjutnya?
 
-Setelah menyelesaikan modul, jelajahi [Panduan Pengujian](../docs/TESTING.md) untuk melihat konsep pengujian LangChain4j dalam praktik.
+Setelah menyelesaikan modul-modul, jelajahi [Panduan Pengujian](../docs/TESTING.md) untuk melihat konsep pengujian LangChain4j dalam praktik.
 
 **Sumber Resmi:**
-- [Dokumentasi LangChain4j](https://docs.langchain4j.dev/) - Panduan lengkap dan referensi API
-- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Kode sumber dan contoh
+- [Dokumentasi LangChain4j](https://docs.langchain4j.dev/) - Panduan komprehensif dan referensi API
+- [GitHub LangChain4j](https://github.com/langchain4j/langchain4j) - Kode sumber dan contoh
 - [Tutorial LangChain4j](https://docs.langchain4j.dev/tutorials/) - Tutorial langkah demi langkah untuk berbagai kasus penggunaan
 
 Terima kasih telah menyelesaikan kursus ini!
 
 ---
 
-**Navigasi:** [← Sebelumnya: Modul 04 - Alat](../04-tools/README.md) | [Kembali ke Utama](../README.md)
-
----
-
-## Pemecahan Masalah
-
-### Sintaks Perintah Maven di PowerShell
-**Masalah**: Perintah Maven gagal dengan error `Unknown lifecycle phase ".mainClass=..."`
-
-**Penyebab**: PowerShell mengartikan `=` sebagai operator penugasan variabel, sehingga merusak sintaks properti Maven
-
-**Solusi**: Gunakan operator stop-parsing `--%` sebelum perintah Maven:
-
-**PowerShell:**
-```powershell
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-**Bash:**
-```bash
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StreamableHttpDemo
-```
-
-Operator `--%` memberitahu PowerShell untuk meneruskan semua argumen yang tersisa secara literal ke Maven tanpa interpretasi.
-
-### Masalah Koneksi Docker
-
-**Masalah**: Perintah Docker gagal dengan "Cannot connect to Docker daemon" atau "The system cannot find the file specified"
-
-**Penyebab**: Docker Desktop tidak berjalan atau belum sepenuhnya diinisialisasi
-
-**Solusi**: 
-1. Mulai Docker Desktop
-2. Tunggu sekitar 30 detik untuk inisialisasi penuh
-3. Verifikasi dengan `docker ps` (seharusnya menampilkan daftar container, bukan error)
-4. Kemudian jalankan contoh Anda
-
-### Mount Volume Docker di Windows
-
-**Masalah**: Analyzer repositori Git melaporkan repositori kosong atau tidak ada file
-
-**Penyebab**: Mount volume (`-v`) tidak berfungsi karena konfigurasi berbagi file
-
-**Solusi**:
-- **Direkomendasikan:** Beralih ke mode WSL 2 (Pengaturan Docker Desktop → General → "Use the WSL 2 based engine")
-- **Alternatif (Hyper-V):** Tambahkan direktori proyek ke Pengaturan Docker Desktop → Resources → File sharing, lalu restart Docker Desktop
+**Navigasi:** [← Sebelumnya: Modul 04 - Alat](../04-tools/README.md) | [Kembali ke Beranda](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk mencapai akurasi, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau salah tafsir yang timbul dari penggunaan terjemahan ini.
+Penafian:
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya mencapai ketepatan, harap diperhatikan bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang berwenang. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

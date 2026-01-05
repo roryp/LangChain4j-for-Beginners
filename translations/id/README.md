@@ -1,48 +1,48 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "1e85afe0b0ee47fc09b20442b0ee4ca5",
-  "translation_date": "2025-12-23T10:20:32+00:00",
+  "original_hash": "d61ab6c245562094cc3dddecf08b50d3",
+  "translation_date": "2025-12-31T02:57:16+00:00",
   "source_file": "README.md",
   "language_code": "id"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b506e9588f734989dd106ebd9f977b7f784941a28b88348f0d6.id.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.id.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 Dukungan Multi-Bahasa
 
-#### Didukung melalui GitHub Action (Otomatis & Selalu Terbaru)
+#### Didukung melalui GitHub Action (Otomatis & Selalu Terbarui)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](./README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arab](../ar/README.md) | [Benggali](../bn/README.md) | [Bahasa Bulgaria](../bg/README.md) | [Bahasa Burma (Myanmar)](../my/README.md) | [Cina (Sederhana)](../zh/README.md) | [Cina (Tradisional, Hong Kong)](../hk/README.md) | [Cina (Tradisional, Macau)](../mo/README.md) | [Cina (Tradisional, Taiwan)](../tw/README.md) | [Kroasia](../hr/README.md) | [Ceko](../cs/README.md) | [Denmark](../da/README.md) | [Belanda](../nl/README.md) | [Estonia](../et/README.md) | [Finlandia](../fi/README.md) | [Prancis](../fr/README.md) | [Jerman](../de/README.md) | [Yunani](../el/README.md) | [Ibrani](../he/README.md) | [Hindi](../hi/README.md) | [Hungaria](../hu/README.md) | [Indonesia](./README.md) | [Italia](../it/README.md) | [Jepang](../ja/README.md) | [Kannada](../kn/README.md) | [Korea](../ko/README.md) | [Lituania](../lt/README.md) | [Melayu](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Pidgin Nigeria](../pcm/README.md) | [Norwegia](../no/README.md) | [Persia (Farsi)](../fa/README.md) | [Polandia](../pl/README.md) | [Portugis (Brasil)](../br/README.md) | [Portugis (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumania](../ro/README.md) | [Rusia](../ru/README.md) | [Serbia (Sirilik)](../sr/README.md) | [Slowakia](../sk/README.md) | [Slovenia](../sl/README.md) | [Spanyol](../es/README.md) | [Swahili](../sw/README.md) | [Swedia](../sv/README.md) | [Tagalog (Filipina)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turki](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnam](../vi/README.md)
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # LangChain4j untuk Pemula
 
 Sebuah kursus untuk membangun aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, dari obrolan dasar hingga agen AI.
 
-**Baru di LangChain4j?** Lihat [Glossary](docs/GLOSSARY.md) untuk definisi istilah dan konsep kunci.
+**Baru dengan LangChain4j?** Lihat [Glosarium](docs/GLOSSARY.md) untuk definisi istilah dan konsep kunci.
 
 ## Table of Contents
 
 1. [Quick Start](00-quick-start/README.md) - Memulai dengan LangChain4j
 2. [Introduction](01-introduction/README.md) - Pelajari dasar-dasar LangChain4j
 3. [Prompt Engineering](02-prompt-engineering/README.md) - Kuasai desain prompt yang efektif
-4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Bangun sistem cerdas berbasis pengetahuan
-5. [Tools](04-tools/README.md) - Integrasikan alat eksternal dan API dengan agen AI
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Bekerja dengan Model Context Protocol
+4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Membangun sistem berbasis pengetahuan yang cerdas
+5. [Tools](04-tools/README.md) - Integrasikan alat eksternal dan asisten sederhana
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Bekerja dengan Model Context Protocol (MCP) dan modul Agentic
 ---
 
-##  Learning Path
+##  Jalur Pembelajaran
 
 > **Quick Start**
 
 1. Fork this repository to your GitHub account
-2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
-3. Use the defaults – this will select the Development container created for this course
-4. Click **Create codespace**
-5. Wait 5-10 minutes for the environment to be ready
-6. Jump straight to [Quick Start](./00-quick-start/README.md) to get started!
+2. Klik **Code** → **Codespaces** tab → **...** → **New with options...**
+3. Gunakan pengaturan bawaan – ini akan memilih Development container yang dibuat untuk kursus ini
+4. Klik **Create codespace**
+5. Tunggu 5-10 menit hingga lingkungan siap
+6. Langsung lompat ke [Quick Start](./00-quick-start/README.md) untuk memulai!
 
 > **Prefer to Clone Locally?**
 >
@@ -52,32 +52,28 @@ Sebuah kursus untuk membangun aplikasi AI dengan LangChain4j dan Azure OpenAI GP
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Ini memberi Anda semua yang Anda butuhkan untuk menyelesaikan kursus dengan unduhan yang jauh lebih cepat.
+> Ini memberi Anda semua yang Anda butuhkan untuk menyelesaikan kursus dengan waktu unduh yang jauh lebih cepat.
 
-Mulai dengan modul [Quick Start](00-quick-start/README.md) dan lanjutkan melalui setiap modul untuk membangun keterampilan Anda langkah demi langkah. Anda akan mencoba contoh dasar untuk memahami dasar-dasar sebelum beralih ke modul [Introduction](01-introduction/README.md) untuk pembahasan lebih mendalam dengan GPT-5.
+Setelah menyelesaikan modul, jelajahi [Testing Guide](docs/TESTING.md) untuk melihat konsep pengujian LangChain4j dalam praktik.
 
-<img src="../../translated_images/learning-path.ac2da6720e77c3165960835627cef4c20eb2afb103be73a4f25b6d8fafbd738d.id.png" alt="Jalur Pembelajaran" width="800"/>
-
-Setelah menyelesaikan modul-modul, jelajahi [Testing Guide](docs/TESTING.md) untuk melihat konsep pengujian LangChain4j dalam praktik.
-
-> **Note:** Pelatihan ini menggunakan baik GitHub Models maupun Azure OpenAI. Modul [Quick Start](00-quick-start/README.md) dan [MCP](05-mcp/README.md) menggunakan GitHub Models (no Azure subscription required), sedangkan modul 1-4 menggunakan Azure OpenAI GPT-5.
+> **Note:** Pelatihan ini menggunakan GitHub Models dan Azure OpenAI. Modul [Quick Start](00-quick-start/README.md) dan [MCP](05-mcp/README.md) menggunakan GitHub Models (tidak memerlukan langganan Azure), sementara modul 1-4 menggunakan Azure OpenAI GPT-5.
 
 
-## Learning with GitHub Copilot
+## Belajar dengan GitHub Copilot
 
-To quickly start coding, open this project in a GitHub Codespace or your local IDE with the provided devcontainer. The devcontainer used in this course comes pre-configured with GitHub Copilot for AI paired programming.
+Untuk mulai menulis kode dengan cepat, buka proyek ini di GitHub Codespace atau IDE lokal Anda dengan devcontainer yang disediakan. Devcontainer yang digunakan dalam kursus ini telah dikonfigurasi sebelumnya dengan GitHub Copilot untuk pemrograman berpasangan AI.
 
-Each code example includes suggested questions you can ask GitHub Copilot to deepen your understanding. Look for the 💡/🤖 prompts in:
+Setiap contoh kode menyertakan pertanyaan yang disarankan yang bisa Anda tanyakan ke GitHub Copilot untuk memperdalam pemahaman Anda. Cari petunjuk 💡/🤖 di:
 
-- **Java file headers** - Questions specific to each example
-- **Module READMEs** - Exploration prompts after code examples
+- **Java file headers** - Pertanyaan khusus untuk setiap contoh
+- **Module READMEs** - Petunjuk eksplorasi setelah contoh kode
 
-**How to use:** Open any code file and ask Copilot the suggested questions. It has full context of the codebase and can explain, extend, and suggest alternatives.
+**Cara penggunaan:** Buka file kode apa saja dan tanyakan pertanyaan yang disarankan ke Copilot. Copilot memiliki konteks penuh dari basis kode dan dapat menjelaskan, memperluas, dan menyarankan alternatif.
 
-Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
+Ingin belajar lebih lanjut? Lihat [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
 
-## Additional Resources
+## Sumber Daya Tambahan
 
 <!-- CO-OP TRANSLATOR OTHER COURSES START -->
 ### LangChain
@@ -86,7 +82,7 @@ Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms
 
 ---
 
-### Azure / Edge / MCP / Agents
+### Azure / Edge / MCP / Agen
 [![AZD for Beginners](https://img.shields.io/badge/AZD%20for%20Beginners-0078D4?style=for-the-badge&labelColor=E5E7EB&color=0078D4)](https://github.com/microsoft/AZD-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Edge AI for Beginners](https://img.shields.io/badge/Edge%20AI%20for%20Beginners-00B8E4?style=for-the-badge&labelColor=E5E7EB&color=00B8E4)](https://github.com/microsoft/edgeai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![MCP for Beginners](https://img.shields.io/badge/MCP%20for%20Beginners-009688?style=for-the-badge&labelColor=E5E7EB&color=009688)](https://github.com/microsoft/mcp-for-beginners?WT.mc_id=academic-105485-koreyst)
@@ -94,7 +90,7 @@ Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms
 
 ---
  
-### Generative AI Series
+### Seri AI Generatif
 [![Generative AI for Beginners](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
 [![Generative AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
@@ -102,7 +98,7 @@ Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms
 
 ---
  
-### Core Learning
+### Pembelajaran Inti
 [![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -114,28 +110,28 @@ Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms
 ---
  
 ### Seri Copilot
-[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot untuk Pemrograman Berpasangan AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot untuk C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Petualangan Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Mendapatkan Bantuan
 
-Jika Anda mengalami kendala atau memiliki pertanyaan tentang membangun aplikasi AI, bergabunglah:
+Jika Anda mengalami kebuntuan atau memiliki pertanyaan tentang membangun aplikasi AI, bergabunglah:
 
-[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
 Jika Anda memiliki masukan produk atau menemukan kesalahan saat membangun, kunjungi:
 
-[![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
+[![Forum Pengembang Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Lisensi
 
-Lisensi MIT - Lihat file [LICENSE](../../LICENSE) untuk rincian.
+Lisensi MIT - Lihat file [LICENSE](../../LICENSE) untuk detail.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Penafian:
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya mencapai ketepatan, harap diperhatikan bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat penting, disarankan menggunakan terjemahan profesional oleh penerjemah manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang salah yang timbul akibat penggunaan terjemahan ini.
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha mencapai ketepatan, harap diperhatikan bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemah profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

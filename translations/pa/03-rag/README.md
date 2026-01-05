@@ -49,7 +49,7 @@ RAG ਨੂੰ ਮਾਡਲ ਨੂੰ ਇੱਕ ਸੰਦਰਭ ਲਾਇਬ੍�
 
 ਇਸ ਨਾਲ ਮਾਡਲ ਦੇ ਜਵਾਬ ਤੁਹਾਡੇ ਅਸਲੀ ਡੇਟਾ 'ਤੇ ਅਧਾਰਿਤ ਹੁੰਦੇ ਹਨ ਨਾ ਕਿ ਉਸ ਦੀ ਟ੍ਰੇਨਿੰਗ ਜਾਣਕਾਰੀ 'ਤੇ ਜਾਂ ਕਲਪਨਾ 'ਤੇ।
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407fa8a6394c7a747eb9ad40f6334b4c217be0439d700f22bbcc.pa.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.pa.png" alt="RAG Architecture" width="800"/>
 
 *RAG ਵਰਕਫਲੋ - ਯੂਜ਼ਰ ਕਵੈਰੀ ਤੋਂ ਸੈਮਾਂਟਿਕ ਖੋਜ ਅਤੇ ਸੰਦਰਭਿਕ ਜਵਾਬ ਤਿਆਰ ਕਰਨ ਤੱਕ*
 
@@ -98,7 +98,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327ad9e3e46cde9a86f5eeefbeb3edccd387e33018c1671cecd.pa.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.pa.png" alt="Vector Embeddings Space" width="800"/>
 
 *ਦਸਤਾਵੇਜ਼ ਐਂਬੈਡਿੰਗ ਸਪੇਸ ਵਿੱਚ ਵੇਕਟਰ ਵਾਂਗ ਦਰਸਾਏ ਗਏ - ਸਮਾਨ ਸਮੱਗਰੀ ਇਕੱਠੀ ਹੁੰਦੀ ਹੈ*  
 
@@ -152,7 +152,7 @@ Spring Boot Dashboard ਤੋਂ, ਤੁਸੀਂ:
 
 ਸਿਰਫ਼ "rag" ਦੇ ਨਾਲ ਖੇਡ ਬਟਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ ਇਸ ਮੋਡੀਊਲ ਨੂੰ ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਜਾਂ ਸਾਰੇ ਮੋਡੀਊਲ ਇੱਕ ਵਾਰੀ ਵਿੱਚ ਸ਼ੁਰੂ ਕਰੋ।  
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe4f95a708ecd46e78f69fd46a562d2a766e73c98fe0f53922.pa.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.pa.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -223,7 +223,7 @@ cd ..; .\stop-all.ps1  # ਸਾਰੇ ਮਾਡਿਊਲ
 
 ਐਪਲੀਕੇਸ਼ਨ ਦਸਤਾਵੇਜ਼ ਅਪਲੋਡ ਅਤੇ ਸਵਾਲ ਪੁੱਛਣ ਲਈ ਵੈੱਬ ਇੰਟਰਫੇਸ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ।  
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94987b4fa2923d3cb884a67987cf2f994ca53756c6586a93b1.pa.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.pa.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG ਐਪਲੀਕੇਸ਼ਨ ਇੰਟਰਫੇਸ - ਦਸਤਾਵੇਜ਼ ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਸਵਾਲ ਪੁੱਛੋ*  
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # ਸਾਰੇ ਮਾਡਿਊਲ
 
 ਹਰ ਜਵਾਬ ਵਿੱਚ ਸਰੋਤ ਸੰਦਰਭ ਅਤੇ ਸਮਾਨਤਾ ਸਕੋਰ ਸ਼ਾਮਲ ਹੁੰਦੇ ਹਨ। ਇਹ ਸਕੋਰ (0 ਤੋਂ 1 ਤੱਕ) ਦਿਖਾਉਂਦੇ ਹਨ ਕਿ ਹਰ ਚੰਕ ਤੁਹਾਡੇ ਸਵਾਲ ਨਾਲ ਕਿੰਨਾ ਸੰਬੰਧਿਤ ਸੀ। ਵੱਧ ਸਕੋਰ ਦਾ ਮਤਲਬ ਵਧੀਆ ਮੇਲ ਹੈ। ਇਸ ਨਾਲ ਤੁਸੀਂ ਜਵਾਬ ਨੂੰ ਸਰੋਤ ਸਮੱਗਰੀ ਨਾਲ ਵੈਰੀਫਾਈ ਕਰ ਸਕਦੇ ਹੋ।  
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f3558c788388bb395191616dad4c7c0417f1a68bd18590ad0a0e.pa.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.pa.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ਕਵੈਰੀ ਨਤੀਜੇ ਜਵਾਬ ਦੇ ਨਾਲ ਸਰੋਤ ਸੰਦਰਭ ਅਤੇ ਸੰਬੰਧਿਤ ਸਕੋਰ ਦਿਖਾ ਰਹੇ ਹਨ*  
 

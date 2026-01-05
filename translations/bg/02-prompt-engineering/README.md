@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Този модул демонстрира напреднали модели за заявки, използвайки същата основа LangChain4j от предишните модули, с фокус върху структурата на заявките и контрола на разсъжденията.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010bf4aab0e5e24a291c193a29cc80bf1864809b10d8ef2e9da2.bg.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/langchain4j-flow.48e534666213010b.bg.png" alt="LangChain4j Flow" width="800"/>
 
 *Как LangChain4j свързва вашите заявки с Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d4c89aebee57aac31454a8980a8f22e92f73b034ea7806484.bg.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/message-types.93e0779798a17c9d.bg.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage осигурява постоянен контекст, докато UserMessages съдържат отделни заявки*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 Не всички проблеми изискват един и същ подход. Някои въпроси се нуждаят от бързи отговори, други - от дълбоко мислене. Някои изискват видими разсъждения, други - само резултати. Този модул обхваща осем модела за заявки - всеки оптимизиран за различни сценарии. Ще експериментирате с всички, за да научите кога кой подход работи най-добре.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a7629ee0801892bdf9a91ab03ace969c925310d9ba1b5d2e5.bg.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.bg.png" alt="Eight Prompting Patterns" width="800"/>
 
 *Преглед на осемте модела за проектиране на заявки и техните случаи на употреба*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1835f8ec00d5d832a665be5adc1a2f3c08f46edfcfb385242.bg.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.bg.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *Ниска настойчивост (бързо, директно) срещу висока настойчивост (задълбочено, изследователско) подходи за разсъждение*
 
@@ -163,7 +163,7 @@ Chain-of-Thought (верига на мисли) заявките изрично 
 > - "Кои са най-добрите практики за структуриране на встъпителни текстове за инструменти в продукционни приложения?"
 > - "Как мога да улавям и показвам междинни актуализации на напредъка в UI?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e74ee149d54795d096fa4485540b49c07dcfec48e19d6a7e0.bg.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.bg.png" alt="Task Execution Pattern" width="800"/>
 
 *Планиране → Изпълнение → Обобщение на работния поток за многостъпкови задачи*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc9f4ea2d0212a18774750ae8684639e670f0870a1dfc750d8.bg.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.bg.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Итеративен цикъл на подобрение - генериране, оценка, идентифициране на проблеми, подобрение, повторение*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Кой е най-добрият начин за програмен парсинг и действие върху структуриран изход?"
 > - "Как да осигуря последователни нива на сериозност в различни сесии на преглед?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d655ebaa49aa6450d9f3c1ff41d69bdf628c9b44cdc0e25ad1.bg.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.bg.png" alt="Structured Analysis Pattern" width="800"/>
 
 *Рамка с четири категории за последователни прегледи на код с нива на сериозност*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832afd78482b6d21f5488e710d99412f89747977c37c4269b559.bg.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/context-memory.dff30ad9fa78832a.bg.png" alt="Context Memory" width="800"/>
 
 *Как контекстът на разговора се натрупва през множество ходове до достигане на лимита на токени*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c9dbe39c75ce10a80cd4eafd6293c84cb7c77d66da9d10fba.bg.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.bg.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Разбиване на проблемите на изрични логически стъпки*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c219d5574bb05cac9f398937c25765b1715c95231c2efd0a17.bg.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.bg.png" alt="Constrained Output Pattern" width="800"/>
 
 *Налагане на специфични изисквания за формат, дължина и структура*
 
@@ -300,7 +300,7 @@ Dev контейнерът включва разширението Spring Boot D
 
 Просто кликнете върху бутона за пускане до "prompt-engineering", за да стартирате този модул, или стартирайте всички модули наведнъж.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0369545a63f4b54003ff3c08cbde55e8d66bd99a238eda541.bg.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/dashboard.da2c2130c904aaf0.bg.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Опция 2: Използване на shell скриптове**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 ## Екранни снимки на приложението
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d0bdcf43a4faa19a14066ddb88910a3128e9817018c0fefea.bg.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.bg.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Основното табло, показващо всички 8 модела за проектиране на заявки с техните характеристики и случаи на употреба*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Задайте прост въпрос като "Колко е 15% от 200?" с Ниска настойчивост. Ще получите мигновен, директен отговор. Сега задайте нещо сложно като "Проектирайте стратегия за кеширане за API с висок трафик" с Висока настойчивост. Наблюдавайте как моделът забавя темпото и предоставя детайлни разсъждения. Същият модел, същата структура на въпроса - но заявката му казва колко мислене да направи.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0566a7f7e5315362621bf1c5794a724f0ae3d541f4fa8dc2c.bg.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.bg.png" alt="Low Eagerness Demo" width="800"/>
 *Бързо изчисление с минимално разсъждение*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a3768855b2891017f3880fe8ad0008044a6887a1f0665d2b45b7.bg.png" alt="Демонстрация на висока настойчивост" width="800"/>
+<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.bg.png" alt="Демонстрация на висока настойчивост" width="800"/>
 
 *Изчерпателна стратегия за кеширане (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Многостъпковите работни потоци се възползват от предварително планиране и разказване на напредъка. Моделът очертава какво ще направи, разказва всяка стъпка и след това обобщава резултатите.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28505e2e9c6d84639dd655719a1aab08afd393e9ace0ba26c9.bg.png" alt="Демонстрация на изпълнение на задача" width="800"/>
+<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.bg.png" alt="Демонстрация на изпълнение на задача" width="800"/>
 
 *Създаване на REST крайна точка с разказване стъпка по стъпка (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Опитайте "Създай услуга за валидиране на имейл". Вместо просто да генерира код и да спре, моделът генерира, оценява спрямо критерии за качество, идентифицира слабости и подобрява. Ще видите как итеративно подобрява кода, докато отговаря на производствените стандарти.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743fdd7515224b9f9ffc4f579c31eb6f120254ee0adbb9637c75.bg.png" alt="Демонстрация на саморефлектиращ се код" width="800"/>
+<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.bg.png" alt="Демонстрация на саморефлектиращ се код" width="800"/>
 
 *Пълна услуга за валидиране на имейл (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Прегледите на код изискват последователни рамки за оценка. Моделът анализира кода, използвайки фиксирани категории (коректност, практики, производителност, сигурност) с нива на тежест.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc889f7a2f903563b08196cfbaadcc9b3622a2aad0920f0f533.bg.png" alt="Демонстрация на структуриран анализ" width="800"/>
+<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.bg.png" alt="Демонстрация на структуриран анализ" width="800"/>
 
 *Преглед на код, базиран на рамка*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Попитайте "Какво е Spring Boot?" и веднага след това "Покажи ми пример". Моделът помни първия ви въпрос и ви дава конкретен пример за Spring Boot. Без памет вторият въпрос би бил твърде общ.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b9859a48b7706d6a0504312318d6b4aba11a8fa70f4433ced.bg.png" alt="Демонстрация на многостепенен чат" width="800"/>
+<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.bg.png" alt="Демонстрация на многостепенен чат" width="800"/>
 
 *Запазване на контекста между въпросите*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Изберете математически проблем и го опитайте както с Разсъждение стъпка по стъпка, така и с Ниска настойчивост. Ниската настойчивост просто ви дава отговора - бързо, но непрозрачно. Разсъждението стъпка по стъпка ви показва всяко изчисление и решение.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd76b77f132b914f8ea88557ac6a9a4221814b996221a1f3d4.bg.png" alt="Демонстрация на разсъждение стъпка по стъпка" width="800"/>
+<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.bg.png" alt="Демонстрация на разсъждение стъпка по стъпка" width="800"/>
 
 *Математически проблем с изрични стъпки*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # Всички модули
 
 Когато имате нужда от специфични формати или брой думи, този модел налага стриктно спазване. Опитайте да генерирате резюме с точно 100 думи във формат на точки.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da16331c010346aead3e7554fdc4a933ad27854909b35130ac3fc5.bg.png" alt="Демонстрация на ограничен изход" width="800"/>
+<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.bg.png" alt="Демонстрация на ограничен изход" width="800"/>
 
 *Резюме за машинно обучение с контрол на формата*
 
@@ -445,7 +445,7 @@ GPT-5 ви позволява да контролирате изчислител
 
 Забелязвате ли XML таговете в подсказките? Те не са декоративни. Моделите следват структурирани инструкции по-надеждно от свободен текст. Когато имате нужда от многостъпкови процеси или сложна логика, структурата помага на модела да следи къде се намира и какво следва.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f899e0c34d4b714d92d7cc50618c510310567b5885ce82f4a94.bg.png" alt="Структура на подсказка" width="800"/>
+<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.bg.png" alt="Структура на подсказка" width="800"/>
 
 *Анатомия на добре структурирана подсказка с ясни секции и организация в XML стил*
 
