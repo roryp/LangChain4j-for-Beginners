@@ -14,6 +14,7 @@
   - [2. Prompt Patterns](#2-prompt-patterns)
   - [3. Function Calling](#3-function-calling)
   - [4. Document Q&A (RAG)](#4-document-qa-rag)
+  - [5. Responsible AI](#5-responsible-ai)
 - [What Each Example Shows](#what-each-example-shows)
 - [Next Steps](#next-steps)
 - [Troubleshooting](#troubleshooting)
@@ -176,6 +177,20 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Si
 
 Ask questions about content in `document.txt`.
 
+### 5. Responsible AI
+
+**Bash:**
+```bash
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleGithubModels
+```
+
+**PowerShell:**
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleGithubModels
+```
+
+See how AI safety filters block harmful content.
+
 ## What Each Example Shows
 
 **Basic Chat** - [BasicChatDemo.java](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
@@ -261,6 +276,32 @@ String response = model.chat(prompt);
 > - "What's the difference between this simple approach and using vector embeddings for retrieval?"
 > - "How would I scale this to handle multiple documents or larger knowledge bases?"
 > - "What are best practices for structuring the prompt to ensure the AI uses only the provided context?"
+
+**Responsible AI** - [ResponsibleGithubModels.java](src/main/java/com/example/langchain4j/quickstart/ResponsibleGithubModels.java)
+
+Build AI safety with defense in depth. This demo shows two layers of protection working together:
+
+**Part 1: LangChain4j Input Guardrails** - Block dangerous prompts before they reach the LLM. Create custom guardrails that check for prohibited keywords or patterns. These run in your code, so they're fast and free.
+
+```java
+class DangerousContentGuardrail implements InputGuardrail {
+    @Override
+    public InputGuardrailResult validate(UserMessage userMessage) {
+        String text = userMessage.singleText().toLowerCase();
+        if (text.contains("explosives")) {
+            return fatal("Blocked: contains prohibited keyword");
+        }
+        return success();
+    }
+}
+```
+
+**Part 2: Provider Safety Filters** - GitHub Models has built-in filters that catch what your guardrails might miss. You'll see hard blocks (HTTP 400 errors) for severe violations and soft refusals where the AI politely declines.
+
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ResponsibleGithubModels.java`](src/main/java/com/example/langchain4j/quickstart/ResponsibleGithubModels.java) and ask:
+> - "What is InputGuardrail and how do I create my own?"
+> - "What is the difference between a hard block and a soft refusal?"
+> - "Why use both guardrails and provider filters together?"
 
 ## Debugging
 
