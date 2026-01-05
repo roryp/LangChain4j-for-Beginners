@@ -279,12 +279,29 @@ String response = model.chat(prompt);
 
 **Responsible AI** - [ResponsibleGithubModels.java](src/main/java/com/example/langchain4j/quickstart/ResponsibleGithubModels.java)
 
-AI models have built-in safety filters. This demo tests prompts that should be blocked (violence, hate speech, misinformation) and shows two types of responses: hard blocks that throw errors, and soft refusals where the AI politely declines. Understanding these safety mechanisms is essential for building responsible AI applications.
+Build AI safety with defense in depth. This demo shows two layers of protection working together:
+
+**Part 1: LangChain4j Input Guardrails** - Block dangerous prompts before they reach the LLM. Create custom guardrails that check for prohibited keywords or patterns. These run in your code, so they're fast and free.
+
+```java
+class DangerousContentGuardrail implements InputGuardrail {
+    @Override
+    public InputGuardrailResult validate(InputGuardrailRequest request) {
+        String userMessage = request.userMessage().singleText().toLowerCase();
+        if (userMessage.contains("explosives")) {
+            return fatal("Blocked: contains prohibited keyword");
+        }
+        return success();
+    }
+}
+```
+
+**Part 2: Provider Safety Filters** - GitHub Models has built-in filters that catch what your guardrails might miss. You'll see hard blocks (HTTP 400 errors) for severe violations and soft refusals where the AI politely declines.
 
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ResponsibleGithubModels.java`](src/main/java/com/example/langchain4j/quickstart/ResponsibleGithubModels.java) and ask:
-> - "What types of content do AI safety filters typically block?"
-> - "How do I show a friendly message when content is blocked?"
+> - "What is InputGuardrail and how do I create my own?"
 > - "What is the difference between a hard block and a soft refusal?"
+> - "Why use both guardrails and provider filters together?"
 
 ## Debugging
 
