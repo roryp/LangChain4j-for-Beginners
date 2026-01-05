@@ -14,6 +14,7 @@
   - [2. Prompt Patterns](#2-prompt-patterns)
   - [3. Function Calling](#3-function-calling)
   - [4. Document Q&A (RAG)](#4-document-qa-rag)
+  - [5. Responsible AI](#5-responsible-ai)
 - [What Each Example Shows](#what-each-example-shows)
 - [Next Steps](#next-steps)
 - [Troubleshooting](#troubleshooting)
@@ -176,6 +177,20 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Si
 
 Ask questions about content in `document.txt`.
 
+### 5. Responsible AI
+
+**Bash:**
+```bash
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleGithubModels
+```
+
+**PowerShell:**
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleGithubModels
+```
+
+See how AI safety filters block harmful content.
+
 ## What Each Example Shows
 
 **Basic Chat** - [BasicChatDemo.java](src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
@@ -261,6 +276,15 @@ String response = model.chat(prompt);
 > - "What's the difference between this simple approach and using vector embeddings for retrieval?"
 > - "How would I scale this to handle multiple documents or larger knowledge bases?"
 > - "What are best practices for structuring the prompt to ensure the AI uses only the provided context?"
+
+**Responsible AI** - [ResponsibleGithubModels.java](src/main/java/com/example/langchain4j/quickstart/ResponsibleGithubModels.java)
+
+AI models have built-in safety filters. This demo tests prompts that should be blocked (violence, hate speech, misinformation) and shows two types of responses: hard blocks that throw errors, and soft refusals where the AI politely declines. Understanding these safety mechanisms is essential for building responsible AI applications.
+
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ResponsibleGithubModels.java`](src/main/java/com/example/langchain4j/quickstart/ResponsibleGithubModels.java) and ask:
+> - "What types of content do AI safety filters typically block?"
+> - "How do I show a friendly message when content is blocked?"
+> - "What is the difference between a hard block and a soft refusal?"
 
 ## Debugging
 
