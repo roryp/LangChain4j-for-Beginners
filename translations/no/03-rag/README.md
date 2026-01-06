@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f538a51cfd13147d40d84e936a0f485c",
-  "translation_date": "2025-12-13T17:06:29+00:00",
+  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+  "translation_date": "2026-01-05T23:50:23+00:00",
   "source_file": "03-rag/README.md",
   "language_code": "no"
 }
 -->
-# Modul 03: RAG (Retrieval-Augmented Generation)
+# Module 03: RAG (Retrieval-Augmented Generation)
 
 ## Innholdsfortegnelse
 
@@ -28,24 +28,24 @@ CO_OP_TRANSLATOR_METADATA:
 - [Nøkkelkonsepter](../../../03-rag)
   - [Chunking-strategi](../../../03-rag)
   - [Likhetspoeng](../../../03-rag)
-  - [Lagring i minnet](../../../03-rag)
-  - [Håndtering av kontekstvindu](../../../03-rag)
+  - [Minnebasert lagring](../../../03-rag)
+  - [Kontekst-vinduhåndtering](../../../03-rag)
 - [Når RAG er viktig](../../../03-rag)
 - [Neste steg](../../../03-rag)
 
 ## Hva du vil lære
 
-I de forrige modulene lærte du hvordan du kan ha samtaler med AI og strukturere promptene dine effektivt. Men det finnes en grunnleggende begrensning: språkmodeller vet bare det de lærte under treningen. De kan ikke svare på spørsmål om selskapets retningslinjer, prosjekt-dokumentasjon eller annen informasjon de ikke ble trent på.
+I de forrige modulene lærte du hvordan du kan føre samtaler med AI og strukturere promptene dine effektivt. Men det finnes en grunnleggende begrensning: språkmodeller vet bare det de lærte under treningen. De kan ikke svare på spørsmål om din bedrifts retningslinjer, ditt prosjektdokumentasjon, eller annen informasjon de ikke er trent på.
 
-RAG (Retrieval-Augmented Generation) løser dette problemet. I stedet for å prøve å lære modellen din informasjon (noe som er dyrt og upraktisk), gir du den muligheten til å søke gjennom dokumentene dine. Når noen stiller et spørsmål, finner systemet relevant informasjon og inkluderer det i prompten. Modellen svarer deretter basert på den hentede konteksten.
+RAG (Retrieval-Augmented Generation) løser dette problemet. I stedet for å prøve å lære modellen din informasjon (noe som er dyrt og upraktisk), gir du den muligheten til å søke gjennom dokumentene dine. Når noen stiller et spørsmål, finner systemet relevant informasjon og inkluderer det i prompten. Modellen svarer så basert på den hentede konteksten.
 
-Tenk på RAG som å gi modellen et referansebibliotek. Når du stiller et spørsmål, gjør systemet følgende:
+Tenk på RAG som å gi modellen et referansebibliotek. Når du stiller et spørsmål, gjør systemet:
 
 1. **Brukerspørsmål** - Du stiller et spørsmål  
 2. **Embedding** - Konverterer spørsmålet ditt til en vektor  
 3. **Vektorsøk** - Finner lignende dokumentbiter  
-4. **Kontekstsammensetning** - Legger relevante biter til prompten  
-5. **Respons** - LLM genererer et svar basert på konteksten  
+4. **Kontekstsamling** - Legger relevante biter til prompten  
+5. **Svar** - LLM genererer et svar basert på konteksten  
 
 Dette forankrer modellens svar i dine faktiske data i stedet for å stole på treningskunnskap eller å finne på svar.
 
@@ -55,16 +55,18 @@ Dette forankrer modellens svar i dine faktiske data i stedet for å stole på tr
 
 ## Forutsetninger
 
-- Fullført Modul 01 (Azure OpenAI-ressurser distribuert)  
-- `.env`-fil i rotkatalogen med Azure-legitimasjon (opprettet av `azd up` i Modul 01)  
+- Fullført modul 01 (Azure OpenAI-ressurser distribuert)  
+- `.env`-fil i rotmappen med Azure-legitimasjon (laget av `azd up` i modul 01)  
 
-> **Merk:** Hvis du ikke har fullført Modul 01, følg distribusjonsinstruksjonene der først.
+> **Merk:** Hvis du ikke har fullført modul 01, følg distribusjonsinstruksjonene der først.
 
 ## Hvordan det fungerer
 
-**Dokumentbehandling** - [DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+### Dokumentbehandling
 
-Når du laster opp et dokument, deler systemet det opp i biter – mindre deler som passer komfortabelt i modellens kontekstvindu. Disse bitene overlapper litt slik at du ikke mister kontekst ved grensene.
+[DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+
+Når du laster opp et dokument, deler systemet det opp i biter – mindre deler som passer komfortabelt i modellens kontekstvindu. Disse bitene overlapper litt for at du ikke skal miste kontekst ved grensen mellom dem.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("sample-document.txt");
@@ -76,13 +78,15 @@ List<TextSegment> segments = splitter.split(document);
 ```
   
 > **🤖 Prøv med [GitHub Copilot](https://github.com/features/copilot) Chat:** Åpne [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) og spør:  
-> - "Hvordan deler LangChain4j dokumenter i biter og hvorfor er overlapp viktig?"  
-> - "Hva er optimal bitstørrelse for ulike dokumenttyper og hvorfor?"  
+> - "Hvordan deler LangChain4j dokumenter i biter, og hvorfor er overlapp viktig?"  
+> - "Hva er optimal bit-størrelse for ulike dokumenttyper og hvorfor?"  
 > - "Hvordan håndterer jeg dokumenter på flere språk eller med spesiell formatering?"
 
-**Opprette embeddings** - [LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+### Opprette embeddings
 
-Hver bit konverteres til en numerisk representasjon kalt en embedding – i praksis et matematisk fingeravtrykk som fanger meningen i teksten. Lik tekst gir lignende embeddings.
+[LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+
+Hver bit blir konvertert til en numerisk representasjon kalt en embedding – i praksis et matematisk fingeravtrykk som fanger meningen i teksten. Lignende tekst gir lignende embeddings.
 
 ```java
 @Bean
@@ -102,9 +106,11 @@ EmbeddingStore<TextSegment> embeddingStore =
 
 *Dokumenter representert som vektorer i embedding-rom – lignende innhold grupperes sammen*
 
-**Semantisk søk** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Semantisk søk
 
-Når du stiller et spørsmål, blir også spørsmålet ditt en embedding. Systemet sammenligner spørsmålets embedding med alle dokumentbitene sine embeddings. Det finner bitene med mest lik mening – ikke bare matchende nøkkelord, men faktisk semantisk likhet.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+Når du stiller et spørsmål, blir spørsmålet ditt også en embedding. Systemet sammenligner spørsmålets embedding med embeddingene til alle dokumentbitene. Det finner de bitene med mest lignende mening – ikke bare matchende nøkkelord, men faktisk semantisk likhet.
 
 ```java
 Embedding queryEmbedding = embeddingModel.embed(question).content();
@@ -119,48 +125,50 @@ for (EmbeddingMatch<TextSegment> match : matches) {
 ```
   
 > **🤖 Prøv med [GitHub Copilot](https://github.com/features/copilot) Chat:** Åpne [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) og spør:  
-> - "Hvordan fungerer likhetssøk med embeddings og hva bestemmer poengsummen?"  
-> - "Hvilken likhetsterskel bør jeg bruke og hvordan påvirker det resultatene?"  
+> - "Hvordan fungerer likhetssøk med embeddings, og hva avgjør poengsummen?"  
+> - "Hvilken likhetsterskel bør jeg bruke, og hvordan påvirker det resultatene?"  
 > - "Hvordan håndterer jeg tilfeller der ingen relevante dokumenter finnes?"
 
-**Svar-generering** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Svar-generering
 
-De mest relevante bitene inkluderes i prompten til modellen. Modellen leser disse spesifikke bitene og svarer på spørsmålet ditt basert på den informasjonen. Dette forhindrer hallusinasjoner – modellen kan bare svare ut fra det som er foran den.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+De mest relevante bitene inkluderes i prompten til modellen. Modellen leser disse bitene og svarer på spørsmålet ditt basert på denne informasjonen. Dette forhindrer hallusinasjoner – modellen kan bare svare ut fra det den har foran seg.
 
 ## Kjør applikasjonen
 
-**Verifiser distribusjon:**
+**Verifiser distribusjon:**  
 
-Sørg for at `.env`-filen finnes i rotkatalogen med Azure-legitimasjon (opprettet under Modul 01):  
+Sørg for at `.env`-filen finnes i rotmappen med Azure-legitimasjon (laget under modul 01):  
 ```bash
 cat ../.env  # Skal vise AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
   
-**Start applikasjonen:**
+**Start applikasjonen:**  
 
-> **Merk:** Hvis du allerede startet alle applikasjoner med `./start-all.sh` fra Modul 01, kjører denne modulen allerede på port 8081. Du kan hoppe over startkommandoene nedenfor og gå direkte til http://localhost:8081.
+> **Merk:** Hvis du allerede har startet alle applikasjonene ved bruk av `./start-all.sh` fra modul 01, kjører denne modulen allerede på port 8081. Du kan hoppe over start-kommandoene under og gå direkte til http://localhost:8081.
 
-**Alternativ 1: Bruke Spring Boot Dashboard (Anbefalt for VS Code-brukere)**
+**Alternativ 1: Bruke Spring Boot Dashboard (Anbefalt for VS Code-brukere)**  
 
-Dev-containeren inkluderer Spring Boot Dashboard-utvidelsen, som gir et visuelt grensesnitt for å administrere alle Spring Boot-applikasjoner. Du finner den i Aktivitetslinjen på venstre side i VS Code (se etter Spring Boot-ikonet).
+Dev containeren inkluderer Spring Boot Dashboard-utvidelsen, som gir et visuelt grensesnitt for å administrere alle Spring Boot-applikasjoner. Du finner det i Aktivitetslinjen på venstre side i VS Code (se etter Spring Boot-ikonet).
 
 Fra Spring Boot Dashboard kan du:  
 - Se alle tilgjengelige Spring Boot-applikasjoner i arbeidsområdet  
-- Starte/stoppe applikasjoner med ett klikk  
+- Starte/stopp applikasjoner med ett klikk  
 - Se applikasjonslogger i sanntid  
 - Overvåke applikasjonsstatus  
 
-Klikk på play-knappen ved siden av "rag" for å starte denne modulen, eller start alle moduler samtidig.
+Klikk bare på "play"-knappen ved siden av "rag" for å starte denne modulen, eller start alle moduler samtidig.
 
 <img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.no.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Alternativ 2: Bruke shell-skript**
 
-Start alle webapplikasjoner (modul 01-04):
+Start alle webapplikasjoner (moduler 01-04):
 
 **Bash:**  
 ```bash
-cd ..  # Fra rotkatalogen
+cd ..  # Fra rotkatalog
 ./start-all.sh
 ```
   
@@ -186,14 +194,14 @@ cd 03-rag
   
 Begge skriptene laster automatisk miljøvariabler fra rotens `.env`-fil og bygger JAR-filene hvis de ikke finnes.
 
-> **Merk:** Hvis du foretrekker å bygge alle moduler manuelt før oppstart:  
+> **Merk:** Hvis du foretrekker å bygge alle moduler manuelt før du starter:  
 >  
 > **Bash:**  
 > ```bash
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
->  
+  
 > **PowerShell:**  
 > ```powershell
 > cd ..  # Go to root directory
@@ -202,18 +210,18 @@ Begge skriptene laster automatisk miljøvariabler fra rotens `.env`-fil og bygge
   
 Åpne http://localhost:8081 i nettleseren din.
 
-**For å stoppe:**
+**For å stoppe:**  
 
 **Bash:**  
 ```bash
-./stop.sh  # Kun denne modulen
+./stop.sh  # Bare denne modulen
 # Eller
 cd .. && ./stop-all.sh  # Alle moduler
 ```
   
 **PowerShell:**  
 ```powershell
-.\stop.ps1  # Kun denne modulen
+.\stop.ps1  # Bare denne modulen
 # Eller
 cd ..; .\stop-all.ps1  # Alle moduler
 ```
@@ -224,57 +232,57 @@ Applikasjonen tilbyr et webgrensesnitt for dokumentopplasting og spørsmål.
 
 <a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.no.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*RAG-applikasjonsgrensesnitt – last opp dokumenter og still spørsmål*
+*RAG applikasjonsgrensesnitt – last opp dokumenter og still spørsmål*
 
-**Last opp et dokument**
+### Last opp et dokument
 
-Start med å laste opp et dokument – TXT-filer fungerer best for testing. En `sample-document.txt` er tilgjengelig i denne katalogen som inneholder informasjon om LangChain4j-funksjoner, RAG-implementasjon og beste praksis – perfekt for å teste systemet.
+Begynn med å laste opp et dokument – TXT-filer fungerer best for testing. En `sample-document.txt` er lagt ved i denne mappen som inneholder informasjon om LangChain4j-funksjoner, RAG-implementering og beste praksis – perfekt for å teste systemet.
 
-Systemet behandler dokumentet ditt, deler det opp i biter og lager embeddings for hver bit. Dette skjer automatisk når du laster opp.
+Systemet prosesserer dokumentet ditt, deler det i biter, og lager embeddings for hver bit. Dette skjer automatisk når du laster opp.
 
-**Still spørsmål**
+### Still spørsmål
 
-Still nå spesifikke spørsmål om dokumentinnholdet. Prøv noe faktabasert som er tydelig angitt i dokumentet. Systemet søker etter relevante biter, inkluderer dem i prompten og genererer et svar.
+Still nå spesifikke spørsmål om dokumentinnholdet. Prøv noe faktabaserte som er tydelig angitt i dokumentet. Systemet søker etter relevante biter, inkluderer dem i prompten, og genererer et svar.
 
-**Sjekk kildehenvisninger**
+### Sjekk kildehenvisninger
 
-Legg merke til at hvert svar inkluderer kildehenvisninger med likhetspoeng. Disse poengene (0 til 1) viser hvor relevant hver bit var for spørsmålet ditt. Høyere poeng betyr bedre treff. Dette lar deg verifisere svaret mot kildematerialet.
+Merk at hvert svar inkluderer kildehenvisninger med likhetspoeng. Disse poengene (fra 0 til 1) viser hvor relevant hver bit var for spørsmålet ditt. Høyere poeng betyr bedre treff. Dette lar deg verifisere svaret mot kildematerialet.
 
 <a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.no.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Spørringsresultater som viser svar med kildehenvisninger og relevanspoeng*
 
-**Eksperimenter med spørsmål**
+### Eksperimenter med spørsmål
 
 Prøv ulike typer spørsmål:  
 - Spesifikke fakta: "Hva er hovedtemaet?"  
 - Sammenligninger: "Hva er forskjellen mellom X og Y?"  
-- Oppsummeringer: "Oppsummer hovedpunktene om Z"  
+- Sammendrag: "Oppsummer hovedpunktene om Z"
 
 Se hvordan relevanspoengene endres basert på hvor godt spørsmålet ditt matcher dokumentinnholdet.
 
 ## Nøkkelkonsepter
 
-**Chunking-strategi**
+### Chunking-strategi
 
-Dokumenter deles opp i 300-token biter med 30 tokens overlapp. Denne balansen sikrer at hver bit har nok kontekst til å være meningsfull samtidig som den er liten nok til å inkludere flere biter i en prompt.
+Dokumenter deles opp i 300-token biter med 30 token overlapp. Denne balansen sikrer at hver bit har nok kontekst til å være meningsfull, samtidig som det er små nok biter til å inkludere flere i en prompt.
 
-**Likhetspoeng**
+### Likhetspoeng
 
-Poeng varierer fra 0 til 1:  
+Poengene går fra 0 til 1:  
 - 0.7-1.0: Svært relevant, eksakt treff  
 - 0.5-0.7: Relevant, god kontekst  
 - Under 0.5: Filtrert ut, for ulik  
 
 Systemet henter kun biter over minimumsterskelen for å sikre kvalitet.
 
-**Lagring i minnet**
+### Minnebasert lagring
 
-Denne modulen bruker lagring i minnet for enkelhetens skyld. Når du starter applikasjonen på nytt, går opplastede dokumenter tapt. Produksjonssystemer bruker vedvarende vektordatabaser som Qdrant eller Azure AI Search.
+Denne modulen bruker minnelagring for enkelhetens skyld. Når du starter applikasjonen på nytt, går opplastede dokumenter tapt. Produksjonssystemer bruker persistente vektordatabaser som Qdrant eller Azure AI Search.
 
-**Håndtering av kontekstvindu**
+### Kontekst-vinduhåndtering
 
-Hver modell har et maksimalt kontekstvindu. Du kan ikke inkludere alle biter fra et stort dokument. Systemet henter de N mest relevante bitene (standard 5) for å holde seg innenfor begrensningene samtidig som det gir nok kontekst for nøyaktige svar.
+Hver modell har et maksimalt kontekstvindu. Du kan ikke inkludere hver bit fra et stort dokument. Systemet henter de top N mest relevante bitene (standard 5) for å holde seg innenfor begrensningene samtidig som det gir nok kontekst til nøyaktige svar.
 
 ## Når RAG er viktig
 
@@ -283,12 +291,12 @@ Hver modell har et maksimalt kontekstvindu. Du kan ikke inkludere alle biter fra
 - Informasjonen endres ofte (retningslinjer, priser, spesifikasjoner)  
 - Nøyaktighet krever kildehenvisning  
 - Innholdet er for stort til å passe i en enkelt prompt  
-- Du trenger verifiserbare, forankrede svar  
+- Du trenger etterprøvbare, forankrede svar  
 
 **Ikke bruk RAG når:**  
 - Spørsmål krever generell kunnskap modellen allerede har  
-- Sanntidsdata er nødvendig (RAG fungerer på opplastede dokumenter)  
-- Innholdet er lite nok til å inkluderes direkte i prompten  
+- Sanntidsdata er nødvendig (RAG bruker opplastede dokumenter)  
+- Innholdet er lite nok til å inkluderes direkte i promptene  
 
 ## Neste steg
 
@@ -296,11 +304,11 @@ Hver modell har et maksimalt kontekstvindu. Du kan ikke inkludere alle biter fra
 
 ---
 
-**Navigasjon:** [← Forrige: Modul 02 - Prompt Engineering](../02-prompt-engineering/README.md) | [Tilbake til hovedmeny](../README.md) | [Neste: Modul 04 - Tools →](../04-tools/README.md)
+**Navigasjon:** [← Forrige: Modul 02 - Prompt Engineering](../02-prompt-engineering/README.md) | [Tilbake til hovedsiden](../README.md) | [Neste: Modul 04 - Tools →](../04-tools/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Ansvarsfraskrivelse**:
-Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi streber etter nøyaktighet, vennligst vær oppmerksom på at automatiske oversettelser kan inneholde feil eller unøyaktigheter. Det opprinnelige dokumentet på originalspråket skal anses som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for eventuelle misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
+Dette dokumentet er oversatt ved hjelp av AI-oversettelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selv om vi etterstreber nøyaktighet, vennligst vær oppmerksom på at automatiserte oversettelser kan inneholde feil eller unøyaktigheter. Det opprinnelige dokumentet på sitt originale språk skal betraktes som den autoritative kilden. For kritisk informasjon anbefales profesjonell menneskelig oversettelse. Vi er ikke ansvarlige for misforståelser eller feiltolkninger som oppstår ved bruk av denne oversettelsen.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

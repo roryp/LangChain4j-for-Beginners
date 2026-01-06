@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "377b3e3e6f8d02965bf0fbbc9ccb45c5",
-  "translation_date": "2025-12-13T15:30:48+00:00",
+  "original_hash": "22b5d7c8d7585325e38b37fd29eafe25",
+  "translation_date": "2026-01-06T02:05:18+00:00",
   "source_file": "00-quick-start/README.md",
   "language_code": "pcm"
 }
@@ -12,9 +12,9 @@ CO_OP_TRANSLATOR_METADATA:
 ## Table of Contents
 
 - [Introduction](../../../00-quick-start)
-- [Wet na LangChain4j?](../../../00-quick-start)
+- [Wetín be LangChain4j?](../../../00-quick-start)
 - [LangChain4j Dependencies](../../../00-quick-start)
-- [Prerequisites](../../../00-quick-start)
+- [Wetin You Go Need](../../../00-quick-start)
 - [Setup](../../../00-quick-start)
   - [1. Get Your GitHub Token](../../../00-quick-start)
   - [2. Set Your Token](../../../00-quick-start)
@@ -23,39 +23,40 @@ CO_OP_TRANSLATOR_METADATA:
   - [2. Prompt Patterns](../../../00-quick-start)
   - [3. Function Calling](../../../00-quick-start)
   - [4. Document Q&A (RAG)](../../../00-quick-start)
-- [Wet Each Example Dey Show](../../../00-quick-start)
+  - [5. Responsible AI](../../../00-quick-start)
+- [Wetin Each Example Dey Show](../../../00-quick-start)
 - [Next Steps](../../../00-quick-start)
 - [Troubleshooting](../../../00-quick-start)
 
 ## Introduction
 
-Dis quickstart na to make you fit start use LangChain4j sharp sharp. E cover di basic tins wey you need sabi to build AI apps wit LangChain4j and GitHub Models. For di next modules, you go use Azure OpenAI wit LangChain4j to build beta apps.
+Dis quickstart wan make you start dey run LangChain4j as quick as e fit. E cover the basic tins for how to build AI applications with LangChain4j and GitHub Models. For next modules, you go use Azure OpenAI with LangChain4j build better applications.
 
-## Wet na LangChain4j?
+## Wetín be LangChain4j?
 
-LangChain4j na Java library wey make e easy to build AI-powered apps. Instead make you dey deal wit HTTP clients and JSON parsing, you go dey use clean Java APIs.
+LangChain4j na Java library wey dey make am easy to build AI-powered apps. Instead make you dey use HTTP clients and dey parse JSON, you go dey use clean Java APIs.
 
-Di "chain" for LangChain mean say you fit join plenty components together - you fit join prompt to model to parser, or join many AI calls where one output go become next input. Dis quick start na to teach di basics before you go enter complex chains.
+The "chain" for LangChain mean say you go dey join different components - fit be say you go connect prompt go model go parser, or multiple AI calls wey one output go feed the next input. Dis quick start go first show you the basics before you go do more complex chains.
 
 <img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.pcm.png" alt="LangChain4j Chaining Concept" width="800"/>
 
-*Chaining components for LangChain4j - building blocks wey connect to create strong AI workflows*
+*Chaining components for LangChain4j - blocks dey join to build strong AI workflows*
 
 We go use three main components:
 
-**ChatLanguageModel** - Na di interface for AI model interactions. You go call `model.chat("prompt")` and e go give you response string. We dey use `OpenAiOfficialChatModel` wey dey work wit OpenAI-compatible endpoints like GitHub Models.
+**ChatLanguageModel** - Na the interface wey you dey talk to AI models. You call `model.chat("prompt")` to get answer. We dey use `OpenAiOfficialChatModel` wey fit work with OpenAI-compatible endpoints like GitHub Models.
 
-**AiServices** - E dey create type-safe AI service interfaces. You go define methods, put `@Tool` annotation for dem, and LangChain4j go handle di orchestration. Di AI go automatically call your Java methods when e need am.
+**AiServices** - E dey create type-safe AI service interfaces. You define methods, mark dem with `@Tool`, LangChain4j go manage the arrangement. The AI go call your Java methods automatically when e need am.
 
-**MessageWindowChatMemory** - E dey keep conversation history. Without am, each request na separate one. Wit am, di AI go remember previous messages and keep context for many turns.
+**MessageWindowChatMemory** - E dey keep the story for the conversation. Without am, each request stand alone. With am, AI go remember previous messages and keep context through multiple turns.
 
 <img src="../../../translated_images/architecture.eedc993a1c576839.pcm.png" alt="LangChain4j Architecture" width="800"/>
 
-*LangChain4j architecture - main components wey dey work together to power your AI apps*
+*LangChain4j architecture - core components dey work together to power your AI apps*
 
 ## LangChain4j Dependencies
 
-Dis quick start dey use two Maven dependencies for di [`pom.xml`](../../../00-quick-start/pom.xml):
+Dis quick start dey use two Maven dependencies for the [`pom.xml`](../../../00-quick-start/pom.xml):
 
 ```xml
 <!-- Core LangChain4j library -->
@@ -71,17 +72,17 @@ Dis quick start dey use two Maven dependencies for di [`pom.xml`](../../../00-qu
 </dependency>
 ```
 
-Di `langchain4j-open-ai-official` module dey provide di `OpenAiOfficialChatModel` class wey connect to OpenAI-compatible APIs. GitHub Models dey use di same API format, so no special adapter dey needed - just point di base URL to `https://models.github.ai/inference`.
+The `langchain4j-open-ai-official` module get `OpenAiOfficialChatModel` class wey connect to OpenAI-compatible APIs. GitHub Models dey use the same API format, so you no need special adapter - just set the base URL to `https://models.github.ai/inference`.
 
-## Prerequisites
+## Wetin You Go Need
 
-**You dey use Dev Container?** Java and Maven don already dey installed. You only need GitHub Personal Access Token.
+**You dey use Dev Container?** Java and Maven don pre-install finish. You only need GitHub Personal Access Token.
 
 **Local Development:**
 - Java 21+, Maven 3.9+
-- GitHub Personal Access Token (instructions dey below)
+- GitHub Personal Access Token (instructions below)
 
-> **Note:** Dis module dey use `gpt-4.1-nano` from GitHub Models. No change di model name for di code - e don set to work wit GitHub models wey dey available.
+> **Note:** Dis module dey use `gpt-4.1-nano` from GitHub Models. No change the model name inside code - e don configure to work with GitHub models wey dey available.
 
 ## Setup
 
@@ -89,31 +90,31 @@ Di `langchain4j-open-ai-official` module dey provide di `OpenAiOfficialChatModel
 
 1. Go [GitHub Settings → Personal Access Tokens](https://github.com/settings/personal-access-tokens)
 2. Click "Generate new token"
-3. Put descriptive name (e.g., "LangChain4j Demo")
-4. Set expiration (7 days na beta)
+3. Give am name wey make sense (example, "LangChain4j Demo")
+4. Set how long e go expire (7 days dey recommended)
 5. Under "Account permissions", find "Models" and set am to "Read-only"
 6. Click "Generate token"
-7. Copy and save your token - you no go see am again
+7. Copy am well and keep am safe - you no go see am again
 
 ### 2. Set Your Token
 
-**Option 1: Using VS Code (Recommended)**
+**Option 1: Use VS Code (Na the best way)**
 
-If you dey use VS Code, add your token to di `.env` file for project root:
+If na VS Code you dey use, add your token for `.env` file for the project root:
 
-If `.env` file no dey, copy `.env.example` to `.env` or create new `.env` file for project root.
+If `.env` no dey, copy `.env.example` go `.env` or create new `.env` file for project root.
 
 **Example `.env` file:**
 ```bash
-# Inside /workspaces/LangChain4j-for-Beginners/.env
+# For /workspaces/LangChain4j-for-Beginners/.env
 GITHUB_TOKEN=your_token_here
 ```
 
-Then you fit just right-click any demo file (e.g., `BasicChatDemo.java`) for Explorer and select **"Run Java"** or use launch configurations from Run and Debug panel.
+After dat, you fit right-click any demo file (like `BasicChatDemo.java`) for Explorer and select **"Run Java"** or start am from the Run and Debug panel configurations.
 
 **Option 2: Using Terminal**
 
-Set di token as environment variable:
+Set the token as environment variable:
 
 **Bash:**
 ```bash
@@ -127,9 +128,9 @@ $env:GITHUB_TOKEN=your_token_here
 
 ## Run the Examples
 
-**Using VS Code:** Just right-click any demo file for Explorer and select **"Run Java"**, or use launch configurations from Run and Debug panel (make sure say you don add your token to `.env` file first).
+**Use VS Code:** Just right-click any demo file for Explorer make you select **"Run Java"**, or use the Run and Debug panel (but make sure say your token don dey for `.env` file first).
 
-**Using Maven:** Or you fit run from command line:
+**Use Maven:** Or you fit run from command line:
 
 ### 1. Basic Chat
 
@@ -155,7 +156,7 @@ mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Prompt
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.PromptEngineeringDemo
 ```
 
-E dey show zero-shot, few-shot, chain-of-thought, and role-based prompting.
+E show zero-shot, few-shot, chain-of-thought, and role-based prompting.
 
 ### 3. Function Calling
 
@@ -169,7 +170,7 @@ mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIn
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIntegrationDemo
 ```
 
-AI go automatically call your Java methods when e need am.
+AI dey call your Java methods automatically when e need am.
 
 ### 4. Document Q&A (RAG)
 
@@ -183,13 +184,27 @@ mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Simple
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.SimpleReaderDemo
 ```
 
-Ask questions about wet dey inside `document.txt`.
+You fit ask questions about wetin dey inside `document.txt`.
 
-## Wet Each Example Dey Show
+### 5. Responsible AI
+
+**Bash:**
+```bash
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
+```
+
+**PowerShell:**
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
+```
+
+See how AI safety filters dey block harmful content.
+
+## Wetin Each Example Dey Show
 
 **Basic Chat** - [BasicChatDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
 
-Start here to see LangChain4j for e simplest form. You go create `OpenAiOfficialChatModel`, send prompt wit `.chat()`, and get response back. Dis one dey show di foundation: how to initialize models wit custom endpoints and API keys. Once you sabi dis pattern, everything else go build on top.
+Start here to see LangChain4j for the simplest form. You go create `OpenAiOfficialChatModel`, send prompt with `.chat()`, and get answer back. Dis one show how e start: how to start models with your own endpoints and API keys. Once you understand dis pattern, everything else go easier.
 
 ```java
 ChatLanguageModel model = OpenAiOfficialChatModel.builder()
@@ -202,14 +217,14 @@ String response = model.chat("What is LangChain4j?");
 System.out.println(response);
 ```
 
-> **🤖 Try wit [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`BasicChatDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) and ask:
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`BasicChatDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) and ask:
 > - "How I go switch from GitHub Models to Azure OpenAI for dis code?"
-> - "Wetin be other parameters wey I fit configure for OpenAiOfficialChatModel.builder()?"
-> - "How I go add streaming responses instead of waiting for full response?"
+> - "Wetin be the other parameters wey I fit set for OpenAiOfficialChatModel.builder()?"
+> - "How I go add streaming responses instead make I wait the full response before I get am?"
 
 **Prompt Engineering** - [PromptEngineeringDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java)
 
-Now wey you sabi how to talk to model, make we check wet you dey talk. Dis demo dey use same model setup but e show four different prompting patterns. Try zero-shot prompts for direct instructions, few-shot prompts wey learn from examples, chain-of-thought prompts wey show reasoning steps, and role-based prompts wey set context. You go see how same model fit give different results based on how you frame your request.
+Now wey you sabi how to talk to model, make we see wetin you go talk to am. Dis demo dey use the same model setup but show four different prompting styles. Try zero-shot prompts for direct instructions, few-shot prompts wey learn from examples, chain-of-thought prompts wey dey show reasoning steps, and role-based prompts wey set context. You go see how one model fit give plenty different answers based on how you ask.
 
 ```java
 PromptTemplate template = PromptTemplate.from(
@@ -224,15 +239,15 @@ Prompt prompt = template.apply(Map.of(
 String response = model.chat(prompt.text());
 ```
 
-> **🤖 Try wit [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`PromptEngineeringDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) and ask:
-> - "Wetin be difference between zero-shot and few-shot prompting, and when I suppose use each?"
-> - "How temperature parameter dey affect model responses?"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`PromptEngineeringDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) and ask:
+> - "Wetin be difference between zero-shot and few-shot prompting, and when I supposed use each one?"
+> - "How the temperature parameter dey affect the model responses?"
 > - "Wetin be some ways to stop prompt injection attacks for production?"
 > - "How I fit create reusable PromptTemplate objects for common patterns?"
 
 **Tool Integration** - [ToolIntegrationDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java)
 
-Na here LangChain4j dey powerful. You go use `AiServices` to create AI assistant wey fit call your Java methods. Just put `@Tool("description")` annotation for methods and LangChain4j go handle di rest - AI go automatically decide when to use each tool based on wet user ask. Dis one dey show function calling, key technique to build AI wey fit take action, no be only answer questions.
+Dis na where LangChain4j strong pass. You go use `AiServices` make AI assistant wey fit call your Java methods. You just mark methods with `@Tool("description")` and LangChain4j go take care of the rest - AI go decide automatically when to use which tool based on wetin user ask. Dis one na function calling, key method to build AI wey fit take actions, no just answer questions.
 
 ```java
 @Tool("Performs addition of two numeric values")
@@ -244,15 +259,15 @@ MathAssistant assistant = AiServices.create(MathAssistant.class, model);
 String response = assistant.chat("What is 25 plus 17?");
 ```
 
-> **🤖 Try wit [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ToolIntegrationDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) and ask:
-> - "How @Tool annotation dey work and wet LangChain4j dey do wit am behind di scenes?"
-> - "Fit AI call many tools one after di other to solve complex problems?"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ToolIntegrationDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) and ask:
+> - "How @Tool annotation dey work and wetin LangChain4j dey do with am behind the scenes?"
+> - "Fit the AI call many tools one after another to solve wahala wey complex?"
 > - "Wetin happen if tool throw exception - how I suppose handle errors?"
-> - "How I go integrate real API instead of dis calculator example?"
+> - "How I fit connect real API instead of dis calculator example?"
 
 **Document Q&A (RAG)** - [SimpleReaderDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)
 
-Here you go see di foundation of RAG (retrieval-augmented generation). Instead make you rely on model training data, you go load content from [`document.txt`](../../../00-quick-start/document.txt) and put am inside prompt. AI go answer based on your document, no be im general knowledge. Dis na first step to build systems wey fit work wit your own data.
+Here you go see the base for RAG (retrieval-augmented generation). No just rely on model training data. You go load content from [`document.txt`](../../../00-quick-start/document.txt) and add am to prompt. AI go answer based on your document, no na general knowledge. Dis na first step to build systems wey fit work with your own data.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("document.txt");
@@ -263,17 +278,39 @@ String prompt = "Based on this document: " + content +
 String response = model.chat(prompt);
 ```
 
-> **Note:** Dis simple way dey load whole document inside prompt. For big files (>10KB), you go pass context limits. Module 03 go cover chunking and vector search for production RAG systems.
+> **Note:** Dis simple way dey load the whole document inside prompt. For big files (>10KB), e go pass context limits. Module 03 go teach chunking and vector search for production RAG systems.
 
-> **🤖 Try wit [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SimpleReaderDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) and ask:
-> - "How RAG dey prevent AI hallucinations compared to using model training data?"
-> - "Wetin be difference between dis simple way and using vector embeddings for retrieval?"
-> - "How I go scale dis to handle many documents or bigger knowledge bases?"
-> - "Wetin be best practices to structure prompt to make sure AI use only di context wey you provide?"
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SimpleReaderDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) and ask:
+> - "How RAG dey stop AI hallucinations unlike the model training data?"
+> - "Wetin be difference between dis simple method and using vector embeddings for retrieval?"
+> - "How I fit scale dis to handle plenty documents or bigger knowledge bases?"
+> - "Wetin be best ways to arrange prompt so AI go use only the provided context?"
 
-## Debugging
+**Responsible AI** - [ResponsibleAIDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java)
 
-Di examples get `.logRequests(true)` and `.logResponses(true)` to show API calls for console. Dis go help troubleshoot authentication errors, rate limits, or unexpected responses. Remove dis flags for production to reduce log noise.
+Build AI safety with strong protection inside. Dis demo show two layers of protection wey dey work together:
+
+**Part 1: LangChain4j Input Guardrails** - E block dangerous prompts before dem reach LLM. Create your own guardrails to check for banned keywords or patterns. Dem dey run for your code, so dem fast and no cost money.
+
+```java
+class DangerousContentGuardrail implements InputGuardrail {
+    @Override
+    public InputGuardrailResult validate(UserMessage userMessage) {
+        String text = userMessage.singleText().toLowerCase();
+        if (text.contains("explosives")) {
+            return fatal("Blocked: contains prohibited keyword");
+        }
+        return success();
+    }
+}
+```
+
+**Part 2: Provider Safety Filters** - GitHub Models get built-in filters wey catch wetin your guardrails fit miss. You go see hard blocks (HTTP 400 errors) for serious bad tori and soft refusals where AI dey politely decline.
+
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ResponsibleAIDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java) and ask:
+> - "Wetin be InputGuardrail and how I fit create mine?"
+> - "Wetin be difference between hard block and soft refusal?"
+> - "Why e good to use both guardrails and provider filters together?"
 
 ## Next Steps
 
@@ -289,19 +326,18 @@ Di examples get `.logRequests(true)` and `.logResponses(true)` to show API calls
 
 ### First-Time Maven Build
 
-**Issue**: First time `mvn clean compile` or `mvn package` go take long time (10-15 minutes)
+**Issue**: First time you run `mvn clean compile` or `mvn package` e fit take long (10-15 minutes)
 
-**Cause**: Maven need download all project dependencies (Spring Boot, LangChain4j libraries, Azure SDKs, etc.) for first build.
+**Cause**: Maven need download all project dependencies (Spring Boot, LangChain4j libs, Azure SDKs, and others) for the first time e build.
 
-**Solution**: Dis na normal behavior. Next builds go fast well well as dependencies go dey cached locally. Download time depend on your network speed.
+**Solution**: Na normal. After first time, build go quick pass because dependencies go dey cache for your machine. The download time depend on your internet speed.
 
 ### PowerShell Maven Command Syntax
 
-**Issue**: Maven commands dey fail wit error `Unknown lifecycle phase ".mainClass=..."`
+**Issue**: Maven commands dey fail with error `Unknown lifecycle phase ".mainClass=..."`
 
-**Cause**: PowerShell dey interpret `=` as variable assignment operator, e dey break Maven property syntax
-
-**Solution**: Use stop-parsing operator `--%` before Maven command:
+**Cause**: PowerShell dey treat `=` like assignment operator, so e go spoil Maven property syntax.
+**Solution**: Use di stop-parsing operator `--%` before di Maven command:
 
 **PowerShell:**
 ```powershell
@@ -313,24 +349,30 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Ba
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
-Di `--%` operator dey tell PowerShell to pass all remaining arguments literally to Maven without interpretation.
+Di `--%` operator mean say PowerShell go pass all di remaining arguments as dem be go Maven without to interpret am.
 
 ### Windows PowerShell Emoji Display
 
-**Issue**: AI responses dey show garbage characters (e.g., `????` or `â??`) instead of emojis for PowerShell
+**Issue**: AI responses dey show waste characters (e.g., `????` or `â??`) instead of emojis for PowerShell
 
-**Cause**: PowerShell default encoding no support UTF-8 emojis
+**Cause**: PowerShell default encoding no dey support UTF-8 emojis
 
-**Solution**: Run dis command before you run Java apps:
+**Solution**: Run dis command before you run Java applications:
 ```cmd
 chcp 65001
 ```
 
-Dis one go force UTF-8 encoding for terminal. Alternatively, use Windows Terminal wey get better Unicode support.
+Dis one go force UTF-8 encoding for di terminal. Or else, make you use Windows Terminal wey get beta Unicode support.
+
+### Debugging API Calls
+
+**Issue**: Authentication errors, rate limits, or unexpected responses from di AI model
+
+**Solution**: Di examples get `.logRequests(true)` and `.logResponses(true)` to show API calls for console. Dis one dey help troubleshoot authentication errors, rate limits, or unexpected responses. Remove dis flags for production to reduce log noise.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. Di original document wey e dey for im own language na di correct one. If na serious matter, e better make human professional translate am. We no go responsible for any misunderstanding or wrong meaning wey fit come from dis translation.
+**Disclaimer**:  
+Dis document don translate wit AI translation service wey dem call [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make everything correct, abeg sabi say automated translation fit get some mistakes or wrong tins. Di original document wey na im own language na beta place to check for correct tori. If na important info, e good make professional human translate am. We no go take any wahala if person no understand or interpret dis translation well.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
