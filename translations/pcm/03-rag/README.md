@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f538a51cfd13147d40d84e936a0f485c",
-  "translation_date": "2025-12-13T17:29:09+00:00",
+  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+  "translation_date": "2026-01-06T02:06:40+00:00",
   "source_file": "03-rag/README.md",
   "language_code": "pcm"
 }
@@ -11,8 +11,8 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Table of Contents
 
-- [Wetyn You Go Learn](../../../03-rag)
-- [Wetyn You Need Before](../../../03-rag)
+- [Wetin You Go Learn](../../../03-rag)
+- [Prerequisites](../../../03-rag)
 - [Understanding RAG](../../../03-rag)
 - [How E Dey Work](../../../03-rag)
   - [Document Processing](../../../03-rag)
@@ -33,39 +33,41 @@ CO_OP_TRANSLATOR_METADATA:
 - [When RAG Matters](../../../03-rag)
 - [Next Steps](../../../03-rag)
 
-## Wetyn You Go Learn
+## What You'll Learn
 
-For di modules wey you don do before, you don learn how to yarn with AI and how to arrange your prompts well well. But one kain wahala dey: language models sabi only wetin dem learn during training. Dem no fit answer questions about your company policies, your project documents, or any info wey dem no train on.
+For di modules wen you don pass, you don learn how to talk with AI and arrange your prompts well well. But one gbege dey: language models only sabi wetin dem learn wen dem train am. Dem no fit answer questions about your company policy, your project documents, or any info wey dem no train on.
 
-RAG (Retrieval-Augmented Generation) na di solution for dis problem. Instead make you try teach di model your info (wey dey expensive and no too possible), you go give am power to search your documents. When pesin ask question, di system go find correct info and put am for di prompt. Di model go then answer based on di info wey e find.
+RAG (Retrieval-Augmented Generation) fit solve dis problem. Instead make you try teach the model your info (wey dey costly and no too realistic), you go give am power to find tins for your documents. When person ask question, di system go find di relevant info and put am inside di prompt. Di model then go answer based on dat info wey e find.
 
-Think am like say RAG dey give di model one reference library. When you ask question, di system go:
+Think am like say you give di model one koko book library. When you ask question, di system go:
 
 1. **User Query** - You ask question
-2. **Embedding** - E convert your question to vector
-3. **Vector Search** - E find document chunks wey resemble
-4. **Context Assembly** - E add di correct chunks to di prompt
-5. **Response** - LLM go generate answer based on di context
+2. **Embedding** - E change your question to one vector
+3. **Vector Search** - E find similar document chunks
+4. **Context Assembly** - E add di correct chunks to the prompt
+5. **Response** - LLM generate answer based on di context
 
-Dis one dey ground di model answer for your real data instead of to rely on wetin e learn or to just make answer.
+Dis one make di model answer base on your actual data no be only di training knowledge or just normal answer e go make up.
 
 <img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.pcm.png" alt="RAG Architecture" width="800"/>
 
 *RAG workflow - from user query to semantic search to contextual answer generation*
 
-## Wetyn You Need Before
+## Prerequisites
 
 - You don finish Module 01 (Azure OpenAI resources don deploy)
-- `.env` file dey root directory with Azure credentials (wey `azd up` create for Module 01)
+- `.env` file dey root directory with Azure credentials (wey `azd up` for Module 01 create)
 
-> **Note:** If you never finish Module 01, abeg follow di deployment instructions wey dey there first.
+> **Note:** If you never finish Module 01, make you follow di deployment instructions for there first.
 
 
-## How E Dey Work
+## How It Works
 
-**Document Processing** - [DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+### Document Processing
 
-When you upload document, di system go break am into chunks - small small pieces wey fit well inside di model context window. Di chunks dey overlap small so you no go lose context for di edges.
+[DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+
+When you upload document, di system go break am into chunks - small pieces wey fit inside di model context window well well. Chunks dem go also overlap small so you no lose di context for di edges.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("sample-document.txt");
@@ -81,9 +83,11 @@ List<TextSegment> segments = splitter.split(document);
 > - "What's the optimal chunk size for different document types and why?"
 > - "How do I handle documents in multiple languages or with special formatting?"
 
-**Creating Embeddings** - [LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+### Creating Embeddings
 
-Each chunk go convert to number wey dem dey call embedding - na like mathematical fingerprint wey capture di meaning of di text. Text wey resemble go get similar embeddings.
+[LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+
+Every chunk go turn to number representation wey dem dey call embedding - e be like math fingerprint wey dey capture wetin di text mean. Similar text go get similar embeddings.
 
 ```java
 @Bean
@@ -103,9 +107,11 @@ EmbeddingStore<TextSegment> embeddingStore =
 
 *Documents represented as vectors in embedding space - similar content clusters together*
 
-**Semantic Search** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Semantic Search
 
-When you ask question, your question go also become embedding. Di system go compare your question embedding with all di document chunks embeddings. E go find di chunks wey get di closest meaning - no be only matching keywords, but real semantic similarity.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+When you ask question, your question go also become embedding. Di system go compare your question embedding with all di document chunks embeddings. E go find di chunks wey get closest meaning - no be only keywords, but real semantic similarity.
 
 ```java
 Embedding queryEmbedding = embeddingModel.embed(question).content();
@@ -124,54 +130,56 @@ for (EmbeddingMatch<TextSegment> match : matches) {
 > - "What similarity threshold should I use and how does it affect results?"
 > - "How do I handle cases where no relevant documents are found?"
 
-**Answer Generation** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Answer Generation
 
-Di chunks wey get most relevance go enter di prompt wey model go use. Di model go read those chunks and answer your question based on dat info. Dis one dey prevent hallucination - di model fit only answer from wetin dey front of am.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+The chunks wey get most relevance go enter di prompt give di model. Di model go read those chunks dem come answer your question based on dat info. Dis one dey stop make model no dey waka talk yawa - e fit only answer based on wetin dey front am.
 
 ## Run the Application
 
-**Make sure say deployment dey:**
+**Make sure deployment dey:**
 
-Make sure `.env` file dey root directory with Azure credentials (wey dem create for Module 01):
+Check say `.env` file dey root directory with Azure credentials (wey dem create inside Module 01):
 ```bash
 cat ../.env  # E suppose show AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
 **Start di application:**
 
-> **Note:** If you don start all applications before with `./start-all.sh` from Module 01, dis module don dey run for port 8081. You fit skip di start commands below and go straight to http://localhost:8081.
+> **Note:** If you don start all di applications before with `./start-all.sh` from Module 01, dis module don already dey run for port 8081. You fit skip all di start commands below come enter direct for http://localhost:8081.
 
-**Option 1: Using Spring Boot Dashboard (Better for VS Code users)**
+**Option 1: Using Spring Boot Dashboard (Better if you dey use VS Code)**
 
-Di dev container get Spring Boot Dashboard extension, wey get visual interface to manage all Spring Boot applications. You fit find am for Activity Bar for left side of VS Code (look for Spring Boot icon).
+The dev container get Spring Boot Dashboard extension, wey get visual interface to manage all Spring Boot apps. You fit see am for Activity Bar for left side of VS Code (look for Spring Boot icon).
 
-From Spring Boot Dashboard, you fit:
-- See all Spring Boot applications wey dey workspace
-- Start/stop applications with one click
-- View application logs for real-time
-- Monitor application status
+For Spring Boot Dashboard, you fit:
+- See all the Spring Boot apps wey dey workspace
+- Start/stop apps with one click
+- Check app logs in real-time
+- Monitor app status
 
-Just click di play button wey dey next to "rag" to start dis module, or start all modules at once.
+Just click di play button near "rag" to start dis module, or start all modules at once.
 
 <img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.pcm.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
-Start all web applications (modules 01-04):
+Start all web apps (modules 01-04):
 
 **Bash:**
 ```bash
-cd ..  # From root directory
+cd ..  # From di root directory
 ./start-all.sh
 ```
 
 **PowerShell:**
 ```powershell
-cd ..  # From root directory
+cd ..  # From root directory itself
 .\start-all.ps1
 ```
 
-Or start only dis module:
+Or start just dis module:
 
 **Bash:**
 ```bash
@@ -185,9 +193,9 @@ cd 03-rag
 .\start.ps1
 ```
 
-Both scripts go automatically load environment variables from root `.env` file and go build di JARs if dem no dey.
+Both di scripts go load environment variables from root `.env` file automatically and if JARs no dey, e go build am.
 
-> **Note:** If you want build all modules manually before you start:
+> **Note:** If you want build all modules by yourself before you start:
 >
 > **Bash:**
 > ```bash
@@ -221,75 +229,75 @@ cd ..; .\stop-all.ps1  # All di modules
 
 ## Using the Application
 
-Di application get web interface for document upload and question asking.
+Di app get web interface for document upload and question ask.
 
 <a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.pcm.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Di RAG application interface - upload documents and ask questions*
+*The RAG application interface - upload documents and ask questions*
 
-**Upload a Document**
+### Upload a Document
 
-Start by uploading document - TXT files dey best for testing. One `sample-document.txt` dey this directory wey get info about LangChain4j features, RAG implementation, and best practices - perfect for testing di system.
+Start by uploading document - TXT files dey best for testing. Sample-document.txt dey for dis folder wey get info about LangChain4j features, RAG implementation, and best practices - good for testing di system.
 
-Di system go process your document, break am into chunks, and create embeddings for each chunk. Dis one dey automatic when you upload.
+Di system go process your document, break am into chunks, then create embeddings for every chunk. E dey automatic once you upload.
 
-**Ask Questions**
+### Ask Questions
 
-Now ask specific questions about di document content. Try ask something wey dey factual and clear for di document. Di system go search for relevant chunks, put dem for di prompt, and generate answer.
+Now fit ask specific questions about di matter inside di document. Try ask factual tins wey clear for di document. System go find relevant chunks, include am for prompt, then generate answer.
 
-**Check Source References**
+### Check Source References
 
-You go see say each answer get source references with similarity scores. Di scores (0 to 1) dey show how relevant each chunk be to your question. Higher scores mean better match. Dis one go help you check di answer against di source material.
+You go see say every answer carry source references with similarity scores. Dem scores (0 to 1) dey show how relevant each chunk be to your question. Higher score mean better match. Dis one go help you confirm di answer vs di source material.
 
 <a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.pcm.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Query results wey show answer with source references and relevance scores*
+*Query results showing answer with source references and relevance scores*
 
-**Experiment with Questions**
+### Experiment with Questions
 
-Try different kain questions:
+Try diff types of questions:
 - Specific facts: "Wetin be di main topic?"
 - Comparisons: "Wetin be di difference between X and Y?"
 - Summaries: "Summarize di key points about Z"
 
-Watch how di relevance scores dey change based on how well your question match di document content.
+Watch how di relevance scores change based on how well your question match di document content.
 
 ## Key Concepts
 
-**Chunking Strategy**
+### Chunking Strategy
 
-Documents dey split into 300-token chunks with 30 tokens overlap. Dis balance make sure each chunk get enough context to make sense but still small enough to fit many chunks inside one prompt.
+Documents dey split into 300-token chunks with 30 tokens overlap. Dis balance make each chunk get enough context to make sense and still small to fit multiple chunks for prompt.
 
-**Similarity Scores**
+### Similarity Scores
 
 Scores dey from 0 to 1:
-- 0.7-1.0: Highly relevant, exact match
+- 0.7-1.0: Dem dey highly relevant, exact match
 - 0.5-0.7: Relevant, good context
-- Below 0.5: Filtered out, too dissimilar
+- Under 0.5: Filtered out, too different
 
-Di system go only retrieve chunks wey pass di minimum threshold to make sure quality dey.
+System go only collect chunks wey meet minimum threshold to guarantee quality.
 
-**In-Memory Storage**
+### In-Memory Storage
 
-Dis module dey use in-memory storage to keep am simple. When you restart di application, uploaded documents go lost. For production, dem dey use persistent vector databases like Qdrant or Azure AI Search.
+Dis module dey use in-memory storage for simplicity. If you restart di app, uploaded documents go lost. For production, people dey use persistent vector databases like Qdrant or Azure AI Search.
 
-**Context Window Management**
+### Context Window Management
 
-Each model get maximum context window. You no fit put every chunk from big document. Di system go retrieve top N most relevant chunks (default na 5) to stay within di limit but still give enough context for correct answers.
+Every model get max context window. You no fit put every chunk from big document. System go collect top N relevant chunks (default na 5) to fit inside di limits and still provide enough context for correct answers.
 
 ## When RAG Matters
 
 **Use RAG when:**
-- You dey answer questions about proprietary documents
-- Info dey change often (policies, prices, specifications)
-- You need accuracy with source attribution
-- Content too big to fit inside one prompt
-- You want verifiable, grounded answers
+- You dey answer questions about your own documents
+- Info dey change quick quick (policies, prices, specs)
+- You want accurate answer wey get source
+- Content too big to fit one prompt
+- You want answer wey you fit verify for ground truth
 
 **No use RAG when:**
-- Questions need general knowledge wey model already get
-- You need real-time data (RAG dey work on uploaded documents)
-- Content small enough to put directly inside prompts
+- Questions na general knowledge wey model sabi already
+- You need real-time data (RAG work on uploaded docs)
+- Content small well to put directly inside prompts
 
 ## Next Steps
 
@@ -302,6 +310,6 @@ Each model get maximum context window. You no fit put every chunk from big docum
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:
-Dis document na AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) wey translate am. Even though we dey try make am correct, abeg sabi say automated translation fit get some mistakes or no too correct. The original document wey e dey for im own language na the correct one. If na serious matter, e better make person wey sabi translate am well do am. We no go responsible if person no understand well or if dem use dis translation do wrong thing.
+**Disclaimer**:  
+Dis document dem translate am wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we try make e correct, abeg sabi say automated translation fit get some errors or mistakes. Di original document wey dey im own language na di correct one. If na important information, better make person wey sabi translate am well well do am. We no go responsible if people no understand well or if dem misinterpret from dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

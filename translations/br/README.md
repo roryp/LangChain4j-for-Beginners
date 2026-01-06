@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d61ab6c245562094cc3dddecf08b50d3",
-  "translation_date": "2025-12-30T23:50:19+00:00",
+  "original_hash": "6a3bd54fc243ce3dc79d18848d2b5413",
+  "translation_date": "2026-01-05T23:01:28+00:00",
   "source_file": "README.md",
   "language_code": "br"
 }
@@ -14,63 +14,73 @@ CO_OP_TRANSLATOR_METADATA:
 #### Suportado via GitHub Action (Automatizado e Sempre Atualizado)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Árabe](../ar/README.md) | [Bengalês](../bn/README.md) | [Búlgaro](../bg/README.md) | [Birmanês (Myanmar)](../my/README.md) | [Chinês (Simplificado)](../zh/README.md) | [Chinês (Tradicional, Hong Kong)](../hk/README.md) | [Chinês (Tradicional, Macau)](../mo/README.md) | [Chinês (Tradicional, Taiwan)](../tw/README.md) | [Croata](../hr/README.md) | [Tcheco](../cs/README.md) | [Dinamarquês](../da/README.md) | [Holandês](../nl/README.md) | [Estoniano](../et/README.md) | [Finlandês](../fi/README.md) | [Francês](../fr/README.md) | [Alemão](../de/README.md) | [Grego](../el/README.md) | [Hebraico](../he/README.md) | [Hindi](../hi/README.md) | [Húngaro](../hu/README.md) | [Indonésio](../id/README.md) | [Italiano](../it/README.md) | [Japonês](../ja/README.md) | [Kannada](../kn/README.md) | [Coreano](../ko/README.md) | [Lituano](../lt/README.md) | [Malaio](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepalês](../ne/README.md) | [Pidgin Nigeriano](../pcm/README.md) | [Norueguês](../no/README.md) | [Persa (Farsi)](../fa/README.md) | [Polonês](../pl/README.md) | [Português (Brasil)](./README.md) | [Português (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romeno](../ro/README.md) | [Russo](../ru/README.md) | [Sérvio (Cirílico)](../sr/README.md) | [Eslovaco](../sk/README.md) | [Esloveno](../sl/README.md) | [Espanhol](../es/README.md) | [Suaíli](../sw/README.md) | [Sueco](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tâmil](../ta/README.md) | [Telugo](../te/README.md) | [Tailandês](../th/README.md) | [Turco](../tr/README.md) | [Ucraniano](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamita](../vi/README.md)
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
-
-# LangChain4j para Iniciantes
-
-Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5, do chat básico a agentes de IA.
-
-**Novo no LangChain4j?** Confira o [Glossário](docs/GLOSSARY.md) para definições de termos-chave e conceitos.
-
-## Sumário
-
-1. [Início Rápido](00-quick-start/README.md) - Comece com o LangChain4j
-2. [Introdução](01-introduction/README.md) - Aprenda os fundamentos do LangChain4j
-3. [Engenharia de Prompt](02-prompt-engineering/README.md) - Domine o design eficaz de prompts
-4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Construa sistemas inteligentes baseados em conhecimento
-5. [Ferramentas](04-tools/README.md) - Integre ferramentas externas e assistentes simples
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Trabalhe com o Model Context Protocol (MCP) e módulos Agênicos
----
-
-##  Caminho de Aprendizagem
-
-> **Início Rápido**
-
-1. Faça um fork deste repositório para sua conta do GitHub
-2. Clique **Code** → aba **Codespaces** → **...** → **New with options...**
-3. Use os padrões – isso selecionará o Development container criado para este curso
-4. Clique **Create codespace**
-5. Aguarde de 5 a 10 minutos para o ambiente ficar pronto
-6. Vá diretamente para [Início Rápido](./00-quick-start/README.md) para começar!
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](./README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
 > **Prefere clonar localmente?**
->
-> Este repositório inclui mais de 50 traduções de idiomas, o que aumenta significativamente o tamanho do download. Para clonar sem traduções, use sparse checkout:
+
+> Este repositório inclui mais de 50 traduções de idiomas, o que aumenta significativamente o tamanho do download. Para clonar sem as traduções, use o sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Isto fornece tudo o que você precisa para concluir o curso com um download muito mais rápido.
+> Isso fornece tudo que você precisa para completar o curso com um download muito mais rápido.
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-Após concluir os módulos, explore o [Guia de Testes](docs/TESTING.md) para ver conceitos de testes do LangChain4j em ação.
+# LangChain4j para Iniciantes
 
-> **Nota:** Este treinamento usa tanto GitHub Models quanto Azure OpenAI. Os módulos [Início Rápido](00-quick-start/README.md) e [MCP](05-mcp/README.md) usam GitHub Models (nenhuma assinatura do Azure é necessária), enquanto os módulos 1-4 usam Azure OpenAI GPT-5.
+Um curso para construir aplicações de IA com LangChain4j e Azure OpenAI GPT-5, desde chat básico até agentes de IA.
+
+**Novo no LangChain4j?** Confira o [Glossário](docs/GLOSSARY.md) para definições de termos e conceitos chave.
+
+## Sumário
+
+1. [Início Rápido](00-quick-start/README.md) - Comece com LangChain4j
+2. [Introdução](01-introduction/README.md) - Aprenda os fundamentos do LangChain4j
+3. [Engenharia de Prompt](02-prompt-engineering/README.md) - Domine a criação eficaz de prompts
+4. [RAG (Geração com Recuperação)](03-rag/README.md) - Construa sistemas inteligentes baseados em conhecimento
+5. [Ferramentas](04-tools/README.md) - Integre ferramentas externas e assistentes simples
+6. [MCP (Protocolo de Contexto de Modelo)](05-mcp/README.md) - Trabalhe com o Protocolo de Contexto de Modelo (MCP) e módulos agentes
+---
+
+## Caminho de Aprendizagem
+
+> **Início Rápido**
+
+1. Faça um fork deste repositório para sua conta no GitHub
+2. Clique em **Code** → aba **Codespaces** → **...** → **Novo com opções...**
+3. Use as configurações padrão – isso selecionará o container de Desenvolvimento criado para este curso
+4. Clique em **Criar codespace**
+5. Aguarde de 5 a 10 minutos para o ambiente ficar pronto
+6. Vá direto para [Início Rápido](./00-quick-start/README.md) para começar!
+
+> **Prefere clonar localmente?**
+>
+> Este repositório inclui mais de 50 traduções de idiomas, o que aumenta significativamente o tamanho do download. Para clonar sem as traduções, use o sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Isso fornece tudo que você precisa para completar o curso com um download muito mais rápido.
+
+Após concluir os módulos, explore o [Guia de Testes](docs/TESTING.md) para ver conceitos de teste do LangChain4j em ação.
+
+> **Nota:** Este treinamento usa tanto GitHub Models quanto Azure OpenAI. O módulo [Início Rápido](00-quick-start/README.md) usa GitHub Models (não requer assinatura Azure), enquanto os módulos 1 a 5 usam Azure OpenAI.
 
 
-## Aprendendo com o GitHub Copilot
+## Aprendendo com GitHub Copilot
 
-Para começar a programar rapidamente, abra este projeto em um GitHub Codespace ou em seu IDE local com o devcontainer fornecido. O devcontainer usado neste curso vem pré-configurado com o GitHub Copilot para programação emparelhada com IA.
+Para começar a programar rapidamente, abra este projeto em um GitHub Codespace ou no seu IDE local com o devcontainer fornecido. O devcontainer usado neste curso vem pré-configurado com GitHub Copilot para programação pareada com IA.
 
-Cada exemplo de código inclui perguntas sugeridas que você pode fazer ao GitHub Copilot para aprofundar seu entendimento. Procure os prompts 💡/🤖 em:
+Cada exemplo de código inclui perguntas sugeridas que você pode fazer ao GitHub Copilot para aprofundar seu entendimento. Procure pelas dicas 💡/🤖 em:
 
-- **Cabeçalhos de arquivos Java** - Perguntas específicas para cada exemplo
-- **READMEs dos módulos** - Prompts de exploração após exemplos de código
+- **Cabeçalhos dos arquivos Java** - Perguntas específicas para cada exemplo
+- **READMEs dos módulos** - Dicas de exploração após os exemplos de código
 
-**Como usar:** Abra qualquer arquivo de código e faça ao Copilot as perguntas sugeridas. Ele tem contexto completo do código-fonte e pode explicar, estender e sugerir alternativas.
+**Como usar:** Abra qualquer arquivo de código e faça ao Copilot as perguntas sugeridas. Ele tem contexto completo do código e pode explicar, expandir e sugerir alternativas.
 
-Quer saber mais? Confira [Copilot para Programação Emparelhada com IA](https://aka.ms/GitHubCopilotAI).
+Quer aprender mais? Confira [Copilot para Programação Pareada com IA](https://aka.ms/GitHubCopilotAI).
 
 
 ## Recursos Adicionais
@@ -98,7 +108,7 @@ Quer saber mais? Confira [Copilot para Programação Emparelhada com IA](https:/
 
 ---
  
-### Aprendizado Essencial
+### Aprendizado Fundamental
 [![ML para Iniciantes](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Ciência de Dados para Iniciantes](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
 [![IA para Iniciantes](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
@@ -112,26 +122,26 @@ Quer saber mais? Confira [Copilot para Programação Emparelhada com IA](https:/
 ### Série Copilot
 [![Copilot para Programação Emparelhada com IA](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot para C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Aventura do Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Aventura Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## Obtendo Ajuda
+## Obter Ajuda
 
-Se você ficar preso ou tiver alguma dúvida sobre como criar aplicativos de IA, participe:
+Se você ficar preso ou tiver alguma dúvida sobre como construir aplicativos de IA, participe:
 
-[![Discord da Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Se você tiver feedback sobre o produto ou encontrar erros durante o desenvolvimento, visite:
+Se você tiver feedback sobre o produto ou erros durante a construção, visite:
 
 [![Fórum de Desenvolvedores Azure AI Foundry](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Licença
 
-Licença MIT - Consulte o arquivo [LICENSE](../../LICENSE) para mais detalhes.
+Licença MIT - Veja o arquivo [LICENSE](../../LICENSE) para mais detalhes.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Aviso legal:
-Este documento foi traduzido usando o serviço de tradução por IA Co-op Translator (https://github.com/Azure/co-op-translator). Embora nos esforcemos para garantir a precisão, esteja ciente de que traduções automáticas podem conter erros ou imprecisões. O documento original em seu idioma nativo deve ser considerado a fonte oficial. Para informações críticas, recomenda-se tradução profissional por um tradutor humano. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações equivocadas decorrentes do uso desta tradução.
+**Aviso Legal**:  
+Este documento foi traduzido utilizando o serviço de tradução automática [Co-op Translator](https://github.com/Azure/co-op-translator). Embora nos esforcemos pela precisão, tenha em mente que traduções automáticas podem conter erros ou imprecisões. O documento original em sua língua nativa deve ser considerado a fonte autorizada. Para informações críticas, recomenda-se tradução profissional realizada por humanos. Não nos responsabilizamos por quaisquer mal-entendidos ou interpretações incorretas decorrentes do uso desta tradução.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

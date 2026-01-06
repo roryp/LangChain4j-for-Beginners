@@ -1,70 +1,72 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f538a51cfd13147d40d84e936a0f485c",
-  "translation_date": "2025-12-13T17:21:12+00:00",
+  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+  "translation_date": "2026-01-06T01:30:16+00:00",
   "source_file": "03-rag/README.md",
   "language_code": "sl"
 }
 -->
-# Modul 03: RAG (Generiranje z iskanjem informacij)
+# Modul 03: RAG (Retrieval-Augmented Generation)
 
-## Kazalo
+## Kazalo vsebine
 
 - [Kaj se boste naučili](../../../03-rag)
-- [Predpogoji](../../../03-rag)
+- [Pogojna znanja](../../../03-rag)
 - [Razumevanje RAG](../../../03-rag)
 - [Kako deluje](../../../03-rag)
   - [Obdelava dokumentov](../../../03-rag)
-  - [Ustvarjanje vdelav](../../../03-rag)
+  - [Ustvarjanje vdelav (embeddingov)](../../../03-rag)
   - [Semantično iskanje](../../../03-rag)
   - [Generiranje odgovorov](../../../03-rag)
 - [Zagon aplikacije](../../../03-rag)
 - [Uporaba aplikacije](../../../03-rag)
-  - [Naloži dokument](../../../03-rag)
-  - [Postavi vprašanja](../../../03-rag)
-  - [Preveri vire](../../../03-rag)
-  - [Eksperimentiraj z vprašanji](../../../03-rag)
+  - [Naložite dokument](../../../03-rag)
+  - [Postavite vprašanja](../../../03-rag)
+  - [Preverite vire](../../../03-rag)
+  - [Eksperimentirajte z vprašanji](../../../03-rag)
 - [Ključni pojmi](../../../03-rag)
-  - [Strategija razdelitve na kose](../../../03-rag)
+  - [Strategija razdeljevanja](../../../03-rag)
   - [Ocene podobnosti](../../../03-rag)
   - [Shranjevanje v pomnilniku](../../../03-rag)
-  - [Upravljanje kontekstnega okna](../../../03-rag)
+  - [Upravljanje okna konteksta](../../../03-rag)
 - [Kdaj je RAG pomemben](../../../03-rag)
 - [Naslednji koraki](../../../03-rag)
 
 ## Kaj se boste naučili
 
-V prejšnjih modulih ste se naučili, kako voditi pogovore z AI in učinkovito strukturirati svoje pozive. Toda obstaja temeljna omejitev: jezikovni modeli poznajo le tisto, kar so se naučili med usposabljanjem. Ne morejo odgovarjati na vprašanja o pravilnikih vašega podjetja, dokumentaciji vaših projektov ali kakršnih koli informacijah, na katerih niso bili usposobljeni.
+V prejšnjih modulih ste se naučili, kako se pogovarjati z umetno inteligenco in učinkovito strukturirati vaše pozive. Vendar obstaja temeljna omejitev: jezikovni modeli vedo samo to, kar so se naučili med usposabljanjem. Ne morejo odgovarjati na vprašanja o notranjih pravilnikih vašega podjetja, projektni dokumentaciji ali kateri koli informaciji, ki je niso bili usposobljeni.
 
-RAG (Generiranje z iskanjem informacij) rešuje ta problem. Namesto da bi modelu poskušali "naučiti" vaše informacije (kar je drago in nepraktično), mu omogočite iskanje po vaših dokumentih. Ko nekdo postavi vprašanje, sistem najde ustrezne informacije in jih vključi v poziv. Model nato odgovori na podlagi tega pridobljenega konteksta.
+RAG (Retrieval-Augmented Generation) rešuje ta problem. Namesto da bi modelu poskušali "vcepiti" vaše podatke (kar je drago in nepraktično), mu omogočite iskanje po vaših dokumentih. Ko nekdo zastavi vprašanje, sistem poišče relevantne informacije in jih vključi v poziv. Model nato odgovori na podlagi tega pridobljenega konteksta.
 
-RAG si lahko predstavljate kot da modelu daste referenčno knjižnico. Ko postavite vprašanje, sistem:
+Razmislite o RAG kot o tem, da modelu daste referenčno knjižnico. Ko postavite vprašanje, sistem:
 
-1. **Uporabniški poizvedba** - Postavite vprašanje  
-2. **Vdelava** - Vaše vprašanje pretvori v vektor  
-3. **Iskanje vektorjev** - Najde podobne kose dokumentov  
-4. **Sestavljanje konteksta** - Doda ustrezne kose v poziv  
-5. **Odgovor** - LLM generira odgovor na podlagi konteksta  
+1. **Uporabniški poizved** - Postavite vprašanje
+2. **Vdelava (embedding)** - Vaše vprašanje se prevede v vektor
+3. **Vektorsko iskanje** - Poišče podobne dele dokumenta
+4. **Sestavljanje konteksta** - V poziv doda ustrezne dele
+5. **Odgovor** - LLM ustvari odgovor na podlagi konteksta
 
-To utemelji odgovore modela na vaših dejanskih podatkih namesto da bi se zanašal na svoje usposabljanje ali si izmislil odgovore.
+S tem temelji odgovore modela na vaših dejanskih podatkih, namesto da bi se zanašal na naučeno znanje ali izmišljal odgovore.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.sl.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.sl.png" alt="RAG arhitektura" width="800"/>
 
-*Potek dela RAG - od uporabniške poizvedbe do semantičnega iskanja do generiranja kontekstualnega odgovora*
+*Potek dela RAG – od uporabniške poizvedbe do semantičnega iskanja in generiranja kontekstualnih odgovorov*
 
-## Predpogoji
+## Pogojna znanja
 
-- Dokončan Modul 01 (vzpostavljeni Azure OpenAI viri)  
-- Datoteka `.env` v korenski mapi z Azure poverilnicami (ustvarjena z `azd up` v Modulu 01)  
+- Dokončan Modul 01 (razporejene Azure OpenAI vire)
+- `.env` datoteka v korenskem imeniku z Azure poverilnicami (ustvarjena z `azd up` v Modulu 01)
 
 > **Opomba:** Če niste dokončali Modula 01, najprej sledite navodilom za namestitev tam.
 
 ## Kako deluje
 
-**Obdelava dokumentov** - [DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+### Obdelava dokumentov
 
-Ko naložite dokument, ga sistem razdeli na kose - manjše dele, ki udobno ustrezajo v kontekstno okno modela. Ti kosi se rahlo prekrivajo, da ne izgubite konteksta na mejah.
+[DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+
+Ko naložite dokument, sistem razdeli ta dokument na dele – manjše kose, ki udobno ustrezajo modelovemu oknu konteksta. Ti deli se rahlo prekrivajo, da ne izgubite konteksta na robovih.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("sample-document.txt");
@@ -74,15 +76,17 @@ DocumentSplitter splitter = DocumentSplitters
 
 List<TextSegment> segments = splitter.split(document);
 ```
-  
-> **🤖 Poskusite z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odprite [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) in vprašajte:  
-> - "Kako LangChain4j razdeli dokumente na kose in zakaj je prekrivanje pomembno?"  
-> - "Kakšna je optimalna velikost kosa za različne vrste dokumentov in zakaj?"  
+
+> **🤖 Poskusite z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odprite [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) in vprašajte:
+> - "Kako LangChain4j razdeli dokumente na dele in zakaj je prekrivanje pomembno?"
+> - "Kakšna je optimalna velikost delov za različne tipe dokumentov in zakaj?"
 > - "Kako obravnavam dokumente v več jezikih ali s posebno obliko?"
 
-**Ustvarjanje vdelav** - [LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+### Ustvarjanje vdelav (embeddingov)
 
-Vsak kos se pretvori v numerično predstavitev, imenovano vdelava - v bistvu matematični prstni odtis, ki zajame pomen besedila. Podobno besedilo proizvaja podobne vdelave.
+[LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+
+Vsak del se pretvori v številčno predstavitev, imenovano vdelava – gre za matematični prstni odtis, ki zajema pomen besedila. Podobno besedilo ustvarja podobne vdelave.
 
 ```java
 @Bean
@@ -97,14 +101,16 @@ public EmbeddingModel embeddingModel() {
 EmbeddingStore<TextSegment> embeddingStore = 
     new InMemoryEmbeddingStore<>();
 ```
-  
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.sl.png" alt="Vector Embeddings Space" width="800"/>
+
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.sl.png" alt="Prostor vektornih vdelav" width="800"/>
 
 *Dokumenti predstavljeni kot vektorji v prostoru vdelav - podobne vsebine se združujejo*
 
-**Semantično iskanje** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Semantično iskanje
 
-Ko postavite vprašanje, tudi vaše vprašanje postane vdelava. Sistem primerja vdelavo vašega vprašanja z vsemi vdelavami kosov dokumentov. Najde kose z najbolj podobnimi pomeni - ne le ujemanje ključnih besed, ampak dejanska semantična podobnost.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+Ko postavite vprašanje, se tudi vaše vprašanje pretvori v vdelavo. Sistem primerja vdelavo vašega vprašanja z vdelavami vseh delov dokumentov. Poišče dele z najsličnejšimi pomeni – ne samo ujemanje ključnih besed, ampak dejansko semantično podobnost.
 
 ```java
 Embedding queryEmbedding = embeddingModel.embed(question).content();
@@ -117,178 +123,180 @@ for (EmbeddingMatch<TextSegment> match : matches) {
     double score = match.score();
 }
 ```
-  
-> **🤖 Poskusite z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odprite [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) in vprašajte:  
-> - "Kako deluje iskanje podobnosti z vdelavami in kaj določa oceno?"  
-> - "Kakšen prag podobnosti naj uporabim in kako vpliva na rezultate?"  
-> - "Kako ravnam v primerih, ko ni najdenih ustreznih dokumentov?"
 
-**Generiranje odgovorov** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+> **🤖 Poskusite z [GitHub Copilot](https://github.com/features/copilot) Chat:** Odprite [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) in vprašajte:
+> - "Kako deluje iskanje podobnosti z vdelavami in kaj določa oceno?"
+> - "Kateri prag podobnosti naj uporabim in kako vpliva na rezultate?"
+> - "Kako ravnam v primerih, ko ni najdenih relevantnih dokumentov?"
 
-Najbolj relevantni kosi so vključeni v poziv modelu. Model prebere te specifične kose in odgovori na vaše vprašanje na podlagi teh informacij. To preprečuje halucinacije - model lahko odgovori le na podlagi tega, kar ima pred seboj.
+### Generiranje odgovorov
+
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+Najbolj relevantni deli so vključeni v poziv modelu. Model prebere te specifične dele in odgovori na vaše vprašanje na podlagi teh informacij. To preprečuje halucinacije – model lahko odgovori le na podlagi razpoložljivih podatkov.
 
 ## Zagon aplikacije
 
 **Preverite namestitev:**
 
-Prepričajte se, da datoteka `.env` obstaja v korenski mapi z Azure poverilnicami (ustvarjena med Modulom 01):  
+Prepričajte se, da je `.env` datoteka v korenskem imeniku z Azure poverilnicami (ustvarjena med Modulom 01):
 ```bash
-cat ../.env  # Prikazati bi moral AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
+cat ../.env  # Prikazati mora AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
-  
+
 **Zaženite aplikacijo:**
 
-> **Opomba:** Če ste že zagnali vse aplikacije z `./start-all.sh` iz Modula 01, ta modul že teče na vratih 8081. Lahko preskočite spodnje ukaze za zagon in pojdite neposredno na http://localhost:8081.
+> **Opomba:** Če ste že zagnali vse aplikacije z uporabo `./start-all.sh` iz Modula 01, ta modul že teče na vratih 8081. Lahko preskočite ukaze za začetek spodaj in pojdite neposredno na http://localhost:8081.
 
-**Možnost 1: Uporaba Spring Boot nadzorne plošče (priporočeno za uporabnike VS Code)**
+**Možnost 1: Uporaba Spring Boot Dashboard (priporočeno za uporabnike VS Code)**
 
-Razvojno okolje vsebuje razširitev Spring Boot Dashboard, ki omogoča vizualno upravljanje vseh Spring Boot aplikacij. Najdete jo v vrstici aktivnosti na levi strani VS Code (ikona Spring Boot).
+Dev container vsebuje razširitev Spring Boot Dashboard, ki ponuja vizualni vmesnik za upravljanje vseh Spring Boot aplikacij. Najdete ga na vrstici z dejavnostmi na levi strani VS Code (poiščite ikono Spring Boot).
 
-Iz Spring Boot nadzorne plošče lahko:  
-- Vidite vse razpoložljive Spring Boot aplikacije v delovnem prostoru  
-- Zaženete/ustavite aplikacije z enim klikom  
-- V realnem času spremljate dnevnike aplikacij  
-- Nadzorujete stanje aplikacij  
+Iz Spring Boot Dashboarda lahko:
+- Vidite vse razpoložljive Spring Boot aplikacije v delovnem prostoru
+- Zaženete/ustavite aplikacije z enim klikom
+- V realnem času spremljate dnevniške zapise aplikacij
+- Spremljate stanje aplikacij
 
-Preprosto kliknite gumb za predvajanje zraven "rag" za zagon tega modula ali zaženite vse module hkrati.
+Preprosto kliknite gumb za predvajanje ob "rag" za zagon tega modula ali pa zaženite vse module naenkrat.
 
 <img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.sl.png" alt="Spring Boot Dashboard" width="400"/>
 
-**Možnost 2: Uporaba ukaznih skript**
+**Možnost 2: Uporaba shell skript**
 
 Zaženite vse spletne aplikacije (moduli 01-04):
 
-**Bash:**  
+**Bash:**
 ```bash
 cd ..  # Iz korenskega imenika
 ./start-all.sh
 ```
-  
-**PowerShell:**  
+
+**PowerShell:**
 ```powershell
 cd ..  # Iz korenskega imenika
 .\start-all.ps1
 ```
-  
+
 Ali zaženite samo ta modul:
 
-**Bash:**  
+**Bash:**
 ```bash
 cd 03-rag
 ./start.sh
 ```
-  
-**PowerShell:**  
+
+**PowerShell:**
 ```powershell
 cd 03-rag
 .\start.ps1
 ```
-  
-Oba skripta samodejno naložita okoljske spremenljivke iz korenske datoteke `.env` in zgradita JAR-je, če ti ne obstajajo.
 
-> **Opomba:** Če želite pred zagonom ročno zgraditi vse module:  
->  
-> **Bash:**  
+Obe skripti samodejno naložita spremenljivke okolja iz korenske `.env` datoteke in zgradita JAR če še ne obstaja.
+
+> **Opomba:** Če želite vse module zgraditi ročno pred zagonom:
+>
+> **Bash:**
 > ```bash
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
-  
-> **PowerShell:**  
+
+> **PowerShell:**
 > ```powershell
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
-  
+
 Odprite http://localhost:8081 v vašem brskalniku.
 
 **Za ustavitev:**
 
-**Bash:**  
+**Bash:**
 ```bash
 ./stop.sh  # Samo ta modul
 # Ali
 cd .. && ./stop-all.sh  # Vsi moduli
 ```
-  
-**PowerShell:**  
+
+**PowerShell:**
 ```powershell
 .\stop.ps1  # Samo ta modul
 # Ali
 cd ..; .\stop-all.ps1  # Vsi moduli
 ```
-  
+
 ## Uporaba aplikacije
 
-Aplikacija omogoča spletni vmesnik za nalaganje dokumentov in postavljanje vprašanj.
+Aplikacija nudi spletni vmesnik za nalaganje dokumentov in postavljanje vprašanj.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.sl.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.sl.png" alt="RAG uporabniški vmesnik" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Vmesnik aplikacije RAG - naložite dokumente in postavljajte vprašanja*
+*Uporabniški vmesnik RAG aplikacije – naložite dokumente in postavite vprašanja*
 
-**Naloži dokument**
+### Naložite dokument
 
-Začnite z nalaganjem dokumenta - za testiranje so najbolj primerni TXT datoteke. V tem imeniku je na voljo `sample-document.txt`, ki vsebuje informacije o funkcijah LangChain4j, implementaciji RAG in najboljših praksah - popolno za testiranje sistema.
+Začnite z nalaganjem dokumenta – za testiranje so najboljši TXT datoteki. V tem imeniku je na voljo `sample-document.txt`, ki vsebuje informacije o funkcijah LangChain4j, implementaciji RAG in najboljših praksah – popolno za testiranje sistema.
 
-Sistem obdela vaš dokument, ga razdeli na kose in ustvari vdelave za vsak kos. To se zgodi samodejno ob nalaganju.
+Sistem obdela vaš dokument, razdeli ga na dele in za vsak del ustvari vdelave. To se zgodi samodejno ob nalaganju.
 
-**Postavi vprašanja**
+### Postavite vprašanja
 
-Zdaj postavite specifična vprašanja o vsebini dokumenta. Poskusite z dejstvi, ki so jasno navedena v dokumentu. Sistem poišče ustrezne kose, jih vključi v poziv in generira odgovor.
+Zdaj postavite specifična vprašanja glede vsebine dokumenta. Poskusite z dejstvi, ki so jasno navedena v dokumentu. Sistem poišče relevantne dele, jih vključi v poziv in ustvari odgovor.
 
-**Preveri vire**
+### Preverite vire
 
-Opazite, da vsak odgovor vključuje reference na vire z ocenami podobnosti. Te ocene (od 0 do 1) kažejo, kako relevantni so bili posamezni kosi za vaše vprašanje. Višje ocene pomenijo boljše ujemanje. Tako lahko preverite odgovor glede na izvorno gradivo.
+Opazite, da vsak odgovor vsebuje reference na vire z ocenami podobnosti. Te ocene (od 0 do 1) prikazujejo, kako relevantni so bili posamezni deli za vaše vprašanje. Višje ocene pomenijo boljše ujemanje. Tako lahko preverite odgovor glede na izvorno gradivo.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.sl.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.sl.png" alt="Rezultati poizvedbe RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Rezultati poizvedbe prikazujejo odgovor z referencami virov in ocenami relevantnosti*
+*Rezultati poizvedbe prikazujejo odgovor z referencami na vire in ocenami relevantnosti*
 
-**Eksperimentiraj z vprašanji**
+### Eksperimentirajte z vprašanji
 
-Poskusite različne vrste vprašanj:  
-- Specifična dejstva: "Kakšna je glavna tema?"  
-- Primerjave: "Kakšna je razlika med X in Y?"  
-- Povzetki: "Povzemite ključne točke o Z"  
+Poskusite različne vrste vprašanj:
+- Specifična dejstva: "Kakšna je glavna tema?"
+- Primerjave: "Kakšna je razlika med X in Y?"
+- Povzetki: "Povzemite ključne točke o Z"
 
-Opazujte, kako se ocene relevantnosti spreminjajo glede na to, kako dobro se vaše vprašanje ujema z vsebino dokumenta.
+Opazujte, kako ocene relevantnosti spreminjajo glede na to, kako dobro vaše vprašanje ustreza vsebini dokumenta.
 
 ## Ključni pojmi
 
-**Strategija razdelitve na kose**
+### Strategija razdeljevanja
 
-Dokumenti so razdeljeni na kose po 300 tokenov z 30 tokeni prekrivanja. Ta ravnovesje zagotavlja, da ima vsak kos dovolj konteksta, da je smiseln, hkrati pa ostane dovolj majhen, da lahko v poziv vključite več kosov.
+Dokumenti se razdelijo v 300-token delov z 30 tokeni prekrivanja. Ta kompromis zagotavlja dovolj konteksta za smiselnost posameznih delov, hkrati pa ostane dovolj majhen, da je mogoče v poziv vključiti več delov.
 
-**Ocene podobnosti**
+### Ocene podobnosti
 
-Ocene segajo od 0 do 1:  
-- 0,7-1,0: Zelo relevantno, natančno ujemanje  
-- 0,5-0,7: Relevantno, dober kontekst  
-- Pod 0,5: Odfiltrirano, preveč različni  
+Ocene se gibljejo med 0 in 1:
+- 0.7-1.0: Zelo relevantno, točno ujemanje
+- 0.5-0.7: Relevantno, dober kontekst
+- Pod 0.5: Odfiltrirano, preveč različni
 
-Sistem pridobi le kose nad minimalnim pragom, da zagotovi kakovost.
+Sistem pridobi le dele nad minimalnim pragom, da zagotovi kakovost.
 
-**Shranjevanje v pomnilniku**
+### Shranjevanje v pomnilniku
 
-Ta modul uporablja shranjevanje v pomnilniku za preprostost. Ko ponovno zaženete aplikacijo, so naloženi dokumenti izgubljeni. Produkcijski sistemi uporabljajo trajne vektorske baze podatkov, kot so Qdrant ali Azure AI Search.
+Ta modul uporablja shranjevanje v pomnilniku zaradi preprostosti. Ko aplikacijo znova zaženete, naloženi dokumenti se izgubijo. Produkcijski sistemi uporabljajo trajne vektorske podatkovne baze, kot so Qdrant ali Azure AI Search.
 
-**Upravljanje kontekstnega okna**
+### Upravljanje okna konteksta
 
-Vsak model ima največje kontekstno okno. Ne morete vključiti vseh kosov velikega dokumenta. Sistem pridobi top N najbolj relevantnih kosov (privzeto 5), da ostane znotraj omejitev in hkrati zagotovi dovolj konteksta za natančne odgovore.
+Vsak model ima maksimalno okno konteksta. Ne morete vključiti vseh delov velikega dokumenta. Sistem pridobi top N najbolj relevantnih delov (privzeto 5), da ostane znotraj omejitev in hkrati nudi dovolj konteksta za natančne odgovore.
 
 ## Kdaj je RAG pomemben
 
-**Uporabite RAG, ko:**  
-- Odgovarjate na vprašanja o lastniških dokumentih  
-- Informacije se pogosto spreminjajo (pravilniki, cene, specifikacije)  
-- Natančnost zahteva navedbo vira  
-- Vsebina je prevelika, da bi jo vključili v en sam poziv  
-- Potrebujete preverljive, utemeljene odgovore  
+**Uporabite RAG, kadar:**
+- Odgovarjate na vprašanja o lastniških dokumentih
+- Informacije se pogosto spreminjajo (pravilniki, cene, specifikacije)
+- Točnost zahteva pripis virov
+- Vsebina je prevelika, da bi jo vključili v en poziv
+- Potrebni so preverljivi, utemeljeni odgovori
 
-**Ne uporabljajte RAG, ko:**  
-- Vprašanja zahtevajo splošno znanje, ki ga model že ima  
-- Potrebni so podatki v realnem času (RAG deluje na naloženih dokumentih)  
-- Vsebina je dovolj majhna, da jo lahko vključite neposredno v pozive  
+**Ne uporabljajte RAG, kadar:**
+- Vprašanja zahtevajo splošno znanje, ki ga model že ima
+- Potrebni so podatki v realnem času (RAG deluje na naloženih dokumentih)
+- Vsebina je dovolj majhna, da jo lahko vključite neposredno v pozive
 
 ## Naslednji koraki
 
@@ -296,11 +304,11 @@ Vsak model ima največje kontekstno okno. Ne morete vključiti vseh kosov velike
 
 ---
 
-**Navigacija:** [← Prejšnji: Modul 02 - Oblikovanje pozivov](../02-prompt-engineering/README.md) | [Nazaj na glavno](../README.md) | [Naslednji: Modul 04 - Orodja →](../04-tools/README.md)
+**Navigacija:** [← Prejšnji: Modul 02 - Inženiring pozivov](../02-prompt-engineering/README.md) | [Nazaj na glavno](../README.md) | [Naslednji: Modul 04 - Orodja →](../04-tools/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Omejitev odgovornosti**:
-Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas opozarjamo, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku velja za avtoritativni vir. Za ključne informacije priporočamo strokovni človeški prevod. Za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda, ne odgovarjamo.
+Ta dokument je bil preveden z uporabo storitve za prevajanje z umetno inteligenco [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, upoštevajte, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvorni jezik je treba obravnavati kot avtoritativni vir. Za ključne informacije priporočamo strokoven človeški prevod. Nismo odgovorni za morebitna nesporazume ali napačne razlage, ki izhajajo iz uporabe tega prevoda.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

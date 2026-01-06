@@ -1,56 +1,57 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
-  "translation_date": "2025-12-31T03:41:35+00:00",
+  "original_hash": "6c816d130a1fa47570c11907e72d84ae",
+  "translation_date": "2026-01-06T00:38:12+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "sw"
 }
 -->
-# Moduli 05: Protokoli ya Muktadha wa Mfano (MCP)
+# Module 05: Itifaki ya Muktadha wa Mfano (MCP)
 
-## Yaliyomo
+## Jedwali la Yaliyomo
 
-- [Utakachojifunza](../../../05-mcp)
+- [Utajifunza Nini](../../../05-mcp)
 - [MCP ni Nini?](../../../05-mcp)
 - [Jinsi MCP Inavyofanya Kazi](../../../05-mcp)
-- [Moduli ya Agentic](../../../05-mcp)
-- [Kuendesha Mifano](../../../05-mcp)
-  - [Mahitaji ya Mwanzo](../../../05-mcp)
-- [Anza Haraka](../../../05-mcp)
-  - [Uendeshaji wa Faili (Stdio)](../../../05-mcp)
+- [Kipengele cha Agentic](../../../05-mcp)
+- [Kukimbia Mifano](../../../05-mcp)
+  - [Mahitaji ya Awali](../../../05-mcp)
+- [Mwanzo wa Haraka](../../../05-mcp)
+  - [Mifumo ya Faili (Stdio)](../../../05-mcp)
   - [Wakala Msimamizi](../../../05-mcp)
-    - [Kuelewa Matokeo](../../../05-mcp)
-    - [Ufafanuzi wa Vipengele vya Moduli ya Agentic](../../../05-mcp)
-- [Misingi Muhimu](../../../05-mcp)
+    - [Kufahamu Matokeo](../../../05-mcp)
+    - [Mikakati ya Majibu](../../../05-mcp)
+    - [Maelezo ya Sifa za Kipengele cha Agentic](../../../05-mcp)
+- [Madhumuni Muhimu](../../../05-mcp)
 - [Hongera!](../../../05-mcp)
   - [Nini Ifuatayo?](../../../05-mcp)
 
-## Utakachojifunza
+## Utajifunza Nini
 
-Umejenga AI ya mazungumzo, umeibua mbinu za kuandika maelekezo (prompts), umeweka majibu kwenye nyaraka, na umeunda mawakala wenye zana. Lakini zana zote hizo zilijengwa mahsusi kwa ajili ya programu yako maalum. Je, itakuwaje kama ungeweza kumpa AI yako ufikiaji wa mazingira ya kawaida ya zana ambazo mtu yeyote anaweza kuunda na kushiriki? Katika moduli hii, utajifunza jinsi ya kufanya hivyo kwa kutumia Protokoli ya Muktadha wa Mfano (MCP) na moduli ya agentic ya LangChain4j. Kwanza tunaonyesha msomaji wa faili wa MCP rahisi kisha tunaonyesha jinsi inavyoweza kuingizwa kwa urahisi katika mtiririko wa kazi za agentic wa hali ya juu kwa kutumia muundo wa Wakala Msimamizi.
+Umejenga AI ya mazungumzo, umeweza kutumia maelekezo, umeweka majibu katika nyaraka, na umeunda mawakala wenye zana. Lakini zana zote hizo zilijengwa maalum kwa programu yako. Je, vipi kama ungeweza kumruhusu AI yako kutumia ekolojia ya zana zilizo na viwango vya kawaida ambavyo mtu yeyote anaweza kuunda na kushirikiana? Katika moduli hii, utajifunza jinsi ya kufanya hivyo kwa kutumia Itifaki ya Muktadha wa Mfano (MCP) na kipengele cha agentic cha LangChain4j. Kwanza tunaonyesha msomaji rahisi wa faili za MCP halafu tunaonyesha jinsi inavyojumuisha kwa urahisi katika taratibu za agentic za hali ya juu kwa kutumia mfano wa Wakala Msimamizi.
 
 ## MCP ni Nini?
 
-Protokoli ya Muktadha wa Mfano (MCP) inatoa hasa hilo - njia ya kawaida kwa programu za AI kugundua na kutumia zana za nje. Badala ya kuandika integrisho za kawaida kwa kila chanzo cha data au huduma, unajiunga na seva za MCP ambazo zinaonyesha uwezo wao kwa muundo thabiti. Wakala wako wa AI kisha anaweza kugundua na kutumia zana hizi moja kwa moja.
+Itifaki ya Muktadha wa Mfano (MCP) hutoa hasa hilo - njia ya kawaida kwa programu za AI kugundua na kutumia zana za nje. Badala ya kuandika mjumuisho maalum kwa kila chanzo cha data au huduma, unajiunga na seva za MCP zinazofichua uwezo wao kwa muundo unaolingana. Wakala wako wa AI basi anaweza kugundua na kutumia zana hizi moja kwa moja.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.sw.png" alt="Ulinganisho wa MCP" width="800"/>
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.sw.png" alt="MCP Comparison" width="800"/>
 
-*Kabala ya MCP: Integrisho ngumu point-to-point. Baada ya MCP: Protokoli moja, uwezekano usio na kifani.*
+*Kabala ya MCP: Mizunguko ya moja kwa moja tata. Baada ya MCP: Protokoli moja, uwezekano usio na kikomo.*
 
-MCP inatatua tatizo msingi katika uundaji wa AI: kila integrisho ni maalum. Unataka kufikia GitHub? Kodi maalum. Unataka kusoma faili? Kodi maalum. Unataka kuchunguza hifadhidata? Kodi maalum. Na hakuna ya integrisho hizi inafanya kazi kwa programu nyingine za AI.
+MCP inatatua tatizo la msingi katika maendeleo ya AI: kila ujumuishaji ni maalum. Unataka kufikia GitHub? Msimbo maalum. Unataka kusoma faili? Msimbo maalum. Unataka kuuliza database? Msimbo maalum. Na hakuna ujumuishaji wowote kati ya haya unaofanya kazi na programu zingine za AI.
 
-MCP inafanya iwe standard. Seva ya MCP inaonyesha zana zenye maelezo wazi na schemas ya vigezo. Mteja yeyote wa MCP anaweza kuunganishwa, kugundua zana zilizopo, na kuzitumia. Jenga mara moja, tumia kila mahali.
+MCP huweka kiwango hiki. Seva ya MCP inaonyesha zana kwa maelezo wazi na skimu. Mteja yeyote wa MCP anaweza kuungana, kugundua zana zinazopatikana, na kuzitumia. Jenga mara moja, tumia kila mahali.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.sw.png" alt="Muundo wa MCP" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.sw.png" alt="MCP Architecture" width="800"/>
 
-*Miundo ya Protokoli ya Muktadha wa Mfano - ugunduo na utekelezaji wa zana uliosahihishwa*
+*Miundo ya Itifaki ya Muktadha wa Mfano - ugunduzi na utekelezaji wa zana unaolingana*
 
 ## Jinsi MCP Inavyofanya Kazi
 
-**Usanifu wa Seva-Mteja**
+**Muundo wa Seva-Mteja**
 
-MCP inatumia modeli ya mteja-seva. Seva zinatoa zana - kusoma faili, kuchunguza hifadhidata, kupiga API. Wateja (programu yako ya AI) huungana na seva na kutumia zana zao.
+MCP hutumia mfano wa mteja-seva. Seva hutoa zana - kusoma faili, kuuliza database, kuita API. Wateja (programu yako ya AI) huungana na seva na kutumia zana zao.
 
 Ili kutumia MCP na LangChain4j, ongeza utegemezi huu wa Maven:
 
@@ -64,19 +65,19 @@ Ili kutumia MCP na LangChain4j, ongeza utegemezi huu wa Maven:
 
 **Ugunduzi wa Zana**
 
-Unapomwingiza mteja wako kwa seva ya MCP, huuliza "Una zana gani?" Seva inajibu kwa orodha ya zana zinazopatikana, kila moja ikiwa na maelezo na schema za vigezo. Wakala wako wa AI kisha anaweza kuamua zana gani za kutumia kulingana na maombi ya mtumiaji.
+Unapo jiunga na seva ya MCP, huuliza "Una zana zipi?" Seva hutoa orodha ya zana zinazopatikana, kila moja ikiwa na maelezo na skimu za vigezo. Wakala wako wa AI anaweza kisha kuamua ni zana zipi za kutumia kulingana na maombi ya mtumiaji.
 
 **Mbinu za Usafirishaji**
 
-MCP inaunga mkono mbinu tofauti za usafirishaji. Moduli hii inaonyesha usafirishaji wa Stdio kwa michakato ya eneo:
+MCP inaunga mkono mbinu tofauti za usafirishaji. Moduli hii inaonyesha usafirishaji wa Stdio kwa michakato ya ndani:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.sw.png" alt="Mbinu za Usafirishaji" width="800"/>
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.sw.png" alt="Transport Mechanisms" width="800"/>
 
-*Mbinu za usafirishaji za MCP: HTTP kwa seva za mbali, Stdio kwa michakato za eneo*
+*Mbinu za usafirishaji MCP: HTTP kwa seva za mbali, Stdio kwa michakato ya ndani*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Kwa michakato ya eneo. Programu yako inaanzisha seva kama mchakato mdogo na kuwasiliana kupitia input/output ya kawaida. Inafaa kwa ufikiaji wa mfumo wa faili au zana za mstari wa amri.
+Kwa michakato ya ndani. Programu yako huanzisha seva kama mchakato mdogo na kuwasiliana kupitia pembejeo/utokeo wa kawaida. Inafaa kwa upatikanaji wa mfumo wa faili au zana za mstari wa amri.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
@@ -89,18 +90,18 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .build();
 ```
 
-> **🤖 Jaribu na [GitHub Copilot](https://github.com/features/copilot) Chat:** Fungua [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) na ulize:
-> - "Stdio transport inafanya kazi vipi na ni lini nifahamu kutumia HTTP badala yake?"
-> - "LangChain4j inasimamia vipi maisha ya michakato ya seva za MCP zilizoanzishwa?"
-> - "Je, ni hatari gani za usalama za kumpa AI ufikiaji wa mfumo wa faili?"
+> **🤖 Jaribu na [GitHub Copilot](https://github.com/features/copilot) Chat:** Fungua [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) na uulize:
+> - "Usafirishaji wa Stdio unafanyaje kazi na ni lini inapaswa kutumika badala ya HTTP?"
+> - "LangChain4j inasimamia vipi mzunguko wa maisha ya michakato ya seva za MCP?"
+> - "Ni madhara gani ya kiusalama ya kumpa AI upatikanaji wa mfumo wa faili?"
 
-## Moduli ya Agentic
+## Kipengele cha Agentic
 
-Wakati MCP inatoa zana za kawaida, moduli ya **agentic** ya LangChain4j inatoa njia ya kutamka (declarative) ya kujenga mawakala wanaoandaa zana hizo. Annotation ya `@Agent` na `AgenticServices` inakuwezesha kufafanua tabia ya wakala kupitia interfaces badala ya msimbo wa amri.
+Wakati MCP hutoa zana zilizo fumwa, kipengele cha **agentic** cha LangChain4j hutoa njia ya kauli ili kujenga mawakala wanaoratibu zana hizo. Alama ya `@Agent` na `AgenticServices` hukuwezesha kufafanua tabia za wakala kupitia interface badala ya msimbo wa amri.
 
-Katika moduli hii, utakagua muundo wa **Wakala Msimamizi** — njia ya hali ya juu ya AI ya agentic ambapo wakala "msimamizi" huamua kwa nguvu ni wakala gani wadogo waite kwa msingi wa ombi la mtumiaji. Tutachanganya dhana zote mbili kwa kumpa moja ya mawakala wetu uwezo wa ufikiaji faili ulioendeshwa na MCP.
+Katika moduli hii, utachunguza mfano wa **Wakala Msimamizi** — njia ya hali ya juu ya AI ya agentic ambapo wakala "msimamizi" huamua kwa nguvu ni mawakala gani ndogo wataitishwa kulingana na maombi ya mtumiaji. Tutachanganya dhana zote mbili kwa kumpa mojawapo ya mawakala wetu ndogo uwezo wa upatikanaji wa faili unaotegemea MCP.
 
-Ili kutumia moduli ya agentic, ongeza utegemezi huu wa Maven:
+Ili kutumia kipengele cha agentic, ongeza utegemezi huu wa Maven:
 
 ```xml
 <dependency>
@@ -110,53 +111,53 @@ Ili kutumia moduli ya agentic, ongeza utegemezi huu wa Maven:
 </dependency>
 ```
 
-> **⚠️ Maajaribio:** moduli `langchain4j-agentic` ni **ya majaribio** na inaweza kubadilika. Njia thabiti ya kujenga wasaidizi wa AI inabaki `langchain4j-core` na zana maalum (Moduli 04).
+> **⚠️ Jaribio:** Moduli ya `langchain4j-agentic` ni **jaribio** na inaweza kubadilika. Njia thabiti ya kujenga misaada ya AI bado ni `langchain4j-core` na zana maalum (Moduli 04).
 
-## Kuendesha Mifano
+## Kukimbia Mifano
 
-### Mahitaji ya Mwanzo
+### Mahitaji ya Awali
 
 - Java 21+, Maven 3.9+
 - Node.js 16+ na npm (kwa seva za MCP)
-- Mabadiliko ya mazingira (environment variables) yaliyowekwa katika faili `.env` (kutoka kwenye saraka kuu):
-  - **Kwa StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
-  - **Kwa SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (sawa na Moduli 01-04)
+- Mabadiliko ya mazingira yamewekwa katika faili `.env` (kutoka kwenye saraka ya mzizi):
+  - `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (sawa na Moduli 01-04)
 
-> **Kumbuka:** Ikiwa bado hujaunda mabadiliko yako ya mazingira, angalia [Module 00 - Quick Start](../00-quick-start/README.md) kwa maelekezo, au nakili `.env.example` kwenda `.env` katika saraka kuu na ujaze thamani zako.
+> **Kumbuka:** Ikiwa bado hujaunda mabadiliko yako ya mazingira, tazama [Moduli 00 - Mwanzo wa Haraka](../00-quick-start/README.md) kwa maagizo, au nakili `.env.example` hadi `.env` katika saraka ya mzizi na jaza maadili yako.
 
-## Anza Haraka
+## Mwanzo wa Haraka
 
-**Kutumia VS Code:** Bonyeza-kulia kwenye faili yoyote ya demo kwenye Explorer na chagua **"Run Java"**, au tumia usanidi za launch kutoka kwenye Run and Debug panel (hakikisha umeongeza token yako kwenye faili `.env` kwanza).
+**Kutumia VS Code:** Bonyeza kitufe cha kulia kwenye faili yoyote ya maonyesho katika Explorer na uchague **"Run Java"**, au tumia usanidi wa kuanzisha kutoka kwenye paneli ya Run and Debug (hakikisha umeongeza token yako katika faili `.env` kwanza).
 
-**Kutumia Maven:** Vinginevyo, unaweza kuendesha kutoka kwenye amri lini kwa mifano hapa chini.
+**Kutumia Maven:** Vinginevyo, unaweza kuendesha kutoka mstari wa amri na mifano ifuatayo.
 
-### Uendeshaji wa Faili (Stdio)
+### Mifumo ya Faili (Stdio)
 
-Hii inaonyesha zana za msingi zinazotegemea mchakato mdogo wa eneo.
+Hii inaonyesha zana zinazotegemea michakato ya ndani.
 
-**✅ Hakuna mahitaji ya mwanzo** - seva ya MCP inaanzishwa moja kwa moja.
+**✅ Hakuna mahitaji ya awali yanayohitajika** - seva ya MCP huanzishwa moja kwa moja.
 
-**Kutumia VS Code:** Bonyeza-kulia `StdioTransportDemo.java` na chagua **"Run Java"**.
+**Kutumia Skripti za Kuanza (Inapendekezwa):**
 
-**Kutumia Maven:**
+Skripti za kuanza huingiza moja kwa moja mabadiliko ya mazingira kutoka faili `.env` ya mzizi:
 
 **Bash:**
 ```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+chmod +x start-stdio.sh
+./start-stdio.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+.\start-stdio.ps1
 ```
 
-Programu inaanzisha seva ya MCP ya mfumo wa faili moja kwa moja na kusoma faili ya eneo. Angalia jinsi usimamizi wa mchakato mdogo unavyofanywa kwa niaba yako.
+**Kutumia VS Code:** Bonyeza kitufe cha kulia kwenye `StdioTransportDemo.java` na uchague **"Run Java"** (hakikisha faili yako `.env` imewekwa).
 
-**Matokeo yanayotarajiwa:**
+Programu huanzisha seva ya mfumo wa faili ya MCP moja kwa moja na kusoma faili ya ndani. Angalia jinsi usimamizi wa mchakato mdogo unavyofanyika kwako.
+
+**Matokeo Yanayotarajiwa:**
 ```
 Assistant response: The file provides an overview of LangChain4j, an open-source Java library
 for integrating Large Language Models (LLMs) into Java applications...
@@ -164,165 +165,186 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 ### Wakala Msimamizi
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.sw.png" alt="Moduli ya Agentic" width="800"/>
+Mfano wa **Wakala Msimamizi** ni aina **inayobadilika** ya AI ya agentic. Msimamizi hutumia LLM kuamua kwa uhuru mawakala gani ndogo ya kuwaita kulingana na ombi la mtumiaji. Katika mfano unaofuata, tunachanganya upatikanaji wa faili unaotegemea MCP pamoja na wakala wa LLM kuunda mtiririko wa kazi wa kusoma faili → kuripoti.
 
+Katika maonyesho, `FileAgent` husoma faili kwa kutumia zana za mfumo wa faili wa MCP, na `ReportAgent` huunda ripoti yenye muhtasari wa mkurugenzi (sentensi 1), pointi 3 muhimu, na mapendekezo. Msimamizi huoratibu mzunguko huu moja kwa moja:
 
-Muundo wa **Wakala Msimamizi** ni aina **inyumbulika** ya AI ya agentic. Tofauti na mtiririko wa kazi wa jinsi ilivyoelezwa (mfululizo, mizunguko, sambamba), Msimamizi hutumia LLM kuamua kwa uhuru ni wakala gani waite kulingana na ombi la mtumiaji.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.sw.png" alt="Agentic Module" width="800"/>
 
-**Kuchanganya Msimamizi na MCP:** Katika mfano huu, tunampa `FileAgent` ufikiaji wa zana za mfumo wa faili za MCP kupitia `toolProvider(mcpToolProvider)`. Wakati mtumiaji anaomba "soma na uchambue faili," Msimamizi huchambua ombi na kutengeneza mpango wa utekelezaji. Kisha unampeleka ombi kwa `FileAgent`, ambaye hutumia zana ya MCP `read_file` kupata yaliyomo. Msimamizi hupitisha yaliyomo kwa `AnalysisAgent` kwa tafsiri, na kwa hiari hufanya wito kwa `SummaryAgent` kuifupisha matokeo.
+```
+┌─────────────┐      ┌──────────────┐
+│  FileAgent  │ ───▶ │ ReportAgent  │
+│ (MCP tools) │      │  (pure LLM)  │
+└─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+  'fileContent'         'report'
+```
 
-Hii inaonyesha jinsi zana za MCP zinavyounganishwa kwa urahisi katika mtiririko wa agentic — Msimamizi hahitaji kujua *jinsi* faili zinasomwa, ni kwamba `FileAgent` anaweza kufanya hivyo. Msimamizi hubadilika kwa nguvu kulingana na aina tofauti za maombi na hurudisha au jibu la wakala wa mwisho au muhtasari wa shughuli zote.
+Kila wakala huhifadhi matokeo yake katika **Eneo la Agentic** (kumbukumbu iliyoshirikiwa), ikiruhusu mawakala wa chini kufikia matokeo ya awali. Hii inaonyesha jinsi zana za MCP zinavyojumuishwa kwa urahisi katika miradi ya agentic — Msimamizi hawezi kujua *jinsi* faili zinavyosomwa, bali ni kwamba `FileAgent` anaweza kufanya hivyo.
 
-**Kutumia Skripti za Kuanzisha (Inayopendekezwa):**
+#### Kukimbia Maonyesho
 
-Skripti za kuanzisha hupakia mabadiliko ya mazingira kutoka kwa faili `.env` ya saraka kuu moja kwa moja:
+Skripti za kuanza huingiza moja kwa moja mabadiliko ya mazingira kutoka faili `.env` ya mzizi:
 
 **Bash:**
 ```bash
 cd 05-mcp
-chmod +x start.sh
-./start.sh
+chmod +x start-supervisor.sh
+./start-supervisor.sh
 ```
 
 **PowerShell:**
 ```powershell
 cd 05-mcp
-.\start.ps1
+.\start-supervisor.ps1
 ```
 
-**Kutumia VS Code:** Bonyeza-kulia `SupervisorAgentDemo.java` na chagua **"Run Java"** (hakikisha faili yako `.env` imewekwa).
+**Kutumia VS Code:** Bonyeza kitufe cha kulia kwenye `SupervisorAgentDemo.java` na uchague **"Run Java"** (hakikisha faili yako `.env` imewekwa).
 
-**Jinsi Msimamizi Anavyofanya Kazi:**
+#### Jinsi Msimamizi Anavyofanya Kazi
 
 ```java
-// Tambua mawakala kadhaa wenye uwezo maalum
+// Hatua 1: FileAgent husoma faili kwa kutumia zana za MCP
 FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
         .chatModel(model)
-        .toolProvider(mcpToolProvider)  // Ina zana za MCP kwa ajili ya operesheni za faili
+        .toolProvider(mcpToolProvider)  // Ina zana za MCP kwa shughuli za faili
         .build();
 
-AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+// Hatua 2: ReportAgent hutengeneza ripoti zilizopangwa
+ReportAgent reportAgent = AgenticServices.agentBuilder(ReportAgent.class)
         .chatModel(model)
         .build();
 
-SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
-        .chatModel(model)
-        .build();
-
-// Unda Msimamizi anayeratibu mawakala hawa
+// Msimamizi anaongoza mtiririko wa faili → ripoti
 SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
-        .chatModel(model)  // Mfano wa "planner"
-        .subAgents(fileAgent, analysisAgent, summaryAgent)
-        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .chatModel(model)
+        .subAgents(fileAgent, reportAgent)
+        .responseStrategy(SupervisorResponseStrategy.LAST)  // Rudisha ripoti ya mwisho
         .build();
 
-// Msimamizi huamua kwa uhuru ni mawakala gani aita
-// Tuma tu ombi kwa lugha ya asili - LLM inapanga utekelezaji
-String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+// Msimamizi huchagua mawakala watakaoitwa kulingana na ombi
+String response = supervisor.invoke("Read the file at /path/file.txt and generate a report");
 ```
+
+#### Mikakati ya Majibu
+
+Unapo weka `SupervisorAgent`, unaeleza jinsi unavyopaswa kuunda jibu la mwisho kwa mtumiaji baada ya mawakala wadogo kumaliza kazi zao. Mikakati inayopatikana ni:
+
+| Mkakati | Maelezo |
+|----------|-------------|
+| **LAST** | Msimamizi hurudisha matokeo ya wakala au zana ya mwisho iliyoitwa. Hii ni muhimu wakati wakala wa mwisho katika mlolongo amebuniwa mahsusi kutoa jibu kamili na la mwisho (mfano, "Wakala wa Muhtasari" katika mchakato wa utafiti). |
+| **SUMMARY** | Msimamizi hutumia LLM yake ndani kuunda muhtasari wa mwingiliano mzima na matokeo yote ya mawakala wadogo, kisha hurudisha muhtasari huo kama jibu la mwisho. Hii hutoa jibu safi na linalojumuisha kwa mtumiaji. |
+| **SCORED** | Mfumo hutumia LLM ya ndani kupima jibu la LAST na SUMMARY dhidi ya ombi la mtumiaji, kisha hurudisha matokeo yenye alama nzuri zaidi. |
 
 Tazama [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) kwa utekelezaji kamili.
 
-> **🤖 Jaribu na [GitHub Copilot](https://github.com/features/copilot) Chat:** Fungua [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) na ulize:
-> - "Msimamizi huchagua vipi ni mawakala gani yaite?"
-> - "Tofauti ya Msimamizi na mifumo ya kazi ya mfululizo ni ipi?"
-> - "Ninaweza kubadilisha vipi tabia ya kupanga ya Msimamizi?"
+> **🤖 Jaribu na [GitHub Copilot](https://github.com/features/copilot) Chat:** Fungua [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) na uulize:
+> - "Msimamizi huamua vipi mawakala gani ya waitishe?"
+> - "Tofauti gani kati ya mifumo ya kazi ya Msimamizi na mtiririko wa mfululizo?"
+> - "Nawezaje kubinafsisha tabia ya kupanga ya Msimamizi?"
 
-#### Kuelewa Matokeo
+#### Kufahamu Matokeo
 
-Unapoendesha demo, utaona muhtasari uliopangwa wa jinsi Msimamizi anavyoandaa mawakala kadhaa. Hapa ni maana ya kila sehemu:
+Unapoendesha onyesho, utaona mtiririko uliopangwa wa jinsi Msimamizi anavyoratibu mawakala wengi. Hapa ni maana ya kila sehemu:
 
 ```
 ======================================================================
-  SUPERVISOR AGENT DEMO
+  FILE → REPORT WORKFLOW DEMO
 ======================================================================
 
-This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
-The Supervisor uses an LLM to decide which agent to call based on the task.
+This demo shows a clear 2-step workflow: read a file, then generate a report.
+The Supervisor orchestrates the agents automatically based on the request.
 ```
 
-**Kichwa** kinarusha maelezo ya demo na kuelezea dhana kuu: Msimamizi anatumia LLM (si sheria zilizofungwa) kuamua mawakala ya kuita.
+**Kichwa** kinaanzisha dhana ya mtiririko wa kazi: mchakato ulioelekezwa kutoka kusoma faili hadi utengenezaji wa ripoti.
 
 ```
+--- WORKFLOW ---------------------------------------------------------
+  ┌─────────────┐      ┌──────────────┐
+  │  FileAgent  │ ───▶ │ ReportAgent  │
+  │ (MCP tools) │      │  (pure LLM)  │
+  └─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+   'fileContent'        'report'
+
 --- AVAILABLE AGENTS -------------------------------------------------
-  [FILE]     FileAgent     - Reads files using MCP filesystem tools
-  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
-  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+  [FILE]   FileAgent   - Reads files via MCP → stores in 'fileContent'
+  [REPORT] ReportAgent - Generates structured report → stores in 'report'
 ```
 
-**Mawakala Wapokeaji** yanaonyesha mawakala maalum watatu ambayo Msimamizi anaweza kuchagua. Kila wakala ana uwezo maalum:
-- **FileAgent** anaweza kusoma faili kwa kutumia zana za MCP (uwezo wa nje)
-- **AnalysisAgent** huchambua yaliyomo (uwezo wa LLM safi)
-- **SummaryAgent** huunda muhtasari (uwezo wa LLM safi)
+**Mchoro wa Mtiririko wa Kazi** unaonyesha mtiririko wa data kati ya mawakala. Kila wakala ana kazi maalum:
+- **FileAgent** husoma faili kwa kutumia zana za MCP na kuhifadhi maudhui ghafi katika `fileContent`
+- **ReportAgent** hutumia maudhui hayo na kuandaa ripoti yenye muundo katika `report`
 
 ```
 --- USER REQUEST -----------------------------------------------------
-  "Read the file at .../file.txt and analyze what it's about"
+  "Read the file at .../file.txt and generate a report on its contents"
 ```
 
-**Ombi la Mtumiaji** linaonyesha kilichoulizwa. Msimamizi lazima alieleze na kuamua mawakala gani yaite.
+**Ombi la Mtumiaji** linaonyesha kazi. Msimamizi huchambua hili na kuamua kuitisha FileAgent → ReportAgent.
 
 ```
 --- SUPERVISOR ORCHESTRATION -----------------------------------------
-  The Supervisor will now decide which agents to invoke and in what order...
+  The Supervisor decides which agents to invoke and passes data between them...
 
   +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
   |
   |   Input: .../file.txt
   |
-  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  |   Result: LangChain4j is an open-source, provider-agnostic Java framework for building LLM...
   +-- [OK] FileAgent (reading file via MCP) completed
 
-  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  +-- STEP 2: Supervisor chose -> ReportAgent (generating structured report)
   |
-  |   Input: LangChain4j is an open-source Java library...
+  |   Input: LangChain4j is an open-source, provider-agnostic Java framew...
   |
-  |   Result: Structure: The content is organized into clear paragraphs that int...
-  +-- [OK] AnalysisAgent (analyzing content) completed
+  |   Result: Executive Summary...
+  +-- [OK] ReportAgent (generating structured report) completed
 ```
 
-**Utaratibu wa Msimamizi** ndiko ambapo muujiza unatokea. Angalia jinsi:
-1. Msimamizi **alichagua FileAgent kwanza** kwa sababu ombi lilitaja "soma faili"
-2. FileAgent alitumia zana ya MCP `read_file` kupata yaliyomo ya faili
-3. Msimamizi kisha **alikagua AnalysisAgent** na kumpitisha yaliyomo ya faili
-4. AnalysisAgent alichambua muundo, mtindo, na mada ziliopo
+**Uratibu wa Msimamizi** unaonyesha mtiririko wa hatua 2 ukiendeshwa:
+1. **FileAgent** husoma faili kupitia MCP na kuhifadhi maudhui
+2. **ReportAgent** hupokea maudhui na kuunda ripoti yenye muundo
 
-Angalia Msimamizi alifanya maamuzi haya **kwa uhuru** kulingana na ombi la mtumiaji — hakuna mtiririko uliowekwa kwa mkono!
-
-**Jibu la Mwisho** ni jibu lililosanifiwa na Msimamizi, likijiunga na matokeo kutoka kwa mawakala yote aliowaita. Mfano unaonyesha eneo la agentic likiweka muhtasari na matokeo ya uchambuzi yaliyohifadhiwa na kila wakala.
+Msimamizi alichukua maamuzi haya **kwa uhuru** kulingana na ombi la mtumiaji.
 
 ```
 --- FINAL RESPONSE ---------------------------------------------------
-I read the contents of the file and analyzed its structure, tone, and key themes.
-The file introduces LangChain4j as an open-source Java library for integrating
-large language models...
+Executive Summary
+...
 
---- AGENTIC SCOPE (Shared Memory) ------------------------------------
-  Agents store their results in a shared scope for other agents to use:
-  * summary: LangChain4j is an open-source Java library...
-  * analysis: Structure: The content is organized into clear paragraphs that in...
+Key Points
+...
+
+Recommendations
+...
+
+--- AGENTIC SCOPE (Data Flow) ----------------------------------------
+  Each agent stores its output for downstream agents to consume:
+  * fileContent: LangChain4j is an open-source, provider-agnostic Java framework...
+  * report: Executive Summary...
 ```
 
-### Ufafanuzi wa Vipengele vya Moduli ya Agentic
+#### Maelezo ya Sifa za Kipengele cha Agentic
 
-Mfano unaonyesha vipengele kadhaa vya hali ya juu vya moduli ya agentic. Hebu tuangalie kwa karibu Agentic Scope na Agent Listeners.
+Mfano unaonyesha sifa kadhaa za hali ya juu za kipengele cha agentic. Tuchunguze Eneo la Agentic na Wasikilizaji wa Wakala.
 
-**Agentic Scope** inaonyesha kumbukumbu iliyoshirikiwa ambapo mawakala waliweka matokeo yao kwa kutumia `@Agent(outputKey="...")`. Hii inaruhusu:
-- Mawakala waliokuja baadaye kufikia matokeo ya mawakala wa awali
-- Msimamizi kusanisha jibu la mwisho
-- Wewe kukagua kile kila wakala alichozalisha
+**Eneo la Agentic** linaonyesha kumbukumbu iliyoshirikiwa ambapo mawakala huhifadhi matokeo yao kwa kutumia `@Agent(outputKey="...")`. Hii inaruhusu:
+- Mawakala wa baadaye kufikia matokeo ya mawakala waliotangulia
+- Msimamizi kuunganisha jibu la mwisho
+- Wewe kukagua kilichozalishwa na kila wakala
 
 ```java
 ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
 AgenticScope scope = result.agenticScope();
-String story = scope.readState("story");
-List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+String fileContent = scope.readState("fileContent");  // Data ya faili ghafi kutoka FileAgent
+String report = scope.readState("report");            // Ripoti iliyopangwa kutoka ReportAgent
 ```
 
-**Agent Listeners** zinawezesha ufuatiliaji na urekebishaji wa utekelezaji wa wakala. Matokeo ya hatua kwa hatua unayoona kwenye demo yanatokana na AgentListener inayounganika kwenye kila kuitwa kwa wakala:
-- **beforeAgentInvocation** - Inaitwa wakati Msimamizi anapochagua wakala, ikikuonyesha wakala aliyechaguliwa na kwa nini
-- **afterAgentInvocation** - Inaitwa wakati wakala anapo maliza, ikionyesha matokeo yake
-- **inheritedBySubagents** - Wakati ni kweli, msikilizaji hufuata mawakala wote kwenye muundo wa kichwa na watoto
+**Wasikilizaji wa Wakala** huruhusu ufuatiliaji na utatuzi wa matatizo ya utekelezaji wa wakala. Matokeo unayoona hatua kwa hatua katika onyesho hutoka kwa AgentListener anayeshirikiana na kila uhiushaji wa wakala:
+- **beforeAgentInvocation** - Huitwa wakati Msimamizi anapochagua wakala, ikikuonyesha wakala aliyekuliwa na kwanini
+- **afterAgentInvocation** - Huitwa wakati wakala anapomaliza kazi, ikionyesha matokeo yake
+- **inheritedBySubagents** - Ikiwa kweli, msikilizaji husimamia mawakala wote katika mlolongo
 
 ```java
 AgentListener monitor = new AgentListener() {
@@ -341,57 +363,58 @@ AgentListener monitor = new AgentListener() {
     
     @Override
     public boolean inheritedBySubagents() {
-        return true; // Sambaza kwa mawakala wadogo wote
+        return true; // Sambaza kwa wakala wote wa chini
     }
 };
 ```
 
-Mbali na muundo wa Msimamizi, moduli `langchain4j-agentic` inatoa mifumo na vipengele vingi vyenye nguvu:
+Zaidi ya mfano wa Msimamizi, moduli ya `langchain4j-agentic` hutoa mifano mingi ya miradi ya kazi na sifa:
 
-| Pattern | Description | Use Case |
+| Mfano | Maelezo | Matumizi |
 |---------|-------------|----------|
-| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
-| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
-| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
-| **Conditional** | Route based on conditions | Classify → route to specialist agent |
-| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
+| **Sequential** | Tekeleza mawakala kwa mpangilio, matokeo yataenda kwa mwenzie | Mifereji: utafiti → uchambuzi → ripoti |
+| **Parallel** | Endesha mawakala kwa wakati mmoja | Kazi huru: hali ya hewa + habari + hisa |
+| **Loop** | Rudia hadi sharti litimizwe | Kupima ubora: boresha hadi alama ≥ 0.8 |
+| **Conditional** | Elekeza kwa msingi wa masharti | Gawanya → peleka kwa wakala mtaalamu |
+| **Human-in-the-Loop** | Ongeza hatua za kibinadamu | Mifumo ya idhini, uhakiki wa maudhui |
 
-## Misingi Muhimu
+## Madhumuni Muhimu
 
-**MCP** inafaa unapotaka kutumia mazingira ya zana zilizopo, kujenga zana ambazo programu nyingi zinaweza kushiriki, kuunganisha huduma za wahusika wengine kwa itifaki za kawaida, au kubadilisha utekelezaji wa zana bila kubadilisha msimbo.
+Sasa umechunguza MCP na kipengele cha agentic kikifanya kazi, hebu muhtasari wakati ya kutumia kila mbinu.
 
-**Moduli ya Agentic** inafanya kazi vizuri unapotaka ufafanuzi wa mawakala kupitia anotations za `@Agent`, unahitaji upangaji wa mtiririko wa kazi (mfululizo, mizunguko, sambamba), unapendelea muundo wa wakala unaotegemea interface badala ya msimbo wa amri, au unapochanganya mawakala kadhaa yanayoshiriki matokeo kupitia `outputKey`.
+**MCP** ni bora unapotaka kutumia ekolojia zilizopo za zana, kujenga zana ambazo programu nyingi zinaweza kushirikiana, kuhusisha huduma za mtu wa tatu kwa itifaki za kawaida, au kubadilisha utekelezaji wa zana bila kubadilisha msimbo.
 
-**Muundo wa Wakala Msimamizi** unaangaza wakati mtiririko wa kazi hauwezi kutabiriwa mapema na unataka LLM kuamua, wakati una mawakala maalum wengi yanayohitaji upangaji wa nguvu, wakati unajenga mifumo ya mazungumzo inayotuma kwa uwezo tofauti, au unapohitaji tabia ya wakala yenye kubadilika zaidi na inayobadilika.
+**Kipengele cha Agentic** kinafanya kazi vizuri unapotaka ufafanuzi wa wakala kwa kauli na alama za `@Agent`, unahitaji uratibu wa mtiririko wa kazi (mfululizo, mzunguko, sambamba), unapendelea usanifu wa wakala kwa interface badala ya msimbo wa amri, au unapochanganya mawakala wengi yanayoshirikiana matokeo kupitia `outputKey`.
 
+**Mfano wa Wakala Msimamizi** unaangaza wakati mtiririko wa kazi hauwezi kutabirika kabla na unataka LLM iamua, wakati una mawakala maalum wengi yanayohitaji uratibu wa mabadiliko, wakati unajenga mifumo ya mazungumzo inayopanga kwa uwezo tofauti, au unapotaka tabia ya wakala inayobadilika na yenye kibadiliko zaidi.
 ## Hongera!
 
-Umeisha kozi ya LangChain4j kwa Waanzilishi. Umejifunza:
+Umehitimisha kozi ya LangChain4j kwa Waanzaji. Umesoma:
 
 - Jinsi ya kujenga AI ya mazungumzo yenye kumbukumbu (Moduli 01)
-- Mbinu za uhandisi wa maelekezo kwa kazi mbalimbali (Moduli 02)
-- Kuweka majibu msingi kwenye nyaraka zako kwa RAG (Moduli 03)
-- Kuunda mawakala wa AI (wasaidizi) wa msingi na zana maalum (Moduli 04)
-- Kuunganisha zana zilizostandadi na moduli za LangChain4j MCP na Agentic (Module 05)
+- Mifumo ya uwekaji maagizo kwa kazi mbalimbali (Moduli 02)
+- Kusawazisha majibu katika nyaraka zako kwa kutumia RAG (Moduli 03)
+- Kuunda mawakala wa AI wa msingi (wasaidizi) kwa kutumia zana za desturi (Moduli 04)
+- Kuunganisha zana zilizosanifiwa na MCP ya LangChain4j na moduli za Agentic (Moduli 05)
 
 ### Nini Kifuatacho?
 
-Baada ya kukamilisha moduli, chunguza the [Mwongozo wa Upimaji](../docs/TESTING.md) ili uone dhana za upimaji za LangChain4j katika vitendo.
+Baada ya kumaliza moduli, chunguza [Mwongozo wa Kupima](../docs/TESTING.md) ili kuona dhana za kupima LangChain4j zikifanyakazi.
 
 **Rasilimali Rasmi:**
-- [Nyaraka za LangChain4j](https://docs.langchain4j.dev/) - Mwongozo kamili na rejea ya API
-- [GitHub ya LangChain4j](https://github.com/langchain4j/langchain4j) - Chanzo la msimbo na mifano
+- [Nyaraka za LangChain4j](https://docs.langchain4j.dev/) - Miongozo kamili na rejeleo la API
+- [GitHub ya LangChain4j](https://github.com/langchain4j/langchain4j) - Chanzo cha msimbo na mifano
 - [Mafunzo ya LangChain4j](https://docs.langchain4j.dev/tutorials/) - Mafunzo hatua kwa hatua kwa matumizi mbalimbali
 
-Asante kwa kukamilisha kozi hii!
+Asante kwa kumaliza kozi hii!
 
 ---
 
-**Urambazaji:** [← Iliyotangulia: Moduli 04 - Zana](../04-tools/README.md) | [Rudi Kwenye Msingi](../README.md)
+**Urambazaji:** [← Iliyotangulia: Moduli 04 - Zana](../04-tools/README.md) | [Rudi Kwenye Kuu](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Tamko la kutowajibika:
-Nyaraka hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI Co-op Translator (https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuwa sahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au ukosefu wa usahihi. Nyaraka ya awali katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo rasmi. Kwa taarifa muhimu, tunapendekeza kutumia tafsiri ya kitaalamu iliyofanywa na mtaalamu wa kibinadamu. Hatutawajibika kwa kutoelewana au ufasiri mbaya unaotokana na matumizi ya tafsiri hii.
+**Onyo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuwa sahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati asili katika lugha yake ya asili inapaswa kuchukuliwa kama chanzo cha haki. Kwa taarifa muhimu, tafsiri ya kitaalamu kwa binadamu inashauriwa. Hatuna uwajibikaji kwa kutoelewana au tafsiri potofu zitokanazo na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

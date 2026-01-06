@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "13ec450c12cdd1a863baa2b778f27cd7",
-  "translation_date": "2025-12-31T03:15:50+00:00",
+  "original_hash": "844788938b26242f3cc54ce0d0951bea",
+  "translation_date": "2026-01-06T00:28:30+00:00",
   "source_file": "04-tools/README.md",
   "language_code": "ms"
 }
@@ -11,12 +11,12 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Jadual Kandungan
 
-- [Apa Yang Akan Anda Pelajari](../../../04-tools)
+- [Apa yang Anda Akan Pelajari](../../../04-tools)
 - [Prasyarat](../../../04-tools)
 - [Memahami Ejen AI dengan Alat](../../../04-tools)
 - [Bagaimana Panggilan Alat Berfungsi](../../../04-tools)
   - [Definisi Alat](../../../04-tools)
-  - [Pembuatan Keputusan](../../../04-tools)
+  - [Pengambilan Keputusan](../../../04-tools)
   - [Pelaksanaan](../../../04-tools)
   - [Penjanaan Respons](../../../04-tools)
 - [Rantaian Alat](../../../04-tools)
@@ -25,54 +25,55 @@ CO_OP_TRANSLATOR_METADATA:
   - [Cuba Penggunaan Alat Mudah](../../../04-tools)
   - [Uji Rantaian Alat](../../../04-tools)
   - [Lihat Aliran Perbualan](../../../04-tools)
-  - [Perhatikan Penalaran](../../../04-tools)
   - [Eksperimen dengan Permintaan Berbeza](../../../04-tools)
 - [Konsep Utama](../../../04-tools)
-  - [Corak ReAct (Penalaran dan Tindakan)](../../../04-tools)
-  - [Penerangan Alat Penting](../../../04-tools)
+  - [Corak ReAct (Penalaran dan Bertindak)](../../../04-tools)
+  - [Deskripsi Alat Penting](../../../04-tools)
   - [Pengurusan Sesi](../../../04-tools)
   - [Pengendalian Ralat](../../../04-tools)
 - [Alat Tersedia](../../../04-tools)
 - [Bila Menggunakan Ejen Berasaskan Alat](../../../04-tools)
 - [Langkah Seterusnya](../../../04-tools)
 
-## Apa Yang Akan Anda Pelajari
+## Apa yang Anda Akan Pelajari
 
-Setakat ini, anda telah belajar bagaimana mengadakan perbualan dengan AI, menyusun arahan (prompts) dengan berkesan, dan membumikan respons dalam dokumen anda. Tetapi masih terdapat satu batasan asas: model bahasa hanya boleh menjana teks. Ia tidak boleh menyemak cuaca, melakukan pengiraan, membuat pertanyaan ke atas pangkalan data, atau berinteraksi dengan sistem luaran.
+Sehingga kini, anda telah belajar bagaimana untuk bersembang dengan AI, menyusun arahan dengan berkesan, dan mendasari respons dalam dokumen anda. Tetapi masih ada had asas: model bahasa hanya boleh menjana teks. Ia tidak boleh memeriksa cuaca, melakukan pengiraan, membuat pertanyaan pangkalan data, atau berinteraksi dengan sistem luar.
 
-Alat mengubah perkara ini. Dengan memberi model akses kepada fungsi yang boleh dipanggil, anda mengubahnya dari penjana teks menjadi ejen yang boleh mengambil tindakan. Model memutuskan bila ia memerlukan alat, alat mana yang hendak digunakan, dan parameter apa yang perlu dihantar. Kod anda melaksanakan fungsi tersebut dan mengembalikan keputusan. Model menggabungkan keputusan itu ke dalam responsnya.
+Alat mengubah ini. Dengan memberikan model akses kepada fungsi yang boleh ia panggil, anda mengubahnya dari penjana teks menjadi ejen yang boleh mengambil tindakan. Model memutuskan bila ia memerlukan alat, alat mana yang hendak digunakan, dan parameter apa yang hendak dihantar. Kod anda melaksanakan fungsi itu dan mengembalikan hasilnya. Model memasukkan hasil itu ke dalam responsnya.
 
 ## Prasyarat
 
-- Menyelesaikan Modul 01 (sumber Azure OpenAI telah disebarkan)
-- Fail `.env` di direktori root dengan kelayakan Azure (dicipta oleh `azd up` dalam Modul 01)
+- Menyelesaikan Modul 01 (sumber Azure OpenAI telah dideploy)
+- Fail `.env` di direktori utama dengan kelayakan Azure (dibuat oleh `azd up` dalam Modul 01)
 
-> **Nota:** Jika anda belum menyelesaikan Modul 01, ikut arahan penyebaran di sana terlebih dahulu.
+> **Nota:** Jika anda belum menyiapkan Modul 01, ikuti arahan pengedaran di situ dahulu.
 
 ## Memahami Ejen AI dengan Alat
 
-> **📝 Nota:** Istilah "ejen" dalam modul ini merujuk kepada pembantu AI yang dipertingkatkan dengan kemampuan memanggil alat. Ini berbeza daripada corak **Agentic AI** (ejen autonomi dengan perancangan, memori, dan penalaran berbilang langkah) yang akan kita ulas dalam [Module 05: MCP](../05-mcp/README.md).
+> **📝 Nota:** Istilah "ejen" dalam modul ini merujuk kepada pembantu AI yang dipertingkatkan dengan keupayaan panggilan alat. Ini berbeza dengan corak **Agentic AI** (ejen autonomi dengan perancangan, memori, dan penalaran berbilang langkah) yang akan kita bahas dalam [Modul 05: MCP](../05-mcp/README.md).
 
-Ejen AI dengan alat mengikuti corak penalaran dan tindakan (ReAct):
+Ejen AI dengan alat mengikuti corak penalaran dan bertindak (ReAct):
 
-1. Pengguna bertanya soalan
-2. Ejen membuat penalaran tentang apa yang perlu diketahui
+1. Pengguna mengemukakan soalan
+2. Ejen berfikir tentang apa yang perlu diketahui
 3. Ejen memutuskan jika ia memerlukan alat untuk menjawab
-4. Jika ya, ejen memanggil alat yang sesuai dengan parameter yang betul
+4. Jika ya, ejen memanggil alat yang sesuai dengan parameter betul
 5. Alat melaksanakan dan mengembalikan data
-6. Ejen memasukkan keputusan tersebut dan memberikan jawapan akhir
+6. Ejen memasukkan hasil itu dan memberi jawapan akhir
 
 <img src="../../../translated_images/react-pattern.86aafd3796f3fd13.ms.png" alt="Corak ReAct" width="800"/>
 
-*Corak ReAct - bagaimana ejen AI beralih antara penalaran dan tindakan untuk menyelesaikan masalah*
+*Corak ReAct - bagaimana ejen AI bergilir-gilir antara penalaran dan tindakan untuk menyelesaikan masalah*
 
-Ini berlaku secara automatik. Anda mentakrifkan alat dan penerangannya. Model mengurus pembuatan keputusan bila dan bagaimana menggunakannya.
+Ini berlaku secara automatik. Anda mentakrif alat dan deskripsi mereka. Model mengendalikan pengambilan keputusan bila dan bagaimana menggunakannya.
 
 ## Bagaimana Panggilan Alat Berfungsi
 
-**Definisi Alat** - [WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
+### Definisi Alat
 
-Anda mentakrifkan fungsi dengan penerangan yang jelas dan spesifikasi parameter. Model melihat penerangan ini dalam system prompt dan memahami apa yang setiap alat lakukan.
+[WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
+
+Anda mentakrif fungsi dengan deskripsi jelas dan spesifikasi parameter. Model melihat deskripsi ini dalam arahan sistemnya dan memahami apa yang setiap alat lakukan.
 
 ```java
 @Component
@@ -91,84 +92,86 @@ public interface Assistant {
 }
 
 // Pembantu disambungkan secara automatik oleh Spring Boot dengan:
-// - ChatModel bean
-// - Semua kaedah @Tool daripada kelas @Component
+// - Bean ChatModel
+// - Semua kaedah @Tool dari kelas @Component
 // - ChatMemoryProvider untuk pengurusan sesi
 ```
 
 > **🤖 Cuba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) dan tanya:
-> - "Bagaimana saya boleh mengintegrasikan API cuaca sebenar seperti OpenWeatherMap menggantikan data tiruan?"
-> - "Apa yang menjadikan penerangan alat yang baik yang membantu AI menggunakannya dengan betul?"
+> - "Bagaimana saya boleh mengintegrasikan API cuaca sebenar seperti OpenWeatherMap ganti data tiruan?"
+> - "Apa yang membuat deskripsi alat yang baik supaya AI boleh menggunakannya dengan betul?"
 > - "Bagaimana saya mengendalikan ralat API dan had kadar dalam pelaksanaan alat?"
 
-**Pembuatan Keputusan**
+### Pengambilan Keputusan
 
-Apabila pengguna bertanya "Apa cuaca di Seattle?", model mengenal pasti ia memerlukan alat cuaca. Ia menjana panggilan fungsi dengan parameter lokasi ditetapkan kepada "Seattle".
+Apabila pengguna bertanya "Apa cuaca di Seattle?", model mengenal pasti ia memerlukan alat cuaca. Ia menjana panggilan fungsi dengan parameter lokasi diset ke "Seattle".
 
-**Pelaksanaan** - [AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
+### Pelaksanaan
 
-Spring Boot mengautowire antara muka deklaratif `@AiService` dengan semua alat yang didaftarkan, dan LangChain4j melaksanakan panggilan alat secara automatik.
+[AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
+
+Spring Boot secara automatik memautkan antara muka deklaratif `@AiService` dengan semua alat berdaftar, dan LangChain4j melaksanakan panggilan alat secara automatik.
 
 > **🤖 Cuba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) dan tanya:
 > - "Bagaimana corak ReAct berfungsi dan mengapa ia berkesan untuk ejen AI?"
-> - "Bagaimana ejen memutuskan alat mana yang digunakan dan dalam susunan apa?"
+> - "Bagaimana ejen memutuskan alat mana untuk digunakan dan dalam susunan apa?"
 > - "Apa yang berlaku jika pelaksanaan alat gagal - bagaimana saya harus mengendalikan ralat dengan kukuh?"
 
-**Penjanaan Respons**
+### Penjanaan Respons
 
-Model menerima data cuaca dan memformatkannya menjadi respons bahasa semula jadi untuk pengguna.
+Model menerima data cuaca dan memformatnya menjadi respons bahasa semula jadi untuk pengguna.
 
-### Mengapa Menggunakan Perkhidmatan AI Deklaratif?
+### Kenapa Gunakan Perkhidmatan AI Deklaratif?
 
-Modul ini menggunakan integrasi Spring Boot LangChain4j dengan antara muka `@AiService` deklaratif:
+Modul ini menggunakan integrasi LangChain4j Spring Boot dengan antara muka deklaratif `@AiService`:
 
-- **Spring Boot auto-wiring** - ChatModel dan alat disuntik secara automatik
+- **Pautan automatik Spring Boot** - ChatModel dan alat dimasukkan secara automatik
 - **Corak @MemoryId** - Pengurusan memori berasaskan sesi secara automatik
-- **Satu instans** - Pembantu dicipta sekali dan digunakan semula untuk prestasi yang lebih baik
-- **Pelaksanaan berjenis selamat** - Kaedah Java dipanggil terus dengan penukaran jenis
-- **OrkestrasI berbilang-langkah** - Mengendalikan rantaian alat secara automatik
-- **Tiada boilerplate** - Tiada panggilan manual AiServices.builder() atau HashMap memori
+- **Satu instans sahaja** - Pembantu dicipta sekali dan digunakan semula untuk prestasi lebih baik
+- **Pelaksanaan jenis-selamat** - Kaedah Java dipanggil terus dengan penukaran jenis
+- **Orkestrasi pelbagai giliran** - Mengendalikan rantaian alat secara automatik
+- **Tiada kod tambahan** - Tiada panggilan manual AiServices.builder() atau HashMap memori
 
-Pendekatan alternatif (manual `AiServices.builder()`) memerlukan lebih banyak kod dan kehilangan kelebihan integrasi Spring Boot.
+Pendekatan alternatif (manual `AiServices.builder()`) memerlukan lebih banyak kod dan kehilangan manfaat integrasi Spring Boot.
 
 ## Rantaian Alat
 
-**Rantaian Alat** - AI mungkin memanggil beberapa alat secara berurutan. Tanya "Apa cuaca di Seattle dan patutkah saya membawa payung?" dan perhatikan ia mengaitkan `getCurrentWeather` dengan penalaran tentang pakaian hujan.
+**Rantaian Alat** - AI mungkin memanggil beberapa alat secara berturutan. Tanya "Apa cuaca di Seattle dan patutkah saya bawa payung?" dan lihat ia merantai `getCurrentWeather` dengan penalaran tentang peralatan hujan.
 
 <a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.ms.png" alt="Rantaian Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Panggilan alat berurutan - output satu alat menjadi input kepada keputusan seterusnya*
+*Panggilan alat berturutan - output satu alat menjadi input keputusan seterusnya*
 
-**Kegagalan Terurus** - Minta cuaca untuk bandar yang tidak terdapat dalam data tiruan. Alat mengembalikan mesej ralat, dan AI menerangkan ia tidak dapat membantu. Alat gagal dengan selamat.
+**Kegagalan Sopan** - Tanya cuaca di bandar yang tidak ada dalam data tiruan. Alat mengembalikan mesej ralat, dan AI menerangkan ia tidak dapat membantu. Alat gagal dengan selamat.
 
-Ini berlaku dalam satu giliran perbualan. Ejen mengorkestrakan panggilan alat berganda secara autonomi.
+Ini berlaku dalam satu giliran perbualan. Ejen mengatur beberapa panggilan alat secara autonomi.
 
 ## Jalankan Aplikasi
 
-**Sahkan penyebaran:**
+**Sahkan pengedaran:**
 
-Pastikan fail `.env` wujud di direktori root dengan kelayakan Azure (dicipta semasa Modul 01):
+Pastikan fail `.env` wujud di direktori utama dengan kelayakan Azure (dibuat semasa Modul 01):
 ```bash
-cat ../.env  # Perlu menunjukkan AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
+cat ../.env  # Patut menunjukkan AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
 **Mulakan aplikasi:**
 
-> **Nota:** Jika anda sudah memulakan semua aplikasi menggunakan `./start-all.sh` dari Modul 01, modul ini sudah berjalan pada port 8084. Anda boleh langkau arahan mula di bawah dan pergi terus ke http://localhost:8084.
+> **Nota:** Jika anda sudah memulakan semua aplikasi menggunakan `./start-all.sh` dari Modul 01, modul ini sudah berjalan pada port 8084. Anda boleh langkau arahan mula di bawah dan terus ke http://localhost:8084.
 
-**Pilihan 1: Menggunakan Spring Boot Dashboard (Disyorkan untuk pengguna VS Code)**
+**Pilihan 1: Menggunakan Spring Boot Dashboard (Dicadangkan untuk pengguna VS Code)**
 
-Kandungan dev container termasuk sambungan Spring Boot Dashboard, yang menyediakan antara muka visual untuk mengurus semua aplikasi Spring Boot. Anda boleh menemuinya di Bar Aktiviti di sebelah kiri VS Code (cari ikon Spring Boot).
+Bekas pembangunan menyertakan peluasan Spring Boot Dashboard, yang menyediakan antara muka visual untuk mengurus semua aplikasi Spring Boot. Anda boleh mencarinya di Bar Aktiviti di sebelah kiri VS Code (cari ikon Spring Boot).
 
 Dari Spring Boot Dashboard, anda boleh:
-- Melihat semua aplikasi Spring Boot yang tersedia dalam ruang kerja
-- Mula/hentikan aplikasi dengan satu klik
+- Lihat semua aplikasi Spring Boot tersedia dalam ruang kerja
+- Mulakan/hentikan aplikasi dengan satu klik
 - Lihat log aplikasi secara masa nyata
-- Memantau status aplikasi
+- Pantau status aplikasi
 
 Klik butang main di sebelah "tools" untuk memulakan modul ini, atau mulakan semua modul sekaligus.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.ms.png" alt="Papan Pemuka Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.ms.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Pilihan 2: Menggunakan skrip shell**
 
@@ -176,13 +179,13 @@ Mulakan semua aplikasi web (modul 01-04):
 
 **Bash:**
 ```bash
-cd ..  # Daripada direktori akar
+cd ..  # Dari direktori akar
 ./start-all.sh
 ```
 
 **PowerShell:**
 ```powershell
-cd ..  # Dari direktori akar
+cd ..  # Dari direktori root
 .\start-all.ps1
 ```
 
@@ -200,9 +203,9 @@ cd 04-tools
 .\start.ps1
 ```
 
-Kedua-dua skrip secara automatik memuatkan pembolehubah persekitaran dari fail `.env` root dan akan membina JAR jika ia tidak wujud.
+Kedua-dua skrip memuatkan pembolehubah persekitaran dari fail `.env` root secara automatik dan akan membina JAR jika belum wujud.
 
-> **Nota:** Jika anda lebih suka membina semua modul secara manual sebelum memulakan:
+> **Nota:** Jika anda lebih suka membina semua modul secara manual sebelum mula:
 >
 > **Bash:**
 > ```bash
@@ -216,20 +219,20 @@ Kedua-dua skrip secara automatik memuatkan pembolehubah persekitaran dari fail `
 > mvn clean package -DskipTests
 > ```
 
-Buka http://localhost:8084 di pelayar anda.
+Buka http://localhost:8084 dalam pelayar anda.
 
-**Untuk hentikan:**
+**Untuk berhenti:**
 
 **Bash:**
 ```bash
-./stop.sh  # Hanya modul ini
+./stop.sh  # Modul ini sahaja
 # Atau
 cd .. && ./stop-all.sh  # Semua modul
 ```
 
 **PowerShell:**
 ```powershell
-.\stop.ps1  # Hanya modul ini
+.\stop.ps1  # Modul ini sahaja
 # Atau
 cd ..; .\stop-all.ps1  # Semua modul
 ```
@@ -240,56 +243,56 @@ Aplikasi menyediakan antara muka web di mana anda boleh berinteraksi dengan ejen
 
 <a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.ms.png" alt="Antara Muka Alat Ejen AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Antara Muka Alat Ejen AI - contoh pantas dan antara muka sembang untuk berinteraksi dengan alat*
+*Antara muka Alat Ejen AI - contoh cepat dan antara muka sembang untuk berinteraksi dengan alat*
 
-**Cuba Penggunaan Alat Mudah**
+### Cuba Penggunaan Alat Mudah
 
-Mulakan dengan permintaan mudah: "Tukar 100 darjah Fahrenheit kepada Celsius". Ejen mengenal pasti ia memerlukan alat penukaran suhu, memanggilnya dengan parameter yang betul, dan mengembalikan keputusan. Perhatikan betapa semulajadinya ini terasa - anda tidak menentukan alat mana yang digunakan atau bagaimana memanggilnya.
+Mulakan dengan permintaan mudah: "Tukar 100 darjah Fahrenheit ke Celsius". Ejen mengenali ia memerlukan alat penukaran suhu, memanggilnya dengan parameter betul, dan mengembalikan hasil. Perhatikan bagaimana ia terasa semula jadi - anda tidak menyatakan alat mana hendak digunakan atau bagaimana memanggilnya.
 
-**Uji Rantaian Alat**
+### Uji Rantaian Alat
 
-Sekarang cuba sesuatu yang lebih kompleks: "Apa cuaca di Seattle dan tukarkan ia kepada Fahrenheit?" Perhatikan ejen bekerja langkah demi langkah. Ia mula mendapat cuaca (yang mengembalikan Celsius), menyedari ia perlu menukar ke Fahrenheit, memanggil alat penukaran, dan menggabungkan kedua-dua keputusan ke dalam satu respons.
+Sekarang cuba sesuatu yang lebih kompleks: "Apa cuaca di Seattle dan tukarkan ke Fahrenheit?" Lihat ejen bekerja langkah demi langkah. Ia mula dapatkan cuaca (yang kembali dalam Celsius), mengenali ia perlu menukar ke Fahrenheit, memanggil alat penukaran, dan menggabungkan kedua-dua hasil itu menjadi satu respons.
 
-**Lihat Aliran Perbualan**
+### Lihat Aliran Perbualan
 
-Antara muka sembang mengekalkan sejarah perbualan, membolehkan anda mempunyai interaksi berbilang giliran. Anda boleh melihat semua pertanyaan dan respons sebelumnya, memudahkan untuk menjejaki perbualan dan memahami bagaimana ejen membina konteks sepanjang pertukaran.
+Antara muka sembang menyimpan sejarah perbualan, membolehkan anda berinteraksi berbilang giliran. Anda boleh melihat semua pertanyaan dan respons sebelumnya, memudahkan menjejaki perbualan dan memahami bagaimana ejen membina konteks sepanjang pertukaran.
 
 <a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.ms.png" alt="Perbualan dengan Pelbagai Panggilan Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Perbualan berbilang giliran yang menunjukkan penukaran mudah, carian cuaca, dan rantaian alat*
+*Perbualan berbilang giliran menunjukkan penukaran mudah, carian cuaca, dan rantaian alat*
 
-**Eksperimen dengan Permintaan Berbeza**
+### Eksperimen dengan Permintaan Berbeza
 
 Cuba pelbagai gabungan:
 - Carian cuaca: "Apa cuaca di Tokyo?"
 - Penukaran suhu: "Berapa 25°C dalam Kelvin?"
-- Pertanyaan gabungan: "Semak cuaca di Paris dan beritahu saya jika ia melebihi 20°C"
+- Soalan gabungan: "Semak cuaca di Paris dan beritahu jika lebih dari 20°C"
 
-Perhatikan bagaimana ejen mentafsir bahasa semula jadi dan memetakannya kepada panggilan alat yang sesuai.
+Perhatikan bagaimana ejen mentafsir bahasa semula jadi dan memadankan ke panggilan alat yang sesuai.
 
 ## Konsep Utama
 
-**Corak ReAct (Penalaran dan Tindakan)**
+### Corak ReAct (Penalaran dan Bertindak)
 
-Ejen bertukar-tukar antara penalaran (memutuskan apa yang perlu dilakukan) dan tindakan (menggunakan alat). Corak ini membolehkan penyelesaian masalah secara autonomi dan bukannya sekadar bertindak mengikut arahan.
+Ejen bergilir antara penalaran (memutuskan apa hendak dibuat) dan bertindak (menggunakan alat). Corak ini membolehkan penyelesaian masalah autonomi dan bukan sekadar respon arahan.
 
-**Penerangan Alat Penting**
+### Deskripsi Alat Penting
 
-Kualiti penerangan alat anda secara langsung mempengaruhi sejauh mana ejen menggunakannya dengan betul. Penerangan yang jelas dan spesifik membantu model memahami bila dan bagaimana memanggil setiap alat.
+Kualiti deskripsi alat anda terus mempengaruhi bagaimana baik ejen menggunakannya. Deskripsi yang jelas dan spesifik membantu model faham bila dan bagaimana memanggil setiap alat.
 
-**Pengurusan Sesi**
+### Pengurusan Sesi
 
-Anotasi `@MemoryId` membolehkan pengurusan memori berasaskan sesi secara automatik. Setiap ID sesi mendapat instans `ChatMemory` sendiri yang diurus oleh bean `ChatMemoryProvider`, menghapuskan keperluan untuk penjejakan memori manual.
+Anotasi `@MemoryId` mengaktifkan pengurusan memori berasaskan sesi secara automatik. Setiap ID sesi mendapat instans `ChatMemory` sendiri yang dikendalikan oleh bean `ChatMemoryProvider`, menghilangkan keperluan untuk penjejakan memori manual.
 
-**Pengendalian Ralat**
+### Pengendalian Ralat
 
-Alat boleh gagal - API tamat masa, parameter mungkin tidak sah, perkhidmatan luaran turun. Ejen pengeluaran memerlukan pengendalian ralat supaya model dapat menerangkan masalah atau mencuba alternatif.
+Alat boleh gagal - API tamat masa, parameter mungkin tidak sah, perkhidmatan luar turun. Ejen produksi memerlukan pengendalian ralat supaya model boleh menerangkan masalah atau cuba alternatif.
 
 ## Alat Tersedia
 
-**Alat Cuaca** (data tiruan untuk demonstrasi):
+**Alat Cuaca** (data tiruan untuk demontrasi):
 - Dapatkan cuaca semasa untuk sesuatu lokasi
-- Dapatkan ramalan berbilang-hari
+- Dapatkan ramalan berbilang hari
 
 **Alat Penukaran Suhu**:
 - Celsius ke Fahrenheit
@@ -299,25 +302,25 @@ Alat boleh gagal - API tamat masa, parameter mungkin tidak sah, perkhidmatan lua
 - Fahrenheit ke Kelvin
 - Kelvin ke Fahrenheit
 
-Ini adalah contoh mudah, tetapi corak ini meluas kepada mana-mana fungsi: pertanyaan pangkalan data, panggilan API, pengiraan, operasi fail, atau arahan sistem.
+Ini contoh mudah, tetapi corak ini meluas ke mana-mana fungsi: pertanyaan pangkalan data, panggilan API, pengiraan, operasi fail, atau arahan sistem.
 
 ## Bila Menggunakan Ejen Berasaskan Alat
 
 **Gunakan alat apabila:**
 - Menjawab memerlukan data masa nyata (cuaca, harga saham, inventori)
-- Anda perlu melakukan pengiraan yang melebihi matematik ringkas
+- Anda perlu melakukan pengiraan lebih daripada matematik mudah
 - Mengakses pangkalan data atau API
-- Mengambil tindakan (menghantar emel, membuat tiket, mengemaskini rekod)
+- Mengambil tindakan (menghantar email, mencipta tiket, mengemas kini rekod)
 - Menggabungkan pelbagai sumber data
 
 **Jangan gunakan alat apabila:**
-- Soalan boleh dijawab daripada pengetahuan umum
-- Respons semata-mata bersifat perbualan
-- Latensi alat akan menjadikan pengalaman terlalu perlahan
+- Soalan boleh dijawab dari pengetahuan umum
+- Respons hanya bersifat perbualan
+- Kelewatan alat akan menjadikan pengalaman terlalu perlahan
 
 ## Langkah Seterusnya
 
-**Modul Seterusnya:** [05-mcp - Model Context Protocol (MCP)](../05-mcp/README.md)
+**Modul Seterusnya:** [05-mcp - Protokol Konteks Model (MCP)](../05-mcp/README.md)
 
 ---
 
@@ -326,6 +329,6 @@ Ini adalah contoh mudah, tetapi corak ini meluas kepada mana-mana fungsi: pertan
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Penafian:
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha mencapai ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi ralat atau ketidaktepatan. Dokumen asal dalam bahasa asalnya hendaklah dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh penterjemah manusia adalah disyorkan. Kami tidak bertanggungjawab terhadap sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab terhadap sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

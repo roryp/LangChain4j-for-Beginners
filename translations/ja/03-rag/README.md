@@ -1,70 +1,72 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f538a51cfd13147d40d84e936a0f485c",
-  "translation_date": "2025-12-13T16:51:39+00:00",
+  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+  "translation_date": "2026-01-05T22:14:04+00:00",
   "source_file": "03-rag/README.md",
   "language_code": "ja"
 }
 -->
-# Module 03: RAG (Retrieval-Augmented Generation)
+# モジュール03: RAG（情報検索強化生成）
 
-## Table of Contents
+## 目次
 
-- [What You'll Learn](../../../03-rag)
-- [Prerequisites](../../../03-rag)
-- [Understanding RAG](../../../03-rag)
-- [How It Works](../../../03-rag)
-  - [Document Processing](../../../03-rag)
-  - [Creating Embeddings](../../../03-rag)
-  - [Semantic Search](../../../03-rag)
-  - [Answer Generation](../../../03-rag)
-- [Run the Application](../../../03-rag)
-- [Using the Application](../../../03-rag)
-  - [Upload a Document](../../../03-rag)
-  - [Ask Questions](../../../03-rag)
-  - [Check Source References](../../../03-rag)
-  - [Experiment with Questions](../../../03-rag)
-- [Key Concepts](../../../03-rag)
-  - [Chunking Strategy](../../../03-rag)
-  - [Similarity Scores](../../../03-rag)
-  - [In-Memory Storage](../../../03-rag)
-  - [Context Window Management](../../../03-rag)
-- [When RAG Matters](../../../03-rag)
-- [Next Steps](../../../03-rag)
+- [学習内容](../../../03-rag)
+- [前提条件](../../../03-rag)
+- [RAGの理解](../../../03-rag)
+- [仕組み](../../../03-rag)
+  - [ドキュメント処理](../../../03-rag)
+  - [埋め込みの作成](../../../03-rag)
+  - [意味検索](../../../03-rag)
+  - [回答生成](../../../03-rag)
+- [アプリケーションの実行](../../../03-rag)
+- [アプリケーションの使用](../../../03-rag)
+  - [ドキュメントのアップロード](../../../03-rag)
+  - [質問をする](../../../03-rag)
+  - [ソース参照を確認](../../../03-rag)
+  - [質問で試す](../../../03-rag)
+- [重要な概念](../../../03-rag)
+  - [チャンク分割戦略](../../../03-rag)
+  - [類似度スコア](../../../03-rag)
+  - [インメモリストレージ](../../../03-rag)
+  - [コンテキストウィンドウ管理](../../../03-rag)
+- [RAGが重要になる時](../../../03-rag)
+- [次のステップ](../../../03-rag)
 
-## What You'll Learn
+## 学習内容
 
-前のモジュールでは、AIとの会話方法や効果的なプロンプトの構造化方法を学びました。しかし、根本的な制限があります。言語モデルはトレーニング時に学習したことしか知りません。会社の方針やプロジェクトのドキュメント、トレーニングされていない情報については答えられません。
+前のモジュールでは、AIとの会話方法と効果的なプロンプト構造の作り方を学びました。しかし、根本的な制限があります。言語モデルは学習した内容しか知らないため、あなたの会社の方針、プロジェクトのドキュメント、トレーニングされていない情報には答えられません。
 
-RAG（Retrieval-Augmented Generation）はこの問題を解決します。モデルに情報を教え込むのではなく（これはコストが高く非現実的です）、ドキュメントを検索する能力を与えます。質問が来ると、システムは関連情報を見つけてプロンプトに含めます。モデルはその取得したコンテキストに基づいて回答します。
+RAG（情報検索強化生成）はこの問題を解決します。モデルにあなたの情報を教え込むのではなく（これはコストが高く実用的ではありません）、ドキュメントを検索する能力を与えます。誰かが質問したときに、システムが関連情報を見つけてプロンプトに含めます。モデルはその検索されたコンテキストに基づいて回答します。
 
-RAGはモデルに参考図書館を与えるようなものです。質問すると、システムは：
+RAGはモデルに参照図書館を持たせるようなものです。質問すると、システムは：
 
 1. **ユーザークエリ** - 質問をする
 2. **埋め込み** - 質問をベクトルに変換
-3. **ベクトル検索** - 類似するドキュメントチャンクを検索
+3. **ベクトル検索** - 類似した文書チャンクを探す
 4. **コンテキスト組み立て** - 関連チャンクをプロンプトに追加
-5. **応答** - LLMがコンテキストに基づいて回答を生成
+5. **回答** - LLMがコンテキストに基づいて回答生成
 
-これにより、モデルの回答はトレーニング知識や作り話に頼るのではなく、実際のデータに根ざしたものになります。
+これにより、モデルの回答はトレーニング済みの知識や架空の回答に頼るのではなく、実際のデータに基づくものになります。
 
 <img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ja.png" alt="RAG Architecture" width="800"/>
 
-*RAGのワークフロー - ユーザークエリからセマンティック検索、コンテキストに基づく回答生成まで*
+*RAGのワークフロー - ユーザークエリから意味検索、文脈に沿った回答生成まで*
 
-## Prerequisites
+## 前提条件
 
-- Module 01を完了していること（Azure OpenAIリソースがデプロイ済み）
-- ルートディレクトリにAzure認証情報を含む`.env`ファイルがあること（Module 01の`azd up`で作成）
+- モジュール01を完了している（Azure OpenAIリソースがデプロイ済み）
+- ルートディレクトリにAzure認証情報を含む `.env` ファイルがある（モジュール01の `azd up` コマンドで作成）
 
-> **Note:** Module 01を完了していない場合は、まずそちらのデプロイ手順に従ってください。
+> **注意:** モジュール01を完了していない場合は、まずそちらの展開手順に従ってください。
 
-## How It Works
+## 仕組み
 
-**Document Processing** - [DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+### ドキュメント処理
 
-ドキュメントをアップロードすると、システムはそれをチャンク（小さな断片）に分割します。これらのチャンクはモデルのコンテキストウィンドウに収まるサイズで、境界でのコンテキスト損失を防ぐために少し重複しています。
+[DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+
+ドキュメントをアップロードすると、システムはそれをチャンク単位に分割します。チャンクとはモデルのコンテキストウィンドウに収まる小さい部分です。チャンクは境界でコンテキストが失われないように少し重複しています。
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("sample-document.txt");
@@ -75,14 +77,16 @@ DocumentSplitter splitter = DocumentSplitters
 List<TextSegment> segments = splitter.split(document);
 ```
 
-> **🤖 GitHub Copilot Chatで試す:** [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)を開いて以下を質問してください：
-> - 「LangChain4jはドキュメントをどのようにチャンクに分割し、なぜ重複が重要なのか？」
-> - 「異なるドキュメントタイプに最適なチャンクサイズは何で、なぜか？」
-> - 「多言語や特殊なフォーマットのドキュメントはどう扱うのか？」
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) チャットで試す:** [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) を開いて以下を質問:
+> - 「LangChain4jはドキュメントをどのようにチャンクに分割し、重複が重要なのはなぜ？」
+> - 「異なるドキュメントタイプに最適なチャンクサイズは何で、その理由は？」
+> - 「複数言語や特殊フォーマットドキュメントの扱いはどうする？」
 
-**Creating Embeddings** - [LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+### 埋め込みの作成
 
-各チャンクは埋め込みと呼ばれる数値表現に変換されます。これはテキストの意味を捉えた数学的な指紋のようなものです。類似したテキストは類似した埋め込みを生成します。
+[LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+
+各チャンクは埋め込みと呼ばれる数値表現に変換されます。これはテキストの意味を捉えた数学的な指紋のようなものです。類似したテキストは類似した埋め込みになります。
 
 ```java
 @Bean
@@ -100,11 +104,13 @@ EmbeddingStore<TextSegment> embeddingStore =
 
 <img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ja.png" alt="Vector Embeddings Space" width="800"/>
 
-*埋め込み空間におけるベクトルで表現されたドキュメント - 類似内容はクラスター化される*
+*埋め込み空間でベクトルとして表現されたドキュメント - 類似コンテンツがクラスタを形成*
 
-**Semantic Search** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### 意味検索
 
-質問をすると、その質問も埋め込みに変換されます。システムは質問の埋め込みとすべてのドキュメントチャンクの埋め込みを比較し、意味的に最も類似したチャンクを見つけます。単なるキーワードの一致ではなく、実際の意味の類似性に基づきます。
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+質問をすると、その質問も埋め込みに変換されます。システムは質問の埋め込みと全ての文書チャンクの埋め込みを比較します。キーワードだけでなく、意味的に最も類似したチャンクを見つけ出します。
 
 ```java
 Embedding queryEmbedding = embeddingModel.embed(question).content();
@@ -118,45 +124,47 @@ for (EmbeddingMatch<TextSegment> match : matches) {
 }
 ```
 
-> **🤖 GitHub Copilot Chatで試す:** [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)を開いて以下を質問してください：
-> - 「埋め込みを使った類似度検索はどう機能し、スコアは何で決まるのか？」
-> - 「どの類似度閾値を使うべきで、それが結果にどう影響するのか？」
-> - 「関連ドキュメントが見つからない場合はどう対処するのか？」
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) チャットで試す:** [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) を開いて以下を質問:
+> - 「埋め込みによる類似検索はどのように機能し、スコアはどう決まる？」
+> - 「類似度閾値はどのくらいが適切で、結果にどう影響する？」
+> - 「関連ドキュメントが見つからない場合はどう処理する？」
 
-**Answer Generation** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### 回答生成
 
-最も関連性の高いチャンクがモデルへのプロンプトに含まれます。モデルはそれらのチャンクを読み、その情報に基づいて質問に答えます。これにより幻覚（hallucination）を防ぎ、モデルは目の前の情報からのみ回答します。
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
 
-## Run the Application
+最も関連性の高いチャンクがモデルへのプロンプトに含まれます。モデルはそれらのチャンクを読み、その情報に基づいて質問に回答します。これにより幻覚（事実と異なる生成）を防止します。
 
-**デプロイの確認：**
+## アプリケーションの実行
 
-ルートディレクトリにAzure認証情報を含む`.env`ファイルが存在することを確認してください（Module 01で作成）：
+**デプロイ確認：**
+
+ルートディレクトリにAzure認証情報入りの `.env` ファイルが存在することを確認（モジュール01実行時に作成）：
 ```bash
-cat ../.env  # AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENTを表示する必要があります
+cat ../.env  # AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT を表示する必要があります
 ```
 
 **アプリケーションの起動：**
 
-> **Note:** Module 01の`./start-all.sh`で既にすべてのアプリケーションを起動している場合、このモジュールはポート8081で既に動作しています。以下の起動コマンドはスキップして http://localhost:8081 に直接アクセスできます。
+> **注意:** もしモジュール01で `./start-all.sh` を使用してすでに全アプリケーションを起動していれば、このモジュールはポート8081で起動中です。以下の起動コマンドはスキップして http://localhost:8081 に直接アクセスしてください。
 
-**オプション1: Spring Boot Dashboardを使う（VS Codeユーザーに推奨）**
+**オプション1：Spring Boot Dashboardの使用（VS Codeユーザー推奨）**
 
-開発コンテナにはSpring Boot Dashboard拡張機能が含まれており、すべてのSpring Bootアプリケーションを視覚的に管理できます。VS Codeの左側のアクティビティバーにあるSpring Bootアイコンからアクセス可能です。
+開発コンテナにSpring Boot Dashboard拡張機能が含まれており、すべてのSpring Bootアプリケーションを視覚的に管理可能です。VS Codeの左側のアクティビティバーにあるSpring Bootアイコンを探してください。
 
-Spring Boot Dashboardからは：
-- ワークスペース内のすべてのSpring Bootアプリケーションを一覧表示
-- ワンクリックでアプリケーションの起動/停止
-- リアルタイムでログを表示
+Spring Boot Dashboardでは：
+- ワークスペース内の全Spring Bootアプリを確認可能
+- ワンクリックで起動・停止が可能
+- リアルタイムにログを表示
 - アプリケーションの状態を監視
 
-「rag」の横にある再生ボタンをクリックしてこのモジュールを起動するか、すべてのモジュールを一括で起動できます。
+「rag」の横にある再生ボタンをクリックするとこのモジュールが起動します。全モジュールを一度に起動することも可能です。
 
 <img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ja.png" alt="Spring Boot Dashboard" width="400"/>
 
-**オプション2: シェルスクリプトを使う**
+**オプション2：シェルスクリプトの使用**
 
-すべてのWebアプリケーション（モジュール01-04）を起動：
+すべてのウェブアプリケーション（モジュール01-04）を起動：
 
 **Bash:**
 ```bash
@@ -170,7 +178,7 @@ cd ..  # ルートディレクトリから
 .\start-all.ps1
 ```
 
-またはこのモジュールだけ起動：
+このモジュールだけを起動：
 
 **Bash:**
 ```bash
@@ -184,16 +192,16 @@ cd 03-rag
 .\start.ps1
 ```
 
-どちらのスクリプトもルートの`.env`ファイルから環境変数を自動で読み込み、JARがなければビルドします。
+どちらのスクリプトもルートの `.env` ファイルから環境変数を自動読み込みし、JARがなければビルドします。
 
-> **Note:** すべてのモジュールを手動でビルドしてから起動したい場合：
+> **注意:** 起動前にすべてのモジュールを手動でビルドしたい場合：
 >
 > **Bash:**
 > ```bash
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
->
+
 > **PowerShell:**
 > ```powershell
 > cd ..  # Go to root directory
@@ -202,7 +210,7 @@ cd 03-rag
 
 ブラウザで http://localhost:8081 を開いてください。
 
-**停止するには：**
+**停止コマンド：**
 
 **Bash:**
 ```bash
@@ -218,87 +226,88 @@ cd .. && ./stop-all.sh  # すべてのモジュール
 cd ..; .\stop-all.ps1  # すべてのモジュール
 ```
 
-## Using the Application
 
-このアプリケーションはドキュメントのアップロードと質問のためのWebインターフェースを提供します。
+## アプリケーションの使用
+
+このアプリケーションはドキュメントのアップロードと質問のためのウェブインターフェースを提供します。
 
 <a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ja.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*RAGアプリケーションのインターフェース - ドキュメントをアップロードして質問する*
+*RAGアプリケーションインターフェース - ドキュメントをアップロードして質問可能*
 
-**ドキュメントのアップロード**
+### ドキュメントのアップロード
 
-まずドキュメントをアップロードしてください。テストにはTXTファイルが最適です。このディレクトリにはLangChain4jの機能、RAGの実装、ベストプラクティスに関する情報を含む`sample-document.txt`が用意されています。システムはアップロード時に自動でドキュメントを処理し、チャンクに分割し、それぞれのチャンクの埋め込みを作成します。
+まずドキュメントをアップロードしてください。テストにはTXTファイルが最適です。このディレクトリにはLangChain4jの機能、RAGの実装、ベストプラクティス情報が記載された `sample-document.txt` が提供されています。システムはアップロード時に自動でドキュメントを処理し、チャンク分割し、各チャンクの埋め込みを作成します。
 
-**質問する**
+### 質問をする
 
-ドキュメントの内容に関して具体的な質問をしてください。ドキュメントに明確に記載されている事実的な質問が良いでしょう。システムは関連チャンクを検索し、プロンプトに含めて回答を生成します。
+ドキュメントの内容に関する具体的な質問をしてください。文書内で明確に述べられている事実を尋ねるのが良いでしょう。システムは関連チャンクを検索し、それをプロンプトに含めて回答を生成します。
 
-**ソース参照の確認**
+### ソース参照を確認
 
-各回答には類似度スコア付きのソース参照が含まれています。これらのスコア（0から1）は質問に対するチャンクの関連度を示します。スコアが高いほどマッチ度が良いことを意味します。これにより回答を元の資料と照合できます。
+回答には似ているチャンクのソース参照と類似度スコアが含まれます。スコアは0から1で、質問に対してチャンクがどれだけ関連しているかを示します。スコアが高いほどマッチ度が良いです。これにより回答を元資料と比較して検証できます。
 
 <a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ja.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*回答とソース参照、関連度スコアを表示したクエリ結果*
+*質問結果に回答とソース参照、関連度スコアを表示*
 
-**質問を試してみる**
+### 質問で試す
 
-様々なタイプの質問を試してください：
+さまざまなタイプの質問を試してください：
 - 具体的な事実：「主なトピックは何ですか？」
 - 比較：「XとYの違いは何ですか？」
-- 要約：「Zについての重要ポイントをまとめてください」
+- 要約：「Zの重要ポイントをまとめて」
 
-質問とドキュメント内容のマッチ度に応じて関連度スコアがどのように変わるか観察してください。
+質問内容によって関連度スコアがどのように変化するか観察してください。
 
-## Key Concepts
+## 重要な概念
 
-**Chunking Strategy**
+### チャンク分割戦略
 
-ドキュメントは300トークンのチャンクに分割され、30トークンの重複があります。このバランスにより、各チャンクは意味を持つ十分なコンテキストを持ちつつ、複数チャンクをプロンプトに含められるサイズに収まります。
+ドキュメントは300トークンのチャンクに分割され、30トークンの重複があります。このバランスにより、十分な文脈を保ちつつ、複数チャンクをプロンプトに含められる大きさに抑えられます。
 
-**Similarity Scores**
+### 類似度スコア
 
-スコアは0から1の範囲：
-- 0.7-1.0: 非常に関連性が高く、完全一致に近い
-- 0.5-0.7: 関連性があり、良いコンテキスト
-- 0.5未満: フィルタリングされ、関連性が低い
+スコアは0から1の範囲です：
+- 0.7〜1.0：非常に関連性が高く、完全なマッチ
+- 0.5〜0.7：関連性あり、良好な文脈
+- 0.5未満：除外、関連性低い
 
-システムは最低閾値以上のチャンクのみを取得し、品質を確保します。
+システムは最低閾値以上のチャンクのみを検索結果として返し、品質を確保します。
 
-**In-Memory Storage**
+### インメモリストレージ
 
-このモジュールは簡単のためインメモリストレージを使用しています。アプリケーションを再起動するとアップロードしたドキュメントは失われます。実運用ではQdrantやAzure AI Searchのような永続的なベクターデータベースを使用します。
+このモジュールではシンプルにインメモリストレージを使用しています。アプリを再起動するとアップロードしたドキュメントは失われます。実運用ではQdrantやAzure AI Searchのような永続的ベクトルデータベースを使います。
 
-**Context Window Management**
+### コンテキストウィンドウ管理
 
-各モデルには最大コンテキストウィンドウがあります。大きなドキュメントのすべてのチャンクを含めることはできません。システムは最も関連性の高い上位Nチャンク（デフォルト5）を取得し、制限内で十分なコンテキストを提供して正確な回答を可能にします。
+モデルには最大のコンテキストウィンドウ容量があり、大きなドキュメントのすべてのチャンクを含めることはできません。システムは最も関連性の高い上位Nチャンク（デフォルトは5）を取得し、制限内で十分な文脈を提供し正確な回答を実現します。
 
-## When RAG Matters
+## RAGが重要になる時
 
-**RAGを使うべき場合：**
-- 独自ドキュメントに関する質問に答えるとき
-- 情報が頻繁に変わる場合（方針、価格、仕様など）
-- 正確さにソースの明示が必要な場合
-- コンテンツが大きすぎて単一プロンプトに収まらない場合
+**RAGを使うと効果的なケース：**
+- 独自のドキュメントに関する質問に答える必要がある場合
+- 情報が頻繁に変わる（方針、価格、仕様等）
+- 正確性がソースの明示を要求する場合
+- コンテンツが大きくて単一プロンプトに収まらない場合
 - 検証可能で根拠のある回答が必要な場合
 
-**RAGを使わない方が良い場合：**
-- モデルが既に持っている一般知識に関する質問
-- リアルタイムデータが必要な場合（RAGはアップロード済みドキュメントに基づく）
-- コンテンツが小さく直接プロンプトに含められる場合
+**RAGを使わなくて良いケース：**
+- モデルが既に持つ一般知識が質問対象の場合
+- リアルタイムデータが必要な場合（RAGはアップロード済みドキュメントで動作）
+- コンテンツが小さくプロンプトに直接含められる場合
 
-## Next Steps
+## 次のステップ
 
-**次のモジュール:** [04-tools - AI Agents with Tools](../04-tools/README.md)
+**次のモジュール:** [04-tools - AIエージェントとツール](../04-tools/README.md)
 
 ---
 
-**ナビゲーション:** [← 前へ: Module 02 - Prompt Engineering](../02-prompt-engineering/README.md) | [メインへ戻る](../README.md) | [次へ: Module 04 - Tools →](../04-tools/README.md)
+**ナビゲーション:** [← 前へ：モジュール02 - プロンプトエンジニアリング](../02-prompt-engineering/README.md) | [メインへ戻る](../README.md) | [次へ：モジュール04 - ツール →](../04-tools/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **免責事項**：  
-本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性の向上に努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。原文の言語による文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても、当方は責任を負いかねます。
+本書類はAI翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されています。正確性には努めておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご理解ください。原文の日本語版（または原言語版）が正式な情報源とみなされます。重要な情報については、専門の人間による翻訳をご利用いただくことを推奨します。本翻訳の利用により生じた誤解や誤訳について、一切の責任を負いかねます。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f538a51cfd13147d40d84e936a0f485c",
-  "translation_date": "2025-12-13T16:43:23+00:00",
+  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+  "translation_date": "2026-01-05T21:26:09+00:00",
   "source_file": "03-rag/README.md",
   "language_code": "de"
 }
@@ -15,56 +15,58 @@ CO_OP_TRANSLATOR_METADATA:
 - [Voraussetzungen](../../../03-rag)
 - [Verständnis von RAG](../../../03-rag)
 - [Wie es funktioniert](../../../03-rag)
-  - [Dokumentenverarbeitung](../../../03-rag)
+  - [Dokumentverarbeitung](../../../03-rag)
   - [Erstellung von Embeddings](../../../03-rag)
   - [Semantische Suche](../../../03-rag)
   - [Antwortgenerierung](../../../03-rag)
-- [Anwendung starten](../../../03-rag)
-- [Anwendung verwenden](../../../03-rag)
+- [Anwendung ausführen](../../../03-rag)
+- [Anwendung benutzen](../../../03-rag)
   - [Dokument hochladen](../../../03-rag)
   - [Fragen stellen](../../../03-rag)
-  - [Quellenangaben prüfen](../../../03-rag)
+  - [Quellen überprüfen](../../../03-rag)
   - [Mit Fragen experimentieren](../../../03-rag)
-- [Wichtige Konzepte](../../../03-rag)
+- [Kernkonzepte](../../../03-rag)
   - [Chunking-Strategie](../../../03-rag)
   - [Ähnlichkeitsscores](../../../03-rag)
   - [In-Memory-Speicherung](../../../03-rag)
-  - [Verwaltung des Kontextfensters](../../../03-rag)
+  - [Management des Kontextfensters](../../../03-rag)
 - [Wann RAG wichtig ist](../../../03-rag)
 - [Nächste Schritte](../../../03-rag)
 
 ## Was Sie lernen werden
 
-In den vorherigen Modulen haben Sie gelernt, wie man Gespräche mit KI führt und Ihre Prompts effektiv strukturiert. Aber es gibt eine grundlegende Einschränkung: Sprachmodelle wissen nur, was sie während des Trainings gelernt haben. Sie können keine Fragen zu den Richtlinien Ihres Unternehmens, Ihrer Projektdokumentation oder zu Informationen beantworten, auf die sie nicht trainiert wurden.
+In den vorherigen Modulen haben Sie gelernt, wie man Gespräche mit KI führt und Ihre Prompts effektiv strukturiert. Aber es gibt eine grundlegende Einschränkung: Sprachmodelle wissen nur, was sie während des Trainings gelernt haben. Sie können keine Fragen zu den Richtlinien Ihres Unternehmens, Ihrer Projektdokumentation oder Informationen beantworten, auf die sie nicht trainiert wurden.
 
-RAG (Retrieval-Augmented Generation) löst dieses Problem. Anstatt zu versuchen, dem Modell Ihre Informationen beizubringen (was teuer und unpraktisch ist), geben Sie ihm die Fähigkeit, in Ihren Dokumenten zu suchen. Wenn jemand eine Frage stellt, findet das System relevante Informationen und fügt sie in den Prompt ein. Das Modell antwortet dann basierend auf diesem abgerufenen Kontext.
+RAG (Retrieval-Augmented Generation) löst dieses Problem. Statt zu versuchen, dem Modell Ihre Informationen beizubringen (was teuer und unpraktisch ist), geben Sie ihm die Fähigkeit, in Ihren Dokumenten zu suchen. Wenn jemand eine Frage stellt, findet das System relevante Informationen und fügt diese in den Prompt ein. Das Modell antwortet dann basierend auf diesem abgerufenen Kontext.
 
-Man kann sich RAG vorstellen wie eine Referenzbibliothek für das Modell. Wenn Sie eine Frage stellen, macht das System:
+Man kann sich RAG wie eine Referenzbibliothek für das Modell vorstellen. Wenn Sie eine Frage stellen, macht das System Folgendes:
 
-1. **Benutzeranfrage** – Sie stellen eine Frage
-2. **Embedding** – Wandelt Ihre Frage in einen Vektor um
-3. **Vektorsuche** – Findet ähnliche Dokumentenabschnitte
-4. **Kontextzusammenstellung** – Fügt relevante Abschnitte dem Prompt hinzu
+1. **Benutzeranfrage** – Sie stellen eine Frage  
+2. **Embedding** – Wandelt Ihre Frage in einen Vektor um  
+3. **Vektorsuche** – Findet ähnliche Dokumentenabschnitte  
+4. **Kontextzusammenstellung** – Fügt relevante Abschnitte dem Prompt hinzu  
 5. **Antwort** – LLM generiert eine Antwort basierend auf dem Kontext
 
-Dies verankert die Antworten des Modells in Ihren tatsächlichen Daten, anstatt sich auf das Trainingswissen zu verlassen oder Antworten zu erfinden.
+Dies verankert die Antworten des Modells in Ihren tatsächlichen Daten, anstatt auf das Trainingswissen zu vertrauen oder Antworten zu erfinden.
 
 <img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.de.png" alt="RAG Architektur" width="800"/>
 
-*RAG-Workflow – von der Benutzeranfrage über die semantische Suche bis zur kontextuellen Antwortgenerierung*
+*RAG-Workflow – von der Benutzeranfrage zur semantischen Suche bis zur kontextuellen Antwortgenerierung*
 
 ## Voraussetzungen
 
-- Abgeschlossenes Modul 01 (Azure OpenAI-Ressourcen bereitgestellt)
-- `.env`-Datei im Stammverzeichnis mit Azure-Zugangsdaten (erstellt durch `azd up` in Modul 01)
+- Abgeschlossenes Modul 01 (bereitgestellte Azure OpenAI-Ressourcen)  
+- `.env`-Datei im Hauptverzeichnis mit Azure-Zugangsdaten (erstellt durch `azd up` in Modul 01)
 
-> **Hinweis:** Wenn Sie Modul 01 noch nicht abgeschlossen haben, folgen Sie dort zuerst den Bereitstellungsanweisungen.
+> **Hinweis:** Wenn Sie Modul 01 noch nicht abgeschlossen haben, folgen Sie zuerst den dortigen Bereitstellungsanweisungen.
 
 ## Wie es funktioniert
 
-**Dokumentenverarbeitung** – [DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+### Dokumentverarbeitung
 
-Wenn Sie ein Dokument hochladen, zerlegt das System es in Chunks – kleinere Stücke, die bequem in das Kontextfenster des Modells passen. Diese Chunks überlappen sich leicht, damit am Rand kein Kontext verloren geht.
+[DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+
+Wenn Sie ein Dokument hochladen, teilt das System es in Chunks auf – kleinere Stücke, die bequem in das Kontextfenster des Modells passen. Diese Chunks überschneiden sich leicht, damit am Rand keine Kontexte verloren gehen.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("sample-document.txt");
@@ -75,14 +77,16 @@ DocumentSplitter splitter = DocumentSplitters
 List<TextSegment> segments = splitter.split(document);
 ```
 
-> **🤖 Probieren Sie es mit [GitHub Copilot](https://github.com/features/copilot) Chat:** Öffnen Sie [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) und fragen Sie:
-> - "Wie teilt LangChain4j Dokumente in Chunks auf und warum ist Überlappung wichtig?"
-> - "Was ist die optimale Chunk-Größe für verschiedene Dokumenttypen und warum?"
+> **🤖 Probieren Sie es mit dem [GitHub Copilot](https://github.com/features/copilot) Chat:** Öffnen Sie [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) und fragen Sie:  
+> - "Wie teilt LangChain4j Dokumente in Chunks auf und warum ist Überlappung wichtig?"  
+> - "Was ist die optimale Chunk-Größe für verschiedene Dokumenttypen und warum?"  
 > - "Wie gehe ich mit Dokumenten in mehreren Sprachen oder mit spezieller Formatierung um?"
 
-**Erstellung von Embeddings** – [LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+### Erstellung von Embeddings
 
-Jeder Chunk wird in eine numerische Darstellung namens Embedding umgewandelt – im Wesentlichen ein mathematischer Fingerabdruck, der die Bedeutung des Textes erfasst. Ähnliche Texte erzeugen ähnliche Embeddings.
+[LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+
+Jeder Chunk wird in eine numerische Darstellung, ein sogenanntes Embedding, umgewandelt – im Grunde ein mathematischer Fingerabdruck, der die Bedeutung des Textes erfasst. Ähnliche Texte erzeugen ähnliche Embeddings.
 
 ```java
 @Bean
@@ -98,13 +102,15 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.de.png" alt="Vektor-Embedding-Raum" width="800"/>
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.de.png" alt="Vector Embeddings Raum" width="800"/>
 
-*Dokumente als Vektoren im Embedding-Raum dargestellt – ähnliche Inhalte gruppieren sich*
+*Dokumente als Vektoren im Embedding-Raum dargestellt – ähnlicher Inhalt gruppiert sich*
 
-**Semantische Suche** – [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Semantische Suche
 
-Wenn Sie eine Frage stellen, wird auch Ihre Frage in ein Embedding umgewandelt. Das System vergleicht das Embedding Ihrer Frage mit allen Embeddings der Dokumentenabschnitte. Es findet die Abschnitte mit der größten semantischen Ähnlichkeit – nicht nur passende Schlüsselwörter, sondern tatsächliche Bedeutungsähnlichkeit.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+Wenn Sie eine Frage stellen, wird auch Ihre Frage in ein Embedding umgewandelt. Das System vergleicht das Embedding Ihrer Frage mit allen Dokumentenchunks-Embeddings. Es findet die Chunks mit der größten semantischen Ähnlichkeit – nicht nur übereinstimmende Schlüsselwörter, sondern tatsächliche Bedeutungsgleichheit.
 
 ```java
 Embedding queryEmbedding = embeddingModel.embed(question).content();
@@ -118,177 +124,181 @@ for (EmbeddingMatch<TextSegment> match : matches) {
 }
 ```
 
-> **🤖 Probieren Sie es mit [GitHub Copilot](https://github.com/features/copilot) Chat:** Öffnen Sie [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) und fragen Sie:
-> - "Wie funktioniert die Ähnlichkeitssuche mit Embeddings und was bestimmt den Score?"
-> - "Welchen Ähnlichkeitsschwellenwert sollte ich verwenden und wie beeinflusst er die Ergebnisse?"
+> **🤖 Probieren Sie es mit dem [GitHub Copilot](https://github.com/features/copilot) Chat:** Öffnen Sie [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) und fragen Sie:  
+> - "Wie funktioniert die Ähnlichkeitssuche mit Embeddings und was bestimmt den Score?"  
+> - "Welchen Ähnlichkeitsschwellenwert sollte ich verwenden und wie beeinflusst das die Ergebnisse?"  
 > - "Wie gehe ich mit Fällen um, in denen keine relevanten Dokumente gefunden werden?"
 
-**Antwortgenerierung** – [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Antwortgenerierung
 
-Die relevantesten Chunks werden in den Prompt an das Modell aufgenommen. Das Modell liest diese spezifischen Abschnitte und beantwortet Ihre Frage basierend auf diesen Informationen. Dies verhindert Halluzinationen – das Modell kann nur aus dem antworten, was vorliegt.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
 
-## Anwendung starten
+Die relevantesten Chunks werden im Prompt an das Modell übergeben. Das Modell liest diese spezifischen Abschnitte und beantwortet Ihre Frage basierend auf diesen Informationen. So wird eine Halluzination vermieden – das Modell kann nur aus dem antworten, was vorliegt.
+
+## Anwendung ausführen
 
 **Bereitstellung überprüfen:**
 
-Stellen Sie sicher, dass die `.env`-Datei im Stammverzeichnis mit Azure-Zugangsdaten existiert (wurde während Modul 01 erstellt):
+Stellen Sie sicher, dass die `.env`-Datei im Hauptverzeichnis mit Azure-Zugangsdaten vorhanden ist (wurde während Modul 01 erstellt):  
 ```bash
 cat ../.env  # Sollte AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT anzeigen
 ```
-
+  
 **Anwendung starten:**
 
 > **Hinweis:** Wenn Sie bereits alle Anwendungen mit `./start-all.sh` aus Modul 01 gestartet haben, läuft dieses Modul bereits auf Port 8081. Sie können die Startbefehle unten überspringen und direkt zu http://localhost:8081 gehen.
 
-**Option 1: Verwendung des Spring Boot Dashboards (empfohlen für VS Code Nutzer)**
+**Option 1: Spring Boot Dashboard verwenden (empfohlen für VS Code-Nutzer)**
 
-Der Dev-Container enthält die Erweiterung Spring Boot Dashboard, die eine visuelle Oberfläche zur Verwaltung aller Spring Boot Anwendungen bietet. Sie finden sie in der Aktivitätsleiste links in VS Code (Suchen Sie nach dem Spring Boot Symbol).
+Der Dev-Container enthält die Spring Boot Dashboard-Erweiterung, die eine visuelle Oberfläche zur Verwaltung aller Spring Boot Anwendungen bietet. Sie finden diese in der Aktivitätsleiste links in VS Code (Suchen Sie nach dem Spring Boot Symbol).
 
-Im Spring Boot Dashboard können Sie:
-- Alle verfügbaren Spring Boot Anwendungen im Workspace sehen
-- Anwendungen mit einem Klick starten/stoppen
-- Anwendungsprotokolle in Echtzeit ansehen
-- Anwendungsstatus überwachen
+Im Spring Boot Dashboard können Sie:  
+- Alle verfügbaren Spring Boot-Anwendungen im Workspace sehen  
+- Anwendungen mit einem Klick starten/stoppen  
+- Anwendungsprotokolle in Echtzeit anzeigen  
+- Den Anwendungsstatus überwachen
 
-Klicken Sie einfach auf den Play-Button neben „rag“, um dieses Modul zu starten, oder starten Sie alle Module gleichzeitig.
+Klicken Sie einfach auf die Wiedergabetaste neben "rag", um dieses Modul zu starten, oder starten Sie alle Module auf einmal.
 
 <img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.de.png" alt="Spring Boot Dashboard" width="400"/>
 
-**Option 2: Verwendung von Shell-Skripten**
+**Option 2: Shell-Skripte verwenden**
 
 Starten Sie alle Webanwendungen (Module 01-04):
 
-**Bash:**
+**Bash:**  
 ```bash
 cd ..  # Vom Stammverzeichnis
 ./start-all.sh
 ```
-
-**PowerShell:**
+  
+**PowerShell:**  
 ```powershell
 cd ..  # Vom Stammverzeichnis
 .\start-all.ps1
 ```
-
+  
 Oder starten Sie nur dieses Modul:
 
-**Bash:**
+**Bash:**  
 ```bash
 cd 03-rag
 ./start.sh
 ```
-
-**PowerShell:**
+  
+**PowerShell:**  
 ```powershell
 cd 03-rag
 .\start.ps1
 ```
+  
+Beide Skripte laden automatisch die Umgebungsvariablen aus der `.env`-Datei im Hauptverzeichnis und bauen die JARs, falls sie nicht existieren.
 
-Beide Skripte laden automatisch Umgebungsvariablen aus der `.env`-Datei im Stammverzeichnis und bauen die JARs, falls sie nicht existieren.
-
-> **Hinweis:** Wenn Sie alle Module manuell vor dem Start bauen möchten:
->
-> **Bash:**
-> ```bash
+> **Hinweis:** Wenn Sie alle Module manuell vor dem Start bauen möchten:  
+>  
+> **Bash:**  
+> > ```bash
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
->
-> **PowerShell:**
-> ```powershell
+  
+> **PowerShell:**  
+> > ```powershell
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
+
 
 Öffnen Sie http://localhost:8081 in Ihrem Browser.
 
 **Zum Stoppen:**
 
-**Bash:**
+**Bash:**  
 ```bash
 ./stop.sh  # Nur dieses Modul
 # Oder
 cd .. && ./stop-all.sh  # Alle Module
 ```
-
-**PowerShell:**
+  
+**PowerShell:**  
 ```powershell
 .\stop.ps1  # Nur dieses Modul
 # Oder
 cd ..; .\stop-all.ps1  # Alle Module
 ```
+  
 
-## Anwendung verwenden
+## Anwendung benutzen
 
-Die Anwendung bietet eine Weboberfläche zum Hochladen von Dokumenten und zum Stellen von Fragen.
+Die Anwendung bietet eine Weboberfläche zum Hochladen von Dokumenten und Stellen von Fragen.
 
 <a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.de.png" alt="RAG Anwendungsoberfläche" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Die RAG-Anwendungsoberfläche – Dokumente hochladen und Fragen stellen*
 
-**Dokument hochladen**
+### Dokument hochladen
 
-Beginnen Sie mit dem Hochladen eines Dokuments – TXT-Dateien eignen sich am besten zum Testen. Eine `sample-document.txt` ist in diesem Verzeichnis enthalten, die Informationen über LangChain4j-Funktionen, RAG-Implementierung und Best Practices enthält – perfekt zum Testen des Systems.
+Beginnen Sie mit dem Hochladen eines Dokuments – TXT-Dateien eignen sich am besten zum Testen. Eine `sample-document.txt` liegt in diesem Verzeichnis bei, die Informationen zu LangChain4j-Features, RAG-Implementierung und Best Practices enthält – perfekt zum Testen des Systems.
 
-Das System verarbeitet Ihr Dokument, zerlegt es in Chunks und erstellt für jeden Chunk Embeddings. Dies geschieht automatisch beim Hochladen.
+Das System verarbeitet Ihr Dokument, teilt es in Chunks auf und erstellt für jeden Chunk Embeddings. Dies geschieht automatisch beim Hochladen.
 
-**Fragen stellen**
+### Fragen stellen
 
-Stellen Sie nun spezifische Fragen zum Dokumentinhalt. Versuchen Sie etwas Faktisches, das klar im Dokument steht. Das System sucht nach relevanten Chunks, fügt sie dem Prompt hinzu und generiert eine Antwort.
+Stellen Sie nun spezifische Fragen zum Dokumentinhalt. Versuchen Sie etwas Faktisches, das klar im Dokument steht. Das System sucht relevante Chunks, fügt diese dem Prompt hinzu und generiert eine Antwort.
 
-**Quellenangaben prüfen**
+### Quellen überprüfen
 
-Beachten Sie, dass jede Antwort Quellenangaben mit Ähnlichkeitsscores enthält. Diese Scores (0 bis 1) zeigen, wie relevant jeder Chunk für Ihre Frage war. Höhere Scores bedeuten bessere Übereinstimmungen. So können Sie die Antwort mit dem Quellmaterial verifizieren.
+Beachten Sie, dass jede Antwort Quellenverweise mit Ähnlichkeitsscores enthält. Diese Scores (0 bis 1) zeigen, wie relevant jeder Chunk für Ihre Frage war. Höhere Scores bedeuten bessere Übereinstimmungen. So können Sie die Antwort mit dem Quellmaterial verifizieren.
 
 <a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.de.png" alt="RAG Abfrageergebnisse" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Abfrageergebnisse mit Antwort, Quellenangaben und Relevanzscores*
+*Abfrageergebnisse mit Antwort, Quellenverweisen und Relevanzscores*
 
-**Mit Fragen experimentieren**
+### Mit Fragen experimentieren
 
-Probieren Sie verschiedene Fragetypen aus:
-- Spezifische Fakten: „Was ist das Hauptthema?“
-- Vergleiche: „Was ist der Unterschied zwischen X und Y?“
-- Zusammenfassungen: „Fassen Sie die wichtigsten Punkte zu Z zusammen“
+Probieren Sie verschiedene Fragetypen:  
+- Spezifische Fakten: "Was ist das Hauptthema?"  
+- Vergleiche: "Was ist der Unterschied zwischen X und Y?"  
+- Zusammenfassungen: "Fassen Sie die wichtigsten Punkte zu Z zusammen"
 
-Beobachten Sie, wie sich die Relevanzscores ändern, je nachdem, wie gut Ihre Frage zum Dokumentinhalt passt.
+Beobachten Sie, wie sich die Relevanzscores ändern, je nachdem, wie gut Ihre Frage mit dem Dokumentinhalt übereinstimmt.
 
-## Wichtige Konzepte
+## Kernkonzepte
 
-**Chunking-Strategie**
+### Chunking-Strategie
 
-Dokumente werden in 300-Token-Chunks mit 30 Token Überlappung aufgeteilt. Dieses Gleichgewicht stellt sicher, dass jeder Chunk genug Kontext hat, um sinnvoll zu sein, und gleichzeitig klein genug bleibt, um mehrere Chunks in einem Prompt unterzubringen.
+Dokumente werden in 300-Token-Chunks mit 30 Token Überlappung aufgeteilt. Diese Balance stellt sicher, dass jeder Chunk genug Kontext enthält, um sinnvoll zu sein, und gleichzeitig klein genug bleibt, um mehrere Chunks in einen Prompt einzufügen.
 
-**Ähnlichkeitsscores**
+### Ähnlichkeitsscores
 
-Scores reichen von 0 bis 1:
-- 0,7–1,0: Hoch relevant, exakte Übereinstimmung
-- 0,5–0,7: Relevant, guter Kontext
+Scores liegen im Bereich von 0 bis 1:  
+- 0,7–1,0: Sehr relevant, exakte Übereinstimmung  
+- 0,5–0,7: Relevant, guter Kontext  
 - Unter 0,5: Gefiltert, zu unähnlich
 
-Das System ruft nur Chunks oberhalb der Mindestgrenze ab, um Qualität zu gewährleisten.
+Das System ruft nur Chunks oberhalb des minimalen Schwellenwerts ab, um Qualität sicherzustellen.
 
-**In-Memory-Speicherung**
+### In-Memory-Speicherung
 
-Dieses Modul verwendet zur Vereinfachung eine In-Memory-Speicherung. Beim Neustart der Anwendung gehen hochgeladene Dokumente verloren. Produktionssysteme nutzen persistente Vektordatenbanken wie Qdrant oder Azure AI Search.
+Dieses Modul verwendet zur Einfachheit eine In-Memory-Speicherung. Beim Neustart der Anwendung gehen hochgeladene Dokumente verloren. Produktionssysteme nutzen persistente Vektordatenbanken wie Qdrant oder Azure AI Search.
 
-**Verwaltung des Kontextfensters**
+### Management des Kontextfensters
 
-Jedes Modell hat ein maximales Kontextfenster. Sie können nicht jeden Chunk eines großen Dokuments einfügen. Das System ruft die Top N relevantesten Chunks ab (Standard 5), um innerhalb der Grenzen zu bleiben und dennoch genug Kontext für genaue Antworten zu bieten.
+Jedes Modell hat ein maximales Kontextfenster. Sie können nicht jeden Chunk eines großen Dokuments einschließen. Das System ruft die Top N relevantesten Chunks ab (standardmäßig 5), um die Grenzen einzuhalten, während genug Kontext für genaue Antworten bereitgestellt wird.
 
 ## Wann RAG wichtig ist
 
-**Verwenden Sie RAG, wenn:**
-- Fragen zu proprietären Dokumenten beantwortet werden sollen
-- Informationen sich häufig ändern (Richtlinien, Preise, Spezifikationen)
-- Genauigkeit mit Quellenangabe erforderlich ist
-- Inhalte zu groß sind, um in einen einzelnen Prompt zu passen
+**Verwenden Sie RAG, wenn:**  
+- Fragen zu proprietären Dokumenten beantwortet werden sollen  
+- Informationen sich häufig ändern (Richtlinien, Preise, Spezifikationen)  
+- Genauigkeit Quellangaben erfordert  
+- Inhalte zu groß sind, um in einen einzelnen Prompt zu passen  
 - Sie überprüfbare, fundierte Antworten benötigen
 
-**Verwenden Sie RAG nicht, wenn:**
-- Fragen allgemeines Wissen erfordern, das das Modell bereits hat
-- Echtzeitdaten benötigt werden (RAG arbeitet mit hochgeladenen Dokumenten)
-- Inhalte klein genug sind, um direkt in Prompts eingefügt zu werden
+**Verwenden Sie RAG nicht, wenn:**  
+- Fragen allgemeines Wissen betreffen, das das Modell bereits hat  
+- Echtzeitdaten erforderlich sind (RAG arbeitet nur mit hochgeladenen Dokumenten)  
+- Inhalte klein genug sind, um direkt in Prompts eingeschlossen zu werden
 
 ## Nächste Schritte
 
@@ -296,11 +306,11 @@ Jedes Modell hat ein maximales Kontextfenster. Sie können nicht jeden Chunk ein
 
 ---
 
-**Navigation:** [← Vorheriges: Modul 02 - Prompt Engineering](../02-prompt-engineering/README.md) | [Zurück zur Übersicht](../README.md) | [Nächstes: Modul 04 - Tools →](../04-tools/README.md)
+**Navigation:** [← Vorheriges: Modul 02 - Prompt Engineering](../02-prompt-engineering/README.md) | [Zurück zum Hauptverzeichnis](../README.md) | [Nächstes: Modul 04 - Tools →](../04-tools/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Haftungsausschluss**:  
-Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache gilt als maßgebliche Quelle. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die aus der Nutzung dieser Übersetzung entstehen.
+Dieses Dokument wurde mit dem KI-Übersetzungsdienst [Co-op Translator](https://github.com/Azure/co-op-translator) übersetzt. Obwohl wir uns um Genauigkeit bemühen, beachten Sie bitte, dass automatisierte Übersetzungen Fehler oder Ungenauigkeiten enthalten können. Das Originaldokument in seiner Ursprungssprache ist als maßgebliche Quelle zu betrachten. Für wichtige Informationen wird eine professionelle menschliche Übersetzung empfohlen. Wir übernehmen keine Haftung für Missverständnisse oder Fehlinterpretationen, die sich aus der Verwendung dieser Übersetzung ergeben.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

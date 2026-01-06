@@ -1,70 +1,72 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f538a51cfd13147d40d84e936a0f485c",
-  "translation_date": "2025-12-13T17:27:52+00:00",
+  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+  "translation_date": "2026-01-06T02:00:14+00:00",
   "source_file": "03-rag/README.md",
   "language_code": "et"
 }
 -->
-# Moodul 03: RAG (otsingupõhine genereerimine)
+# Moodul 03: RAG (otsinguga täiustatud loomine)
 
 ## Sisukord
 
-- [Mida sa õpid](../../../03-rag)
+- [Mida Sa Õpid](../../../03-rag)
 - [Eeltingimused](../../../03-rag)
 - [RAG mõistmine](../../../03-rag)
 - [Kuidas see töötab](../../../03-rag)
   - [Dokumendi töötlemine](../../../03-rag)
-  - [Embedimiste loomine](../../../03-rag)
-  - [Semantiline otsing](../../../03-rag)
-  - [Vastuste genereerimine](../../../03-rag)
+  - [Manuste loomine](../../../03-rag)
+  - [Semeantiline otsing](../../../03-rag)
+  - [Vastuse genereerimine](../../../03-rag)
 - [Rakenduse käivitamine](../../../03-rag)
 - [Rakenduse kasutamine](../../../03-rag)
   - [Dokumendi üleslaadimine](../../../03-rag)
   - [Küsimuste esitamine](../../../03-rag)
   - [Allikaviidete kontrollimine](../../../03-rag)
   - [Küsimustega katsetamine](../../../03-rag)
-- [Põhimõisted](../../../03-rag)
-  - [Tükeldamisstrateegia](../../../03-rag)
+- [Põhikonseptsioonid](../../../03-rag)
+  - [Tükkideks jagamise strateegia](../../../03-rag)
   - [Sarnasuse skoorid](../../../03-rag)
-  - [Mälusalvestus](../../../03-rag)
-  - [Kontekstivaatakuhalduse](../../../03-rag)
-- [Millal RAG on oluline](../../../03-rag)
+  - [Mälu-põhine hoiustamine](../../../03-rag)
+  - [Kontekstiakna haldamine](../../../03-rag)
+- [Millal RAG loeb](../../../03-rag)
 - [Järgmised sammud](../../../03-rag)
 
-## Mida sa õpid
+## Mida Sa Õpid
 
-Eelnevates moodulites õppisid, kuidas AI-ga vestelda ja oma päringuid tõhusalt struktureerida. Kuid on üks põhiline piirang: keelemudelid teavad ainult seda, mida nad on koolituse käigus õppinud. Nad ei saa vastata küsimustele sinu ettevõtte poliitikate, projektdokumentatsiooni või muu teabe kohta, mida neile ei ole õpetatud.
+Eelmistes moodulites õppisid, kuidas vestelda tehisintellektiga ja efektiivselt oma prompt’e struktureerida. Kuid on olemas põhiline piirang: keelemudelid teavad ainult seda, mida nad treeningu ajal õppisid. Nad ei saa vastata küsimustele sinu ettevõtte poliitikate, projektdokumentatsiooni ega muu info kohta, mida neile ei ole välja õpetatud.
 
-RAG (otsingupõhine genereerimine) lahendab selle probleemi. Selle asemel, et proovida mudelit sinu infole õpetada (mis on kallis ja ebapraktiline), annad mudelile võimaluse otsida sinu dokumentide seast. Kui keegi esitab küsimuse, leiab süsteem asjakohase info ja lisab selle päringusse. Mudel vastab seejärel selle leitud konteksti põhjal.
+RAG (otsinguga täiustatud loomine) lahendab selle probleemi. Selle asemel, et püüda mudelit sinu infoga õpetada (mis on kulukas ja ebapraktiline), annad mudelile võimaluse sirvida sinu dokumente. Kui keegi küsib küsimust, leiab süsteem asjakohase info ja lisab selle prompti. Mudel vastab seejärel selle leitud konteksti põhjal.
 
-Mõtle RAG-ile kui mudelile viiteraamatukogule. Kui sa küsid küsimuse, teeb süsteem järgmist:
+Mõtle RAG’ile kui mudelile viiteraamatu andmisele. Kui sa küsid küsimust, teeb süsteem järgmist:
 
-1. **Kasutaja päring** - Sa esitad küsimuse  
-2. **Embedimine** - Muudab su küsimuse vektoriks  
-3. **Vektorotsing** - Leiab sarnased dokumenditükid  
-4. **Konteksti kokkupanek** - Lisab asjakohased tükid päringusse  
-5. **Vastus** - LLM genereerib vastuse konteksti põhjal  
+1. **Kasutaja päring** - Sa küsid küsimuse  
+2. **Manustamine** - Muudab su küsimuse vektoriks  
+3. **Vektoriotsing** - Leiab sarnased dokumendi tükid  
+4. **Konteksti koostamine** - Lisab asjakohased tükid prompti  
+5. **Vastus** - LLM genereerib vastuse leitud konteksti põhjal  
 
-See seob mudeli vastused sinu tegelike andmetega, selle asemel et tugineda ainult koolitusandmetele või väljamõeldud vastustele.
+See maandab mudeli vastused sinu tegelike andmete peale, selle asemel, et tugineda ainult treeningteabele või väljamõeldud vastustele.
 
 <img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.et.png" alt="RAG arhitektuur" width="800"/>
 
-*RAG töövoog – kasutaja päringust semantilise otsinguni ja kontekstipõhise vastuse genereerimiseni*
+*RAG töövoog – kasutajapäringust semantilise otsingu ja kontekstipõhise vastuse genereerimiseni*
 
 ## Eeltingimused
 
-- Moodul 01 lõpetatud (Azure OpenAI ressursid juurutatud)  
-- `.env` fail juurkataloogis Azure volitustega (loodud `azd up` käivitamisel Moodulis 01)  
+- Moodul 01 on läbitud (Azure OpenAI ressursid on juurutatud)  
+- Juurtaseme kataloogis on `.env` fail Azure autentimisandmetega (loodud käsklusega `azd up` Moodulis 01)
 
-> **Märkus:** Kui sa pole Moodulit 01 lõpetanud, järgi esmalt seal olevaid juurutusjuhiseid.
+> **Märkus:** Kui sa pole läbinu Moodulit 01, järgi seal esmalt juurutamisjuhiseid.
 
 ## Kuidas see töötab
 
-**Dokumendi töötlemine** - [DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+### Dokumendi töötlemine
 
-Kui sa laadid dokumendi üles, jagab süsteem selle väiksemateks tükkideks – väiksemateks osadeks, mis mahuvad mugavalt mudeli kontekstivaatakusse. Need tükid kattuvad veidi, et sa ei kaotaks konteksti servades.
+[DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+
+Kui sa uploadid dokumendi, jagab süsteem selle tükkideks – väiksemateks osadeks, mis mahuvad mugavalt mudeli kontekstiaknasse. Need tükid kattuvad natuke, et sa ei kaotaks konteksti servades.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("sample-document.txt");
@@ -74,15 +76,17 @@ DocumentSplitter splitter = DocumentSplitters
 
 List<TextSegment> segments = splitter.split(document);
 ```
-  
-> **🤖 Proovi [GitHub Copilot](https://github.com/features/copilot) Chatiga:** Ava [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) ja küsi:  
-> - "Kuidas LangChain4j jagab dokumendid tükkideks ja miks on kattumine oluline?"  
-> - "Mis on optimaalne tüki suurus erinevate dokumentide jaoks ja miks?"  
-> - "Kuidas käsitleda dokumente mitmes keeles või eriformaadis?"
 
-**Embedimiste loomine** - [LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+> **🤖 Proovi [GitHub Copiloti](https://github.com/features/copilot) Chat-iga:** Ava [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) ja küsi:  
+> - "Kuidas jagab LangChain4j dokumendid tükkideks ja miks kattuvus on oluline?"  
+> - "Mis on optimaalne tüki suurus erinevate dokumentide puhul ja miks?"  
+> - "Kuidas käsitleda mitmekeelseid või eriformaatidega dokumente?"
 
-Iga tükk muudetakse numbriliseks esinduseks, mida nimetatakse embedimiseks – põhimõtteliselt matemaatiliseks sõrmejäljeks, mis haarab teksti tähenduse. Sarnane tekst annab sarnased embedimised.
+### Manuste loomine
+
+[LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+
+Iga tükk muudetakse numbriliseks esitluseks, mida nimetatakse manuseks – põhimõtteliselt matemaatiliseks sõrmejäljeks, mis kajastab teksti tähendust. Sarnane tekst annab sarnased manused.
 
 ```java
 @Bean
@@ -97,14 +101,16 @@ public EmbeddingModel embeddingModel() {
 EmbeddingStore<TextSegment> embeddingStore = 
     new InMemoryEmbeddingStore<>();
 ```
-  
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.et.png" alt="Vektorembedimiste ruum" width="800"/>
 
-*Dokumendid esindatud vektoritena embedimisruumis – sarnane sisu koondub kokku*
+<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.et.png" alt="Vektormanustuste ruum" width="800"/>
 
-**Semantiline otsing** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+*Dokumendid esitatakse vektoritena manuste ruumis – sarnane sisu koguneb ühte gruppi*
 
-Kui sa esitad küsimuse, muudetakse ka see embedimiseks. Süsteem võrdleb su küsimuse embedimist kõigi dokumenditükkide embedimistega. Ta leiab tükid, mille tähendus on kõige sarnasem – mitte ainult märksõnade kattuvus, vaid tegelik semantiline sarnasus.
+### Semeantiline otsing
+
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+Kui sa esitad küsimuse, muutub ka küsimus manuseks. Süsteem võrdleb sinu küsimuse manust kõigi dokumenditükkide manustega. Leidub tükkid, mille tähendus on kõige sarnasem – mitte ainult võõrsõnade kokkulangevus, vaid tegelik semantiline sarnasus.
 
 ```java
 Embedding queryEmbedding = embeddingModel.embed(question).content();
@@ -117,76 +123,78 @@ for (EmbeddingMatch<TextSegment> match : matches) {
     double score = match.score();
 }
 ```
-  
-> **🤖 Proovi [GitHub Copilot](https://github.com/features/copilot) Chatiga:** Ava [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) ja küsi:  
-> - "Kuidas töötab sarnasuse otsing embedimistega ja mis määrab skoori?"  
+
+> **🤖 Proovi [GitHub Copiloti](https://github.com/features/copilot) Chat-iga:** Ava [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) ja küsi:  
+> - "Kuidas töötab sarnasuse otsing manuste alusel ja mis tingib skoori?"  
 > - "Millist sarnasuse läve peaksin kasutama ja kuidas see tulemusi mõjutab?"  
-> - "Kuidas käituda olukordades, kus asjakohaseid dokumente ei leita?"
+> - "Kuidas toimida, kui sobivaid dokumente ei leita?"
 
-**Vastuste genereerimine** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Vastuse genereerimine
 
-Kõige asjakohasemad tükid lisatakse mudeli päringusse. Mudel loeb need konkreetsed tükid läbi ja vastab su küsimusele selle info põhjal. See takistab hallutsinatsioone – mudel saab vastata ainult sellele, mis tal ees on.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+Kõige asjakohasemad tükid lisatakse mudeli prompti. Mudel loeb need konkreetsed tükid ja vastab su küsimusele selle põhjal. See väldib "hallutsineerimist" – mudel saab vastata ainult sellele, mis tal ees on.
 
 ## Rakenduse käivitamine
 
 **Kontrolli juurutust:**
 
-Veendu, et `.env` fail on juurkataloogis Azure volitustega (loodud Moodulis 01):  
+Veendu, et juurtaseme kataloogis on `.env` fail koos Azure autentimisandmetega (loodud Moodulis 01):
 ```bash
 cat ../.env  # Peaks näitama AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
-  
+
 **Käivita rakendus:**
 
-> **Märkus:** Kui sa juba käivitasid kõik rakendused käsuga `./start-all.sh` Moodulis 01, siis see moodul töötab juba pordil 8081. Võid allolevad käivituskäsud vahele jätta ja minna otse aadressile http://localhost:8081.
+> **Märkus:** Kui oled juba kõik rakendused käivitanud käsuga `./start-all.sh` Moodulis 01, töötab see moodul juba pordil 8081. Võid alljärgnevad käivituskäsud vahele jätta ja minna otse aadressile http://localhost:8081.
 
-**Variant 1: Spring Boot Dashboardi kasutamine (soovitatav VS Code kasutajatele)**
+**Variant 1: Spring Boot Dashboard’i kasutamine (soovitatav VS Code kasutajatele)**
 
-Arenduskonteiner sisaldab Spring Boot Dashboard laiendust, mis pakub visuaalset liidest kõigi Spring Boot rakenduste haldamiseks. Leiad selle VS Code vasakpoolsest tegevusribast (otsi Spring Boot ikooni).
+Dev konteiner sisaldab Spring Boot Dashboardi laiendust, mis annab visuaalse liidese kõigi Spring Boot rakenduste haldamiseks. Leiad selle VS Code’i vasakpoolsest Activity Barist (otsi Spring Boot ikooni).
 
-Spring Boot Dashboardist saad:  
-- Näha kõiki tööruumis olevaid Spring Boot rakendusi  
-- Käivitada/peatada rakendusi ühe klikiga  
-- Vaadata rakenduste logisid reaalajas  
-- Jälgida rakenduste olekut  
+Dashboardist saad:  
+- Vaadata kõiki töölaua Spring Boot rakendusi  
+- Käivitada või peatada rakendusi ühe klikiga  
+- Vaadata reaalajas rakenduse logisid  
+- Jälgida rakenduse olekut
 
-Lihtsalt klõpsa "rag" kõrval olevale käivitusnupule, et käivitada see moodul, või käivita korraga kõik moodulid.
+Lihtsalt klõpsa nupule "rag" kõrval, et käivitada see moodul, või käivita korraga kõik moodulid.
 
 <img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.et.png" alt="Spring Boot Dashboard" width="400"/>
 
-**Variant 2: Shell-skriptide kasutamine**
+**Variant 2: Shell skriptide kasutamine**
 
 Käivita kõik veebirakendused (moodulid 01-04):
 
-**Bash:**  
+**Bash:**
 ```bash
-cd ..  # Juurekataloogist
+cd ..  # Juuretõenäolisest kataloogist
 ./start-all.sh
 ```
-  
-**PowerShell:**  
+
+**PowerShell:**
 ```powershell
-cd ..  # Juurekataloogist
+cd ..  # Juure kataloogist
 .\start-all.ps1
 ```
-  
+
 Või käivita ainult see moodul:
 
-**Bash:**  
+**Bash:**
 ```bash
 cd 03-rag
 ./start.sh
 ```
-  
-**PowerShell:**  
+
+**PowerShell:**
 ```powershell
 cd 03-rag
 .\start.ps1
 ```
-  
-Mõlemad skriptid laadivad automaatselt keskkonnamuutujad juurkataloogis olevast `.env` failist ja ehitavad JAR-failid, kui neid veel pole.
 
-> **Märkus:** Kui soovid enne käivitamist kõik moodulid käsitsi ehitada:  
+Mõlemad skriptid laadivad automaatselt keskkonnamuutujad juurtaseme `.env` failist ja ehitavad JAR-failid, kui neid veel pole.
+
+> **Märkus:** Kui soovid kõik moodulid enne käsitsi ehitada:  
 >  
 > **Bash:**  
 > ```bash
@@ -200,7 +208,7 @@ Mõlemad skriptid laadivad automaatselt keskkonnamuutujad juurkataloogis olevast
 > mvn clean package -DskipTests
 > ```
   
-Ava brauseris http://localhost:8081.
+Ava oma brauseris http://localhost:8081.
 
 **Peatamiseks:**
 
@@ -227,81 +235,81 @@ Rakendus pakub veebiliidest dokumentide üleslaadimiseks ja küsimuste esitamise
 
 *RAG rakenduse liides – laadi üles dokumendid ja esita küsimusi*
 
-**Dokumendi üleslaadimine**
+### Dokumendi üleslaadimine
 
-Alusta dokumendi üleslaadimisega – testimiseks sobivad kõige paremini TXT-failid. Selles kataloogis on olemas `sample-document.txt`, mis sisaldab infot LangChain4j funktsioonide, RAG rakenduse ja parimate tavade kohta – ideaalne süsteemi testimiseks.
+Alusta dokumendi üleslaadimisest – TXT-failid sobivad testimiseks kõige paremini. Selles kataloogis on `sample-document.txt`, mis sisaldab infot LangChain4j funktsioonide, RAG rakenduse ja parimate tavade kohta – ideaalne süsteemi testimiseks.
 
-Süsteem töötleb su dokumendi, jagab selle tükkideks ja loob iga tüki jaoks embedimised. See toimub automaatselt pärast üleslaadimist.
+Süsteem töötleb su dokumendi, lõikab selle tükkideks ja loob iga tuki kohta manused. See toimub automaatselt pärast küll üleslaadimist.
 
-**Küsimuste esitamine**
+### Küsimuste esitamine
 
-Nüüd esita konkreetseid küsimusi dokumendi sisu kohta. Proovi midagi faktilist, mis on dokumendis selgelt välja toodud. Süsteem otsib asjakohaseid tükke, lisab need päringusse ja genereerib vastuse.
+Esita nüüd dokumendi sisu kohta spetsiifilisi küsimusi. Proovi midagi faktipõhist, mis on dokumendis selgelt kirjas. Süsteem otsib asjakohaseid tükke, lisab need prompti ja genereerib vastuse.
 
-**Allikaviidete kontrollimine**
+### Allikaviidete kontrollimine
 
-Pane tähele, et iga vastus sisaldab allikaviiteid koos sarnasuse skooridega. Need skoorid (0 kuni 1) näitavad, kui asjakohane iga tükk su küsimusega oli. Kõrgemad skoorid tähendavad paremaid vasteid. See võimaldab sul vastust allikmaterjali vastu kontrollida.
+Pane tähele, et iga vastus sisaldab allikaviiteid koos sarnasuse skooridega. Need skoorid (0 kuni 1) näitavad, kui palju see tükk sinu küsimusega haakus. Kõrgemad skoorid tähendavad paremaid vasteid. See võimaldab sul vastuseid allikmaterjaliga kontrollida.
 
 <a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.et.png" alt="RAG päringu tulemused" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Päringu tulemused, mis näitavad vastust koos allikaviidete ja asjakohasuse skooridega*
+*Päringu tulemused: vastus koos allikaviidete ja asjakohasuse skooridega*
 
-**Küsimustega katsetamine**
+### Küsimustega katsetamine
 
 Proovi erinevat tüüpi küsimusi:  
-- Konkreetsed faktid: "Mis on peamine teema?"  
-- Võrdlused: "Mis vahe on X ja Y vahel?"  
-- Kokkuvõtted: "Kokkuvõtte peamised punktid Z kohta"  
+- Spetsiifilised faktid: "Mis on peamine teema?"  
+- Võrdlused: "Mis vahe on X-l ja Y-l?"  
+- Kokkuvõtted: "Kokkuvõtlik võtmeaspektid Z kohta"
 
-Vaata, kuidas asjakohasuse skoorid muutuvad sõltuvalt sellest, kui hästi su küsimus dokumendi sisuga kattub.
+Vaata, kuidas asjakohasuse skoorid muutuvad sõltuvalt sellest, kui hästi su küsimus dokumendisisuga sobib.
 
-## Põhimõisted
+## Põhikonseptsioonid
 
-**Tükeldamisstrateegia**
+### Tükkideks jagamise strateegia
 
-Dokumendid jagatakse 300-tokenilisteks tükkideks, millel on 30 tokeni kattuvus. See tasakaal tagab, et igal tükil on piisavalt konteksti, et olla tähenduslik, samas jäädes piisavalt väikseks, et päringusse mahutada mitu tükki.
+Dokumendid jagatakse 300-sõnalisteks tükkideks, millel on 30 sõna kattuvust. See tasakaal tagab, et igal tükil on piisavalt konteksti, et see oleks mõtestatud, samas jäädes piisavalt väikseks, et prompti mahutada mitu tükki.
 
-**Sarnasuse skoorid**
+### Sarnasuse skoorid
 
-Skoorid jäävad vahemikku 0 kuni 1:  
-- 0.7-1.0: Väga asjakohane, täpne vaste  
-- 0.5-0.7: Asjakohane, hea kontekst  
+Skoorid on vahemikus 0 kuni 1:  
+- 0.7–1.0: Täiesti asjakohane, täpne vaste  
+- 0.5–0.7: Asjakohane, hea kontekst  
 - Alla 0.5: Filtreeritud välja, liiga erinev  
 
-Süsteem toob ainult tükid, mis ületavad minimaalse läve, et tagada kvaliteet.
+Süsteem toob välja ainult need tükid, mis ületavad minimaalse läve, et tagada kvaliteet.
 
-**Mälusalvestus**
+### Mälu-põhine hoiustamine
 
-See moodul kasutab lihtsuse huvides mälusalvestust. Kui sa rakenduse taaskäivitad, kaovad üleslaaditud dokumendid. Tootmissüsteemid kasutavad püsivaid vektorandmebaase nagu Qdrant või Azure AI Search.
+See moodul kasutab lihtsuse huvides mälus hoiustamist. Rakenduse taaskäivitamisel kaovad üleslaaditud dokumendid. Tootmissüsteemides kasutatakse püsivaid vektorandmebaase nagu Qdrant või Azure AI Search.
 
-**Kontekstivaatakuhalduse**
+### Kontekstiakna haldamine
 
-Igal mudelil on maksimaalne kontekstivaataku suurus. Sa ei saa lisada kõiki suuri dokumendi tükke. Süsteem toob välja N kõige asjakohasemat tükki (vaikimisi 5), et jääda piiridesse ja samal ajal pakkuda piisavalt konteksti täpsete vastuste jaoks.
+Igal mudelil on maksimaalne kontekstiakna suurus. Suurest dokumendist ei saa kõiki tükke üheaegselt lisada. Süsteem võtab kõige asjakohasemad N tükki (vaikimisi 5), et jääda piiridesse, pakkudes samas piisavalt konteksti täpsete vastuste jaoks.
 
-## Millal RAG on oluline
+## Millal RAG loeb
 
-**Kasuta RAG-i, kui:**  
-- Vastad küsimustele omandis olevate dokumentide kohta  
-- Info muutub tihti (poliitikad, hinnad, spetsifikatsioonid)  
-- Täpsus nõuab allikaviidet  
-- Sisu on liiga mahukas, et mahutada ühte päringusse  
-- Vajad kontrollitavaid ja faktiliselt põhjendatud vastuseid  
+**Kasuta RAG’i, kui:**  
+- Vastad küsimustele era- või konfidentsiaalsete dokumentide kohta  
+- Informatsioon muutub sageli (poliitikad, hinnad, spetsifikatsioonid)  
+- Täpsus vajab allikaviitamist  
+- Sisu on liiga suur, et mahtuda ühe prompti sisse  
+- Vajad kontrollitavaid ja põhjendatud vastuseid
 
-**Ära kasuta RAG-i, kui:**  
-- Küsimused nõuavad üldteadmisi, mis mudelil juba olemas on  
-- Vajalik on reaalajas andmed (RAG töötab üleslaaditud dokumentidega)  
-- Sisu on piisavalt väike, et lisada otse päringusse  
+**Ära kasuta RAG’i, kui:**  
+- Küsimused nõuavad üldteadmisi, mis mudelil juba on  
+- Vajalik on reaalajas info (RAG töötab üleslaaditud dokumentidega)  
+- Sisu on piisavalt väike, et lisada otse prompti
 
 ## Järgmised sammud
 
-**Järgmine moodul:** [04-tools - AI agendid tööriistadega](../04-tools/README.md)
+**Järgmine moodul:** [04-tööriistad - AI agentide tööriistad](../04-tools/README.md)
 
 ---
 
-**Navigeerimine:** [← Eelmine: Moodul 02 - Päringu koostamine](../02-prompt-engineering/README.md) | [Tagasi avalehele](../README.md) | [Järgmine: Moodul 04 - Tööriistad →](../04-tools/README.md)
+**Navigatsioon:** [← Eelmine: Moodul 02 - Promptide inseneriteadus](../02-prompt-engineering/README.md) | [Tagasi põhilehele](../README.md) | [Järgmine: Moodul 04 - Tööriistad →](../04-tools/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vastutusest loobumine**:
-See dokument on tõlgitud kasutades tehisintellektil põhinevat tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi püüame tagada täpsust, palun arvestage, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti mõistmiste eest.
+**Erliritus**:
+See dokument on tõlgitud kasutades tehisintellektil põhinevat tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi püüame täpsust, võivad automaatsed tõlked sisaldada vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada ametlikuks allikaks. Kriitilise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta tõlke kasutamisest tingitud võimalike arusaamatuste või valesti mõistmiste eest.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

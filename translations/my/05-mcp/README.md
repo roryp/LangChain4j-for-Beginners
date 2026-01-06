@@ -1,58 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
-  "translation_date": "2025-12-31T06:04:50+00:00",
+  "original_hash": "6c816d130a1fa47570c11907e72d84ae",
+  "translation_date": "2026-01-06T01:36:17+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "my"
 }
 -->
-# Module 05: Model Context Protocol (MCP)
+# မော်ဂျူး ၀၅: မော်ဒယ် ကွန်တက် ပရိုတိုကော (MCP)
 
-## အကြောင်းအရာ
+## အကြောင်းအရာရိုး
 
-- [သင် သင်ယူမယ့် အရာများ](../../../05-mcp)
+- [သင် သင်ယူမည့်အချက်များ](../../../05-mcp)
 - [MCP ဆိုတာဘာလဲ?](../../../05-mcp)
-- [MCP ဘယ်လို အလုပ်လုပ်လဲ](../../../05-mcp)
-- [Agentic မော်ဂျူး](../../../05-mcp)
-- [နမူနာများ လည်ပတ်ခြင်း](../../../05-mcp)
+- [MCP က ဘယ်လို အလုပ်လုပ်သလဲ?](../../../05-mcp)
+- [Agentic Module](../../../05-mcp)
+- [နမူနာများကို ပြေးဆွဲခြင်း](../../../05-mcp)
   - [လိုအပ်ချက်များ](../../../05-mcp)
-- [လျင်မြန်စတင်ခြင်း](../../../05-mcp)
-  - [ဖိုင် လုပ်ငန်းများ (Stdio)](../../../05-mcp)
+- [အမြန် စတင်မှု](../../../05-mcp)
+  - [ဖိုင် လုပ်ဆောင်မှုများ (Stdio)](../../../05-mcp)
   - [Supervisor Agent](../../../05-mcp)
-    - [ထွက်ပေါက်ကို နားလည်ခြင်း](../../../05-mcp)
-    - [Agentic မော်ဂျူး လက္ခဏာများ ရှင်းပြချက်](../../../05-mcp)
+    - [အထွက် ထုံးတမ်းကို နားလည်ခြင်း](../../../05-mcp)
+    - [တုံ့ပြန်မှု မျှော်လင့်ချက်များ](../../../05-mcp)
+    - [Agentic Module အင်္ဂါရပ်များ ရှင်းလင်းချက်](../../../05-mcp)
 - [အဓိက အယူအဆများ](../../../05-mcp)
-- [ဂုဏ်ယူပါတယ်!](../../../05-mcp)
-  - [နောက်တွင် ဘာ ရှိသနည်း?](../../../05-mcp)
+- [ကြိုဆိုပါတယ်!](../../../05-mcp)
+  - [နောက်တစ်ဆင့်?](../../../05-mcp)
 
-## သင် သင်ယူမယ့် အရာများ
+## သင် သင်ယူမည့်အချက်များ
 
-သင် conversational AI ကို တည်ဆောက်ဖူးပြီး၊ prompt များကို ကျွမ်းကျင်ပြီး၊ စာရွက်စာတမ်းများထဲကနေ ဖြေကြားချက်များကို အခြေခံစေဖို့ RAG တွဲဖက်ပြီး၊ tool တွေနဲ့ agents များကို ဖန်တီးဖူးပါပြီ။ ဒါပေမယ့် အဲဒီ tool အများအားလုံးကို သင့် application အတွက် အထူးပြုလုပ်ထားတာပဲ ဖြစ်တယ်။ AI ကို လူတိုင်း ဖန်တီးဝေစုနိုင်တဲ့ စံသတ်မှတ်ထားတဲ့ tool ပတ်ဝန်းကျင်တစ်ခုကို အသုံးပြုခွင့် ပေးနိုင်ရင် ဘယ်လိုလဲ? ဤmodule မှာ Model Context Protocol (MCP) နဲ့ LangChain4j ရဲ့ agentic မော်ဂျူးကို အသုံးပြုပြီး ထိုအရာကို ဘယ်လိုလုပ်ရမလဲ ဆွေးနွေးဖော်ပြပါမည်။ ပထမဦးဆုံး MCP ဖိုင်ဖတ်ကိရိယာ ပုံစံတစ်ခုကို ပြသပြီး ထို့နောက် Supervisor Agent စနစ်ကို အသုံးပြုပြီး advanced agentic workflow များထဲသို့ ဘယ်လို လွယ်ကူစွာ ပေါင်းစည်းမလဲ ဆိုတာကို ပြသပါမည်။
+သင်သည် စကားပြော AI တစ်ခုကို တည်ဆောက်ပြီး၊ prompt များကို ကျွမ်းကျင်စွာ အသုံးပြုနိုင်ရန်၊ စာရွက်စာတမ်းများအတွင်း ရှိသော တုံ့ပြန်ချက်များကို အခြေခံနိုင်ချိန်၊ နှင့် ကိရိယာများပါ အသုံးပြုနိုင်သော agent များကိုဖန်တီးနိုင်ခဲ့ပါပြီ။ သို့သော် အဲဒီ ကိရိယာများအားလုံးကို သင်၏ အထူး application အတွက် အထူးပြုလုပ်ထားခြင်းဖြစ်သည်။ သင်၏ AI ကို ဘယ်သူမဆို ဖန်တီးနိုင်ပြီးမျှဝေပါက စံချိန်မီ ကိရိယာစနစ်သို့ ရောက်ရှိနိုင်စေမည်ဆိုပါက၊ ဘယ်လိုလုပ်နိုင်မလဲ? ဤ မော်ဂျူးတွင် သင်သည် Model Context Protocol (MCP) နှင့် LangChain4j ၏ agentic module ကို အသုံးပြု၍ အဲဒီ အရာကို မည်သို့လုပ်နိုင်သည်ကို သင် လေ့လာမည်ဖြစ်သည်။ အများအပြား မော်ဂျူးများမှ MCP ဖိုင်ဖတ်သူ တစ်ခုကို မကြာခဏ ပြသပြီး နောက်ပိုင်းမှာ Supervisor Agent စနစ်ကို အသုံးပြုပြီး မြင့်မားသော agentic workflow များနှင့် အလွယ်တကူ ပေါင်းစည်းနိုင်မှုကို ပြသသည်။
 
 ## MCP ဆိုတာဘာလဲ?
 
-Model Context Protocol (MCP) က အကြောင်းအရာဖြစ်တဲ့ အရာကိုပဲထောက်ပံ့ပေးတယ် — AI application တွေ အတွက် အပြင်က tool တွေကို ရှာဖွေသုံးစွဲဖို့ စံနစ်တကျ နည်းလမ်းတစ်ခု ဖြစ်ပါတယ်။ တစ်ခုချင်းစီရဲ့ data source သို့မဟုတ် service အတွက် အထူးပြု code မရေးပဲ MCP server တွေကို ချိတ်ဆက်နိုင်ပြီး၊ ထို server များက ကိုယ်ပိုင်စွမ်းရည်များကို တူညီတဲ့ ပုံစံနဲ့ ထုတ်ပေးလိမ့်မယ်။ သင့် AI agent က အဆိုပါ tool များကို အလိုအလျောက် ရှာဖွေပြီး အသုံးပြုနိုင်ပါသည်။
+Model Context Protocol (MCP) သည် ထိုပုံစံကို ပေးသည် - AI application များအတွက် ပြင်ပ ကိရိယာများကို ရှာဖွေပြီး အသုံးပြုနိုင်ရန် စံတော်ချိန်ဖြစ်သည်။ တစ်ခုချင်းစီ data source သို့မဟုတ် ဝန်ဆောင်မှုအတွက် စိတ်တိုင်းကျ ပေါင်းစည်းမှုများရေးသားရန် မလိုတော့ပဲ MCP servers များနှင့် ချိတ်ဆက်ခြင်းဖြင့် ၎င်းတို့၏ တတ်နိုင်စွမ်းများကို သိသာထင်ရှားသော ပုံစံဖြင့် ဖော်ပြထားသည်။ သင်၏ AI agent မှ ထိုကိရိယာများကို အလိုအလျောက် ရှာဖွေပြီး အသုံးပြုနိုင်သည်။
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.my.png" alt="MCP နှိုင်းယှဉ်" width="800"/>
+<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.my.png" alt="MCP ပြိုင်ဆိုင်မှု" width="800"/>
 
-*မကြာခင် MCP မတည်ရှိခင်: အချက်ချင်း-အချက်ချင်း အမိန့်ပို့ဆက်သွယ်မှုများ။ MCP တက်လာချိန်: တစ်ခုသော ပရိုတိုကောလ်၊ မနားဆောင့် အခွင့်အလမ်းများ။*
+*MCP မတနေ့မှီ: ရိုးရှင်းမှုမရှိသော တိုက်တိုက်ဆိုင်ဆိုင် ပေါင်းစည်းမှုများ။ MCP ထွက်ရှိပြီးနောက်: စံချိန်တစ်ခု၊ အဆုံးမဲ့ အလားအလာများ။*
 
-MCP က AI ဖွံ့ဖြိုးရေးမှာ သက်ရောက်ချက်ကြီးတဲ့ ပြဿနာတစ်ခုကို ဖြေရှင်းပေးသလို ဖြစ်ပါတယ် — ပိုင်းချင်းချိတ်ဆက်မှုတိုင်းကို အထူးပြုလုပ်ရတတ်ပါတယ်။ GitHub ကို ဝင်ရောက်ချင်လား? အထူး code ရေးရမယ်။ ဖိုင်တွေဖတ်ချင်လား? အထူး code ရေးရမယ်။ ဒေတာဘေ့စ်ကို မေးချင်လား? အထူး code ရေးရမယ်။ ဒါ့အပြင် ဒီ integration များဟာ အခြား AI application တွေနဲ့ မဟာမိတ်လမ်းမပေါက်ပါဘူး။
+MCP သည် AI ဖွံ့ဖြိုးရေးတွင် မူလ ပြဿနာတစ်ရပ်ကို ဖြေရှင်းသည်။ အပြည့်အဝ ပေါင်းစည်းချက်တိုင်းကို စိတ်တိုင်းကျရေးသားရတယ်။ GitHub ကို ဝင်ရောက်ချင်လား? စိတ်တိုင်းကျ နှိပ်ပေးထားသော ကုဒ်။ ဖိုင်ဖတ်ချင်လား? စိတ်တိုင်းကျကုဒ်။ ဒေတာဘေ့စ်ကို မေးချင်လား? စိတ်တိုင်းကျကုဒ်။ ၎င်း ပေါင်းစည်းမှုများ ထိုအခြား AI application များနှင့် ကိုက်ညီမှု မရှိဘူး။
 
-MCP က ဒီအားလုံးကို စံပြတက်စေပါတယ်။ MCP server တစ်ခုက tool များကို ရှင်းလင်းသော ဖော်ပြချက်များနဲ့ schema များဖြင့် ထုတ်ပေးသည်။ မည်သည့် MCP client မဆို ချိတ်ဆက်ပြီး ရရှိနိုင်သော tool များကို ရှာဖွေနိုင်ပြီး အသုံးပြုနိုင်သည်။ တစ်ခါတည်း တည်ဆောက်ပြီး ဘယ်နေရာမှာမဆို အသုံးပြုပါ။
+MCP သည် ၎င်းတို့အား စံချိန်တင်ပေးသည်။ MCP server တစ်ခုသည် ကိရိယာများကို ဖော်ပြသော ဖော်ပြချက်နှင့် စံစနစ်များဖြင့် ပြပေးသည်။ MCP client များ မည်သည့်လူမျိုးမဆို ချိတ်ဆက်ပြီး အသုံးပြုနိုင်ပြီး အဲဒီကိရိယာများအား ရှာဖွေနိုင်သည်။ တစ်ကြိမ် ဆောက်ပြီး နေရာတိုင်းအသုံးပြုမည်။
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.my.png" alt="MCP တည်ဆောက်ပုံ" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.my.png" alt="MCP ဖွဲ့စည်းပုံ" width="800"/>
 
-*Model Context Protocol တည်ဆောက်ပုံ - စံသတ်မှတ်ထားသော tool ရှာဖွေရေးနှင့် အကောင်အထည်ဖော်ခြင်း*
+*Model Context Protocol ဖွဲ့စည်းပုံ - စံပြ ကိရိယာ ရှာဖွေရေးနှင့် အကောင်အထည် ဖော်ဆောင်ခြင်း*
 
-## MCP ဘယ်လို အလုပ်လုပ်လဲ
+## MCP က ဘယ်လို အလုပ်လုပ်သလဲ?
 
 **Server-Client ဖွဲ့စည်းပုံ**
 
-MCP က client-server မော်ဒယ်ကို အသုံးပြုသည်။ ဆာဗာများက ဖိုင်ဖတ်ခြင်း၊ ဒေတာဘေ့စ် မေးခွန်းတွေ၊ API ခေါ်ဆိုခြင်းစတဲ့ tool တွေကို ပံ့ပိုးပေးတယ်။ Client များ (သင့် AI application) က ဆာဗာများကို ချိတ်ဆက်ပြီး ထို tool များကို အသုံးပြုသည်။
+MCP သည် client-server မော်ဒယ်ကို အသုံးပြုသည်။ Server များမှာ ကိရိယာများ - ဖိုင်ဖတ်ခြင်း၊ ဒေတာဘေ့စ်မေးခြင်း၊ API များခေါ်ဆိုခြင်းတို့ကို ပေးသည်။ Client များ (သင်၏ AI application) သည် server များနှင့် ချိတ်ဆက်ပြီး ၎င်းတို့၏ ကိရိယာများကို အသုံးပြုသည်။
 
-To use MCP with LangChain4j, add this Maven dependency:
+LangChain4j နှင့် MCP ကို အသုံးပြုရန်၊ Maven dependency ကို ထည့်သွင်းပါ။
 
 ```xml
 <dependency>
@@ -62,21 +63,21 @@ To use MCP with LangChain4j, add this Maven dependency:
 </dependency>
 ```
 
-**Tool Discovery**
+**ကိရိယာ ရှာဖွေရေး**
 
-သင့် client က MCP server တစ်ခုကို ချိတ်ဆက်သည့်အခါ "သင်ယခုဘယ်လို tool တွေရှိလဲ?" ဟု မေးလာမည်။ ဆာဗာက ရရှိနိုင်သော tool များကို စာရင်းပေးပြီး tool တစ်ခုချင်းစီအတွက် ဖော်ပြချက်များနှင့် parameter schema များကို ထည့်ပေးပါသည်။ မည်သည့် AI agent မှ ဆိုရင်လည်း အသုံးပြုသူ၏ တောင်းဆိုချက်အပေါ် မူတည်၍ ဘယ် tool ကို အသုံးပြုမည်ဆိုတာ ဆုံးဖြတ်နိုင်မည်။
+သင်၏ client သည် MCP server တစ်ခုနှင့် ချိတ်ဆက်သောအခါ “မည်သည့် ကိရိယာများရှိပါသလဲ?” ဟု မေးသည်။ Server သည် ရနိုင်သော ကိရိယာများ စာရင်းတစ်ခုအား ဖော်ပြပြီး၊ ဖော်ပြချက်များနှင့် parameter schema များပါတော့သည်။ သင်၏ AI agent သည် user တောင်းဆိုမှုအလိုက် သုံးမည့် ကိရိယာများကို ဆုံးဖြတ်နိုင်သည်။
 
-**သယ်ယူပို့ဆောင်ရေး မက်ကန်နစ်များ**
+**ယာဉ်ပို့ စနစ်များ**
 
-MCP သည် မတူညီသော သယ်ယူပို့ဆောင်ရေး မက်ကန်နစ်များကို ထောက်ပံ့သည်။ ဤ module သည် local process များအတွက် Stdio transport ကို မိတ်ဆက်ပြသပါသည်။
+MCP သည် ကွဲပြားသော ယာဉ်ပို့ စနစ်များကို ထောက်ခံသည်။ ဤမော်ဂျူးတွင် Stdio transport ကို ပြသထားပြီး ဒေသတွင်းလုပ်ငန်းများအတွက် အသုံးပြုသည်။
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.my.png" alt="ပို့ဆောင်ရေး မော်ဒယ်များ" width="800"/>
+<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.my.png" alt="ယာဉ်ပို့ စနစ်များ" width="800"/>
 
-*MCP ပို့ဆောင်ရေး မော်ဒယ်များ: ရှားရှားလင်းလင်း ဆာဗာတွေအတွက် HTTP, local process များအတွက် Stdio*
+*MCP ယာဉ်ပို့စနစ်များ: မည်သည့် HTTP ကို remote server များအတွက်, Stdio ကို ဒေသတွင်းလုပ်ငန်းများအတွက်*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-local process များအတွက် ဖြစ်သည်။ သင့် application က ဆာဗာကို subprocess အနေနဲ့ spawn လုပ်ကာ standard input/output မှတဆင့် ဆက်သွယ်သည်။ ဖိုင်စနစ် πρόσβαση သို့မဟုတ် command-line tool များကို အသုံးပြုရာတွင် အသုံးဝင်သည်။
+ဒေသတွင်းလုပ်ငန်းများ အတွက်။ သင့် application မှ subprocess အနေနှင့် server တစ်ခုကို ဖန်တီးပြီး၊ standard input/output မှတဆင့် ဆက်သွယ်သည်။ ဖိုင်စနစ် ဝင်ရောက်မှု သို့မဟုတ် command-line ကိရိယာများအတွက် အသုံးဝင်သည်။
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
@@ -89,18 +90,18 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .build();
 ```
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) and ask:
-> - "Stdio transport က ဘယ်လို အလုပ်လုပ်သလဲ၊ HTTP နဲ့ ယှဉ်လိုက်ရင် ဘယ်အချိန်တွင် သုံးသင့်သလဲ?"
-> - "LangChain4j က spawned MCP server processes တွေရဲ့ lifecycle ကို ဘယ်လို စီမံထိန်းချုပ်သလဲ?"
-> - "AI ကို ဖိုင်စနစ်သို့ လက်လှမ်းပေးခြင်းရဲ့ security implication များ ဘယ်လိုများ ရှိနိုင်သလဲ?"
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ဖြင့် စမ်းသပ်ကြည့်ပါ:** [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) ဖိုင်ကို ဖွင့်ပြီး မေးမြန်းပါ-
+> - "Stdio transport က ဘယ်လို အလုပ်လုပ်သလဲ၊ HTTP နဲ့ မတူဘူး ဘယ်အချိန်မှာ သုံးသင့်လဲ?"
+> - "LangChain4j သည် MCP server process များကို ဘယ်လို စီမံထိန်းချုပ်သလဲ?"
+> - "AI ကို file system ဝင်ခွင့်ပေးခြင်း၏ လုံခြုံရေး အခြေအနေများ ဘာတွေလဲ?"
 
-## Agentic မော်ဂျူး
+## Agentic Module
 
-MCP က standardized tool များကို ပံ့ပိုးပေးသော်လည်း၊ LangChain4j ရဲ့ **agentic မော်ဂျူး** က ထို tool များကို အစီအစဉ်တကျ စီမံကိန်းချခြင်းအတွက် ကြေညာချက်အပေါ် မူတည်၍ agent များကို ဖန်တီးနိုင်သော နည်းလမ်းကို ပေးသည်။ `@Agent` annotation နဲ့ `AgenticServices` က သင့်ကို interface များမှတဆင့် agent အပြုအမူကို ဖော်ပြနိုင်စေပြီး imperative code မရေးငြင်းပေးသည်။
+MCP သည် စံချိန်တင်ထားသော ကိရိယာများပေးသော်လည်း LangChain4j ၏ **agentic module** သည် ၎င်းကိရိယာများကို စပ်ဆင်နိုင်သော agent များ ဖန်တီးရန် ကြေညာပုံစံနည်းလမ်းကို ပေးသည်။ `@Agent` အညွှန်းချက်နှင့် `AgenticServices` မှတဆင့် agent အပြုအမူကို interface များအား အသုံးပြု၍ သတ်မှတ်နိုင်သည်။
 
-ဤ module တွင် သင်တက်ရောက်မယ့်အရာမှာ **Supervisor Agent** ပုံစံဖြစ်ပြီး — အသုံးပြုသူ၏ တောင်းဆိုချက်အပေါ် မူတည်၍ ဘယ် sub-agent ကို ဖျော်ဖြေခေါ်ယူမည်ကို dynamic အဖြစ် ဆုံးဖြတ်ပေးနိုင်သည့် advanced agentic AI နည်းလမ်းတစ်ခု ဖြစ်သည်။ ဤနှင့် MCP ကို ပေါင်းစည်းပြီး sub-agent တစ်ခုကို MCP ဖြင့် လုံးလုံး ဖိုင်ရေးဖတ်ခွင့် ပေးထားသည်ကို ပြသပါမည်။
+ဤမော်ဂျူးတွင် သင် စူးစမ်းမည်မှာ **Supervisor Agent** စနစ် ဖြစ်ပြီး၊ မြင့်မားသော agentic AI အမျိုးအစားဖြစ်သည်။ "supervisor" agent သည် user တောင်းဆိုမှုအပေါ် မူတည်၍ sub-agent များကို dynamic အခြေအနေဖြင့် ခေါ်ယူသည်။ ကျွန်ုပ်တို့သည် MCP ဖြင့် စေ့စပ်ထားသော file access အား သုံးသော sub-agent တစ်ခုနှင့်ပေါင်းပြီး ဒီနှစ်ခုကို ပေါင်းစပ်ပြသမည်။
 
-To use the agentic module, add this Maven dependency:
+agentic module ကို အသုံးပြုရန် Maven dependency ထည့်သွင်းပါ-
 
 ```xml
 <dependency>
@@ -110,53 +111,53 @@ To use the agentic module, add this Maven dependency:
 </dependency>
 ```
 
-> **⚠️ Experimental:** `langchain4j-agentic` module သည် **စမ်းသပ်ရေးအဆင့်** ဖြစ်ပြီး ပြောင်းလဲနိုင်သည်။ AI assistant များ ပိုမို တည်ငြိမ်စေရန် အကြောင်းအရာများကို ထည့်ရန် `langchain4j-core` နဲ့ custom tools တွေကို အသုံးပြုနေစဉ်ဖြစ်သည် (Module 04)။
+> **⚠️ စမ်းသပ်ရေးအဆင့်:** `langchain4j-agentic` module သည် **စမ်းသပ်ရေးအဆင့်** ဖြစ်ပြီး မပြောင်းလဲနိုင်သော အရာဖြစ်ပါသည်။ AI အကူအညီများ ဆောက်ရန် ယုံကြည်စိတ်ချရသော နည်းလမ်းမှာ `langchain4j-core` ကို Module 04 မှာ သုံးသပ်ထားသော အမျိုးအစားဖြစ်သည်။
 
-## နမူနာများ လည်ပတ်ခြင်း
+## နမူနာများကို ပြေးဆွဲခြင်း
 
 ### လိုအပ်ချက်များ
 
 - Java 21+, Maven 3.9+
-- Node.js 16+ နှင့် npm (MCP server များအတွက်)
-- `.env` ဖိုင်ထဲမှာ environment variables များ ပြင်ဆင်ထားရန် (root directory မှ):
-  - **For StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
-  - **For SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (Module 01-04 တွေကို ညီတူ)
+- Node.js 16+ နှင့် npm (MCP server များအတွက်)
+- `.env` ဖိုင်တွင် environment variable များ သတ်မှတ်ထားရန် (root directory မှ):
+  - `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (Module 01-04 အတူ)
 
-> **မှတ်ချက်:** သင့် environment variables များ မပြင်ဆင်ထားသေးပါက [Module 00 - Quick Start](../00-quick-start/README.md) တွင် သတ်မှတ်ထားသော လမ်းညွန်များကို ကြည့်ပါ၊ သို့မဟုတ် root အတွင်း `.env.example` ကို `.env` အဖြစ် မိတ္တူ၍ သင့်တန်ဖိုးများဖြင့် ဖြည့်ပါ။
+> **မှတ်ချက်:** သင်၏ environment variable များအား မသတ်မှတ်ရသေးပါက၊ [Module 00 - Quick Start](../00-quick-start/README.md) လမ်းညွှန်ချက်များကို ကြည့်ပါ၊ ဒါမှမဟုတ် `.env.example` ကို root directory တွင် `.env` အဖြစ် ကူးပြောင်းပြီး သင့် အချက်အလက်များဖြည့်ပါ။
 
-## လျင်မြန်စတင်ခြင်း
+## အမြန် စတင်မှု
 
-**VS Code အသုံးပြုခြင်း:** Explorer မှ demo ဖိုင်တစ်ဖိုင်ပေါ်ကို right-click လုပ်ပြီး **"Run Java"** ကိုရွေးချယ်ခြင်းဖြင့် သွားနိုင်ပါသည်၊ သို့မဟုတ် Run and Debug panel မှ launch configurations များကို အသုံးပြုနိုင်သည် (မလုပ်ခင် `.env` ဖိုင်ထဲသို့ သင့် token ထည့်ထားပါကို သေချာစေပါ)။
+**VS Code အသုံးပြုခြင်း:** Explorer တွင် နမူနာဖိုင်တစ်ခု ဆိုင်ရာကို right-click ပြုလုပ်၍ **"Run Java"** ကို ရွေးပါ၊ ဒါမှမဟုတ် Run and Debug panel ရှိ launch configuration များကို အသုံးပြုပါ (ပထမဦးဆုံး `.env` ဖိုင်တွင် သင့် token ထည့်ပြီးဖြစ်သင့်သည်)။
 
-**Maven အသုံးပြုခြင်း:** အစားလည်း command line မှ တပ်ဆင်၍ နမူနာများကို အောက်ပါအတိုင်း run လိုက်နိုင်သည်။
+**Maven အသုံးပြုခြင်း:** ဒါမှမဟုတ် command line မှ ရော်ထုတ်ထားသော နမူနာများကို အောက်မှာ ပြထားသည်အတိုင်း ပြေးဆွဲနိုင်သည်။
 
-### ဖိုင် လုပ်ငန်းများ (Stdio)
+### ဖိုင် လုပ်ဆောင်မှုများ (Stdio)
 
-ဤနမူနာသည် local subprocess-based tool များကို ပြသသည်။
+ဤမှာ ဒေသတွင်း subprocess-အခြေခံ ကိရိယာများကို ပြသသည်။
 
-**✅ အထူးလိုအပ်ချက် မလိုအပ်ပါ** - MCP server ကို အလိုအလျောက် spawn လုပ်ပေးပါမည်။
+**✅ လိုအပ်ချက်မရှိ** - MCP server သည် အလိုအလျောက် spawn လုပ်သည်။
 
-**VS Code အသုံးပြုခြင်း:** `StdioTransportDemo.java` ကို right-click လုပ်ပြီး **"Run Java"** ကိုရွေးချယ်ပါ။
+**စတင် script များအသုံးပြုခြင်း (推奨):**
 
-**Maven အသုံးပြုခြင်း:**
+စတင် script များသည် root `.env` ဖိုင်မှ environment variable များကို အလိုအလျောက် load လုပ်သည်-
 
 **Bash:**
 ```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+chmod +x start-stdio.sh
+./start-stdio.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+.\start-stdio.ps1
 ```
 
-Application က filesystem MCP server ကို အလိုအလျောက် spawn လုပ်ပြီး local ဖိုင်တစ်ခုကို ဖတ်သည်။ subprocess management ကို သင့်အတွက် မည်သို့ ကိုင်တွယ်ထားသည်ကို သတိထားရမည်။
+**VS Code အသုံးပြုခြင်း:** `StdioTransportDemo.java` ကို right-click ပြုလုပ်ပြီး **"Run Java"** ကို ရွေးပါ (.env ဖိုင် သတ်မှတ်ထားပြီးဖြစ်ရမည်)။
 
-**မျှော်မှန်းရလဒ်:**
+Application သည် ဖိုင်စနစ် MCP server ကို အလိုအလျောက် spawn လုပ်ပြီး ဒေသတွင်းဖိုင်ကို ဖတ်သည်။ subprocess စီမံခန့်ခွဲမှုကို သင့်အတွက် စီမံဦးစီးသည်ကို တွေ့မြင်ရမည်။
+
+**မျှော်မှန်းထားသော အထွက်:**
 ```
 Assistant response: The file provides an overview of LangChain4j, an open-source Java library
 for integrating Large Language Models (LLMs) into Java applications...
@@ -164,165 +165,186 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 ### Supervisor Agent
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.my.png" alt="Agentic မော်ဂျူး" width="800"/>
+**Supervisor Agent pattern** သည် **တတ်ကြွ** သော agentic AI ပုံစံဖြစ်သည်။ Supervisor သည် LLM တစ်ခု အသုံးပြု၍ user ၏ တောင်းဆိုချက်အပေါ် မူတည်၍ ဘယ် agent များကို ခေါ်ဆောင်မည်ကို ကိုယ်တိုင် ဆုံးဖြတ်သည်။ နောက်ထပ်နမူနာတွင် MCP-powered ဖိုင် access နှင့် LLM agent ကို ပေါင်းစပ်၍ supervised file read → report workflow တစ်ခု ဖန်တီးသွားမည်ဖြစ်သည်။
 
+Demo တွင် `FileAgent` သည် MCP ဖိုင်စနစ် ကိရိယာများ အသုံးပြုပြီး ဖိုင်ဖတ်သည်၊ `ReportAgent` သည် အကွပ်အတည်းနှင့် အကြောင်းပြချက်ပါ ပြုစုထားသော စီစဥ်ချက်တစ်ခုကို ေမြ။ Supervisor သည် ဒီလည်ပတ်မှုကို အလိုအလျောက် စီမံခန့်ခွဲသည်။
 
-**Supervisor Agent ပုံစံ** သည် agentic AI ၏ **ချွတ်ယွင်းနိုင်စွမ်းမြင့်** ဖက်ဘာဖြစ်သည်။ ထိပ်တန်းထားသော deterministic workflow များ (ဇယားလိုက်၊ loop, parallel) နှင့် ကွဲပြား၍ Supervisor သည် LLM ကိုသုံးပြီး အသုံးပြုသူ တောင်းဆိုချက်အပေါ် မူတည်၍ မည်သည့် agent များကို ခေါ်ယူမည်ကို ကိုယ်တိုင် ဆုံးဖြတ်သည်။
+<img src="../../../translated_images/agentic.cf84dcda226374e3.my.png" alt="Agentic Module" width="800"/>
 
-**Supervisor နဲ့ MCP ကို ပေါင်းစပ်ခြင်း:** ဤဥပမာတွင် `FileAgent` ကို MCP ဖိုင်စနစ် tool များသို့ `toolProvider(mcpToolProvider)` မှတဆင့် access ပေးထားသည်။ အသုံးပြုသူက "ဖိုင်ကို ဖတ်ပြီး စိစစ်ပါ" ဟူသော တောင်းဆိုချက်တစ်ခု ပေးသော်လည်း Supervisor က တောင်းဆိုချက်ကို အကဲဖြတ်ပြီး တာဝန်နှင့် agent များ အစီအစဉ်တစ်ခု ထုတ်ပြန်သည်။ ထို့နောက် ဆက်လက်ပြီး `FileAgent` သို့ routed လုပ်ကာ MCP ရဲ့ `read_file` tool ကို အသုံးပြု၍ ဖိုင်အကြောင်းအရာကို ယူဆောင်လာသည်။ Supervisor က ထိုအကြောင်းအရာကို `AnalysisAgent` ထံ ပို့ပြီး အဓိပ္ပာယ်ဖော်ပြချက်ကို လုပ်ဆောင်စေသည်၊ လိုအပ်လျှင် `SummaryAgent` ကို အကျဉ်းချုပ်ပေးရန် ခေါ်ယူနိုင်သည်။
+```
+┌─────────────┐      ┌──────────────┐
+│  FileAgent  │ ───▶ │ ReportAgent  │
+│ (MCP tools) │      │  (pure LLM)  │
+└─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+  'fileContent'         'report'
+```
 
-ဤကိစ္စက MCP tool များသည် agentic workflow များထဲသို့ ပြဿနာမရှိပဲ ပေါင်းစည်းနိုင်ကြောင်း ပြသသည် — Supervisor သည် ဖိုင်များ ဘယ်လိုဖတ်သည်ကို မသိလိုလဲ၊ ရှိသေးသလို `FileAgent` က အဲဒီတာဝန်ကို လုပ်နိုင်တယ်ဆိုတာသာ သိနေပြီး အလုပ်ကို စီမံပေးနိုင်သည်။ Supervisor သည် တောင်းဆိုချက်အမျိုးအစား မျိုးစုံအပေါ် မူတည်၍ dynamic အဖြစ် အသစ်ပြောင်းလဲဖို့ စွမ်းရည်ရှိပြီး နောက်ဆုံးတွင် သတ်မှတ် agent ၏ response သို့မဟုတ် အလုပ်လုံးလုံး၏ အနှစ်ချုပ်ကို ပြန်ပေးနိုင်သည်။
+Agent တစ်ခုချင်းစီသည် **Agentic Scope** (မျှဝေသော မှတ်ဉာဏ်) ထဲတွင် output များကို သိမ်းဆည်းသည်၊ ဤသည်သည် အောက်လွှတ် agents များကို အရင်ဆုံး ရလဒ်များရရှိမှုအတွက် access ပေးသည်။ MCP ကိရိယာများကို agentic workflow များထဲသို့ မည်သို့ စပ်ဆင်ထားသည်ကို ပြသသည် - Supervisor သည် ဖိုင်ဘယ်လို ဖတ်သည်ကို မသိပေမည့် `FileAgent` သည် ဖတ်နိုင်သည်ကိုသာ သိရှိရန် လိုသည်။
 
-**Start Scripts အသုံးပြုရန် (အကြံပြု):**
+#### Demo ပြေးဆွဲခြင်း
 
-start scripts များသည် root `.env` ဖိုင်ထဲက environment variables များကို အလိုအလျောက် load ပြုလုပ်ပေးသည်။
+စတင် script များသည် root `.env` ဖိုင်မှ environment variable များကို အလိုအလျောက် load လုပ်သည်-
 
 **Bash:**
 ```bash
 cd 05-mcp
-chmod +x start.sh
-./start.sh
+chmod +x start-supervisor.sh
+./start-supervisor.sh
 ```
 
 **PowerShell:**
 ```powershell
 cd 05-mcp
-.\start.ps1
+.\start-supervisor.ps1
 ```
 
-**VS Code အသုံးပြုခြင်း:** `SupervisorAgentDemo.java` ကို right-click လုပ်ပြီး **"Run Java"** ကိုရွေးချယ်ပါ (သင်၏ `.env` ဖိုင် သတ်မှတ်ထားသည်ကို အရင်စစ်ပါ)။
+**VS Code အသုံးပြုခြင်း:** `SupervisorAgentDemo.java` ကို right-click ပြုလုပ်ပြီး **"Run Java"** ကို ရွေးပါ (.env ဖိုင် သတ်မှတ်ထားပြီးဖြစ်ရမည်)။
 
-**Supervisor က ဘယ်လို လည်ပတ်သလဲ:**
+#### Supervisor သည် ဘယ်လိုအလုပ်လုပ်သလဲ
 
 ```java
-// သတ်မှတ်ထားသော စွမ်းရည်များရှိသော အေးဂျင့်များ အများအပြားကို သတ်မှတ်ပါ
+// အဆင့် ၁: FileAgent သည် MCP ကိရိယာများကို အသုံးပြုပြီး ဖိုင်များအား ဖတ်ရှုသည်
 FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
         .chatModel(model)
-        .toolProvider(mcpToolProvider)  // ဖိုင် လုပ်ဆောင်ချက်များအတွက် MCP ကိရိယာများပါရှိသည်
+        .toolProvider(mcpToolProvider)  // ဖိုင်ဆိုင်ရာ လုပ်ဆောင်ချက်များအတွက် MCP ကိရိယာများရှိသည်
         .build();
 
-AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+// အဆင့် ၂: ReportAgent သည် ဖွဲ့စည်းထားသောအစီရင်ခံစာများ ထုတ်ပေးသည်
+ReportAgent reportAgent = AgenticServices.agentBuilder(ReportAgent.class)
         .chatModel(model)
         .build();
 
-SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
-        .chatModel(model)
-        .build();
-
-// ဤအေးဂျင့်များကို ညှိနှိုင်းပေးသည့် Supervisor ကို ဖန်တီးပါ
+// Supervisor သည် ဖိုင် → အစီရင်ခံစာ လုပ်ငန်းစဉ်ကို စီမံခန့်ခွဲသည်
 SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
-        .chatModel(model)  // "planner" မော်ဒယ်
-        .subAgents(fileAgent, analysisAgent, summaryAgent)
-        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .chatModel(model)
+        .subAgents(fileAgent, reportAgent)
+        .responseStrategy(SupervisorResponseStrategy.LAST)  // နောက်ဆုံး အစီရင်ခံစာကို ပြန်ပေးပို့သည်
         .build();
 
-// Supervisor သည် ကိုယ်တိုင် မည်သည့် အေးဂျင့်များကို ခေါ်သုံးမည်ကို ဆုံးဖြတ်သည်
-// သဘာဝဘာသာဖြင့် တောင်းဆိုချက်တစ်ခုသာ ပေးပါ - LLM သည် အကောင်အထည်ဖော်ရန် အစီအစဉ်ရေးဆွဲပေးသည်
-String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+// Supervisor သည် တောင်းဆိုချက်အပေါ် မူတည်၍ ကိုယ်စားလှယ်များကို ဖိတ်ခေါ်ရန်ဆုံးဖြတ်သည်
+String response = supervisor.invoke("Read the file at /path/file.txt and generate a report");
 ```
 
-ပြည့်စုံ implementation အတွက် [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) ကို ကြည့်ပါ။
+#### တုံ့ပြန်မှု မျှော်လင့်ချက်များ
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) and ask:
-> - "Supervisor က ဘယ်လို agents တွေကို ခေါ်ယူရမလဲဆိုတာ ဆုံးဖြတ်သနည်း?"
-> - "Supervisor နဲ့ Sequential workflow pattern တို့ အကြား ကွာခြားချက် ဘာလဲ?"
-> - "Supervisor ၏ planning conduct ကို ဘယ်လို custom ပြုလုပ်နိုင်သလဲ?"
+`SupervisorAgent` ကို သတ်မှတ်သောအခါ၊ sub-agent များ အလုပ်ပြီးစီးပြီးနောက် user ထံ ပေးပို့မည့် နောက်ဆုံး ဖြေရာပုံစံကို ဖြည့်စွက်ပေးသည်။ ရရှိနိုင်သော မျှော်လင့်ချက်များမှာ -
 
-#### ထွက်ပေါက်ကို နားလည်ခြင်း
+| မျှော်လင့်ချက် | ရှင်းလင်းချက် |
+|----------------|----------------|
+| **LAST** | Supervisor သည် နောက်ဆုံးခေါ်ယူသော sub-agent သို့မဟုတ် tool ၏ output ကို ပြန်ပေးသည်။ ၎င်းကို workflow ၏ နောက်ဆုံးသော agent သည် ထိပ်ဆုံးဖြေရှင်းချက် တစ်ခုထုတ်ပေးရန် သတ်မှတ်ထားသော အခါ အသုံးဝင်သည် (ဥပမာ- ရှာဖွေရေး pipeline တွင် "Summary Agent")။ |
+| **SUMMARY** | Supervisor သည် ၎င်း၏ ကိုယ်ပိုင် အတွင်းပိုင်း Language Model (LLM) ကို သုံးကာ interaction ရဲ့ အနှစ်ချုပ်နှင့် sub-agent output များအား စုပေါင်းပြီး အောက်ဆုံး ဖြေကို ပြန်ပေးသည်။ ၎င်းသည် သန့်ရှင်းသော ပေါင်းစပ်ထားသော ဖြေရှင်းချက်တစ်ခုကို user ထံ ပေးသည်။ |
+| **SCORED** | စနစ်သည် အတွင်းပိုင်း LLM ကို သုံးကာ LAST တုံ့ပြန်ချက်နှင့် SUMMARY တုံ့ပြန်ချက်ကို user ၏ မူလ တောင်းဆိုမှုနှင့် နှိုင်းယှဉ်ပြီး အရမှတ် ပိုမြင့်သော output ကို ပြန်ပေးသည်။ |
 
-Demo ကို run လိုက်လျှင် Supervisor က မည်သို့ agent အများကို စီမံခန့်ခွဲသလဲဆိုသော ဖော်ပြချက်အဆင့်ဆင့်ကို ကြည့်ရှုနိုင်မည်။ ဤနေရာတိုင်းရဲ့ အဓိက အဓိပ္ပါယ်如下:
+ပြည့်စုံသော အကောင်အထည်ဖော်မှုအတွက် [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) ကို ကြည့်ပါ။
+
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ဖြင့် စမ်းသပ်ကြည့်ပါ:** [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) ဖိုင်ကို ဖွင့်ပြီး မေးမြန်းပါ-
+> - "Supervisor သည် မည်သို့ sub-agent များကို ခေါ်ယူမည်ကို ဆုံးဖြတ်သလဲ?"
+> - "Supervisor နှင့် Sequential workflow pattern များအကြား မည်သို့ကွာခြားသည်နည်း?"
+> - "Supervisor ၏ လုပ်ငန်းစီမံခန့်ခွဲမှုကို မည်သို့ ကိုယ်ပိုင် ပြုလုပ်နိုင်သနည်း?"
+
+#### အထွက် ထုံးတမ်းကို နားလည်ခြင်း
+
+Demo ကို ပြေးဆိုင်းသောအခါ Supervisor သည် agents များစွာကို မည်သို့ ဆောင်ရွက်သည်ကို ရှင်းလင်းပြသသော လမ်းညွှန်မှုတစ်ခုကို တွေ့မြင်မည်ဖြစ်သည်။ အပိုင်းတိုင်းသည် ဘာကို ဆိုလိုသနည်း။
 
 ```
 ======================================================================
-  SUPERVISOR AGENT DEMO
+  FILE → REPORT WORKFLOW DEMO
 ======================================================================
 
-This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
-The Supervisor uses an LLM to decide which agent to call based on the task.
+This demo shows a clear 2-step workflow: read a file, then generate a report.
+The Supervisor orchestrates the agents automatically based on the request.
 ```
 
-**ခေါင်းစဉ်** မှာ demo ကို ရင်းနှီးစွာ မိတ်ဆက်ပြီး core concept ကို ရှင်းပြသည် — Supervisor သည် hardcoded စည်းမျဉ်းမဟုတ်သော LLM ကို အသုံးပြုပြီး agent များကို ခေါ်ယူသည်။
+**ခေါင်းစဉ်** သည် workflow အယူအဆကို မိတ်ဆက်သည် - ဖိုင်ဖတ်ခြင်းမှ အစပြီး အစီရင်ခံစာ ထုတ်ပေးခြင်းဖြစ်သည်။
 
 ```
+--- WORKFLOW ---------------------------------------------------------
+  ┌─────────────┐      ┌──────────────┐
+  │  FileAgent  │ ───▶ │ ReportAgent  │
+  │ (MCP tools) │      │  (pure LLM)  │
+  └─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+   'fileContent'        'report'
+
 --- AVAILABLE AGENTS -------------------------------------------------
-  [FILE]     FileAgent     - Reads files using MCP filesystem tools
-  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
-  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+  [FILE]   FileAgent   - Reads files via MCP → stores in 'fileContent'
+  [REPORT] ReportAgent - Generates structured report → stores in 'report'
 ```
 
-**ရရှိနိုင်သော Agents** သည် Supervisor က ရွေးချယ်နိုင်သော အထူးပြု agent သုံးခုကို ပြပါသည်။ Agent တစ်ခုချင်းစီတွင် ထူးခြားသော အင်အားရှိသည်:
-- **FileAgent** သည် MCP tool များကို အသုံးပြု၍ ဖိုင်များကို ဖတ်နိုင်သည် (external capability)
-- **AnalysisAgent** သည် အကြောင်းအရာကို ခွဲခြမ်းစိတ်ဖြာသည် (pure LLM capability)
-- **SummaryAgent** သည် အကျဉ်းချုပ်များ ဖန်တီးပေးသည် (pure LLM capability)
+**Workflow Diagram** သည် agent များအကြား ဒေတာမှုပေါင်းစည်းမှုကို ပြသသည်။ ရှိသည့် agent တစ်ခုချင်းစီ၏ တာဝန်များမှာ:
+- **FileAgent** သည် MCP ကိရိယာများဖြင့် ဖိုင်များဖတ်ပြီး ရိုးရှင်းသော အကြောင်းအရာကို `fileContent` တွင် သိမ်းဆည်းသည်။
+- **ReportAgent** သည် ထိုအကြောင်းအရာကို လက်ခံပြီး `report` တွင် ဖော်ပြချက် တစ်ရပ်ထုတ်ပေးသည်။
 
 ```
 --- USER REQUEST -----------------------------------------------------
-  "Read the file at .../file.txt and analyze what it's about"
+  "Read the file at .../file.txt and generate a report on its contents"
 ```
 
-**User Request** သည် အသုံးပြုသူက မေးထားသော အရာကို ဖော်ပြသည်။ Supervisor သည် ဤကို ပို့ချပြီး ဘယ် agent များကို ခေါ်ယူရမည်ဆိုတာ ခွဲခြမ်းစစ်ဆေးရမည်။
+**User တောင်းဆိုချက်** သည် အလုပ်အကိုင်ကို ပြသသည်။ Supervisor သည် ၎င်းကို ခွဲခြမ်းပြီး `FileAgent` → `ReportAgent` သို့ ခေါ်ယူရန် ဆုံးဖြတ်သည်။
 
 ```
 --- SUPERVISOR ORCHESTRATION -----------------------------------------
-  The Supervisor will now decide which agents to invoke and in what order...
+  The Supervisor decides which agents to invoke and passes data between them...
 
   +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
   |
   |   Input: .../file.txt
   |
-  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  |   Result: LangChain4j is an open-source, provider-agnostic Java framework for building LLM...
   +-- [OK] FileAgent (reading file via MCP) completed
 
-  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  +-- STEP 2: Supervisor chose -> ReportAgent (generating structured report)
   |
-  |   Input: LangChain4j is an open-source Java library...
+  |   Input: LangChain4j is an open-source, provider-agnostic Java framew...
   |
-  |   Result: Structure: The content is organized into clear paragraphs that int...
-  +-- [OK] AnalysisAgent (analyzing content) completed
+  |   Result: Executive Summary...
+  +-- [OK] ReportAgent (generating structured report) completed
 ```
 
-**Supervisor အစီအစဉ်ချမှု** မှာ မှန်ကန်မှုဖြစ်စေသော အကျိုးမျိုးတွေ ဖြစ်ပေါ်သည်။ ကောင်းမွန်စွာ သတိထားကြည့်ပါ:
-1. Supervisor က **ပထမဆုံး FileAgent ကို ရွေးချယ်ခဲ့သည်** — စကားတွင် "ဖိုင်ဖတ်ပါ" ဟု ဖေါ်ပြထားသဖြင့်
-2. FileAgent က MCP ၏ `read_file` tool ကို အသုံးပြုကာ ဖိုင်အကြောင်းအရာကို ယူလာသည်
-3. ထို့နောက် Supervisor က **AnalysisAgent ကို ရွေးချယ်** ပြီး ဖိုင်အကြောင်းအရာကို ပို့သည်
-4. AnalysisAgent က ဖွဲ့စည်းပုံ၊ အသံနှင့် အဓိပ္ပါယ်များကို ခွဲခြမ်းစိစစ်သည်
+**Supervisor ဆောင်ရွက်မှု** သည် ထို ၂ ကျိုးသက်ရောက်မှုရှိသော လည်ပတ်မှုကို ပြသသည်-
+1. **FileAgent** သည် MCP မှ ဖိုင်ကို ဖတ်ပြီး အကြောင်းအရာ သိမ်းဆည်းသည်
+2. **ReportAgent** သည် ထိုအကြောင်းအရာကို လက်ခံပြီး ဖော်ပြချက် တစ်ခုပြုလုပ်သည်
 
-Supervisor က ဤဆုံးဖြတ်ချက်များကို အသုံးပြုသူ၏ တောင်းဆိုချက်အပေါ် မူတည်၍ **ကိုယ်ပိုင်အလိုအလျောက်** ဆောင်ရွက်ခဲ့ကြောင်း သတိထားပါ — hardcoded workflow မရှိပါ။
-
-**နောက်ဆုံး ဖြေကြားချက်** သည် Supervisor က ခေါ်ယူခဲ့သည့် agent အားလုံး၏ ထုတ်လွှင့်ချက်များကို ပေါင်းစပ်ပြီး ထုတ်ပေးသည်။ ဥပမာ demo က agentic scope ကို dump လုပ်ကာ သတ်မှတ်ထားသော agent များ၏ summary နှင့် analysis ရလဒ်များကို ပြပါသည်။
+Supervisor သည် user တောင်းဆိုချက်အပေါ် အလိုအလျောက် ဆုံးဖြတ်ချက်များ ချသည်။
 
 ```
 --- FINAL RESPONSE ---------------------------------------------------
-I read the contents of the file and analyzed its structure, tone, and key themes.
-The file introduces LangChain4j as an open-source Java library for integrating
-large language models...
+Executive Summary
+...
 
---- AGENTIC SCOPE (Shared Memory) ------------------------------------
-  Agents store their results in a shared scope for other agents to use:
-  * summary: LangChain4j is an open-source Java library...
-  * analysis: Structure: The content is organized into clear paragraphs that in...
+Key Points
+...
+
+Recommendations
+...
+
+--- AGENTIC SCOPE (Data Flow) ----------------------------------------
+  Each agent stores its output for downstream agents to consume:
+  * fileContent: LangChain4j is an open-source, provider-agnostic Java framework...
+  * report: Executive Summary...
 ```
 
-### Agentic မော်ဂျူး လက္ခဏာများ ရှင်းပြချက်
+#### Agentic Module အင်္ဂါရပ်များ ရှင်းလင်းချက်
 
-ဥပမာသည် agentic မော်ဂျူး၏ အဆင့်မြင့် လက္ခဏာများ အချို့ကို ပြသသည်။ Agentic Scope နှင့် Agent Listeners အကြောင်း နည်းနည်း ဆက်ရှင်းကြည့်မည်။
+ဥပမာသည် agentic module ၏ မြင့်မားသော အင်္ဂါရပ်တချို့ကို ပြသသည်။ Agentic Scope နှင့် Agent Listeners ကို နီးကပ်စွာ ကြည့်ရှုကြမည်။
 
-**Agentic Scope** သည် agent များကို `@Agent(outputKey="...")` ဖြင့် ထုတ်လွှင့်ထားသော ရလဒ်များကို သိမ်းဆည်းထားသည့် shared memory ဖြစ်သည်။ ၎င်းက:
-- နောက်ထပ် agent များသည် အစပိုင်း agent များ၏ output များကို access ရရှိစေသည်
-- Supervisor သည် နောက်ဆုံး ပြန်ပေးမည့် response ကို synthesis ဖန်တီးနိုင်သည်
-- သင်သည် အားလုံး၏ ထုတ်ကုန်များကို စစ်ဆေးနိုင်သည်
+**Agentic Scope** သည် `@Agent(outputKey="...")` ဖြင့် agent များ ၎င်းတို့၏ ရလဒ်များကို သိမ်းဆည်းသော မျှဝေ memory ဖြစ်သည်။ ၎င်းသည်-
+- နောက်ဆုံးထွက် agent များကို ယခင် agent များ၏ output များကို access ပြုလုပ်ခွင့် ပေးသည်
+- Supervisor သည် နောက်ဆုံး အဖြေ ဖန်တီးနိုင်သည်
+- သင့်အား agent တစ်ခုချင်း၏ ထုတ်ပေးချက်များကို ကြည့်ရှုနိုင်သည်
 
 ```java
 ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
 AgenticScope scope = result.agenticScope();
-String story = scope.readState("story");
-List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+String fileContent = scope.readState("fileContent");  // FileAgent မှ အ(raw) ဖိုင်ဒေတာ
+String report = scope.readState("report");            // ReportAgent မှ ဖောင်တည်သွင်းထားသောအစီရင်ခံစာ
 ```
 
-**Agent Listener** များက agent အကောင်အထည်ဖော်မှုကို ကြီးကြပ်စစ်ဆေးရာတွင် အထောက်အကူပြုသည်။ demo မှာ တွေ့ရသော အဆင့်ဆင့် output များသည် AgentListener တစ်ခုက agent ခေါ်ယူမှုတိုင်းမှာ hook လုပ်ထားရာမှ ထွက်ပေါ်လာသည်။
-- **beforeAgentInvocation** - Supervisor က agent တစ်ခုရွေးချယ်သည့်အခါ ခေါ်မည်၊ ဘယ် agent ရွေးချယ်သလဲ၊ ရွေးချယ်မှုအကြောင်းရင်းကို ကြည့်ရန်
-- **afterAgentInvocation** - agent တစ်ခု ပြီးဆုံးသည့်အခါ ခေါ်မည်၊ ၎င်း၏ ရလဒ်ကို ဖော်ပြရန်
-- **inheritedBySubagents** - true ဖြစ်လျှင် listener သည် အစုလိုက်အပြုံလိုက် hierarchy ထဲရှိ agent တစ်ခုချင်းစီကို ကြီးကြပ်သည်
+**Agent Listeners** သည် agent အလုပ်လုပ်မှုများအား စောင့်ကြည့်ခြင်းနှင့် အမှားရှာဖွေမှုများ အတွက် အသုံးပြုသည်။ demo တွင် တွေ့ရှိသော တစ်ဆင့်ချင်း output များမှာ AgentListener တစ်ခုမှ agent ဖုန်းခေါ်မှုတိုင်းကို ချိတ်ဆက်ပေးသောကြောင့် ဖြစ်သည်-
+- **beforeAgentInvocation** - Supervisor သည် agent တစ်ခု ရွေးချယ်သောအချိန် ခေါ်ဆိုသည်၊ ဘာကြောင့် ကို ရွေးခဲ့သည်ကို ဖော်ပြသည်
+- **afterAgentInvocation** - agent တစ်ခု အလုပ်ပြီးဆုံးတဲ့ အချိန် ခေါ်ဆိုသည်နောက်ဆုံး ရလဒ်ကို ပြသည်
+- **inheritedBySubagents** - true ဖြစ်သောအခါ listener သည် hierarchy တွင် မည်သည့် agent မဆို စောင့်ကြည့်သည်
 
 ```java
 AgentListener monitor = new AgentListener() {
@@ -341,58 +363,58 @@ AgentListener monitor = new AgentListener() {
     
     @Override
     public boolean inheritedBySubagents() {
-        return true; // အားလုံးသော အောက်ခံ အေးဂျင့်များသို့ ဖြန့်ချိပါ
+        return true; // အောက်လွှာအေးဂျင့်များအားလုံးသို့ ပျံ့နှံ့ပါ။
     }
 };
 ```
 
-Supervisor ပုံစံအပြင် `langchain4j-agentic` module သည် အောက်ပါ workflow pattern များနှင့် အင်အားပြင်း features များကို ပံ့ပိုးပေးသည်။
+Supervisor pattern ထက်ပို၍ `langchain4j-agentic` module သည် workflow များအတွက် အောက်ပါ ကြီးမားသောနည်းလမ်းများနှင့် အင်္ဂါရပ်များ ထောက်ပံ့သည်-
 
-| Pattern | Description | Use Case |
-|---------|-------------|----------|
-| **Sequential** | Agent များကို အစဉ်လိုက် အလုပ်လုပ်စေပါသည်၊ output သည် နောက်တစ်ခုသို့ ဆက်သွယ်ပေးသည် | Pipeline များ: သုတေသန → ခွဲခြမ်းစိစစ် → အစီရင်ခံစာ |
-| **Parallel** | Agent များကို တပြိုင်နက် run လုပ်သည် | မူလစီမံထားသော task များ: ရာသီဥတု + သတင်း + စတော့ရှယ်ယာ |
-| **Loop** | သတ်မှတ်ထားသည့် အခြေအနေ မ ဖြည့်မီ ထပ်ခေါ်ဆက်ရုံ | အရည်အသွေး အကဲဖြတ်ခြင်း: rating ≥ 0.8 မရသေးသည့်အထိ ပြန်လည်တိုးတက်မှု |
-| **Conditional** | အခြေအနေပေါ် မူတည်၍ routing ပြုလုပ်သည် | အုပ်စုခွဲခြင်း → အထူးကျွမ်းကျင်သူ agent သို့ လမ်းမောင်းခြင်း |
-| **Human-in-the-Loop** | လူသား checkpoint များ ထည့်သွင်းသည် | အတည်ပြု လုပ်ငန်းစဉ်များ၊ အကြောင်းအရာစစ်ဆေးခြင်း |
+| ပုံစံ | ရှင်းလင်းချက် | အသုံးပြုမှုအာရုံ |
+|--------|---------------|------------------|
+| **Sequential** | Agent များကို အစဉ်လိုက် ဆောင်ရွက်သည်၊ output သည် နောက်တစ်ခုသို့ ဆက်လက်ဖြတ်သန်းသည် | Pipeline များ: ရှာဖွေခြင်း → စိစစ်ခြင်း → အစီရင်ခံချက် |
+| **Parallel** | Agent များကို တပြိုင်နက်ပြေးဆွဲသည် | လွတ်လပ်သော အလုပ်များ: ရာသီဥတု + သတင်း + စတော့ရှယ်ယာ |
+| **Loop** | အခြေအနေဖြင့် အဆက်မပျက် လည်ပတ်မှု | အရည်အသွေး အကဲဖြတ်မှု: အမှတ် ≥ 0.8 ရရှိသည်အထိ ထပ်ဆည်း |
+| **Conditional** | အခြေအနေများအပေါ် မူတည်ပြီး လမ်းကြောင်း သတ်မှတ်ခြင်း | ဖွဲ့စည်းခြင်း → ကျွမ်းကျင်သူ agent သို့ လမ်းညွှန် |
+| **Human-in-the-Loop** | လူသား စစ်ဆေးမှုများ ထည့်သွင်းခြင်း | ခွင့်ပြုလုပ်ထိန်းချုပ်မှု workflow များ၊ အကြောင်းအရာ စစ်ဆေးမှု |
 
 ## အဓိက အယူအဆများ
 
-**MCP** သည် ရှိပြီးသား tool ပတ်ဝန်းကျင်များကို အသုံးချချင်သည်၊ အတူတကွအသုံးပြုနိုင်သော tool များကို ဖန်တီးလိုသည်၊ third-party service များကို စံသတ်မှတ်ထားသော protocol များဖြင့် ပေါင်းစည်းလိုသည်၊ သို့မဟုတ် code မပြောင်းဘဲ tool implementation များကို လဲလှယ်ချင်သည့်အခါ အထူးသင့်လျော်သည်။
+ယခု သင်သည် MCP နှင့် agentic module ကို လက်တွေ့ အသုံးပြု၍ လေ့လာပြီးဖြစ်သဖြင့်၊ အသုံးပြုရန် အခြေအနေကို အောက်ပါအတိုင်း အကျဉ်းချုပ် ကြည့်လိုက်မည်။
 
-**Agentic မော်ဂျူး** သည် `@Agent` annotation များဖြင့် ကြေညာချက်အပေါ် မူတည်၍ agent များကို သတ်မှတ်ချင်သည်၊ workflow orchestration (sequential, loop, parallel) လိုအပ်သည်၊ interface-based agent design ကို အလေးထား၍ imperative code ထက် preferr လုပ်ချင်သည်၊ သို့မဟုတ် `outputKey` ဖြင့် အချက်အလက်မျှဝေသော agent များစုပေါင်းလိုသောအခါ အကောင်းဆုံး ဖြစ်သည်။
+**MCP** သည် ယခင်ရှိပြီးသား ကိရိယာ ပတ်ဝန်းကျင်များကို အသုံးချလိုသည့်အခါ၊ ပလက်ဖောင်းများစွာမှ မျှဝေသုံးနိုင်သော ကိရိယာများ ဖန်တီးလိုသည့်အခါ၊ စံချိန် protocol များဖြင့် third-party ဝန်ဆောင်မှုများ ပေါင်းစပ်လိုသည့်အခါ၊ သို့မဟုတ် ကုဒ် ပြောင်းလဲခြင်းမလိုဘဲ ကိရိယာ အကောင်အထည်ဖော်မှုများ ပြောင်းလဲလိုပါက အထူးသင့်လျော်သည်။
 
-**Supervisor Agent ပုံစံ** သည် အလုပ်စဉ်ကို ကြိုတန်း မသိနိုင်သည့်အခါ LLM ကို အသုံးပြု၍ ဆုံးဖြတ်ခွင့်ပေးချင်သည်၊ အထူးပြု agent များစွာကို dynamic ကြီးကြပ်ရန်လိုသည်၊ တစ်ချို့ capability များသို့ စကားဝိုင်းတစ်ခုအတွင်း routing လုပ်မည့် conversational system များ တည်ဆောက်ချင်သည်၊ သို့မဟုတ် အလွန်ကို မျိုးရိုးမဲ့၊ တက်လှမ်းနိုင်သော agent အပြုအမူ များလိုချင်သည့်အခါ ထူးခြားစွာ အသုံးဝင်သည်။
+**Agentic Module** သည် `@Agent` annotation များနှင့် အသေးစိတ် agent သတ်မှတ်ချက်များကို ကြေညာပုံစံဖြင့်ရေးဆွဲလိုည့်သောအခါ၊ workflow orchestration (sequential, loop, parallel) လိုအပ်သောအခါ၊ imperative ကုဒ်ထက် interface အခြေပြု agent ဖန်တီးမှုပိုကြိုက်နှစ်သက်သောအခါ၊ outputKey ဖြင့် output မျှဝေသည့် agent အများစုကို ပေါင်းစပ်လိုသည့်အခါ အသုံးဝင်သည်။
 
+**Supervisor Agent pattern** သည် workflow များကို မခန့်မှန်းနိုင်သေးသောအခါ၊ multiple specialized agents များကို dynamic အခြေအနေဖြင့် စီမံခြင်း လိုသည့်အခါ၊ စကားပြောစနစ်များ သည် capability မျိုးစုံသို့ လူနဲ့အတူ ချိတ်ဆက်ရန်လိုပါက သို့မဟုတ် အလွန်တုန့်ပြန်နိုင်သော၊ မျိုးစုံ ပေါင်းစပ်နိုင်သော agent အပြုအမူ လိုချင်သည့်အခါ အထူးထူးခြားပါသည်။
 ## ဂုဏ်ယူပါတယ်!
 
-LangChain4j for Beginners course ကို သင်ပြီးစီးလိုက်ပါပြီ။ သင်အောက်ပါ အရာများကို ပိုင်ဆိုင်ပြီဖြစ်သည် -
+သင်သည် LangChain4j for Beginners သင်ခန်းစာကို ပြီးမြောက်စွာ လေ့လာပြီးပါပြီ။ သင်ယူသင့်ကြောင်းများမှာ -
 
-- Memory ပါဝင်သော conversational AI တည်ဆောက်နည်း (Module 01)
-- မတူညီသော တာဝန်များအတွက် prompt engineering နည်းလမ်းများ (Module 02)
-- Document များအပေါ် အခြေခံ၍ ဖြေကြားချက်များကို အမြဲတမ်း အခြေခံပေးမှု (RAG) (Module 03)
-- custom tools များနဲ့ အခြေခံ AI agents (assistants) ဖန်တီးခြင်း (Module 04)
-- LangChain4j MCP နှင့် Agentic modules များအတွက် စံနှုန်းတကျ ကိရိယာများကို ပေါင်းစည်းခြင်း (Module 05)
+- စိတ်အမှတ်အသား ပါရှိသော စကားပြော AI ကို တည်ဆောက်နည်း (Module 01)
+- အလုပ်အကြောင်းအမျိုးမျိုးအတွက် Prompt engineering ပုံစံများ (Module 02)
+- သင့်စာရွက်စာတမ်းများအတွင်း အချက်အလက်ကို အခြေခံ၍ RAG ဖြင့် တုံ့ပြန်ချက်များထုတ်ပေးနည်း (Module 03)
+- စိတ်ကြိုက်ကိရိယာများဖြင့် မူလ AI ဂျင်နီယပ်များ (အကူအညီပေးသူများ) ကို ဖန်တီးနည်း (Module 04)
+- LangChain4j MCP နှင့် Agentic modules ဖြင့် စံနှုန်းတကျ ကိရိယာများကို ပေါင်းစည်းအသုံးချနည်း (Module 05)
 
-### နောက်တစ်ဆင့်?
+### နောက်တစ်ဆင့်?
 
-မော်ဂျူးများကို ပြီးမြောက်ပြီးနောက်၊ LangChain4j စမ်းသပ်ခြင်း အယူအဆများကို လက်တွေ့ အလုပ်လုပ်ပုံတွင် ကြည့်ရန် [စမ်းသပ်ခြင်းလမ်းညွှန်](../docs/TESTING.md) ကို ရှာဖွေပါ။
+Modules များ ပြီးမြောက်ပြီးနောက်၊ LangChain4j စမ်းသပ်မှု အယူအဆများကို ကြည့်ရှုရန် [Testing Guide](../docs/TESTING.md) ကို စူးစမ်းလေ့လာပါ။
 
-  
 **တရားဝင် အရင်းအမြစ်များ:**
-- [LangChain4j Documentation](https://docs.langchain4j.dev/) - ပြည့်စုံသော လမ်းညွှန်များနှင့် API ကိုးကားချက်များ
-- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - မူရင်း ကုဒ်များနှင့် ဥပမာများ
-- [LangChain4j Tutorials](https://docs.langchain4j.dev/tutorials/) - အမျိုးမျိုးသော အသုံးအနှုန်းများအတွက် အဆင့်လိုက် သင်ခန်းစာများ
+- [LangChain4j Documentation](https://docs.langchain4j.dev/) - အပြည့်အစုံ လမ်းညွန်များနှင့် API ကိုးကားချက်များ
+- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - အရင်းအမြစ်ကုဒ်နှင့် ဥပမာများ
+- [LangChain4j Tutorials](https://docs.langchain4j.dev/tutorials/) - အမျိုးမျိုးသော အသုံးပြုမှုများအတွက် အဆင့်ဆင့် သင်ခန်းစာများ
 
-သင်တန်းကို ပြီးမြောက်ခဲ့တာအတွက် ကျေးဇူးတင်ပါတယ်!
+ဒီ သင်ခန်းစာကို ပြီးမြောက်ပြီးပါကြောင်း ကျေးဇူးတင်ပါသည်!
 
 ---
 
-**လမ်းကြောင်း:** [← ယခင်: Module 04 - ကိရိယာများ](../04-tools/README.md) | [ပင်မသို့ ပြန်သွားရန်](../README.md)
+**သွားရောက်ရန်:** [← ယခင်: Module 04 - Tools](../04-tools/README.md) | [နောက်သို့ ပြန်သွားရန်](../README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-တာဝန်ငြင်းဆိုချက်:
-ဤစာတမ်းကို AI ဘာသာပြန်ဝန်ဆောင်မှုဖြစ်သည့် [Co-op Translator](https://github.com/Azure/co-op-translator) ကို အသုံးပြု၍ ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှုအတွက် ကြိုးစားပါသော်လည်း အလိုအလျှောက် ဘာသာပြန်ချက်များတွင် အမှားများ သို့မဟုတ် မမှန်ကန်မှုများ ဖြစ်ပေါ်နိုင်ကြောင်း သတိထားရန် လိုအပ်ပါသည်။ မူလဘာသာဖြင့် ရှိသော မူရင်းစာတမ်းကို တရားဝင် အချက်အလက် အရင်းအမြစ်အဖြစ် ဦးစားပေးစဉ်းစားသင့်ပါသည်။ အရေးကြီးသည့် အချက်အလက်များအတွက်မှာတော့ ပရော်ဖက်ရှင်နယ် လူသားဘက်မှ ဘာသာပြန်ခြင်းကို အကြံပြုပါသည်။ ဤဘာသာပြန်ချက်ကို အသုံးပြုမှုကြောင့် ဖြစ်ပေါ်နိုင်သည့် နားလည်မှုမှားခြင်းများ သို့မဟုတ် မှားဖတ်ချက်များအတွက် ကျွန်ုပ်တို့အား တာဝန်မယူပါ။
+**ဆောင်းပါးမှတ်ချက်**  
+ဤစာရွက်စက်ကို AI ဘာသာပြန်ခြင်း ဝန်ဆောင်မှု [Co-op Translator](https://github.com/Azure/co-op-translator) ဖြင့် ဘာသာပြန်ထားပါသည်။ ကျွန်ုပ်တို့သည် တိကျမှန်ကန်မှုအတွက် ကြိုးပမ်းအားထုတ်သော်လည်း စက်ရုပ်ဘာသာပြန်ခြင်းများတွင် အမှားများ သို့မဟုတ် မှန်ကန်မှုလွဲမှားမှုများ ဖြစ်ပေါ်နိုင်ကြောင်း သတိပြုပါရန် မေတ္တာရပ်ခံပါသည်။ မူရင်းစာရွက်စက်၏ မိခင်ဘာသာဖြင့် ရေးသားထားသော အကြောင်းအရာကို အတည်ပြုရရှိသည့် အရင်းအမြစ်အဖြစ် ဖော်ထုတ် အပါအဝင် စဉ်းစားသင့်ပါသည်။ အရေးကြီးသည့် အချက်အလက်များအတွက် လူ့ဘာသာပြန်သူ တတ်မြောက်သူအား ပြုလုပ်ခြင်းကို တိုက်တွန်းပါသည်။ ဤဘာသာပြန်ချက် အသုံးပြုမှုကြောင့် ဖြစ်ပေါ်လာနိုင်သည့် နားလည်မှုမှားယွင်းခြင်းများအတွက် ကျွန်ုပ်တို့ တာဝန်မယူပါ။
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

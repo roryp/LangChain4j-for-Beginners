@@ -1,58 +1,59 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
-  "translation_date": "2025-12-31T03:12:54+00:00",
+  "original_hash": "6c816d130a1fa47570c11907e72d84ae",
+  "translation_date": "2026-01-06T00:26:59+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "ms"
 }
 -->
-# Module 05: Model Context Protocol (MCP)
+# Modul 05: Protokol Konteks Model (MCP)
 
-## Table of Contents
+## Jadual Kandungan
 
-- [What You'll Learn](../../../05-mcp)
-- [What is MCP?](../../../05-mcp)
-- [How MCP Works](../../../05-mcp)
-- [The Agentic Module](../../../05-mcp)
-- [Running the Examples](../../../05-mcp)
-  - [Prerequisites](../../../05-mcp)
-- [Quick Start](../../../05-mcp)
-  - [File Operations (Stdio)](../../../05-mcp)
-  - [Supervisor Agent](../../../05-mcp)
-    - [Understanding the Output](../../../05-mcp)
-    - [Explanation of Agentic Module Features](../../../05-mcp)
-- [Key Concepts](../../../05-mcp)
-- [Congratulations!](../../../05-mcp)
-  - [What's Next?](../../../05-mcp)
+- [Apa Yang Anda Akan Pelajari](../../../05-mcp)
+- [Apakah MCP?](../../../05-mcp)
+- [Bagaimana MCP Berfungsi](../../../05-mcp)
+- [Modul Agentik](../../../05-mcp)
+- [Menjalankan Contoh](../../../05-mcp)
+  - [Prasyarat](../../../05-mcp)
+- [Mula Cepat](../../../05-mcp)
+  - [Operasi Fail (Stdio)](../../../05-mcp)
+  - [Ejen Penyelia](../../../05-mcp)
+    - [Memahami Output](../../../05-mcp)
+    - [Strategi Respons](../../../05-mcp)
+    - [Penjelasan Ciri-ciri Modul Agentik](../../../05-mcp)
+- [Konsep Utama](../../../05-mcp)
+- [Tahniah!](../../../05-mcp)
+  - [Apa Seterusnya?](../../../05-mcp)
 
-## What You'll Learn
+## Apa Yang Anda Akan Pelajari
 
-Anda telah membina AI perbualan, menguasai prompt, mengikat jawapan pada dokumen, dan mencipta ejen dengan alat. Tetapi semua alat itu dibina khas untuk aplikasi anda. Bagaimana jika anda boleh memberi AI anda akses kepada ekosistem alat berstandard yang sesiapa sahaja boleh cipta dan kongsi? Dalam modul ini, anda akan belajar bagaimana melakukan itu dengan Model Context Protocol (MCP) dan modul agentic LangChain4j. Kami mula-mula mempamerkan pembaca fail MCP yang ringkas dan kemudian menunjukkan bagaimana ia mudah diintegrasikan ke dalam aliran kerja agentic lanjutan menggunakan corak Supervisor Agent.
+Anda telah membina AI perbualan, menguasai arahan, memantapkan respons dalam dokumen, dan mencipta ejen dengan alat. Tetapi semua alat itu dibina khusus untuk aplikasi anda. Bagaimana jika anda boleh memberikan AI anda akses kepada ekosistem alat piawai yang sesiapa sahaja boleh cipta dan kongsi? Dalam modul ini, anda akan belajar bagaimana melakukan itu dengan Protokol Konteks Model (MCP) dan modul agentik LangChain4j. Kami mula-mula mempamerkan pembaca fail MCP mudah dan kemudian menunjukkan bagaimana ia mudah diintegrasikan ke dalam aliran kerja agentik yang maju menggunakan corak Ejen Penyelia.
 
-## What is MCP?
+## Apakah MCP?
 
-Model Context Protocol (MCP) menyediakan tepat itu - satu cara piawai untuk aplikasi AI menemui dan menggunakan alat luaran. Daripada menulis integrasi tersuai untuk setiap sumber data atau perkhidmatan, anda bersambung ke pelayan MCP yang mendedahkan kebolehannya dalam format yang konsisten. Ejen AI anda kemudian boleh menemui dan menggunakan alat ini secara automatik.
+Protokol Konteks Model (MCP) menyediakan tepat itu — kaedah piawai untuk aplikasi AI mencari dan menggunakan alat luaran. Daripada menulis integrasi khusus bagi setiap sumber data atau perkhidmatan, anda boleh sambung ke pelayan MCP yang mendedahkan keupayaan mereka dalam format konsisten. Ejen AI anda kemudian boleh mencari dan menggunakan alat ini secara automatik.
 
 <img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.ms.png" alt="Perbandingan MCP" width="800"/>
 
-*Sebelum MCP: Integrasi titik-ke-titik yang kompleks. Selepas MCP: Satu protokol, kemungkinan tanpa had.*
+*Sebelum MCP: Integrasi titik-ke-titik yang rumit. Selepas MCP: Satu protokol, kemungkinan tanpa batas.*
 
-MCP menyelesaikan masalah asas dalam pembangunan AI: setiap integrasi adalah tersuai. Mahu mengakses GitHub? Kod tersuai. Mahu membaca fail? Kod tersuai. Mahu membuat pertanyaan ke pangkalan data? Kod tersuai. Dan tiada satu pun integrasi ini berfungsi dengan aplikasi AI lain.
+MCP menyelesaikan masalah asas dalam pembangunan AI: setiap integrasi adalah khusus. Mahu akses GitHub? Kod khusus. Mahu baca fail? Kod khusus. Mahu kueri pangkalan data? Kod khusus. Dan tiada satu pun integrasi ini berfungsi dengan aplikasi AI lain.
 
-MCP mempiawainya. Pelayan MCP mendedahkan alat dengan penerangan dan skema parameter yang jelas. Mana-mana klien MCP boleh bersambung, menemui alat yang tersedia, dan menggunakannya. Bina sekali, guna di mana-mana.
+MCP mempiawai perkara ini. Pelayan MCP mendedahkan alat dengan keterangan dan skema parameter yang jelas. Mana-mana klien MCP boleh sambung, mencari alat tersedia, dan menggunakannya. Bina sekali, guna di mana-mana.
 
 <img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.ms.png" alt="Seni Bina MCP" width="800"/>
 
-*Seni bina Model Context Protocol - penemuan dan pelaksanaan alat yang dinormalkan*
+*Seni bina Protokol Konteks Model – penemuan dan pelaksanaan alat piawai*
 
-## How MCP Works
+## Bagaimana MCP Berfungsi
 
-**Server-Client Architecture**
+**Seni Bina Pelayan-Klien**
 
-MCP menggunakan model klien-pelayan. Pelayan menyediakan alat - membaca fail, membuat pertanyaan pangkalan data, memanggil API. Klien (aplikasi AI anda) bersambung ke pelayan dan menggunakan alat mereka.
+MCP menggunakan model klien-pelayan. Pelayan menyediakan alat — membaca fail, mengkueri pangkalan data, memanggil API. Klien (aplikasi AI anda) menyambung ke pelayan dan menggunakan alat mereka.
 
-To use MCP with LangChain4j, add this Maven dependency:
+Untuk menggunakan MCP dengan LangChain4j, tambah kebergantungan Maven ini:
 
 ```xml
 <dependency>
@@ -62,21 +63,21 @@ To use MCP with LangChain4j, add this Maven dependency:
 </dependency>
 ```
 
-**Tool Discovery**
+**Penemuan Alat**
 
-Apabila klien anda bersambung ke pelayan MCP, ia bertanya "Alat apa yang anda ada?" Pelayan membalas dengan senarai alat yang tersedia, setiap satu dengan penerangan dan skema parameter. Ejen AI anda kemudian boleh memutuskan alat mana yang hendak digunakan berdasarkan permintaan pengguna.
+Apabila klien anda menyambung ke pelayan MCP, ia bertanya "Apakah alat yang anda ada?" Pelayan membalas dengan senarai alat yang tersedia, setiap satu dengan keterangan dan skema parameter. Ejen AI anda kemudian boleh memutuskan alat mana yang hendak digunakan berdasarkan permintaan pengguna.
 
-**Transport Mechanisms**
+**Mekanisme Pengangkutan**
 
-MCP menyokong mekanisme pengangkutan yang berbeza. Modul ini menunjukkan pengangkutan Stdio untuk proses setempat:
+MCP menyokong pelbagai mekanisme pengangkutan. Modul ini menunjukan pengangkutan Stdio untuk proses tempatan:
 
 <img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.ms.png" alt="Mekanisme Pengangkutan" width="800"/>
 
-*Mekanisme pengangkutan MCP: HTTP untuk pelayan jauh, Stdio untuk proses setempat*
+*Mekanisme pengangkutan MCP: HTTP untuk pelayan jauh, Stdio untuk proses tempatan*
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Untuk proses setempat. Aplikasi anda melancarkan pelayan sebagai subprocess dan berkomunikasi melalui input/output standard. Berguna untuk akses sistem fail atau alat baris arahan.
+Untuk proses tempatan. Aplikasi anda melahirkan pelayan sebagai subprocess dan berkomunikasi melalui input/output standard. Berguna untuk akses sistem fail atau alat baris perintah.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
@@ -89,18 +90,18 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .build();
 ```
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) and ask:
-> - "How does Stdio transport work and when should I use it vs HTTP?"
-> - "How does LangChain4j manage the lifecycle of spawned MCP server processes?"
-> - "What are the security implications of giving AI access to the file system?"
+> **🤖 Cuba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) dan tanya:
+> - "Bagaimana pengangkutan Stdio berfungsi dan bila saya patut gunakan ia vs HTTP?"
+> - "Bagaimana LangChain4j menguruskan kitaran hidup proses pelayan MCP yang dilahirkan?"
+> - "Apakah implikasi keselamatan memberikan AI akses kepada sistem fail?"
 
-## The Agentic Module
+## Modul Agentik
 
-While MCP provides standardized tools, LangChain4j's **agentic module** provides a declarative way to build agents that orchestrate those tools. The `@Agent` annotation and `AgenticServices` let you define agent behavior through interfaces rather than imperative code.
+Walaupun MCP menyediakan alat piawai, modul **agentik** LangChain4j memberikan cara deklaratif untuk membina ejen yang mengatur alat tersebut. Anotasi `@Agent` dan `AgenticServices` membolehkan anda menentukan tingkah laku ejen melalui antara muka daripada kod imperatif.
 
-In this module, you'll explore the **Supervisor Agent** pattern — an advanced agentic AI approach where a "supervisor" agent dynamically decides which sub-agents to invoke based on user requests. We'll combine both concepts by giving one of our sub-agents MCP-powered file access capabilities.
+Dalam modul ini, anda akan meneroka corak **Ejen Penyelia** — pendekatan AI agentik maju di mana ejen "penyelia" membuat keputusan dinamik ejen sub mana yang hendak dilaksanakan berdasarkan permintaan pengguna. Kami menggabungkan kedua-dua konsep dengan memberikan salah satu sub-ejen kami keupayaan akses fail berkuasa MCP.
 
-To use the agentic module, add this Maven dependency:
+Untuk menggunakan modul agentik, tambah kebergantungan Maven ini:
 
 ```xml
 <dependency>
@@ -110,219 +111,240 @@ To use the agentic module, add this Maven dependency:
 </dependency>
 ```
 
-> **⚠️ Experimental:** The `langchain4j-agentic` module is **experimental** and subject to change. The stable way to build AI assistants remains `langchain4j-core` with custom tools (Module 04).
+> **⚠️ Eksperimen:** Modul `langchain4j-agentic` adalah **eksperimen** dan tertakluk kepada perubahan. Cara stabil untuk membina pembantu AI masih `langchain4j-core` dengan alat tersuai (Modul 04).
 
-## Running the Examples
+## Menjalankan Contoh
 
-### Prerequisites
+### Prasyarat
 
 - Java 21+, Maven 3.9+
-- Node.js 16+ and npm (for MCP servers)
-- Environment variables configured in `.env` file (from the root directory):
-  - **For StdioTransportDemo:** `GITHUB_TOKEN` (GitHub Personal Access Token)
-  - **For SupervisorAgentDemo:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (same as Modules 01-04)
+- Node.js 16+ dan npm (untuk pelayan MCP)
+- Pembolehubah persekitaran disusun dalam fail `.env` (dari direktori akar):
+  - `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (sama seperti Modul 01-04)
 
-> **Nota:** Jika anda belum menyediakan pembolehubah persekitaran anda lagi, lihat [Module 00 - Quick Start](../00-quick-start/README.md) untuk arahan, atau salin `.env.example` ke `.env` dalam direktori akar dan isikan nilai anda.
+> **Nota:** Jika anda belum menyusun pembolehubah persekitaran anda, lihat [Modul 00 - Mula Cepat](../00-quick-start/README.md) untuk arahan, atau salin `.env.example` ke `.env` di direktori akar dan isi nilai anda.
 
-## Quick Start
+## Mula Cepat
 
-**Menggunakan VS Code:** Klik kanan pada mana-mana fail demo dalam Explorer dan pilih **"Run Java"**, atau gunakan konfigurasi pelancaran dari panel Run and Debug (pastikan anda telah menambah token anda ke fail `.env` terlebih dahulu).
+**Menggunakan VS Code:** Cukup klik kanan pada mana-mana fail demo dalam Penjelajah dan pilih **"Run Java"**, atau gunakan konfigurasi pelancaran dari panel Run and Debug (pastikan token anda telah ditambah dalam fail `.env` terlebih dahulu).
 
-**Menggunakan Maven:** Alternatifnya, anda boleh jalankan dari baris perintah dengan contoh di bawah.
+**Menggunakan Maven:** Sebagai alternatif, anda boleh jalankan dari baris perintah dengan contoh di bawah.
 
-### File Operations (Stdio)
+### Operasi Fail (Stdio)
 
-This demonstrates local subprocess-based tools.
+Ini menunjukkan alat subprocess tempatan.
 
-**✅ No prerequisites needed** - the MCP server is spawned automatically.
+**✅ Tiada prasyarat diperlukan** - pelayan MCP dilahirkan secara automatik.
 
-**Using VS Code:** Right-click on `StdioTransportDemo.java` and select **"Run Java"**.
+**Menggunakan Skrip Mula (Disyorkan):**
 
-**Using Maven:**
+Skrip mula memuatkan pembolehubah persekitaran secara automatik dari fail `.env` akar:
 
 **Bash:**
 ```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+chmod +x start-stdio.sh
+./start-stdio.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+.\start-stdio.ps1
 ```
 
-The application spawns a filesystem MCP server automatically and reads a local file. Notice how the subprocess management is handled for you.
+**Menggunakan VS Code:** Klik kanan pada `StdioTransportDemo.java` dan pilih **"Run Java"** (pastikan fail `.env` anda disediakan).
 
-**Expected output:**
+Aplikasi itu melahirkan pelayan MCP sistem fail secara automatik dan membaca fail tempatan. Perhatikan bagaimana pengurusan subprocess dilakukan untuk anda.
+
+**Output dijangka:**
 ```
 Assistant response: The file provides an overview of LangChain4j, an open-source Java library
 for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Supervisor Agent
+### Ejen Penyelia
+
+**Corak Ejen Penyelia** adalah bentuk AI agentik yang **fleksibel**. Penyelia menggunakan LLM untuk membuat keputusan secara autonomi ejen mana yang hendak dilaksanakan berdasarkan permintaan pengguna. Dalam contoh seterusnya, kami gabungkan akses fail berkuasa MCP dengan ejen LLM untuk mencipta aliran kerja baca fail → laporan yang diawasi.
+
+Dalam demo, `FileAgent` membaca fail menggunakan alat MCP sistem fail, dan `ReportAgent` menjana laporan berstruktur dengan ringkasan eksekutif (1 ayat), 3 poin utama, dan cadangan. Penyelia mengatur aliran ini secara automatik:
 
 <img src="../../../translated_images/agentic.cf84dcda226374e3.ms.png" alt="Modul Agentik" width="800"/>
 
+```
+┌─────────────┐      ┌──────────────┐
+│  FileAgent  │ ───▶ │ ReportAgent  │
+│ (MCP tools) │      │  (pure LLM)  │
+└─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+  'fileContent'         'report'
+```
 
-The **Supervisor Agent pattern** is a **flexible** form of agentic AI. Unlike deterministic workflows (sequential, loop, parallel), a Supervisor uses an LLM to autonomously decide which agents to invoke based on the user's request.
+Setiap ejen menyimpan outputnya dalam **Skop Agentik** (memori dikongsi), membolehkan ejen berikutnya mengakses hasil sebelumnya. Ini menunjukkan bagaimana alat MCP menyatu lancar ke dalam aliran kerja agentik — Penyelia tidak perlu tahu *bagaimana* fail dibaca, hanya bahawa `FileAgent` boleh melakukannya.
 
-**Combining Supervisor with MCP:** In this example, we give the `FileAgent` access to MCP file system tools via `toolProvider(mcpToolProvider)`. When a user asks to "read and analyze a file," the Supervisor analyzes the request and generates an execution plan. It then routes the request to `FileAgent`, which uses MCP's `read_file` tool to retrieve the content. The Supervisor passes that content to `AnalysisAgent` for interpretation, and optionally invokes `SummaryAgent` to condense the results.
+#### Menjalankan Demo
 
-This demonstrates how MCP tools integrate seamlessly into agentic workflows — the Supervisor doesn't need to know *how* files are read, only that `FileAgent` can do it. The Supervisor adapts dynamically to different types of requests and returns either the last agent's response or a summary of all operations.
-
-**Using the Start Scripts (Recommended):**
-
-The start scripts automatically load environment variables from the root `.env` file:
+Skrip mula memuatkan pembolehubah persekitaran secara automatik dari fail `.env` akar:
 
 **Bash:**
 ```bash
 cd 05-mcp
-chmod +x start.sh
-./start.sh
+chmod +x start-supervisor.sh
+./start-supervisor.sh
 ```
 
 **PowerShell:**
 ```powershell
 cd 05-mcp
-.\start.ps1
+.\start-supervisor.ps1
 ```
 
-**Using VS Code:** Right-click on `SupervisorAgentDemo.java` and select **"Run Java"** (ensure your `.env` file is configured).
+**Menggunakan VS Code:** Klik kanan pada `SupervisorAgentDemo.java` dan pilih **"Run Java"** (pastikan fail `.env` anda disediakan).
 
-**How the Supervisor Works:**
+#### Cara Penyelia Berfungsi
 
 ```java
-// Takrifkan beberapa ejen dengan keupayaan khusus
+// Langkah 1: FileAgent membaca fail menggunakan alat MCP
 FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
         .chatModel(model)
         .toolProvider(mcpToolProvider)  // Mempunyai alat MCP untuk operasi fail
         .build();
 
-AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+// Langkah 2: ReportAgent menjana laporan berstruktur
+ReportAgent reportAgent = AgenticServices.agentBuilder(ReportAgent.class)
         .chatModel(model)
         .build();
 
-SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
-        .chatModel(model)
-        .build();
-
-// Cipta Penyelia yang menyelaras ejen-ejen ini
+// Penyelia mengatur aliran kerja fail → laporan
 SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
-        .chatModel(model)  // Model "perancang"
-        .subAgents(fileAgent, analysisAgent, summaryAgent)
-        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .chatModel(model)
+        .subAgents(fileAgent, reportAgent)
+        .responseStrategy(SupervisorResponseStrategy.LAST)  // Pulangkan laporan akhir
         .build();
 
-// Penyelia secara autonomi menentukan ejen mana yang akan dipanggil
-// Cuma berikan permintaan dalam bahasa semula jadi - LLM merancang pelaksanaan
-String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+// Penyelia menentukan ejen mana yang dipanggil berdasarkan permintaan
+String response = supervisor.invoke("Read the file at /path/file.txt and generate a report");
 ```
 
-See [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) for the complete implementation.
+#### Strategi Respons
 
-> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) and ask:
-> - "How does the Supervisor decide which agents to invoke?"
-> - "What's the difference between Supervisor and Sequential workflow patterns?"
-> - "How can I customize the Supervisor's planning behavior?"
+Apabila anda mengkonfigurasi `SupervisorAgent`, anda tentukan bagaimana ia harus membentuk jawapan akhir kepada pengguna selepas sub-ejen selesai tugasan mereka. Strategi yang tersedia adalah:
 
-#### Understanding the Output
+| Strategi | Keterangan |
+|----------|------------|
+| **TERAKHIR** | Penyelia mengembalikan output sub-ejen atau alat terakhir yang dipanggil. Ini berguna apabila ejen terakhir dalam aliran kerja direka khas untuk menghasilkan jawapan lengkap dan akhir (contohnya, "Ejen Ringkasan" dalam saluran penyelidikan). |
+| **RINGKASAN** | Penyelia menggunakan Model Bahasa (LLM) dalaman untuk mensintesis ringkasan keseluruhan interaksi dan semua output sub-ejen, kemudian mengembalikan ringkasan itu sebagai respons akhir. Ini menyediakan jawapan bersatu yang jelas kepada pengguna. |
+| **BERSKOR** | Sistem menggunakan LLM dalaman untuk menilai baik respons TERAKHIR mahupun RINGKASAN interaksi berbanding permintaan asal pengguna, mengembalikan output yang menerima skor lebih tinggi. |
 
-When you run the demo, you'll see a structured walkthrough of how the Supervisor orchestrates multiple agents. Here's what each section means:
+Lihat [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) untuk pelaksanaan lengkap.
+
+> **🤖 Cuba dengan [GitHub Copilot](https://github.com/features/copilot) Chat:** Buka [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) dan tanya:
+> - "Bagaimana Penyelia buat keputusan ejen mana yang hendak dilaksanakan?"
+> - "Apakah perbezaan antara corak Penyelia dan aliran kerja Berurutan?"
+> - "Bagaimana saya boleh sesuaikan tingkah laku perancangan Penyelia?"
+
+#### Memahami Output
+
+Apabila anda jalankan demo, anda akan melihat langkah demi langkah terperinci tentang bagaimana Penyelia mengatur pelbagai ejen. Berikut maksud setiap bahagian:
 
 ```
 ======================================================================
-  SUPERVISOR AGENT DEMO
+  FILE → REPORT WORKFLOW DEMO
 ======================================================================
 
-This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
-The Supervisor uses an LLM to decide which agent to call based on the task.
+This demo shows a clear 2-step workflow: read a file, then generate a report.
+The Supervisor orchestrates the agents automatically based on the request.
 ```
 
-**The header** introduces the demo and explains the core concept: the Supervisor uses an LLM (not hardcoded rules) to decide which agents to call.
+**Tajuk utama** memperkenalkan konsep aliran kerja: saluran fokus dari pembacaan fail ke penjanaan laporan.
 
 ```
+--- WORKFLOW ---------------------------------------------------------
+  ┌─────────────┐      ┌──────────────┐
+  │  FileAgent  │ ───▶ │ ReportAgent  │
+  │ (MCP tools) │      │  (pure LLM)  │
+  └─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+   'fileContent'        'report'
+
 --- AVAILABLE AGENTS -------------------------------------------------
-  [FILE]     FileAgent     - Reads files using MCP filesystem tools
-  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
-  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+  [FILE]   FileAgent   - Reads files via MCP → stores in 'fileContent'
+  [REPORT] ReportAgent - Generates structured report → stores in 'report'
 ```
 
-**Available Agents** shows the three specialized agents the Supervisor can choose from. Each agent has a specific capability:
-- **FileAgent** can read files using MCP tools (external capability)
-- **AnalysisAgent** analyzes content (pure LLM capability)
-- **SummaryAgent** creates summaries (pure LLM capability)
+**Carta Aliran Kerja** menunjukkan aliran data antara ejen. Setiap ejen mempunyai peranan spesifik:
+- **FileAgent** membaca fail menggunakan alat MCP dan menyimpan kandungan mentah dalam `fileContent`
+- **ReportAgent** menggunakan kandungan itu dan menghasilkan laporan struktur dalam `report`
 
 ```
 --- USER REQUEST -----------------------------------------------------
-  "Read the file at .../file.txt and analyze what it's about"
+  "Read the file at .../file.txt and generate a report on its contents"
 ```
 
-**User Request** shows what was asked. The Supervisor must parse this and decide which agents to invoke.
+**Permintaan Pengguna** menunjukkan tugasan. Penyelia menganalisis ini dan memutuskan untuk memanggil FileAgent → ReportAgent.
 
 ```
 --- SUPERVISOR ORCHESTRATION -----------------------------------------
-  The Supervisor will now decide which agents to invoke and in what order...
+  The Supervisor decides which agents to invoke and passes data between them...
 
   +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
   |
   |   Input: .../file.txt
   |
-  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  |   Result: LangChain4j is an open-source, provider-agnostic Java framework for building LLM...
   +-- [OK] FileAgent (reading file via MCP) completed
 
-  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  +-- STEP 2: Supervisor chose -> ReportAgent (generating structured report)
   |
-  |   Input: LangChain4j is an open-source Java library...
+  |   Input: LangChain4j is an open-source, provider-agnostic Java framew...
   |
-  |   Result: Structure: The content is organized into clear paragraphs that int...
-  +-- [OK] AnalysisAgent (analyzing content) completed
+  |   Result: Executive Summary...
+  +-- [OK] ReportAgent (generating structured report) completed
 ```
 
-**Supervisor Orchestration** is where the magic happens. Watch how:
-1. The Supervisor **chose FileAgent first** because the request mentioned "read the file"
-2. FileAgent used MCP's `read_file` tool to retrieve the file contents
-3. The Supervisor then **chose AnalysisAgent** and passed the file contents to it
-4. AnalysisAgent analyzed the structure, tone, and themes
+**Pengurusan Penyelia** menunjukkan aliran 2 langkah dalam tindakan:
+1. **FileAgent** membaca fail melalui MCP dan menyimpan kandungan
+2. **ReportAgent** menerima kandungan dan menjana laporan struktur
 
-Notice the Supervisor made these decisions **autonomously** based on the user's request — no hardcoded workflow!
-
-**Final Response** is the Supervisor's synthesized answer, combining outputs from all agents it invoked. The example dumps the agentic scope showing the summary and analysis results stored by each agent.
+Penyelia membuat keputusan ini **secara autonomi** berdasarkan permintaan pengguna.
 
 ```
 --- FINAL RESPONSE ---------------------------------------------------
-I read the contents of the file and analyzed its structure, tone, and key themes.
-The file introduces LangChain4j as an open-source Java library for integrating
-large language models...
+Executive Summary
+...
 
---- AGENTIC SCOPE (Shared Memory) ------------------------------------
-  Agents store their results in a shared scope for other agents to use:
-  * summary: LangChain4j is an open-source Java library...
-  * analysis: Structure: The content is organized into clear paragraphs that in...
+Key Points
+...
+
+Recommendations
+...
+
+--- AGENTIC SCOPE (Data Flow) ----------------------------------------
+  Each agent stores its output for downstream agents to consume:
+  * fileContent: LangChain4j is an open-source, provider-agnostic Java framework...
+  * report: Executive Summary...
 ```
 
-### Explanation of Agentic Module Features
+#### Penjelasan Ciri-ciri Modul Agentik
 
-The example demonstrates several advanced features of the agentic module. Let's have a closer look at Agentic Scope and Agent Listeners.
+Contoh menunjukkan beberapa ciri maju modul agentik. Mari kita lihat lebih dekat Skop Agentik dan Pendengar Ejen.
 
-**Agentic Scope** shows the shared memory where agents stored their results using `@Agent(outputKey="...")`. This allows:
-- Later agents to access earlier agents' outputs
-- The Supervisor to synthesize a final response
-- You to inspect what each agent produced
+**Skop Agentik** menunjukkan memori dikongsi di mana ejen menyimpan hasil mereka menggunakan `@Agent(outputKey="...")`. Ini membolehkan:
+- Ejen berkemudian mengakses output ejen sebelumnya
+- Penyelia sintesis jawapan akhir
+- Anda menyemak apa yang setiap ejen hasilkan
 
 ```java
 ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
 AgenticScope scope = result.agenticScope();
-String story = scope.readState("story");
-List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+String fileContent = scope.readState("fileContent");  // Data fail mentah daripada FileAgent
+String report = scope.readState("report");            // Laporan berstruktur daripada ReportAgent
 ```
 
-**Agent Listeners** enable monitoring and debugging of agent execution. The step-by-step output you see in the demo comes from an AgentListener that hooks into each agent invocation:
-- **beforeAgentInvocation** - Called when the Supervisor selects an agent, letting you see which agent was chosen and why
-- **afterAgentInvocation** - Called when an agent completes, showing its result
-- **inheritedBySubagents** - When true, the listener monitors all agents in the hierarchy
+**Pendengar Ejen** membolehkan pemantauan dan debugging pelaksanaan ejen. Output langkah demi langkah yang anda lihat dalam demo datang dari AgentListener yang terhubung ke setiap panggilan ejen:
+- **beforeAgentInvocation** - Dipanggil apabila Penyelia memilih ejen, membolehkan anda lihat ejen mana yang dipilih dan sebabnya
+- **afterAgentInvocation** - Dipanggil apabila ejen selesai, menunjukkan hasilnya
+- **inheritedBySubagents** - Jika benar, pendengar memantau semua ejen dalam hierarki
 
 ```java
 AgentListener monitor = new AgentListener() {
@@ -346,44 +368,45 @@ AgentListener monitor = new AgentListener() {
 };
 ```
 
-Beyond the Supervisor pattern, the `langchain4j-agentic` module provides several powerful workflow patterns and features:
+Selain corak Penyelia, modul `langchain4j-agentic` menyediakan beberapa corak aliran kerja dan ciri kuat:
 
-| Pattern | Description | Use Case |
+| Corak | Keterangan | Kes Penggunaan |
 |---------|-------------|----------|
-| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
-| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
-| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
-| **Conditional** | Route based on conditions | Classify → route to specialist agent |
-| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
+| **Berurutan** | Laksanakan ejen secara teratur, output mengalir ke seterusnya | Saluran: penyelidikan → analisis → laporan |
+| **Selari** | Jalankan ejen serentak | Tugasan bebas: cuaca + berita + saham |
+| **Gelung** | Ulang sehingga syarat tercapai | Penilaian kualiti: perbaiki sehingga skor ≥ 0.8 |
+| **Bersyarat** | Arahkan berdasarkan syarat | Klasifikasi → arah ke ejen pakar |
+| **Manusia-dalam-Laluan** | Tambah titik semak manusia | Aliran kelulusan, semakan kandungan |
 
-## Key Concepts
+## Konsep Utama
 
-**MCP** is ideal when you want to leverage existing tool ecosystems, build tools that multiple applications can share, integrate third-party services with standard protocols, or swap tool implementations without changing code.
+Kini anda telah meneroka MCP dan modul agentik dalam tindakan, mari kita ringkaskan bila menggunakan setiap pendekatan.
 
-**The Agentic Module** works best when you want declarative agent definitions with `@Agent` annotations, need workflow orchestration (sequential, loop, parallel), prefer interface-based agent design over imperative code, or are combining multiple agents that share outputs via `outputKey`.
+**MCP** sesuai bila anda mahu memanfaatkan ekosistem alat sedia ada, membina alat yang boleh dikongsi oleh pelbagai aplikasi, mengintegrasi perkhidmatan pihak ketiga dengan protokol piawai, atau menukar implementasi alat tanpa mengubah kod.
 
-**The Supervisor Agent pattern** shines when the workflow isn't predictable in advance and you want the LLM to decide, when you have multiple specialized agents that need dynamic orchestration, when building conversational systems that route to different capabilities, or when you want the most flexible, adaptive agent behavior.
+**Modul Agentik** sesuai apabila anda mahukan definisi ejen secara deklaratif dengan anotasi `@Agent`, memerlukan pengurusan aliran kerja (berurutan, gelung, selari), lebih suka reka bentuk ejen berasaskan antara muka daripada kod imperatif, atau menggabungkan pelbagai ejen yang berkongsi output melalui `outputKey`.
 
-## Congratulations!
+**Corak Ejen Penyelia** menjadi pilihan apabila aliran kerja tidak dapat diramal di awal dan anda mahu LLM membuat keputusan, apabila anda mempunyai pelbagai ejen khusus yang memerlukan pengurusan dinamik, membina sistem perbualan yang mengarahkan ke pelbagai kebolehan, atau apabila anda mahukan tingkah laku ejen yang paling fleksibel dan adaptif.
+## Tahniah!
 
-You've completed the LangChain4j for Beginners course. You've learned:
+Anda telah menamatkan kursus LangChain4j untuk Pemula. Anda telah mempelajari:
 
-- How to build conversational AI with memory (Module 01)
-- Prompt engineering patterns for different tasks (Module 02)
-- Grounding responses in your documents with RAG (Module 03)
-- Creating basic AI agents (assistants) with custom tools (Module 04)
-- Mengintegrasikan alat berstandard dengan modul LangChain4j MCP dan Agentic (Modul 05)
+- Cara membina AI perbualan dengan ingatan (Modul 01)
+- Corak kejuruteraan arahan untuk tugasan berbeza (Modul 02)
+- Menyandarkan jawapan dalam dokumen anda dengan RAG (Modul 03)
+- Mewujudkan ejen AI asas (pembantu) dengan alat tersuai (Modul 04)
+- Mengintegrasikan alat standard dengan LangChain4j MCP dan modul Agentic (Modul 05)
 
-### Apa Seterusnya?
+### Apa Selepas Ini?
 
-Selepas menyelesaikan modul-modul, terokai [Panduan Ujian](../docs/TESTING.md) untuk melihat konsep pengujian LangChain4j dalam tindakan.
+Selepas menamatkan modul, terokai [Panduan Ujian](../docs/TESTING.md) untuk melihat konsep ujian LangChain4j dalam tindakan.
 
 **Sumber Rasmi:**
-- [Dokumentasi LangChain4j](https://docs.langchain4j.dev/) - Panduan menyeluruh dan rujukan API
-- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Kod sumber dan contoh
+- [Dokumentasi LangChain4j](https://docs.langchain4j.dev/) - Panduan komprehensif dan rujukan API
+- [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Kod sumber dan contohnya
 - [Tutorial LangChain4j](https://docs.langchain4j.dev/tutorials/) - Tutorial langkah demi langkah untuk pelbagai kes penggunaan
 
-Terima kasih kerana menyelesaikan kursus ini!
+Terima kasih kerana menamatkan kursus ini!
 
 ---
 
@@ -392,6 +415,6 @@ Terima kasih kerana menyelesaikan kursus ini!
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Penafian:
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI Co-op Translator (https://github.com/Azure/co-op-translator). Walaupun kami berusaha mencapai ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi ralat atau ketidaktepatan. Dokumen asal dalam bahasa asalnya hendaklah dianggap sebagai sumber yang muktamad. Untuk maklumat yang kritikal, disyorkan mendapatkan terjemahan profesional oleh penterjemah manusia. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+**Penafian**:  
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya hendaklah dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan profesional oleh manusia adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau tafsiran yang timbul daripada penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

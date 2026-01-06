@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "d61ab6c245562094cc3dddecf08b50d3",
-  "translation_date": "2025-12-31T02:57:16+00:00",
+  "original_hash": "6a3bd54fc243ce3dc79d18848d2b5413",
+  "translation_date": "2026-01-06T00:18:35+00:00",
   "source_file": "README.md",
   "language_code": "id"
 }
@@ -11,66 +11,76 @@ CO_OP_TRANSLATOR_METADATA:
 
 ### 🌐 Dukungan Multi-Bahasa
 
-#### Didukung melalui GitHub Action (Otomatis & Selalu Terbarui)
+#### Didukung melalui GitHub Action (Otomatis & Selalu Terbaru)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arab](../ar/README.md) | [Benggali](../bn/README.md) | [Bahasa Bulgaria](../bg/README.md) | [Bahasa Burma (Myanmar)](../my/README.md) | [Cina (Sederhana)](../zh/README.md) | [Cina (Tradisional, Hong Kong)](../hk/README.md) | [Cina (Tradisional, Macau)](../mo/README.md) | [Cina (Tradisional, Taiwan)](../tw/README.md) | [Kroasia](../hr/README.md) | [Ceko](../cs/README.md) | [Denmark](../da/README.md) | [Belanda](../nl/README.md) | [Estonia](../et/README.md) | [Finlandia](../fi/README.md) | [Prancis](../fr/README.md) | [Jerman](../de/README.md) | [Yunani](../el/README.md) | [Ibrani](../he/README.md) | [Hindi](../hi/README.md) | [Hungaria](../hu/README.md) | [Indonesia](./README.md) | [Italia](../it/README.md) | [Jepang](../ja/README.md) | [Kannada](../kn/README.md) | [Korea](../ko/README.md) | [Lituania](../lt/README.md) | [Melayu](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Pidgin Nigeria](../pcm/README.md) | [Norwegia](../no/README.md) | [Persia (Farsi)](../fa/README.md) | [Polandia](../pl/README.md) | [Portugis (Brasil)](../br/README.md) | [Portugis (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumania](../ro/README.md) | [Rusia](../ru/README.md) | [Serbia (Sirilik)](../sr/README.md) | [Slowakia](../sk/README.md) | [Slovenia](../sl/README.md) | [Spanyol](../es/README.md) | [Swahili](../sw/README.md) | [Swedia](../sv/README.md) | [Tagalog (Filipina)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turki](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnam](../vi/README.md)
-<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](./README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-# LangChain4j untuk Pemula
+> **Ingin Mengkloning Secara Lokal?**
 
-Sebuah kursus untuk membangun aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, dari obrolan dasar hingga agen AI.
-
-**Baru dengan LangChain4j?** Lihat [Glosarium](docs/GLOSSARY.md) untuk definisi istilah dan konsep kunci.
-
-## Table of Contents
-
-1. [Quick Start](00-quick-start/README.md) - Memulai dengan LangChain4j
-2. [Introduction](01-introduction/README.md) - Pelajari dasar-dasar LangChain4j
-3. [Prompt Engineering](02-prompt-engineering/README.md) - Kuasai desain prompt yang efektif
-4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Membangun sistem berbasis pengetahuan yang cerdas
-5. [Tools](04-tools/README.md) - Integrasikan alat eksternal dan asisten sederhana
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Bekerja dengan Model Context Protocol (MCP) dan modul Agentic
----
-
-##  Jalur Pembelajaran
-
-> **Quick Start**
-
-1. Fork this repository to your GitHub account
-2. Klik **Code** → **Codespaces** tab → **...** → **New with options...**
-3. Gunakan pengaturan bawaan – ini akan memilih Development container yang dibuat untuk kursus ini
-4. Klik **Create codespace**
-5. Tunggu 5-10 menit hingga lingkungan siap
-6. Langsung lompat ke [Quick Start](./00-quick-start/README.md) untuk memulai!
-
-> **Prefer to Clone Locally?**
->
-> This repository includes 50+ language translations which significantly increases the download size. To clone without translations, use sparse checkout:
+> Repositori ini mencakup lebih dari 50 terjemahan bahasa yang secara signifikan meningkatkan ukuran unduhan. Untuk mengkloning tanpa terjemahan, gunakan sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Ini memberi Anda semua yang Anda butuhkan untuk menyelesaikan kursus dengan waktu unduh yang jauh lebih cepat.
+> Ini memberi Anda semua yang Anda butuhkan untuk menyelesaikan kursus dengan unduhan yang jauh lebih cepat.
+<!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-Setelah menyelesaikan modul, jelajahi [Testing Guide](docs/TESTING.md) untuk melihat konsep pengujian LangChain4j dalam praktik.
+# LangChain4j untuk Pemula
 
-> **Note:** Pelatihan ini menggunakan GitHub Models dan Azure OpenAI. Modul [Quick Start](00-quick-start/README.md) dan [MCP](05-mcp/README.md) menggunakan GitHub Models (tidak memerlukan langganan Azure), sementara modul 1-4 menggunakan Azure OpenAI GPT-5.
+Sebuah kursus untuk membangun aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, mulai dari chat dasar hingga agen AI.
+
+**Baru mengenal LangChain4j?** Lihat [Glosarium](docs/GLOSSARY.md) untuk definisi istilah dan konsep utama.
+
+## Daftar Isi
+
+1. [Mulai Cepat](00-quick-start/README.md) - Mulailah dengan LangChain4j
+2. [Pengenalan](01-introduction/README.md) - Pelajari dasar-dasar LangChain4j
+3. [Rekayasa Prompt](02-prompt-engineering/README.md) - Kuasai desain prompt yang efektif
+4. [RAG (Generasi dengan Pengambilan Informasi)](03-rag/README.md) - Bangun sistem cerdas berbasis pengetahuan
+5. [Alat](04-tools/README.md) - Integrasikan alat eksternal dan asisten sederhana
+6. [MCP (Protokol Konteks Model)](05-mcp/README.md) - Bekerja dengan Protokol Konteks Model (MCP) dan modul Agentic
+---
+
+## Jalur Pembelajaran
+
+> **Mulai Cepat**
+
+1. Fork repositori ini ke akun GitHub Anda
+2. Klik **Code** → tab **Codespaces** → **...** → **Baru dengan opsi...**
+3. Gunakan pengaturan default – ini akan memilih container Pengembangan yang dibuat untuk kursus ini
+4. Klik **Buat codespace**
+5. Tunggu 5-10 menit hingga lingkungan siap digunakan
+6. Langsung menuju ke [Mulai Cepat](./00-quick-start/README.md) untuk memulai!
+
+> **Ingin Mengkloning Secara Lokal?**
+>
+> Repositori ini mencakup lebih dari 50 terjemahan bahasa yang secara signifikan meningkatkan ukuran unduhan. Untuk mengkloning tanpa terjemahan, gunakan sparse checkout:
+> ```bash
+> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
+> cd LangChain4j-for-Beginners
+> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
+> ```
+> Ini memberi Anda semua yang Anda butuhkan untuk menyelesaikan kursus dengan unduhan yang jauh lebih cepat.
+
+Setelah menyelesaikan modul, jelajahi [Panduan Pengujian](docs/TESTING.md) untuk melihat konsep pengujian LangChain4j dalam praktik.
+
+> **Catatan:** Pelatihan ini menggunakan GitHub Models dan Azure OpenAI. Modul [Mulai Cepat](00-quick-start/README.md) menggunakan GitHub Models (tidak memerlukan langganan Azure), sementara modul 1-5 menggunakan Azure OpenAI.
 
 
 ## Belajar dengan GitHub Copilot
 
-Untuk mulai menulis kode dengan cepat, buka proyek ini di GitHub Codespace atau IDE lokal Anda dengan devcontainer yang disediakan. Devcontainer yang digunakan dalam kursus ini telah dikonfigurasi sebelumnya dengan GitHub Copilot untuk pemrograman berpasangan AI.
+Untuk memulai pemrograman dengan cepat, buka proyek ini di GitHub Codespace atau IDE lokal Anda dengan devcontainer yang disediakan. Devcontainer yang digunakan dalam kursus ini sudah dikonfigurasi dengan GitHub Copilot untuk pemrograman pasangan AI.
 
-Setiap contoh kode menyertakan pertanyaan yang disarankan yang bisa Anda tanyakan ke GitHub Copilot untuk memperdalam pemahaman Anda. Cari petunjuk 💡/🤖 di:
+Setiap contoh kode mencakup pertanyaan yang disarankan yang dapat Anda tanyakan kepada GitHub Copilot untuk memperdalam pemahaman Anda. Cari petunjuk 💡/🤖 di:
 
-- **Java file headers** - Pertanyaan khusus untuk setiap contoh
-- **Module READMEs** - Petunjuk eksplorasi setelah contoh kode
+- **Header file Java** - Pertanyaan spesifik untuk setiap contoh
+- **README modul** - Petunjuk eksplorasi setelah contoh kode
 
-**Cara penggunaan:** Buka file kode apa saja dan tanyakan pertanyaan yang disarankan ke Copilot. Copilot memiliki konteks penuh dari basis kode dan dapat menjelaskan, memperluas, dan menyarankan alternatif.
+**Cara menggunakan:** Buka file kode mana pun dan tanyakan pertanyaan yang disarankan ke Copilot. Ia memiliki konteks penuh dari basis kode dan dapat menjelaskan, memperluas, serta menyarankan alternatif.
 
-Ingin belajar lebih lanjut? Lihat [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
+Ingin belajar lebih lanjut? Lihat [Copilot untuk Pemrograman Pasangan AI](https://aka.ms/GitHubCopilotAI).
 
 
 ## Sumber Daya Tambahan
@@ -105,7 +115,7 @@ Ingin belajar lebih lanjut? Lihat [Copilot for AI Paired Programming](https://ak
 [![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
 [![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Pengembangan XR untuk Pemula](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
@@ -117,9 +127,9 @@ Ingin belajar lebih lanjut? Lihat [Copilot for AI Paired Programming](https://ak
 
 ## Mendapatkan Bantuan
 
-Jika Anda mengalami kebuntuan atau memiliki pertanyaan tentang membangun aplikasi AI, bergabunglah:
+Jika Anda mengalami kesulitan atau memiliki pertanyaan tentang membangun aplikasi AI, bergabunglah:
 
-[![Discord Azure AI Foundry](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
+[![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
 Jika Anda memiliki masukan produk atau menemukan kesalahan saat membangun, kunjungi:
 
@@ -132,6 +142,6 @@ Lisensi MIT - Lihat file [LICENSE](../../LICENSE) untuk detail.
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Penafian**:
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berusaha mencapai ketepatan, harap diperhatikan bahwa terjemahan otomatis dapat mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang otoritatif. Untuk informasi yang bersifat kritis, disarankan menggunakan jasa penerjemah profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
+**Penafian**:  
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya mencapai akurasi, harap diketahui bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan profesional oleh manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau kesalahan tafsir yang timbul dari penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f538a51cfd13147d40d84e936a0f485c",
-  "translation_date": "2025-12-13T16:41:33+00:00",
+  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+  "translation_date": "2026-01-05T21:09:26+00:00",
   "source_file": "03-rag/README.md",
   "language_code": "en"
 }
@@ -63,7 +63,9 @@ This grounds the model's responses in your actual data instead of relying on its
 
 ## How It Works
 
-**Document Processing** - [DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+### Document Processing
+
+[DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
 
 When you upload a document, the system breaks it into chunks - smaller pieces that fit comfortably in the model's context window. These chunks overlap slightly so you don't lose context at the boundaries.
 
@@ -81,7 +83,9 @@ List<TextSegment> segments = splitter.split(document);
 > - "What's the optimal chunk size for different document types and why?"
 > - "How do I handle documents in multiple languages or with special formatting?"
 
-**Creating Embeddings** - [LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+### Creating Embeddings
+
+[LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
 
 Each chunk is converted into a numerical representation called an embedding - essentially a mathematical fingerprint that captures the meaning of the text. Similar text produces similar embeddings.
 
@@ -103,7 +107,9 @@ EmbeddingStore<TextSegment> embeddingStore =
 
 *Documents represented as vectors in embedding space - similar content clusters together*
 
-**Semantic Search** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Semantic Search
+
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
 
 When you ask a question, your question also becomes an embedding. The system compares your question's embedding against all the document chunks' embeddings. It finds the chunks with the most similar meanings - not just matching keywords, but actual semantic similarity.
 
@@ -124,7 +130,9 @@ for (EmbeddingMatch<TextSegment> match : matches) {
 > - "What similarity threshold should I use and how does it affect results?"
 > - "How do I handle cases where no relevant documents are found?"
 
-**Answer Generation** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Answer Generation
+
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
 
 The most relevant chunks are included in the prompt to the model. The model reads those specific chunks and answers your question based on that information. This prevents hallucination - the model can only answer from what's in front of it.
 
@@ -227,17 +235,17 @@ The application provides a web interface for document upload and questioning.
 
 *The RAG application interface - upload documents and ask questions*
 
-**Upload a Document**
+### Upload a Document
 
 Start by uploading a document - TXT files work best for testing. A `sample-document.txt` is provided in this directory that contains information about LangChain4j features, RAG implementation, and best practices - perfect for testing the system. 
 
 The system processes your document, breaks it into chunks, and creates embeddings for each chunk. This happens automatically when you upload.
 
-**Ask Questions**
+### Ask Questions
 
 Now ask specific questions about the document content. Try something factual that's clearly stated in the document. The system searches for relevant chunks, includes them in the prompt, and generates an answer.
 
-**Check Source References**
+### Check Source References
 
 Notice each answer includes source references with similarity scores. These scores (0 to 1) show how relevant each chunk was to your question. Higher scores mean better matches. This lets you verify the answer against the source material.
 
@@ -245,7 +253,7 @@ Notice each answer includes source references with similarity scores. These scor
 
 *Query results showing answer with source references and relevance scores*
 
-**Experiment with Questions**
+### Experiment with Questions
 
 Try different types of questions:
 - Specific facts: "What is the main topic?"
@@ -256,11 +264,11 @@ Watch how the relevance scores change based on how well your question matches do
 
 ## Key Concepts
 
-**Chunking Strategy**
+### Chunking Strategy
 
 Documents are split into 300-token chunks with 30 tokens of overlap. This balance ensures each chunk has enough context to be meaningful while staying small enough to include multiple chunks in a prompt.
 
-**Similarity Scores**
+### Similarity Scores
 
 Scores range from 0 to 1:
 - 0.7-1.0: Highly relevant, exact match
@@ -269,11 +277,11 @@ Scores range from 0 to 1:
 
 The system only retrieves chunks above the minimum threshold to ensure quality.
 
-**In-Memory Storage**
+### In-Memory Storage
 
 This module uses in-memory storage for simplicity. When you restart the application, uploaded documents are lost. Production systems use persistent vector databases like Qdrant or Azure AI Search.
 
-**Context Window Management**
+### Context Window Management
 
 Each model has a maximum context window. You can't include every chunk from a large document. The system retrieves the top N most relevant chunks (default 5) to stay within limits while providing enough context for accurate answers.
 
