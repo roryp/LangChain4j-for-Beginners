@@ -5,9 +5,11 @@
 - [Core Concepts](#core-concepts)
 - [LangChain4j Components](#langchain4j-components)
 - [AI/ML Concepts](#aiml-concepts)
+- [Guardrails](#guardrails---module-00)
 - [Prompt Engineering](#prompt-engineering---module-02)
 - [RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation---module-03)
 - [Agents and Tools](#agents-and-tools---module-04)
+- [Agentic Module](#agentic-module---module-05)
 - [Model Context Protocol (MCP)](#model-context-protocol-mcp---module-05)
 - [Azure Services](#azure-services---module-01)
 - [Testing and Development](#testing-and-development---testing-guide)
@@ -84,6 +86,22 @@ Quick reference for terms and concepts used throughout the course.
 
 **Zero-Shot Learning** - Performing tasks without examples. [Module 02](../02-prompt-engineering/README.md)
 
+## Guardrails - [Module 00](../00-quick-start/README.md)
+
+**Defense in Depth** - Multi-layer security approach combining application-level guardrails with provider safety filters.
+
+**Hard Block** - Provider throws HTTP 400 error for severe content violations.
+
+**InputGuardrail** - LangChain4j interface for validating user input before it reaches the LLM. Saves cost and latency by blocking harmful prompts early.
+
+**InputGuardrailResult** - Return type for guardrail validation: `success()` or `fatal("reason")`.
+
+**OutputGuardrail** - Interface for validating AI responses before returning to users.
+
+**Provider Safety Filters** - Built-in content filters from AI providers (e.g., GitHub Models) that catch violations at the API level.
+
+**Soft Refusal** - Model politely declines to answer without throwing an error.
+
 ## Prompt Engineering - [Module 02](../02-prompt-engineering/README.md)
 
 **Chain-of-Thought** - Step-by-step reasoning for better accuracy.
@@ -128,17 +146,53 @@ Quick reference for terms and concepts used throughout the course.
 
 **Tool Description** - Documentation of tool purpose and parameters.
 
+## Agentic Module - [Module 05](../05-mcp/README.md)
+
+**@Agent Annotation** - Marks interfaces as AI agents with declarative behavior definition.
+
+**Agent Listener** - Hook for monitoring agent execution via `beforeAgentInvocation()` and `afterAgentInvocation()`.
+
+**Agentic Scope** - Shared memory where agents store outputs using `outputKey` for downstream agents to consume.
+
+**AgenticServices** - Factory for creating agents using `agentBuilder()` and `supervisorBuilder()`.
+
+**Conditional Workflow** - Route based on conditions to different specialist agents.
+
+**Human-in-the-Loop** - Workflow pattern adding human checkpoints for approval or content review.
+
+**langchain4j-agentic** - Maven dependency for declarative agent building (experimental).
+
+**Loop Workflow** - Iterate agent execution until a condition is met (e.g., quality score ≥ 0.8).
+
+**outputKey** - Agent annotation parameter specifying where results are stored in Agentic Scope.
+
+**Parallel Workflow** - Run multiple agents simultaneously for independent tasks.
+
+**Response Strategy** - How supervisor formulates final answer: LAST, SUMMARY, or SCORED.
+
+**Sequential Workflow** - Execute agents in order where output flows to the next step.
+
+**Supervisor Agent Pattern** - Advanced agentic pattern where a supervisor LLM dynamically decides which sub-agents to invoke.
+
 ## Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)
 
-**MCP** - Standard for connecting AI apps to external tools.
+**langchain4j-mcp** - Maven dependency for MCP integration in LangChain4j.
 
-**MCP Client** - Application that connects to MCP servers.
+**MCP** - Model Context Protocol: standard for connecting AI apps to external tools. Build once, use everywhere.
 
-**MCP Server** - Service exposing tools via MCP.
+**MCP Client** - Application that connects to MCP servers to discover and use tools.
 
-**Stdio Transport** - Server as subprocess via stdin/stdout.
+**MCP Server** - Service exposing tools via MCP with clear descriptions and parameter schemas.
 
-**Tool Discovery** - Client queries server for available tools.
+**McpToolProvider** - LangChain4j component that wraps MCP tools for use in AI services and agents.
+
+**McpTransport** - Interface for MCP communication. Implementations include Stdio and HTTP.
+
+**Stdio Transport** - Local process transport via stdin/stdout. Useful for filesystem access or command-line tools.
+
+**StdioMcpTransport** - LangChain4j implementation spawning MCP server as subprocess.
+
+**Tool Discovery** - Client queries server for available tools with descriptions and schemas.
 
 ## Azure Services - [Module 01](../01-introduction/README.md)
 
