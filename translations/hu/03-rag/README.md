@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f538a51cfd13147d40d84e936a0f485c",
-  "translation_date": "2025-12-13T17:13:25+00:00",
+  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+  "translation_date": "2026-01-06T00:44:27+00:00",
   "source_file": "03-rag/README.md",
   "language_code": "hu"
 }
@@ -15,11 +15,11 @@ CO_OP_TRANSLATOR_METADATA:
 - [Előfeltételek](../../../03-rag)
 - [A RAG megértése](../../../03-rag)
 - [Hogyan működik](../../../03-rag)
-  - [Dokumentum feldolgozás](../../../03-rag)
+  - [Dokumentumfeldolgozás](../../../03-rag)
   - [Beágyazások létrehozása](../../../03-rag)
   - [Szemantikus keresés](../../../03-rag)
   - [Válaszgenerálás](../../../03-rag)
-- [Az alkalmazás futtatása](../../../03-rag)
+- [Az alkalmazás indítása](../../../03-rag)
 - [Az alkalmazás használata](../../../03-rag)
   - [Dokumentum feltöltése](../../../03-rag)
   - [Kérdések feltevése](../../../03-rag)
@@ -28,26 +28,26 @@ CO_OP_TRANSLATOR_METADATA:
 - [Kulcsfogalmak](../../../03-rag)
   - [Darabolási stratégia](../../../03-rag)
   - [Hasonlósági pontszámok](../../../03-rag)
-  - [Memóriában tárolás](../../../03-rag)
-  - [Kontextus ablak kezelése](../../../03-rag)
-- [Mikor fontos a RAG](../../../03-rag)
+  - [Memóriabeli tárolás](../../../03-rag)
+  - [Context ablak kezelése](../../../03-rag)
+- [Mikor számít a RAG](../../../03-rag)
 - [Következő lépések](../../../03-rag)
 
 ## Mit fogsz megtanulni
 
-Az előző modulokban megtanultad, hogyan folytass beszélgetéseket az MI-vel, és hogyan strukturáld hatékonyan a promptjaidat. De van egy alapvető korlát: a nyelvi modellek csak azt tudják, amit a tanítás során megtanultak. Nem tudnak válaszolni a céged szabályzataival, projekt dokumentációjával vagy bármilyen olyan információval kapcsolatos kérdésekre, amire nem képezték őket.
+Az előző modulokban megtanultad, hogyan folytass párbeszédet AI-val és hogyan strukturáld hatékonyan a promptjaidat. De van egy alapvető korlát: a nyelvi modellek csak azt tudják, amit a tanítás során megtanultak. Nem tudnak válaszolni az adott cég politikájával, projekt dokumentációjával vagy bármilyen olyan információval kapcsolatos kérdésre, amin nem tanultak.
 
-A RAG (Retrieval-Augmented Generation) megoldja ezt a problémát. Ahelyett, hogy megpróbálnád megtanítani a modellnek az információidat (ami drága és nem praktikus), képessé teszed arra, hogy átkutassa a dokumentumaidat. Amikor valaki kérdést tesz fel, a rendszer megtalálja a releváns információkat, és beilleszti azokat a promptba. A modell ezután a lekért kontextus alapján válaszol.
+A RAG (Retrieval-Augmented Generation) oldja meg ezt a problémát. Ahelyett, hogy megpróbálnád megtanítani a modellnek az információidat (ami költséges és nem praktikus), lehetőséget adsz neki, hogy keresgéljen a dokumentumaid között. Amikor valaki kérdez, a rendszer megtalálja a releváns információt és beilleszti azt a promptba. A modell így az előhívott kontextus alapján válaszol.
 
-Gondolj a RAG-ra úgy, mint egy hivatkozási könyvtár biztosítására a modell számára. Amikor kérdezel, a rendszer:
+Gondolj a RAG-ra úgy, mint egy hivatkozási könyvtár létrehozására a modell számára. Amikor kérdezel, a rendszer:
 
-1. **Felhasználói kérdés** - Felteszel egy kérdést
-2. **Beágyazás** - A kérdésedet vektorrá alakítja
-3. **Vektoros keresés** - Megkeresi a hasonló dokumentumdarabokat
-4. **Kontextus összeállítása** - Hozzáadja a releváns darabokat a prompthoz
-5. **Válasz** - Az LLM a kontextus alapján generál választ
+1. **Felhasználói kérdés** – felteszel egy kérdést  
+2. **Beágyazás** – a kérdés vektorrá alakul  
+3. **Vektor keresés** – hasonló dokumentumdarabokat keres  
+4. **Kontextus összeállítás** – releváns darabokat ad hozzá a prompthoz  
+5. **Válaszadás** – az LLM a kontextus alapján választ generál  
 
-Ez a modell válaszait a tényleges adataidra alapozza, nem csak a tanítási tudására vagy kitalált válaszokra.
+Ez a modell válaszait a valódi adataidra alapozza, nem a tanult tudására vagy kitalált válaszokra.
 
 <img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.hu.png" alt="RAG Architecture" width="800"/>
 
@@ -55,16 +55,19 @@ Ez a modell válaszait a tényleges adataidra alapozza, nem csak a tanítási tu
 
 ## Előfeltételek
 
-- Az 01-es modul befejezve (Azure OpenAI erőforrások telepítve)
-- `.env` fájl a gyökérkönyvtárban Azure hitelesítő adatokkal (az 01-es modulban az `azd up` hozta létre)
+- Befejezett 01-es modul (Azure OpenAI erőforrások telepítve)  
+- `.env` fájl a gyökérkönyvtárban az Azure hitelesítő adatokkal (a `azd up` parancs létrehozta az 01-es modulban)
 
-> **Megjegyzés:** Ha még nem fejezted be az 01-es modult, először kövesd ott a telepítési utasításokat.
+> **Megjegyzés:** Ha még nem fejezted be az 01-es modult, először az ottani telepítési útmutatót kövesd.
+
 
 ## Hogyan működik
 
-**Dokumentum feldolgozás** - [DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+### Dokumentumfeldolgozás
 
-Amikor feltöltesz egy dokumentumot, a rendszer kisebb darabokra bontja – olyan részekre, amelyek kényelmesen beleférnek a modell kontextusablakába. Ezek a darabok kissé átfedik egymást, hogy a határoknál ne veszíts el kontextust.
+[DocumentService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java)
+
+Amikor feltöltesz egy dokumentumot, a rendszer darabokra tördel – kisebb egységekre, amelyek kényelmesen beleférnek a modell kontextusablakába. Ezek a darabok kismértékben átfedik egymást, hogy a határoknál ne veszítsd el a kontextust.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("sample-document.txt");
@@ -75,14 +78,16 @@ DocumentSplitter splitter = DocumentSplitters
 List<TextSegment> segments = splitter.split(document);
 ```
 
-> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg a [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) fájlt, és kérdezd meg:
-> - "Hogyan darabolja a LangChain4j a dokumentumokat darabokra, és miért fontos az átfedés?"
-> - "Mi az optimális darabméret különböző dokumentumtípusokhoz, és miért?"
-> - "Hogyan kezelem a többnyelvű vagy speciális formázású dokumentumokat?"
+> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg a [`DocumentService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/DocumentService.java) fájlt és kérdezd meg:  
+> - "Hogyan darabolja a LangChain4j a dokumentumokat és miért fontos az átfedés?"  
+> - "Mi az optimális darabméret különböző dokumentumtípusokhoz és miért?"  
+> - "Hogyan kezeljem a többnyelvű vagy speciális formázású dokumentumokat?"
 
-**Beágyazások létrehozása** - [LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+### Beágyazások létrehozása
 
-Minden darabot egy numerikus reprezentációvá alakítanak, amit beágyazásnak hívunk – lényegében egy matematikai ujjlenyomat, amely megragadja a szöveg jelentését. Hasonló szövegek hasonló beágyazásokat eredményeznek.
+[LangChainRagConfig.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/config/LangChainRagConfig.java)
+
+Minden darabot egy numerikus reprezentációvá alakít át a rendszer, amit beágyazásnak hívunk – gyakorlatilag egy matematikai ujjlenyomat, ami megragadja a szöveg jelentését. Hasonló szöveg hasonló beágyazásokat eredményez.
 
 ```java
 @Bean
@@ -100,11 +105,13 @@ EmbeddingStore<TextSegment> embeddingStore =
 
 <img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.hu.png" alt="Vector Embeddings Space" width="800"/>
 
-*Dokumentumok vektorokként ábrázolva a beágyazási térben – hasonló tartalmak csoportosulnak*
+*Dokumentumok vetítése vektorokként a beágyazási térben – hasonló tartalom csoportosul*
 
-**Szemantikus keresés** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Szemantikus keresés
 
-Amikor kérdést teszel fel, a kérdésed is beágyazássá válik. A rendszer összehasonlítja a kérdésed beágyazását az összes dokumentumdarab beágyazásával. Megkeresi a leginkább hasonló jelentésű darabokat – nem csak a kulcsszavak egyezését, hanem a tényleges szemantikus hasonlóságot.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+
+Amikor kérdezel, a kérdésed is beágyazássá alakul. A rendszer összehasonlítja a kérdésed beágyazását a dokumentumdarabok beágyazásaival. Megtalálja a tartalmilag leginkább hasonló darabokat – nem csak kulcsszó-egyezés szerint, hanem valódi szemantikai hasonlóság alapján.
 
 ```java
 Embedding queryEmbedding = embeddingModel.embed(question).content();
@@ -118,39 +125,41 @@ for (EmbeddingMatch<TextSegment> match : matches) {
 }
 ```
 
-> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg a [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) fájlt, és kérdezd meg:
-> - "Hogyan működik a hasonlóság keresés beágyazásokkal, és mi határozza meg a pontszámot?"
-> - "Milyen hasonlósági küszöböt használjak, és ez hogyan befolyásolja az eredményeket?"
-> - "Hogyan kezelem az eseteket, amikor nem található releváns dokumentum?"
+> **🤖 Próbáld ki a [GitHub Copilot](https://github.com/features/copilot) Chattel:** Nyisd meg a [`RagService.java`](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java) fájlt és kérdezd meg:  
+> - "Hogyan működik a hasonlóság keresés beágyazásokkal és mi határozza meg a pontszámot?"  
+> - "Milyen hasonlósági küszöböt használjak és ez hogyan befolyásolja az eredményeket?"  
+> - "Hogyan kezeljem az eseteket, amikor nem talál releváns dokumentumot?"
 
-**Válaszgenerálás** - [RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
+### Válaszgenerálás
 
-A legrelevánsabb darabokat beillesztik a modell promptjába. A modell elolvassa ezeket a konkrét darabokat, és ezek alapján válaszol a kérdésedre. Ez megakadályozza a kitalálást – a modell csak az előtte lévő információból tud válaszolni.
+[RagService.java](../../../03-rag/src/main/java/com/example/langchain4j/rag/service/RagService.java)
 
-## Az alkalmazás futtatása
+A leginkább releváns darabokat belefoglalja a promptba a modell. A modell elolvassa ezeket, és az alapján válaszol. Ez megakadályozza a „hallucinációt” – a modell csak abból tud válaszolni, ami a rendelkezésére áll.
+
+## Az alkalmazás indítása
 
 **Telepítés ellenőrzése:**
 
-Győződj meg róla, hogy a `.env` fájl létezik a gyökérkönyvtárban Azure hitelesítő adatokkal (az 01-es modul során létrehozva):
+Győződj meg róla, hogy a `.env` fájl megvan a gyökérkönyvtárban, az Azure hitelesítő adatokkal (az 01-es modul alatt jött létre):
 ```bash
 cat ../.env  # Meg kell jeleníteni az AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT értékeket
 ```
 
-**Az alkalmazás indítása:**
+**Indítsd el az alkalmazást:**
 
-> **Megjegyzés:** Ha már elindítottad az összes alkalmazást az 01-es modulból a `./start-all.sh` segítségével, ez a modul már fut a 8081-es porton. Átugorhatod az alábbi indítási parancsokat, és közvetlenül megnyithatod a http://localhost:8081 címet.
+> **Megjegyzés:** Ha már az összes alkalmazást elindítottad a `./start-all.sh` segítségével az 01-es modulból, ez a modul már fut a 8081-es porton. A lentiek helyett közvetlenül a http://localhost:8081 oldalra léphetsz.
 
-**1. lehetőség: Spring Boot Dashboard használata (ajánlott VS Code felhasználóknak)**
+**1. lehetőség: Spring Boot Dashboard használata (VS Code felhasználóknak ajánlott)**
 
-A fejlesztői konténer tartalmazza a Spring Boot Dashboard kiterjesztést, amely vizuális felületet biztosít az összes Spring Boot alkalmazás kezeléséhez. A VS Code bal oldali tevékenységsávjában találod (keresd a Spring Boot ikont).
+A fejlesztői konténer tartalmazza a Spring Boot Dashboard kiegészítőt, amely vizuális felületet biztosít az összes Spring Boot alkalmazás kezeléséhez. A VS Code bal oldali Activity Bar részén (a Spring Boot ikonon) találod.
 
-A Spring Boot Dashboard segítségével:
-- Megtekintheted az összes elérhető Spring Boot alkalmazást a munkaterületen
-- Egy kattintással indíthatod/leállíthatod az alkalmazásokat
-- Valós időben nézheted az alkalmazás naplóit
-- Figyelheted az alkalmazás állapotát
+A Spring Boot Dashboard-on keresztül:  
+- Meglátod az összes elérhető Spring Boot alkalmazást a munkaterületen  
+- Egy kattintással indíthatod/leállíthatod őket  
+- Valós időben nézheted az alkalmazás logjait  
+- Monitorozhatod az alkalmazás állapotát  
 
-Egyszerűen kattints a "rag" melletti lejátszás gombra a modul indításához, vagy indítsd el az összes modult egyszerre.
+Egyszerűen kattints a play gombra a "rag" modul mellett, vagy indíts el egyszerre minden modult.
 
 <img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.hu.png" alt="Spring Boot Dashboard" width="400"/>
 
@@ -170,7 +179,7 @@ cd ..  # A gyökérkönyvtárból
 .\start-all.ps1
 ```
 
-Vagy indítsd el csak ezt a modult:
+Vagy csak ezt a modult indítsd el:
 
 **Bash:**
 ```bash
@@ -184,115 +193,116 @@ cd 03-rag
 .\start.ps1
 ```
 
-Mindkét szkript automatikusan betölti a környezeti változókat a gyökér `.env` fájlból, és ha szükséges, lefordítja a JAR fájlokat.
+Mindkét szkript automatikusan betölti a környezeti változókat a gyökér `.env` fájlból és ha a JAR fájlok nem léteznek, le is fordítja őket.
 
-> **Megjegyzés:** Ha inkább manuálisan szeretnéd lefordítani az összes modult indítás előtt:
->
-> **Bash:**
+> **Megjegyzés:** Ha inkább manuálisan szeretnéd lefordítani az összes modult indítás előtt:  
+>  
+> **Bash:**  
 > ```bash
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
->
-> **PowerShell:**
+  
+> **PowerShell:**  
 > ```powershell
 > cd ..  # Go to root directory
 > mvn clean package -DskipTests
 > ```
-
-Nyisd meg a http://localhost:8081 címet a böngésződben.
+  
+Nyisd meg böngészőben a http://localhost:8081 címet.
 
 **Leállításhoz:**
 
-**Bash:**
+**Bash:**  
 ```bash
 ./stop.sh  # Csak ez a modul
 # Vagy
 cd .. && ./stop-all.sh  # Minden modul
 ```
-
-**PowerShell:**
+  
+**PowerShell:**  
 ```powershell
 .\stop.ps1  # Csak ez a modul
 # Vagy
 cd ..; .\stop-all.ps1  # Minden modul
 ```
 
+
 ## Az alkalmazás használata
 
-Az alkalmazás webes felületet biztosít dokumentum feltöltéshez és kérdések feltevéséhez.
+Az alkalmazás webes felületet biztosít dokumentum feltöltéshez és kérdezéshez.
 
 <a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.hu.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*A RAG alkalmazás felülete – dokumentumok feltöltése és kérdések feltevése*
+*A RAG alkalmazás felülete – tölts fel dokumentumokat és tegyél fel kérdéseket*
 
-**Dokumentum feltöltése**
+### Dokumentum feltöltése
 
-Kezdd egy dokumentum feltöltésével – teszteléshez a TXT fájlok a legjobbak. Ebben a könyvtárban található egy `sample-document.txt`, amely információkat tartalmaz a LangChain4j funkcióiról, a RAG megvalósításról és a legjobb gyakorlatokról – tökéletes a rendszer teszteléséhez.
+Kezdésként tölts fel egy dokumentumot – a TXT fájlok jól működnek teszteléshez. A jelen könyvtárban egy `sample-document.txt` található, amely LangChain4j funkciókat, a RAG megvalósítást és bevált gyakorlatokat tartalmaz – ideális a rendszer kipróbálásához.
 
-A rendszer feldolgozza a dokumentumot, darabokra bontja, és minden darabhoz beágyazást készít. Ez automatikusan történik a feltöltéskor.
+A rendszer feldolgozza a dokumentumot, darabokra tördel és minden darabhoz létrehozza a beágyazásokat. Ez automatikusan megtörténik feltöltéskor.
 
-**Kérdések feltevése**
+### Kérdések feltevése
 
-Most tegyél fel konkrét kérdéseket a dokumentum tartalmáról. Próbálj meg valami tényalapút, ami egyértelműen szerepel a dokumentumban. A rendszer megkeresi a releváns darabokat, beilleszti őket a promptba, és választ generál.
+Ezután tegyél fel specifikus kérdéseket a dokumentum tartalmáról. Próbálj meg tényeken alapuló, egyértelműen a dokumentumban megadott kérdéseket. A rendszer megkeresi a releváns darabokat, belefoglalja a promptba és választ generál.
 
-**Forrás hivatkozások ellenőrzése**
+### Forrás hivatkozások ellenőrzése
 
-Figyeld meg, hogy minden válasz tartalmaz forrás hivatkozásokat hasonlósági pontszámokkal. Ezek a pontszámok (0-tól 1-ig) megmutatják, mennyire volt releváns az adott darab a kérdésedhez. A magasabb pontszám jobb egyezést jelent. Ez lehetővé teszi, hogy ellenőrizd a választ az eredeti anyag alapján.
+Minden válasz tartalmazza a forrás hivatkozásokat hasonlósági pontszámokkal együtt. Ezek a pontszámok (0 és 1 között) azt mutatják, mennyire releváns volt az adott darab a kérdésedhez. A magasabb pontszám jobb egyezést jelent. Így ellenőrizheted a választ az eredeti forrásanyaggal.
 
 <a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.hu.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Kérdezési eredmények, válasz forrás hivatkozásokkal és relevancia pontszámokkal*
+*Kérdezési eredmények válasszal, forrás hivatkozásokkal és relevancia pontszámokkal*
 
-**Kísérletezz kérdésekkel**
+### Kísérletezés kérdésekkel
 
-Próbálj ki különböző típusú kérdéseket:
-- Konkrét tények: "Mi a fő téma?"
-- Összehasonlítások: "Mi a különbség X és Y között?"
-- Összefoglalók: "Foglald össze a legfontosabb pontokat Z-ről"
+Próbálj ki különböző típusú kérdéseket:  
+- Konkrét tények: „Mi a fő téma?”  
+- Összehasonlítás: „Mi a különbség X és Y között?”  
+- Összefoglalók: „Foglald össze a Z kulcspontjait”
 
-Figyeld, hogyan változnak a relevancia pontszámok attól függően, mennyire illeszkedik a kérdésed a dokumentum tartalmához.
+Figyeld meg, hogyan változnak a relevancia pontszámok annak függvényében, hogy mennyire jól illeszkedik a kérdésed a dokumentumtartalomhoz.
 
 ## Kulcsfogalmak
 
-**Darabolási stratégia**
+### Darabolási stratégia
 
-A dokumentumokat 300 tokenes darabokra bontjuk, 30 token átfedéssel. Ez az egyensúly biztosítja, hogy minden darab elég kontextust tartalmazzon, hogy értelmes legyen, miközben elég kicsi marad ahhoz, hogy több darab is beleférjen egy promptba.
+A dokumentumokat 300 tokenes darabokra osztjuk, 30 tokenes átfedéssel. Ez az arány biztosítja, hogy minden darab elég kontextust tartalmazzon, ugyanakkor elég kicsi maradjon ahhoz, hogy több darabot lehessen a promptba foglalni.
 
-**Hasonlósági pontszámok**
+### Hasonlósági pontszámok
 
-A pontszámok 0 és 1 között mozognak:
-- 0,7-1,0: Nagyon releváns, pontos egyezés
-- 0,5-0,7: Releváns, jó kontextus
-- 0,5 alatt: Kiszűrve, túl eltérő
+A pontszámok 0 és 1 között mozognak:  
+- 0,7-1,0: Nagyon releváns, pontos egyezés  
+- 0,5-0,7: Releváns, jó kontextus  
+- 0,5 alatt: Kiszelektált, túl eltérő  
 
-A rendszer csak a minimum küszöböt meghaladó darabokat veszi figyelembe a minőség biztosítása érdekében.
+A rendszer csak az adott minimum küszöbnél magasabb pontszámú darabokat hozza vissza a minőség érdekében.
 
-**Memóriában tárolás**
+### Memóriabeli tárolás
 
-Ez a modul egyszerűség kedvéért memóriában tárolja az adatokat. Az alkalmazás újraindításakor a feltöltött dokumentumok elvesznek. Éles rendszerek tartós vektor adatbázisokat használnak, mint például a Qdrant vagy az Azure AI Search.
+Ez a modul egyszerűség kedvéért memóriabeli tárolást használ. Az alkalmazás újraindításakor a feltöltött dokumentumok elvesznek. Éles rendszerek tartós vektoralapú adatbázisokat használnak, mint például Qdrant vagy Azure AI Search.
 
-**Kontextus ablak kezelése**
+### Context ablak kezelése
 
-Minden modellnek van egy maximális kontextus ablaka. Nem lehet minden darabot belefoglalni egy nagy dokumentumból. A rendszer a legrelevánsabb N darabot (alapértelmezett 5) választja ki, hogy a korlátokon belül maradjon, miközben elegendő kontextust biztosít a pontos válaszokhoz.
+Minden modellnek van maximális kontextusablak mérete. Nem tudod minden darabot belefoglalni egy nagy dokumentumból. A rendszer a legrelevánsabb N darabot (alapértelmezett: 5) választja ki, hogy a korlátok között maradva elegendő kontextust adjon a pontos válaszokhoz.
 
-## Mikor fontos a RAG
+## Mikor számít a RAG
 
-**Használd a RAG-ot, ha:**
-- Saját dokumentumokkal kapcsolatos kérdésekre válaszolsz
-- Az információ gyakran változik (szabályzatok, árak, specifikációk)
-- Pontosságot igényel a forrás megjelölése
-- A tartalom túl nagy ahhoz, hogy egy promptba beleférjen
+**Használd a RAG-ot, amikor:**  
+- Saját dokumentumokról kérdeznek  
+- Információk gyakran változnak (szabályzatok, árak, specifikációk)  
+- Pontosságot igényel a forrásmegjelölés  
+- A tartalom túl nagy egyetlen promptba  
 - Ellenőrizhető, megalapozott válaszokra van szükség
 
-**Ne használd a RAG-ot, ha:**
-- Általános tudást igénylő kérdések vannak, amit a modell már ismer
-- Valós idejű adatokra van szükség (a RAG feltöltött dokumentumokon működik)
-- A tartalom elég kicsi ahhoz, hogy közvetlenül a promptba kerüljön
+**Ne használd a RAG-ot, amikor:**  
+- Általános tudásra van szükség, amit a modell már ismer  
+- Valós idejű adat kell (a RAG feltöltött dokumentumokon működik)  
+- A tartalom elég kicsi, hogy közvetlenül a promptban legyen
 
 ## Következő lépések
 
-**Következő modul:** [04-tools - AI ügynökök eszközökkel](../04-tools/README.md)
+**Következő modul:** [04-tools - AI ágens eszközökkel](../04-tools/README.md)
 
 ---
 
@@ -301,6 +311,6 @@ Minden modellnek van egy maximális kontextus ablaka. Nem lehet minden darabot b
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Jogi nyilatkozat**:
-Ezt a dokumentumot az AI fordító szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén szakmai, emberi fordítást javaslunk. Nem vállalunk felelősséget a fordítás használatából eredő félreértésekért vagy téves értelmezésekért.
+**Felmondás**:
+Ezt a dokumentumot az AI fordítószolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével fordítottuk le. Bár a pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Kritikus információk esetén szakmai, emberi fordítást javasolunk. Nem vállalunk felelősséget az ebből a fordításból eredő félreértésekért vagy félreértelmezésekért.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

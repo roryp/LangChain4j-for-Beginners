@@ -1,78 +1,79 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "13ec450c12cdd1a863baa2b778f27cd7",
-  "translation_date": "2025-12-31T04:19:14+00:00",
+  "original_hash": "844788938b26242f3cc54ce0d0951bea",
+  "translation_date": "2026-01-06T00:53:12+00:00",
   "source_file": "04-tools/README.md",
   "language_code": "cs"
 }
 -->
-# Module 04: AI agenti s nástroji
+# Modul 04: AI agenti s nástroji
 
-## Table of Contents
+## Obsah
 
 - [Co se naučíte](../../../04-tools)
-- [Požadavky](../../../04-tools)
+- [Předpoklady](../../../04-tools)
 - [Pochopení AI agentů s nástroji](../../../04-tools)
-- [Jak volání nástrojů funguje](../../../04-tools)
+- [Jak funguje volání nástrojů](../../../04-tools)
   - [Definice nástrojů](../../../04-tools)
   - [Rozhodování](../../../04-tools)
-  - [Vykonání](../../../04-tools)
-  - [Generování odpovědí](../../../04-tools)
+  - [Provedení](../../../04-tools)
+  - [Generování odpovědi](../../../04-tools)
 - [Řetězení nástrojů](../../../04-tools)
-- [Spusťte aplikaci](../../../04-tools)
-- [Používání aplikace](../../../04-tools)
+- [Spuštění aplikace](../../../04-tools)
+- [Použití aplikace](../../../04-tools)
   - [Vyzkoušejte jednoduché použití nástroje](../../../04-tools)
   - [Otestujte řetězení nástrojů](../../../04-tools)
   - [Sledujte tok konverzace](../../../04-tools)
-  - [Pozorujte uvažování](../../../04-tools)
-  - [Experimentujte s různými dotazy](../../../04-tools)
-- [Klíčové pojmy](../../../04-tools)
-  - [Vzor ReAct (Reasoning and Acting)](../../../04-tools)
-  - [Popisy nástrojů jsou důležité](../../../04-tools)
+  - [Experimentujte s různými požadavky](../../../04-tools)
+- [Klíčové koncepty](../../../04-tools)
+  - [Vzorec ReAct (učení a jednání)](../../../04-tools)
+  - [Význam popisů nástrojů](../../../04-tools)
   - [Správa relací](../../../04-tools)
-  - [Ošetření chyb](../../../04-tools)
+  - [Zpracování chyb](../../../04-tools)
 - [Dostupné nástroje](../../../04-tools)
-- [Kdy použít agenty založené na nástrojích](../../../04-tools)
+- [Kdy používat agenty založené na nástrojích](../../../04-tools)
 - [Další kroky](../../../04-tools)
 
-## What You'll Learn
+## Co se naučíte
 
-Doposud jste se naučili, jak vést konverzace s AI, efektivně strukturovat prompt a zakotvit odpovědi ve vašich dokumentech. Nicméně stále existuje základní omezení: jazykové modely mohou pouze generovat text. Nemohou zkontrolovat počasí, provádět výpočty, dotazovat databáze nebo interagovat s externími systémy.
+Zatím jste se naučili, jak vést konverzace s AI, efektivně strukturovat výzvy a zakládat odpovědi na vašich dokumentech. Přesto existuje zásadní omezení: jazykové modely umí pouze generovat text. Nemohou kontrolovat počasí, provádět výpočty, dotazovat databáze ani komunikovat s externími systémy.
 
-Nástroje to mění. Když modelu poskytnete funkce, které může volat, proměníte jej z generátoru textu na agenta, který může vykonávat akce. Model rozhodne, kdy potřebuje nástroj, který nástroj použít a jaké parametry předat. Váš kód funkci vykoná a vrátí výsledek. Model začlení tento výsledek do své odpovědi.
+Nástroje toto mění. Tím, že modelu umožníte volat funkce, přeměníte jej z generátoru textu na agenta, který může podnikat akce. Model rozhoduje, kdy nástroj potřebuje, který nástroj použije a jaké parametry předá. Váš kód provede funkci a vrátí výsledek. Model tento výsledek zahrne do své odpovědi.
 
-## Prerequisites
+## Předpoklady
 
-- Dokončen Modul 01 (Azure OpenAI prostředky nasazeny)
-- Soubor `.env` v kořenovém adresáři s Azure přihlašovacími údaji (vytvořený pomocí `azd up` v Modulu 01)
+- Dokončený Modul 01 (nasazení Azure OpenAI zdrojů)
+- `.env` soubor v kořenovém adresáři s přístupy do Azure (vytvořený příkazem `azd up` v Modulu 01)
 
-> **Poznámka:** Pokud jste Modulu 01 nedokončili, nejprve postupujte podle tamních pokynů pro nasazení.
+> **Poznámka:** Pokud jste neabsolvovali Modul 01, nejprve postupujte podle nasazovacích instrukcí tam.
 
 ## Pochopení AI agentů s nástroji
 
-> **📝 Poznámka:** Termín "agenti" v tomto modulu odkazuje na AI asistenty rozšířené o schopnosti volat nástroje. To se liší od vzorů **Agentic AI** (autonomní agenti s plánováním, pamětí a vícekrokovým uvažováním), které probereme v [Module 05: MCP](../05-mcp/README.md).
+> **📝 Poznámka:** Termín „agenti“ v tomto modulu označuje AI asistenty rozšířené o schopnost volání nástrojů. Liší se to od vzorců **Agentic AI** (autonomních agentů s plánováním, pamětí a vícestupňovým uvažováním), které probereme v [Modulu 05: MCP](../05-mcp/README.md).
 
-AI agent s nástroji následuje vzorec uvažování a jednání (ReAct):
+AI agent s nástroji se řídí vzorcem uvažování a jednání (ReAct):
 
-1. Uživatel položí otázku
-2. Agent uvažuje o tom, co potřebuje vědět
+1. Uživatelská otázka
+2. Agent přemýšlí, co potřebuje zjistit
 3. Agent rozhodne, zda potřebuje nástroj k odpovědi
-4. Pokud ano, agent zavolá vhodný nástroj s správnými parametry
-5. Nástroj vykoná a vrátí data
-6. Agent zahrne výsledek a poskytne konečnou odpověď
+4. Pokud ano, agent zavolá odpovídající nástroj s patřičnými parametry
+5. Nástroj provede volání a vrátí data
+6. Agent zařadí výsledek a poskytne finální odpověď
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.cs.png" alt="Vzor ReAct" width="800"/>
+<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.cs.png" alt="ReAct Pattern" width="800"/>
 
-*Vzor ReAct - jak si AI agenti střídají uvažování a jednání při řešení problémů*
+*Vzor ReAct - jak AI agenti střídají uvažování a jednání k řešení problémů*
 
-To probíhá automaticky. Definujete nástroje a jejich popisy. Model se stará o rozhodování, kdy a jak je použít.
+Tento proces probíhá automaticky. Vy definujete nástroje a jejich popisy, model se postará o rozhodování, kdy a jak je použít.
 
-## Jak volání nástrojů funguje
+## Jak funguje volání nástrojů
 
-**Definice nástrojů** - [WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
+### Definice nástrojů
 
-Definujete funkce s jasnými popisy a specifikacemi parametrů. Model vidí tyto popisy ve svém systémovém promptu a rozumí, co který nástroj dělá.
+[WeatherTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) | [TemperatureTool.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/TemperatureTool.java)
+
+Definujete funkce s jasnými popisy a specifikací parametrů. Model tyto popisy vidí ve svém systémovém promptu a chápe, co který nástroj dělá.
 
 ```java
 @Component
@@ -90,85 +91,87 @@ public interface Assistant {
     String chat(@MemoryId String sessionId, @UserMessage String message);
 }
 
-// Asistent je Spring Bootem automaticky propojen s:
-// - ChatModel bean
-// - Všechny metody označené @Tool z tříd @Component
-// - ChatMemoryProvider pro správu relací
+// Asistent je automaticky propojen pomocí Spring Boot s:
+// - Bean ChatModel
+// - Všechny metody @Tool z tříd označených @Component
+// - ChatMemoryProvider pro správu relace
 ```
 
-> **🤖 Vyzkoušejte s [GitHub Copilot](https://github.com/features/copilot) Chatem:** Otevřete [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) a zeptejte se:
-> - "Jak bych integroval skutečné API pro počasí jako OpenWeatherMap místo mock dat?"
-> - "Co dělá dobrý popis nástroje, který pomůže AI jej správně použít?"
-> - "Jak řeším chyby API a limity rychlosti v implementacích nástrojů?"
+> **🤖 Vyzkoušejte s [GitHub Copilot](https://github.com/features/copilot) Chat:** Otevřete [`WeatherTool.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/tools/WeatherTool.java) a zeptejte se:
+> - „Jak bych integroval reálné API počasí jako OpenWeatherMap místo simulovaných dat?“
+> - „Co dělá dobrý popis nástroje, který pomáhá AI používat jej správně?“
+> - „Jak řešit chyby API a omezení rychlosti ve voláních nástrojů?“
 
-**Rozhodování**
+### Rozhodování
 
-Když uživatel položí otázku "Jaké je počasí v Seattlu?", model rozpozná, že potřebuje nástroj pro počasí. Generuje volání funkce s parametrem location nastaveným na "Seattle".
+Když uživatel položí otázku „Jaké je počasí v Seattlu?“, model rozpozná, že potřebuje nástroj počasí. Vygeneruje volání funkce s parametrem lokace nastaveným na „Seattle“.
 
-**Vykonání** - [AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
+### Provedení
 
-Spring Boot automaticky injektuje deklarativní rozhraní `@AiService` se všemi registrovanými nástroji a LangChain4j vykonává volání nástrojů automaticky.
+[AgentService.java](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java)
 
-> **🤖 Vyzkoušejte s [GitHub Copilot](https://github.com/features/copilot) Chatem:** Otevřete [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) a zeptejte se:
-> - "Jak funguje vzor ReAct a proč je efektivní pro AI agenty?"
-> - "Jak se agent rozhoduje, který nástroj použít a v jakém pořadí?"
-> - "Co se stane, když selže vykonání nástroje - jak robustně řešit chyby?"
+Spring Boot automaticky propojí deklarativní rozhraní `@AiService` se všemi registrovanými nástroji a LangChain4j automaticky provede volání nástrojů.
 
-**Generování odpovědí**
+> **🤖 Vyzkoušejte s [GitHub Copilot](https://github.com/features/copilot) Chat:** Otevřete [`AgentService.java`](../../../04-tools/src/main/java/com/example/langchain4j/agents/service/AgentService.java) a zeptejte se:
+> - „Jak funguje vzorec ReAct a proč je pro AI agenty efektivní?“
+> - „Jak agent rozhoduje, který nástroj použít a v jakém pořadí?“
+> - „Co se stane, když zavolání nástroje selže – jak robustně řešit chyby?“
 
-Model obdrží data o počasí a naformátuje je do přirozeného jazyka pro uživatele.
+### Generování odpovědi
+
+Model obdrží data o počasí a formátuje je do přirozené odpovědi pro uživatele.
 
 ### Proč používat deklarativní AI služby?
 
-Tento modul používá integraci LangChain4j se Spring Bootem s deklarativními rozhraními `@AiService`:
+Tento modul využívá integraci LangChain4j s Spring Boot, která podporuje deklarativní rozhraní `@AiService`:
 
-- **Spring Boot automatické injektování** - ChatModel a nástroje jsou automaticky vloženy
-- **Vzor `@MemoryId`** - Automatická správa paměti založená na relacích
-- **Jedna instance** - Asistent vytvořený jednou a znovu použitý pro lepší výkon
-- **Typově bezpečné vykonání** - Java metody jsou volány přímo s převodem typů
-- **Orchestrace více kroků** - Automaticky zpracovává řetězení nástrojů
-- **Žádný zbytečný kód** - Bez manuálních volání AiServices.builder() nebo HashMap paměti
+- **Automatické propojení Spring Bootem** - ChatModel a nástroje jsou automaticky injektovány
+- **Vzorec @MemoryId** - Automatická správa paměti na základě relace
+- **Jediná instance** - Asistent je vytvořen jednou a znovu použit pro lepší výkon
+- **Typově bezpečné volání** - Java metody jsou volány přímo s převodem typů
+- **Vícekolové řízení** - Automaticky se řeší řetězení nástrojů
+- **Žádný zbytečný kód** - Žádné manuální volání AiServices.builder() nebo správa paměťových HashMap
 
 Alternativní přístupy (manuální `AiServices.builder()`) vyžadují více kódu a postrádají výhody integrace se Spring Bootem.
 
 ## Řetězení nástrojů
 
-**Řetězení nástrojů** - AI může volat více nástrojů za sebou. Zeptejte se "Jaké je počasí v Seattlu a mám si vzít deštník?" a sledujte, jak řetězí `getCurrentWeather` s uvažováním o oblečení proti dešti.
+**Řetězení nástrojů** - AI může volat více nástrojů po sobě. Zeptejte se „Jaké je počasí v Seattlu a mám si vzít deštník?“ a sledujte, jak spojí `getCurrentWeather` s úvahami o dešti.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.cs.png" alt="Řetězení nástrojů" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.cs.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Sekvenční volání nástrojů - výstup jednoho nástroje slouží jako vstup pro další rozhodnutí*
+*Sekvenční volání nástrojů - výstup jednoho nástroje se používá pro další rozhodnutí*
 
-**Elegantní selhání** - Zeptejte se na počasí ve městě, které není v mock datech. Nástroj vrátí chybovou zprávu a AI vysvětlí, že nemůže pomoci. Nástroje selhávají bezpečně.
+**Jemné selhání** - Zkuste zjistit počasí ve městě, které není v simulovaných datech. Nástroj vrátí chybovou zprávu a AI vysvětlí, že nemůže pomoci. Nástroje selhávají bezpečně.
 
-To proběhne v jednom dialogovém kroku. Agent autonomně orchestruje více volání nástrojů.
+To probíhá v rámci jednoho kola konverzace. Agent autonomně koordinuje vícenásobná volání nástrojů.
 
-## Spusťte aplikaci
+## Spuštění aplikace
 
-**Ověření nasazení:**
+**Ověřte nasazení:**
 
-Ujistěte se, že soubor `.env` existuje v kořenovém adresáři s Azure přihlašovacími údaji (vytvořeno během Modulu 01):
+Ujistěte se, že `.env` soubor v kořenovém adresáři s Azure přihlašovacími údaji (vytvořený během Modulu 01) je přítomen:
 ```bash
 cat ../.env  # Mělo by zobrazit AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 ```
 
-**Spusťte aplikaci:**
+**Spuštění aplikace:**
 
-> **Poznámka:** Pokud jste již spustili všechny aplikace pomocí `./start-all.sh` z Modulu 01, tento modul již běží na portu 8084. Můžete přeskočit níže uvedené příkazy a přejít přímo na http://localhost:8084.
+> **Poznámka:** Pokud jste již spustili všechny aplikace pomocí `./start-all.sh` z Modulu 01, tento modul již běží na portu 8084. Můžete přeskočit níže uvedené příkazy a přejít rovnou na http://localhost:8084.
 
-**Možnost 1: Použití řídicího panelu Spring Boot (doporučeno pro uživatele VS Code)**
+**Možnost 1: Použití Spring Boot Dashboard (doporučeno pro uživatele VS Code)**
 
-Dev kontejner obsahuje rozšíření Spring Boot Dashboard, které poskytuje vizuální rozhraní pro správu všech Spring Boot aplikací. Najdete jej v postranním panelu na levé straně VS Code (hledejte ikonu Spring Boot).
+Vývojářský kontejner obsahuje rozšíření Spring Boot Dashboard, které nabízí vizuální rozhraní pro správu všech Spring Boot aplikací. Najdete jej v Activity Bar na levé straně VS Code (ikona Spring Boot).
 
-Z řídicího panelu Spring Boot můžete:
-- Vidět všechny dostupné Spring Boot aplikace v workspace
-- Spouštět/zastavovat aplikace jedním kliknutím
-- Zobrazovat logy aplikací v reálném čase
+Ve Spring Boot Dashboard můžete:
+- Vidět všechny dostupné Spring Boot aplikace v pracovním prostoru
+- Jedním kliknutím spustit/zastavit aplikace
+- Prohlížet logy aplikací v reálném čase
 - Monitorovat stav aplikací
 
-Jednoduše klikněte na tlačítko přehrát vedle "tools" pro spuštění tohoto modulu, nebo spusťte všechny moduly najednou.
+Jednoduše klikněte na tlačítko přehrávání vedle „tools“, abyste spustili tento modul, nebo spusťte všechny moduly najednou.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.cs.png" alt="Řídicí panel Spring Boot" width="400"/>
+<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.cs.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Možnost 2: Použití shell skriptů**
 
@@ -176,17 +179,17 @@ Spusťte všechny webové aplikace (moduly 01-04):
 
 **Bash:**
 ```bash
-cd ..  # Z kořenového adresáře
+cd ..  # Ze kořenového adresáře
 ./start-all.sh
 ```
 
 **PowerShell:**
 ```powershell
-cd ..  # Z kořenového adresáře
+cd ..  # Ze kořenového adresáře
 .\start-all.ps1
 ```
 
-Nebo spusťte pouze tento modul:
+Nebo spusťte jen tento modul:
 
 **Bash:**
 ```bash
@@ -200,9 +203,9 @@ cd 04-tools
 .\start.ps1
 ```
 
-Oba skripty automaticky načtou proměnné prostředí ze souboru `.env` v kořenovém adresáři a sestaví JARy, pokud neexistují.
+Oba skripty automaticky načítají proměnné prostředí z kořenového `.env` souboru a postaví JAR soubory, pokud neexistují.
 
-> **Poznámka:** Pokud dáváte přednost ručnímu buildu všech modulů před spuštěním:
+> **Poznámka:** Chcete-li sestavit všechny moduly ručně před spuštěním:
 >
 > **Bash:**
 > ```bash
@@ -234,98 +237,98 @@ cd .. && ./stop-all.sh  # Všechny moduly
 cd ..; .\stop-all.ps1  # Všechny moduly
 ```
 
-## Používání aplikace
+## Použití aplikace
 
-Aplikace poskytuje webové rozhraní, kde můžete interagovat s AI agentem, který má přístup k nástrojům pro počasí a převod teplot.
+Aplikace poskytuje webové rozhraní, kde můžete komunikovat s AI agentem, který má přístup k nástrojům počasí a převodu teplot.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.cs.png" alt="Rozhraní nástrojů AI agenta" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.cs.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Rozhraní AI Agent Tools - rychlé příklady a chatovací rozhraní pro interakci s nástroji*
+*Rozhraní nástrojů AI agenta – rychlé příklady a chatovací rozhraní pro interakci s nástroji*
 
-**Vyzkoušejte jednoduché použití nástroje**
+### Vyzkoušejte jednoduché použití nástroje
 
-Začněte přímočarým dotazem: "Převést 100 stupňů Fahrenheita na Celsia". Agent rozpozná, že potřebuje nástroj pro převod teploty, zavolá jej se správnými parametry a vrátí výsledek. Všimněte si, jak přirozené to působí - neurčili jste, který nástroj použít ani jak jej volat.
+Začněte jednoduchým požadavkem: „Převeď 100 stupňů Fahrenheita na Celsia“. Agent rozpozná potřebu nástroje pro převod teplot, zavolá jej s správnými parametry a vrátí výsledek. Všimněte si, jak přirozené to působí – neurčili jste žádný konkrétní nástroj ani způsob volání.
 
-**Otestujte řetězení nástrojů**
+### Otestujte řetězení nástrojů
 
-Zkuste něco složitějšího: "Jaké je počasí v Seattlu a převeďte to na Fahrenheit?" Sledujte, jak agent pracuje v několika krocích. Nejprve získá počasí (vrací se v Celsiích), rozpozná potřebu převést na Fahrenheit, zavolá nástroj pro převod a kombinuje oba výsledky do jedné odpovědi.
+Teď zkuste něco složitějšího: „Jaké je počasí v Seattlu a převed ho na Fahrenheity?“ Sledujte, jak agent postupuje krok za krokem. Nejprve získá počasí (v Celsiích), pak rozpozná potřebu převodu na Fahrenheity, zavolá konverzní nástroj a oba výsledky zkombinuje do jedné odpovědi.
 
-**Sledujte tok konverzace**
+### Sledujte tok konverzace
 
-Chatovací rozhraní uchovává historii konverzace, což umožňuje vícekrokové interakce. Můžete vidět všechny předchozí dotazy a odpovědi, takže je snadné sledovat kontext a pochopit, jak agent buduje kontext přes více výměn.
+Chatovací rozhraní udržuje historii konverzace, umožňuje tak vícekolové interakce. Můžete vidět všechny předchozí dotazy a odpovědi, což usnadňuje sledování kontextu a pochopení, jak agent buduje kontext přes více výměn.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.cs.png" alt="Konverzace s více voláními nástrojů" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.cs.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
-*Vícekroková konverzace ukazující jednoduché převody, dotazy na počasí a řetězení nástrojů*
+*Vícekroková konverzace ukazující jednoduché převody, dotazy počasí a řetězení nástrojů*
 
-**Experimentujte s různými dotazy**
+### Experimentujte s různými požadavky
 
-Vyzkoušejte různé kombinace:
-- Dotazy na počasí: "Jaké je počasí v Tokiu?"
-- Převody teplot: "Kolik je 25°C v Kelvinech?"
-- Kombinované dotazy: "Zkontroluj počasí v Paříži a řekni mi, jestli je nad 20°C"
+Zkoušejte různé kombinace:
+- Dotazy na počasí: „Jaké je počasí v Tokiu?“
+- Převody teplot: „Kolik je 25 °C v Kelvinech?“
+- Kombinované dotazy: „Zkontroluj počasí v Paříži a řekni mi, zda je nad 20 °C“
 
-Všimněte si, jak agent interpretuje přirozený jazyk a mapuje ho na vhodná volání nástrojů.
+Všimněte si, jak agent interpretuje přirozený jazyk a mapuje jej na vhodná volání nástrojů.
 
-## Klíčové pojmy
+## Klíčové koncepty
 
-**Vzor ReAct (Reasoning and Acting)**
+### Vzorec ReAct (učení a jednání)
 
-Agent střídá uvažování (rozhodování, co dělat) a jednání (používání nástrojů). Tento vzor umožňuje autonomní řešení problémů místo pouhého odpovídání na instrukce.
+Agent střídá fáze uvažování (rozhodování, co udělat) a jednání (použití nástrojů). Tento vzorec umožňuje autonomní řešení problémů místo pouhého reagování na instrukce.
 
-**Popisy nástrojů jsou důležité**
+### Význam popisů nástrojů
 
-Kvalita vašich popisů nástrojů přímo ovlivňuje, jak dobře je agent použije. Jasné, konkrétní popisy pomáhají modelu pochopit, kdy a jak zavolat každý nástroj.
+Kvalita popisů vašich nástrojů přímo ovlivňuje, jak dobře je agent používá. Jasné a konkrétní popisy pomáhají modelu pochopit, kdy a jak volat jednotlivé nástroje.
 
-**Správa relací**
+### Správa relací
 
-Anotace `@MemoryId` umožňuje automatickou správu paměti založenou na relacích. Každé ID relace získá vlastní instanci `ChatMemory` spravovanou beanem `ChatMemoryProvider`, čímž odpadá potřeba ručního sledování paměti.
+Anotace `@MemoryId` umožňuje automatickou správu paměti na základě relace. Každé ID relace dostává vlastní instanci `ChatMemory`, kterou spravuje bean `ChatMemoryProvider`, takže není potřeba ručně sledovat paměť.
 
-**Ošetření chyb**
+### Zpracování chyb
 
-Nástroje mohou selhat - API mohou vypršet, parametry mohou být neplatné, externí služby mohou padnout. Produkční agenti potřebují ošetření chyb, aby model mohl vysvětlit problémy nebo zkusit alternativy.
+Nástroje mohou selhat – API nemusí odpovídat včas, parametry mohou být neplatné, externí služby mohou být nedostupné. Produkční agenti musí mít zpracování chyb, aby model mohl vysvětlit problémy nebo zkusit alternativy.
 
 ## Dostupné nástroje
 
-**Nástroje pro počasí** (mock data pro demonstraci):
-- Získat aktuální počasí pro lokaci
-- Získat vícedenní předpověď
+**Nástroje počasí** (simulovaná data pro ukázku):
+- Získání aktuálního počasí pro lokaci
+- Získání předpovědi na několik dní
 
-**Nástroje pro převod teploty**:
-- Celsia na Fahrenheit
-- Fahrenheit na Celsia
-- Celsia na Kelvin
-- Kelvin na Celsia
-- Fahrenheit na Kelvin
-- Kelvin na Fahrenheit
+**Nástroje pro převod teplot:**
+- Celsia na Fahrenheita
+- Fahrenheita na Celsia
+- Celsia na Kelviny
+- Kelviny na Celsia
+- Fahrenheita na Kelviny
+- Kelviny na Fahrenheita
 
-To jsou jednoduché příklady, ale vzor lze rozšířit na jakoukoli funkci: dotazy do databází, volání API, výpočty, operace se soubory nebo systémové příkazy.
+Jsou to jednoduché příklady, ale vzorec lze rozšířit na libovolné funkce: dotazy do databáze, volání API, výpočty, práci se soubory nebo systémové příkazy.
 
-## Kdy použít agenty založené na nástrojích
+## Kdy používat agenty založené na nástrojích
 
-**Použijte nástroje, když:**
-- Odpověď vyžaduje aktuální data (počasí, ceny akcií, inventář)
-- Potřebujete provádět výpočty přesahující jednoduchou matematiku
+**Používejte nástroje, když:**
+- Odpověď vyžaduje aktuální data (počasí, ceny akcií, skladové zásoby)
+- Potřebujete provádět výpočty složitější než běžná matematika
 - Přistupujete k databázím nebo API
-- Provádíte akce (odesílání e-mailů, vytváření ticketů, aktualizace záznamů)
+- Podnikáte akce (odesílání e-mailů, vytváření tiketů, aktualizace záznamů)
 - Kombinujete více zdrojů dat
 
 **Nepoužívejte nástroje, když:**
-- Otázky lze zodpovědět z obecných znalostí
+- Otázky lze zodpovědět ze všeobecných znalostí
 - Odpověď je čistě konverzační
-- Latence nástroje by zkušenost příliš zpomalila
+- Latence nástroje by způsobila příliš pomalou odezvu
 
 ## Další kroky
 
-**Další modul:** [05-mcp - Protokol modelového kontextu (MCP)](../05-mcp/README.md)
+**Další modul:** [05-mcp - Model Context Protocol (MCP)](../05-mcp/README.md)
 
 ---
 
-**Navigace:** [← Předchozí: Modul 03 - RAG](../03-rag/README.md) | [Zpět na hlavní](../README.md) | [Další: Modul 05 - MCP →](../05-mcp/README.md)
+**Navigace:** [← Předchozí: Modul 03 - RAG](../03-rag/README.md) | [Zpět na hlavní stránku](../README.md) | [Další: Modul 05 - MCP →](../05-mcp/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Zřeknutí se odpovědnosti:
-Tento dokument byl přeložen pomocí AI překladatelské služby Co-op Translator (https://github.com/Azure/co-op-translator). Ačkoli usilujeme o co největší přesnost, vezměte prosím na vědomí, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho původním jazyce by měl být považován za závazný zdroj. Pro zásadní informace doporučujeme využít profesionální lidský překlad. Nezodpovídáme za jakákoli nedorozumění nebo mylné výklady vyplývající z použití tohoto překladu.
+**Prohlášení o vyloučení odpovědnosti**:  
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro důležité informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoliv nedorozumění nebo mylné výklady vzniklé používáním tohoto překladu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

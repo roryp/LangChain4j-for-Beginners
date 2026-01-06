@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "377b3e3e6f8d02965bf0fbbc9ccb45c5",
-  "translation_date": "2025-12-13T14:26:01+00:00",
+  "original_hash": "22b5d7c8d7585325e38b37fd29eafe25",
+  "translation_date": "2026-01-05T21:08:15+00:00",
   "source_file": "00-quick-start/README.md",
   "language_code": "en"
 }
@@ -23,6 +23,7 @@ CO_OP_TRANSLATOR_METADATA:
   - [2. Prompt Patterns](../../../00-quick-start)
   - [3. Function Calling](../../../00-quick-start)
   - [4. Document Q&A (RAG)](../../../00-quick-start)
+  - [5. Responsible AI](../../../00-quick-start)
 - [What Each Example Shows](../../../00-quick-start)
 - [Next Steps](../../../00-quick-start)
 - [Troubleshooting](../../../00-quick-start)
@@ -185,6 +186,20 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Si
 
 Ask questions about content in `document.txt`.
 
+### 5. Responsible AI
+
+**Bash:**
+```bash
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
+```
+
+**PowerShell:**
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
+```
+
+See how AI safety filters block harmful content.
+
 ## What Each Example Shows
 
 **Basic Chat** - [BasicChatDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
@@ -271,9 +286,31 @@ String response = model.chat(prompt);
 > - "How would I scale this to handle multiple documents or larger knowledge bases?"
 > - "What are best practices for structuring the prompt to ensure the AI uses only the provided context?"
 
-## Debugging
+**Responsible AI** - [ResponsibleAIDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java)
 
-The examples include `.logRequests(true)` and `.logResponses(true)` to show API calls in the console. This helps troubleshoot authentication errors, rate limits, or unexpected responses. Remove these flags in production to reduce log noise.
+Build AI safety with defense in depth. This demo shows two layers of protection working together:
+
+**Part 1: LangChain4j Input Guardrails** - Block dangerous prompts before they reach the LLM. Create custom guardrails that check for prohibited keywords or patterns. These run in your code, so they're fast and free.
+
+```java
+class DangerousContentGuardrail implements InputGuardrail {
+    @Override
+    public InputGuardrailResult validate(UserMessage userMessage) {
+        String text = userMessage.singleText().toLowerCase();
+        if (text.contains("explosives")) {
+            return fatal("Blocked: contains prohibited keyword");
+        }
+        return success();
+    }
+}
+```
+
+**Part 2: Provider Safety Filters** - GitHub Models has built-in filters that catch what your guardrails might miss. You'll see hard blocks (HTTP 400 errors) for severe violations and soft refusals where the AI politely declines.
+
+> **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`ResponsibleAIDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java) and ask:
+> - "What is InputGuardrail and how do I create my own?"
+> - "What is the difference between a hard block and a soft refusal?"
+> - "Why use both guardrails and provider filters together?"
 
 ## Next Steps
 
@@ -300,7 +337,6 @@ The examples include `.logRequests(true)` and `.logResponses(true)` to show API 
 **Issue**: Maven commands fail with error `Unknown lifecycle phase ".mainClass=..."`
 
 **Cause**: PowerShell interprets `=` as a variable assignment operator, breaking Maven property syntax
-
 **Solution**: Use the stop-parsing operator `--%` before the Maven command:
 
 **PowerShell:**
@@ -327,6 +363,12 @@ chcp 65001
 ```
 
 This forces UTF-8 encoding in the terminal. Alternatively, use Windows Terminal which has better Unicode support.
+
+### Debugging API Calls
+
+**Issue**: Authentication errors, rate limits, or unexpected responses from the AI model
+
+**Solution**: The examples include `.logRequests(true)` and `.logResponses(true)` to show API calls in the console. This helps troubleshoot authentication errors, rate limits, or unexpected responses. Remove these flags in production to reduce log noise.
 
 ---
 
