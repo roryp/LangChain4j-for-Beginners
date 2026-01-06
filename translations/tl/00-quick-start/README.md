@@ -1,61 +1,62 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "377b3e3e6f8d02965bf0fbbc9ccb45c5",
-  "translation_date": "2025-12-13T15:09:27+00:00",
+  "original_hash": "22b5d7c8d7585325e38b37fd29eafe25",
+  "translation_date": "2026-01-06T00:30:37+00:00",
   "source_file": "00-quick-start/README.md",
   "language_code": "tl"
 }
 -->
-# Module 00: Quick Start
+# Module 00: Mabilis na Simula
 
-## Table of Contents
+## Talaan ng Nilalaman
 
-- [Introduction](../../../00-quick-start)
-- [What is LangChain4j?](../../../00-quick-start)
-- [LangChain4j Dependencies](../../../00-quick-start)
-- [Prerequisites](../../../00-quick-start)
-- [Setup](../../../00-quick-start)
-  - [1. Get Your GitHub Token](../../../00-quick-start)
-  - [2. Set Your Token](../../../00-quick-start)
-- [Run the Examples](../../../00-quick-start)
-  - [1. Basic Chat](../../../00-quick-start)
-  - [2. Prompt Patterns](../../../00-quick-start)
-  - [3. Function Calling](../../../00-quick-start)
-  - [4. Document Q&A (RAG)](../../../00-quick-start)
-- [What Each Example Shows](../../../00-quick-start)
-- [Next Steps](../../../00-quick-start)
-- [Troubleshooting](../../../00-quick-start)
+- [Panimula](../../../00-quick-start)
+- [Ano ang LangChain4j?](../../../00-quick-start)
+- [Mga Pagdepende ng LangChain4j](../../../00-quick-start)
+- [Mga Kinakailangan](../../../00-quick-start)
+- [Pagsasaayos](../../../00-quick-start)
+  - [1. Kunin ang Iyong GitHub Token](../../../00-quick-start)
+  - [2. Itakda ang Iyong Token](../../../00-quick-start)
+- [Patakbuhin ang mga Halimbawa](../../../00-quick-start)
+  - [1. Pangunahing Chat](../../../00-quick-start)
+  - [2. Mga Pattern ng Prompt](../../../00-quick-start)
+  - [3. Pagtawag sa Function](../../../00-quick-start)
+  - [4. Mga Tanong at Sagot sa Dokumento (RAG)](../../../00-quick-start)
+  - [5. Responsableng AI](../../../00-quick-start)
+- [Ano ang Ipinapakita ng Bawat Halimbawa](../../../00-quick-start)
+- [Mga Susunod na Hakbang](../../../00-quick-start)
+- [Pag-aayos ng Problema](../../../00-quick-start)
 
-## Introduction
+## Panimula
 
-Ang quickstart na ito ay nilayon upang mabilis kang makapagsimula gamit ang LangChain4j. Saklaw nito ang mga pinaka-pangunahing kaalaman sa paggawa ng mga AI application gamit ang LangChain4j at GitHub Models. Sa mga susunod na module gagamitin mo ang Azure OpenAI kasama ang LangChain4j upang makabuo ng mas advanced na mga application.
+Ang mabilis na simula na ito ay nilayon upang mapatakbo ka agad gamit ang LangChain4j sa pinakamaikling oras. Saklaw nito ang pinaka-pangunahing kaalaman sa paggawa ng mga AI application gamit ang LangChain4j at GitHub Models. Sa mga susunod na module gagamit ka ng Azure OpenAI kasama ang LangChain4j upang gumawa ng mas advanced na mga application.
 
-## What is LangChain4j?
+## Ano ang LangChain4j?
 
-Ang LangChain4j ay isang Java library na nagpapadali sa paggawa ng mga AI-powered na application. Sa halip na magtrabaho sa mga HTTP client at JSON parsing, gagamit ka ng malinis na Java APIs.
+Ang LangChain4j ay isang Java library na nagpapadali sa paggawa ng mga AI-powered na application. Sa halip na asikasuhin ang HTTP clients at JSON parsing, ginagamit mo ang malinis na Java APIs.
 
-Ang "chain" sa LangChain ay tumutukoy sa pagsasama-sama ng maraming mga bahagi - maaari kang mag-chain ng prompt sa isang model papunta sa isang parser, o mag-chain ng maraming AI calls kung saan ang output ng isa ay input ng susunod. Ang quick start na ito ay nakatuon sa mga pundasyon bago tuklasin ang mas kumplikadong mga chain.
+Ang "chain" sa LangChain ay tumutukoy sa pagsasama-sama ng maraming bahagi - maaari mong i-chain ang isang prompt sa isang model hanggang sa parser, o pagsamahin ang maraming tawag sa AI kung saan ang output ng isa ay nagsisilbing input para sa kasunod. Nakatuon ang mabilis na simula na ito sa mga pundasyon bago tuklasin ang mas komplikadong chains.
 
 <img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.tl.png" alt="LangChain4j Chaining Concept" width="800"/>
 
-*Pagsasama-sama ng mga bahagi sa LangChain4j - ang mga bloke ng gusali ay nag-uugnay upang makalikha ng makapangyarihang AI workflows*
+*Pagsasama ng mga bahagi sa LangChain4j - ang mga pundasyon na nagsasanib para makagawa ng makapangyarihang AI workflows*
 
 Gagamit tayo ng tatlong pangunahing bahagi:
 
-**ChatLanguageModel** - Ang interface para sa pakikipag-ugnayan sa AI model. Tawagin ang `model.chat("prompt")` at makakuha ng sagot na string. Ginagamit natin ang `OpenAiOfficialChatModel` na gumagana sa mga OpenAI-compatible na endpoint tulad ng GitHub Models.
+**ChatLanguageModel** - Ang interface para sa pakikipag-interaksyon sa AI model. Tawagin ang `model.chat("prompt")` at makakuha ng sagot na string. Ginagamit natin ang `OpenAiOfficialChatModel` na gumagana sa OpenAI-compatible endpoints tulad ng GitHub Models.
 
-**AiServices** - Lumilikha ng type-safe na AI service interfaces. Magdefine ng mga method, lagyan ng anotasyon gamit ang `@Tool`, at ang LangChain4j ang bahala sa orchestration. Awtomatikong tatawagin ng AI ang iyong mga Java method kapag kinakailangan.
+**AiServices** - Gumagawa ng type-safe AI service interfaces. I-define ang mga method, lagyan ng anotasyon gamit ang `@Tool`, at pinangangasiwaan ng LangChain4j ang pag-o-orchestrate. Automatic na tinatawag ng AI ang iyong Java methods kapag kinakailangan.
 
-**MessageWindowChatMemory** - Nagpapanatili ng kasaysayan ng pag-uusap. Kung wala ito, bawat request ay hiwalay. Sa paggamit nito, naaalala ng AI ang mga naunang mensahe at pinananatili ang konteksto sa maraming turn.
+**MessageWindowChatMemory** - Nagpapanatili ng kasaysayan ng pag-uusap. Kung wala ito, bawat request ay independyente. Kung meron, naaalala ng AI ang mga nakaraang mensahe at nagpapanatili ng konteksto sa maraming turn.
 
 <img src="../../../translated_images/architecture.eedc993a1c576839.tl.png" alt="LangChain4j Architecture" width="800"/>
 
-*Arkitektura ng LangChain4j - mga pangunahing bahagi na nagtutulungan upang paandarin ang iyong mga AI application*
+*Arkitektura ng LangChain4j - mga pangunahing bahagi na nagtitulungan para paganahin ang iyong AI applications*
 
-## LangChain4j Dependencies
+## Mga Pagdepende ng LangChain4j
 
-Ang quick start na ito ay gumagamit ng dalawang Maven dependencies sa [`pom.xml`](../../../00-quick-start/pom.xml):
+Ang mabilis na simula na ito ay gumagamit ng dalawang Maven dependencies sa [`pom.xml`](../../../00-quick-start/pom.xml):
 
 ```xml
 <!-- Core LangChain4j library -->
@@ -71,33 +72,33 @@ Ang quick start na ito ay gumagamit ng dalawang Maven dependencies sa [`pom.xml`
 </dependency>
 ```
 
-Ang `langchain4j-open-ai-official` module ay nagbibigay ng `OpenAiOfficialChatModel` class na kumokonekta sa mga OpenAI-compatible na API. Ginagamit ng GitHub Models ang parehong format ng API, kaya hindi kailangan ng espesyal na adapter - ituro lang ang base URL sa `https://models.github.ai/inference`.
+Ang `langchain4j-open-ai-official` module ay nagbibigay ng `OpenAiOfficialChatModel` class na kumokonekta sa OpenAI-compatible na mga API. Ginagamit ng GitHub Models ang parehong API format, kaya walang espesyal na adapter na kailangan - ituturo mo lang ang base URL sa `https://models.github.ai/inference`.
 
-## Prerequisites
+## Mga Kinakailangan
 
 **Gumagamit ng Dev Container?** Nakainstall na ang Java at Maven. Kailangan mo lang ng GitHub Personal Access Token.
 
-**Local Development:**
+**Local na Pag-develop:**
 - Java 21+, Maven 3.9+
 - GitHub Personal Access Token (mga tagubilin sa ibaba)
 
-> **Tandaan:** Ginagamit ng module na ito ang `gpt-4.1-nano` mula sa GitHub Models. Huwag baguhin ang pangalan ng model sa code - naka-configure ito para gumana sa mga available na modelo ng GitHub.
+> **Tala:** Ginagamit ng module na ito ang `gpt-4.1-nano` mula sa GitHub Models. Huwag baguhin ang pangalan ng model sa code - na-configure ito para gumana sa mga available na modelo ng GitHub.
 
-## Setup
+## Pagsasaayos
 
-### 1. Get Your GitHub Token
+### 1. Kunin ang Iyong GitHub Token
 
-1. Pumunta sa [GitHub Settings → Personal Access Tokens](https://github.com/settings/personal-access-tokens)
+1. Punta sa [GitHub Settings → Personal Access Tokens](https://github.com/settings/personal-access-tokens)
 2. I-click ang "Generate new token"
-3. Maglagay ng deskriptibong pangalan (hal., "LangChain4j Demo")
+3. Magtakda ng makabuluhang pangalan (hal., "LangChain4j Demo")
 4. Itakda ang expiration (7 araw ang rekomendado)
 5. Sa ilalim ng "Account permissions", hanapin ang "Models" at itakda sa "Read-only"
 6. I-click ang "Generate token"
 7. Kopyahin at i-save ang iyong token - hindi mo na ito makikita muli
 
-### 2. Set Your Token
+### 2. Itakda ang Iyong Token
 
-**Option 1: Using VS Code (Recommended)**
+**Opsyon 1: Gamit ang VS Code (Inirerekomenda)**
 
 Kung gumagamit ka ng VS Code, idagdag ang iyong token sa `.env` file sa root ng proyekto:
 
@@ -111,7 +112,7 @@ GITHUB_TOKEN=your_token_here
 
 Pagkatapos ay maaari kang mag-right-click sa kahit anong demo file (hal., `BasicChatDemo.java`) sa Explorer at piliin ang **"Run Java"** o gamitin ang launch configurations mula sa Run and Debug panel.
 
-**Option 2: Using Terminal**
+**Opsyon 2: Gamit ang Terminal**
 
 Itakda ang token bilang environment variable:
 
@@ -125,13 +126,13 @@ export GITHUB_TOKEN=your_token_here
 $env:GITHUB_TOKEN=your_token_here
 ```
 
-## Run the Examples
+## Patakbuhin ang mga Halimbawa
 
-**Using VS Code:** Mag-right-click lang sa kahit anong demo file sa Explorer at piliin ang **"Run Java"**, o gamitin ang launch configurations mula sa Run and Debug panel (siguraduhing nailagay mo muna ang token sa `.env` file).
+**Gamit ang VS Code:** Mag-right-click lang sa kahit anong demo file sa Explorer at piliin ang **"Run Java"**, o gamitin ang launch configurations mula sa Run and Debug panel (siguraduhing naidagdag mo na ang token sa `.env` file).
 
-**Using Maven:** Bilang alternatibo, maaari kang magpatakbo mula sa command line:
+**Gamit ang Maven:** Pwede rin patakbuhin mula sa command line:
 
-### 1. Basic Chat
+### 1. Pangunahing Chat
 
 **Bash:**
 ```bash
@@ -143,7 +144,7 @@ mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicC
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
-### 2. Prompt Patterns
+### 2. Mga Pattern ng Prompt
 
 **Bash:**
 ```bash
@@ -157,7 +158,7 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Pr
 
 Ipinapakita ang zero-shot, few-shot, chain-of-thought, at role-based prompting.
 
-### 3. Function Calling
+### 3. Pagtawag sa Function
 
 **Bash:**
 ```bash
@@ -169,9 +170,9 @@ mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIn
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIntegrationDemo
 ```
 
-Awtomatikong tinatawagan ng AI ang iyong mga Java method kapag kinakailangan.
+Automatic na tinatawag ng AI ang iyong mga Java method kapag kinakailangan.
 
-### 4. Document Q&A (RAG)
+### 4. Mga Tanong at Sagot sa Dokumento (RAG)
 
 **Bash:**
 ```bash
@@ -185,11 +186,25 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Si
 
 Magtanong tungkol sa nilalaman ng `document.txt`.
 
-## What Each Example Shows
+### 5. Responsableng AI
 
-**Basic Chat** - [BasicChatDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
+**Bash:**
+```bash
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
+```
 
-Magsimula dito upang makita ang pinakapayak na gamit ng LangChain4j. Gagawa ka ng `OpenAiOfficialChatModel`, magpapadala ng prompt gamit ang `.chat()`, at makakakuha ng sagot. Ipinapakita nito ang pundasyon: paano i-initialize ang mga modelo gamit ang custom endpoints at API keys. Kapag naintindihan mo na ang pattern na ito, lahat ng iba pa ay nakabase dito.
+**PowerShell:**
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
+```
+
+Tingnan kung paano hinaharang ng mga AI safety filters ang mapanganib na nilalaman.
+
+## Ano ang Ipinapakita ng Bawat Halimbawa
+
+**Pangunahing Chat** - [BasicChatDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
+
+Magsimula dito upang makita ang LangChain4j sa pinakapayak nitong anyo. Gumawa ka ng `OpenAiOfficialChatModel`, magpadala ng prompt gamit ang `.chat()`, at makakuha ng tugon. Ipinapakita nito ang pundasyon: kung paano i-initialize ang mga modelo gamit ang custom endpoints at API keys. Kapag naintindihan mo na ang pattern na ito, lahat ng iba pang mga bagay ay nakabatay dito.
 
 ```java
 ChatLanguageModel model = OpenAiOfficialChatModel.builder()
@@ -203,13 +218,13 @@ System.out.println(response);
 ```
 
 > **🤖 Subukan gamit ang [GitHub Copilot](https://github.com/features/copilot) Chat:** Buksan ang [`BasicChatDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) at itanong:
-> - "Paano ko papalitan mula GitHub Models papuntang Azure OpenAI sa code na ito?"
+> - "Paano ako lilipat mula sa GitHub Models papuntang Azure OpenAI sa code na ito?"
 > - "Anong iba pang mga parameter ang pwede kong i-configure sa OpenAiOfficialChatModel.builder()?"
-> - "Paano ako magdadagdag ng streaming responses imbes na maghintay ng buong sagot?"
+> - "Paano ako magdadagdag ng streaming responses imbes na maghintay sa kompletong sagot?"
 
 **Prompt Engineering** - [PromptEngineeringDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java)
 
-Ngayon na alam mo na kung paano makipag-usap sa isang model, tuklasin natin kung ano ang sinasabi mo dito. Ginagamit ng demo na ito ang parehong setup ng model pero ipinapakita ang apat na iba't ibang pattern ng prompting. Subukan ang zero-shot prompts para sa direktang mga utos, few-shot prompts na natututo mula sa mga halimbawa, chain-of-thought prompts na nagpapakita ng mga hakbang ng pag-iisip, at role-based prompts na nagtatakda ng konteksto. Makikita mo kung paano nagbibigay ang parehong model ng napakaibang resulta depende sa paraan ng pag-frame ng iyong request.
+Ngayon na alam mo na kung paano makipag-usap sa isang model, tuklasin natin kung ano ang sinasabi mo dito. Ginagamit ng demo na ito ang parehong setup ng model pero nagpapakita ng apat na iba't ibang pattern ng prompting. Subukan ang zero-shot prompts para sa direktang utos, few-shot prompts na natututo mula sa mga halimbawa, chain-of-thought prompts na nagpapakita ng mga hakbang ng pag-iisip, at role-based prompts na nagtatakda ng konteksto. Makikita mo kung paano nagbibigay ang parehong modelo ng ibang-ibang resulta depende sa kung paano mo ibinabalangkas ang iyong kahilingan.
 
 ```java
 PromptTemplate template = PromptTemplate.from(
@@ -225,14 +240,14 @@ String response = model.chat(prompt.text());
 ```
 
 > **🤖 Subukan gamit ang [GitHub Copilot](https://github.com/features/copilot) Chat:** Buksan ang [`PromptEngineeringDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) at itanong:
-> - "Ano ang pagkakaiba ng zero-shot at few-shot prompting, at kailan ko dapat gamitin ang bawat isa?"
+> - "Ano ang pinagkaiba ng zero-shot at few-shot prompting, at kailan dapat gamitin ang bawat isa?"
 > - "Paano naaapektuhan ng temperature parameter ang mga sagot ng model?"
 > - "Ano ang mga teknik para maiwasan ang prompt injection attacks sa production?"
-> - "Paano ako gagawa ng reusable PromptTemplate objects para sa mga karaniwang pattern?"
+> - "Paano ako gagawa ng reusable na PromptTemplate objects para sa mga karaniwang pattern?"
 
-**Tool Integration** - [ToolIntegrationDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java)
+**Pagsasama ng Tool** - [ToolIntegrationDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java)
 
-Dito nagiging makapangyarihan ang LangChain4j. Gagamitin mo ang `AiServices` upang gumawa ng AI assistant na kayang tumawag ng iyong mga Java method. Lagyan lang ng anotasyon ang mga method gamit ang `@Tool("description")` at ang LangChain4j ang bahala sa iba - awtomatikong pinipili ng AI kung kailan gagamitin ang bawat tool base sa tanong ng user. Ipinapakita nito ang function calling, isang mahalagang teknik para gumawa ng AI na kayang gumawa ng aksyon, hindi lang sumagot ng tanong.
+Dito nagiging makapangyarihan ang LangChain4j. Gagamitin mo ang `AiServices` upang gumawa ng AI assistant na kayang tumawag sa iyong mga Java method. Lagyan lamang ng anotasyon ang mga method gamit ang `@Tool("deskripsyon")` at ang LangChain4j na ang bahala - automatic na pinipili ng AI kung kailan gagamitin ang bawat tool batay sa hinihiling ng user. Ipinapakita nito ang function calling, isang mahalagang teknik para makabuo ng AI na kayang magsagawa ng mga aksyon, hindi lang sumagot ng tanong.
 
 ```java
 @Tool("Performs addition of two numeric values")
@@ -245,14 +260,14 @@ String response = assistant.chat("What is 25 plus 17?");
 ```
 
 > **🤖 Subukan gamit ang [GitHub Copilot](https://github.com/features/copilot) Chat:** Buksan ang [`ToolIntegrationDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) at itanong:
-> - "Paano gumagana ang @Tool annotation at ano ang ginagawa ng LangChain4j dito sa likod?"
-> - "Kaya ba ng AI na tumawag ng maraming tools sunod-sunod para lutasin ang mga komplikadong problema?"
-> - "Ano ang mangyayari kung may tool na magtapon ng exception - paano ko dapat hawakan ang mga error?"
-> - "Paano ko isasama ang totoong API imbes sa halimbawa ng calculator na ito?"
+> - "Paano gumagana ang @Tool annotation at ano ang ginagawa ng LangChain4j rito sa likod?"
+> - "Pwede bang tumawag ang AI ng maraming tool ng sunud-sunod para lutasin ang mga komplikadong problema?"
+> - "Ano ang nangyayari kapag may nagtapon ng exception ang isang tool - paano ang pag-handle ng errors?"
+> - "Paano ko isasama ang totoong API imbes ng halimbawa ng calculator na ito?"
 
-**Document Q&A (RAG)** - [SimpleReaderDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)
+**Mga Tanong at Sagot sa Dokumento (RAG)** - [SimpleReaderDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)
 
-Dito makikita mo ang pundasyon ng RAG (retrieval-augmented generation). Sa halip na umasa sa training data ng model, naglo-load ka ng nilalaman mula sa [`document.txt`](../../../00-quick-start/document.txt) at isinasama ito sa prompt. Sumagot ang AI base sa iyong dokumento, hindi sa pangkalahatang kaalaman nito. Ito ang unang hakbang patungo sa paggawa ng mga sistema na kayang gumana gamit ang sarili mong data.
+Dito makikita mo ang pundasyon ng RAG (retrieval-augmented generation). Sa halip na umasa sa training data ng model, naglo-load ka ng nilalaman mula sa [`document.txt`](../../../00-quick-start/document.txt) at isinama mo ito sa prompt. Sumagot ang AI base sa iyong dokumento, hindi sa pangkalahatang kaalaman nito. Ito ang unang hakbang para makagawa ng sistema na kayang gumamit ng sarili mong data.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("document.txt");
@@ -263,45 +278,66 @@ String prompt = "Based on this document: " + content +
 String response = model.chat(prompt);
 ```
 
-> **Tandaan:** Ang simpleng paraan na ito ay niloload ang buong dokumento sa prompt. Para sa malalaking file (>10KB), lalampas ka sa context limits. Tatalakayin sa Module 03 ang chunking at vector search para sa production RAG systems.
+> **Tala:** Ang simpleng paraang ito ay niloload ang buong dokumento sa prompt. Para sa malalaking file (>10KB), lalampas ka sa context limits. Tatalakayin sa Module 03 ang chunking at vector search para sa production RAG systems.
 
 > **🤖 Subukan gamit ang [GitHub Copilot](https://github.com/features/copilot) Chat:** Buksan ang [`SimpleReaderDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) at itanong:
 > - "Paano pinipigilan ng RAG ang AI hallucinations kumpara sa paggamit ng training data ng model?"
-> - "Ano ang pagkakaiba ng simpleng paraan na ito at paggamit ng vector embeddings para sa retrieval?"
-> - "Paano ko ito masusukat para hawakan ang maraming dokumento o mas malalaking knowledge bases?"
-> - "Ano ang mga best practice sa pag-istruktura ng prompt para matiyak na gagamitin lang ng AI ang ibinigay na konteksto?"
+> - "Ano ang pinagkaiba ng simpleng paraan na ito sa paggamit ng vector embeddings para sa retrieval?"
+> - "Paano ako mag- scale nito para harapin ang maraming dokumento o mas malaking knowledge base?"
+> - "Ano ang mga best practice sa pag-istruktura ng prompt upang matiyak na ginagamit lamang ng AI ang ibinigay na konteksto?"
 
-## Debugging
+**Responsableng AI** - [ResponsibleAIDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java)
 
-Kasama sa mga halimbawa ang `.logRequests(true)` at `.logResponses(true)` upang ipakita ang mga API call sa console. Nakakatulong ito sa pag-troubleshoot ng mga authentication error, rate limits, o hindi inaasahang mga sagot. Alisin ang mga flag na ito sa production upang mabawasan ang log noise.
+Gumawa ng AI safety gamit ang depensa sa lalim. Ipinapakita ng demo na ito ang dalawang layer ng proteksyon na nagtutulungan:
 
-## Next Steps
+**Bahagi 1: LangChain4j Input Guardrails** - Hinaharang ang mga mapanganib na prompt bago pa ito makarating sa LLM. Gumawa ng custom guardrails na nagcha-check para sa ipinagbabawal na mga keyword o pattern. Ito ay tumatakbo sa iyong code, kaya mabilis at libre.
 
-**Next Module:** [01-introduction - Getting Started with LangChain4j and gpt-5 on Azure](../01-introduction/README.md)
+```java
+class DangerousContentGuardrail implements InputGuardrail {
+    @Override
+    public InputGuardrailResult validate(UserMessage userMessage) {
+        String text = userMessage.singleText().toLowerCase();
+        if (text.contains("explosives")) {
+            return fatal("Blocked: contains prohibited keyword");
+        }
+        return success();
+    }
+}
+```
+
+**Bahagi 2: Provider Safety Filters** - May built-in na filters ang GitHub Models na nahuhuli ang mga maaaring hindi mahuli ng iyong guardrails. Makikita mo ang hard blocks (HTTP 400 errors) para sa matitinding paglabag at soft refusals kung saan magalang na tumatanggi ang AI.
+
+> **🤖 Subukan gamit ang [GitHub Copilot](https://github.com/features/copilot) Chat:** Buksan ang [`ResponsibleAIDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java) at itanong:
+> - "Ano ang InputGuardrail at paano ako gagawa ng sarili ko?"
+> - "Ano ang pinagkaiba ng hard block at soft refusal?"
+> - "Bakit kailangang gamitin parehong guardrails at provider filters?"
+
+## Mga Susunod na Hakbang
+
+**Susunod na Module:** [01-introduction - Pagsisimula gamit ang LangChain4j at gpt-5 sa Azure](../01-introduction/README.md)
 
 ---
 
-**Navigation:** [← Back to Main](../README.md) | [Next: Module 01 - Introduction →](../01-introduction/README.md)
+**Navigation:** [← Balik sa Pangunahing](../README.md) | [Susunod: Module 01 - Panimula →](../01-introduction/README.md)
 
 ---
 
-## Troubleshooting
+## Pag-aayos ng Problema
 
-### First-Time Maven Build
+### Unang Beses na Maven Build
 
-**Isyu**: Ang unang `mvn clean compile` o `mvn package` ay tumatagal ng matagal (10-15 minuto)
+**Isyu:** Ang unang `mvn clean compile` o `mvn package` ay tumatagal (10-15 minuto)
 
-**Sanhi**: Kailangan i-download ng Maven lahat ng project dependencies (Spring Boot, LangChain4j libraries, Azure SDKs, atbp.) sa unang build.
+**Dahilan:** Kailangan ng Maven i-download ang lahat ng dependencies ng proyekto (Spring Boot, LangChain4j libraries, Azure SDKs, atbp.) sa unang build.
 
-**Solusyon**: Normal ito. Mas mabilis ang mga susunod na build dahil naka-cache na ang dependencies sa lokal. Depende ang oras ng pag-download sa bilis ng iyong network.
+**Solusyon:** Normal ang ganitong behavior. Mas mabilis ang mga susunod na build dahil naka-cache na locally ang dependencies. Depende ang oras ng pag-download sa bilis ng iyong network.
 
-### PowerShell Maven Command Syntax
+### Syntax ng PowerShell Maven Command
 
-**Isyu**: Nabibigo ang Maven commands na may error na `Unknown lifecycle phase ".mainClass=..."`
+**Isyu:** Nabibigo ang Maven commands na may error na `Unknown lifecycle phase ".mainClass=..."`
 
-**Sanhi**: Ini-interpret ng PowerShell ang `=` bilang operator ng variable assignment, kaya nasisira ang syntax ng Maven property
-
-**Solusyon**: Gamitin ang stop-parsing operator na `--%` bago ang Maven command:
+**Dahilan:** Kinukuha ng PowerShell ang `=` bilang operator ng variable assignment, kaya nasisira ang syntax ng Maven property.
+**Solusyon**: Gamitin ang stop-parsing operator na `--%` bago ang utos ng Maven:
 
 **PowerShell:**
 ```powershell
@@ -313,24 +349,30 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Ba
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
-Sinasabi ng `--%` operator sa PowerShell na ipasa ang lahat ng natitirang argumento nang literal sa Maven nang walang interpretasyon.
+Ang operator na `--%` ay nagsasabi sa PowerShell na ipasa nang literal sa Maven ang lahat ng natitirang argumento nang walang interpretasyon.
 
-### Windows PowerShell Emoji Display
+### Pagpapakita ng Emoji sa Windows PowerShell
 
-**Isyu**: Nagpapakita ng mga kalat na karakter (hal., `????` o `â??`) sa halip na emojis ang mga sagot ng AI sa PowerShell
+**Isyu**: Nagpapakita ang mga sagot ng AI ng mga kalat na karakter (hal. `????` o `â??`) sa halip na emojis sa PowerShell
 
-**Sanhi**: Hindi sinusuportahan ng default encoding ng PowerShell ang UTF-8 emojis
+**Sanhi**: Hindi suportado ng default na encoding ng PowerShell ang UTF-8 emojis
 
-**Solusyon**: Patakbuhin ang command na ito bago mag-execute ng Java applications:
+**Solusyon**: Patakbuhin ang utos na ito bago magpatakbo ng mga aplikasyon sa Java:
 ```cmd
 chcp 65001
 ```
 
 Pinipilit nito ang UTF-8 encoding sa terminal. Bilang alternatibo, gamitin ang Windows Terminal na may mas mahusay na suporta sa Unicode.
 
+### Pag-debug ng mga Tawag sa API
+
+**Isyu**: Mga error sa pagpapatunay, limitasyon sa rate, o mga hindi inaasahang tugon mula sa AI model
+
+**Solusyon**: Kasama sa mga halimbawa ang `.logRequests(true)` at `.logResponses(true)` upang ipakita ang mga tawag sa API sa console. Nakakatulong ito sa pag-troubleshoot ng mga error sa pagpapatunay, limitasyon sa rate, o hindi inaasahang tugon. Alisin ang mga flag na ito sa produksyon upang mabawasan ang ingay sa log.
+
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Paalala**:
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+**Pagsasalin ng Paunawa**:  
+Ang dokumentong ito ay naisalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat sinisikap naming maging tumpak ang pagsasalin, mangyaring tandaan na maaaring may mga pagkakamali o hindi eksaktong salin ang awtomatikong pagsasalin. Ang orihinal na dokumento sa kanyang orihinal na wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, ipinapayo ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaintindihan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

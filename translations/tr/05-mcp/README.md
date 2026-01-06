@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "f89f4c106d110e4943c055dd1a2f1dff",
-  "translation_date": "2025-12-31T00:33:46+00:00",
+  "original_hash": "6c816d130a1fa47570c11907e72d84ae",
+  "translation_date": "2026-01-05T23:18:52+00:00",
   "source_file": "05-mcp/README.md",
   "language_code": "tr"
 }
@@ -11,38 +11,39 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## İçindekiler
 
-- [Ne Öğreneceksiniz](../../../05-mcp)
+- [Neler Öğreneceksiniz](../../../05-mcp)
 - [MCP Nedir?](../../../05-mcp)
 - [MCP Nasıl Çalışır](../../../05-mcp)
-- [Agentic Modülü](../../../05-mcp)
-- [Örnekleri Çalıştırma](../../../05-mcp)
+- [Agentik Modül](../../../05-mcp)
+- [Örneklerin Çalıştırılması](../../../05-mcp)
   - [Önkoşullar](../../../05-mcp)
 - [Hızlı Başlangıç](../../../05-mcp)
   - [Dosya İşlemleri (Stdio)](../../../05-mcp)
-  - [Süpervizör Ajan](../../../05-mcp)
-    - [Çıktıyı Anlamak](../../../05-mcp)
-    - [Agentic Modül Özelliklerinin Açıklaması](../../../05-mcp)
-- [Ana Kavramlar](../../../05-mcp)
+  - [Süpervizör Agent](../../../05-mcp)
+    - [Çıktının Anlaşılması](../../../05-mcp)
+    - [Yanıt Stratejileri](../../../05-mcp)
+    - [Agentik Modül Özelliklerinin Açıklanması](../../../05-mcp)
+- [Temel Kavramlar](../../../05-mcp)
 - [Tebrikler!](../../../05-mcp)
   - [Sırada Ne Var?](../../../05-mcp)
 
-## Ne Öğreneceksiniz
+## Neler Öğreneceksiniz
 
-Konuşma tabanlı AI oluşturmayı, prompt ustalığını, cevapları belgelerde temellemeyi ve araçlara sahip ajanlar yaratmayı öğrendiniz. Ancak tüm bu araçlar özel uygulamanız için özel olarak oluşturulmuştu. Peki ya AI'nıza herkesin oluşturup paylaşabileceği standart bir araç ekosistemi erişimi verebilseydiniz? Bu modülde, Model Context Protocol (MCP) ve LangChain4j'in agentic modülü ile tam olarak bunu nasıl yapacağınızı öğreneceksiniz. Önce basit bir MCP dosya okuyucusunu göstereceğiz, ardından bunu Supervisor Agent desenini kullanarak gelişmiş agentic iş akışlarına nasıl kolayca entegre edebileceğimizi göstereceğiz.
+Konuşma tabanlı yapay zeka oluşturdunuz, promptları ustaca kullandınız, yanıtları belgelere dayandırdınız ve araçlara sahip ajanlar yarattınız. Ancak tüm bu araçlar, sizin özel uygulamanız için özel olarak yapılmıştı. Peki yapay zekanıza, herkesin oluşturup paylaşabileceği standart bir araç ekosistemine erişim sağlama imkânınız olsa? Bu modülde, tam olarak bunu Model Context Protocol (MCP) ve LangChain4j’nin agentik modülü ile nasıl yapacağınızı öğreneceksiniz. Önce basit bir MCP dosya okuyucusunu gösteriyoruz, sonra Supervisor Agent kalıbını kullanarak onun gelişmiş agentik iş akışlarına nasıl kolayca entegre olduğunu gösteriyoruz.
 
 ## MCP Nedir?
 
-Model Context Protocol (MCP) tam olarak bunu sağlar - AI uygulamalarının harici araçları keşfetmesi ve kullanması için standart bir yol. Her veri kaynağı veya servis için özel entegrasyon yazmak yerine, yeteneklerini tutarlı bir formatta açığa çıkaran MCP sunucularına bağlanırsınız. AI ajanınız sonra bu araçları otomatik olarak keşfedip kullanabilir.
+Model Context Protocol (MCP) tam da bunu sağlar — yapay zeka uygulamalarının harici araçları keşfetmesi ve kullanması için standart bir yol. Her veri kaynağı veya servis için özel entegrasyonlar yazmak yerine, yeteneklerini tutarlı bir biçimde açan MCP sunucularına bağlanırsınız. Yapay zeka ajanınız bu araçları otomatik olarak keşfedip kullanabilir.
 
 <img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.tr.png" alt="MCP Karşılaştırması" width="800"/>
 
-*MCP Öncesi: Karmaşık nokta-noktaya entegrasyonlar. MCP Sonrası: Tek protokol, sonsuz imkanlar.*
+*MCP’den Önce: Karmaşık nokta-noktaya entegrasyonlar. MCP’den Sonra: Tek protokol, sonsuz olasılık.*
 
-MCP AI geliştirmede temel bir problemi çözer: her entegrasyon özeldir. GitHub'a erişmek mi istiyorsunuz? Özel kod. Dosya okumak mı istiyorsunuz? Özel kod. Bir veritabanı sorgulamak mı istiyorsunuz? Özel kod. Ve bu entegrasyonların hiçbiri diğer AI uygulamalarıyla çalışmaz.
+MCP yapay zeka geliştirmede temel bir sorunu çözer: her entegrasyon özeldir. GitHub erişmek mi istiyorsunuz? Özel kod. Dosya okumak mı? Özel kod. Veritabanı sorgulamak mı? Özel kod. Ve bu entegrasyonların hiçbiri diğer yapay zeka uygulamalarıyla çalışmaz.
 
-MCP bunu standartlaştırır. Bir MCP sunucusu, net açıklamalar ve şemalarla araçları açığa çıkarır. Herhangi bir MCP istemcisi bağlanabilir, mevcut araçları keşfedebilir ve kullanabilir. Bir kere oluşturun, her yerde kullanın.
+MCP bunu standartlaştırır. Bir MCP sunucusu araçları açık tanımlar ve şemalarla sunar. Herhangi bir MCP istemcisi bağlanabilir, mevcut araçları keşfedebilir ve onları kullanabilir. Bir kere inşa edin, her yerde kullanın.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.tr.png" alt="MCP Mimarisi" width="800"/>
+<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.tr.png" alt="MCP Mimari" width="800"/>
 
 *Model Context Protocol mimarisi - standartlaştırılmış araç keşfi ve yürütme*
 
@@ -50,7 +51,7 @@ MCP bunu standartlaştırır. Bir MCP sunucusu, net açıklamalar ve şemalarla 
 
 **Sunucu-İstemci Mimarisi**
 
-MCP bir istemci-sunucu modelini kullanır. Sunucular araçlar sağlar - dosya okuma, veritabanı sorgulama, API çağrıları. İstemciler (AI uygulamanız) sunuculara bağlanır ve onların araçlarını kullanır.
+MCP istemci-sunucu modelini kullanır. Sunucular araçlar sağlar - dosya okuma, veritabanı sorgulama, API çağrıları. İstemciler (yapay zeka uygulamanız) sunuculara bağlanır ve araçlarını kullanır.
 
 LangChain4j ile MCP kullanmak için bu Maven bağımlılığını ekleyin:
 
@@ -64,11 +65,11 @@ LangChain4j ile MCP kullanmak için bu Maven bağımlılığını ekleyin:
 
 **Araç Keşfi**
 
-İstemciniz bir MCP sunucusuna bağlandığında, "Hangi araçlara sahipsiniz?" diye sorar. Sunucu, her biri açıklamalar ve parametre şemaları içeren mevcut araçların bir listesini yanıtlar. AI ajanınız daha sonra kullanıcı isteklerine göre hangi araçların kullanılacağına karar verebilir.
+İstemciniz bir MCP sunucusuna bağlandığında "Hangi araçlara sahipsin?" diye sorar. Sunucu mevcut araçların bir listesini açıklamalar ve parametre şemalarıyla yanıtlar. Yapay zeka ajanınız kullanıcı taleplerine göre hangi araçları kullanacağına karar verir.
 
 **Taşıma Mekanizmaları**
 
-MCP farklı taşıma mekanizmalarını destekler. Bu modül yerel süreçler için Stdio taşımayı gösterir:
+MCP farklı taşıma mekanizmalarını destekler. Bu modül, yerel süreçler için Stdio taşımayı gösterir:
 
 <img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.tr.png" alt="Taşıma Mekanizmaları" width="800"/>
 
@@ -76,7 +77,7 @@ MCP farklı taşıma mekanizmalarını destekler. Bu modül yerel süreçler iç
 
 **Stdio** - [StdioTransportDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java)
 
-Yerel süreçler için. Uygulamanız bir sunucuyu alt süreç olarak başlatır ve standart giriş/çıkış üzerinden iletişim kurar. Dosya sistemi erişimi veya komut satırı araçları için kullanışlıdır.
+Yerel süreçler için. Uygulamanız, bir alt süreç olarak sunucu oluşturur ve standart giriş/çıkış ile iletişim kurar. Dosya sistemi erişimi veya komut satırı araçları için kullanışlıdır.
 
 ```java
 McpTransport stdioTransport = new StdioMcpTransport.Builder()
@@ -89,18 +90,18 @@ McpTransport stdioTransport = new StdioMcpTransport.Builder()
     .build();
 ```
 
-> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile deneyin:** Açın [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) ve sorun:
-> - "Stdio taşıma nasıl çalışır ve HTTP ile ne zaman kullanılmalı?"
-> - "LangChain4j başlatılan MCP sunucu süreçlerinin yaşam döngüsünü nasıl yönetiyor?"
-> - "AI'ya dosya sistemine erişim vermenin güvenlik sonuçları nelerdir?"
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Sohbeti ile Deneyin:** [`StdioTransportDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/StdioTransportDemo.java) dosyasını açın ve sorun:
+> - "Stdio taşıma nasıl çalışır ve HTTP ile ne zaman kullanılmalıdır?"
+> - "LangChain4j MCP sunucu süreçlerinin yaşam döngüsünü nasıl yönetir?"
+> - "Yapay zeka dosya sistemine eriştiğinde güvenlik riskleri nelerdir?"
 
-## Agentic Modülü
+## Agentik Modül
 
-MCP standart araçlar sağlarken, LangChain4j'in **agentic modülü** bu araçları orkestre eden ajanlar oluşturmak için deklaratif bir yol sunar. `@Agent` açıklaması ve `AgenticServices` ile davranışı interface'ler aracılığıyla, zorlayıcı (imperative) kod yerine tanımlayabilirsiniz.
+MCP standartlaştırılmış araçlar sağlarken, LangChain4j’nin **agentik modülü** bu araçları koordine eden ajanlar oluşturmak için deklaratif bir yol sunar. `@Agent` anotasyonu ve `AgenticServices` ile ajanın davranışını emredici kod yerine arayüzler aracılığıyla tanımlabilirsiniz.
 
-Bu modülde, kullanıcı isteğine göre hangi alt-ajanları çağıracağına dinamik olarak karar veren ileri düzey bir agentic AI yaklaşımı olan **Süpervizör Ajan** desenini inceleyeceksiniz. Bu iki kavramı, alt-ajanlarımızdan birine MCP destekli dosya erişimi yetenekleri vererek birleştireceğiz.
+Bu modülde, kullanıcı isteğine göre hangi alt ajanların çağrılacağına dinamik karar veren gelişmiş bir agentik yapay zeka yaklaşımı olan **Supervisor Agent** kalıbını keşfedeceksiniz. MCP destekli dosya erişimini bir alt ajanımıza vererek her iki kavramı birleştireceğiz.
 
-Agentic modülü kullanmak için bu Maven bağımlılığını ekleyin:
+Agentik modülü kullanmak için bu Maven bağımlılığını ekleyin:
 
 ```xml
 <dependency>
@@ -110,51 +111,51 @@ Agentic modülü kullanmak için bu Maven bağımlılığını ekleyin:
 </dependency>
 ```
 
-> **⚠️ Deneysel:** `langchain4j-agentic` modülü **deneysel**dir ve değişikliğe tabidir. AI asistanları oluşturmanın kararlı yolu, özel araçlarla `langchain4j-core` kullanmaya devam etmektir (Modül 04).
+> **⚠️ Deneysel:** `langchain4j-agentic` modülü **deneysel** olup değişime tabidir. AI asistanları oluşturmanın stabil yolu hâlâ `langchain4j-core` ve özel araçlardır (Modül 04).
 
-## Örnekleri Çalıştırma
+## Örneklerin Çalıştırılması
 
 ### Önkoşullar
 
 - Java 21+, Maven 3.9+
-- MCP sunucuları için Node.js 16+ ve npm
-- `.env` dosyasında kök dizinden yapılandırılmış ortam değişkenleri:
-  - **StdioTransportDemo için:** `GITHUB_TOKEN` (GitHub Kişisel Erişim Token'ı)
-  - **SupervisorAgentDemo için:** `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (Modüller 01-04 ile aynı)
+- Node.js 16+ ve npm (MCP sunucuları için)
+- `.env` dosyasında yapılandırılmış ortam değişkenleri (kök dizinden):
+  - `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT` (Modüller 01-04 ile aynı)
 
-> **Not:** Eğer henüz ortam değişkenlerinizi ayarlamadıysanız, talimatlar için [Module 00 - Quick Start](../00-quick-start/README.md) bölümüne bakın veya kök dizinde `.env.example` dosyasını `.env` olarak kopyalayın ve değerlerinizi doldurun.
+> **Not:** Ortam değişkenlerinizi henüz ayarlamadıysanız, talimatlar için [Modül 00 - Hızlı Başlangıç](../00-quick-start/README.md) bölümüne bakın veya kök dizindeki `.env.example` dosyasını `.env` olarak kopyalayıp değerlerinizi doldurun.
 
 ## Hızlı Başlangıç
 
-**VS Code Kullanımı:** Explorer'daki herhangi bir demo dosyasına sağ tıklayıp **"Run Java"** seçeneğini seçin veya Run and Debug panelindeki başlatma yapılandırmalarını kullanın (önce token'ınızı `.env` dosyasına eklediğinizden emin olun).
+**VS Code Kullananlar:** Explorer’daki herhangi bir demo dosyasına sağ tıklayın ve **"Run Java"** seçeneğini seçin ya da Çalıştır ve Hata Ayıkla panelindeki başlatma yapılandırmalarını kullanın (önce `.env` dosyasına token eklediğinizden emin olun).
 
-**Maven Kullanımı:** Alternatif olarak, aşağıdaki örneklerle komut satırından çalıştırabilirsiniz.
+**Maven İle:** Alternatif olarak aşağıdaki örneklerle komut satırından çalıştırabilirsiniz.
 
 ### Dosya İşlemleri (Stdio)
 
 Bu, yerel alt süreç tabanlı araçları gösterir.
 
-**✅ Önkoşul gerekmiyor** - MCP sunucusu otomatik olarak başlatılır.
+**✅ Önkoşul gerekmez** — MCP sunucu otomatik başlatılır.
 
-**VS Code Kullanımı:** `StdioTransportDemo.java` dosyasına sağ tıklayıp **"Run Java"** seçin.
+**Başlatma Betikleri (Önerilir):**
 
-**Maven Kullanımı:**
+Başlatma betikleri ortam değişkenlerini kök `.env` dosyasından otomatik yükler:
 
 **Bash:**
 ```bash
-export GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+chmod +x start-stdio.sh
+./start-stdio.sh
 ```
 
 **PowerShell:**
 ```powershell
-$env:GITHUB_TOKEN=your_token_here
 cd 05-mcp
-mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.mcp.StdioTransportDemo
+.\start-stdio.ps1
 ```
 
-Uygulama otomatik olarak bir dosya sistemi MCP sunucusu başlatır ve yerel bir dosyayı okur. Alt süreç yönetiminin sizin için nasıl ele alındığına dikkat edin.
+**VS Code Kullanarak:** `StdioTransportDemo.java` üzerine sağ tıklayın ve **"Run Java"** seçin (env dosyanız ayarlı olmalı).
+
+Uygulama otomatik olarak bir dosya sistemi MCP sunucusu oluşturur ve yerel bir dosya okur. Alt süreç yönetiminin sizin için nasıl yapıldığına dikkat edin.
 
 **Beklenen çıktı:**
 ```
@@ -162,167 +163,188 @@ Assistant response: The file provides an overview of LangChain4j, an open-source
 for integrating Large Language Models (LLMs) into Java applications...
 ```
 
-### Süpervizör Ajan
+### Süpervizör Agent
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.tr.png" alt="Agentic Modülü" width="800"/>
+**Supervisor Agent kalıbı** esnek bir agentik AI formudur. Bir Supervisor, LLM kullanarak kullanıcının talebine göre hangi ajanların çağrılacağına bağımsız olarak karar verir. Bir sonraki örnekte, MCP destekli dosya erişimi ve LLM ajanını birleştirerek denetimli dosya okuma → raporlama iş akışı oluşturuyoruz.
 
+Demoda, `FileAgent` MCP dosya sistemi araçlarını kullanarak dosya okur, `ReportAgent` ise yönetici özeti (1 cümle), 3 anahtar nokta ve öneriler içeren yapılandırılmış bir rapor oluşturur. Supervisor bu akışı otomatik yönetir:
 
-**Süpervizör Ajan deseni**, deterministik iş akışlarından farklı olarak (sıralı, döngü, paralel) esnek bir agentic AI formudur. Bir Süpervizör, kullanıcının isteğine göre hangi ajanların çağrılacağına otonom şekilde karar vermek için bir LLM kullanır.
+<img src="../../../translated_images/agentic.cf84dcda226374e3.tr.png" alt="Agentik Modül" width="800"/>
 
-**Süpervizörü MCP ile Birleştirme:** Bu örnekte, `FileAgent`'e `toolProvider(mcpToolProvider)` aracılığıyla MCP dosya sistemi araçlarına erişim veriyoruz. Bir kullanıcı "bir dosyayı oku ve analiz et" dediğinde, Süpervizör isteği analiz eder ve bir yürütme planı oluşturur. Ardından isteği `FileAgent`'e yönlendirir; `FileAgent` içeriği almak için MCP'nin `read_file` aracını kullanır. Süpervizör bu içeriği yorumlama için `AnalysisAgent`'e iletir ve isteğe bağlı olarak sonuçları özetlemek için `SummaryAgent`'ı çağırır.
+```
+┌─────────────┐      ┌──────────────┐
+│  FileAgent  │ ───▶ │ ReportAgent  │
+│ (MCP tools) │      │  (pure LLM)  │
+└─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+  'fileContent'         'report'
+```
 
-Bu, MCP araçlarının agentic iş akışlarına nasıl sorunsuz entegre olduğunu gösterir — Süpervizör dosyaların nasıl okunduğunu bilmek zorunda değil, sadece `FileAgent`'in bunu yapabildiğini bilir. Süpervizör farklı türdeki isteklere dinamik olarak uyum sağlar ve ya son ajanın yanıtını ya da tüm işlemlerin bir özetini döndürür.
+Her ajan çıktısını **Agentic Scope** (paylaşılan bellek) içine kaydeder; böylece sonraki ajanlar önceki sonuçlara erişebilir. Bu, MCP araçlarının agentik iş akışlarına sorunsuz entegrasyonunu gösterir — Supervisor dosyaların *nasıl* okunduğunu bilmek zorunda değildir, sadece `FileAgent` yapabildiğini bilir.
 
-**Başlatma Betiklerini Kullanma (Önerilen):**
+#### Demoyu Çalıştırma
 
-Başlatma betikleri kök `.env` dosyasından ortam değişkenlerini otomatik olarak yükler:
+Başlatma betikleri ortam değişkenlerini kök `.env` dosyasından otomatik yükler:
 
 **Bash:**
 ```bash
 cd 05-mcp
-chmod +x start.sh
-./start.sh
+chmod +x start-supervisor.sh
+./start-supervisor.sh
 ```
 
 **PowerShell:**
 ```powershell
 cd 05-mcp
-.\start.ps1
+.\start-supervisor.ps1
 ```
 
-**VS Code Kullanımı:** `SupervisorAgentDemo.java` dosyasına sağ tıklayıp **"Run Java"** seçin (`.env` dosyanızın yapılandırıldığından emin olun).
+**VS Code Kullanarak:** `SupervisorAgentDemo.java` üzerinde sağ tıklayın ve **"Run Java"** seçin (env dosyanız ayarlı olmalı).
 
-**Süpervizörün Çalışma Prensibi:**
+#### Supervisor Nasıl Çalışır
 
 ```java
-// Belirli yeteneklere sahip birden fazla ajan tanımla
+// Adım 1: FileAgent MCP araçlarını kullanarak dosyaları okur
 FileAgent fileAgent = AgenticServices.agentBuilder(FileAgent.class)
         .chatModel(model)
         .toolProvider(mcpToolProvider)  // Dosya işlemleri için MCP araçlarına sahiptir
         .build();
 
-AnalysisAgent analysisAgent = AgenticServices.agentBuilder(AnalysisAgent.class)
+// Adım 2: ReportAgent yapılandırılmış raporlar oluşturur
+ReportAgent reportAgent = AgenticServices.agentBuilder(ReportAgent.class)
         .chatModel(model)
         .build();
 
-SummaryAgent summaryAgent = AgenticServices.agentBuilder(SummaryAgent.class)
-        .chatModel(model)
-        .build();
-
-// Bu ajanları koordine eden bir Denetleyici oluştur
+// Supervisor dosya → rapor iş akışını düzenler
 SupervisorAgent supervisor = AgenticServices.supervisorBuilder()
-        .chatModel(model)  // "planlayıcı" modeli
-        .subAgents(fileAgent, analysisAgent, summaryAgent)
-        .responseStrategy(SupervisorResponseStrategy.SUMMARY)
+        .chatModel(model)
+        .subAgents(fileAgent, reportAgent)
+        .responseStrategy(SupervisorResponseStrategy.LAST)  // Nihai raporu döndürür
         .build();
 
-// Denetleyici hangi ajanların çağrılacağına özerk olarak karar verir
-// Sadece doğal dilde bir istek iletin - LLM yürütmeyi planlar
-String response = supervisor.invoke("Read the file at /path/file.txt and analyze it");
+// Supervisor isteğe bağlı olarak hangi ajanların çağrılacağına karar verir
+String response = supervisor.invoke("Read the file at /path/file.txt and generate a report");
 ```
+
+#### Yanıt Stratejileri
+
+Bir `SupervisorAgent` yapılandırırken, alt ajanların görevlerini tamamladıktan sonra kullanıcıya nihai cevabı nasıl oluşturacağını belirlersiniz. Mevcut stratejiler:
+
+| Strateji | Açıklama |
+|----------|----------|
+| **LAST** | Supervisor çağrılan son alt ajan veya aracın çıktısını döner. Bu, iş akışındaki son ajanın tüm nihai cevabı üretmek üzere özel olarak tasarlandığı durumlarda yararlıdır (örneğin araştırma hattındaki "Özet Ajan"). |
+| **SUMMARY** | Supervisor kendi iç LLM’sini kullanarak tüm etkileşimin ve alt ajan çıktıların özetini sentezler, sonra bu özeti nihai yanıt olarak döner. Kullanıcıya temiz ve toplu bir yanıt sağlar. |
+| **SCORED** | Sistem, orijinal kullanıcı isteğine göre hem LAST yanıtını hem SUMMARY’yi içeren LLM skorlaması yapar, daha yüksek skoru alan çıktıyı döner. |
 
 Tam uygulama için [SupervisorAgentDemo.java](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) dosyasına bakın.
 
-> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile deneyin:** Açın [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) ve sorun:
-> - "Süpervizör hangi ajanları çağıracağına nasıl karar veriyor?"
-> - "Süpervizör ile Sıralı iş akışı desenleri arasındaki fark nedir?"
-> - "Süpervizörün planlama davranışını nasıl özelleştirebilirim?"
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Sohbeti ile Deneyin:** [`SupervisorAgentDemo.java`](../../../05-mcp/src/main/java/com/example/langchain4j/mcp/SupervisorAgentDemo.java) dosyasını açın ve sorun:
+> - "Supervisor hangi ajanların çağrılacağına nasıl karar veriyor?"
+> - "Supervisor ile Sıralı iş akışı kalıpları arasındaki fark nedir?"
+> - "Supervisor'ün planlama davranışını nasıl özelleştirebilirim?"
 
-#### Çıktıyı Anlamak
+#### Çıktının Anlaşılması
 
-Demo'yu çalıştırdığınızda, Süpervizörün birden fazla ajanın nasıl orkestre edildiğine dair yapılandırılmış bir yürütmeyi göreceksiniz. Her bölümün ne anlama geldiği:
+Demoyu çalıştırdığınızda Supervisor’ün birden çok ajanı nasıl organize ettiğine dair yapılandırılmış bir yürüyüş görürsünüz. Her bölümün anlamı şudur:
 
 ```
 ======================================================================
-  SUPERVISOR AGENT DEMO
+  FILE → REPORT WORKFLOW DEMO
 ======================================================================
 
-This demo shows how a Supervisor Agent orchestrates multiple specialized agents.
-The Supervisor uses an LLM to decide which agent to call based on the task.
+This demo shows a clear 2-step workflow: read a file, then generate a report.
+The Supervisor orchestrates the agents automatically based on the request.
 ```
 
-**Başlık** demo'yu tanıtır ve temel kavramı açıklar: Süpervizör hangi ajanları çağıracağına karar vermek için sert kurallar yerine bir LLM kullanır.
+**Başlık** iş akışı kavramını tanıtır: dosya okumadan rapor oluşturmaya odaklı bir hat.
 
 ```
+--- WORKFLOW ---------------------------------------------------------
+  ┌─────────────┐      ┌──────────────┐
+  │  FileAgent  │ ───▶ │ ReportAgent  │
+  │ (MCP tools) │      │  (pure LLM)  │
+  └─────────────┘      └──────────────┘
+   outputKey:           outputKey:
+   'fileContent'        'report'
+
 --- AVAILABLE AGENTS -------------------------------------------------
-  [FILE]     FileAgent     - Reads files using MCP filesystem tools
-  [ANALYZE]  AnalysisAgent - Analyzes content for structure, tone, and themes
-  [SUMMARY]  SummaryAgent  - Creates concise summaries of content
+  [FILE]   FileAgent   - Reads files via MCP → stores in 'fileContent'
+  [REPORT] ReportAgent - Generates structured report → stores in 'report'
 ```
 
-**Mevcut Ajanlar** Süpervizörün seçebileceği üç uzmanlaşmış ajanı gösterir. Her ajanın belirli bir yeteneği vardır:
-- **FileAgent** MCP araçlarını kullanarak dosyaları okuyabilir (harici yetenek)
-- **AnalysisAgent** içeriği analiz eder (saf LLM yeteneği)
-- **SummaryAgent** özetler oluşturur (saf LLM yeteneği)
+**İş Akışı Diyagramı** ajanlar arasındaki veri akışını gösterir. Her ajanın belirli bir rolü vardır:
+- **FileAgent** MCP araçları kullanarak dosyaları okur ve raw içeriği `fileContent` olarak depolar
+- **ReportAgent** bu içeriği kullanır ve `report` içinde yapılandırılmış bir rapor üretir
 
 ```
 --- USER REQUEST -----------------------------------------------------
-  "Read the file at .../file.txt and analyze what it's about"
+  "Read the file at .../file.txt and generate a report on its contents"
 ```
 
-**Kullanıcı İsteği** ne istendiğini gösterir. Süpervizör bunu çözümlemeli ve hangi ajanları çağıracağına karar vermelidir.
+**Kullanıcı Talebi** görevi gösterir. Supervisor bunu çözümler ve FileAgent → ReportAgent çağırmaya karar verir.
 
 ```
 --- SUPERVISOR ORCHESTRATION -----------------------------------------
-  The Supervisor will now decide which agents to invoke and in what order...
+  The Supervisor decides which agents to invoke and passes data between them...
 
   +-- STEP 1: Supervisor chose -> FileAgent (reading file via MCP)
   |
   |   Input: .../file.txt
   |
-  |   Result: LangChain4j is an open-source Java library designed to simplify...
+  |   Result: LangChain4j is an open-source, provider-agnostic Java framework for building LLM...
   +-- [OK] FileAgent (reading file via MCP) completed
 
-  +-- STEP 2: Supervisor chose -> AnalysisAgent (analyzing content)
+  +-- STEP 2: Supervisor chose -> ReportAgent (generating structured report)
   |
-  |   Input: LangChain4j is an open-source Java library...
+  |   Input: LangChain4j is an open-source, provider-agnostic Java framew...
   |
-  |   Result: Structure: The content is organized into clear paragraphs that int...
-  +-- [OK] AnalysisAgent (analyzing content) completed
+  |   Result: Executive Summary...
+  +-- [OK] ReportAgent (generating structured report) completed
 ```
 
-**Süpervizör Orkestrasyonu** sihrin olduğu yerdir. Şu adımlara dikkat edin:
-1. Süpervizör **önce FileAgent'i seçti**, çünkü istek "dosyayı oku" ifadesini içeriyordu
-2. FileAgent dosya içeriğini almak için MCP'nin `read_file` aracını kullandı
-3. Süpervizör daha sonra **AnalysisAgent'i seçti** ve dosya içeriğini ona iletti
-4. AnalysisAgent yapı, ton ve temaları analiz etti
+**Supervisor Orkestrasyonu** 2 adımlı iş akışını gösterir:
+1. **FileAgent** dosyayı MCP üzerinden okur ve içeriği depolar
+2. **ReportAgent** içeriği alır ve yapılandırılmış rapor oluşturur
 
-Süpervizörün bu kararları kullanıcının isteğine dayanarak **otonom şekilde** verdiğine dikkat edin — sabitlenmiş bir iş akışı yok!
-
-**Nihai Yanıt** Süpervizörün çağırdığı tüm ajanların çıktılarını birleştirerek sentezlediği cevaptır. Örnek, her ajanın kaydettiği özet ve analiz sonuçlarını gösteren agentic kapsamını döker.
+Supervisor kullanıcının isteğine dayalı **bağımsız** olarak bu kararları verdi.
 
 ```
 --- FINAL RESPONSE ---------------------------------------------------
-I read the contents of the file and analyzed its structure, tone, and key themes.
-The file introduces LangChain4j as an open-source Java library for integrating
-large language models...
+Executive Summary
+...
 
---- AGENTIC SCOPE (Shared Memory) ------------------------------------
-  Agents store their results in a shared scope for other agents to use:
-  * summary: LangChain4j is an open-source Java library...
-  * analysis: Structure: The content is organized into clear paragraphs that in...
+Key Points
+...
+
+Recommendations
+...
+
+--- AGENTIC SCOPE (Data Flow) ----------------------------------------
+  Each agent stores its output for downstream agents to consume:
+  * fileContent: LangChain4j is an open-source, provider-agnostic Java framework...
+  * report: Executive Summary...
 ```
 
-### Agentic Modül Özelliklerinin Açıklaması
+#### Agentik Modül Özelliklerinin Açıklanması
 
-Örnek, agentic modülün birkaç gelişmiş özelliğini gösterir. Agentic Scope ve Agent Dinleyicilerini daha yakından inceleyelim.
+Örnek agentik modülün birkaç gelişmiş özelliğini gösterir. Agentic Scope ve Agent Dinleyicilerine yakından bakalım.
 
 **Agentic Scope** ajanların `@Agent(outputKey="...")` kullanarak sonuçlarını depoladığı paylaşılan belleği gösterir. Bu şunları sağlar:
-- Sonraki ajanların önceki ajanların çıktısına erişebilmesi
-- Süpervizörün nihai bir yanıt sentezlemesi
-- Her ajanın ne ürettiğini inceleyebilmeniz
+- Sonraki ajanların önceki ajan çıktılarına erişimi
+- Supervisor’ün nihai yanıtı sentezlemesi
+- Üretileni inceleyebilmeniz
 
 ```java
 ResultWithAgenticScope<String> result = supervisor.invokeWithAgenticScope(request);
 AgenticScope scope = result.agenticScope();
-String story = scope.readState("story");
-List<AgentInvocation> history = scope.agentInvocations("analysisAgent");
+String fileContent = scope.readState("fileContent");  // FileAgent'ten ham dosya verisi
+String report = scope.readState("report");            // ReportAgent'ten yapılandırılmış rapor
 ```
 
-**Agent Dinleyicileri** ajan yürütmesini izleme ve hata ayıklama imkanı sağlar. Demoda gördüğünüz adım adım çıktı, her ajan çağrısına bağlanan bir AgentListener'dan gelir:
-- **beforeAgentInvocation** - Süpervizör bir ajan seçtiğinde çağrılır; hangi ajanın seçildiğini ve nedenini görmenizi sağlar
-- **afterAgentInvocation** - Bir ajan tamamlandığında çağrılır; sonucunu gösterir
-- **inheritedBySubagents** - True olduğunda, dinleyici hiyerarşideki tüm ajanları izler
+**Agent Dinleyiciler** ajan yürütmesini izleme ve hata ayıklama sağlar. Demoda gördüğünüz adım adım çıktı, her ajan çağrısına bağlanan bir AgentListener’dan gelir:
+- **beforeAgentInvocation** - Supervisor bir ajan seçtiğinde çağrılır, hangi ajanın niçin seçildiğini görmenizi sağlar
+- **afterAgentInvocation** - Bir ajan tamamlandığında çağrılır, sonucunu gösterir
+- **inheritedBySubagents** - true ise hiyerarşideki tüm ajanları izler
 
 ```java
 AgentListener monitor = new AgentListener() {
@@ -341,49 +363,50 @@ AgentListener monitor = new AgentListener() {
     
     @Override
     public boolean inheritedBySubagents() {
-        return true; // Tüm alt ajanlara ilet
+        return true; // Tüm alt ajanlara yayılacak
     }
 };
 ```
 
-Süpervizör deseninin ötesinde, `langchain4j-agentic` modülü birkaç güçlü iş akışı deseni ve özellik sağlar:
+Supervisor kalıbının ötesinde, `langchain4j-agentic` modülü birçok güçlü iş akışı kalıbı ve özellik sunar:
 
-| Pattern | Description | Use Case |
+| Kalıp | Açıklama | Kullanım Durumu |
 |---------|-------------|----------|
-| **Sequential** | Execute agents in order, output flows to next | Pipelines: research → analyze → report |
-| **Parallel** | Run agents simultaneously | Independent tasks: weather + news + stocks |
-| **Loop** | Iterate until condition met | Quality scoring: refine until score ≥ 0.8 |
-| **Conditional** | Route based on conditions | Classify → route to specialist agent |
-| **Human-in-the-Loop** | Add human checkpoints | Approval workflows, content review |
+| **Sıralı** | Ajanları sırayla çalıştırır, çıktı sonraki adıma akar | Hatlar: araştırma → analiz → rapor |
+| **Paralel** | Ajanları eşzamanlı çalıştırır | Bağımsız görevler: hava durumu + haberler + borsa |
+| **Döngü** | Koşul sağlanana kadar iterasyon yapar | Kalite puanlama: skor ≥ 0.8 olana kadar iyileştir |
+| **Koşullu** | Koşullara göre yönlendirir | Sınıflandır → uzman ajanına yönlendir |
+| **İnsan-Dahil** | İnsan onay noktaları ekler | Onay iş akışları, içerik inceleme |
 
-## Ana Kavramlar
+## Temel Kavramlar
 
-**MCP** mevcut araç ekosistemlerinden yararlanmak, birden çok uygulamanın paylaşabileceği araçlar oluşturmak, üçüncü taraf hizmetleri standart protokollerle entegre etmek veya araç uygulamalarını kodu değiştirmeden değiştirmek istediğinizde idealdir.
+Artık MCP ve agentik modülü eylem halinde keşfettiğinize göre, her yaklaşımı ne zaman kullanacağınızı özetleyelim.
 
-**Agentic Modül** `@Agent` açıklamalarıyla deklaratif ajan tanımları istediğinizde, iş akışı orkestrasyonuna (sıralı, döngü, paralel) ihtiyaç duyduğunuzda, interface tabanlı ajan tasarımını zorlayıcı koda tercih ettiğinizde veya birden çok ajanın `outputKey` aracılığıyla çıktı paylaştığı durumlarda en iyi şekilde çalışır.
+**MCP**, mevcut araç ekosistemlerinden yararlanmak, birçok uygulamanın paylaşabileceği araçlar geliştirmek, üçüncü taraf hizmetleri standart protokollerle entegre etmek veya kod değiştirmeden araç uygulamalarını değiştirmek istediğinizde idealdir.
 
-**Süpervizör Ajan deseni** iş akışının önceden tahmin edilemediği ve LLM'nin karar vermesini istediğinizde, birden fazla uzmanlaşmış ajanın dinamik orkestrasyona ihtiyaç duyduğu durumlarda, farklı yeteneklere yönlendiren konuşma sistemleri oluştururken veya en esnek, uyumlu ajan davranışını istediğinizde öne çıkar.
+**Agentik Modül**, `@Agent` anotasyonları ile deklaratif ajan tanımları yapmak, iş akışı orkestrasyonu (sıralı, döngü, paralel) gerektiren, etkin arayüz tabanlı ajan tasarımını tercih eden veya `outputKey` ile çıktı paylaşan birden çok ajanı bir araya getiren projeler için uygundur.
 
+**Supervisor Agent kalıbı**, iş akışı önceden tahmin edilemez olduğunda ve karar vermek için LLM’nin devreye girmesini istediğinizde, birden çok uzmanlaşmış ajanın dinamik yönlendirmeye ihtiyaç duyduğu durumlarda, farklı yeteneklere yönlendiren konuşma sistemleri kurarken veya en esnek, adaptif ajan davranışını istediğinizde öne çıkar.
 ## Tebrikler!
 
 LangChain4j for Beginners kursunu tamamladınız. Şunları öğrendiniz:
 
-- Belleğe sahip konuşma tabanlı AI nasıl inşa edilir (Modül 01)
-- Farklı görevler için prompt mühendisliği desenleri (Modül 02)
-- RAG ile cevapları belgelerinizde temelleme (Modül 03)
-- Özel araçlarla temel AI ajanları (asistanlar) oluşturma (Modül 04)
-- LangChain4j MCP ve Agentic modülleri ile standartlaştırılmış araçların entegrasyonu (Modül 05)
+- Bellek ile sohbet bazlı yapay zeka nasıl kurulur (Modül 01)
+- Farklı görevler için istem mühendisliği kalıpları (Modül 02)
+- Yanıtları belgelerinizle temellendirme (RAG) (Modül 03)
+- Özel araçlarla temel yapay zeka ajanları (asistanlar) oluşturma (Modül 04)
+- LangChain4j MCP ve Agentic modülleri ile standart araçları entegre etme (Modül 05)
 
-### Sonraki Adımlar?
+### Sonrası?
 
-Modülleri tamamladıktan sonra, LangChain4j test kavramlarının uygulamada nasıl çalıştığını görmek için [Test Kılavuzu](../docs/TESTING.md) bölümünü inceleyin.
+Modülleri tamamladıktan sonra, LangChain4j test kavramlarını uygulamada görmek için [Testing Guide](../docs/TESTING.md) rehberini keşfedin.
 
 **Resmi Kaynaklar:**
-- [LangChain4j Documentation](https://docs.langchain4j.dev/) - Kapsamlı kılavuzlar ve API referansı
+- [LangChain4j Documentation](https://docs.langchain4j.dev/) - Kapsamlı rehberler ve API referansı
 - [LangChain4j GitHub](https://github.com/langchain4j/langchain4j) - Kaynak kodu ve örnekler
-- [LangChain4j Tutorials](https://docs.langchain4j.dev/tutorials/) - Farklı kullanım senaryoları için adım adım öğreticiler
+- [LangChain4j Tutorials](https://docs.langchain4j.dev/tutorials/) - Çeşitli kullanım senaryoları için adım adım eğitimler
 
-Kursu tamamladığınız için teşekkür ederiz!
+Bu kursu tamamladığınız için teşekkürler!
 
 ---
 
@@ -392,6 +415,6 @@ Kursu tamamladığınız için teşekkür ederiz!
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Sorumluluk Reddi:
-Bu belge, yapay zeka çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluğa özen göstermemize rağmen, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, ana dilindeki hali yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi tavsiye edilir. Bu çevirinin kullanılmasından kaynaklanan herhangi bir yanlış anlama veya yanlış yorumdan sorumlu değiliz.
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımıyla ortaya çıkabilecek yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

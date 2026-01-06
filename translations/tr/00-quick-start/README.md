@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "377b3e3e6f8d02965bf0fbbc9ccb45c5",
-  "translation_date": "2025-12-13T14:54:56+00:00",
+  "original_hash": "22b5d7c8d7585325e38b37fd29eafe25",
+  "translation_date": "2026-01-05T23:17:28+00:00",
   "source_file": "00-quick-start/README.md",
   "language_code": "tr"
 }
@@ -16,46 +16,47 @@ CO_OP_TRANSLATOR_METADATA:
 - [LangChain4j Bağımlılıkları](../../../00-quick-start)
 - [Ön Koşullar](../../../00-quick-start)
 - [Kurulum](../../../00-quick-start)
-  - [1. GitHub Token'ınızı Alın](../../../00-quick-start)
-  - [2. Token'ınızı Ayarlayın](../../../00-quick-start)
-- [Örnekleri Çalıştırın](../../../00-quick-start)
+  - [1. GitHub Tokenınızı Alın](../../../00-quick-start)
+  - [2. Tokenınızı Ayarlayın](../../../00-quick-start)
+- [Örnekleri Çalıştırma](../../../00-quick-start)
   - [1. Temel Sohbet](../../../00-quick-start)
-  - [2. İstem Desenleri](../../../00-quick-start)
+  - [2. İleti Şablonları](../../../00-quick-start)
   - [3. Fonksiyon Çağrısı](../../../00-quick-start)
-  - [4. Belge Soru-Cevap (RAG)](../../../00-quick-start)
-- [Her Örnek Ne Gösteriyor](../../../00-quick-start)
+  - [4. Doküman Soru-Cevap (RAG)](../../../00-quick-start)
+  - [5. Sorumlu AI](../../../00-quick-start)
+- [Her Örnek Neyi Gösteriyor](../../../00-quick-start)
 - [Sonraki Adımlar](../../../00-quick-start)
 - [Sorun Giderme](../../../00-quick-start)
 
 ## Giriş
 
-Bu hızlı başlangıç, LangChain4j ile mümkün olan en hızlı şekilde çalışmaya başlamanız için tasarlanmıştır. LangChain4j ve GitHub Modelleri ile AI uygulamaları oluşturmanın temelini kapsar. Sonraki modüllerde Azure OpenAI'yi LangChain4j ile kullanarak daha gelişmiş uygulamalar inşa edeceksiniz.
+Bu hızlı başlangıç, sizi LangChain4j ile mümkün olan en hızlı şekilde çalışır duruma getirmek için tasarlanmıştır. LangChain4j ve GitHub Modelleri ile AI uygulamaları oluşturmanın temelini kapsar. Sonraki modüllerde LangChain4j ile Azure OpenAI kullanarak daha gelişmiş uygulamalar inşa edeceksiniz.
 
 ## LangChain4j Nedir?
 
 LangChain4j, AI destekli uygulamalar oluşturmayı basitleştiren bir Java kütüphanesidir. HTTP istemcileri ve JSON ayrıştırma ile uğraşmak yerine, temiz Java API'leri ile çalışırsınız.
 
-LangChain'deki "zincir", birden çok bileşeni birbirine bağlamayı ifade eder - bir istemi modele, modele bir ayrıştırıcıya bağlayabilir veya bir çıktının sonraki girdiye beslendiği birden çok AI çağrısını zincirleyebilirsiniz. Bu hızlı başlangıç, daha karmaşık zincirleri keşfetmeden önce temelleri ele alır.
+LangChain'deki "zincir", birbirine bağlı birden çok bileşeni ifade eder - bir istemciyi modele, modele bir ayrıştırıcıya bağlayabilir veya bir çıktının sonraki girdiye beslendiği birden çok AI çağrısını zincirleyebilirsiniz. Bu hızlı başlangıç daha karmaşık zincirleri keşfetmeden önce temel kavramlara odaklanır.
 
 <img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.tr.png" alt="LangChain4j Zincirleme Konsepti" width="800"/>
 
-*LangChain4j'de bileşenlerin zincirlenmesi - yapı taşları güçlü AI iş akışları oluşturmak için bağlanır*
+*LangChain4j'da bileşenleri zincirleme - güçlü AI iş akışları oluşturmak için yapı taşları bağlanır*
 
 Üç temel bileşen kullanacağız:
 
-**ChatLanguageModel** - AI model etkileşimleri için arayüz. `model.chat("prompt")` çağırın ve bir yanıt dizesi alın. OpenAI uyumlu uç noktalarla çalışan `OpenAiOfficialChatModel` kullanıyoruz, GitHub Modelleri gibi.
+**ChatLanguageModel** - AI model etkileşimleri için arayüz. `model.chat("prompt")` çağırın ve bir yanıt dizesi alın. OpenAI uyumlu uç noktalarla çalışan `OpenAiOfficialChatModel` kullanıyoruz, GitHub Modelleri de bu şekilde.
 
-**AiServices** - Tür güvenli AI servis arayüzleri oluşturur. Metotları tanımlayın, `@Tool` ile not edin ve LangChain4j orkestrasyonu halleder. AI gerektiğinde Java metotlarınızı otomatik çağırır.
+**AiServices** - Tip güvenliği olan AI servis arayüzleri oluşturur. Metodları tanımlayın, `@Tool` ile not edin ve LangChain4j orkestrasyonu halleder. AI gerektiğinde otomatik olarak Java metodlarınızı çağırır.
 
-**MessageWindowChatMemory** - Konuşma geçmişini korur. Bunu kullanmazsanız, her istek bağımsızdır. Kullanırsanız, AI önceki mesajları hatırlar ve birden çok tur boyunca bağlamı sürdürür.
+**MessageWindowChatMemory** - Konuşma geçmişini tutar. Bunu kullanmazsanız her istek bağımsızdır. Bunu kullandığınızda AI önceki mesajları hatırlar ve çoklu tur arasında bağlam sağlar.
 
 <img src="../../../translated_images/architecture.eedc993a1c576839.tr.png" alt="LangChain4j Mimarisi" width="800"/>
 
-*LangChain4j mimarisi - temel bileşenler AI uygulamalarınızı güçlendirmek için birlikte çalışır*
+*LangChain4j mimarisi - temel bileşenler birlikte çalışarak AI uygulamalarınızı güçlendirir*
 
 ## LangChain4j Bağımlılıkları
 
-Bu hızlı başlangıç, [`pom.xml`](../../../00-quick-start/pom.xml) dosyasında iki Maven bağımlılığı kullanır:
+Bu hızlı başlangıç [`pom.xml`](../../../00-quick-start/pom.xml) dosyasında iki Maven bağımlılığı kullanır:
 
 ```xml
 <!-- Core LangChain4j library -->
@@ -70,66 +71,66 @@ Bu hızlı başlangıç, [`pom.xml`](../../../00-quick-start/pom.xml) dosyasınd
     <artifactId>langchain4j-open-ai-official</artifactId> <!-- Inherited from BOM in root pom.xml -->
 </dependency>
 ```
-
-`langchain4j-open-ai-official` modülü, OpenAI uyumlu API'lere bağlanan `OpenAiOfficialChatModel` sınıfını sağlar. GitHub Modelleri aynı API formatını kullandığından özel bir adaptöre gerek yoktur - sadece temel URL'yi `https://models.github.ai/inference` olarak ayarlayın.
+  
+`langchain4j-open-ai-official` modülü, OpenAI uyumlu API'lara bağlanan `OpenAiOfficialChatModel` sınıfını sağlar. GitHub Modelleri aynı API formatını kullandığı için özel bir adaptöre gerek yoktur - sadece temel URL'yi `https://models.github.ai/inference` olarak işaretleyin.
 
 ## Ön Koşullar
 
-**Geliştirici Konteyneri mi Kullanıyorsunuz?** Java ve Maven zaten yüklüdür. Sadece bir GitHub Kişisel Erişim Token'ına ihtiyacınız var.
+**Geliştirme Kabını mı Kullanıyorsunuz?** Java ve Maven zaten kuruludur. Sadece bir GitHub Kişisel Erişim Tokenına ihtiyacınız var.
 
 **Yerel Geliştirme:**
 - Java 21+, Maven 3.9+
-- GitHub Kişisel Erişim Token'ı (aşağıdaki talimatlar)
+- GitHub Kişisel Erişim Tokenı (aşağıdaki talimatlar)
 
-> **Not:** Bu modül GitHub Modellerinden `gpt-4.1-nano` kullanır. Kodda model adını değiştirmeyin - GitHub'ın mevcut modelleriyle çalışacak şekilde yapılandırılmıştır.
+> **Not:** Bu modül GitHub Modellerinden `gpt-4.1-nano` kullanmaktadır. Kodda model adını değiştirmeyin - GitHub'ın mevcut modelleriyle çalışacak şekilde yapılandırılmıştır.
 
 ## Kurulum
 
-### 1. GitHub Token'ınızı Alın
+### 1. GitHub Tokenınızı Alın
 
-1. [GitHub Ayarları → Kişisel Erişim Tokenları](https://github.com/settings/personal-access-tokens) sayfasına gidin
-2. "Yeni token oluştur" butonuna tıklayın
-3. Anlamlı bir isim verin (örneğin, "LangChain4j Demo")
-4. Süre sonu ayarlayın (7 gün önerilir)
-5. "Hesap izinleri" altında "Modeller"i bulun ve "Salt okunur" olarak ayarlayın
-6. "Token oluştur" butonuna tıklayın
-7. Token'ınızı kopyalayın ve kaydedin - bir daha göremeyeceksiniz
+1. [GitHub Ayarları → Kişisel Erişim Tokenları](https://github.com/settings/personal-access-tokens) sayfasına gidin  
+2. "Yeni token oluştur" düğmesine tıklayın  
+3. Açıklayıcı bir isim verin (örneğin, "LangChain4j Demo")  
+4. Oluşum süresi belirleyin (7 gün önerilir)  
+5. "Hesap izinleri" altında "Models"i bulun ve "Yalnızca oku" olarak ayarlayın  
+6. "Token oluştur" düğmesine tıklayın  
+7. Token'ınızı kopyalayın ve kaydedin - tekrar göremeyeceksiniz  
 
-### 2. Token'ınızı Ayarlayın
+### 2. Tokenınızı Ayarlayın
 
-**Seçenek 1: VS Code Kullanarak (Önerilen)**
+**Seçenek 1: VS Code Kullanıyorsanız (Önerilen)**
 
-VS Code kullanıyorsanız, token'ınızı proje kökündeki `.env` dosyasına ekleyin:
+VS Code kullanıyorsanız, tokenınızı proje kökündeki `.env` dosyasına ekleyin.
 
-Eğer `.env` dosyası yoksa, `.env.example` dosyasını `.env` olarak kopyalayın veya proje kökünde yeni bir `.env` dosyası oluşturun.
+Eğer `.env` dosyası yoksa, `.env.example` dosyasını `.env` olarak kopyalayın veya kök klasörde yeni bir `.env` dosyası oluşturun.
 
 **Örnek `.env` dosyası:**
 ```bash
 # /workspaces/LangChain4j-for-Beginners/.env içinde
 GITHUB_TOKEN=your_token_here
 ```
-
-Sonra Explorer'da herhangi bir demo dosyasına (örneğin, `BasicChatDemo.java`) sağ tıklayıp **"Run Java"** seçeneğini kullanabilir veya Çalıştır ve Hata Ayıkla panelindeki başlatma yapılandırmalarını kullanabilirsiniz.
+  
+Ardından Gezginde herhangi bir demo dosyasına (örneğin `BasicChatDemo.java`) sağ tıklayıp **"Run Java"** seçeneğini kullanabilir veya Çalıştır ve Hata Ayıkla panelindeki başlatma yapılandırmalarını kullanabilirsiniz.
 
 **Seçenek 2: Terminal Kullanarak**
 
-Token'ı ortam değişkeni olarak ayarlayın:
+Token değerini çevresel değişken olarak ayarlayın:
 
 **Bash:**
 ```bash
 export GITHUB_TOKEN=your_token_here
 ```
-
+  
 **PowerShell:**
 ```powershell
 $env:GITHUB_TOKEN=your_token_here
 ```
+  
+## Örnekleri Çalıştırma
 
-## Örnekleri Çalıştırın
+**VS Code Kullanıyorsanız:** Gezginde herhangi bir demo dosyaya sağ tıklayın ve **"Run Java"** seçeneğini seçin veya Çalıştır ve Hata Ayıkla panelinden başlatma yapılandırmalarını kullanın (öncelikle tokenınızı `.env` dosyasına eklediğinizden emin olun).
 
-**VS Code Kullanarak:** Explorer'da herhangi bir demo dosyasına sağ tıklayıp **"Run Java"** seçeneğini seçin veya Çalıştır ve Hata Ayıkla panelindeki başlatma yapılandırmalarını kullanın (önce token'ınızı `.env` dosyasına eklediğinizden emin olun).
-
-**Maven Kullanarak:** Alternatif olarak, komut satırından çalıştırabilirsiniz:
+**Maven Kullanarak:** Alternatif olarak komut satırından çalıştırabilirsiniz:
 
 ### 1. Temel Sohbet
 
@@ -137,25 +138,25 @@ $env:GITHUB_TOKEN=your_token_here
 ```bash
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
-
+  
 **PowerShell:**
 ```powershell
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
-
-### 2. İstem Desenleri
+  
+### 2. İleti Şablonları
 
 **Bash:**
 ```bash
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.PromptEngineeringDemo
 ```
-
+  
 **PowerShell:**
 ```powershell
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.PromptEngineeringDemo
 ```
-
-Sıfır atış, az atış, düşünce zinciri ve rol tabanlı istemleri gösterir.
+  
+Sıfır örnek (zero-shot), az örnek (few-shot), zincirleme düşünce (chain-of-thought) ve rol tabanlı istemleri gösterir.
 
 ### 3. Fonksiyon Çağrısı
 
@@ -163,33 +164,47 @@ Sıfır atış, az atış, düşünce zinciri ve rol tabanlı istemleri gösteri
 ```bash
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIntegrationDemo
 ```
-
+  
 **PowerShell:**
 ```powershell
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ToolIntegrationDemo
 ```
+  
+AI gerektiğinde Java metodlarınızı otomatik olarak çağırır.
 
-AI gerektiğinde Java metotlarınızı otomatik çağırır.
-
-### 4. Belge Soru-Cevap (RAG)
+### 4. Doküman Soru-Cevap (RAG)
 
 **Bash:**
 ```bash
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.SimpleReaderDemo
 ```
-
+  
 **PowerShell:**
 ```powershell
 mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.SimpleReaderDemo
 ```
+  
+`document.txt` içeriği ile ilgili sorular sorun.
 
-`document.txt` içeriği hakkında sorular sorun.
+### 5. Sorumlu AI
 
-## Her Örnek Ne Gösteriyor
+**Bash:**
+```bash
+mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
+```
+  
+**PowerShell:**
+```powershell
+mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.ResponsibleAIDemo
+```
+  
+AI güvenlik filtrelerinin zararlı içeriği nasıl engellediğini görün.
+
+## Her Örnek Neyi Gösteriyor
 
 **Temel Sohbet** - [BasicChatDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java)
 
-LangChain4j'nin en basit haliyle nasıl çalıştığını görmek için buradan başlayın. Bir `OpenAiOfficialChatModel` oluşturacak, `.chat()` ile bir istem gönderecek ve yanıt alacaksınız. Bu, özel uç noktalar ve API anahtarları ile modelleri nasıl başlatacağınızı gösterir. Bu kalıbı anladıktan sonra her şey bunun üzerine inşa edilir.
+Buradan başlayın; LangChain4j'ın en basit haliyle nasıl çalıştığını görün. Bir `OpenAiOfficialChatModel` oluşturur, `.chat()` ile istem gönderir ve yanıt alırsınız. Bu temel modeli, özel uç noktalar ve API anahtarlarıyla nasıl başlatacağınızı gösterir. Bu modeli anladıktan sonra her şey bunun üzerine kurulur.
 
 ```java
 ChatLanguageModel model = OpenAiOfficialChatModel.builder()
@@ -201,15 +216,15 @@ ChatLanguageModel model = OpenAiOfficialChatModel.builder()
 String response = model.chat("What is LangChain4j?");
 System.out.println(response);
 ```
+  
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile Deneyin:** [`BasicChatDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) dosyasını açın ve sorun:  
+> - "GitHub Modellerinden Azure OpenAI'ye bu kodda nasıl geçiş yaparım?"  
+> - "OpenAiOfficialChatModel.builder() içinde hangi diğer parametreleri yapılandırabilirim?"  
+> - "Tam yanıtı beklemek yerine akışlı yanıtlar (streaming) nasıl eklerim?"
 
-> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile deneyin:** [`BasicChatDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/BasicChatDemo.java) dosyasını açın ve sorun:
-> - "Bu kodda GitHub Modellerinden Azure OpenAI'ye nasıl geçiş yaparım?"
-> - "OpenAiOfficialChatModel.builder() içinde hangi diğer parametreleri yapılandırabilirim?"
-> - "Tam yanıtı beklemek yerine akış yanıtları nasıl eklerim?"
+**İleti Mühendisliği** - [PromptEngineeringDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java)
 
-**İstem Mühendisliği** - [PromptEngineeringDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java)
-
-Artık bir modelle nasıl konuşacağınızı bildiğinize göre, ona ne söylediğinizi keşfedelim. Bu demo aynı model kurulumunu kullanır ancak dört farklı istem desenini gösterir. Doğrudan talimatlar için sıfır atış istemleri, örneklerden öğrenen az atış istemleri, mantık adımlarını ortaya koyan düşünce zinciri istemleri ve bağlam ayarlayan rol tabanlı istemleri deneyin. Aynı modelin, isteğinizi nasıl çerçevelediğinize bağlı olarak dramatik şekilde farklı sonuçlar verdiğini göreceksiniz.
+Artık modele nasıl konuşacağınızı bildiğinize göre, ona ne söylediğinizi keşfedelim. Bu demo aynı model kurulumu ile dört farklı istem deseni gösterir. Doğrudan yönergeler için sıfır örnek, örneklerden öğrenme için az örnek, mantık adımlarını gösteren zincirleme düşünce ve bağlam belirleyen rol tabanlı istemleri deneyin. Aynı modelin, isteğinizi nasıl sunduğunuza göre dramatik şekilde farklı sonuçlar verdiğini göreceksiniz.
 
 ```java
 PromptTemplate template = PromptTemplate.from(
@@ -223,16 +238,16 @@ Prompt prompt = template.apply(Map.of(
 
 String response = model.chat(prompt.text());
 ```
-
-> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile deneyin:** [`PromptEngineeringDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) dosyasını açın ve sorun:
-> - "Sıfır atış ve az atış istem arasındaki fark nedir ve hangisini ne zaman kullanmalıyım?"
-> - "Sıcaklık parametresi modelin yanıtlarını nasıl etkiler?"
-> - "Üretimde istem enjeksiyon saldırılarını önlemek için bazı teknikler nelerdir?"
-> - "Yaygın desenler için yeniden kullanılabilir PromptTemplate nesneleri nasıl oluşturabilirim?"
+  
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile Deneyin:** [`PromptEngineeringDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/PromptEngineeringDemo.java) dosyasını açın ve sorun:  
+> - "Sıfır örnek ile az örnek istem arasındaki fark nedir ve ne zaman kullanmalıyım?"  
+> - "Sıcaklık (temperature) parametresi model yanıtlarını nasıl etkiler?"  
+> - "Üretimde istem enjeksiyon saldırılarını önlemek için hangi teknikleri kullanabilirim?"  
+> - "Yaygın desenler için yeniden kullanılabilir PromptTemplate nesnelerini nasıl oluştururum?"
 
 **Araç Entegrasyonu** - [ToolIntegrationDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java)
 
-LangChain4j'nin güçlü olduğu yer burasıdır. `AiServices` kullanarak Java metotlarınızı çağırabilen bir AI asistanı oluşturacaksınız. Metotları sadece `@Tool("açıklama")` ile not edin ve LangChain4j gerisini halleder - AI, kullanıcının ne istediğine bağlı olarak hangi aracı kullanacağına otomatik karar verir. Bu, sadece soruları yanıtlamakla kalmayıp eylem alabilen AI oluşturmanın anahtarı olan fonksiyon çağrısını gösterir.
+Burada LangChain4j güçlü hale gelir. `AiServices` kullanarak Java metodlarınızı çağırabilen bir AI asistanı oluşturacaksınız. Metodları sadece `@Tool("açıklama")` ile not edin ve LangChain4j geri kalanını halleder - AI, kullanıcının isteğine göre hangi aracı ne zaman kullanacağını otomatik belirler. Bu, eylem gerçekleştirebilen, sadece soruları yanıtlamayan AI inşa etmenin anahtarı olan fonksiyon çağrısını gösterir.
 
 ```java
 @Tool("Performs addition of two numeric values")
@@ -243,16 +258,16 @@ public double add(double a, double b) {
 MathAssistant assistant = AiServices.create(MathAssistant.class, model);
 String response = assistant.chat("What is 25 plus 17?");
 ```
+  
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile Deneyin:** [`ToolIntegrationDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) dosyasını açın ve sorun:  
+> - "`@Tool` notasyonu nasıl çalışıyor ve LangChain4j arka planda bununla ne yapıyor?"  
+> - "AI karmaşık problemleri çözmek için birden çok aracı sırayla çağırabilir mi?"  
+> - "Bir araç hata fırlatırsa ne olur - hata yönetimini nasıl yapmalıyım?"  
+> - "Bu hesap makinesi örneği yerine gerçek bir API'yi nasıl entegre ederim?"
 
-> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile deneyin:** [`ToolIntegrationDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) dosyasını açın ve sorun:
-> - "@Tool notasyonu nasıl çalışır ve LangChain4j arka planda bununla ne yapar?"
-> - "AI, karmaşık problemleri çözmek için birden fazla aracı sırayla çağırabilir mi?"
-> - "Bir araç istisna fırlatırsa ne olur - hataları nasıl yönetmeliyim?"
-> - "Bu hesap makinesi örneği yerine gerçek bir API nasıl entegre ederim?"
+**Doküman Soru-Cevap (RAG)** - [SimpleReaderDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)
 
-**Belge Soru-Cevap (RAG)** - [SimpleReaderDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)
-
-Burada RAG (erişim destekli üretim) temelini göreceksiniz. Modelin eğitim verilerine güvenmek yerine, [`document.txt`](../../../00-quick-start/document.txt) içeriğini yükler ve isteme dahil edersiniz. AI, genel bilgisi yerine belgenize dayanarak yanıt verir. Bu, kendi verilerinizle çalışabilen sistemler oluşturmanın ilk adımıdır.
+Burada RAG’ın (erişim destekli üretim) temellerini göreceksiniz. Modelin eğitim verisine güvenmek yerine, [`document.txt`](../../../00-quick-start/document.txt) içeriğini yükleyip isteme dahil edersiniz. AI sorulara dokümanınıza dayanarak yanıt verir, genel bilgisine göre değil. Kendi verilerinizle çalışabilen sistemler kurmaya ilk adımdır.
 
 ```java
 Document document = FileSystemDocumentLoader.loadDocument("document.txt");
@@ -262,26 +277,48 @@ String prompt = "Based on this document: " + content +
                 "\nQuestion: What is the main topic?";
 String response = model.chat(prompt);
 ```
+  
+> **Not:** Bu basit yaklaşım tüm belgeyi isteğe yükler. Büyük dosyalar (>10KB) için bağlam sınırını aşarsınız. Modül 03, üretim RAG sistemleri için kırpma ve vektör arama konularını kapsar.
 
-> **Not:** Bu basit yaklaşım tüm belgeyi isteme yükler. Büyük dosyalar (>10KB) için bağlam sınırlarını aşarsınız. Modül 03, üretim RAG sistemleri için parçalara ayırma ve vektör aramayı kapsar.
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile Deneyin:** [`SimpleReaderDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) dosyasını açın ve sorun:  
+> - "RAG, AI halüsinasyonlarını model eğitimi ile karşılaştırıldığında nasıl önler?"  
+> - "Bu basit yöntem ile erişim için vektör gömme arasındaki fark nedir?"  
+> - "Bunu birden fazla doküman veya daha büyük bilgi tabanları için nasıl ölçeklendiririm?"  
+> - "AI’nın yalnızca verilen bağlamı kullanmasını sağlamak için istemi yapılandırmanın en iyi uygulamaları nelerdir?"
 
-> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile deneyin:** [`SimpleReaderDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java) dosyasını açın ve sorun:
-> - "RAG, AI halüsinasyonlarını modelin eğitim verilerini kullanmaya kıyasla nasıl önler?"
-> - "Bu basit yaklaşım ile vektör gömme kullanarak erişim arasındaki fark nedir?"
-> - "Bunu birden çok belge veya daha büyük bilgi tabanları için nasıl ölçeklendiririm?"
-> - "AI'nin sadece sağlanan bağlamı kullanmasını sağlamak için istemi yapılandırmanın en iyi uygulamaları nelerdir?"
+**Sorumlu AI** - [ResponsibleAIDemo.java](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java)
 
-## Hata Ayıklama
+Güvenli AI'yı çok katmanlı savunmayla oluşturun. Bu demo, birlikte çalışan iki koruma katmanını gösterir:
 
-Örneklerde `.logRequests(true)` ve `.logResponses(true)` kullanılarak API çağrıları konsolda gösterilir. Bu, kimlik doğrulama hataları, hız sınırları veya beklenmeyen yanıtları gidermeye yardımcı olur. Üretimde bu bayrakları kaldırarak günlük gürültüsünü azaltabilirsiniz.
+**Bölüm 1: LangChain4j Girdi Koruma Hatları (Input Guardrails)** - Tehlikeli istemlerin LLM’e ulaşmasını engeller. Yasaklı anahtar kelimeleri veya desenleri kontrol eden özel koruma hatları oluşturun. Bunlar kodunuzda çalışır, hızlı ve ücretsizdir.
+
+```java
+class DangerousContentGuardrail implements InputGuardrail {
+    @Override
+    public InputGuardrailResult validate(UserMessage userMessage) {
+        String text = userMessage.singleText().toLowerCase();
+        if (text.contains("explosives")) {
+            return fatal("Blocked: contains prohibited keyword");
+        }
+        return success();
+    }
+}
+```
+  
+**Bölüm 2: Sağlayıcı Güvenlik Filtreleri** - GitHub Modelleri, koruma hatlarınızın atlayabileceği şeyleri yakalayan yerleşik filtrelere sahiptir. Ağır ihlaller için sert engeller (HTTP 400 hataları) görürsünüz ve AI’nın kibarca reddettiği yumuşak reddedilmeler olur.
+
+> **🤖 [GitHub Copilot](https://github.com/features/copilot) Chat ile Deneyin:** [`ResponsibleAIDemo.java`](../../../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ResponsibleAIDemo.java) dosyasını açın ve sorun:  
+> - "InputGuardrail nedir ve kendi koruma hatlarımı nasıl oluştururum?"  
+> - "Sert engelleme ile yumuşak reddetme arasındaki fark nedir?"  
+> - "Neden hem koruma hatları hem sağlayıcı filtreleri birlikte kullanmalıyım?"
 
 ## Sonraki Adımlar
 
-**Sonraki Modül:** [01-introduction - LangChain4j ve Azure'da gpt-5 ile Başlarken](../01-introduction/README.md)
+**Sonraki Modül:** [01-introduction - LangChain4j ile Azure'da gpt-5'e Başlangıç](../01-introduction/README.md)
 
 ---
 
-**Gezinme:** [← Ana Sayfaya Dön](../README.md) | [Sonraki: Modül 01 - Giriş →](../01-introduction/README.md)
+**Geçiş:** [← Ana Sayfaya Dön](../README.md) | [Sonraki: Modül 01 - Giriş →](../01-introduction/README.md)
 
 ---
 
@@ -291,17 +328,16 @@ String response = model.chat(prompt);
 
 **Sorun:** İlk `mvn clean compile` veya `mvn package` uzun sürüyor (10-15 dakika)
 
-**Neden:** Maven, ilk derlemede tüm proje bağımlılıklarını (Spring Boot, LangChain4j kütüphaneleri, Azure SDK'ları vb.) indirir.
+**Neden:** Maven, ilk derlemede tüm proje bağımlılıklarını indirir (Spring Boot, LangChain4j kütüphaneleri, Azure SDK'ları vb.).
 
-**Çözüm:** Bu normal bir davranıştır. Sonraki derlemeler çok daha hızlı olacaktır çünkü bağımlılıklar yerel olarak önbelleğe alınır. İndirme süresi ağ hızınıza bağlıdır.
+**Çözüm:** Bu normaldir. Sonraki derlemeler çok daha hızlı olacaktır çünkü bağımlılıklar yerel olarak önbelleğe alınır. İndirme süresi ağ hızınıza bağlıdır.
 
 ### PowerShell Maven Komut Sözdizimi
 
-**Sorun:** Maven komutları `Unknown lifecycle phase ".mainClass=..."` hatası veriyor
+**Sorun:** Maven komutları `Unknown lifecycle phase ".mainClass=..."` hatasıyla başarısız oluyor
 
 **Neden:** PowerShell, `=` işaretini değişken atama operatörü olarak yorumlar ve Maven özellik sözdizimini bozar
-
-**Çözüm:** Maven komutundan önce durdurma ayrıştırma operatörü `--%` kullanın:
+**Çözüm**: Maven komutundan önce durdurma ayrıştırma operatörü `--%` kullanın:
 
 **PowerShell:**
 ```powershell
@@ -313,24 +349,30 @@ mvn --% compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.Ba
 mvn compile exec:java -Dexec.mainClass=com.example.langchain4j.quickstart.BasicChatDemo
 ```
 
-`--%` operatörü, PowerShell'e kalan tüm argümanları yorumlamadan doğrudan Maven'a iletmesini söyler.
+`--%` operatörü, PowerShell'e kalan tüm argümanları Maven'a yorumlamadan olduğu gibi geçmesini söyler.
 
 ### Windows PowerShell Emoji Görüntüleme
 
-**Sorun:** PowerShell'de AI yanıtları emoji yerine bozuk karakterler (örneğin, `????` veya `â??`) gösteriyor
+**Sorun**: AI yanıtlarında PowerShell’de emoji yerine garip karakterler (örn. `????` veya `â??`) görünmesi
 
-**Neden:** PowerShell'in varsayılan kodlaması UTF-8 emojilerini desteklemiyor
+**Neden**: PowerShell’in varsayılan kodlaması UTF-8 emojilerini desteklemiyor
 
-**Çözüm:** Java uygulamalarını çalıştırmadan önce bu komutu çalıştırın:
+**Çözüm**: Java uygulamalarını çalıştırmadan önce şu komutu kullanın:
 ```cmd
 chcp 65001
 ```
 
-Bu, terminalde UTF-8 kodlamasını zorlar. Alternatif olarak, daha iyi Unicode desteği olan Windows Terminal'i kullanabilirsiniz.
+Bu, terminalde UTF-8 kodlamasını zorlar. Alternatif olarak, daha iyi Unicode desteği olan Windows Terminal kullanabilirsiniz.
+
+### API Çağrılarında Hata Ayıklama
+
+**Sorun**: Kimlik doğrulama hataları, hız sınırları veya AI modelinden beklenmeyen yanıtlar
+
+**Çözüm**: Örneklerde `.logRequests(true)` ve `.logResponses(true)` ile API çağrıları konsolda gösteriliyor. Bu, kimlik doğrulama hataları, hız sınırları veya beklenmeyen yanıtların hata ayıklamasında yardımcı olur. Üretimde log gürültüsünü azaltmak için bu bayrakları kaldırın.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Feragatname**:  
-Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
+**Sorumluluk Reddi**:  
+Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba gösterilse de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucunda oluşabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
