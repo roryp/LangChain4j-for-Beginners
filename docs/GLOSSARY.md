@@ -168,7 +168,7 @@ Quick reference for terms and concepts used throughout the course.
 
 **Parallel Workflow** - Run multiple agents simultaneously for independent tasks.
 
-**Response Strategy** - How Supervisor formulates final answer: LAST, SUMMARY, or SCORED.
+**Response Strategy** - How supervisor formulates final answer: LAST, SUMMARY, or SCORED.
 
 **Sequential Workflow** - Execute agents in order where output flows to the next step.
 
