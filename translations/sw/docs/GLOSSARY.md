@@ -1,187 +1,241 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "52815c169081c357fd1cec7b260f37e4",
-  "translation_date": "2025-12-31T03:47:48+00:00",
+  "original_hash": "0c4ed0dd4b9db1aa5d6ac7cfd0c79ca4",
+  "translation_date": "2026-01-06T08:24:56+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "sw"
 }
 -->
-# LangChain4j Kamusi ya Maneno
+# Kamusi ya LangChain4j
 
-## Yaliyomo
+## Jedwali la Yaliyomo
 
-- [Misingi](../../../docs)
+- [Madhumuni ya Msingi](../../../docs)
 - [Vipengele vya LangChain4j](../../../docs)
-- [Dhana za AI/ML](../../../docs)
+- [Madhumuni ya AI/ML](../../../docs)
+- [Mikakati ya Ulinzi](../../../docs)
 - [Uhandisi wa Prompt](../../../docs)
-- [RAG (Uundaji Ulioimarishwa kwa Urejeshaji)](../../../docs)
-- [Wakala na Zana](../../../docs)
+- [RAG (Uundaji unaoendeshwa na Urejeshaji)](../../../docs)
+- [Wakala na Vifaa](../../../docs)
+- [Moduli ya Agentic](../../../docs)
 - [Itifaki ya Muktadha wa Mfano (MCP)](../../../docs)
 - [Huduma za Azure](../../../docs)
-- [Ujaribu na Maendeleo](../../../docs)
+- [Upimaji na Maendeleo](../../../docs)
 
-Rejea ya haraka kwa istilahi na dhana zinazotumika katika kozi.
+Rejea ya haraka kwa maneno na dhana zinazotumiwa katika kozi nzima.
 
-## Misingi
+## Madhumuni ya Msingi
 
-**AI Agent** - Mfumo unaotumia AI kufikiri na kutenda kwa uhuru. [Moduli 04](../04-tools/README.md)
+**AI Agent** - Mfumo unaotumia AI kufikiria na kutenda kwa uhuru. [Moduli 04](../04-tools/README.md)
 
-**Chain** - Mfululizo wa operesheni ambapo pato hutumika kama ingizo kwa hatua inayofuata.
+**Chain** - Mfuatano wa operesheni ambapo matokeo huchangia hatua inayofuata.
 
-**Chunking** - Kugawanya nyaraka katika vipande vidogo. Kawaida: tokens 300-500 zikiwa na sehemu zinazofanana (overlap). [Moduli 03](../03-rag/README.md)
+**Chunking** - Kugawanya hati katika vipande vidogo. Kawaida: tokeni 300-500 zenye kurudia. [Moduli 03](../03-rag/README.md)
 
-**Context Window** - Idadi kubwa ya tokens ambazo modeli inaweza kushughulikia. GPT-5: 400K tokens.
+**Context Window** - Idadi kubwa ya tokeni mfano unaweza kusindika. GPT-5: tokeni 400K.
 
-**Embeddings** - Vektor za nambari zinazoelezea maana ya maandishi. [Moduli 03](../03-rag/README.md)
+**Embeddings** - Vektor za nambari zinazoonyesha maana ya maandishi. [Moduli 03](../03-rag/README.md)
 
-**Function Calling** - Modeli inazalisha maombi yaliyopangwa ili kuita kazi za nje. [Moduli 04](../04-tools/README.md)
+**Function Calling** - Mfano huzaa maombi yaliyo sanifu ya kuita kazi za nje. [Moduli 04](../04-tools/README.md)
 
-**Hallucination** - Wakati modeli zinazalisha taarifa zisizo sahihi lakini zinazoonekana kuaminika.
+**Hallucination** - Wakati mifano huzaa taarifa zisizo sahihi lakini zinazoonekana kweli.
 
-**Prompt** - Ingizo la maandishi kwa modeli ya lugha. [Moduli 02](../02-prompt-engineering/README.md)
+**Prompt** - Mwingiliano wa maandishi kwa mfano wa lugha. [Moduli 02](../02-prompt-engineering/README.md)
 
-**Semantic Search** - Utafutaji kwa maana kwa kutumia embeddings, si maneno muhimu. [Moduli 03](../03-rag/README.md)
+**Semantic Search** - Utafutaji kwa maana ukitumia embeddings, si maneno makuu. [Moduli 03](../03-rag/README.md)
 
 **Stateful vs Stateless** - Stateless: hakuna kumbukumbu. Stateful: huhifadhi historia ya mazungumzo. [Moduli 01](../01-introduction/README.md)
 
-**Tokens** - Vitengo vya msingi vya maandishi vinavyosindikwa na modeli. Vinaathiri gharama na mipaka. [Moduli 01](../01-introduction/README.md)
+**Tokens** - Sehemu za msingi za maandishi zinazosindikwa na mifano. Huhusiana na gharama na vizingiti. [Moduli 01](../01-introduction/README.md)
 
-**Tool Chaining** - Utekelezaji wa zana kwa mfululizo ambapo pato linaelekeza mwito unaofuata. [Moduli 04](../04-tools/README.md)
+**Tool Chaining** - Utekelezaji wa zana kwa mfuatano ambapo matokeo hutumika katika wito lijalo. [Moduli 04](../04-tools/README.md)
 
 ## Vipengele vya LangChain4j
 
-**AiServices** - Inaunda interfaces za huduma za AI zenye usalama wa aina.
+**AiServices** - Huunda interfaces salama za aina kwa huduma za AI.
 
-**OpenAiOfficialChatModel** - Mteja mmoja kwa ajili ya modeli za OpenAI na Azure OpenAI.
+**OpenAiOfficialChatModel** - Mteja muunganiko wa mifano ya OpenAI na Azure OpenAI.
 
-**OpenAiOfficialEmbeddingModel** - Inaunda embeddings kwa kutumia mteja rasmi wa OpenAI (unaunga mkono OpenAI na Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Huunda embeddings kwa kutumia mteja wa OpenAI Rasmi (yanaunga mkono OpenAI na Azure OpenAI).
 
-**ChatModel** - Kiolesura kuu kwa modeli za lugha.
+**ChatModel** - Interface kuu kwa mifano ya lugha.
 
 **ChatMemory** - Huhifadhi historia ya mazungumzo.
 
-**ContentRetriever** - Hutafuta vipande vya nyaraka vinavyofaa kwa RAG.
+**ContentRetriever** - Huita vipande vya hati vinavyofaa kwa RAG.
 
-**DocumentSplitter** - Inagawa nyaraka kuwa vipande.
+**DocumentSplitter** - Huvunja hati katika vipande.
 
-**EmbeddingModel** - Inageuza maandishi kuwa vektor za nambari.
+**EmbeddingModel** - Hubadilisha maandishi kuwa vektor za nambari.
 
-**EmbeddingStore** - Inahifadhi na kurejesha embeddings.
+**EmbeddingStore** - Huhifadhi na kurejesha embeddings.
 
-**MessageWindowChatMemory** - Inadumisha dirisha linaloendelea la ujumbe wa hivi karibuni.
+**MessageWindowChatMemory** - Huhifadhi dirisha linaloelea la ujumbe wa hivi karibuni.
 
-**PromptTemplate** - Inaunda prompts zinazoweza kutumiwa tena zenye nafasi za `{{variable}}`.
+**PromptTemplate** - Hutiwa prompts zinazoweza kutumika tena zikiwa na sehemu za `{{variable}}`.
 
-**TextSegment** - Kipande cha maandishi chenye metadata. Inatumiwa katika RAG.
+**TextSegment** - Kipande cha maandishi chenye metadata. Kinatumika katika RAG.
 
-**ToolExecutionRequest** - Inawakilisha ombi la utekelezaji wa zana.
+**ToolExecutionRequest** - Huashiria ombi la kutekeleza zana.
 
 **UserMessage / AiMessage / SystemMessage** - Aina za ujumbe wa mazungumzo.
 
-## Dhana za AI/ML
+## Madhumuni ya AI/ML
 
-**Few-Shot Learning** - Kutoa mifano ndani ya prompts. [Moduli 02](../02-prompt-engineering/README.md)
+**Few-Shot Learning** - Kutoa mifano katika prompts. [Moduli 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - Modeli za AI zilizofunzwa kwa data kubwa ya maandishi.
+**Large Language Model (LLM)** - Mifano ya AI iliyofunzwa kwa kiasi kikubwa cha data za maandishi.
 
-**Reasoning Effort** - Parameta ya GPT-5 inayodhibiti kina cha fikra. [Moduli 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - Kigezo cha GPT-5 kinachosimamia kina cha fikra. [Moduli 02](../02-prompt-engineering/README.md)
 
-**Temperature** - Inadhibiti nasibu ya matokeo. Chini = utabiri, juu = ubunifu.
+**Temperature** - Huidhinisha nasibu ya matokeo. Chini=hakika, juu=ubunifu.
 
 **Vector Database** - Hifadhidata maalum kwa embeddings. [Moduli 03](../03-rag/README.md)
 
-**Zero-Shot Learning** - Kufanya kazi bila mifano. [Moduli 02](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - Kutenda kazi bila mifano. [Moduli 02](../02-prompt-engineering/README.md)
+
+## Mikakati ya Ulinzi - [Moduli 00](../00-quick-start/README.md)
+
+**Defense in Depth** - Njia ya usalama ya tabaka nyingi ikipangia miongozo ya usalama ya kiwango cha programu na vichujio vya usalama vya mtoaji.
+
+**Hard Block** - Mtoa huduma hutupa hitilafu ya HTTP 400 kwa ukiukaji mkubwa wa maudhui.
+
+**InputGuardrail** - Interface ya LangChain4j kwa kuhakiki ingizo la mtumiaji kabla halijafikia LLM. Hutoa akiba kwa gharama na ucheleweshaji kwa kuzuia prompts hatari mapema.
+
+**InputGuardrailResult** - Aina ya kurudisha kwa uthibitisho wa mlinzi: `success()` au `fatal("reason")`.
+
+**OutputGuardrail** - Interface ya kuhakiki majibu ya AI kabla ya kuyarejesha kwa watumiaji.
+
+**Provider Safety Filters** - Vichujio vya maudhui vilivyosanifiwa na watoa huduma wa AI (mfano, GitHub Models) vinavyoshika makosa katika ngazi ya API.
+
+**Soft Refusal** - Mfano hukataa kwa heshima kujawabu bila kutoa hitilafu.
 
 ## Uhandisi wa Prompt - [Moduli 02](../02-prompt-engineering/README.md)
 
-**Chain-of-Thought** - Ufikra wa hatua kwa hatua kwa usahihi bora.
+**Chain-of-Thought** - Maana ya baada ya hatua kwa usahihi bora.
 
-**Constrained Output** - Kulazimisha muundo au fomati maalum.
+**Constrained Output** - Kufikia muundo maalum au muundo.
 
-**High Eagerness** - Mtindo wa GPT-5 kwa fikra za kina.
+**High Eagerness** - Mabadiliko ya GPT-5 kwa fikra za kina.
 
-**Low Eagerness** - Mtindo wa GPT-5 kwa majibu ya haraka.
+**Low Eagerness** - Mabadiliko ya GPT-5 kwa majibu ya haraka.
 
-**Multi-Turn Conversation** - Kuhifadhi muktadha katika mabadilishano.
+**Multi-Turn Conversation** - Kuhifadhi muktadha katika mazungumzo.
 
-**Role-Based Prompting** - Kuweka persona ya modeli kupitia ujumbe wa mfumo.
+**Role-Based Prompting** - Kuweka hadhi ya mfano kupitia ujumbe wa mfumo.
 
-**Self-Reflection** - Modeli inajitathmini na kuboresha pato lake.
+**Self-Reflection** - Mfano hujitathmini na kuboresha matokeo yake.
 
-**Structured Analysis** - Mfumo wa tathmini uliopangwa.
+**Structured Analysis** - Mfumo thabiti wa tathmini.
 
-**Task Execution Pattern** - Panga → Tekeleza → Muhtasari.
+**Task Execution Pattern** - Panga → Tekeleza → Fupisha.
 
-## RAG (Retrieval-Augmented Generation) - [Moduli 03](../03-rag/README.md)
+## RAG (Uundaji unaoendeshwa na Urejeshaji) - [Moduli 03](../03-rag/README.md)
 
-**Document Processing Pipeline** - Pakua → gawanya → weka embeddings → hifadhi.
+**Document Processing Pipeline** - Pakua → vagawanya → ingiza → hifadhi.
 
-**In-Memory Embedding Store** - Hifadhi isiyodumu kwa ajili ya upimaji.
+**In-Memory Embedding Store** - Hifadhi isiyo ya kudumu kwa ajili ya upimaji.
 
-**RAG** - Inachanganya urejeshaji na uundaji ili kuimarisha majibu.
+**RAG** - Huunganisha urejeshaji na uundaji ili kutoa majibu yenye msingi.
 
 **Similarity Score** - Kipimo (0-1) cha ulinganifu wa maana.
 
-**Source Reference** - Metadata kuhusu maudhui yaliyopatikana.
+**Source Reference** - Metadata kuhusu maudhui yaliyorejeshwa.
 
-## Wakala na Zana - [Moduli 04](../04-tools/README.md)
+## Wakala na Vifaa - [Moduli 04](../04-tools/README.md)
 
-**@Tool Annotation** - Inaashiria njia za Java kama zana zinazoweza kuitwa na AI.
+**@Tool Annotation** - Inaonyesha mbinu za Java kama zana zinazoweza kuitwa na AI.
 
-**ReAct Pattern** - Fikiria → Tenda → Angalia → Rudia.
+**ReAct Pattern** - Fikiria → Tenda → Chunguza → Rudia.
 
 **Session Management** - Muktadha tofauti kwa watumiaji tofauti.
 
-**Tool** - Kazi ambayo wakala wa AI anaweza kuita.
+**Tool** - Kazi ambacho wakala wa AI anaweza kuitisha.
 
-**Tool Description** - Nyaraka za kusudi na vigezo vya zana.
+**Tool Description** - Nyaraka za madhumuni na vigezo vya zana.
+
+## Moduli ya Agentic - [Moduli 05](../05-mcp/README.md)
+
+**@Agent Annotation** - Inaonyesha interfaces kama wakala wa AI kwa ufafanuzi wa tabia kwa njia ya maelezo.
+
+**Agent Listener** - Hook kwa kufuatilia utekelezaji wa wakala kupitia `beforeAgentInvocation()` na `afterAgentInvocation()`.
+
+**Agentic Scope** - Kumbukumbu ya pamoja ambapo mawakala huhifadhi matokeo kwa kutumia `outputKey` kwa mawakala wa mbeleni.
+
+**AgenticServices** - Kiwanda cha kuunda mawakala kwa kutumia `agentBuilder()` na `supervisorBuilder()`.
+
+**Conditional Workflow** - Kuelekeza kulingana na masharti kwa mawakala maalum tofauti.
+
+**Human-in-the-Loop** - Mfano wa mchakato unaoingiza hatua za kibinadamu kwa idhini au ukaguzi wa maudhui.
+
+**langchain4j-agentic** - Tegemezi la Maven kwa ujenzi wa wakala kwa njia ya maelezo (jaribio).
+
+**Loop Workflow** - Rudia utekelezaji wa wakala hadi sharti litimizwe (k.m., alama ya ubora ≥ 0.8).
+
+**outputKey** - Kipengele cha maelezo ya wakala kinachoonyesha mahali ambapo matokeo huhifadhiwa katika Agentic Scope.
+
+**Parallel Workflow** - Endesha mawakala wengi kwa wakati mmoja kwa kazi huru.
+
+**Response Strategy** - Jinsi msimamizi anavyobuni jibu la mwisho: LAST, SUMMARY, au SCORED.
+
+**Sequential Workflow** - Tekeleza mawakala kwa mpangilio ambapo matokeo huingia hatua inayofuata.
+
+**Supervisor Agent Pattern** - Mfano wa wakala wa hali ya juu ambapo msimamizi LLM huchagua kwa nguvu mawakala ndogo wa kuitisha.
 
 ## Itifaki ya Muktadha wa Mfano (MCP) - [Moduli 05](../05-mcp/README.md)
 
-**MCP** - Kiwango cha kuunganisha programu za AI na zana za nje.
+**langchain4j-mcp** - Tegemezi la Maven kwa ujumuishaji wa MCP katika LangChain4j.
 
-**MCP Client** - Programu inayounganisha na seva za MCP.
+**MCP** - Itifaki ya Muktadha wa Mfano: kiwango cha kuunganisha programu za AI na zana za nje. Jenga mara moja, tumia kila mahali.
 
-**MCP Server** - Huduma inayofungua zana kupitia MCP.
+**MCP Client** - Programu inayounganisha na seva za MCP kugundua na kutumia zana.
 
-**Stdio Transport** - Seva kama mchakato msaidizi kupitia stdin/stdout.
+**MCP Server** - Huduma inayotoa zana kupitia MCP kwa maelezo wazi na skimu za vigezo.
 
-**Tool Discovery** - Mteja huita seva kuulizia zana zilizopatikana.
+**McpToolProvider** - Kipengele cha LangChain4j kinachozunguka zana za MCP kwa matumizi katika huduma za AI na mawakala.
+
+**McpTransport** - Interface kwa mawasiliano ya MCP. Utekelezaji ni pamoja na Stdio na HTTP.
+
+**Stdio Transport** - Usafirishaji wa mchakato wa ndani kwa stdin/stdout. Inafaa kwa upatikanaji wa mfumo wa faili au zana za mstari wa agizo.
+
+**StdioMcpTransport** - Utekelezaji wa LangChain4j unaozindua seva ya MCP kama mchakato mdogo.
+
+**Tool Discovery** - Mteja huuliza seva kwa zana zinazopatikana zikiwa na maelezo na skimu.
 
 ## Huduma za Azure - [Moduli 01](../01-introduction/README.md)
 
-**Azure AI Search** - Utafutaji wa wingu unaounga mkono uwezo wa vector. [Moduli 03](../03-rag/README.md)
+**Azure AI Search** - Utafutaji wa wingu wenye uwezo wa vector. [Moduli 03](../03-rag/README.md)
 
-**Azure Developer CLI (azd)** - Inatekeleza rasilimali za Azure.
+**Azure Developer CLI (azd)** - Inatoa rasilimali za Azure.
 
-**Azure OpenAI** - Huduma ya AI ya shirika ya Microsoft.
+**Azure OpenAI** - Huduma ya AI ya biashara ya Microsoft.
 
-**Bicep** - Azure infrastructure-as-code language. [Mwongozo wa Miundombinu](../01-introduction/infra/README.md)
+**Bicep** - Lugha ya Azure ya miundombinu kama msimbo. [Mwongozo wa Miundombinu](../01-introduction/infra/README.md)
 
-**Deployment Name** - Jina la utekelezaji wa modeli katika Azure.
+**Deployment Name** - Jina la utekelezaji wa mfano katika Azure.
 
-**GPT-5** - Modeli ya hivi karibuni ya OpenAI yenye udhibiti wa fikra. [Moduli 02](../02-prompt-engineering/README.md)
+**GPT-5** - Mfano wa hivi karibuni wa OpenAI wenye udhibiti wa fikra. [Moduli 02](../02-prompt-engineering/README.md)
 
-## Ujaribu na Maendeleo - [Mwongozo wa Majaribio](TESTING.md)
+## Upimaji na Maendeleo - [Mwongozo wa Upimaji](TESTING.md)
 
-**Dev Container** - Mazingira ya maendeleo yaliyo ndani ya container. [Usanidi](../../../.devcontainer/devcontainer.json)
+**Dev Container** - Mazingira ya maendeleo yaliyokontena. [Marekebisho](../../../.devcontainer/devcontainer.json)
 
-**GitHub Models** - Uwanja wa majaribio wa modeli za AI bure. [Moduli 00](../00-quick-start/README.md)
+**GitHub Models** - Sehemu ya bure ya majaribio ya modeli ya AI. [Moduli 00](../00-quick-start/README.md)
 
-**In-Memory Testing** - Majaribio kwa kutumia hifadhi ya kumbukumbu.
+**In-Memory Testing** - Upimaji kwa hifadhi ya ndani.
 
-**Integration Testing** - Majaribio kwa kutumia miundombinu halisi.
+**Integration Testing** - Upimaji kwa miundombinu halisi.
 
-**Maven** - Zana ya kuendesha kujenga (build) ya Java.
+**Maven** - Zana ya otomatiki ya ujenzi wa Java.
 
-**Mockito** - Mfumo wa kuiga (mock) kwa Java.
+**Mockito** - Fremu ya kuiga katika Java.
 
-**Spring Boot** - Mfumo wa programu za Java. [Moduli 01](../01-introduction/README.md)
+**Spring Boot** - Fremu ya programu ya Java. [Moduli 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Taarifa ya kutokuwa na dhamana:
-Nyaraka hii imetafsiriwa kwa kutumia huduma ya utafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kufikia usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au ukosefu wa usahihi. Nyaraka ya asili katika lugha yake inapaswa kuchukuliwa kuwa chanzo cha kuaminika. Kwa taarifa muhimu, inashauriwa kutumia utafsiri wa kitaalamu uliofanywa na mtafsiri wa binadamu. Hatuwajibiki kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+**Maelezo ya Kukataa**:
+Hati hii imetafsiriwa kwa kutumia huduma ya utafsiri wa AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kufanikisha usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya awali katika lugha yake ya asili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatubeba dhamana kwa kueleweka vibaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

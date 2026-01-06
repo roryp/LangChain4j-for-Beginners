@@ -1,79 +1,81 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "52815c169081c357fd1cec7b260f37e4",
-  "translation_date": "2025-12-31T00:53:08+00:00",
+  "original_hash": "0c4ed0dd4b9db1aa5d6ac7cfd0c79ca4",
+  "translation_date": "2026-01-06T08:08:59+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "el"
 }
 -->
-# Γλωσσάριο LangChain4j
+# Λεξικό LangChain4j
 
-## Πίνακας Περιεχομένων
+## Περιεχόμενα
 
 - [Βασικές Έννοιες](../../../docs)
-- [Συστατικά του LangChain4j](../../../docs)
+- [Συστατικά LangChain4j](../../../docs)
 - [Έννοιες AI/ML](../../../docs)
-- [Μηχανική προτροπών](../../../docs)
-- [RAG (Ανάκτηση-Ενισχυμένη Γενιά)](../../../docs)
+- [Φύλακες Ασφαλείας](../../../docs)
+- [Μηχανική Προτροπών](../../../docs)
+- [RAG (Δημιουργία με Ενίσχυση Ανάκτησης)](../../../docs)
 - [Πράκτορες και Εργαλεία](../../../docs)
+- [Agentic Module](../../../docs)
 - [Πρωτόκολλο Συμφραζόμενου Μοντέλου (MCP)](../../../docs)
 - [Υπηρεσίες Azure](../../../docs)
 - [Δοκιμές και Ανάπτυξη](../../../docs)
 
-Γρήγορη αναφορά για όρους και έννοιες που χρησιμοποιούνται σε όλο το μάθημα.
+Γρήγορη αναφορά για όρους και έννοιες που χρησιμοποιούνται καθ’ όλη τη διάρκεια του μαθήματος.
 
 ## Βασικές Έννοιες
 
-**AI Agent** - Σύστημα που χρησιμοποιεί τεχνητή νοημοσύνη για να συλλογίζεται και να ενεργεί αυτόνομα. [Μονάδα 04](../04-tools/README.md)
+**AI Agent** - Σύστημα που χρησιμοποιεί τεχνητή νοημοσύνη για να συλλογιστεί και να δράσει αυτόνομα. [Module 04](../04-tools/README.md)
 
 **Chain** - Ακολουθία λειτουργιών όπου η έξοδος τροφοδοτεί το επόμενο βήμα.
 
-**Chunking** - Διάσπαση εγγράφων σε μικρότερα κομμάτια. Τυπικά: 300-500 tokens με overlap. [Μονάδα 03](../03-rag/README.md)
+**Chunking** - Διαχωρισμός εγγράφων σε μικρότερα τμήματα. Τυπικά: 300-500 tokens με επικάλυψη. [Module 03](../03-rag/README.md)
 
-**Context Window** - Το μέγιστο πλήθος token που ένα μοντέλο μπορεί να επεξεργαστεί. GPT-5: 400K tokens.
+**Context Window** - Μέγιστος αριθμός tokens που μπορεί να επεξεργαστεί ένα μοντέλο. GPT-5: 400K tokens.
 
-**Embeddings** - Αριθμητικοί διανύσματα που αντιπροσωπεύουν το νόημα κειμένου. [Μονάδα 03](../03-rag/README.md)
+**Embeddings** - Αριθμητικοί διανύσματα που αναπαριστούν το νόημα του κειμένου. [Module 03](../03-rag/README.md)
 
-**Function Calling** - Το μοντέλο δημιουργεί δομημένα αιτήματα για να καλέσει εξωτερικές συναρτήσεις. [Μονάδα 04](../04-tools/README.md)
+**Function Calling** - Το μοντέλο δημιουργεί δομημένα αιτήματα για κλήση εξωτερικών συναρτήσεων. [Module 04](../04-tools/README.md)
 
 **Hallucination** - Όταν τα μοντέλα παράγουν λανθασμένες αλλά πιθανοφανείς πληροφορίες.
 
-**Prompt** - Κείμενο εισόδου σε ένα γλωσσικό μοντέλο. [Μονάδα 02](../02-prompt-engineering/README.md)
+**Prompt** - Κείμενο εισόδου σε ένα γλωσσικό μοντέλο. [Module 02](../02-prompt-engineering/README.md)
 
-**Semantic Search** - Αναζήτηση με βάση το νόημα χρησιμοποιώντας embeddings, όχι λέξεις-κλειδιά. [Μονάδα 03](../03-rag/README.md)
+**Semantic Search** - Αναζήτηση με βάση το νόημα χρησιμοποιώντας embeddings, όχι λέξεις-κλειδιά. [Module 03](../03-rag/README.md)
 
-**Stateful vs Stateless** - Stateless: χωρίς μνήμη. Stateful: διατηρεί ιστορικό συνομιλίας. [Μονάδα 01](../01-introduction/README.md)
+**Stateful vs Stateless** - Stateless: χωρίς μνήμη. Stateful: διατηρεί το ιστορικό της συνομιλίας. [Module 01](../01-introduction/README.md)
 
-**Tokens** - Βασικές μονάδες κειμένου που επεξεργάζονται τα μοντέλα. Επηρεάζει κόστη και όρια. [Μονάδα 01](../01-introduction/README.md)
+**Tokens** - Βασικές μονάδες κειμένου που επεξεργάζονται τα μοντέλα. Επηρεάζουν κόστη και όρια. [Module 01](../01-introduction/README.md)
 
-**Tool Chaining** - Διαδοχική εκτέλεση εργαλείων όπου η έξοδος ενημερώνει την επόμενη κλήση. [Μονάδα 04](../04-tools/README.md)
+**Tool Chaining** - Αλληλουχία εκτέλεσης εργαλείων όπου η έξοδος καθοδηγεί την επόμενη κλήση. [Module 04](../04-tools/README.md)
 
-## Συστατικά του LangChain4j
+## Συστατικά LangChain4j
 
-**AiServices** - Δημιουργεί type-safe interfaces για υπηρεσίες AI.
+**AiServices** - Δημιουργεί τύπου ασφαλείς διεπαφές υπηρεσιών AI.
 
 **OpenAiOfficialChatModel** - Ενοποιημένος πελάτης για μοντέλα OpenAI και Azure OpenAI.
 
-**OpenAiOfficialEmbeddingModel** - Δημιουργεί embeddings χρησιμοποιώντας τον επίσημο πελάτη OpenAI (υποστηρίζει τόσο OpenAI όσο και Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Δημιουργεί embeddings χρησιμοποιώντας τον επίσημο πελάτη OpenAI (υποστηρίζει OpenAI και Azure OpenAI).
 
-**ChatModel** - Κεντρικό interface για γλωσσικά μοντέλα.
+**ChatModel** - Κεντρική διεπαφή για γλωσσικά μοντέλα.
 
 **ChatMemory** - Διατηρεί ιστορικό συνομιλίας.
 
-**ContentRetriever** - Βρίσκει σχετικά κομμάτια εγγράφων για RAG.
+**ContentRetriever** - Βρίσκει σχετικά τμήματα εγγράφων για RAG.
 
-**DocumentSplitter** - Διαιρεί έγγραφα σε κομμάτια.
+**DocumentSplitter** - Διαχωρίζει έγγραφα σε τμήματα.
 
 **EmbeddingModel** - Μετατρέπει κείμενο σε αριθμητικά διανύσματα.
 
 **EmbeddingStore** - Αποθηκεύει και ανακτά embeddings.
 
-**MessageWindowChatMemory** - Διατηρεί παράθυρο ολίσθησης πρόσφατων μηνυμάτων.
+**MessageWindowChatMemory** - Διατηρεί κυλιόμενο παράθυρο πρόσφατων μηνυμάτων.
 
-**PromptTemplate** - Δημιουργεί επαναχρησιμοποιήσιμες προτροπές με `{{variable}}` placeholders.
+**PromptTemplate** - Δημιουργεί επαναχρησιμοποιούμενες προτροπές με θέσεις `{{variable}}`.
 
-**TextSegment** - Κομμάτι κειμένου με μεταδεδομένα. Χρησιμοποιείται στο RAG.
+**TextSegment** - Τμήμα κειμένου με μεταδεδομένα. Χρησιμοποιείται στο RAG.
 
 **ToolExecutionRequest** - Αναπαριστά αίτημα εκτέλεσης εργαλείου.
 
@@ -81,107 +83,159 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## Έννοιες AI/ML
 
-**Few-Shot Learning** - Παροχή παραδειγμάτων μέσα στις προτροπές. [Μονάδα 02](../02-prompt-engineering/README.md)
+**Few-Shot Learning** - Παροχή παραδειγμάτων μέσα σε προτροπές. [Module 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - Μοντέλα τεχνητής νοημοσύνης εκπαιδευμένα σε τεράστια σύνολα κειμένου.
+**Large Language Model (LLM)** - Μοντέλα AI εκπαιδευμένα σε τεράστια δεδομένα κειμένου.
 
-**Reasoning Effort** - Παράμετρος GPT-5 που ελέγχει το βάθος της σκέψης. [Μονάδα 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - Παράμετρος του GPT-5 που ελέγχει το βάθος σκέψης. [Module 02](../02-prompt-engineering/README.md)
 
-**Temperature** - Ελέγχει την τυχαιότητα της εξόδου. Χαμηλό=ντετερμινιστικό, υψηλό=δημιουργικό.
+**Temperature** - Ελέγχει τη τυχαιότητα της εξόδου. Χαμηλό=προβλέψιμο, υψηλό=δημιουργικό.
 
-**Vector Database** - Εξειδικευμένη βάση δεδομένων για embeddings. [Μονάδα 03](../03-rag/README.md)
+**Vector Database** - Εξειδικευμένη βάση δεδομένων για embeddings. [Module 03](../03-rag/README.md)
 
-**Zero-Shot Learning** - Εκτέλεση εργασιών χωρίς παραδείγματα. [Μονάδα 02](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - Εκτέλεση εργασιών χωρίς παραδείγματα. [Module 02](../02-prompt-engineering/README.md)
 
-## Μηχανική προτροπών - [Μονάδα 02](../02-prompt-engineering/README.md)
+## Φύλακες Ασφαλείας - [Module 00](../00-quick-start/README.md)
 
-**Chain-of-Thought** - Βήμα-βήμα συλλογισμός για καλύτερη ακρίβεια.
+**Defense in Depth** - Πολλαπλό επίπεδο ασφαλείας που συνδυάζει εφαρμοστικά μέτρα φύλαξης με φίλτρα ασφαλείας παρόχου.
+
+**Hard Block** - Ο πάροχος επιστρέφει σφάλμα HTTP 400 για σοβαρές παραβάσεις περιεχομένου.
+
+**InputGuardrail** - Διεπαφή LangChain4j για επικύρωση εισόδου χρήστη πριν φτάσει στο LLM. Εξοικονομεί κόστος και καθυστέρηση μπλοκάροντας επιβλαβείς προτροπές νωρίς.
+
+**InputGuardrailResult** - Τύπος επιστροφής για επικύρωση guardrail: `success()` ή `fatal("reason")`.
+
+**OutputGuardrail** - Διεπαφή για επικύρωση απαντήσεων AI πριν από την επιστροφή σε χρήστες.
+
+**Provider Safety Filters** - Ενσωματωμένα φίλτρα περιεχομένου από παρόχους AI (π.χ., GitHub Models) που εντοπίζουν παραβάσεις σε επίπεδο API.
+
+**Soft Refusal** - Το μοντέλο αρνείται ευγενικά να απαντήσει χωρίς να ρίξει σφάλμα.
+
+## Μηχανική Προτροπών - [Module 02](../02-prompt-engineering/README.md)
+
+**Chain-of-Thought** - Βηματική συλλογιστική για καλύτερη ακρίβεια.
 
 **Constrained Output** - Επιβολή συγκεκριμένης μορφής ή δομής.
 
-**High Eagerness** - Πρότυπο GPT-5 για διεξοδικό συλλογισμό.
+**High Eagerness** - Πρότυπο GPT-5 για εμπεριστατωμένη συλλογιστική.
 
 **Low Eagerness** - Πρότυπο GPT-5 για γρήγορες απαντήσεις.
 
-**Multi-Turn Conversation** - Διατήρηση συμφραζομένων κατά τη διάρκεια ανταλλαγών.
+**Multi-Turn Conversation** - Διατήρηση συμφραζομένων ανάμεσα σε ανταλλαγές.
 
-**Role-Based Prompting** - Ρύθμιση προσωπείου μοντέλου μέσω system messages.
+**Role-Based Prompting** - Καθορισμός προσωπικότητας μοντέλου μέσω συστημικών μηνυμάτων.
 
 **Self-Reflection** - Το μοντέλο αξιολογεί και βελτιώνει την έξοδό του.
 
 **Structured Analysis** - Σταθερό πλαίσιο αξιολόγησης.
 
-**Task Execution Pattern** - Σχεδιάζω → Εκτελώ → Συνοψίζω.
+**Task Execution Pattern** - Σχεδιασμός → Εκτέλεση → Περίληψη.
 
-## RAG (Retrieval-Augmented Generation) - [Μονάδα 03](../03-rag/README.md)
+## RAG (Δημιουργία με Ενίσχυση Ανάκτησης) - [Module 03](../03-rag/README.md)
 
-**Document Processing Pipeline** - Φόρτωση → διάσπαση σε κομμάτια → embedding → αποθήκευση.
+**Document Processing Pipeline** - Φόρτωση → διαχωρισμός → embedding → αποθήκευση.
 
-**In-Memory Embedding Store** - Μη-επίμονη αποθήκευση για δοκιμές.
+**In-Memory Embedding Store** - Μη επίμονη αποθήκευση για δοκιμές.
 
-**RAG** - Συνδυάζει ανάκτηση με γενιά για να τεκμηριώνει τις απαντήσεις.
+**RAG** - Συνδυάζει ανάκτηση με παραγωγή για εδραίωση απαντήσεων.
 
-**Similarity Score** - Μέτρο (0-1) της σημασιολογικής ομοιότητας.
+**Similarity Score** - Μέτρηση (0-1) σημασιολογικής ομοιότητας.
 
-**Source Reference** - Μεταδεδομένα σχετικά με το ανακτηθέν περιεχόμενο.
+**Source Reference** - Μεταδεδομένα για το ανακτηθέν περιεχόμενο.
 
-## Πράκτορες και Εργαλεία - [Μονάδα 04](../04-tools/README.md)
+## Πράκτορες και Εργαλεία - [Module 04](../04-tools/README.md)
 
-**@Tool Annotation** - Σηματοδοτεί μεθόδους Java ως callable εργαλεία από AI.
+**@Tool Annotation** - Επισημαίνει μεθόδους Java ως κλήσιμα εργαλεία AI.
 
 **ReAct Pattern** - Συλλογισμός → Δράση → Παρατήρηση → Επανάληψη.
 
-**Session Management** - Διαχωρισμένα συμφραζόμενα για διαφορετικούς χρήστες.
+**Session Management** - Ξεχωριστά συμφραζόμενα για διαφορετικούς χρήστες.
 
-**Tool** - Συνάρτηση που μπορεί να καλέσει ένας AI πράκτορας.
+**Tool** - Συνάρτηση που μπορεί να καλέσει ένας πράκτορας AI.
 
-**Tool Description** - Τεκμηρίωση του σκοπού και των παραμέτρων του εργαλείου.
+**Tool Description** - Τεκμηρίωση σκοπού και παραμέτρων εργαλείου.
 
-## Πρωτόκολλο Συμφραζόμενου Μοντέλου (MCP) - [Μονάδα 05](../05-mcp/README.md)
+## Agentic Module - [Module 05](../05-mcp/README.md)
 
-**MCP** - Πρότυπο για σύνδεση εφαρμογών AI με εξωτερικά εργαλεία.
+**@Agent Annotation** - Επισημαίνει διεπαφές ως πράκτορες AI με δηλωτικό ορισμό συμπεριφοράς.
 
-**MCP Client** - Εφαρμογή που συνδέεται με MCP servers.
+**Agent Listener** - Hook για παρακολούθηση εκτέλεσης πράκτορα μέσω `beforeAgentInvocation()` και `afterAgentInvocation()`.
 
-**MCP Server** - Υπηρεσία που εκθέτει εργαλεία μέσω MCP.
+**Agentic Scope** - Κοινή μνήμη όπου οι πράκτορες αποθηκεύουν αποτελέσματα χρησιμοποιώντας `outputKey` για επεξεργασία από άλλους πράκτορες.
 
-**Stdio Transport** - Server ως subprocess μέσω stdin/stdout.
+**AgenticServices** - Φάκτορας για δημιουργία πρακτόρων με `agentBuilder()` και `supervisorBuilder()`.
 
-**Tool Discovery** - Ο client ρωτάει τον server για διαθέσιμα εργαλεία.
+**Conditional Workflow** - Διακλαδώσεις με βάση συνθήκες προς διαφορετικούς ειδικούς πράκτορες.
 
-## Υπηρεσίες Azure - [Μονάδα 01](../01-introduction/README.md)
+**Human-in-the-Loop** - Πρότυπο ροής εργασίας με ανθρώπινα σημεία ελέγχου για έγκριση ή αναθεώρηση περιεχομένου.
 
-**Azure AI Search** - Cloud αναζήτηση με δυνατότητες vector. [Μονάδα 03](../03-rag/README.md)
+**langchain4j-agentic** - Εξάρτηση Maven για δηλωτική κατασκευή πρακτόρων (πειραματικό).
+
+**Loop Workflow** - Επανάληψη εκτέλεσης πράκτορα μέχρι να ικανοποιηθεί μια συνθήκη (π.χ., βαθμολογία ποιότητας ≥ 0.8).
+
+**outputKey** - Παράμετρος επισήμανσης πράκτορα που ορίζει πού αποθηκεύονται τα αποτελέσματα στο Agentic Scope.
+
+**Parallel Workflow** - Εκτέλεση πολλαπλών πρακτόρων ταυτόχρονα για ανεξάρτητες εργασίες.
+
+**Response Strategy** - Πώς ο επόπτης διατυπώνει την τελική απάντηση: LAST, SUMMARY ή SCORED.
+
+**Sequential Workflow** - Εκτέλεση πρακτόρων με τη σειρά όπου η έξοδος ρέει στο επόμενο βήμα.
+
+**Supervisor Agent Pattern** - Προχωρημένο πρότυπο agentic όπου ένας επόπτης LLM αποφασίζει δυναμικά ποιον υποπράκτορα θα καλέσει.
+
+## Πρωτόκολλο Συμφραζόμενου Μοντέλου (MCP) - [Module 05](../05-mcp/README.md)
+
+**langchain4j-mcp** - Εξάρτηση Maven για ενσωμάτωση MCP στο LangChain4j.
+
+**MCP** - Model Context Protocol: πρότυπο για σύνδεση εφαρμογών AI με εξωτερικά εργαλεία. Φτιάξε μία φορά, χρησιμοποίησε παντού.
+
+**MCP Client** - Εφαρμογή που συνδέεται με MCP servers για ανακάλυψη και χρήση εργαλείων.
+
+**MCP Server** - Υπηρεσία που εκθέτει εργαλεία μέσω MCP με σαφείς περιγραφές και σχήματα παραμέτρων.
+
+**McpToolProvider** - Συστατικό LangChain4j που τυλίγει εργαλεία MCP για χρήση σε υπηρεσίες AI και πράκτορες.
+
+**McpTransport** - Διεπαφή για επικοινωνία MCP. Υλοποιήσεις περιλαμβάνουν Stdio και HTTP.
+
+**Stdio Transport** - Τοπική μεταφορά διεργασίας μέσω stdin/stdout. Χρήσιμο για πρόσβαση σε σύστημα αρχείων ή εργαλεία γραμμής εντολών.
+
+**StdioMcpTransport** - Υλοποίηση LangChain4j που εκκινεί MCP server ως υπο-διεργασία.
+
+**Tool Discovery** - Ο πελάτης ρωτά τον server για διαθέσιμα εργαλεία με περιγραφές και σχήματα.
+
+## Υπηρεσίες Azure - [Module 01](../01-introduction/README.md)
+
+**Azure AI Search** - Αναζήτηση στο cloud με δυνατότητες διανυσμάτων. [Module 03](../03-rag/README.md)
 
 **Azure Developer CLI (azd)** - Αναπτύσσει πόρους Azure.
 
-**Azure OpenAI** - Επιχειρησιακή υπηρεσία AI της Microsoft.
+**Azure OpenAI** - Επιχειρηματική υπηρεσία AI της Microsoft.
 
-**Bicep** - Γλώσσα infrastructure-as-code για Azure. [Infrastructure Guide](../01-introduction/infra/README.md)
+**Bicep** - Γλώσσα υποδομής ως κώδικας για Azure. [Infrastructure Guide](../01-introduction/infra/README.md)
 
-**Deployment Name** - Όνομα για το deployment μοντέλου στο Azure.
+**Deployment Name** - Όνομα ανάπτυξης μοντέλου στο Azure.
 
-**GPT-5** - Το πιο πρόσφατο μοντέλο OpenAI με έλεγχο συλλογιστικής. [Μονάδα 02](../02-prompt-engineering/README.md)
+**GPT-5** - Το πιο πρόσφατο μοντέλο OpenAI με έλεγχο συλλογισμού. [Module 02](../02-prompt-engineering/README.md)
 
 ## Δοκιμές και Ανάπτυξη - [Testing Guide](TESTING.md)
 
-**Dev Container** - Περιβάλλον ανάπτυξης σε container. [Configuration](../../../.devcontainer/devcontainer.json)
+**Dev Container** - Κοντέινερ για περιβάλλον ανάπτυξης. [Configuration](../../../.devcontainer/devcontainer.json)
 
-**GitHub Models** - Δωρεάν playground για AI μοντέλα. [Μονάδα 00](../00-quick-start/README.md)
+**GitHub Models** - Δωρεάν περιβάλλον μοντέλων AI. [Module 00](../00-quick-start/README.md)
 
-**In-Memory Testing** - Δοκιμές με in-memory αποθήκευση.
+**In-Memory Testing** - Δοκιμές με αποθήκευση στη μνήμη.
 
 **Integration Testing** - Δοκιμές με πραγματική υποδομή.
 
-**Maven** - Εργαλείο αυτοματοποίησης build για Java.
+**Maven** - Εργαλείο αυτοματισμού κατασκευής Java.
 
-**Mockito** - Framework για mocking σε Java.
+**Mockito** - Framework Java για mock αντικείμενα.
 
-**Spring Boot** - Πλαίσιο εφαρμογών Java. [Μονάδα 01](../01-introduction/README.md)
+**Spring Boot** - Πλαίσιο εφαρμογών Java. [Module 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Αποποίηση ευθύνης:
-Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης με τεχνητή νοημοσύνη Co‑op Translator (https://github.com/Azure/co-op-translator). Παρά τις προσπάθειές μας για ακρίβεια, παρακαλούμε να λάβετε υπόψη ότι οι αυτοματοποιημένες μεταφράσεις ενδέχεται να περιέχουν σφάλματα ή ανακρίβειες. Το πρωτότυπο έγγραφο στην αρχική του γλώσσα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται η χρήση επαγγελματικής μετάφρασης από επαγγελματία μεταφραστή. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή λανθασμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
+**Αποποίηση ευθυνών**:  
+Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που επιδιώκουμε την ακρίβεια, παρακαλούμε να λάβετε υπόψη ότι οι αυτόματες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη γλώσσα του θεωρείται η αυθεντική πηγή. Για σημαντικές πληροφορίες συνιστάται επαγγελματική ανθρωπογενής μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή λανθασμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
