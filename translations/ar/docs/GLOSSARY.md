@@ -1,187 +1,241 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "52815c169081c357fd1cec7b260f37e4",
-  "translation_date": "2025-12-30T20:20:13+00:00",
+  "original_hash": "0c4ed0dd4b9db1aa5d6ac7cfd0c79ca4",
+  "translation_date": "2026-01-06T07:45:06+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "ar"
 }
 -->
-# مسرد LangChain4j
+# مسرد مصطلحات LangChain4j
 
 ## جدول المحتويات
 
 - [المفاهيم الأساسية](../../../docs)
 - [مكونات LangChain4j](../../../docs)
-- [مفاهيم AI/ML](../../../docs)
-- [هندسة المطالبات - [الوحدة 02](../02-prompt-engineering/README.md)](#prompt-engineering---module-02)
-- [RAG (التوليد المعزز بالاسترجاع) - [الوحدة 03](../03-rag/README.md)](#rag-retrieval-augmented-generation---module-03)
-- [الوكلاء والأدوات - [الوحدة 04](../04-tools/README.md)](#agents-and-tools---module-04)
-- [بروتوكول سياق النموذج (MCP) - [الوحدة 05](../05-mcp/README.md)](#model-context-protocol-mcp---module-05)
-- [خدمات Azure - [الوحدة 01](../01-introduction/README.md)](#azure-services---module-01)
-- [الاختبار والتطوير - [دليل الاختبار](TESTING.md)](#testing-and-development---testing-guide)
+- [مفاهيم الذكاء الاصطناعي والتعلم الآلي](../../../docs)
+- [ضوابط الأمان - الوحدة 00](../../../docs)
+- [هندسة الاستدعاءات - الوحدة 02](../../../docs)
+- [التوليد المعزز بالاستخراج (RAG) - الوحدة 03](../../../docs)
+- [الوكلاء والأدوات - الوحدة 04](../../../docs)
+- [الوحدة الوكيلية - الوحدة 05](../../../docs)
+- [بروتوكول سياق النموذج (MCP) - الوحدة 05](../../../docs)
+- [خدمات Azure - الوحدة 01](../../../docs)
+- [الاختبار والتطوير - دليل الاختبار](../../../docs)
 
-مرجع سريع للمصطلحات والمفاهيم المستخدمة في جميع أنحاء الدورة.
+مرجع سريع للمصطلحات والمفاهيم المستخدمة طوال الدورة.
 
-## Core Concepts
+## المفاهيم الأساسية
 
-**AI Agent** - نظام يستخدم الذكاء الاصطناعي للاستدلال والتصرف بشكل مستقل. [الوحدة 04](../04-tools/README.md)
+**الوكيل الذكي (AI Agent)** - نظام يستخدم الذكاء الاصطناعي للاستدلال والتصرف بشكل مستقل. [الوحدة 04](../04-tools/README.md)
 
-**Chain** - سلسلة من العمليات حيث تغذي المخرجات الخطوة التالية.
+**السلسلة (Chain)** - تسلسل عمليات حيث يمد الناتج العملية التالية.
 
-**Chunking** - تقسيم المستندات إلى أجزاء أصغر. المعتاد: 300-500 توكن مع تداخل. [الوحدة 03](../03-rag/README.md)
+**التجزئة (Chunking)** - تقسيم المستندات إلى قطع أصغر. النموذجي: 300-500 رمز مع تداخل. [الوحدة 03](../03-rag/README.md)
 
-**Context Window** - الحد الأقصى لعدد التوكنات التي يمكن للنموذج معالجتها. GPT-5: 400K توكن.
+**نافذة السياق (Context Window)** - الحد الأقصى من الرموز التي يمكن للنموذج معالجتها. GPT-5: 400 ألف رمز.
 
-**Embeddings** - متجهات رقمية تمثل معنى النص. [الوحدة 03](../03-rag/README.md)
+**التضمينات (Embeddings)** - متجهات رقمية تمثل معنى النص. [الوحدة 03](../03-rag/README.md)
 
-**Function Calling** - النموذج يولد طلبات مُهيكلة لاستدعاء دوال خارجية. [الوحدة 04](../04-tools/README.md)
+**استدعاء الدوال (Function Calling)** - النموذج يولد طلبات منظمة لاستدعاء دوال خارجية. [الوحدة 04](../04-tools/README.md)
 
-**Hallucination** - عندما تنتج النماذج معلومات غير صحيحة لكنها تبدو معقولة.
+**الهلاوس (Hallucination)** - عندما تولد النماذج معلومات غير صحيحة لكنها معقولة.
 
-**Prompt** - نص الإدخال لنموذج اللغة. [الوحدة 02](../02-prompt-engineering/README.md)
+**الاستدعاء (Prompt)** - نص الإدخال لنموذج اللغة. [الوحدة 02](../02-prompt-engineering/README.md)
 
-**Semantic Search** - البحث حسب المعنى باستخدام المتجهات، وليس الكلمات المفتاحية. [الوحدة 03](../03-rag/README.md)
+**البحث الدلالي (Semantic Search)** - البحث حسب المعنى باستخدام التضمينات، وليس الكلمات المفتاحية. [الوحدة 03](../03-rag/README.md)
 
-**Stateful vs Stateless** - Stateless: لا ذاكرة. Stateful: يحتفظ بتاريخ المحادثة. [الوحدة 01](../01-introduction/README.md)
+**حالة الحالة مقابل عدم حالة الحالة (Stateful vs Stateless)** - بدون حالة: لا ذاكرة. مع حالة: يحتفظ بتاريخ المحادثة. [الوحدة 01](../01-introduction/README.md)
 
-**Tokens** - وحدات النص الأساسية التي تعالجها النماذج. تؤثر على التكاليف والقيود. [الوحدة 01](../01-introduction/README.md)
+**الرموز (Tokens)** - وحدات النص الأساسية التي تعالجها النماذج. تؤثر على التكاليف والحدود. [الوحدة 01](../01-introduction/README.md)
 
-**Tool Chaining** - تنفيذ أدوات متسلسل حيث تُعلم المخرجات الاستدعاء التالي. [الوحدة 04](../04-tools/README.md)
+**تسلسل الأدوات (Tool Chaining)** - تنفيذ أدوات متتالية حيث يوجه الناتج الاستدعاء التالي. [الوحدة 04](../04-tools/README.md)
 
-## LangChain4j Components
+## مكونات LangChain4j
 
-**AiServices** - Creates type-safe AI service interfaces.
+**AiServices** - ينشئ واجهات خدمة ذكاء اصطناعي آمنة من حيث النوع.
 
-**OpenAiOfficialChatModel** - Unified client for OpenAI and Azure OpenAI models.
+**OpenAiOfficialChatModel** - عميل موحد لنماذج OpenAI وAzure OpenAI.
 
-**OpenAiOfficialEmbeddingModel** - Creates embeddings using OpenAI Official client (supports both OpenAI and Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - ينشئ التضمينات باستخدام عميل OpenAI Official (يدعم كل من OpenAI وAzure OpenAI).
 
-**ChatModel** - Core interface for language models.
+**ChatModel** - الواجهة الأساسية لنماذج اللغة.
 
-**ChatMemory** - Maintains conversation history.
+**ChatMemory** - يحتفظ بتاريخ المحادثة.
 
-**ContentRetriever** - Finds relevant document chunks for RAG.
+**ContentRetriever** - يعثر على قطع مستندات ذات صلة لـ RAG.
 
-**DocumentSplitter** - Breaks documents into chunks.
+**DocumentSplitter** - يقسم المستندات إلى قطع.
 
-**EmbeddingModel** - Converts text into numerical vectors.
+**EmbeddingModel** - يحول النص إلى متجهات رقمية.
 
-**EmbeddingStore** - Stores and retrieves embeddings.
+**EmbeddingStore** - يخزن ويسترجع التضمينات.
 
-**MessageWindowChatMemory** - Maintains sliding window of recent messages.
+**MessageWindowChatMemory** - يحتفظ بنافذة منزلقة للرسائل الأخيرة.
 
-**PromptTemplate** - Creates reusable prompts with `{{variable}}` placeholders.
+**PromptTemplate** - ينشئ استدعاءات قابلة لإعادة الاستخدام مع أماكن متغيرة `{{variable}}`.
 
-**TextSegment** - Text chunk with metadata. Used in RAG.
+**TextSegment** - قطعة نص مع بيانات وصفية. تستخدم في RAG.
 
-**ToolExecutionRequest** - Represents tool execution request.
+**ToolExecutionRequest** - يمثل طلب تنفيذ أداة.
 
-**UserMessage / AiMessage / SystemMessage** - Conversation message types.
+**UserMessage / AiMessage / SystemMessage** - أنواع رسائل المحادثة.
 
-## AI/ML Concepts
+## مفاهيم الذكاء الاصطناعي والتعلم الآلي
 
-**Few-Shot Learning** - توفير أمثلة داخل المطالبات. [الوحدة 02](../02-prompt-engineering/README.md)
+**التعلم بالقليل من العينات (Few-Shot Learning)** - تقديم أمثلة في الاستدعاءات. [الوحدة 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - نماذج ذكاء اصطناعي مدربة على كميات ضخمة من النصوص.
+**النموذج اللغوي الكبير (LLM)** - نماذج ذكاء اصطناعي مدربة على كميات ضخمة من النصوص.
 
-**Reasoning Effort** - معامل GPT-5 الذي يتحكم في عمق التفكير. [الوحدة 02](../02-prompt-engineering/README.md)
+**جهد الاستدلال (Reasoning Effort)** - معلمة GPT-5 تتحكم في عمق التفكير. [الوحدة 02](../02-prompt-engineering/README.md)
 
-**Temperature** - يتحكم في عشوائية المخرجات. منخفض = حتمي، مرتفع = إبداعي.
+**درجة الحرارة (Temperature)** - تتحكم في عشوائية الناتج. منخفض=حتمي، مرتفع=إبداعي.
 
-**Vector Database** - قاعدة بيانات متخصصة للمتجهات. [الوحدة 03](../03-rag/README.md)
+**قاعدة بيانات المتجهات (Vector Database)** - قاعدة بيانات متخصصة للتضمينات. [الوحدة 03](../03-rag/README.md)
 
-**Zero-Shot Learning** - أداء مهام بدون أمثلة. [الوحدة 02](../02-prompt-engineering/README.md)
+**التعلم بدون عينات (Zero-Shot Learning)** - تنفيذ مهام بدون أمثلة. [الوحدة 02](../02-prompt-engineering/README.md)
 
-## Prompt Engineering - [الوحدة 02](../02-prompt-engineering/README.md)
+## ضوابط الأمان - [الوحدة 00](../00-quick-start/README.md)
 
-**Chain-of-Thought** - التفكير خطوة بخطوة لتحسين الدقة.
+**الدفاع المتعدد المستويات (Defense in Depth)** - نهج أمني متعدد الطبقات يجمع ضوابط على مستوى التطبيق مع فلاتر أمان المزود.
 
-**Constrained Output** - فرض تنسيق أو بنية محددة.
+**الحظر الصلب (Hard Block)** - المزود يرمي خطأ HTTP 400 لانتهاكات محتوى خطيرة.
 
-**High Eagerness** - نمط GPT-5 للتفكير المتعمق والشامل.
+**InputGuardrail** - واجهة LangChain4j للتحقق من صحة إدخال المستخدم قبل وصوله إلى LLM. يوفر التكاليف والوقت بحظر الاستدعاءات الضارة مبكراً.
 
-**Low Eagerness** - نمط GPT-5 للإجابات السريعة.
+**InputGuardrailResult** - نوع الإرجاع للتحقق من الضوابط: `success()` أو `fatal("reason")`.
 
-**Multi-Turn Conversation** - الحفاظ على السياق عبر تبادلات متعددة.
+**OutputGuardrail** - واجهة التحقق من ردود الذكاء الاصطناعي قبل إرجاعها للمستخدمين.
 
-**Role-Based Prompting** - ضبط شخصية النموذج عبر رسائل النظام.
+**فلاتر أمان المزود (Provider Safety Filters)** - فلاتر محتوى مدمجة من مزودي الذكاء الاصطناعي (مثل نماذج GitHub) تكشف الانتهاكات على مستوى API.
 
-**Self-Reflection** - النموذج يقيم ويحسن مخرجاته.
+**الرفض اللين (Soft Refusal)** - النموذج يرفض الرد بلطف بدون رمي خطأ.
 
-**Structured Analysis** - إطار تقييم ثابت.
+## هندسة الاستدعاءات - [الوحدة 02](../02-prompt-engineering/README.md)
 
-**Task Execution Pattern** - التخطيط → التنفيذ → التلخيص.
+**تسلسل التفكير (Chain-of-Thought)** - الاستدلال خطوة بخطوة لدقة أفضل.
 
-## RAG (Retrieval-Augmented Generation) - [الوحدة 03](../03-rag/README.md)
+**الناتج المقيد (Constrained Output)** - فرض تنسيق أو هيكل معين.
 
-**Document Processing Pipeline** - التحميل → التقسيم → التضمين → التخزين.
+**حماس عالي (High Eagerness)** - نمط GPT-5 لاستدلال معمق.
 
-**In-Memory Embedding Store** - تخزين غير دائم للاختبار.
+**حماس منخفض (Low Eagerness)** - نمط GPT-5 لإجابات سريعة.
 
-**RAG** - يجمع بين الاسترجاع والتوليد لإسناد الإجابات.
+**محادثة متعددة الجولات (Multi-Turn Conversation)** - الحفاظ على السياق عبر التبادلات.
 
-**Similarity Score** - مقياس (0-1) للتشابه الدلالي.
+**الاستدعاء القائم على الدور (Role-Based Prompting)** - تعيين شخصية النموذج عبر رسائل النظام.
 
-**Source Reference** - بيانات وصفية حول المحتوى المسترجع.
+**التأمل الذاتي (Self-Reflection)** - النموذج يقيم ويحسن ناتجه.
 
-## Agents and Tools - [الوحدة 04](../04-tools/README.md)
+**التحليل الهيكلي (Structured Analysis)** - إطار تقييم ثابت.
 
-**@Tool Annotation** - يعلّم طرق Java لتكون أدوات قابلة للاستدعاء من الذكاء الاصطناعي.
+**نمط تنفيذ المهام (Task Execution Pattern)** - خطط → نفذ → لخّص.
 
-**ReAct Pattern** - Reason → Act → Observe → Repeat.
+## التوليد المعزز بالاستخراج (RAG) - [الوحدة 03](../03-rag/README.md)
 
-**Session Management** - سياقات منفصلة لمستخدمين مختلفين.
+**خط أنابيب معالجة المستندات** - تحميل → تجزئة → تضمين → تخزين.
 
-**Tool** - دالة يمكن للوكيل الذكي استدعاؤها.
+**مخزن التضمين المؤقت (In-Memory Embedding Store)** - تخزين غير دائم للاختبار.
 
-**Tool Description** - توثيق غرض الأداة ومعاملاتها.
+**RAG** - يجمع بين الاستخراج والتوليد لتأسيس الردود.
 
-## Model Context Protocol (MCP) - [الوحدة 05](../05-mcp/README.md)
+**درجة التشابه (Similarity Score)** - مقياس (0-1) للتشابه الدلالي.
 
-**MCP** - معيار لربط تطبيقات الذكاء الاصطناعي بالأدوات الخارجية.
+**مرجع المصدر (Source Reference)** - بيانات وصفية عن المحتوى المسترجع.
 
-**MCP Client** - تطبيق يتصل بخوادم MCP.
+## الوكلاء والأدوات - [الوحدة 04](../04-tools/README.md)
 
-**MCP Server** - خدمة تعرض الأدوات عبر MCP.
+**@Tool Annotation** - يعلّم طرق جافا كأدوات يمكن استدعاؤها بالذكاء الاصطناعي.
 
-**Stdio Transport** - الخادم كعملية فرعية عبر stdin/stdout.
+**نمط ReAct** - استدلال → تصرف → رصد → تكرار.
 
-**Tool Discovery** - العميل يستعلم الخادم عن الأدوات المتاحة.
+**إدارة الجلسة (Session Management)** - سياقات منفصلة لمستخدمين مختلفين.
 
-## Azure Services - [الوحدة 01](../01-introduction/README.md)
+**أداة (Tool)** - دالة يمكن لوكيل الذكاء الاصطناعي استدعاؤها.
 
-**Azure AI Search** - بحث سحابي مع قدرات متجهية. [الوحدة 03](../03-rag/README.md)
+**وصف الأداة (Tool Description)** - توثيق غرض الأداة والمعاملات.
+
+## الوحدة الوكيلية - [الوحدة 05](../05-mcp/README.md)
+
+**@Agent Annotation** - يعلّم الواجهات كوكلاء ذكاء اصطناعي بتعريف سلوكي إعلاني.
+
+**مراقب الوكيل (Agent Listener)** - خطاف لمراقبة تنفيذ الوكيل عبر `beforeAgentInvocation()` و `afterAgentInvocation()`.
+
+**النطاق الوكيلي (Agentic Scope)** - ذاكرة مشتركة يخزن فيها الوكلاء النواتج باستخدام `outputKey` ليستخدمها وكلاء لاحقون.
+
+**AgenticServices** - مصنع لإنشاء الوكلاء باستخدام `agentBuilder()` و `supervisorBuilder()`.
+
+**سير العمل الشرطي (Conditional Workflow)** - التوجيه استنادًا إلى شروط إلى وكلاء متخصصين مختلفين.
+
+**الإنسان في الحلقة (Human-in-the-Loop)** - نمط سير عمل يضيف نقاط مراجعة بشرية للموافقة أو مراجعة المحتوى.
+
+**langchain4j-agentic** - تبعية مافن لإنشاء وكلاء إعلاني (تجريبي).
+
+**سير العمل التكراري (Loop Workflow)** - تكرار تنفيذ الوكيل حتى يتحقق شرط (مثلاً: درجة جودة ≥ 0.8).
+
+**outputKey** - معلمة توضيحية للوكيل تحدد مكان تخزين النتائج في النطاق الوكيلي.
+
+**سير العمل المتوازي (Parallel Workflow)** - تشغيل عدة وكلاء في آن واحد لمهام مستقلة.
+
+**استراتيجية الاستجابة (Response Strategy)** - كيف يشكل المشرف الإجابة النهائية: الأخير، الملخص، أو المقيم.
+
+**سير العمل المتسلسل (Sequential Workflow)** - تنفيذ الوكلاء بالترتيب حيث ينتقل الناتج إلى الخطوة التالية.
+
+**نمط وكيل المشرف (Supervisor Agent Pattern)** - نمط معقد حيث يقرر مشرف LLM أي وكلاء فرعيين يستدعى ديناميكياً.
+
+## بروتوكول سياق النموذج (MCP) - [الوحدة 05](../05-mcp/README.md)
+
+**langchain4j-mcp** - تبعية مافن لتكامل MCP في LangChain4j.
+
+**MCP** - بروتوكول سياق النموذج: معيار لربط تطبيقات الذكاء الاصطناعي بالأدوات الخارجية. بناء مرة واحدة، استخدم في كل مكان.
+
+**عميل MCP (MCP Client)** - تطبيق يتصل بخوادم MCP لاكتشاف واستخدام الأدوات.
+
+**خادم MCP (MCP Server)** - خدمة تعرض الأدوات عبر MCP مع وصف واضح ومخططات المعاملات.
+
+**McpToolProvider** - مكون LangChain4j يغلف أدوات MCP للاستخدام في خدمات ووكلاء الذكاء الاصطناعي.
+
+**McpTransport** - واجهة اتصال MCP. تشمل التنفيذات Stdio وHTTP.
+
+**نقل Stdio** - نقل عمليات محلية عبر stdin/stdout. مفيد للوصول إلى نظام الملفات أو أدوات سطر الأوامر.
+
+**StdioMcpTransport** - تنفيذ LangChain4j يطلق خادم MCP كعملية فرعية.
+
+**اكتشاف الأدوات (Tool Discovery)** - العميل يستعلم الخادم عن الأدوات المتاحة مع الأوصاف والمخططات.
+
+## خدمات Azure - [الوحدة 01](../01-introduction/README.md)
+
+**Azure AI Search** - بحث سحابي مع قدرات المتجهات. [الوحدة 03](../03-rag/README.md)
 
 **Azure Developer CLI (azd)** - ينشر موارد Azure.
 
-**Azure OpenAI** - خدمة مايكروسوفت للمؤسسات في مجال الذكاء الاصطناعي.
+**Azure OpenAI** - خدمة الذكاء الاصطناعي المؤسسية من مايكروسوفت.
 
-**Bicep** - لغة البنية التحتية كرمز في Azure. [دليل البنية التحتية](../01-introduction/infra/README.md)
+**Bicep** - لغة البنية التحتية ككود في Azure. [دليل البنية التحتية](../01-introduction/infra/README.md)
 
-**Deployment Name** - اسم نشر النموذج في Azure.
+**اسم النشر (Deployment Name)** - اسم نشر النموذج في Azure.
 
 **GPT-5** - أحدث نموذج OpenAI مع تحكم في الاستدلال. [الوحدة 02](../02-prompt-engineering/README.md)
 
-## Testing and Development - [دليل الاختبار](TESTING.md)
+## الاختبار والتطوير - [دليل الاختبار](TESTING.md)
 
-**Dev Container** - بيئة تطوير معزولة بالحاويات. [Configuration](../../../.devcontainer/devcontainer.json)
+**حاوية التطوير (Dev Container)** - بيئة تطوير معزولة في حاوية. [التكوين](../../../.devcontainer/devcontainer.json)
 
-**GitHub Models** - ملعب مجاني لنماذج الذكاء الاصطناعي. [الوحدة 00](../00-quick-start/README.md)
+**نماذج GitHub** - ملعب نموذج ذكاء اصطناعي مجاني. [الوحدة 00](../00-quick-start/README.md)
 
-**In-Memory Testing** - اختبار باستخدام تخزين في الذاكرة.
+**الاختبار في الذاكرة (In-Memory Testing)** - اختبار باستخدام تخزين مؤقت في الذاكرة.
 
-**Integration Testing** - اختبار باستخدام البنية التحتية الحقيقية.
+**اختبار التكامل (Integration Testing)** - اختبار باستخدام بنية تحتية حقيقية.
 
-**Maven** - أداة أتمتة بناء Java.
+**مافن (Maven)** - أداة أتمتة بناء جافا.
 
-**Mockito** - إطار عمل محاكاة لـ Java.
+**Mockito** - إطار محاكاة جافا.
 
-**Spring Boot** - إطار تطبيقات Java. [الوحدة 01](../01-introduction/README.md)
+**Spring Boot** - إطار تطبيقات جافا. [الوحدة 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-إخلاء المسؤولية:
-تمت ترجمة هذا المستند باستخدام خدمة الترجمة الآلية Co-op Translator (https://github.com/Azure/co-op-translator). على الرغم من أننا نسعى إلى الدقة، يُرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية هو المصدر المعتمد. للمعلومات الحرجة، يُنصح باللجوء إلى ترجمة بشرية محترفة. لسنا مسؤولين عن أي سوء فهم أو تفسيرات خاطئة تنشأ عن استخدام هذه الترجمة.
+**تنويه**:
+تمت ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الموثوق به. بالنسبة للمعلومات الهامة، يُنصح بالاعتماد على الترجمة البشرية المهنية. نحن غير مسؤولين عن أي سوء فهم أو تفسير خاطئ ناتج عن استخدام هذه الترجمة.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

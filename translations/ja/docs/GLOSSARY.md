@@ -1,8 +1,8 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "52815c169081c357fd1cec7b260f37e4",
-  "translation_date": "2025-12-30T22:03:17+00:00",
+  "original_hash": "0c4ed0dd4b9db1aa5d6ac7cfd0c79ca4",
+  "translation_date": "2026-01-06T07:53:59+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "ja"
 }
@@ -11,177 +11,231 @@ CO_OP_TRANSLATOR_METADATA:
 
 ## 目次
 
-- [コア概念](../../../docs)
+- [コアコンセプト](../../../docs)
 - [LangChain4j コンポーネント](../../../docs)
-- [AI/ML の概念](../../../docs)
-- [プロンプトエンジニアリング - [モジュール 02](../02-prompt-engineering/README.md)](#prompt-engineering---module-02)
-- [RAG（検索強化生成）](../../../docs)
+- [AI/ML コンセプト](../../../docs)
+- [ガードレール](../../../docs)
+- [プロンプトエンジニアリング](../../../docs)
+- [RAG (Retrieval-Augmented Generation)](../../../docs)
 - [エージェントとツール](../../../docs)
-- [Model Context Protocol (MCP) - [モジュール 05](../05-mcp/README.md)](#model-context-protocol-mcp---module-05)
-- [Azure サービス - [モジュール 01](../01-introduction/README.md)](#azure-services---module-01)
-- [テストと開発 - [テストガイド](TESTING.md)](#testing-and-development---testing-guide)
+- [エージェンティックモジュール](../../../docs)
+- [モデルコンテキストプロトコル (MCP)](../../../docs)
+- [Azure サービス](../../../docs)
+- [テストと開発](../../../docs)
 
 コース全体で使用される用語と概念のクイックリファレンス。
 
-## コア概念
+## Core Concepts
 
-**AI Agent** - AIを使って推論し自律的に行動するシステム。 [モジュール 04](../04-tools/README.md)
+**AI Agent** - AIを利用して自律的に推論し行動するシステム。[Module 04](../04-tools/README.md)
 
-**Chain** - 出力が次のステップに渡される一連の操作の流れ。
+**Chain** - 出力が次のステップに入力される一連の処理。
 
-**Chunking** - ドキュメントをより小さな断片に分割すること。一般的には重複ありで300〜500トークン。 [モジュール 03](../03-rag/README.md)
+**Chunking** - ドキュメントを小さな断片に分割すること。一般的に300～500トークンで重複あり。[Module 03](../03-rag/README.md)
 
-**Context Window** - モデルが処理できる最大トークン数。GPT-5: 400K トークン。
+**Context Window** - モデルが処理できる最大トークン数。GPT-5: 40万トークン。
 
-**Embeddings** - テキストの意味を表す数値ベクトル。 [モジュール 03](../03-rag/README.md)
+**Embeddings** - テキストの意味を表す数値ベクトル。[Module 03](../03-rag/README.md)
 
-**Function Calling** - モデルが外部関数を呼び出すための構造化されたリクエストを生成すること。 [モジュール 04](../04-tools/README.md)
+**Function Calling** - モデルが外部関数を呼び出す構造化されたリクエストを生成する。[Module 04](../04-tools/README.md)
 
-**Hallucination** - モデルが誤っているがもっともらしい情報を生成する現象。
+**Hallucination** - モデルが誤っているがもっともらしい情報を生成すること。
 
-**Prompt** - 言語モデルへのテキスト入力。 [モジュール 02](../02-prompt-engineering/README.md)
+**Prompt** - 言語モデルへのテキスト入力。[Module 02](../02-prompt-engineering/README.md)
 
-**Semantic Search** - キーワードではなく意味を使って検索する方法（埋め込みを使用）。 [モジュール 03](../03-rag/README.md)
+**Semantic Search** - キーワードではなく意味による検索。Embeddingsを利用。[Module 03](../03-rag/README.md)
 
-**Stateful vs Stateless** - ステートレス: メモリなし。ステートフル: 会話履歴を保持。 [モジュール 01](../01-introduction/README.md)
+**Stateful vs Stateless** - Stateless: メモリなし。Stateful: 会話履歴を保持。[Module 01](../01-introduction/README.md)
 
-**Tokens** - モデルが処理する基本的なテキスト単位。コストや制限に影響する。 [モジュール 01](../01-introduction/README.md)
+**Tokens** - モデルが処理する基本的なテキスト単位。コストや制限に影響。[Module 01](../01-introduction/README.md)
 
-**Tool Chaining** - 出力が次の呼び出しに情報を提供する順次のツール実行。 [モジュール 04](../04-tools/README.md)
+**Tool Chaining** - 複数ツールを順次実行し、出力を次の呼び出しに活用。[Module 04](../04-tools/README.md)
 
-## LangChain4j コンポーネント
+## LangChain4j Components
 
-**AiServices** - 型安全なAIサービスインターフェースを作成します。
+**AiServices** - 型安全なAIサービスインターフェースを作成。
 
-**OpenAiOfficialChatModel** - OpenAI と Azure OpenAI のモデル向けの統合クライアント。
+**OpenAiOfficialChatModel** - OpenAIおよびAzure OpenAIモデルの統一クライアント。
 
-**OpenAiOfficialEmbeddingModel** - OpenAI Official クライアントを使って埋め込みを作成します（OpenAI と Azure OpenAI の両方をサポート）。
+**OpenAiOfficialEmbeddingModel** - OpenAI Officialクライアントを使い埋め込みを作成（OpenAIとAzure OpenAI両対応）。
 
 **ChatModel** - 言語モデルのコアインターフェース。
 
-**ChatMemory** - 会話履歴を保持します。
+**ChatMemory** - 会話履歴を保持。
 
-**ContentRetriever** - RAG のために関連するドキュメントチャンクを検索します。
+**ContentRetriever** - RAG用に関連するドキュメントチャンクを検索。
 
-**DocumentSplitter** - ドキュメントをチャンクに分割します。
+**DocumentSplitter** - ドキュメントをチャンクに分割。
 
-**EmbeddingModel** - テキストを数値ベクトルに変換します。
+**EmbeddingModel** - テキストを数値ベクトルに変換。
 
-**EmbeddingStore** - 埋め込みを保存および取得します。
+**EmbeddingStore** - 埋め込みを保存および取得。
 
-**MessageWindowChatMemory** - 最近のメッセージのスライディングウィンドウを保持します。
+**MessageWindowChatMemory** - 最近のメッセージのスライディングウィンドウを保持。
 
-**PromptTemplate** - `{{variable}}` プレースホルダーを使った再利用可能なプロンプトを作成します。
+**PromptTemplate** - `{{variable}}` プレースホルダーを使った再利用可能なプロンプト作成。
 
-**TextSegment** - メタデータを持つテキストチャンク。RAGで使用されます。
+**TextSegment** - メタデータ付きテキストチャンク。RAGで使用。
 
-**ToolExecutionRequest** - ツール実行リクエストを表します。
+**ToolExecutionRequest** - ツール実行リクエストを表現。
 
-**UserMessage / AiMessage / SystemMessage** - 会話メッセージの種類。
+**UserMessage / AiMessage / SystemMessage** - 会話のメッセージタイプ。
 
-## AI/ML の概念
+## AI/ML Concepts
 
-**Few-Shot Learning** - プロンプト内で例を提示する学習法。 [モジュール 02](../02-prompt-engineering/README.md)
+**Few-Shot Learning** - プロンプト内に例を示す学習。[Module 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - 膨大なテキストデータで訓練されたAIモデル。
+**Large Language Model (LLM)** - 大量のテキストデータで訓練されたAIモデル。
 
-**Reasoning Effort** - 思考の深さを制御するGPT-5のパラメータ。 [モジュール 02](../02-prompt-engineering/README.md)
+**Reasoning Effort** - GPT-5の思考深度制御パラメータ。[Module 02](../02-prompt-engineering/README.md)
 
-**Temperature** - 出力のランダム性を制御します。低=決定的、 高=創造的。
+**Temperature** - 出力のランダム性を制御。低いほど決定論的、高いほど創造的。
 
-**Vector Database** - 埋め込み向けに特化したデータベース。 [モジュール 03](../03-rag/README.md)
+**Vector Database** - 埋め込みベクトル用の専門データベース。[Module 03](../03-rag/README.md)
 
-**Zero-Shot Learning** - 例を使わずにタスクを実行すること。 [モジュール 02](../02-prompt-engineering/README.md)
+**Zero-Shot Learning** - 例なしでタスクを実行する学習。[Module 02](../02-prompt-engineering/README.md)
 
-## プロンプトエンジニアリング - [モジュール 02](../02-prompt-engineering/README.md)
+## Guardrails - [Module 00](../00-quick-start/README.md)
 
-**Chain-of-Thought** - より高い精度のための段階的な推論。
+**Defense in Depth** - アプリケーションレベルのガードレールとプロバイダーの安全フィルターを組み合わせた多層セキュリティ。
 
-**Constrained Output** - 特定のフォーマットや構造を強制すること。
+**Hard Block** - 重大な内容違反に対し、プロバイダーがHTTP 400エラーを返す。
 
-**High Eagerness** - 徹底的な推論を行うGPT-5のパターン。
+**InputGuardrail** - ユーザー入力がLLMに届く前に検証するLangChain4jインターフェース。害悪なプロンプトを早期にブロックしてコストと遅延を削減。
 
-**Low Eagerness** - 迅速な回答を行うGPT-5のパターン。
+**InputGuardrailResult** - ガードレール検証の戻り値タイプ：`success()` または `fatal("理由")`。
 
-**Multi-Turn Conversation** - 交互のやり取りでコンテキストを維持すること。
+**OutputGuardrail** - AIの応答をユーザーに返す前に検証するインターフェース。
 
-**Role-Based Prompting** - システムメッセージを通じてモデルのペルソナを設定すること。
+**Provider Safety Filters** - AIプロバイダー（例：GitHub Models）由来のAPIレベルの内蔵コンテンツフィルター。
 
-**Self-Reflection** - モデルが自らの出力を評価して改善すること。
+**Soft Refusal** - エラーを返さず、丁寧に回答を拒否するモデルの応答。
 
-**Structured Analysis** - 固定された評価フレームワーク。
+## Prompt Engineering - [Module 02](../02-prompt-engineering/README.md)
+
+**Chain-of-Thought** - 精度向上のための段階的推論。
+
+**Constrained Output** - 特定のフォーマットや構造の強制。
+
+**High Eagerness** - 徹底的な推論のためのGPT-5パターン。
+
+**Low Eagerness** - 迅速な回答のためのGPT-5パターン。
+
+**Multi-Turn Conversation** - 複数回のやりとりでコンテキストを維持。
+
+**Role-Based Prompting** - システムメッセージを使いモデルのペルソナを設定。
+
+**Self-Reflection** - モデルが自己評価し出力を改善。
+
+**Structured Analysis** - 固定評価フレームワーク。
 
 **Task Execution Pattern** - 計画 → 実行 → 要約。
 
-## RAG (Retrieval-Augmented Generation) - [モジュール 03](../03-rag/README.md)
+## RAG (Retrieval-Augmented Generation) - [Module 03](../03-rag/README.md)
 
-**Document Processing Pipeline** - 読み込み → チャンク化 → 埋め込み → 保存。
+**Document Processing Pipeline** - 読み込み → チャンク分割 → 埋め込み → 保存。
 
 **In-Memory Embedding Store** - テスト用の非永続的ストレージ。
 
-**RAG** - 生成を検索で裏付けることで応答を根拠づける手法。
+**RAG** - 検索と生成を組み合わせて根拠のある応答を生成。
 
-**Similarity Score** - セマンティック類似度の指標（0〜1）。
+**Similarity Score** - 意味的な類似度の尺度（0-1）。
 
-**Source Reference** - 取得したコンテンツに関するメタデータ。
+**Source Reference** - 取得したコンテンツのメタデータ。
 
-## エージェントとツール - [モジュール 04](../04-tools/README.md)
+## Agents and Tools - [Module 04](../04-tools/README.md)
 
-**@Tool Annotation** - Java メソッドをAIから呼び出せるツールとしてマークします。
+**@Tool Annotation** - JavaのメソッドをAI呼び出し可能なツールとしてマーク。
 
 **ReAct Pattern** - 推論 → 行動 → 観察 → 繰り返し。
 
-**Session Management** - 異なるユーザー向けにコンテキストを分離します。
+**Session Management** - ユーザーごとに別々のコンテキストを管理。
 
 **Tool** - AIエージェントが呼び出せる関数。
 
-**Tool Description** - ツールの目的とパラメータのドキュメント。
+**Tool Description** - ツールの目的とパラメーターのドキュメント。
 
-## Model Context Protocol (MCP) - [モジュール 05](../05-mcp/README.md)
+## Agentic Module - [Module 05](../05-mcp/README.md)
 
-**MCP** - AIアプリを外部ツールに接続するための標準。
+**@Agent Annotation** - インターフェースをAIエージェントとしてマークし宣言的な振る舞い定義。
 
-**MCP Client** - MCPサーバーに接続するアプリケーション。
+**Agent Listener** - `beforeAgentInvocation()` と `afterAgentInvocation()` によるエージェント実行監視用フック。
 
-**MCP Server** - MCP経由でツールを公開するサービス。
+**Agentic Scope** - 複数のエージェントが `outputKey` を使って出力を保存し下流のエージェントが利用する共有メモリ。
 
-**Stdio Transport** - stdin/stdout経由のサブプロセスとしてのサーバ。
+**AgenticServices** - `agentBuilder()` と `supervisorBuilder()` を使ったエージェント作成ファクトリー。
 
-**Tool Discovery** - クライアントが利用可能なツールをサーバに問い合わせます。
+**Conditional Workflow** - 条件に応じて異なる専門エージェントへルーティング。
 
-## Azure サービス - [モジュール 01](../01-introduction/README.md)
+**Human-in-the-Loop** - 承認または内容確認のための人間のチェックポイントを追加するワークフロー。
 
-**Azure AI Search** - ベクター機能を備えたクラウド検索。 [モジュール 03](../03-rag/README.md)
+**langchain4j-agentic** - 宣言的エージェント構築用のMaven依存関係（実験的）。
 
-**Azure Developer CLI (azd)** - Azureリソースをデプロイするツール。
+**Loop Workflow** - 条件が満たされるまでエージェント実行を繰り返す（例：品質スコア≥0.8）。
 
-**Azure OpenAI** - Microsoftのエンタープライズ向けAIサービス。
+**outputKey** - エージェントの注釈パラメーターで、結果をAgentic Scopeのどこに保存するか指定。
 
-**Bicep** - Azureのインフラをコード化する言語。 [インフラガイド](../01-introduction/infra/README.md)
+**Parallel Workflow** - 独立した複数のタスクを同時にエージェント実行。
 
-**Deployment Name** - Azureでのモデルデプロイメントの名前。
+**Response Strategy** - 監督エージェントが最終回答を作る方法：LAST、SUMMARY、SCORED。
 
-**GPT-5** - 推論制御を備えた最新のOpenAIモデル。 [モジュール 02](../02-prompt-engineering/README.md)
+**Sequential Workflow** - 出力が次のステップに流れる順番実行。
 
-## テストと開発 - [テストガイド](TESTING.md)
+**Supervisor Agent Pattern** - 監督役LLMが動的にサブエージェントを選択実行する高度なエージェンティックパターン。
 
-**Dev Container** - コンテナ化された開発環境。 [構成](../../../.devcontainer/devcontainer.json)
+## Model Context Protocol (MCP) - [Module 05](../05-mcp/README.md)
 
-**GitHub Models** - 無料のAIモデルプレイグラウンド。 [モジュール 00](../00-quick-start/README.md)
+**langchain4j-mcp** - LangChain4jでのMCP統合用Maven依存関係。
 
-**In-Memory Testing** - インメモリストレージを使ったテスト。
+**MCP** - Model Context Protocol：AIアプリを外部ツールに接続する標準。1度構築してどこでも使う。
+
+**MCP Client** - MCPサーバーに接続してツールを検索・利用するアプリケーション。
+
+**MCP Server** - MCP経由でツールを公開し、明確な説明とパラメータスキーマを提供。
+
+**McpToolProvider** - MCPツールをLangChain4jのAIサービスやエージェントで使えるようにラップするコンポーネント。
+
+**McpTransport** - MCP通信のインターフェース。実装例にStdioとHTTP。
+
+**Stdio Transport** - stdin/stdout経由のローカルプロセストランスポート。ファイルアクセスやコマンドラインツール利用時に便利。
+
+**StdioMcpTransport** - LangChain4jの実装で、MCPサーバーをサブプロセスとして起動。
+
+**Tool Discovery** - クライアントが説明とスキーマ付きで利用可能ツールをサーバーに問い合わせ。
+
+## Azure Services - [Module 01](../01-introduction/README.md)
+
+**Azure AI Search** - ベクトル機能付きクラウド検索。[Module 03](../03-rag/README.md)
+
+**Azure Developer CLI (azd)** - Azureリソースをデプロイ。
+
+**Azure OpenAI** - マイクロソフトの企業向けAIサービス。
+
+**Bicep** - Azureのインフラコード言語。[Infrastructure Guide](../01-introduction/infra/README.md)
+
+**Deployment Name** - Azureでのモデルデプロイの名前。
+
+**GPT-5** - 推論制御機能を持つ最新のOpenAIモデル。[Module 02](../02-prompt-engineering/README.md)
+
+## Testing and Development - [Testing Guide](TESTING.md)
+
+**Dev Container** - コンテナ化された開発環境。[Configuration](../../../.devcontainer/devcontainer.json)
+
+**GitHub Models** - 無料のAIモデルプレイグラウンド。[Module 00](../00-quick-start/README.md)
+
+**In-Memory Testing** - メモリ内ストレージを使ったテスト。
 
 **Integration Testing** - 実際のインフラを使った統合テスト。
 
 **Maven** - Javaのビルド自動化ツール。
 
-**Mockito** - Javaのモッキングフレームワーク。
+**Mockito** - Javaモッキングフレームワーク。
 
-**Spring Boot** - Javaアプリケーションフレームワーク。 [モジュール 01](../01-introduction/README.md)
+**Spring Boot** - Javaアプリケーションフレームワーク。[Module 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-免責事項：
-この文書は AI 翻訳サービス「Co-op Translator」（https://github.com/Azure/co-op-translator）を使用して翻訳されました。正確性には注意を払っていますが、自動翻訳には誤りや不正確な表現が含まれる可能性があります。原文（母語で作成された文書）を正本と見なしてください。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や誤訳についても責任を負いません。
+**免責事項**：  
+本書類はAI翻訳サービス[Co-op Translator](https://github.com/Azure/co-op-translator)を使用して翻訳されました。正確性には努めておりますが、自動翻訳には誤りや不正確な箇所が含まれる可能性があることをご了承ください。原文のオリジナル文書が正式な情報源とみなされます。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用によって生じたいかなる誤解や誤訳についても、当方は一切の責任を負いかねます。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
