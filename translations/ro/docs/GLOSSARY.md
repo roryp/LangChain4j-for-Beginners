@@ -1,187 +1,241 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "52815c169081c357fd1cec7b260f37e4",
-  "translation_date": "2025-12-31T04:53:12+00:00",
+  "original_hash": "0c4ed0dd4b9db1aa5d6ac7cfd0c79ca4",
+  "translation_date": "2026-01-06T08:31:41+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "ro"
 }
 -->
-# LangChain4j Glosar
+# Glosar LangChain4j
 
 ## Cuprins
 
 - [Concepte de bază](../../../docs)
 - [Componente LangChain4j](../../../docs)
 - [Concepte AI/ML](../../../docs)
-- [Ingineria prompturilor](../../../docs)
-- [RAG (Generare augmentată prin recuperare)](../../../docs)
+- [Protecții](../../../docs)
+- [Inginerie Prompt](../../../docs)
+- [RAG (Generare augmentată prin căutare)](../../../docs)
 - [Agenți și unelte](../../../docs)
-- [Model Context Protocol (MCP)](../../../docs)
+- [Modul Agentic](../../../docs)
+- [Protocol Context Model (MCP)](../../../docs)
 - [Servicii Azure](../../../docs)
-- [Testare și dezvoltare](../../../docs)
+- [Testare și Dezvoltare](../../../docs)
 
-Referință rapidă pentru termeni și concepte utilizate pe tot parcursul cursului.
+Referință rapidă pentru termeni și concepte folosite pe parcursul cursului.
 
-## Core Concepts
+## Concepte de bază
 
-**AI Agent** - Sistem care folosește AI pentru a raționa și a acționa în mod autonom. [Modul 04](../04-tools/README.md)
+**Agent AI** - Sistem care utilizează AI pentru a raționa și a acționa autonom. [Modul 04](../04-tools/README.md)
 
-**Chain** - Secvență de operațiuni în care ieșirea alimentează pasul următor.
+**Lanț** - Secvență de operațiuni unde rezultatul alimentază pasul următor.
 
-**Chunking** - Împărțirea documentelor în bucăți mai mici. Tipic: 300-500 tokeni cu suprapunere. [Modul 03](../03-rag/README.md)
+**Fragmentare** - Împărțirea documentelor în bucăți mai mici. Tipic: 300-500 tokeni cu suprapunere. [Modul 03](../03-rag/README.md)
 
-**Context Window** - Numărul maxim de tokeni pe care un model îi poate procesa. GPT-5: 400K tokeni.
+**Fereastra de context** - Numărul maxim de tokeni pe care un model îi poate procesa. GPT-5: 400K tokeni.
 
-**Embeddings** - Vectori numerici care reprezintă semnificația textului. [Modul 03](../03-rag/README.md)
+**Embeddinguri** - Vectori numerici care reprezintă semnificația textului. [Modul 03](../03-rag/README.md)
 
-**Function Calling** - Modelul generează cereri structurate pentru a apela funcții externe. [Modul 04](../04-tools/README.md)
+**Apelarea Funcțiilor** - Modelul generează cereri structurate pentru a apela funcții externe. [Modul 04](../04-tools/README.md)
 
-**Hallucination** - Când modelele generează informații incorecte dar plauzibile.
+**Halucinație** - Când modelele generează informații incorecte dar plauzibile.
 
-**Prompt** - Textul introdus într-un model de limbaj. [Modul 02](../02-prompt-engineering/README.md)
+**Prompt** - Text introdus într-un model lingvistic. [Modul 02](../02-prompt-engineering/README.md)
 
-**Semantic Search** - Căutare după semnificație utilizând embeddings, nu cuvinte cheie. [Modul 03](../03-rag/README.md)
+**Căutare Semantică** - Căutare după semnificație folosind embeddinguri, nu cuvinte cheie. [Modul 03](../03-rag/README.md)
 
-**Stateful vs Stateless** - Fără stare: fără memorie. Cu stare: păstrează istoricul conversațiilor. [Modul 01](../01-introduction/README.md)
+**Cu stare vs fără stare** - Fără stare: fără memorie. Cu stare: păstrează istoricul conversației. [Modul 01](../01-introduction/README.md)
 
-**Tokens** - Unități de bază de text pe care modelele le procesează. Afectează costurile și limitele. [Modul 01](../01-introduction/README.md)
+**Tokeni** - Unitățile de bază de text procesate de modele. Afectează costuri și limite. [Modul 01](../01-introduction/README.md)
 
-**Tool Chaining** - Execuția secvențială a uneltelor în care ieșirea informează următoarea apelare. [Modul 04](../04-tools/README.md)
+**Lanț de unelte** - Execuție secvențială a uneltelor unde rezultatul informează următorul apel. [Modul 04](../04-tools/README.md)
 
-## LangChain4j Components
+## Componente LangChain4j
 
-**AiServices** - Creează interfețe de servicii AI tip-safe.
+**AiServices** - Creează interfețe de servicii AI tip-sigure.
 
 **OpenAiOfficialChatModel** - Client unificat pentru modelele OpenAI și Azure OpenAI.
 
-**OpenAiOfficialEmbeddingModel** - Creează embeddings folosind clientul OpenAI Official (suportă atât OpenAI cât și Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Creează embeddinguri folosind clientul oficial OpenAI (suportă OpenAI și Azure OpenAI).
 
-**ChatModel** - Interfața de bază pentru modelele de limbaj.
+**ChatModel** - Interfață principală pentru modelele lingvistice.
 
-**ChatMemory** - Menține istoricul conversațiilor.
+**ChatMemory** - Păstrează istoricul conversației.
 
-**ContentRetriever** - Găsește segmente de document relevante pentru RAG.
+**ContentRetriever** - Găsește fragmente de documente relevante pentru RAG.
 
-**DocumentSplitter** - Împarte documentele în segmente.
+**DocumentSplitter** - Sparge documentele în fragmente.
 
-**EmbeddingModel** - Convertește textul în vectori numerici.
+**EmbeddingModel** - Convertește text în vectori numerici.
 
-**EmbeddingStore** - Stochează și recuperează embeddings.
+**EmbeddingStore** - Stochează și recuperează embeddinguri.
 
-**MessageWindowChatMemory** - Menține o fereastră glisantă a mesajelor recente.
+**MessageWindowChatMemory** - Păstrează o fereastră mobilă cu mesajele recente.
 
-**PromptTemplate** - Creează prompturi reutilizabile cu placeholder-e `{{variable}}`.
+**PromptTemplate** - Creează prompturi reutilizabile cu locuri pentru `{{variable}}`.
 
-**TextSegment** - Segment de text cu metadate. Folosit în RAG.
+**TextSegment** - Fragment de text cu metadate. Folosit în RAG.
 
 **ToolExecutionRequest** - Reprezintă o cerere de execuție a unei unelte.
 
-**UserMessage / AiMessage / SystemMessage** - Tipuri de mesaje în conversație.
+**UserMessage / AiMessage / SystemMessage** - Tipuri de mesaje din conversație.
 
-## AI/ML Concepts
+## Concepte AI/ML
 
-**Few-Shot Learning** - Furnizarea de exemple în prompturi. [Modul 02](../02-prompt-engineering/README.md)
+**Învățare cu puține exemple** - Furnizarea de exemple în prompturi. [Modul 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - Modele AI antrenate pe cantități vaste de date text.
+**Model Lingvistic Mare (LLM)** - Modele AI antrenate pe cantități vaste de text.
 
-**Reasoning Effort** - Parametru GPT-5 care controlează profunzimea raționamentului. [Modul 02](../02-prompt-engineering/README.md)
+**Efort de raționare** - Parametru GPT-5 care controlează profunzimea gândirii. [Modul 02](../02-prompt-engineering/README.md)
 
-**Temperature** - Controlează aleatorietatea ieșirii. Scăzut=determinist, ridicat=creativ.
+**Temperatură** - Controlează aleatorietatea ieșirii. Mică=determinist, mare=creativ.
 
-**Vector Database** - Bază de date specializată pentru embeddings. [Modul 03](../03-rag/README.md)
+**Bază de date vectorială** - Bază de date specializată pentru embeddinguri. [Modul 03](../03-rag/README.md)
 
-**Zero-Shot Learning** - Realizarea sarcinilor fără exemple. [Modul 02](../02-prompt-engineering/README.md)
+**Învățare fără exemple** - Executarea sarcinilor fără exemple. [Modul 02](../02-prompt-engineering/README.md)
 
-## Prompt Engineering - [Modul 02](../02-prompt-engineering/README.md)
+## Protecții - [Modul 00](../00-quick-start/README.md)
 
-**Chain-of-Thought** - Raționament pas cu pas pentru o acuratețe mai bună.
+**Apărare în adâncime** - Abordare multi-strat de securitate care combină protecții la nivel de aplicație cu filtre de siguranță ale furnizorilor.
 
-**Constrained Output** - Impunerea unui format sau structură specifică.
+**Blocare dură** - Furnizorul returnează eroare HTTP 400 pentru violări grave de conținut.
 
-**High Eagerness** - Tipar GPT-5 pentru raționament minuțios.
+**InputGuardrail** - Interfață LangChain4j pentru validarea intrării utilizatorului înainte de a ajunge la LLM. Economisește cost și latență prin blocarea devreme a prompturilor dăunătoare.
 
-**Low Eagerness** - Tipar GPT-5 pentru răspunsuri rapide.
+**InputGuardrailResult** - Tipul returnat pentru validarea protecțiilor: `success()` sau `fatal("motiv")`.
 
-**Multi-Turn Conversation** - Menținerea contextului pe parcursul schimburilor.
+**OutputGuardrail** - Interfață pentru validarea răspunsurilor AI înainte de a fi returnate utilizatorilor.
 
-**Role-Based Prompting** - Setarea unei persoane pentru model prin mesaje de sistem.
+**Filtrele de Siguranță ale Furnizorilor** - Filtre de conținut integrate oferite de furnizorii AI (ex. GitHub Models) care detectează încălcări la nivel API.
 
-**Self-Reflection** - Modelul evaluează și îmbunătățește propria ieșire.
+**Refuz blând** - Modelul refuză politicos să răspundă fără a genera o eroare.
 
-**Structured Analysis** - Cadrul fix de evaluare.
+## Inginerie Prompt - [Modul 02](../02-prompt-engineering/README.md)
 
-**Task Execution Pattern** - Plan → Execută → Rezumă.
+**Lanț de Gândire** - Raționament pas cu pas pentru o acuratețe mai bună.
 
-## RAG (Generare augmentată prin recuperare) - [Modul 03](../03-rag/README.md)
+**Ieșire Constrânsă** - Impunerea unui format sau structură specifică.
 
-**Document Processing Pipeline** - Încărcare → împărțire în segmente → embedding → stocare.
+**Dor intensă** - Tipar GPT-5 pentru raționament amănunțit.
 
-**In-Memory Embedding Store** - Stocare nepersistentă pentru testare.
+**Dor redusă** - Tipar GPT-5 pentru răspunsuri rapide.
 
-**RAG** - Combină recuperarea cu generarea pentru a ancora răspunsurile.
+**Conversație multi-turn** - Menținerea contextului peste schimburile succesive.
 
-**Similarity Score** - Măsură (0-1) a similarității semantice.
+**Prompt bazat pe rol** - Setarea personajului modelului prin mesaje de sistem.
 
-**Source Reference** - Metadate despre conținutul recuperat.
+**Auto-reflecție** - Modelul evaluează și îmbunătățește ieșirea sa.
 
-## Agents and Tools - [Modul 04](../04-tools/README.md)
+**Analiză structurată** - Cadru fix de evaluare.
 
-**@Tool Annotation** - Marchează metode Java ca unelte pe care AI le poate apela.
+**Tipar de execuție a sarcinii** - Planifică → Execută → Rezumă.
 
-**ReAct Pattern** - Raționare → Acțiune → Observare → Repetare.
+## RAG (Generare augmentată prin căutare) - [Modul 03](../03-rag/README.md)
 
-**Session Management** - Contexte separate pentru utilizatori diferiți.
+**Flux procesare documente** - Încarcă → fragmentare → embedding → stocare.
 
-**Tool** - Funcție pe care un agent AI o poate apela.
+**Depozit embedding în memorie** - Stocare nepermanentă pentru testare.
 
-**Tool Description** - Documentație a scopului și parametrilor unei unelte.
+**RAG** - Combină căutarea cu generarea pentru a susține răspunsurile.
 
-## Model Context Protocol (MCP) - [Modul 05](../05-mcp/README.md)
+**Scor de similitudine** - Măsură (0-1) a similitudinii semantice.
 
-**MCP** - Standard pentru conectarea aplicațiilor AI la unelte externe.
+**Referință sursă** - Metadate despre conținutul obținut.
 
-**MCP Client** - Aplicație care se conectează la servere MCP.
+## Agenți și unelte - [Modul 04](../04-tools/README.md)
 
-**MCP Server** - Serviciu care expune unelte prin MCP.
+**@Tool Annotation** - Marchează metode Java ca unelte apelabile de AI.
 
-**Stdio Transport** - Server ca subproces prin stdin/stdout.
+**Tipar ReAct** - Raționează → Acționează → Observă → Repetă.
 
-**Tool Discovery** - Clientul interoghează serverul pentru uneltele disponibile.
+**Management sesiuni** - Context separat pentru utilizatori diferiți.
 
-## Azure Services - [Modul 01](../01-introduction/README.md)
+**Unealtă** - Funcție pe care un agent AI o poate apela.
 
-**Azure AI Search** - Căutare în cloud cu capabilități vectoriale. [Modul 03](../03-rag/README.md)
+**Descriere unealtă** - Documentația scopului și parametrilor uneltei.
 
-**Azure Developer CLI (azd)** - Deplasează resurse Azure.
+## Modul Agentic - [Modul 05](../05-mcp/README.md)
+
+**@Agent Annotation** - Marchează interfețe ca agenți AI cu definiție declarativă a comportamentului.
+
+**Agent Listener** - Punct de monitorizare a execuției agentului prin `beforeAgentInvocation()` și `afterAgentInvocation()`.
+
+**Domeniu Agentic** - Memorie partajată unde agenții stochează ieșiri folosind `outputKey` pentru a fi consumate de agenți ulteriori.
+
+**AgenticServices** - Fabrică pentru crearea agenților folosind `agentBuilder()` și `supervisorBuilder()`.
+
+**Flux condiționat** - Rutare pe baza condițiilor către agenți specialiști diferiți.
+
+**Om în circuit** - Tipar de flux adăugând puncte de control uman pentru aprobare sau revizuire de conținut.
+
+**langchain4j-agentic** - Dependență Maven pentru construcția declarativă a agenților (experimental).
+
+**Flux ciclic** - Iterează execuția agentului până la îndeplinirea unei condiții (ex. scor calitate ≥ 0.8).
+
+**outputKey** - Parametru de adnotare agent care specifică unde sunt stocate rezultatele în Domeniul Agentic.
+
+**Flux paralel** - Rulează mai mulți agenți simultan pentru sarcini independente.
+
+**Strategie de răspuns** - Cum formulează supraveghetorul răspunsul final: LAST, SUMMARY sau SCORED.
+
+**Flux secvențial** - Execută agenții în ordine unde ieșirea curge către pasul următor.
+
+**Tipar agent supervisor** - Tipar agentic avansat unde un LLM supraveghetor decide dinamic ce sub-agenți să invoce.
+
+## Protocol Context Model (MCP) - [Modul 05](../05-mcp/README.md)
+
+**langchain4j-mcp** - Dependență Maven pentru integrarea MCP în LangChain4j.
+
+**MCP** - Protocol Context Model: standard pentru conectarea aplicațiilor AI la unelte externe. Construiește o dată, folosește oriunde.
+
+**Client MCP** - Aplicație care se conectează la servere MCP pentru a descoperi și folosi unelte.
+
+**Server MCP** - Serviciu care expune unelte prin MCP cu descrieri clare și scheme de parametri.
+
+**McpToolProvider** - Componentă LangChain4j care împachetează uneltele MCP pentru utilizare în servicii AI și agenți.
+
+**McpTransport** - Interfață pentru comunicare MCP. Implementări includ Stdio și HTTP.
+
+**Transport Stdio** - Transport local prin stdin/stdout. Util pentru acces la sistemul de fișiere sau unelte CLI.
+
+**StdioMcpTransport** - Implementare LangChain4j care pornește server MCP ca proces copil.
+
+**Descoperire Unelte** - Clientul interoghează serverul pentru uneltele disponibile cu descrieri și scheme.
+
+## Servicii Azure - [Modul 01](../01-introduction/README.md)
+
+**Azure AI Search** - Căutare cloud cu capabilități vectoriale. [Modul 03](../03-rag/README.md)
+
+**Azure Developer CLI (azd)** - Deploiază resurse Azure.
 
 **Azure OpenAI** - Serviciul AI enterprise al Microsoft.
 
-**Bicep** - Limbaj pentru infrastructură ca cod în Azure. [Infrastructure Guide](../01-introduction/infra/README.md)
+**Bicep** - Limbaj Azure pentru infrastructură ca cod. [Ghid Infrastructură](../01-introduction/infra/README.md)
 
-**Deployment Name** - Nume pentru implementarea modelului în Azure.
+**Numele Deployment-ului** - Nume pentru implementarea modelului în Azure.
 
-**GPT-5** - Cel mai recent model OpenAI cu control al raționamentului. [Modul 02](../02-prompt-engineering/README.md)
+**GPT-5** - Cel mai nou model OpenAI cu control al raționamentului. [Modul 02](../02-prompt-engineering/README.md)
 
-## Testing and Development - [Testing Guide](TESTING.md)
+## Testare și Dezvoltare - [Ghid de testare](TESTING.md)
 
-**Dev Container** - Mediu de dezvoltare containerizat. [Configuration](../../../.devcontainer/devcontainer.json)
+**Dev Container** - Mediu de dezvoltare containerizat. [Configurație](../../../.devcontainer/devcontainer.json)
 
-**GitHub Models** - Playground gratuit pentru modele AI. [Modul 00](../00-quick-start/README.md)
+**GitHub Models** - Platformă gratuită de modele AI. [Modul 00](../00-quick-start/README.md)
 
-**In-Memory Testing** - Testare cu stocare în memorie.
+**Testare în memorie** - Testare cu stocare în memorie.
 
-**Integration Testing** - Testare cu infrastructură reală.
+**Testare de integrare** - Testare cu infrastructură reală.
 
-**Maven** - Unealtă de automatizare a build-ului Java.
+**Maven** - Unealtă de automatizare a construcției Java.
 
-**Mockito** - Framework Java pentru mocking.
+**Mockito** - Framework Java pentru simulări.
 
-**Spring Boot** - Framework pentru aplicații Java. [Modul 01](../01-introduction/README.md)
+**Spring Boot** - Framework Java pentru aplicații. [Modul 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Declinare de responsabilitate:
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original, în limba sa nativă, trebuie considerat sursa autorizată. Pentru informații critice, se recomandă o traducere profesională realizată de un traducător uman. Nu ne asumăm răspunderea pentru eventuale neînțelegeri sau interpretări greșite care pot rezulta din utilizarea acestei traduceri.
+**Declinare de responsabilitate**:
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa oficială. Pentru informații critice, se recomandă traducerea profesională realizată de un specialist uman. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite rezultate din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

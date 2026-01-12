@@ -1,187 +1,241 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "52815c169081c357fd1cec7b260f37e4",
-  "translation_date": "2025-12-31T02:52:02+00:00",
+  "original_hash": "0c4ed0dd4b9db1aa5d6ac7cfd0c79ca4",
+  "translation_date": "2026-01-06T08:18:54+00:00",
   "source_file": "docs/GLOSSARY.md",
   "language_code": "vi"
 }
 -->
-# LangChain4j Bảng thuật ngữ
+# Bảng Thuật Ngữ LangChain4j
 
-## Mục lục
+## Mục Lục
 
-- [Khái niệm cốt lõi](../../../docs)
+- [Khái Niệm Cốt lõi](../../../docs)
 - [Thành phần LangChain4j](../../../docs)
 - [Khái niệm AI/ML](../../../docs)
-- [Kỹ thuật thiết kế Prompt - [Mô-đun 02](../02-prompt-engineering/README.md)](#prompt-engineering---module-02)
-- [RAG (Tạo nội dung có tăng cường truy xuất) - [Mô-đun 03](../03-rag/README.md)](#rag-retrieval-augmented-generation---module-03)
-- [Agents và Tools - [Mô-đun 04](../04-tools/README.md)](#agents-and-tools---module-04)
-- [Model Context Protocol (MCP) - [Mô-đun 05](../05-mcp/README.md)](#model-context-protocol-mcp---module-05)
-- [Dịch vụ Azure - [Mô-đun 01](../01-introduction/README.md)](#azure-services---module-01)
-- [Kiểm thử và Phát triển - [Hướng dẫn kiểm thử](TESTING.md)](#testing-and-development---testing-guide)
+- [Bảo Đảm An Toàn](../../../docs)
+- [Kỹ Thuật Thiết Kế Prompt](../../../docs)
+- [RAG (Tạo Nội Dung Kèm Truy Xuất)](../../../docs)
+- [Tác Nhân và Công Cụ](../../../docs)
+- [Mô-đun Agentic](../../../docs)
+- [Giao Thức Ngữ Cảnh Mô Hình (MCP)](../../../docs)
+- [Dịch Vụ Azure](../../../docs)
+- [Kiểm Thử và Phát Triển](../../../docs)
 
-Tham khảo nhanh cho các thuật ngữ và khái niệm được sử dụng trong suốt khóa học.
+Tham khảo nhanh các thuật ngữ và khái niệm được sử dụng xuyên suốt khóa học.
 
-## Khái niệm cốt lõi
+## Khái Niệm Cốt lõi
 
-**AI Agent** - Hệ thống sử dụng AI để suy luận và hành động một cách tự chủ. [Mô-đun 04](../04-tools/README.md)
+**Tác Nhân AI** - Hệ thống sử dụng AI để suy luận và hành động một cách tự động. [Module 04](../04-tools/README.md)
 
-**Chain** - Chuỗi các phép toán trong đó đầu ra được đưa vào bước tiếp theo.
+**Chuỗi (Chain)** - Chuỗi các bước thao tác mà đầu ra của bước trước là đầu vào của bước tiếp theo.
 
-**Chunking** - Chia tài liệu thành các phần nhỏ hơn. Thông thường: 300-500 token với chồng lấp. [Mô-đun 03](../03-rag/README.md)
+**Chunking** - Phân tách tài liệu thành các phần nhỏ hơn. Thông thường: 300-500 token với phần trùng lặp. [Module 03](../03-rag/README.md)
 
-**Context Window** - Số token tối đa mà một mô hình có thể xử lý. GPT-5: 400K token.
+**Cửa Sổ Ngữ Cảnh** - Số lượng token tối đa mà mô hình có thể xử lý. GPT-5: 400K token.
 
-**Embeddings** - Vectơ số biểu diễn ý nghĩa văn bản. [Mô-đun 03](../03-rag/README.md)
+**Embedding** - Vector số đại diện cho ý nghĩa của văn bản. [Module 03](../03-rag/README.md)
 
-**Function Calling** - Mô hình tạo các yêu cầu có cấu trúc để gọi hàm ngoài. [Mô-đun 04](../04-tools/README.md)
+**Gọi Hàm (Function Calling)** - Mô hình tạo yêu cầu có cấu trúc để gọi hàm ngoài. [Module 04](../04-tools/README.md)
 
-**Hallucination** - Khi mô hình sinh ra thông tin sai nhưng có vẻ hợp lý.
+**Hallucination** - Khi mô hình tạo ra thông tin sai nhưng có vẻ hợp lý.
 
-**Prompt** - Văn bản đầu vào cho mô hình ngôn ngữ. [Mô-đun 02](../02-prompt-engineering/README.md)
+**Prompt** - Văn bản đầu vào cho mô hình ngôn ngữ. [Module 02](../02-prompt-engineering/README.md)
 
-**Semantic Search** - Tìm kiếm theo ý nghĩa sử dụng embeddings, không phải từ khóa. [Mô-đun 03](../03-rag/README.md)
+**Tìm kiếm ngữ nghĩa** - Tìm kiếm dựa trên ý nghĩa sử dụng embeddings thay vì từ khóa. [Module 03](../03-rag/README.md)
 
-**Stateful vs Stateless** - Stateless: không có bộ nhớ. Stateful: duy trì lịch sử cuộc hội thoại. [Mô-đun 01](../01-introduction/README.md)
+**Trạng thái nhớ (Stateful) vs không nhớ (Stateless)** - Stateless: không lưu trữ lịch sử. Stateful: giữ lịch sử hội thoại. [Module 01](../01-introduction/README.md)
 
-**Tokens** - Đơn vị văn bản cơ bản mà các mô hình xử lý. Ảnh hưởng đến chi phí và giới hạn. [Mô-đun 01](../01-introduction/README.md)
+**Token** - Đơn vị văn bản cơ bản mà mô hình xử lý. Ảnh hưởng chi phí và giới hạn. [Module 01](../01-introduction/README.md)
 
-**Tool Chaining** - Thực thi các công cụ theo trình tự trong đó đầu ra cung cấp thông tin cho lần gọi tiếp theo. [Mô-đun 04](../04-tools/README.md)
+**Chuỗi công cụ (Tool Chaining)** - Chuỗi gọi công cụ nơi đầu ra của công cụ này là đầu vào của công cụ kế tiếp. [Module 04](../04-tools/README.md)
 
-## LangChain4j Components
+## Thành phần LangChain4j
 
-**AiServices** - Tạo giao diện dịch vụ AI an toàn theo kiểu.
+**AiServices** - Tạo giao diện dịch vụ AI kiểu an toàn.
 
 **OpenAiOfficialChatModel** - Client hợp nhất cho các mô hình OpenAI và Azure OpenAI.
 
-**OpenAiOfficialEmbeddingModel** - Tạo embeddings sử dụng client OpenAI Official (hỗ trợ cả OpenAI và Azure OpenAI).
+**OpenAiOfficialEmbeddingModel** - Tạo embeddings dùng client OpenAI Official (hỗ trợ cả OpenAI và Azure OpenAI).
 
-**ChatModel** - Giao diện lõi cho các mô hình ngôn ngữ.
+**ChatModel** - Giao diện cốt lõi cho các mô hình ngôn ngữ.
 
-**ChatMemory** - Duy trì lịch sử cuộc hội thoại.
+**ChatMemory** - Duy trì lịch sử hội thoại.
 
 **ContentRetriever** - Tìm các đoạn tài liệu liên quan cho RAG.
 
-**DocumentSplitter** - Chia tài liệu thành các đoạn.
+**DocumentSplitter** - Phân tách tài liệu thành các đoạn nhỏ.
 
-**EmbeddingModel** - Chuyển văn bản thành vectơ số.
+**EmbeddingModel** - Chuyển văn bản thành vector số.
 
 **EmbeddingStore** - Lưu trữ và truy xuất embeddings.
 
-**MessageWindowChatMemory** - Duy trì cửa sổ trượt của các tin nhắn gần nhất.
+**MessageWindowChatMemory** - Duy trì cửa sổ trượt các tin nhắn gần đây.
 
-**PromptTemplate** - Tạo các prompt có thể tái sử dụng với `{{variable}}` placeholders.
+**PromptTemplate** - Tạo prompt tái sử dụng với chỗ giữ chỗ `{{variable}}`.
 
-**TextSegment** - Đoạn văn bản kèm metadata. Sử dụng trong RAG.
+**TextSegment** - Đoạn văn bản kèm siêu dữ liệu. Dùng trong RAG.
 
 **ToolExecutionRequest** - Đại diện cho yêu cầu thực thi công cụ.
 
-**UserMessage / AiMessage / SystemMessage** - Các loại tin nhắn trong cuộc hội thoại.
+**UserMessage / AiMessage / SystemMessage** - Các loại tin nhắn trong hội thoại.
 
 ## Khái niệm AI/ML
 
-**Few-Shot Learning** - Cung cấp ví dụ trong prompt. [Mô-đun 02](../02-prompt-engineering/README.md)
+**Học với ví dụ ít (Few-Shot Learning)** - Cung cấp ví dụ trong prompt. [Module 02](../02-prompt-engineering/README.md)
 
-**Large Language Model (LLM)** - Các mô hình AI được huấn luyện trên lượng lớn dữ liệu văn bản.
+**Mô hình ngôn ngữ lớn (LLM)** - Mô hình AI được huấn luyện trên lượng lớn dữ liệu văn bản.
 
-**Reasoning Effort** - Tham số của GPT-5 điều khiển độ sâu suy luận. [Mô-đun 02](../02-prompt-engineering/README.md)
+**Nỗ lực suy luận** - Tham số GPT-5 điều khiển độ sâu suy nghĩ. [Module 02](../02-prompt-engineering/README.md)
 
-**Temperature** - Điều khiển độ ngẫu nhiên của đầu ra. Thấp = quyết định, cao = sáng tạo.
+**Nhiệt độ** - Điều khiển độ ngẫu nhiên đầu ra. Thấp=định tính, cao=sáng tạo.
 
-**Vector Database** - Cơ sở dữ liệu chuyên dụng cho embeddings. [Mô-đun 03](../03-rag/README.md)
+**Cơ sở dữ liệu vector** - Cơ sở dữ liệu chuyên biệt cho embeddings. [Module 03](../03-rag/README.md)
 
-**Zero-Shot Learning** - Thực hiện nhiệm vụ mà không có ví dụ. [Mô-đun 02](../02-prompt-engineering/README.md)
+**Học không cần ví dụ (Zero-Shot Learning)** - Thực hiện tác vụ mà không cần ví dụ. [Module 02](../02-prompt-engineering/README.md)
 
-## Kỹ thuật thiết kế Prompt - [Mô-đun 02](../02-prompt-engineering/README.md)
+## Bảo Đảm An Toàn - [Module 00](../00-quick-start/README.md)
 
-**Chain-of-Thought** - Suy luận từng bước để đạt độ chính xác tốt hơn.
+**Phòng thủ theo chiều sâu** - Cách tiếp cận an ninh nhiều lớp kết hợp guardrails cấp ứng dụng với bộ lọc an toàn của nhà cung cấp.
 
-**Constrained Output** - Ép buộc định dạng hoặc cấu trúc cụ thể cho đầu ra.
+**Khóa cứng (Hard Block)** - Nhà cung cấp trả lỗi HTTP 400 khi vi phạm nội dung nghiêm trọng.
 
-**High Eagerness** - Mẫu GPT-5 cho suy luận kỹ lưỡng.
+**InputGuardrail** - Giao diện LangChain4j xác thực đầu vào người dùng trước khi vào LLM. Tiết kiệm chi phí và giảm độ trễ bằng cách chặn prompt độc hại từ sớm.
 
-**Low Eagerness** - Mẫu GPT-5 cho câu trả lời nhanh.
+**InputGuardrailResult** - Kiểu trả về xác thực guardrail: `success()` hoặc `fatal("lý do")`.
 
-**Multi-Turn Conversation** - Duy trì ngữ cảnh qua nhiều lượt trao đổi.
+**OutputGuardrail** - Giao diện để xác thực phản hồi AI trước khi trả lại người dùng.
 
-**Role-Based Prompting** - Đặt nhân cách mô hình thông qua tin nhắn hệ thống.
+**Bộ lọc an toàn nhà cung cấp** - Bộ lọc nội dung tích hợp sẵn của nhà cung cấp AI (ví dụ: GitHub Models) phát hiện vi phạm ở cấp API.
 
-**Self-Reflection** - Mô hình đánh giá và cải thiện đầu ra của chính nó.
+**Từ chối mềm** - Mô hình từ chối trả lời một cách lịch sự mà không báo lỗi.
 
-**Structured Analysis** - Khung đánh giá cố định.
+## Kỹ Thuật Thiết Kế Prompt - [Module 02](../02-prompt-engineering/README.md)
 
-**Task Execution Pattern** - Lập kế hoạch → Thực thi → Tóm tắt.
+**Chuỗi suy luận (Chain-of-Thought)** - Suy luận từng bước để tăng độ chính xác.
 
-## RAG (Retrieval-Augmented Generation) - [Mô-đun 03](../03-rag/README.md)
+**Đầu ra có ràng buộc** - Ép định dạng hoặc cấu trúc cụ thể.
 
-**Document Processing Pipeline** - Tải → chia đoạn → nhúng → lưu trữ.
+**Sự nhiệt tình cao** - Mẫu GPT-5 để suy luận kỹ lưỡng.
 
-**In-Memory Embedding Store** - Lưu trữ không bền cho mục đích kiểm thử.
+**Sự nhiệt tình thấp** - Mẫu GPT-5 để trả lời nhanh.
 
-**RAG** - Kết hợp truy xuất với sinh để làm cơ sở cho các phản hồi.
+**Hội thoại nhiều lượt (Multi-Turn Conversation)** - Duy trì ngữ cảnh qua các vòng trao đổi.
 
-**Similarity Score** - Thước đo (0-1) của sự tương đồng ngữ nghĩa.
+**Prompt dựa trên vai trò** - Đặt nhân vật mô hình qua tin nhắn hệ thống.
 
-**Source Reference** - Metadata về nội dung được truy xuất.
+**Tự đánh giá (Self-Reflection)** - Mô hình tự đánh giá và cải thiện đầu ra.
 
-## Agents and Tools - [Mô-đun 04](../04-tools/README.md)
+**Phân tích có cấu trúc** - Khung đánh giá cố định.
 
-**@Tool Annotation** - Đánh dấu các phương thức Java là công cụ có thể được AI gọi.
+**Mẫu thực thi tác vụ** - Lập kế hoạch → Thực thi → Tóm tắt.
 
-**ReAct Pattern** - Lý luận → Hành động → Quan sát → Lặp lại.
+## RAG (Tạo Nội Dung Kèm Truy Xuất) - [Module 03](../03-rag/README.md)
 
-**Session Management** - Tách ngữ cảnh cho các người dùng khác nhau.
+**Chuỗi xử lý tài liệu** - Tải → phân đoạn → nhúng → lưu trữ.
 
-**Tool** - Hàm mà một tác nhân AI có thể gọi.
+**Kho nhúng trong bộ nhớ** - Kho lưu trữ không bền dùng để thử nghiệm.
 
-**Tool Description** - Tài liệu về mục đích và tham số của công cụ.
+**RAG** - Kết hợp truy xuất với tạo nội dung để làm cơ sở trả lời.
 
-## Model Context Protocol (MCP) - [Mô-đun 05](../05-mcp/README.md)
+**Điểm tương đồng** - Đo lường (0-1) mức độ tương đồng ngữ nghĩa.
 
-**MCP** - Tiêu chuẩn để kết nối ứng dụng AI với các công cụ bên ngoài.
+**Tham chiếu nguồn** - Siêu dữ liệu về nội dung truy xuất được.
 
-**MCP Client** - Ứng dụng kết nối tới các server MCP.
+## Tác Nhân và Công Cụ - [Module 04](../04-tools/README.md)
 
-**MCP Server** - Dịch vụ phơi bày các công cụ qua MCP.
+**@Tool Annotation** - Đánh dấu phương thức Java là công cụ có thể gọi được bởi AI.
 
-**Stdio Transport** - Server chạy dưới dạng subprocess qua stdin/stdout.
+**Mẫu ReAct** - Suy nghĩ → Hành động → Quan sát → Lặp lại.
 
-**Tool Discovery** - Client truy vấn server để biết các công cụ có sẵn.
+**Quản lý phiên** - Tách biệt ngữ cảnh cho các người dùng khác nhau.
 
-## Azure Services - [Mô-đun 01](../01-introduction/README.md)
+**Công cụ** - Hàm mà tác nhân AI có thể gọi.
 
-**Azure AI Search** - Dịch vụ tìm kiếm đám mây với khả năng vectơ. [Mô-đun 03](../03-rag/README.md)
+**Mô tả công cụ** - Tài liệu về mục đích và tham số công cụ.
 
-**Azure Developer CLI (azd)** - Công cụ triển khai tài nguyên Azure.
+## Mô-đun Agentic - [Module 05](../05-mcp/README.md)
+
+**@Agent Annotation** - Đánh dấu giao diện là tác nhân AI với định nghĩa hành vi khai báo.
+
+**Agent Listener** - Hook theo dõi thực thi tác nhân qua `beforeAgentInvocation()` và `afterAgentInvocation()`.
+
+**Phạm vi Agentic** - Bộ nhớ chia sẻ nơi các tác nhân lưu đầu ra dùng `outputKey` để các tác nhân sau tiêu thụ.
+
+**AgenticServices** - Nhà máy tạo tác nhân dùng `agentBuilder()` và `supervisorBuilder()`.
+
+**Luồng công việc điều kiện** - Chuyển hướng dựa trên điều kiện đến tác nhân chuyên môn khác nhau.
+
+**Con người trong vòng lặp** - Mẫu luồng công việc thêm các điểm kiểm duyệt hoặc duyệt nội dung bởi con người.
+
+**langchain4j-agentic** - Phụ thuộc Maven cho xây dựng tác nhân khai báo (thử nghiệm).
+
+**Luồng công việc vòng lặp** - Lặp lại thực thi tác nhân đến khi thỏa điều kiện (ví dụ điểm chất lượng ≥ 0.8).
+
+**outputKey** - Tham số annotation tác nhân chỉ định nơi lưu kết quả trong Phạm vi Agentic.
+
+**Luồng công việc song song** - Chạy nhiều tác nhân đồng thời cho các tác vụ độc lập.
+
+**Chiến lược phản hồi** - Cách giám sát viên định dạng câu trả lời cuối: LAST, SUMMARY hoặc SCORED.
+
+**Luồng công việc tuần tự** - Thực thi các tác nhân theo thứ tự, đầu ra chảy tới bước sau.
+
+**Mẫu tác nhân giám sát** - Mẫu agentic nâng cao, giám sát viên LLM quyết định động tác nhân phụ nào gọi.
+
+## Giao Thức Ngữ Cảnh Mô Hình (MCP) - [Module 05](../05-mcp/README.md)
+
+**langchain4j-mcp** - Phụ thuộc Maven tích hợp MCP trong LangChain4j.
+
+**MCP** - Giao thức Ngữ cảnh Mô hình: chuẩn kết nối ứng dụng AI với công cụ ngoài. Xây dựng một lần, dùng mọi nơi.
+
+**Khách MCP** - Ứng dụng kết nối tới máy chủ MCP để khám phá và sử dụng công cụ.
+
+**Máy chủ MCP** - Dịch vụ cung cấp công cụ qua MCP với mô tả rõ ràng và định nghĩa tham số.
+
+**McpToolProvider** - Thành phần LangChain4j đóng gói công cụ MCP dùng trong dịch vụ và tác nhân AI.
+
+**McpTransport** - Giao diện giao tiếp MCP. Các triển khai bao gồm Stdio và HTTP.
+
+**Giao tiếp Stdio** - Giao tiếp qua stdin/stdout tiến trình cục bộ. Dùng để truy cập hệ thống tập tin hoặc công cụ dòng lệnh.
+
+**StdioMcpTransport** - Triển khai LangChain4j khởi chạy máy chủ MCP dưới dạng tiến trình con.
+
+**Khám phá công cụ** - Khách truy vấn máy chủ để lấy công cụ sẵn có với mô tả và định nghĩa.
+
+## Dịch Vụ Azure - [Module 01](../01-introduction/README.md)
+
+**Azure AI Search** - Tìm kiếm đám mây với khả năng vector hóa. [Module 03](../03-rag/README.md)
+
+**Azure Developer CLI (azd)** - Triển khai tài nguyên Azure.
 
 **Azure OpenAI** - Dịch vụ AI doanh nghiệp của Microsoft.
 
-**Bicep** - Ngôn ngữ hạ tầng-dưới-dạng-mã cho Azure. [Infrastructure Guide](../01-introduction/infra/README.md)
+**Bicep** - Ngôn ngữ hạ tầng dưới dạng mã của Azure. [Hướng dẫn Hạ tầng](../01-introduction/infra/README.md)
 
-**Deployment Name** - Tên cho triển khai mô hình trong Azure.
+**Tên triển khai** - Tên đặt cho triển khai mô hình trong Azure.
 
-**GPT-5** - Mô hình OpenAI mới nhất có điều khiển suy luận. [Mô-đun 02](../02-prompt-engineering/README.md)
+**GPT-5** - Mô hình OpenAI mới nhất với kiểm soát suy luận. [Module 02](../02-prompt-engineering/README.md)
 
-## Kiểm thử và Phát triển - [Hướng dẫn kiểm thử](TESTING.md)
+## Kiểm Thử và Phát Triển - [Hướng dẫn Kiểm thử](TESTING.md)
 
-**Dev Container** - Môi trường phát triển đóng gói trong container. [Cấu hình](../../../.devcontainer/devcontainer.json)
+**Dev Container** - Môi trường phát triển đóng gói container. [Cấu hình](../../../.devcontainer/devcontainer.json)
 
-**GitHub Models** - Sân chơi mô hình AI miễn phí. [Mô-đun 00](../00-quick-start/README.md)
+**GitHub Models** - Mô hình AI miễn phí để thử nghiệm. [Module 00](../00-quick-start/README.md)
 
-**In-Memory Testing** - Kiểm thử sử dụng lưu trữ trong bộ nhớ.
+**Kiểm thử bộ nhớ trong** - Kiểm thử với lưu trữ trong bộ nhớ.
 
-**Integration Testing** - Kiểm thử với hạ tầng thực tế.
+**Kiểm thử tích hợp** - Kiểm thử với hạ tầng thực tế.
 
-**Maven** - Công cụ tự động hóa build cho Java.
+**Maven** - Công cụ tự động xây dựng Java.
 
-**Mockito** - Framework giả lập (mocking) cho Java.
+**Mockito** - Framework mô phỏng Java.
 
-**Spring Boot** - Khung ứng dụng Java. [Mô-đun 01](../01-introduction/README.md)
+**Spring Boot** - Framework ứng dụng Java. [Module 01](../01-introduction/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-Miễn trừ trách nhiệm:
-Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI Co-op Translator (https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo tính chính xác, xin lưu ý rằng bản dịch tự động có thể có lỗi hoặc sai sót. Tài liệu gốc bằng ngôn ngữ ban đầu nên được coi là nguồn chính thức. Đối với thông tin quan trọng, nên sử dụng bản dịch chuyên nghiệp do người dịch thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ hiểu lầm hoặc diễn giải sai nào phát sinh từ việc sử dụng bản dịch này.
+**Tuyên bố từ chối trách nhiệm**:  
+Tài liệu này đã được dịch bằng dịch vụ dịch thuật AI [Co-op Translator](https://github.com/Azure/co-op-translator). Mặc dù chúng tôi cố gắng đảm bảo tính chính xác, xin lưu ý rằng bản dịch tự động có thể chứa lỗi hoặc sai sót. Tài liệu gốc bằng ngôn ngữ bản địa nên được xem là nguồn thông tin chính xác và có thẩm quyền. Đối với các thông tin quan trọng, nên sử dụng dịch vụ dịch thuật chuyên nghiệp do con người thực hiện. Chúng tôi không chịu trách nhiệm về bất kỳ sự hiểu lầm hoặc giải thích sai nào phát sinh từ việc sử dụng bản dịch này.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
