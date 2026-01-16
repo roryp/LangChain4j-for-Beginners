@@ -52,7 +52,7 @@ Think am like you dey give instruction to your colleague. "Fix di bug" no clear.
 
 Dis module dey show advanced prompting patterns using di same LangChain4j foundation from previous modules, but e focus on prompt structure and reasoning control.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.pcm.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/pcm/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *How LangChain4j dey connect your prompts to Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.pcm.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/pcm/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage dey provide persistent context while UserMessages get individual requests*
 
@@ -104,11 +104,11 @@ Di main takeaway: LangChain4j dey provide di infrastructure (model connection vi
 
 No be all problems need di same approach. Some questions need quick answers, others need deep thinking. Some need visible reasoning, others just need results. Dis module cover eight prompting patterns - each one optimized for different scenarios. You go try all of dem to learn when each approach dey work best.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.pcm.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/pcm/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Overview of di eight prompt engineering patterns and their use cases*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.pcm.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/pcm/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Low eagerness (fast, direct) vs High eagerness (thorough, exploratory) reasoning approaches*
 
@@ -163,7 +163,7 @@ Chain-of-Thought prompting dey explicitly ask di model to show im reasoning proc
 > - "Wetin be best practices for structuring tool preambles for production applications?"
 > - "How I fit capture and display intermediate progress updates for UI?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.pcm.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/pcm/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Plan → Execute → Summarize workflow for multi-step tasks*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.pcm.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/pcm/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Iterative improvement loop - generate, evaluate, identify issues, improve, repeat*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Wetin be di best way to parse and act on structured output programmatically?"
 > - "How I go make sure say severity levels dey consistent across different review sessions?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.pcm.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/pcm/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Four-category framework for consistent code reviews with severity levels*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.pcm.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/pcm/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *How conversation context dey accumulate over multiple turns until e reach token limit*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.pcm.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/pcm/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Breaking down problems into explicit logical steps*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.pcm.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/pcm/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Enforcing specific format, length, and structure requirements*
 
@@ -300,7 +300,7 @@ From di Spring Boot Dashboard, you fit:
 
 Just click di play button beside "prompt-engineering" to start dis module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.pcm.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/pcm/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # All di modules
 
 ## Application Screenshots
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.pcm.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/pcm/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Di main dashboard wey dey show all 8 prompt engineering patterns wit their characteristics and use cases*
 
@@ -380,10 +380,10 @@ Di web interface go let you experiment wit different prompting strategies. Each 
 
 Ask simple question like "Wetin be 15% of 200?" using Low Eagerness. You go get instant, direct answer. Now ask something complex like "Design caching strategy for high-traffic API" using High Eagerness. Watch how di model slow down and provide detailed reasoning. Na same model, same question structure - but di prompt dey tell am how much thinking to do.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.pcm.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/pcm/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Quick calculation wit small reasoning*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.pcm.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/pcm/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *Comprehensive caching strategy (2.8MB)*
 
@@ -391,7 +391,7 @@ Ask simple question like "Wetin be 15% of 200?" using Low Eagerness. You go get 
 
 Multi-step workflows dey benefit from upfront planning and progress narration. Di model dey explain wetin e go do, dey talk each step, den summarize results.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.pcm.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/pcm/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *Creating a REST endpoint wit step-by-step narration (3.9MB)*
 
@@ -399,7 +399,7 @@ Multi-step workflows dey benefit from upfront planning and progress narration. D
 
 Try "Create an email validation service". Instead of just generating code and stop, di model go generate, check am against quality criteria, find wahala, and improve. You go see am dey try until di code reach production standards.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.pcm.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/pcm/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Complete email validation service (5.2MB)*
 
@@ -407,7 +407,7 @@ Try "Create an email validation service". Instead of just generating code and st
 
 Code reviews need consistent evaluation frameworks. Di model dey analyze code using fixed categories (correctness, practices, performance, security) wit severity levels.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.pcm.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/pcm/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *Framework-based code review*
 
@@ -415,7 +415,7 @@ Code reviews need consistent evaluation frameworks. Di model dey analyze code us
 
 Ask "Wetin be Spring Boot?" then immediately follow up wit "Show me example". Di model go remember your first question and give you Spring Boot example specially. Without memory, dat second question go too vague.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.pcm.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/pcm/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Context preservation across questions*
 
@@ -423,7 +423,7 @@ Ask "Wetin be Spring Boot?" then immediately follow up wit "Show me example". Di
 
 Pick math problem and try am wit both Step-by-Step Reasoning and Low Eagerness. Low eagerness just give you di answer - fast but no clear. Step-by-step go show you every calculation and decision.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.pcm.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/pcm/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Math problem wit explicit steps*
 
@@ -431,7 +431,7 @@ Pick math problem and try am wit both Step-by-Step Reasoning and Low Eagerness. 
 
 When you need specific formats or word counts, dis pattern dey enforce strict adherence. Try generate summary wit exactly 100 words for bullet point format.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.pcm.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/pcm/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *Machine learning summary wit format control*
 
@@ -445,7 +445,7 @@ GPT-5 let you control computational effort through your prompts. Low effort mean
 
 You see di XML tags for di prompts? Dem no be decoration. Models dey follow structured instructions more reliable than freeform text. When you need multi-step processes or complex logic, structure dey help di model track where e dey and wetin go next.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.pcm.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/pcm/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *Anatomy of well-structured prompt wit clear sections and XML-style organization*
 

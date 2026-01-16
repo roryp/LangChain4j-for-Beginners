@@ -35,7 +35,7 @@ You don already build conversational AI, sabi prompts well, fit ground responses
 
 The Model Context Protocol (MCP) na exactly dis kain thing - one standard way for AI applications to discover and use external tools. Instead make you go write custom integration for each data source or service, you go connect to MCP servers wey dey show their capabilities for one uniform way. Your AI agent go fit discover and use those tools automatically.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.pcm.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/pcm/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *Before MCP: Complex point-to-point integrations. After MCP: One protocol, endless possibilities.*
 
@@ -43,7 +43,7 @@ MCP solve one big kasala for AI development: every integration na custom work. Y
 
 MCP make am standardized. One MCP server go show tools with clear description and schema. Any MCP client fit connect, find tools wey dey, and use am. Build once, use everywhere.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.pcm.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/pcm/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Model Context Protocol architecture - standardized tool discovery and execution*
 
@@ -71,7 +71,7 @@ When your client connect to MCP server, e go ask "Which tools you get?" Server g
 
 MCP fit use different transport mechanism. This module show Stdio transport for local processes:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.pcm.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/pcm/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *MCP transport mechanisms: HTTP for remote servers, Stdio for local processes*
 
@@ -169,7 +169,7 @@ The **Supervisor Agent pattern** na **flexible** kind agentic AI. Supervisor go 
 
 For demo, `FileAgent` go read file using MCP filesystem tools, `ReportAgent` go create structured report with executive summary (1 sentence), 3 key points, and recommendations. Supervisor go dey run dis flow na him self:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.pcm.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/pcm/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

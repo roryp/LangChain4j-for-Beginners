@@ -49,7 +49,7 @@ Think am like say you give di model one koko book library. When you ask question
 
 Dis one make di model answer base on your actual data no be only di training knowledge or just normal answer e go make up.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.pcm.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/pcm/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG workflow - from user query to semantic search to contextual answer generation*
 
@@ -103,7 +103,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.pcm.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/pcm/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Documents represented as vectors in embedding space - similar content clusters together*
 
@@ -161,7 +161,7 @@ For Spring Boot Dashboard, you fit:
 
 Just click di play button near "rag" to start dis module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.pcm.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/pcm/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -231,7 +231,7 @@ cd ..; .\stop-all.ps1  # All di modules
 
 Di app get web interface for document upload and question ask.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.pcm.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/pcm/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *The RAG application interface - upload documents and ask questions*
 
@@ -249,7 +249,7 @@ Now fit ask specific questions about di matter inside di document. Try ask factu
 
 You go see say every answer carry source references with similarity scores. Dem scores (0 to 1) dey show how relevant each chunk be to your question. Higher score mean better match. Dis one go help you confirm di answer vs di source material.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.pcm.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/pcm/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Query results showing answer with source references and relevance scores*
 
