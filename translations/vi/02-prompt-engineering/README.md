@@ -52,7 +52,7 @@ Hãy nghĩ như đang đưa hướng dẫn cho đồng nghiệp. "Sửa lỗi" t
 
 Module này trình bày các mẫu tạo prompt nâng cao sử dụng nền tảng LangChain4j giống các module trước, tập trung vào cấu trúc prompt và kiểm soát lý luận.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.vi.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/vi/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
 
 *Cách LangChain4j kết nối prompt của bạn với Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.vi.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/vi/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage cung cấp ngữ cảnh liên tục trong khi UserMessages chứa các yêu cầu riêng lẻ*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 Không phải vấn đề nào cũng cần cách tiếp cận giống nhau. Một số câu hỏi cần câu trả lời nhanh, số khác cần suy nghĩ sâu. Có câu cần lý luận rõ ràng, có câu chỉ cần kết quả. Module này bao gồm tám mẫu tạo prompt - mỗi mẫu tối ưu cho các tình huống khác nhau. Bạn sẽ thử nghiệm tất cả để biết khi nào mỗi cách hiệu quả nhất.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.vi.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/vi/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
 
 *Tổng quan tám mẫu kỹ thuật tạo prompt và các trường hợp sử dụng*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.vi.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/vi/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *So sánh cách lý luận tham vọng thấp (nhanh, trực tiếp) và tham vọng cao (kỹ lưỡng, khám phá)*
 
@@ -163,7 +163,7 @@ Prompt chuỗi suy nghĩ yêu cầu mô hình trình bày quá trình lý luận
 > - "Các thực hành tốt nhất để cấu trúc phần mở đầu công cụ trong ứng dụng sản xuất là gì?"
 > - "Làm sao để ghi lại và hiển thị tiến trình trung gian trong giao diện người dùng?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.vi.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/vi/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
 
 *Kế hoạch → Thực thi → Tóm tắt quy trình cho nhiệm vụ nhiều bước*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.vi.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/vi/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Vòng lặp cải tiến lặp đi lặp lại - tạo, đánh giá, xác định vấn đề, cải tiến, lặp lại*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Cách tốt nhất để phân tích và xử lý đầu ra có cấu trúc theo chương trình là gì?"
 > - "Làm sao đảm bảo mức độ nghiêm trọng nhất quán qua các phiên đánh giá khác nhau?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.vi.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/vi/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
 
 *Khung bốn loại cho đánh giá mã nhất quán với các mức độ nghiêm trọng*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.vi.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/vi/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
 
 *Cách ngữ cảnh hội thoại tích lũy qua nhiều lượt cho đến khi đạt giới hạn token*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.vi.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/vi/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Phân tích vấn đề thành các bước logic rõ ràng*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.vi.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/vi/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
 
 *Áp đặt yêu cầu về định dạng, độ dài và cấu trúc cụ thể*
 
@@ -300,7 +300,7 @@ Từ Spring Boot Dashboard, bạn có thể:
 
 Chỉ cần nhấn nút chạy bên cạnh "prompt-engineering" để khởi động module này, hoặc khởi động tất cả module cùng lúc.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.vi.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/vi/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Tùy chọn 2: Dùng script shell**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Tất cả các mô-đun
 
 ## Ảnh Chụp Màn Hình Ứng Dụng
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.vi.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/vi/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Bảng điều khiển chính hiển thị tám mẫu kỹ thuật tạo prompt với đặc điểm và trường hợp sử dụng*
 
@@ -380,10 +380,10 @@ Giao diện web cho phép bạn thử nghiệm các chiến lược tạo prompt
 
 Hỏi một câu đơn giản như "15% của 200 là bao nhiêu?" dùng Tham Vọng Thấp. Bạn sẽ nhận được câu trả lời nhanh, trực tiếp. Bây giờ hỏi một câu phức tạp như "Thiết kế chiến lược caching cho API có lưu lượng cao" dùng Tham Vọng Cao. Quan sát cách mô hình chậm lại và cung cấp lý luận chi tiết. Cùng một mô hình, cùng cấu trúc câu hỏi - nhưng prompt chỉ dẫn mức độ suy nghĩ.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.vi.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/vi/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
 *Tính toán nhanh với lý luận tối thiểu*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.vi.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/vi/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
 
 *Chiến lược lưu trữ toàn diện (2.8MB)*
 
@@ -391,7 +391,7 @@ Hỏi một câu đơn giản như "15% của 200 là bao nhiêu?" dùng Tham V�
 
 Các quy trình làm việc nhiều bước được hưởng lợi từ việc lập kế hoạch trước và tường thuật tiến trình. Mô hình phác thảo những gì nó sẽ làm, tường thuật từng bước, sau đó tóm tắt kết quả.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.vi.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/vi/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
 
 *Tạo một điểm cuối REST với tường thuật từng bước (3.9MB)*
 
@@ -399,7 +399,7 @@ Các quy trình làm việc nhiều bước được hưởng lợi từ việc 
 
 Thử "Tạo dịch vụ xác thực email". Thay vì chỉ tạo mã và dừng lại, mô hình tạo, đánh giá theo tiêu chí chất lượng, xác định điểm yếu và cải thiện. Bạn sẽ thấy nó lặp lại cho đến khi mã đạt tiêu chuẩn sản xuất.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.vi.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/vi/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Dịch vụ xác thực email hoàn chỉnh (5.2MB)*
 
@@ -407,7 +407,7 @@ Thử "Tạo dịch vụ xác thực email". Thay vì chỉ tạo mã và dừng
 
 Đánh giá mã cần các khung đánh giá nhất quán. Mô hình phân tích mã sử dụng các danh mục cố định (độ chính xác, thực hành, hiệu suất, bảo mật) với các mức độ nghiêm trọng.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.vi.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/vi/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
 
 *Đánh giá mã dựa trên khung*
 
@@ -415,7 +415,7 @@ Thử "Tạo dịch vụ xác thực email". Thay vì chỉ tạo mã và dừng
 
 Hỏi "Spring Boot là gì?" rồi ngay lập tức hỏi tiếp "Cho tôi xem một ví dụ". Mô hình nhớ câu hỏi đầu tiên của bạn và cung cấp ví dụ Spring Boot cụ thể. Nếu không có bộ nhớ, câu hỏi thứ hai sẽ quá mơ hồ.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.vi.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/vi/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Bảo toàn ngữ cảnh qua các câu hỏi*
 
@@ -423,7 +423,7 @@ Hỏi "Spring Boot là gì?" rồi ngay lập tức hỏi tiếp "Cho tôi xem m
 
 Chọn một bài toán và thử với cả Lý luận từng bước và Độ hăng hái thấp. Độ hăng hái thấp chỉ cho bạn câu trả lời - nhanh nhưng không rõ ràng. Lý luận từng bước cho bạn thấy mọi phép tính và quyết định.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.vi.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/vi/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Bài toán với các bước rõ ràng*
 
@@ -431,7 +431,7 @@ Chọn một bài toán và thử với cả Lý luận từng bước và Độ
 
 Khi bạn cần định dạng hoặc số từ cụ thể, mẫu này đảm bảo tuân thủ nghiêm ngặt. Thử tạo một bản tóm tắt với đúng 100 từ theo định dạng gạch đầu dòng.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.vi.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/vi/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
 
 *Tóm tắt học máy với kiểm soát định dạng*
 
@@ -445,7 +445,7 @@ GPT-5 cho phép bạn kiểm soát nỗ lực tính toán qua các lời nhắc.
 
 Bạn có nhận thấy các thẻ XML trong lời nhắc không? Chúng không chỉ để trang trí. Mô hình tuân theo hướng dẫn có cấu trúc đáng tin cậy hơn so với văn bản tự do. Khi bạn cần quy trình nhiều bước hoặc logic phức tạp, cấu trúc giúp mô hình theo dõi vị trí và bước tiếp theo.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.vi.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/vi/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
 
 *Cấu trúc của một lời nhắc có tổ chức tốt với các phần rõ ràng và tổ chức kiểu XML*
 

@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. టూల్ వెంటనే ఫలితాన్ని ఇస్తుంది
 6. ఏజెంట్ ఫలితాన్ని చేర్చి తుది సమాధానం ఇస్తుంది
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.te.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/te/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
 
 *ReAct నమూనా - AI ఏజెంట్లు సమస్యలను పరిష్కరించడానికి వివేచన మరియు చర్యల మధ్య మార్పిడి ఎలా చేస్తాయో*
 
@@ -138,7 +138,7 @@ Spring Boot డిక్లరేటివ్ `@AiService` ఇంటర్‌ఫ
 
 **టూల్ చైనింగ్** - AI అనేక టూల్స్ ను పరస్పర అనుక్రమంగా పిలవవచ్చు. "Seattle లో వాతావరణం ఏమిటి మరియు అంబురెల్లా తీసుకువచ్చాలా?" అని అడగండి మరియు అది reasoning తో `getCurrentWeather` తీసుకొని తర్వాత వర్షపు గేర్ గురించి నిర్ణయం తీసుకుంటుంది చూసి తెలుసుకోండి.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.te.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/te/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *క్రమమైన టూల్ పిలుపులు - ఒక టూల్ అవుట్పుట్ తదుపరి నిర్ణయానికి ఇస్తుంది*
 
@@ -171,7 +171,7 @@ cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT ను చూపిం
 
 "tools" పక్కన ఉన్న ప్లే బటన్ నొక్కి ఈ మాడ్యూల్‌ను ప్రారంభించండి లేదా అన్ని మాడ్యూల్‌లను ఒకేసారిగా ప్రారంభించండి.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.te.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/te/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
 
 **వికల్పం 2: షెల్ స్క్రిప్ట్ వాడకం**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # అన్ని మాడ్యూల్స్
 
 ఈ అప్లికేషన్ ఒక వెబ్ ఇంటర్‌ఫేస్ అందిస్తుంది, మీరు వాతావరణం మరియు ఉష్ణోగ్రత మార్పిడిత టూల్స్ యాక్సెస్ ఉన్న AI ఏజెంట్‌తో పరస్పరం చేయవచ్చు.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.te.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/te/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI ఏజెంట్ టూల్స్ ఇంటర్‌ఫేస్ - టూల్స్ తో ఇన్టరాక్ట్ చేయడానికి త్వరిత ఉదాహరణలు మరియు చాట్ ఇంటర్‌ఫేస్*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # అన్ని మాడ్యూల్స్
 
 చాట్ ఇంటర్‌ఫేస్ సంభాషణ చరిత్రను నిర్వహిస్తోంది, మీరు బహుళ-టర్న్ పరస్పర చర్యలు చేయవచ్చు. మీరు అన్ని మునుపటి ప్రశ్నలు మరియు సమాధానాలను చూడవచ్చు, ఇది సంభాషణను ట్రాక్ చేయడానికి మరియు ఏజెంట్ ఎలా అనేక మార్చులలో సందర్భం నిర్మిస్తున్నదో అర్థం చేసుకోవడంలో సులభతరం చేస్తుంది.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.te.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/te/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *బహుళ టూల్ పిలుపులతో బహుళ-టర్న్ సంభాషణ - సింపుల్ మార్పిడులు, వాతావరణ అన్వేషణలు, టూల్ చైనింగ్*
 

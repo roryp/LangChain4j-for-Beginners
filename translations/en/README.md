@@ -1,13 +1,13 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6a3bd54fc243ce3dc79d18848d2b5413",
-  "translation_date": "2026-01-05T21:07:38+00:00",
+  "original_hash": "7dffae166c7db7dc932a0e3d0217cbb7",
+  "translation_date": "2026-01-16T07:57:55+00:00",
   "source_file": "README.md",
   "language_code": "en"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.en.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/en/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
 ### 🌐 Multi-Language Support
 
@@ -53,16 +53,6 @@ A course for building AI applications with LangChain4j and Azure OpenAI GPT-5, f
 4. Click **Create codespace**
 5. Wait 5-10 minutes for the environment to be ready
 6. Jump straight to [Quick Start](./00-quick-start/README.md) to get started!
-
-> **Prefer to Clone Locally?**
->
-> This repository includes 50+ language translations which significantly increases the download size. To clone without translations, use sparse checkout:
-> ```bash
-> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
-> cd LangChain4j-for-Beginners
-> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
-> ```
-> This gives you everything you need to complete the course with a much faster download.
 
 After completing the modules, explore the [Testing Guide](docs/TESTING.md) to see LangChain4j testing concepts in action.
 
@@ -120,6 +110,7 @@ Want to learn more? Check out [Copilot for AI Paired Programming](https://aka.ms
 ---
  
 ### Copilot Series
+
 [![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
 [![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
@@ -143,5 +134,5 @@ MIT License - See [LICENSE](../../LICENSE) file for details.
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-This document has been translated using the AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
+This document has been translated using AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). While we strive for accuracy, please be aware that automated translations may contain errors or inaccuracies. The original document in its native language should be considered the authoritative source. For critical information, professional human translation is recommended. We are not liable for any misunderstandings or misinterpretations arising from the use of this translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.ro.png" alt="Rezultate reușite ale testelor" width="800"/>
+<img src="../../../translated_images/ro/test-results.ea5c98d8f3642043.png" alt="Rezultate reușite ale testelor" width="800"/>
 
 *Execuție reușită a testelor arătând toate testele trecute fără niciun eșec*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Acursul se concentrează pe **teste unitare** care rulează local. Fiecare test demonstrează un concept specific LangChain4j izolat.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.ro.png" alt="Piramida testării" width="800"/>
+<img src="../../../translated_images/ro/testing-pyramid.2dd1079a0481e53e.png" alt="Piramida testării" width="800"/>
 
 *Piramida testării arătând echilibrul între teste unitare (rapide, izolate), teste de integrare (componente reale) și teste end-to-end. Această instruire acoperă testarea unitară.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#ar trebui să păstreze istoricul con
 
 Dacă folosești Visual Studio Code, Test Explorer oferă o interfață grafică pentru rularea și depanarea testelor.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.ro.png" alt="Exploratorul de teste VS Code" width="800"/>
+<img src="../../../translated_images/ro/vscode-testing.f02dd5917289dced.png" alt="Exploratorul de teste VS Code" width="800"/>
 
 *VS Code Test Explorer arătând arborele de teste cu toate clasele de test Java și metodele individuale de test*
 
@@ -134,7 +134,7 @@ Test Explorer afișează bifele verzi pentru testele trecute și oferă mesaje d
 
 Cel mai simplu model testează șabloanele de prompt fără a apela vreun model AI. Verifici că substituirea variabilelor funcționează corect și că prompturile sunt formatate conform așteptărilor.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.ro.png" alt="Testarea șabloanelor de prompt" width="800"/>
+<img src="../../../translated_images/ro/prompt-template-testing.b902758ddccc8dee.png" alt="Testarea șabloanelor de prompt" width="800"/>
 
 *Testarea șabloanelor de prompt arătând fluxul de substituție a variabilelor: șablon cu locuri rezervate → valori aplicate → ieșire formatată verificată*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testare a formatări
 
 Când testezi logica conversațiilor, folosește Mockito pentru a crea modele false care returnează răspunsuri predeterminate. Acest lucru face testele rapide, gratuite și deterministe.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.ro.png" alt="Comparație mock vs API real" width="800"/>
+<img src="../../../translated_images/ro/mock-vs-real.3b8b1f85bfe6845e.png" alt="Comparație mock vs API real" width="800"/>
 
 *Comparație care arată de ce mock-urile sunt preferate pentru testare: sunt rapide, gratuite, deterministe și nu necesită chei API*
 
@@ -231,7 +231,7 @@ Acest model apare în `01-introduction/src/test/java/com/example/langchain4j/ser
 
 Memoria conversației trebuie să păstreze utilizatorii separați. Acest test verifică că conversațiile nu amestecă contexte.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.ro.png" alt="Izolarea conversațiilor" width="800"/>
+<img src="../../../translated_images/ro/conversation-isolation.e00336cf8f7a3e3f.png" alt="Izolarea conversațiilor" width="800"/>
 
 *Testarea izolării conversațiilor care arată magazine de memorie separate pentru utilizatori diferiți pentru a preveni amestecarea contextelor*
 
@@ -263,7 +263,7 @@ Fiecare conversație își menține propria istorie independentă. În sistemele
 
 Instrumentele sunt funcții pe care AI le poate apela. Testează-le direct pentru a te asigura că funcționează corect indiferent de deciziile AI-ului.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.ro.png" alt="Testarea instrumentelor" width="800"/>
+<img src="../../../translated_images/ro/tools-testing.3e1706817b0b3924.png" alt="Testarea instrumentelor" width="800"/>
 
 *Testarea instrumentelor în mod independent arătând executarea mock a instrumentelor fără apeluri AI pentru a verifica logica de business*
 
@@ -294,7 +294,7 @@ Aceste teste din `04-tools/src/test/java/com/example/langchain4j/agents/tools/Si
 
 Sistemele RAG necesită în mod tradițional baze de date vectoriale și servicii de embedding. Modelul în memorie îți permite să testezi întregul pipeline fără dependențe externe.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.ro.png" alt="Testarea RAG în memorie" width="800"/>
+<img src="../../../translated_images/ro/rag-testing.ee7541b1e23934b1.png" alt="Testarea RAG în memorie" width="800"/>
 
 *Fluxul de testare RAG în memorie arătând parsarea documentelor, stocarea embedding-urilor și căutarea prin similaritate fără a necesita o bază de date*
 

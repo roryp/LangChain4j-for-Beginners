@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.he.png" alt="תוצאות בדיקה מוצלחות" width="800"/>
+<img src="../../../translated_images/he/test-results.ea5c98d8f3642043.png" alt="תוצאות בדיקה מוצלחות" width="800"/>
 
 *הפעלת בדיקות מוצלחת שמציגה שכל הבדיקות עברו ללא כישלונות*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 קורס זה מתמקד ב־**בדיקות יחידה** שרצות באופן מקומי. כל בדיקה מדגימה קונספט ספציפי של LangChain4j באופן מבודד.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.he.png" alt="פירמידת בדיקות" width="800"/>
+<img src="../../../translated_images/he/testing-pyramid.2dd1079a0481e53e.png" alt="פירמידת בדיקות" width="800"/>
 
 *פירמידת בדיקות המראה את האיזון בין בדיקות יחידה (מהירות, מבודדות), בדיקות אינטגרציה (רכיבים אמיתיים), ובדיקות מקצה לקצה. הכשרה זו מכסה בדיקות יחידה.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#יש לשמור היסטוריית ש
 
 אם אתה משתמש ב‑Visual Studio Code, ה‑Test Explorer מספק ממשק גרפי להרצה וניפוי שגיאות של בדיקות.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.he.png" alt="סייר הבדיקות של VS Code" width="800"/>
+<img src="../../../translated_images/he/vscode-testing.f02dd5917289dced.png" alt="סייר הבדיקות של VS Code" width="800"/>
 
 *סייר הבדיקות של VS Code המציג את עץ הבדיקות עם כל מחלקות הבדיקות ב‑Java ושיטות הבדיקה הפרטניות*
 
@@ -134,7 +134,7 @@ mvn --% test -Dtest=SimpleConversationTest#יש לשמור היסטוריית ש
 
 הדפוס הפשוט ביותר בודק תבניות פרומפט מבלי לקרוא למודל AI כלשהו. אתה מאמת שהחלפת המשתנים פועלת נכון ושהפרומפטים מעוצבים כפי שהצפוי.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.he.png" alt="בדיקת תבניות פרומפט" width="800"/>
+<img src="../../../translated_images/he/prompt-template-testing.b902758ddccc8dee.png" alt="בדיקת תבניות פרומפט" width="800"/>
 
 *בדיקת תבניות פרומפט המציגה את זרימת החלפת המשתנים: תבנית עם תאי אחסון → החלת ערכים → אימות הפלט המעוצב*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#בדיקת עיצו�
 
 כאשר בודקים לוגיקת שיחה, השתמש ב‑Mockito ליצירת מודלים מדומיינים שמחזירים תגובות קבועות מראש. זה הופך את הבדיקות למהירות, חינמיות ודטרמיניסטיות.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.he.png" alt="השוואה בין הדמיה ל‑API אמיתי" width="800"/>
+<img src="../../../translated_images/he/mock-vs-real.3b8b1f85bfe6845e.png" alt="השוואה בין הדמיה ל‑API אמיתי" width="800"/>
 
 *השוואה המדגימה מדוע עדיפים מוקים בבדיקה: הם מהירים, חינמיים, דטרמיניסטיים, ולא זקוקים למפתחות API*
 
@@ -231,7 +231,7 @@ class SimpleConversationTest {
 
 זיכרון השיחה חייב לשמור משתמשים מרובים מופרדים. בדיקה זו מאמתת שהשיחות אינן מערבבות הקשרים.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.he.png" alt="בידוד שיחה" width="800"/>
+<img src="../../../translated_images/he/conversation-isolation.e00336cf8f7a3e3f.png" alt="בידוד שיחה" width="800"/>
 
 *בדיקת בידוד שיחה המציגה חנויות זיכרון נפרדות למשתמשים שונים למניעת ערבוב הקשר*
 
@@ -263,7 +263,7 @@ void shouldIsolateConversationsByid() {
 
 כלים הם פונקציות שה‑AI יכול לקרוא להן. בדוק אותם ישירות כדי לוודא שהם פועלים נכון ללא תלות בהחלטות ה‑AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.he.png" alt="בדיקת כלים" width="800"/>
+<img src="../../../translated_images/he/tools-testing.3e1706817b0b3924.png" alt="בדיקת כלים" width="800"/>
 
 *בדיקת כלים בנפרד המציגה הרצת כלים מדומיינים ללא קריאות AI כדי לאמת לוגיקת עסקית*
 
@@ -294,7 +294,7 @@ void shouldDemonstrateToolChaining() {
 
 מערכות RAG בדרך‑כלל דורשות מאגרי וקטורים ושירותי הטמעות. דפוס הזיכרון מאפשר לך לבדוק את כל הפייפליין ללא תלות חיצונית.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.he.png" alt="בדיקת RAG בזיכרון" width="800"/>
+<img src="../../../translated_images/he/rag-testing.ee7541b1e23934b1.png" alt="בדיקת RAG בזיכרון" width="800"/>
 
 *סביבת בדיקת RAG בזיכרון המציגה ניתוח מסמכים, אחסון הטמעות וחיפוש דמיון ללא צורך בבסיס נתונים*
 

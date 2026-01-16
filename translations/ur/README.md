@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ur"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.ur.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/ur/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 کثیر اللسانی تعاون
 

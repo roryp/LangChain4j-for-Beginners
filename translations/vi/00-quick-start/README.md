@@ -38,7 +38,7 @@ LangChain4j là một thư viện Java giúp đơn giản hóa việc xây dựn
 
 Từ "chain" trong LangChain đề cập đến việc liên kết các thành phần lại với nhau – bạn có thể nối một lệnh nhắc với một mô hình rồi với một bộ phân tích cú pháp, hoặc nối nhiều lần gọi AI với nhau sao cho đầu ra của lần gọi này trở thành đầu vào cho lần gọi tiếp theo. Hướng dẫn bắt đầu nhanh này tập trung vào những điều cơ bản trước khi khám phá các chuỗi phức tạp hơn.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.vi.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/vi/langchain-concept.ad1fe6cf063515e1.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Liên kết các thành phần trong LangChain4j - các khối xây dựng kết nối để tạo ra các luồng công việc AI mạnh mẽ*
 
@@ -50,7 +50,7 @@ Chúng ta sẽ sử dụng ba thành phần cốt lõi:
 
 **MessageWindowChatMemory** - Duy trì lịch sử hội thoại. Nếu không có nó, mỗi yêu cầu là độc lập. Với nó, AI nhớ các tin nhắn trước và duy trì ngữ cảnh qua nhiều lượt hỏi đáp.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.vi.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/vi/architecture.eedc993a1c576839.png" alt="LangChain4j Architecture" width="800"/>
 
 *Kiến trúc LangChain4j - các thành phần cốt lõi hoạt động cùng nhau để thúc đẩy ứng dụng AI của bạn*
 

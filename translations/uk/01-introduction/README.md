@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Це підходить для простих запитань-відповідей, але марно для реальних додатків. Боти служби підтримки мають пам’ятати, що ви їм сказали. Персональні помічники потребують контексту. Будь-яка багатокрокова розмова вимагає пам’яті.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.uk.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/uk/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Різниця між безстановими (незалежними викликами) та становими (з урахуванням контексту) розмовами*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Перед тим, як зануритися в розмови, важливо зрозуміти токени — базові одиниці тексту, які обробляють мовні моделі:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.uk.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/uk/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
 
 *Приклад того, як текст розбивається на токени — "I love AI!" стає 4 окремими одиницями обробки*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j надає реалізації пам’яті, які роблять це автоматично. Ви обираєте, скільки повідомлень зберігати, а фреймворк керує контекстним вікном.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.uk.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/uk/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory підтримує ковзне вікно останніх повідомлень, автоматично видаляючи старі*
 
@@ -212,7 +212,7 @@ Dev container включає розширення Spring Boot Dashboard, яке 
 
 Просто натисніть кнопку запуску поруч із "introduction", щоб запустити цей модуль, або запустіть усі модулі одночасно.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.uk.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/uk/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Варіант 2: Використання shell-скриптів**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Всі модулі
 
 Додаток надає веб-інтерфейс з двома реалізаціями чату поруч.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.uk.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/uk/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
 
 *Панель керування з опціями Simple Chat (безстановий) і Conversational Chat (становий)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # Всі модулі
 
 Спробуйте спочатку це. Скажіть "Мене звати Джон", а потім одразу запитайте "Як мене звати?" Модель не запам’ятає, бо кожне повідомлення незалежне. Це демонструє основну проблему базової інтеграції мовної моделі — відсутність контексту розмови.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.uk.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/uk/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
 
 *ШІ не пам’ятає ваше ім’я з попереднього повідомлення*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # Всі модулі
 
 Тепер спробуйте ту ж послідовність тут. Скажіть "Мене звати Джон", а потім "Як мене звати?" Цього разу модель пам’ятає. Різниця в MessageWindowChatMemory — вона підтримує історію розмови і додає її до кожного запиту. Саме так працює виробничий розмовний ШІ.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.uk.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/uk/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
 
 *ШІ пам’ятає ваше ім’я з початку розмови*
 

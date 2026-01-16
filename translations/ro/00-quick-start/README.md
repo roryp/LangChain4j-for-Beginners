@@ -38,7 +38,7 @@ LangChain4j este o bibliotecă Java care simplifică construirea aplicațiilor a
 
 „Lanțul” din LangChain se referă la conectarea în serie a mai multor componente – poți conecta un prompt la un model, apoi la un parser sau poți lega mai multe apeluri AI în care ieșirea unuia devine inputul următorului. Acest ghid se concentrează pe elementele fundamentale înainte de a explora lanțuri mai complexe.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.ro.png" alt="Conceptul de lanțare LangChain4j" width="800"/>
+<img src="../../../translated_images/ro/langchain-concept.ad1fe6cf063515e1.png" alt="Conceptul de lanțare LangChain4j" width="800"/>
 
 *Conectarea componentelor în LangChain4j – blocuri de construcție care se leagă pentru a crea fluxuri de lucru AI puternice*
 
@@ -50,7 +50,7 @@ Vom folosi trei componente principale:
 
 **MessageWindowChatMemory** – Menține istoricul conversației. Fără aceasta, fiecare cerere este independentă. Cu ea, AI-ul își amintește mesajele anterioare și păstrează contextul pe mai multe schimburi.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.ro.png" alt="Arhitectura LangChain4j" width="800"/>
+<img src="../../../translated_images/ro/architecture.eedc993a1c576839.png" alt="Arhitectura LangChain4j" width="800"/>
 
 *Arhitectura LangChain4j – componentele principale lucrează împreună pentru a alimenta aplicațiile tale AI*
 

@@ -35,7 +35,7 @@ Vybudovali jste konverzační AI, ovládli promptování, zakotvili odpovědi v 
 
 Protokol modelového kontextu (MCP) poskytuje právě to – standardní způsob, jak mohou AI aplikace objevovat a používat externí nástroje. Místo psaní vlastních integrací pro každý zdroj dat nebo službu se připojíte k MCP serverům, které své schopnosti vystavují v jednotném formátu. Vaše AI agent pak tyto nástroje může automaticky objevit a používat.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.cs.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/cs/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Comparison" width="800"/>
 
 *Před MCP: složité bodové integrace. Po MCP: jeden protokol, nekonečné možnosti.*
 
@@ -43,7 +43,7 @@ MCP řeší základní problém ve vývoji AI: každá integrace je na míru. Ch
 
 MCP toto standardizuje. MCP server vystavuje nástroje s jasnými popisy a schématy parametrů. Jakýkoliv MCP klient se může připojit, objevit dostupné nástroje a používat je. Jednou postavíte, všude použijete.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.cs.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/cs/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architecture" width="800"/>
 
 *Architektura Protokolu modelového kontextu – standardizované objevování a spouštění nástrojů*
 
@@ -71,7 +71,7 @@ Když se váš klient připojí k MCP serveru, zeptá se: „Jaké nástroje má
 
 MCP podporuje různé přenosové mechanismy. Tento modul předvádí Stdio přenos pro lokální procesy:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.cs.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/cs/transport-mechanisms.2791ba7ee93cf020.png" alt="Transport Mechanisms" width="800"/>
 
 *Přenosové mechanismy MCP: HTTP pro vzdálené servery, Stdio pro lokální procesy*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 V demu `FileAgent` čte soubor pomocí MCP nástrojů pro souborový systém a `ReportAgent` generuje strukturovanou zprávu s výkonnou rekapitulací (1 věta), 3 klíčovými body a doporučeními. Supervisor automaticky orchestruje tento tok:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.cs.png" alt="Agentní modul" width="800"/>
+<img src="../../../translated_images/cs/agentic.cf84dcda226374e3.png" alt="Agentní modul" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

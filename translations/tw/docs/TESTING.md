@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.tw.png" alt="成功的測試結果" width="800"/>
+<img src="../../../translated_images/tw/test-results.ea5c98d8f3642043.png" alt="成功的測試結果" width="800"/>
 
 *成功的測試執行，所有測試皆通過且沒有失敗*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 本指南著重於在本地執行的 **單元測試**。每個測試獨立示範 LangChain4j 的特定概念。
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.tw.png" alt="測試金字塔" width="800"/>
+<img src="../../../translated_images/tw/testing-pyramid.2dd1079a0481e53e.png" alt="測試金字塔" width="800"/>
 
 *測試金字塔顯示單元測試（快速、獨立）、整合測試（實體元件）與端對端測試之間的平衡。本訓練涵蓋單元測試。*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#應該保留對話記錄
 
 如果你使用 Visual Studio Code，Test Explorer 提供了用於執行與除錯測試的圖形介面。
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.tw.png" alt="VS Code 測試總管" width="800"/>
+<img src="../../../translated_images/tw/vscode-testing.f02dd5917289dced.png" alt="VS Code 測試總管" width="800"/>
 
 *VS Code 的 Test Explorer 顯示包含所有 Java 測試類別與各個測試方法的測試樹*
 
@@ -134,7 +134,7 @@ Test Explorer 對於通過的測試會顯示綠色勾號，而在測試失敗時
 
 最簡單的範式是在不呼叫任何 AI 模型的情況下測試提示範本。你要驗證變數替換是否正確，以及提示是否按照預期格式化。
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.tw.png" alt="提示範本測試" width="800"/>
+<img src="../../../translated_images/tw/prompt-template-testing.b902758ddccc8dee.png" alt="提示範本測試" width="800"/>
 
 *測試提示範本，顯示變數替換流程：帶有佔位符的範本 → 套用值 → 驗證格式化輸出*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#測試提示範本�
 
 在測試對話邏輯時，使用 Mockito 建立假的模型以回傳預先設定的回應。這會讓測試快速、免費且具確定性。
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.tw.png" alt="模擬與真實 API 比較" width="800"/>
+<img src="../../../translated_images/tw/mock-vs-real.3b8b1f85bfe6845e.png" alt="模擬與真實 API 比較" width="800"/>
 
 *比較說明為何在測試中偏好使用模擬：它們快速、免費、確定性高，且不需要 API 金鑰*
 
@@ -231,7 +231,7 @@ class SimpleConversationTest {
 
 對話記憶必須讓多個使用者彼此分離。此測試驗證對話不會混合上下文。
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.tw.png" alt="對話隔離" width="800"/>
+<img src="../../../translated_images/tw/conversation-isolation.e00336cf8f7a3e3f.png" alt="對話隔離" width="800"/>
 
 *測試對話隔離，顯示不同使用者的獨立記憶儲存以避免上下文混淆*
 
@@ -263,7 +263,7 @@ void shouldIsolateConversationsByid() {
 
 工具是 AI 可以呼叫的函式。直接測試它們以確保其正確運作，而不受 AI 決策的影響。
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.tw.png" alt="工具測試" width="800"/>
+<img src="../../../translated_images/tw/tools-testing.3e1706817b0b3924.png" alt="工具測試" width="800"/>
 
 *獨立測試工具，顯示在不呼叫 AI 的情況下以模擬工具執行來驗證商業邏輯*
 
@@ -294,7 +294,7 @@ void shouldDemonstrateToolChaining() {
 
 傳統上 RAG 系統需要向量資料庫與嵌入服務。記憶體內的範式讓你在不依賴外部資源的情況下測試整個流程。
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.tw.png" alt="記憶體內 RAG 測試" width="800"/>
+<img src="../../../translated_images/tw/rag-testing.ee7541b1e23934b1.png" alt="記憶體內 RAG 測試" width="800"/>
 
 *記憶體內 RAG 測試流程，示範文件解析、嵌入儲存與相似度搜尋，無需資料庫*
 

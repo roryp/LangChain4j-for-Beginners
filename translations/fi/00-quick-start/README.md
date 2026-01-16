@@ -38,7 +38,7 @@ LangChain4j on Java-kirjasto, joka yksinkertaistaa tekoälypohjaisten sovelluste
 
 LangChainin "ketju" viittaa useiden komponenttien ketjuttamiseen - voit ketjuttaa kehotteen mallille ja parserille tai ketjuttaa useita tekoälykutsuja, joissa yhden tulos syötetään seuraavaan syötteeseen. Tämä pikakäyttö keskittyy perusteisiin ennen monimutkaisempien ketjujen tutkimista.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.fi.png" alt="LangChain4j Ketjutuskonsepti" width="800"/>
+<img src="../../../translated_images/fi/langchain-concept.ad1fe6cf063515e1.png" alt="LangChain4j Ketjutuskonsepti" width="800"/>
 
 *Komponenttien ketjutus LangChain4j:ssa – rakennuspalikat yhdistyvät luodakseen tehokkaita tekoälytyönkulkuja*
 
@@ -50,7 +50,7 @@ Käytämme kolmea ydinkomponenttia:
 
 **MessageWindowChatMemory** – Pitää yllä keskusteluhistoriaa. Ilman tätä jokainen pyyntö on itsenäinen. Sen avulla tekoäly muistaa aiemmat viestit ja ylläpitää kontekstia useiden vuorojen ajan.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.fi.png" alt="LangChain4j Arkkitehtuuri" width="800"/>
+<img src="../../../translated_images/fi/architecture.eedc993a1c576839.png" alt="LangChain4j Arkkitehtuuri" width="800"/>
 
 *LangChain4j:n arkkitehtuuri – ydinkomponentit toimivat yhdessä tehostaakseen tekoälysovelluksiasi*
 

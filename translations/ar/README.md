@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ar"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.ar.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/ar/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 دعم متعدد اللغات
 

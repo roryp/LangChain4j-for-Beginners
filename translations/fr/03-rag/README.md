@@ -49,7 +49,7 @@ Pensez au RAG comme donnant au modèle une bibliothèque de référence. Quand v
 
 Cela ancre les réponses du modèle dans vos données réelles au lieu de dépendre de sa connaissance d’entraînement ou d’inventer des réponses.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.fr.png" alt="Architecture du RAG" width="800"/>
+<img src="../../../translated_images/fr/rag-architecture.ccb53b71a6ce407f.webp" alt="Architecture du RAG" width="800"/>
 
 *Flux de travail RAG - de la requête utilisateur à la recherche sémantique jusqu’à la génération de réponse contextuelle*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.fr.png" alt="Espace des embeddings vectoriels" width="800"/>
+<img src="../../../translated_images/fr/vector-embeddings.2ef7bdddac79a327.webp" alt="Espace des embeddings vectoriels" width="800"/>
 
 *Documents représentés comme vecteurs dans l’espace des embeddings – contenu similaire se regroupe*
 
@@ -160,7 +160,7 @@ Depuis Spring Boot Dashboard, vous pouvez :
 
 Cliquez simplement sur le bouton play à côté de « rag » pour démarrer ce module, ou démarrez tous les modules en une fois.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.fr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/fr/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2 : Utiliser les scripts shell**
 
@@ -231,7 +231,7 @@ cd ..; .\stop-all.ps1  # Tous les modules
 
 L’application propose une interface web pour télécharger des documents et poser des questions.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.fr.png" alt="Interface de l'application RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/fr/rag-homepage.d90eb5ce1b3caa94.webp" alt="Interface de l'application RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interface de l’application RAG - téléchargez des documents et posez des questions*
 
@@ -249,7 +249,7 @@ Posez ensuite des questions spécifiques sur le contenu du document. Essayez que
 
 Chaque réponse inclut des références sources avec des scores de similarité. Ces scores (de 0 à 1) montrent à quel point chaque morceau est pertinent par rapport à votre question. Les scores plus élevés indiquent une meilleure correspondance. Cela vous permet de vérifier la réponse à partir du matériau source.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.fr.png" alt="Résultats de requête RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/fr/rag-query-results.6d69fcec5397f355.webp" alt="Résultats de requête RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Résultats de requête affichant la réponse avec les références sources et les scores de pertinence*
 

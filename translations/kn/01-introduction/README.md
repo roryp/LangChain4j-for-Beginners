@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಸರಳ ಪ್ರಶ್ನೋತ್ತರಗಳಿಗೆ ಇದು ಸರಿಯಾಗಿದೆ ಆದರೆ ನಿಜವಾದ ಅನ್ವಯಿಕೆಗಳಿಗೆ ಉಪಯುಕ್ತವಲ್ಲ. ಗ್ರಾಹಕ ಸೇವಾ ಬಾಟ್‌ಗಳು ನೀವು ಹೇಳಿದುದನ್ನು ನೆನಪಿಡಬೇಕು. ವೈಯಕ್ತಿಕ ಸಹಾಯಕರು ಸಾಂದರ್ಭಿಕತೆಯನ್ನು ಅಗತ್ಯವಿದೆ. ಯಾವುದೇ ಬಹು-ತಿರುವು ಸಂಭಾಷಣೆಗೆ ಸ್ಮರಣೆ ಅಗತ್ಯ.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.kn.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/kn/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *ಸ್ಥಿತಿರಹಿತ (ಸ್ವತಂತ್ರ ಕರೆಗಳು) ಮತ್ತು ಸ್ಥಿತಿಗತ (ಸಾಂದರ್ಭಿಕತೆಯ ಅರಿವು) ಸಂಭಾಷಣೆಗಳ ನಡುವಿನ ವ್ಯತ್ಯಾಸ*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಸಂಭಾಷಣೆಯಲ್ಲಿ ಮುಳುಗುವ ಮೊದಲು, ಟೋಕನ್‌ಗಳನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವುದು ಮುಖ್ಯ - ಭಾಷಾ ಮಾದರಿಗಳು ಪ್ರಕ್ರಿಯೆ ಮಾಡುವ ಮೂಲ ಪಠ್ಯದ ಘಟಕಗಳು:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.kn.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/kn/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
 
 *ಪಠ್ಯವು ಟೋಕನ್‌ಗಳಾಗಿ ಹೇಗೆ ವಿಭಜಿಸಲಾಗುತ್ತದೆ ಎಂಬ ಉದಾಹರಣೆ - "I love AI!" 4 ಪ್ರತ್ಯೇಕ ಪ್ರಕ್ರಿಯೆ ಘಟಕಗಳಾಗುತ್ತದೆ*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಈ ಸ್ಮರಣೆ ಅನುಷ್ಠಾನಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ನೀವು ಎಷ್ಟು ಸಂದೇಶಗಳನ್ನು ಉಳಿಸಬೇಕೆಂದು ಆಯ್ಕೆಮಾಡುತ್ತೀರಿ ಮತ್ತು ಫ್ರೇಮ್ವರ್ಕ್ ಸಾಂದರ್ಭಿಕ ಕಿಟಕಿಯನ್ನು ನಿರ್ವಹಿಸುತ್ತದೆ.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.kn.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/kn/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory ಇತ್ತೀಚಿನ ಸಂದೇಶಗಳ ಸ್ಲೈಡಿಂಗ್ ವಿಂಡೋವನ್ನು ಕಾಪಾಡುತ್ತದೆ, ಹಳೆಯದನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಬಿಟ್ಟುಬಿಡುತ್ತದೆ*
 
@@ -212,7 +212,7 @@ Spring Boot ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ ನಿಂದ ನೀವು:
 
 "introduction" ಪಕ್ಕದ ಪ್ಲೇ ಬಟನ್ ಕ್ಲಿಕ್ ಮಾಡಿ ಈ ಮೋಡ್ಯೂಲ್ ಪ್ರಾರಂಭಿಸಿ, ಅಥವಾ ಎಲ್ಲಾ ಮೋಡ್ಯೂಲ್‌ಗಳನ್ನು ಒಟ್ಟಿಗೆ ಪ್ರಾರಂಭಿಸಿ.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.kn.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/kn/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
 
 **ಆಯ್ಕೆ 2: ಶೆಲ್ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳು ಬಳಸಿ**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # ಎಲ್ಲಾ ಮಾಯಾಜಾಲಗಳು
 
 ಅನ್ವಯಿಕೆ ಎರಡು ಚಾಟ್ ಅನುಷ್ಠಾನಗಳನ್ನು ಪಕ್ಕಪಕ್ಕವಾಗಿ ಒದಗಿಸುವ ವೆಬ್ ಇಂಟರ್ಫೇಸ್ ಅನ್ನು ಒದಗಿಸುತ್ತದೆ.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.kn.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/kn/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
 
 *ಸರಳ ಚಾಟ್ (ಸ್ಥಿತಿರಹಿತ) ಮತ್ತು ಸಂಭಾಷಣಾತ್ಮಕ ಚಾಟ್ (ಸ್ಥಿತಿಗತ) ಆಯ್ಕೆಗಳು ಇರುವ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # ಎಲ್ಲಾ ಮಾಯಾಜಾಲಗಳು
 
 ಮೊದಲು ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ. "ನನ್ನ ಹೆಸರು ಜಾನ್" ಎಂದು ಕೇಳಿ ಮತ್ತು ತಕ್ಷಣ "ನನ್ನ ಹೆಸರು ಏನು?" ಎಂದು ಕೇಳಿ. ಮಾದರಿ ನೆನಪಿಡುವುದಿಲ್ಲ ಏಕೆಂದರೆ ಪ್ರತಿ ಸಂದೇಶ ಸ್ವತಂತ್ರವಾಗಿದೆ. ಇದು ಮೂಲಭೂತ ಭಾಷಾ ಮಾದರಿ ಸಂಯೋಜನೆಯ ಮೂಲ ಸಮಸ್ಯೆಯನ್ನು ತೋರಿಸುತ್ತದೆ - ಸಂಭಾಷಣಾ ಸಾಂದರ್ಭಿಕತೆ ಇಲ್ಲ.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.kn.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/kn/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI ಹಿಂದಿನ ಸಂದೇಶದಿಂದ ನಿಮ್ಮ ಹೆಸರನ್ನು ನೆನಪಿಸಿಕೊಳ್ಳುವುದಿಲ್ಲ*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # ಎಲ್ಲಾ ಮಾಯಾಜಾಲಗಳು
 
 ಈಗ ಇದೇ ಕ್ರಮವನ್ನು ಇಲ್ಲಿ ಪ್ರಯತ್ನಿಸಿ. "ನನ್ನ ಹೆಸರು ಜಾನ್" ಮತ್ತು ನಂತರ "ನನ್ನ ಹೆಸರು ಏನು?" ಎಂದು ಕೇಳಿ. ಈ ಬಾರಿ ಅದು ನೆನಪಿಡುತ್ತದೆ. ವ್ಯತ್ಯಾಸ MessageWindowChatMemory - ಇದು ಸಂಭಾಷಣಾ ಇತಿಹಾಸವನ್ನು ಕಾಪಾಡುತ್ತದೆ ಮತ್ತು ಪ್ರತಿ ವಿನಂತಿಯೊಂದಿಗೆ ಸೇರಿಸುತ್ತದೆ. ಇದು ಉತ್ಪಾದನಾ ಸಂಭಾಷಣಾತ್ಮಕ AI ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ ಎಂಬುದಾಗಿದೆ.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.kn.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/kn/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI ಸಂಭಾಷಣೆಯ ಆರಂಭದಲ್ಲಿ ನಿಮ್ಮ ಹೆಸರನ್ನು ನೆನಪಿಡುತ್ತದೆ*
 

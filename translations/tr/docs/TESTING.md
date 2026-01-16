@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.tr.png" alt="Başarılı Test Sonuçları" width="800"/>
+<img src="../../../translated_images/tr/test-results.ea5c98d8f3642043.png" alt="Başarılı Test Sonuçları" width="800"/>
 
 *Tüm testlerin hatasız geçtiğini gösteren başarılı test çalıştırması*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Bu eğitim, yerel olarak çalışan **birim testlerine** odaklanır. Her test, izole bir şekilde belirli bir LangChain4j kavramını gösterir.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.tr.png" alt="Test Piramidi" width="800"/>
+<img src="../../../translated_images/tr/testing-pyramid.2dd1079a0481e53e.png" alt="Test Piramidi" width="800"/>
 
 *Birim testleri (hızlı, izole), entegrasyon testleri (gerçek bileşenler) ve uçtan uca testler arasındaki dengeyi gösteren test piramidi. Bu eğitim birim testlerini kapsar.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#sohbet geçmişini korumalı
 
 Visual Studio Code kullanıyorsanız, Test Explorer testleri çalıştırmak ve hata ayıklamak için grafiksel bir arayüz sağlar.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.tr.png" alt="VS Code Test Gezgini" width="800"/>
+<img src="../../../translated_images/tr/vscode-testing.f02dd5917289dced.png" alt="VS Code Test Gezgini" width="800"/>
 
 *VS Code Test Explorer'ın, tüm Java test sınıfları ve bireysel test metodlarıyla test ağacını gösterdiği ekran görüntüsü*
 
@@ -134,7 +134,7 @@ Test Explorer, geçen testler için yeşil onay işaretleri gösterir ve testler
 
 En basit desen, herhangi bir AI modeli çağırmadan istem şablonlarını test eder. Değişken yerine koymanın doğru çalıştığını ve istemlerin beklenen şekilde biçimlendiğini doğrularsınız.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.tr.png" alt="İstem Şablonu Testi" width="800"/>
+<img src="../../../translated_images/tr/prompt-template-testing.b902758ddccc8dee.png" alt="İstem Şablonu Testi" width="800"/>
 
 *Yer tutuculu şablon → değerlerin uygulanması → biçimlendirilmiş çıktının doğrulanması akışını gösteren istem şablonlarını test etme*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testİstemŞablonuBi
 
 Konuşma mantığını test ederken, önceden belirlenmiş yanıtlar döndüren Mockito gibi kütüphanelerle sahte modeller oluşturun. Bu, testleri hızlı, ücretsiz ve deterministik yapar.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.tr.png" alt="Sahte ve Gerçek API Karşılaştırması" width="800"/>
+<img src="../../../translated_images/tr/mock-vs-real.3b8b1f85bfe6845e.png" alt="Sahte ve Gerçek API Karşılaştırması" width="800"/>
 
 *Test etmek için neden taklitlerin tercih edildiğini gösteren karşılaştırma: hızlıdırlar, ücretsizdirler, deterministiktirler ve API anahtarı gerektirmezler*
 
@@ -231,7 +231,7 @@ Bu desen, `01-introduction/src/test/java/com/example/langchain4j/service/SimpleC
 
 Konuşma belleği birden fazla kullanıcıyı ayrı tutmalıdır. Bu test, konuşmaların bağlamları karıştırmadığını doğrular.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.tr.png" alt="Sohbet İzolasyonu" width="800"/>
+<img src="../../../translated_images/tr/conversation-isolation.e00336cf8f7a3e3f.png" alt="Sohbet İzolasyonu" width="800"/>
 
 *Farklı kullanıcılar için bağlam karışmasını önlemek üzere ayrı bellek depoları gösteren konuşma izolasyonunu test etme*
 
@@ -263,7 +263,7 @@ Her konuşma kendi bağımsız geçmişini korur. Üretim sistemlerinde, bu izol
 
 Araçlar, AI'nin çağırabileceği fonksiyonlardır. AI kararlarından bağımsız olarak doğru çalıştıklarından emin olmak için doğrudan test edin.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.tr.png" alt="Araç Testi" width="800"/>
+<img src="../../../translated_images/tr/tools-testing.3e1706817b0b3924.png" alt="Araç Testi" width="800"/>
 
 *AI çağrısı olmadan sahte araç yürütmesini gösteren ve iş mantığını doğrulayan araçları bağımsız test etme*
 
@@ -294,7 +294,7 @@ Bu testler, `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleT
 
 RAG sistemleri geleneksel olarak vektör veritabanları ve embedding servisleri gerektirir. Bellek içi desen, tüm boru hattını harici bağımlılıklar olmadan test etmenizi sağlar.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.tr.png" alt="Bellek İçi RAG Testi" width="800"/>
+<img src="../../../translated_images/tr/rag-testing.ee7541b1e23934b1.png" alt="Bellek İçi RAG Testi" width="800"/>
 
 *Bir veritabanı gerektirmeden doküman ayrıştırma, embedding depolama ve benzerlik araması gösteren bellek içi RAG test iş akışı*
 

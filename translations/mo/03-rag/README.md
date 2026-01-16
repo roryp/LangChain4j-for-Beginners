@@ -49,7 +49,7 @@ RAG（檢索增強生成）解決了這個問題。它不是嘗試將你的資�
 
 這使模型的回答以你的實際資料為基礎，而非依賴訓練知識或胡亂編造答案。
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.mo.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/mo/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
 
 *RAG 工作流程—從用戶查詢到語義搜索到上下文答案生成*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.mo.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/mo/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
 
 *文件在嵌入空間中以向量表示—相似內容聚集在一起*
 
@@ -160,7 +160,7 @@ cat ../.env  # 應該顯示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只需點擊 "rag" 旁的啟動按鈕即可啟動此模組，或一次啟動所有模組。
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.mo.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/mo/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
 
 **方案二：使用 shell 腳本**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 此應用程式提供網頁介面供文件上傳及提問。
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.mo.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/mo/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG 應用介面—上傳文件並提出問題*
 
@@ -248,7 +248,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 每個答案都會附上帶有相似度分數的來源參考。這些分數（介於 0 到 1）表示各分塊與問題的相關性。分數越高表示匹配越好。這讓你能根據來源材料驗證答案。
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.mo.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/mo/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *查詢結果顯示答案及來源參考和相關度分數*
 

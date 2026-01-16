@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.fa.png" alt="نتایج موفقیت‌آمیز تست‌ها" width="800"/>
+<img src="../../../translated_images/fa/test-results.ea5c98d8f3642043.png" alt="نتایج موفقیت‌آمیز تست‌ها" width="800"/>
 
 *اجرای موفق تست که نشان می‌دهد تمامی تست‌ها با صفر شکست گذرانده شدند*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 این دوره بر روی **تست‌های واحد** که به صورت محلی اجرا می‌شوند تمرکز دارد. هر تست یک مفهوم خاص از LangChain4j را به‌صورت جداگانه نشان می‌دهد.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.fa.png" alt="هرم تست" width="800"/>
+<img src="../../../translated_images/fa/testing-pyramid.2dd1079a0481e53e.png" alt="هرم تست" width="800"/>
 
 *هرم تست که تعادل بین تست‌های واحد (سریع، جدا)، تست‌های یکپارچه‌سازی (اجزای واقعی) و تست‌های انتها به انتها را نشان می‌دهد. این آموزش پوشش‌دهندهٔ تست‌های واحد است.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#باید تاریخچه گفتگو ر
 
 اگر از Visual Studio Code استفاده می‌کنید، Test Explorer یک رابط گرافیکی برای اجرای و دیباگ تست‌ها فراهم می‌کند.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.fa.png" alt="کاوشگر تست VS Code" width="800"/>
+<img src="../../../translated_images/fa/vscode-testing.f02dd5917289dced.png" alt="کاوشگر تست VS Code" width="800"/>
 
 *کاوشگر تست VS Code که درخت تست‌ها را با تمام کلاس‌های تست جاوا و متدهای تست جداگانه نمایش می‌دهد*
 
@@ -134,7 +134,7 @@ mvn --% test -Dtest=SimpleConversationTest#باید تاریخچه گفتگو ر
 
 ساده‌ترین الگو، قالب‌های پرامپت را بدون فراخوانی هیچ مدل هوش مصنوعی تست می‌کند. شما بررسی می‌کنید که جایگزینی متغیرها به‌درستی انجام شود و پرامپت‌ها مطابق انتظار فرمت شوند.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.fa.png" alt="تست قالب پرامپت" width="800"/>
+<img src="../../../translated_images/fa/prompt-template-testing.b902758ddccc8dee.png" alt="تست قالب پرامپت" width="800"/>
 
 *تست قالب‌های پرامپت که جریان جایگزینی متغیرها را نشان می‌دهد: قالب با جای‌گیرها → اعمال مقادیر → تأیید خروجی فرمت‌شده*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#قالب‌بندی 
 
 هنگام تست منطق گفتگو، از Mockito برای ایجاد مدل‌های جعلی استفاده کنید که پاسخ‌های از پیش تعیین‌شده برمی‌گردانند. این باعث می‌شود تست‌ها سریع، رایگان و قطعی باشند.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.fa.png" alt="مقایسهٔ ماک و API واقعی" width="800"/>
+<img src="../../../translated_images/fa/mock-vs-real.3b8b1f85bfe6845e.png" alt="مقایسهٔ ماک و API واقعی" width="800"/>
 
 *مقایسه‌ای که نشان می‌دهد چرا ماک‌ها برای تست ترجیح داده می‌شوند: سریع، رایگان، قطعی و نیازمند کلید API نیستند*
 
@@ -231,7 +231,7 @@ This pattern appears in `01-introduction/src/test/java/com/example/langchain4j/s
 
 حافظهٔ گفتگو باید کاربران متعدد را جدا نگه دارد. این تست تأیید می‌کند که گفتگوها زمینه‌ها را با هم مخلوط نمی‌کنند.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.fa.png" alt="جداسازی گفتگو" width="800"/>
+<img src="../../../translated_images/fa/conversation-isolation.e00336cf8f7a3e3f.png" alt="جداسازی گفتگو" width="800"/>
 
 *تست ایزولاسیون گفتگو که ذخیره‌سازهای حافظه جداگانه برای کاربران مختلف را نشان می‌دهد تا از ترکیب زمینه‌ها جلوگیری شود*
 
@@ -263,7 +263,7 @@ void shouldIsolateConversationsByid() {
 
 ابزارها توابعی هستند که هوش مصنوعی می‌تواند فراخوانی کند. آن‌ها را مستقیماً تست کنید تا مطمئن شوید مستقل از تصمیمات AI درست کار می‌کنند.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.fa.png" alt="تست ابزارها" width="800"/>
+<img src="../../../translated_images/fa/tools-testing.3e1706817b0b3924.png" alt="تست ابزارها" width="800"/>
 
 *تست مستقل ابزارها که اجرای ماک ابزار را بدون فراخوانی AI نشان می‌دهد تا منطق کسب‌وکار را تأیید کند*
 
@@ -294,7 +294,7 @@ These tests from `04-tools/src/test/java/com/example/langchain4j/agents/tools/Si
 
 سیستم‌های RAG معمولاً به پایگاه‌داده‌های برداری و سرویس‌های امبدینگ نیاز دارند. الگوی درون‌حافظه به شما امکان می‌دهد کل خط لوله را بدون وابستگی‌های خارجی تست کنید.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.fa.png" alt="تست RAG در حافظه" width="800"/>
+<img src="../../../translated_images/fa/rag-testing.ee7541b1e23934b1.png" alt="تست RAG در حافظه" width="800"/>
 
 *جریان کاری تست RAG در حافظه که پارس کردن سند، ذخیرهٔ امبدینگ و جستجوی شباهت را بدون نیاز به پایگاه‌داده نشان می‌دهد*
 

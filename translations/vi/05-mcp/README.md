@@ -35,7 +35,7 @@ Bạn đã xây dựng AI hội thoại, thành thạo các prompt, căn cứ c�
 
 Giao thức Ngữ cảnh Mô hình (MCP) cung cấp chính xác điều đó - một cách chuẩn hóa để các ứng dụng AI khám phá và sử dụng các công cụ bên ngoài. Thay vì viết tích hợp tùy chỉnh cho từng nguồn dữ liệu hoặc dịch vụ, bạn kết nối với các máy chủ MCP vốn công bố khả năng của họ theo định dạng nhất quán. Sau đó, agent AI của bạn có thể tự động phát hiện và sử dụng các công cụ này.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.vi.png" alt="So sánh MCP" width="800"/>
+<img src="../../../translated_images/vi/mcp-comparison.9129a881ecf10ff5.png" alt="So sánh MCP" width="800"/>
 
 *Trước MCP: Tích hợp điểm-điểm phức tạp. Sau MCP: Một giao thức, vô vàn khả năng.*
 
@@ -43,7 +43,7 @@ MCP giải quyết vấn đề nền tảng trong phát triển AI: mỗi tích 
 
 MCP chuẩn hóa điều này. Một máy chủ MCP công bố công cụ với mô tả rõ ràng và schema. Bất kỳ client MCP nào cũng có thể kết nối, khám phá công cụ có sẵn và sử dụng chúng. Xây dựng một lần, dùng mọi nơi.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.vi.png" alt="Kiến trúc MCP" width="800"/>
+<img src="../../../translated_images/vi/mcp-architecture.b3156d787a4ceac9.png" alt="Kiến trúc MCP" width="800"/>
 
 *Kiến trúc Giao thức Ngữ cảnh Mô hình — phát hiện và thực thi công cụ chuẩn hóa*
 
@@ -71,7 +71,7 @@ Khi client của bạn kết nối máy chủ MCP, nó hỏi "Bạn có công c�
 
 MCP hỗ trợ các cơ chế truyền tải khác nhau. Module này minh họa truyền tải Stdio cho các tiến trình cục bộ:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.vi.png" alt="Cơ chế truyền tải" width="800"/>
+<img src="../../../translated_images/vi/transport-mechanisms.2791ba7ee93cf020.png" alt="Cơ chế truyền tải" width="800"/>
 
 *Cơ chế truyền tải MCP: HTTP cho máy chủ từ xa, Stdio cho tiến trình cục bộ*
 
@@ -169,7 +169,7 @@ Mẫu **Agent Giám sát** là hình thức **linh hoạt** của agentic AI. M�
 
 Trong demo, `FileAgent` đọc tập tin dùng công cụ MCP hệ thống tập tin, và `ReportAgent` tạo báo cáo có cấu trúc với bản tóm tắt điều hành (1 câu), 3 điểm chính và khuyến nghị. Supervisor tự động điều phối luồng này:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.vi.png" alt="Module Agentic" width="800"/>
+<img src="../../../translated_images/vi/agentic.cf84dcda226374e3.png" alt="Module Agentic" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. ਟੂਲ ਨਿਰਵਾਹ ਕਰਦਾ ਹੈ ਅਤੇ ਡੇਟਾ ਵਾਪਸ ਕਰਦਾ ਹੈ
 6. ਏਜੰਟ ਨਤੀਜਾ ਸ਼ਾਮਿਲ ਕਰਦਾ ਹੈ ਅਤੇ ਅੰਤਿਮ ਜਵਾਬ ਦਿੰਦਾ ਹੈ
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.pa.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/pa/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
 
 *ReAct ਪੈਟਰਨ - ਕਿਵੇਂ AI ਏਜੰਟ ਸਮੱਸਿਆਵਾਂ ਦਾ ਹੱਲ ਕਰਨ ਲਈ ਤਰਕੀਬ ਅਤੇ ਕਾਰਵਾਈ ਵਿਚਕਾਰ ਬਦਲਾਅ ਕਰਦੇ ਹਨ*
 
@@ -138,7 +138,7 @@ public interface Assistant {
 
 **ਟੂਲ ਚੇਨਿੰਗ** - AI ਕਈ ਟੂਲ ਇੱਕ ਨਿਰਦੇਸ਼ੀ ਕ੍ਰਮ ਵਿੱਚ ਕਾਲ ਕਰ ਸਕਦਾ ਹੈ। ਪੁੱਛੋ "ਸੀਏਟਲ ਵਿੱਚ ਮੌਸਮ ਕਿਵੇਂ ਹੈ ਅਤੇ ਮੈਨੂੰ ਛਤਰੀ ਲੈਣੀ ਚਾਹੀਦੀ ਹੈ?" ਅਤੇ ਦੇਖੋ ਕਿ ਇਹ `getCurrentWeather` ਨੂੰ ਬਾਰਿਸ਼ ਦਾ ਤਰਕੀਬ ਨਾਲ ਜੋੜਦਾ ਹੈ।
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.pa.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/pa/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ਲੜੀਵਾਰ ਟੂਲ ਕਾਲਾਂ - ਇੱਕ ਟੂਲ ਦਾ ਨਤੀਜਾ ਅਗਲੇ ਫੈਸਲੇ ਵਿੱਚ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ*
 
@@ -171,7 +171,7 @@ Spring Boot ਡੈਸ਼ਬੋਰਡ ਤੋਂ, ਤੁਸੀਂ:
 
 ਸਿਰਫ਼ "tools" ਦੇ ਕੋਲ ਪਲੇ ਬਟਨ ’ਤੇ ਕਲਿੱਕ ਕਰੋ ਜਾਂ ਸਾਰੇ ਮੋਡੀਊਲ ਇੱਕ ਵਾਰੀ ਚਾਲੂ ਕਰੋ।  
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.pa.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/pa/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
 
 **ਵਿਕਲਪ 2: shell ਸਕ੍ਰਿਪਟਾਂ ਦੀ ਵਰਤੋਂ**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # ਸਾਰੇ ਮੋਡੀਊਲ
 
 ਐਪਲੀਕੇਸ਼ਨ ਇੱਕ ਵੈੱਬ ਇੰਟਰਫੇਸ ਦਿੰਦਾ ਹੈ ਜਿੱਥੇ ਤੁਸੀਂ ਉਸ AI ਏਜੰਟ ਨਾਲ ਇੰਟਰੈਕਟ ਕਰ ਸਕਦੇ ਹੋ ਜਿਸ ਨੂੰ ਮੌਸਮ ਅਤੇ ਤਾਪਮਾਨ ਰੂਪਾਂਤਰਣ ਟੂਲਸ ਦੀ ਪਹੁੰਚ ਹੈ।
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.pa.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/pa/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI ਏਜੰਟ ਟੂਲ ਇੰਟਰਫੇਸ - ਟੂਲ ਨਾਲ ਇੰਟਰੈਕਟ ਕਰਨ ਲਈ ਜਲਦੀ ਉਦਾਹਰਣਾਂ ਅਤੇ ਚੈਟ ਇੰਟਰਫੇਸ*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # ਸਾਰੇ ਮੋਡੀਊਲ
 
 ਚੈਟ ਇੰਟਰਫੇਸ ਗੱਲਬਾਤ ਇਤਿਹਾਸ ਰੱਖਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਤੁਸੀਂ ਕਈ ਮੋੜਾਂ ਦੀਆਂ ਇੰਟਰੈਕਸ਼ਨਾਂ ਕਰ ਸਕਦੇ ਹੋ। ਤੁਸੀਂ ਸਾਰੇ ਪਹਿਲਾਂ ਦੇ ਸਵਾਲ ਅਤੇ ਜਵਾਬ ਵੇਖ ਸਕਦੇ ਹੋ, ਇਹ ਸੌਖਾ ਬਣਾਉਂਦਾ ਹੈ ਕਿ ਕਿਵੇਂ ਏਜੰਟ ਬਹੁ-ਵਾਰਤਾਲਾਪ ਵਿੱਚ ਸੰਦਰਭ ਬਣਾਉਂਦਾ ਹੈ।
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.pa.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/pa/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ਕਈ ਟੂਲ ਕਾਲਾਂ ਨਾਲ ਬਹੁ-ਵਾਰਤਾਲਾਪ ਜਿਸ ਵਿੱਚ ਸਧਾਰਣ ਬਦਲਾਅ, ਮੌਸਮ ਦੇਖਣਾ, ਅਤੇ ਟੂਲ ਚੇਨਿੰਗ ਦਿਖਾਈ ਗਈ ਹੈ*
 

@@ -49,7 +49,7 @@ RAG (יצירת תוכן מוגברת שליפה) פותר את הבעיה הז�
 
 זה מייצב את תגובות המודל במידע האמיתי שלכם במקום להסתמך על הידע מהאימון או להמציא תשובות.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.he.png" alt="ארכיטקטורת RAG" width="800"/>
+<img src="../../../translated_images/he/rag-architecture.ccb53b71a6ce407f.png" alt="ארכיטקטורת RAG" width="800"/>
 
 *זרימת העבודה של RAG - משאילתת משתמש לחיפוש סמנטי ליצירת תשובה משתכללת*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.he.png" alt="מרחב הטמעות וקטוריות" width="800"/>
+<img src="../../../translated_images/he/vector-embeddings.2ef7bdddac79a327.png" alt="מרחב הטמעות וקטוריות" width="800"/>
 
 *מסמכים מיוצגים כוקטורים במרחב ההטמעות - תכנים דומים מתמקדים יחד*
 
@@ -160,7 +160,7 @@ cat ../.env  # צריך להציג את AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYME
 
 פשוט לחצו על כפתור ההפעלה ליד "rag" כדי להפעיל את המודול הזה, או להפעיל את כל המודולים בבת אחת.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.he.png" alt="לוח ניהול Spring Boot" width="400"/>
+<img src="../../../translated_images/he/dashboard.fbe6e28bf4267ffe.png" alt="לוח ניהול Spring Boot" width="400"/>
 
 **אפשרות 2: שימוש בסקריפטים של shell**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 היישום מספק ממשק ווב להעלאת מסמכים ולשאילת שאלות.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.he.png" alt="ממשק יישום RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/he/rag-homepage.d90eb5ce1b3caa94.png" alt="ממשק יישום RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ממשק יישום RAG - העלאת מסמכים ושאילת שאלות*
 
@@ -248,7 +248,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 שימו לב שכל תשובה כוללת הפניות למקורות עם ציוני דמיון. ציונים אלו (מ-0 עד 1) מראים עד כמה כל חלק רלוונטי לשאלתכם. ציונים גבוהים מעידים על התאמות טובות יותר. זה מאפשר לאמת את התשובה מול חומר המקור.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.he.png" alt="תוצאות שאילתת RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/he/rag-query-results.6d69fcec5397f355.png" alt="תוצאות שאילתת RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *תוצאות השאילתא המציגות תשובה עם הפניות מקור וציוני רלוונטיות*
 

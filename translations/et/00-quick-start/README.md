@@ -38,7 +38,7 @@ LangChain4j on Java teek, mis lihtsustab tehisintellekti jõuliste rakenduste lo
 
 "Chain" LangChaini nimes viitab mitme komponendi ühendamisele - võid ketti ühendada päringu mudelile ja seejärel parserile või kokku viia mitu AI kutset, kus ühe väljund on järgmise sisend. See kiirkäivitus keskendub alustõdedele, enne kui uurida keerukamaid ahelaid.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.et.png" alt="LangChain4j ketistamise kontseptsioon" width="800"/>
+<img src="../../../translated_images/et/langchain-concept.ad1fe6cf063515e1.png" alt="LangChain4j ketistamise kontseptsioon" width="800"/>
 
 *Kettide loomine LangChain4j-s – ehituskivid ühenduvad võimsateks AI töövoogudeks*
 
@@ -50,7 +50,7 @@ Kasutame kolme põhikomponenti:
 
 **MessageWindowChatMemory** – hoiab vestluse ajalugu. Ilma selleta on iga päring iseseisev. Sellega mäletab AI varasemaid sõnumeid ja hoiab konteksti mitme käigu vältel.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.et.png" alt="LangChain4j arhitektuur" width="800"/>
+<img src="../../../translated_images/et/architecture.eedc993a1c576839.png" alt="LangChain4j arhitektuur" width="800"/>
 
 *LangChain4j arhitektuur – põhikomponendid töötamas koos, et jõustada sinu AI rakendusi*
 

@@ -53,7 +53,7 @@ Quick start ကိုပြီးမြောက်ခဲ့ပါက prompt မ
 
 ဤအခြေအနေသည် ရိုးရှင်းသော Q&A များအတွက် သင့်တော်သော်လည်း အမှန်တကယ် အသုံးပြုမည့် အက်ပလီကေးရှင်းများအတွက် မသင့်တော်ပါ။ ဖောက်သည်ဝန်ဆောင်မှု bot များသည် သင်ပြောခဲ့သည့်အရာကို မှတ်မိရန် လိုအပ်သည်။ ကိုယ်ပိုင်အကူအညီပေးသူများသည် context လိုအပ်သည်။ အကြိမ်ရေများစွာ စကားပြောမှုများတွင် မှတ်ဉာဏ် လိုအပ်သည်။
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.my.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/my/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *stateless (လွတ်လပ်သော ခေါ်ဆိုမှုများ) နှင့် stateful (context ကို သိရှိသော) စကားပြောမှုများအကြား ကွာခြားချက်*
 
@@ -61,7 +61,7 @@ Quick start ကိုပြီးမြောက်ခဲ့ပါက prompt မ
 
 စကားပြောမှုများထဲသို့ ဝင်မည့်အခါ token များကို နားလည်ထားခြင်း အရေးကြီးသည် - ဘာသာစကားမော်ဒယ်များက စာသားကို အခြေခံယူနစ်များဖြစ်သော token များအဖြစ် လုပ်ဆောင်သည်။
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.my.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/my/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
 
 *စာသားကို token များအဖြစ် ခွဲခြားပုံ - "I love AI!" သည် ၄ ခုခွဲခြားသော လုပ်ဆောင်မှုယူနစ်များဖြစ်သည်*
 
@@ -73,7 +73,7 @@ Chat မှတ်ဉာဏ်သည် stateless ပြဿနာကို စက
 
 LangChain4j သည် ဤလုပ်ဆောင်ချက်ကို အလိုအလျောက် စီမံခန့်ခွဲပေးသည့် မှတ်ဉာဏ် အကောင်အထည်ဖော်မှုများကို ပံ့ပိုးပေးသည်။ သင်သည် သိမ်းဆည်းမည့် စာတိုက်အရေအတွက်ကို ရွေးချယ်ပြီး framework သည် context window ကို စီမံခန့်ခွဲပေးသည်။
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.my.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/my/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory သည် နောက်ဆုံးစာတိုက်များ၏ sliding window ကို ထိန်းသိမ်းပြီး အဟောင်းများကို အလိုအလျောက် ဖယ်ရှားပေးသည်*
 
@@ -212,7 +212,7 @@ Spring Boot Dashboard မှ-
 
 "introduction" အနီးရှိ play ခလုတ်ကို နှိပ်၍ ဤ module ကို စတင်ပါ၊ သို့မဟုတ် module များအားလုံးကို တပြိုင်နက် စတင်နိုင်သည်။
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.my.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/my/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
 
 **ရွေးချယ်မှု ၂: shell script များ အသုံးပြုခြင်း**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 အက်ပလီကေးရှင်းသည် chat implementation နှစ်မျိုးကို ဘေးဘေးတွင် ပြသသည့် web interface ကို ပံ့ပိုးပေးသည်။
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.my.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/my/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
 
 *Simple Chat (stateless) နှင့် Conversational Chat (stateful) ရွေးချယ်စရာများပါရှိသည့် Dashboard*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 ဤကို ပထမဦးဆုံး စမ်းသပ်ပါ။ "My name is John" ဟု မေးပြီးနောက် "What's my name?" ဟု မေးပါ။ မော်ဒယ်သည် မှတ်မိခြင်းမရှိပါဘူး၊ အကြောင်းမှာ တစ်ခုချင်းစီသော စာတိုက်များသည် လွတ်လပ်ခြင်း ဖြစ်သည်။ ၎င်းသည် အခြေခံဘာသာစကားမော်ဒယ် ပေါင်းစည်းမှု၏ အဓိကပြဿနာကို ပြသသည် - စကားပြော context မရှိခြင်း။
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.my.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/my/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI သည် ယခင်စာတိုက်မှ သင့်နာမည်ကို မှတ်မိခြင်း မရှိပါ*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 ယခု အတူတူ စဉ်ဆက်ကို ဒီမှာ စမ်းသပ်ပါ။ "My name is John" ဟု မေးပြီးနောက် "What's my name?" ဟု မေးပါ။ ယခုအခါ မှတ်မိသည်။ ကွာခြားချက်မှာ MessageWindowChatMemory ဖြစ်ပြီး စကားပြောသမိုင်းကို ထိန်းသိမ်းကာ တောင်းဆိုမှုတိုင်းတွင် ထည့်သွင်းပေးသည်။ ၎င်းသည် ထုတ်လုပ်မှု conversational AI ၏ လုပ်ဆောင်ပုံဖြစ်သည်။
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.my.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/my/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI သည် စကားပြောမှုအတွင်း သင့်နာမည်ကို မှတ်မိထားသည်*
 

@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.ko.png" alt="성공적인 테스트 결과" width="800"/>
+<img src="../../../translated_images/ko/test-results.ea5c98d8f3642043.png" alt="성공적인 테스트 결과" width="800"/>
 
 *모든 테스트가 실패 없이 통과하는 성공적인 테스트 실행 화면*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 이 과정은 로컬에서 실행되는 **단위 테스트(unit tests)** 에 중점을 둡니다. 각 테스트는 특정 LangChain4j 개념을 격리하여 보여줍니다.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.ko.png" alt="테스트 피라미드" width="800"/>
+<img src="../../../translated_images/ko/testing-pyramid.2dd1079a0481e53e.png" alt="테스트 피라미드" width="800"/>
 
 *단위 테스트(빠르고 격리됨), 통합 테스트(실제 구성 요소), 엔드투엔드 테스트 간의 균형을 보여주는 테스트 피라미드. 이 교육은 단위 테스트를 다룹니다.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#대화 기록을 유지해야 함
 
 Visual Studio Code를 사용하는 경우, Test Explorer는 테스트를 실행하고 디버그할 수 있는 그래픽 인터페이스를 제공합니다.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.ko.png" alt="VS Code 테스트 탐색기" width="800"/>
+<img src="../../../translated_images/ko/vscode-testing.f02dd5917289dced.png" alt="VS Code 테스트 탐색기" width="800"/>
 
 *모든 Java 테스트 클래스와 개별 테스트 메서드가 표시된 VS Code Test Explorer의 테스트 트리 화면*
 
@@ -134,7 +134,7 @@ Test Explorer는 통과한 테스트에 대해 녹색 체크 표시를 보여주
 
 가장 단순한 패턴은 AI 모델을 호출하지 않고 프롬프트 템플릿을 테스트하는 것입니다. 변수 치환이 올바르게 작동하는지, 프롬프트가 예상한 대로 포맷되는지 확인합니다.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.ko.png" alt="프롬프트 템플릿 테스트" width="800"/>
+<img src="../../../translated_images/ko/prompt-template-testing.b902758ddccc8dee.png" alt="프롬프트 템플릿 테스트" width="800"/>
 
 *플레이스홀더가 있는 템플릿 → 값이 적용됨 → 형식화된 출력 검증 흐름을 보여주는 프롬프트 템플릿 테스트*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#테스트 프롬프�
 
 대화 로직을 테스트할 때는 Mockito를 사용해 미리 정의된 응답을 반환하는 가짜 모델을 만드세요. 이렇게 하면 테스트가 빠르고 무료이며 결정론적(deterministic)입니다.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.ko.png" alt="모킹 vs 실제 API 비교" width="800"/>
+<img src="../../../translated_images/ko/mock-vs-real.3b8b1f85bfe6845e.png" alt="모킹 vs 실제 API 비교" width="800"/>
 
 *모킹이 테스트에 더 적합한 이유를 보여주는 비교: 빠르고, 무료이며, 결정론적이고, API 키가 필요 없음*
 
@@ -231,7 +231,7 @@ class SimpleConversationTest {
 
 대화 메모리는 여러 사용자를 분리해서 유지해야 합니다. 이 테스트는 대화들이 문맥을 섞지 않는지 검증합니다.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.ko.png" alt="대화 격리" width="800"/>
+<img src="../../../translated_images/ko/conversation-isolation.e00336cf8f7a3e3f.png" alt="대화 격리" width="800"/>
 
 *다른 사용자의 문맥 혼합을 방지하기 위해 서로 분리된 메모리 저장소를 보여주는 대화 격리 테스트*
 
@@ -263,7 +263,7 @@ void shouldIsolateConversationsByid() {
 
 도구는 AI가 호출할 수 있는 함수입니다. AI의 결정과 상관없이 도구를 직접 테스트하여 올바르게 동작하는지 확인하세요.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.ko.png" alt="도구 테스트" width="800"/>
+<img src="../../../translated_images/ko/tools-testing.3e1706817b0b3924.png" alt="도구 테스트" width="800"/>
 
 *AI 호출 없이 모의 도구 실행을 통해 비즈니스 로직을 검증하는 도구 단독 테스트*
 
@@ -294,7 +294,7 @@ void shouldDemonstrateToolChaining() {
 
 RAG 시스템은 전통적으로 벡터 데이터베이스와 임베딩 서비스를 필요로 합니다. 인메모리 패턴은 외부 종속성 없이 전체 파이프라인을 테스트할 수 있게 해줍니다.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.ko.png" alt="인메모리 RAG 테스트" width="800"/>
+<img src="../../../translated_images/ko/rag-testing.ee7541b1e23934b1.png" alt="인메모리 RAG 테스트" width="800"/>
 
 *데이터베이스 없이 문서 파싱, 임베딩 저장 및 유사도 검색을 보여주는 인메모리 RAG 테스트 워크플로우*
 

@@ -53,7 +53,7 @@ Ang mga language model ay stateless. Bawat API call ay independyente. Kung magpa
 
 Ayos lang ito para sa simpleng Q&A ngunit walang silbi para sa totoong aplikasyon. Kailangan ng mga customer service bot na maalala ang sinabi mo sa kanila. Kailangan ng mga personal assistant ng konteksto. Anumang multi-turn na pag-uusap ay nangangailangan ng memorya.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.tl.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/tl/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Ang pagkakaiba sa pagitan ng stateless (independent calls) at stateful (context-aware) na mga pag-uusap*
 
@@ -61,7 +61,7 @@ Ayos lang ito para sa simpleng Q&A ngunit walang silbi para sa totoong aplikasyo
 
 Bago sumabak sa mga pag-uusap, mahalagang maunawaan ang tokens - ang mga pangunahing yunit ng teksto na pinoproseso ng mga language model:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.tl.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/tl/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
 
 *Halimbawa kung paano hinahati ang teksto sa mga token - "I love AI!" ay nagiging 4 na magkakahiwalay na yunit ng pagproseso*
 
@@ -73,7 +73,7 @@ Nilulutas ng chat memory ang problema ng pagiging stateless sa pamamagitan ng pa
 
 Nagbibigay ang LangChain4j ng mga implementasyon ng memorya na awtomatikong humahawak nito. Pinipili mo kung ilang mensahe ang itatago at pinamamahalaan ng framework ang context window.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.tl.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/tl/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
 
 *Pinapanatili ng MessageWindowChatMemory ang sliding window ng mga kamakailang mensahe, awtomatikong tinatanggal ang mga luma*
 
@@ -212,7 +212,7 @@ Mula sa Spring Boot Dashboard, maaari mong:
 
 I-click lang ang play button sa tabi ng "introduction" para simulan ang module na ito, o simulan lahat ng module nang sabay-sabay.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.tl.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/tl/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opsyon 2: Gamit ang shell scripts**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Lahat ng mga module
 
 Nagbibigay ang aplikasyon ng web interface na may dalawang chat implementation na magkatabi.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.tl.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/tl/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
 
 *Dashboard na nagpapakita ng parehong Simple Chat (stateless) at Conversational Chat (stateful) na mga opsyon*
 
@@ -290,7 +290,7 @@ Nagbibigay ang aplikasyon ng web interface na may dalawang chat implementation n
 
 Subukan ito muna. Itanong ang "My name is John" at pagkatapos ay agad itanong "What's my name?" Hindi ito makakaalala dahil bawat mensahe ay independyente. Ipinapakita nito ang pangunahing problema sa basic na integration ng language model - walang konteksto ng pag-uusap.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.tl.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/tl/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
 
 *Hindi naaalala ng AI ang iyong pangalan mula sa naunang mensahe*
 
@@ -298,7 +298,7 @@ Subukan ito muna. Itanong ang "My name is John" at pagkatapos ay agad itanong "W
 
 Ngayon subukan ang parehong pagkakasunod dito. Itanong ang "My name is John" at pagkatapos ay "What's my name?" Ngayon ay naaalala nito. Ang pagkakaiba ay ang MessageWindowChatMemory - pinapanatili nito ang kasaysayan ng pag-uusap at isinasama ito sa bawat kahilingan. Ganito gumagana ang production conversational AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.tl.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/tl/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
 
 *Naalaala ng AI ang iyong pangalan mula sa naunang pag-uusap*
 

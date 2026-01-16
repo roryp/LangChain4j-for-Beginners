@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.my.png" alt="စမ်းသပ်မှု အောင်မြင်သော ရလဒ်များ" width="800"/>
+<img src="../../../translated_images/my/test-results.ea5c98d8f3642043.png" alt="စမ်းသပ်မှု အောင်မြင်သော ရလဒ်များ" width="800"/>
 
 *စမ်းသပ်မှုအားလုံး အောင်မြင်ပြီး ကျန်နည်းချက်များ မရှိပဲ ပြီးစီးနေကြောင်း ပြသခြင်း*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 ဤသင်တန်းသည် ဒေသတွင်းတွင် ပြေးနေသော **ယူနစ် စမ်းသပ်မှုများ** (unit tests) အပေါ် အထူးအာရုံစိုက်ထားသည်။ တစ်ခုချင်းစီသော စမ်းသပ်ချက်သည် LangChain4j ၏ သီးခြား အယူအဆတစ်ခုကို သီးခြားပြသသည်။
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.my.png" alt="စမ်းသပ်မှု ပီရမစ်" width="800"/>
+<img src="../../../translated_images/my/testing-pyramid.2dd1079a0481e53e.png" alt="စမ်းသပ်မှု ပီရမစ်" width="800"/>
 
 *ယူနစ် စမ်းသပ်မှုများ (လျင်မြန်၊ သီးခြားထား), ပေါင်းစည်းစမ်းသပ်မှုများ (အစိတ်အပိုင်းများ အသုံးပြုသည်), နှင့် end-to-end စမ်းသပ်မှုများအကြား မဟာဗျူဟာ ညီမျှမှုကို ပြသသော စမ်းသပ်မှု ပီရမစ်။ ဤသင်တန်းသည် ယူနစ် စမ်းသပ်မှုကို ဖုံးလွှမ်းသည်။*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#စကားဝိုင်းမှ�
 
 သင် Visual Studio Code ကို အသုံးပြုလျှင် Test Explorer သည် စမ်းသပ်ချက်များကို ပြေးကာ အမှားရှာ ဖျော်ဖြေရာတွင် ဂရပ်ဖစ် အင်တာဖေ့စ်ကို ပေးစွမ်းပါသည်။
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.my.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/my/vscode-testing.f02dd5917289dced.png" alt="VS Code Test Explorer" width="800"/>
 
 *VS Code Test Explorer သည် Java စမ်းသပ် အတန်းများနှင့် တစ်ခုချင်းစီသော စမ်းသပ် မက်သော့ဒ်များပါဝင်သည့် စမ်းသပ် သစ်ပင်ကို ပြသထားသည်*
 
@@ -134,7 +134,7 @@ Test Explorer သည် ဖြတ်တောက်ပြီးသော စမ�
 
 အရေးရှင်းဆုံး ပုံစံမှာ AI မော်ဒယ်အား တိုက်ရိုက် မခေါ်ဘဲ prompt template များကို စမ်းသပ်ခြင်း ဖြစ်သည်။ သင်သည် အမွန်းအပြား အစားထိုးမှု (variable substitution) က မှန်ကန်စွာ လုပ်ဆောင်သလား၊ prompt များသည် မျှော်လင့်သလို ဖော်မြူလာ အတိုင်း ရှိသလား စစ်ဆေးရပါမည်။
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.my.png" alt="Prompt Template Testing" width="800"/>
+<img src="../../../translated_images/my/prompt-template-testing.b902758ddccc8dee.png" alt="Prompt Template Testing" width="800"/>
 
 *placeholder များပါရှိသည့် template → တန်ဖိုးများ ကို အစားထိုး → ဖော်မတ် ပြုလုပ်ထားသော output ကို စစ်ဆေးခြင်း ဆိုသည့် variable substitution အဆင့်ကို ပြသသော prompt template စမ်းသပ်ခြင်း*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#Prompt နမူန�
 
 conversation အလျောက် ယာယီ ပြောဆိုမှုများကို စမ်းသပ်သောအခါ Mockito ကို အသုံးပြု၍ ကြိုတင်သတ်မှတ်ထားသော ပြန်လည်ဖြေဆိုချက်များ ပေးသည့် မှန်ကန်သောမဟုတ်သည့် (fake) မော်ဒယ်များကို ဖန်တီးပါ။ ၎င်းက စမ်းသပ်ချက်များကို လျင်မြန်စေပြီး အခကြေးငွေမလို၊ မပြောင်းလဲနိုင်သော ရလဒ်များကို ပေးစွမ်းစေပါသည်။
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.my.png" alt="Mock vs Real API Comparison" width="800"/>
+<img src="../../../translated_images/my/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock vs Real API Comparison" width="800"/>
 
 *မော့ခ်များ preferred ဖြစ်ရသော အကြောင်းပြချက်များကို ပြသချက် — လျင်မြန်၊ အခမဲ့၊ တိတိကျကျဖြစ်ပြီး API key မလိုအပ်ခြင်း*
 
@@ -231,7 +231,7 @@ class SimpleConversationTest {
 
 Conversation memory သည် မကြာခဏ ပုပ်နှံနေသော အသုံးပြုသူများအတွက် သီးခြားထားရမည်ဖြစ်သည်။ ဤစမ်းသပ်ချက်က စကားဝိုင်းများ၏ context များ မရောထွေးကြောင်းကို သက်သေပြသည်။
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.my.png" alt="Conversation Isolation" width="800"/>
+<img src="../../../translated_images/my/conversation-isolation.e00336cf8f7a3e3f.png" alt="Conversation Isolation" width="800"/>
 
 *အသုံးပြုသူများအလိုက် memory store များကို သီးခြားထားခြင်းဖြင့် context မရောစပ်စေရန် ပြသထားသော conversation isolation စမ်းသပ်ခြင်း*
 
@@ -263,7 +263,7 @@ void shouldIsolateConversationsByid() {
 
 Tools များဆိုသည်မှာ AI သည် ခေါ်ယူနိုင်သည့် function များဖြစ်သည်။ AI ဆုံးဖြတ်ချက်များပေါ်မူတည်ဘဲ သူတို့ကို တိုက်ရိုက် စမ်းသပ်၍ ထို logic များ မှန်ကန်ကြောင်း သေချာစေပါ။
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.my.png" alt="Tools Testing" width="800"/>
+<img src="../../../translated_images/my/tools-testing.3e1706817b0b3924.png" alt="Tools Testing" width="800"/>
 
 *AI ခေါ်ယူမှုမရှိဘဲ mock tool အား အသုံးပြုပြီး စီးပွားရေး logic ကို စစ်ဆေးရန် tools များကို သီးခြား စမ်းသပ်ခြင်း*
 
@@ -294,7 +294,7 @@ void shouldDemonstrateToolChaining() {
 
 RAG စနစ်များသည် အများအားဖြင့် vector database များနှင့် embedding ဝန်ဆောင်မှုများကို လိုအပ်သည်။ in-memory ပုံစံက အပြင်ဘက် အခြေခံပစ္စည်းများမလိုပဲ စဉ်ဆက်မပြတ် pipeline အား စမ်းသပ်နိုင်စေသည်။
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.my.png" alt="In-Memory RAG Testing" width="800"/>
+<img src="../../../translated_images/my/rag-testing.ee7541b1e23934b1.png" alt="In-Memory RAG Testing" width="800"/>
 
 *ဒေါက်မြင့် များ၏ parsing, embedding သိမ်းဆည်းခြင်းနှင့် similarity ရှာဖွေရေးကို ဒေတာဘေ့စ်မလိုဘဲ in-memory ဖြင့် ပြုလုပ်သည့် RAG စမ်းသပ်စနစ်*
 

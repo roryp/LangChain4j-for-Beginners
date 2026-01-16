@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.sk.png" alt="Úspešné výsledky testov" width="800"/>
+<img src="../../../translated_images/sk/test-results.ea5c98d8f3642043.png" alt="Úspešné výsledky testov" width="800"/>
 
 *Úspešné spustenie testov ukazujúce, že všetky testy prešli bez zlyhaní*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Tento kurz sa zameriava na **jednotkové testy**, ktoré bežia lokálne. Každý test demonštruje konkrétny koncept LangChain4j v izolácii.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.sk.png" alt="Testovacia pyramída" width="800"/>
+<img src="../../../translated_images/sk/testing-pyramid.2dd1079a0481e53e.png" alt="Testovacia pyramída" width="800"/>
 
 *Testovacia pyramída znázorňujúca pomer medzi jednotkovými testami (rýchle, izolované), integračnými testami (skutočné komponenty) a end-to-end testami. Tento kurz pokrýva jednotkové testovanie.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#mal by uchovávať históriu konverz�
 
 Ak používate Visual Studio Code, Test Explorer poskytuje grafické rozhranie na spúšťanie a ladenie testov.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.sk.png" alt="Prieskumník testov VS Code" width="800"/>
+<img src="../../../translated_images/sk/vscode-testing.f02dd5917289dced.png" alt="Prieskumník testov VS Code" width="800"/>
 
 *Prieskumník testov vo VS Code zobrazujúci strom testov so všetkými Java testovacími triedami a jednotlivými testovacími metódami*
 
@@ -134,7 +134,7 @@ Test Explorer zobrazuje zelené značky zaškrtnutia pre prechádzajúce testy a
 
 Najjednoduchší vzor testuje šablóny promptov bez volania akéhokoľvek AI modelu. Overíte, že náhrada premenných funguje správne a že sú prompty formátované očakávane.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.sk.png" alt="Testovanie šablón promptov" width="800"/>
+<img src="../../../translated_images/sk/prompt-template-testing.b902758ddccc8dee.png" alt="Testovanie šablón promptov" width="800"/>
 
 *Testovanie šablón promptov znázorňujúce tok náhrady premenných: šablóna s zástupnými znakmi → aplikované hodnoty → overený formátovaný výstup*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testovanie formátov
 
 Pri testovaní logiky konverzácie použite Mockito na vytvorenie falošných modelov, ktoré vracajú predurčené odpovede. To robí testy rýchlymi, bezplatnými a deterministickými.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.sk.png" alt="Porovnanie mock vs reálne API" width="800"/>
+<img src="../../../translated_images/sk/mock-vs-real.3b8b1f85bfe6845e.png" alt="Porovnanie mock vs reálne API" width="800"/>
 
 *Porovnanie ukazujúce, prečo sú mocky preferované pri testovaní: sú rýchle, bezplatné, deterministické a nevyžadujú API kľúče*
 
@@ -231,7 +231,7 @@ Tento vzor sa objavuje v `01-introduction/src/test/java/com/example/langchain4j/
 
 Pamäť konverzácie musí udržiavať viacerých používateľov oddelených. Tento test overuje, že sa kontexty nekombinujú.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.sk.png" alt="Izolácia konverzácií" width="800"/>
+<img src="../../../translated_images/sk/conversation-isolation.e00336cf8f7a3e3f.png" alt="Izolácia konverzácií" width="800"/>
 
 *Testovanie izolácie konverzácií ukazujúce samostatné úložiská pamäte pre rôznych používateľov, aby sa zabránilo miešaniu kontextov*
 
@@ -263,7 +263,7 @@ Každá konverzácia si udržiava vlastnú nezávislú históriu. V produkčnýc
 
 Nástroje sú funkcie, ktoré môže AI volať. Testujte ich priamo, aby ste zabezpečili, že fungujú správne bez ohľadu na rozhodnutia AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.sk.png" alt="Testovanie nástrojov" width="800"/>
+<img src="../../../translated_images/sk/tools-testing.3e1706817b0b3924.png" alt="Testovanie nástrojov" width="800"/>
 
 *Testovanie nástrojov samostatne ukazujúce vykonávanie mock nástrojov bez volania AI na overenie obchodnej logiky*
 
@@ -294,7 +294,7 @@ Tieto testy z `04-tools/src/test/java/com/example/langchain4j/agents/tools/Simpl
 
 RAG systémy tradične vyžadujú vektorové databázy a embedding služby. Vzor s pamäťou v RAM vám umožní otestovať celý pipeline bez externých závislostí.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.sk.png" alt="Testovanie RAG v pamäti" width="800"/>
+<img src="../../../translated_images/sk/rag-testing.ee7541b1e23934b1.png" alt="Testovanie RAG v pamäti" width="800"/>
 
 *Pracovný postup testovania RAG v pamäti ukazujúci parsovanie dokumentov, ukladanie embeddingov a vyhľadávanie podobnosti bez potreby databázy*
 

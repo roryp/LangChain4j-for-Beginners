@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.nl.png" alt="Succesvolle testresultaten" width="800"/>
+<img src="../../../translated_images/nl/test-results.ea5c98d8f3642043.png" alt="Succesvolle testresultaten" width="800"/>
 
 *Succesvolle testuitvoering waarbij alle tests slagen zonder fouten*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Deze cursus richt zich op **unittests** die lokaal worden uitgevoerd. Elke test demonstreert een specifiek LangChain4j-concept in isolatie.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.nl.png" alt="Testpiramide" width="800"/>
+<img src="../../../translated_images/nl/testing-pyramid.2dd1079a0481e53e.png" alt="Testpiramide" width="800"/>
 
 *Testpiramide die de balans toont tussen unittests (snel, geïsoleerd), integratietests (echte componenten) en end-to-end-tests. Deze training behandelt unittests.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#moet de gespreksgeschiedenis bijhoude
 
 Als je Visual Studio Code gebruikt, biedt de Test Explorer een grafische interface voor het uitvoeren en debuggen van tests.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.nl.png" alt="VS Code Testverkenner" width="800"/>
+<img src="../../../translated_images/nl/vscode-testing.f02dd5917289dced.png" alt="VS Code Testverkenner" width="800"/>
 
 *VS Code Testverkenner die de testboom toont met alle Java-testklassen en individuele testmethoden*
 
@@ -134,7 +134,7 @@ De Test Explorer toont groene vinkjes voor geslaagde tests en geeft gedetailleer
 
 Het eenvoudigste patroon test promptsjablonen zonder een AI-model aan te roepen. Je controleert of het vervangen van variabelen correct werkt en of prompts correct zijn opgemaakt.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.nl.png" alt="Testen van promptsjablonen" width="800"/>
+<img src="../../../translated_images/nl/prompt-template-testing.b902758ddccc8dee.png" alt="Testen van promptsjablonen" width="800"/>
 
 *Testen van promptsjablonen die de stroom van variabelensubstitutie laten zien: sjabloon met plaatsaanduidingen → waarden toegepast → geformatteerde uitvoer geverifieerd*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#test prompt-sjabloon
 
 Bij het testen van conversatielogica, gebruik Mockito om nepmodellen te maken die vooraf bepaalde antwoorden teruggeven. Dit maakt tests snel, gratis en deterministisch.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.nl.png" alt="Mock vs echte API-vergelijking" width="800"/>
+<img src="../../../translated_images/nl/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock vs echte API-vergelijking" width="800"/>
 
 *Vergelijking die laat zien waarom mocks de voorkeur hebben voor testen: ze zijn snel, gratis, deterministisch en vereisen geen API-sleutels*
 
@@ -231,7 +231,7 @@ Dit patroon verschijnt in `01-introduction/src/test/java/com/example/langchain4j
 
 Het gespreksgeheugen moet meerdere gebruikers gescheiden houden. Deze test verifieert dat conversaties geen contexten door elkaar halen.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.nl.png" alt="Conversatie-isolatie" width="800"/>
+<img src="../../../translated_images/nl/conversation-isolation.e00336cf8f7a3e3f.png" alt="Conversatie-isolatie" width="800"/>
 
 *Testen van conversatie-isolatie die aparte geheugenopslag voor verschillende gebruikers toont om contextvermenging te voorkomen*
 
@@ -263,7 +263,7 @@ Elke conversatie onderhoudt zijn eigen onafhankelijke geschiedenis. In productie
 
 Tools zijn functies die de AI kan aanroepen. Test ze direct om te verzekeren dat ze correct werken ongeacht AI-beslissingen.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.nl.png" alt="Testen van tools" width="800"/>
+<img src="../../../translated_images/nl/tools-testing.3e1706817b0b3924.png" alt="Testen van tools" width="800"/>
 
 *Onafhankelijk testen van tools waarbij mock-uitvoering van tools zonder AI-aanroepen wordt getoond om de bedrijfslogica te verifiëren*
 
@@ -294,7 +294,7 @@ Deze tests uit `04-tools/src/test/java/com/example/langchain4j/agents/tools/Simp
 
 RAG-systemen vereisen traditioneel vector-databases en embedding-services. Het in-memory-patroon stelt je in staat om de hele pijplijn te testen zonder externe afhankelijkheden.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.nl.png" alt="In-memory RAG-testen" width="800"/>
+<img src="../../../translated_images/nl/rag-testing.ee7541b1e23934b1.png" alt="In-memory RAG-testen" width="800"/>
 
 *In-memory RAG-testworkflow die document parsing, embedding-opslag en gelijkeniszoeking toont zonder een database te vereisen*
 

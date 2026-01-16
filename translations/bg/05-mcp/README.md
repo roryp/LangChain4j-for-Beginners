@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Протоколът за контекст на модела (MCP) предоставя точно това - стандартизиран начин за AI приложенията да откриват и използват външни инструменти. Вместо да пишете потребителски интеграции за всеки източник на данни или услуга, вие се свързвате с MCP сървъри, които експонират техните възможности в последователен формат. Вашият AI агент след това може автоматично да открива и използва тези инструменти.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.bg.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/bg/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Comparison" width="800"/>
 
 *Преди MCP: Комплексни интеграции точка до точка. След MCP: Един протокол, безкрайни възможности.*
 
@@ -43,7 +43,7 @@ MCP решава основен проблем в разработката на 
 
 MCP стандартизира това. MCP сървър експонира инструменти с ясни описания и схеми. Всеки MCP клиент може да се свърже, да открие наличните инструменти и да ги използва. Създайте веднъж, използвайте навсякъде.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.bg.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/bg/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architecture" width="800"/>
 
 *Архитектура на Протокола за контекст на модела - стандартизирано откриване и изпълнение на инструменти*
 
@@ -71,7 +71,7 @@ MCP използва модел клиент-сървър. Сървърите п
 
 MCP поддържа различни транспортни механизми. Този модул демонстрира транспорт Stdio за локални процеси:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.bg.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/bg/transport-mechanisms.2791ba7ee93cf020.png" alt="Transport Mechanisms" width="800"/>
 
 *Транспортни механизми на MCP: HTTP за отдалечени сървъри, Stdio за локални процеси*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 В демото, `FileAgent` чете файл с помощта на инструменти на MCP за файлова система, а `ReportAgent` генерира структуриран доклад с изпълнително резюме (1 изречение), 3 ключови точки и препоръки. Супервизорът оркестрира потока автоматично:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.bg.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/bg/agentic.cf84dcda226374e3.png" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

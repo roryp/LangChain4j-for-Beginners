@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 मॉडेल संदर्भ प्रोटोकॉल (MCP) नेमकं तेच देते - AI अनुप्रयोगांना बाह्य साधने शोधण्याचा आणि वापरण्याचा एक मानक मार्ग. प्रत्येक डेटा स्रोत किंवा सेवेकरिता सानुकूल एकत्रीकरण लिहिण्याऐवजी, तुम्ही MCP सर्व्हरशी कनेक्ट करता जे त्यांच्या क्षमतांना सुसंगत स्वरूपात उघड करतात. तुमचा AI एजंट नंतर स्वयंचलितपणे ही साधने शोधू आणि वापरू शकतो.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.mr.png" alt="MCP तुलनात्मक" width="800"/>
+<img src="../../../translated_images/mr/mcp-comparison.9129a881ecf10ff5.png" alt="MCP तुलनात्मक" width="800"/>
 
 *पूर्वी MCP: गुंतागुंतीची पॉइंट-टू-पॉइंट एकत्रीकरणे. नंतर MCP: एक प्रोटोकॉल, असीम शक्यता.*
 
@@ -43,7 +43,7 @@ MCP AI विकासातील एक मूलभूत समस्या 
 
 MCP हे मानकीकृत करते. MCP सर्व्हर स्पष्ट वर्णने आणि स्कीमांसह साधने उभारतो. कोणताही MCP क्लायंट कनेक्ट होऊ शकतो, उपलब्ध साधने शोधू शकतो, आणि त्याचा वापर करू शकतो. एकदा तयार करा, सर्वत्र वापरा.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.mr.png" alt="MCP आर्किटेक्चर" width="800"/>
+<img src="../../../translated_images/mr/mcp-architecture.b3156d787a4ceac9.png" alt="MCP आर्किटेक्चर" width="800"/>
 
 *मॉडेल संदर्भ प्रोटोकॉल आर्किटेक्चर - मानकीकृत साधन शोध आणि अंमलबजावणी*
 
@@ -71,7 +71,7 @@ LangChain4j सह MCP वापरण्यासाठी, हा Maven अव
 
 MCP वेगवेगळ्या प्रवास यंत्रणा समर्थन करते. हा मॉड्युल स्थानिक प्रक्रियांसाठी Stdio ट्रान्स्पोर्ट दाखवितो:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.mr.png" alt="प्रवास यंत्रणा" width="800"/>
+<img src="../../../translated_images/mr/transport-mechanisms.2791ba7ee93cf020.png" alt="प्रवास यंत्रणा" width="800"/>
 
 *MCP प्रवासन यंत्रणा: रिमोट सर्व्हरसाठी HTTP, स्थानिक प्रक्रियांसाठी Stdio*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 डेमोत, `FileAgent` MCP फाइलसिस्टम साधने वापरून फाइल वाचतो, आणि `ReportAgent` संकल्पित अहवाल तयार करतो ज्यात कार्यकारी सारांश (1 वाक्य), 3 मुख्य मुद्दे आणि शिफारसी आहेत. सुपरवायझर हा प्रवाह आपोआप संघटित करतो:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.mr.png" alt="एजेंटिक मॉड्युल" width="800"/>
+<img src="../../../translated_images/mr/agentic.cf84dcda226374e3.png" alt="एजेंटिक मॉड्युल" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

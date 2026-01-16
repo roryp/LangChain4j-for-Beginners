@@ -53,7 +53,7 @@ Modelele de limbaj sunt fără stare. Fiecare apel API este independent. Dacă t
 
 Acest lucru este în regulă pentru întrebări și răspunsuri simple, dar inutil pentru aplicații reale. Boții de servicii pentru clienți trebuie să-și amintească ce le-ai spus. Asistenții personali au nevoie de context. Orice conversație cu mai multe schimburi necesită memorie.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.ro.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/ro/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Diferența dintre conversațiile fără stare (apeluri independente) și cele cu stare (conștiente de context)*
 
@@ -61,7 +61,7 @@ Acest lucru este în regulă pentru întrebări și răspunsuri simple, dar inut
 
 Înainte de a intra în conversații, este important să înțelegi token-urile - unitățile de bază de text pe care modelele de limbaj le procesează:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.ro.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/ro/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
 
 *Exemplu de cum textul este împărțit în token-uri - „I love AI!” devine 4 unități separate de procesare*
 
@@ -73,7 +73,7 @@ Memoria chat-ului rezolvă problema fără stare prin menținerea istoricului co
 
 LangChain4j oferă implementări de memorie care gestionează acest lucru automat. Alegi câte mesaje să păstrezi, iar cadrul gestionează fereastra de context.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.ro.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/ro/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory menține o fereastră glisantă cu mesajele recente, eliminând automat pe cele vechi*
 
@@ -212,7 +212,7 @@ Din Spring Boot Dashboard poți:
 
 Pur și simplu apasă butonul de redare de lângă „introduction” pentru a porni acest modul sau pornește toate modulele simultan.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.ro.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ro/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opțiunea 2: Folosind scripturi shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Toate modulele
 
 Aplicația oferă o interfață web cu două implementări de chat afișate una lângă alta.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.ro.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/ro/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
 
 *Panou de control care arată opțiunile Simple Chat (fără stare) și Conversational Chat (cu stare)*
 
@@ -290,7 +290,7 @@ Aplicația oferă o interfață web cu două implementări de chat afișate una 
 
 Încearcă asta prima dată. Spune „Numele meu este John” și apoi imediat întreabă „Care este numele meu?” Modelul nu va ține minte pentru că fiecare mesaj este independent. Aceasta demonstrează problema de bază a integrării simple a modelului de limbaj - fără context al conversației.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.ro.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/ro/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI nu-și amintește numele tău din mesajul anterior*
 
@@ -298,7 +298,7 @@ Aplicația oferă o interfață web cu două implementări de chat afișate una 
 
 Acum încearcă aceeași secvență aici. Spune „Numele meu este John” și apoi „Care este numele meu?” De data aceasta își amintește. Diferența este MessageWindowChatMemory - menține istoricul conversației și îl include la fiecare cerere. Așa funcționează AI conversațional de producție.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.ro.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/ro/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI își amintește numele tău din conversația anterioară*
 

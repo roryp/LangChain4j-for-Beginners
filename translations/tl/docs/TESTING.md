@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.tl.png" alt="Matagumpay na Resulta ng Pagsubok" width="800"/>
+<img src="../../../translated_images/tl/test-results.ea5c98d8f3642043.png" alt="Matagumpay na Resulta ng Pagsubok" width="800"/>
 
 *Matagumpay na pagpapatakbo ng mga pagsubok na nagpapakita na lahat ng pagsubok ay pumasa nang walang pagkabigo*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Ang kurso na ito ay nakatuon sa **unit tests** na tumatakbo nang lokal. Bawat pagsubok ay nagpapakita ng isang partikular na konsepto ng LangChain4j nang hiwalay.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.tl.png" alt="Piramide ng Pagsubok" width="800"/>
+<img src="../../../translated_images/tl/testing-pyramid.2dd1079a0481e53e.png" alt="Piramide ng Pagsubok" width="800"/>
 
 *Piramide ng pagsusuri na nagpapakita ng balanse sa pagitan ng unit tests (mabilis, hiwalay), integration tests (mga tunay na bahagi), at end-to-end tests. Sinasaklaw ng pagsasanay na ito ang unit testing.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#dapatPanatilihinAngKasaysayanNgPagUus
 
 Kung gumagamit ka ng Visual Studio Code, nagbibigay ang Test Explorer ng graphical na interface para sa pagpapatakbo at pag-debug ng mga pagsubok.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.tl.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/tl/vscode-testing.f02dd5917289dced.png" alt="VS Code Test Explorer" width="800"/>
 
 *Ipinapakita ng VS Code Test Explorer ang puno ng mga pagsubok na may lahat ng Java test classes at mga indibidwal na test methods*
 
@@ -134,7 +134,7 @@ Ipinapakita ng Test Explorer ang berdeng checkmarks para sa mga pumapasang pagsu
 
 Ang pinakamadaling pattern ay sinusuri ang prompt templates nang hindi tumatawag sa anumang AI model. Kinukumpirma mo na ang substitution ng variable ay gumagana nang tama at ang mga prompt ay naka-format ayon sa inaasahan.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.tl.png" alt="Pagsusuri ng Prompt Template" width="800"/>
+<img src="../../../translated_images/tl/prompt-template-testing.b902758ddccc8dee.png" alt="Pagsusuri ng Prompt Template" width="800"/>
 
 *Pagsusuri ng prompt templates na nagpapakita ng daloy ng substitution ng variable: template na may placeholders → inilapat na mga halaga → na-verify ang formatted output*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#pagsubok ng pag-form
 
 Kapag sinusuri ang logic ng pag-uusap, gumamit ng Mockito upang lumikha ng mga pekeng modelo na nagbabalik ng mga predetermined na tugon. Ginagawa nitong mabilis, libre, at deterministic ang mga pagsubok.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.tl.png" alt="Mock kumpara sa Real API" width="800"/>
+<img src="../../../translated_images/tl/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock kumpara sa Real API" width="800"/>
 
 *Pagkukumpara na nagpapakita kung bakit mas pinipili ang mga mock para sa pagsusuri: mabilis, libre, deterministic, at hindi nangangailangan ng mga API key*
 
@@ -231,7 +231,7 @@ Lumilitaw ang pattern na ito sa `01-introduction/src/test/java/com/example/langc
 
 Dapat panatilihin ng memorya ng pag-uusap ang hiwalay na mga user. Tinutukoy ng pagsubok na ito na hindi naghalo-halo ang mga konteksto ng mga pag-uusap.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.tl.png" alt="Isolasyon ng Pag-uusap" width="800"/>
+<img src="../../../translated_images/tl/conversation-isolation.e00336cf8f7a3e3f.png" alt="Isolasyon ng Pag-uusap" width="800"/>
 
 *Pagsusuri ng isolasyon ng pag-uusap na nagpapakita ng magkahiwalay na mga tindahan ng memorya para sa iba't ibang user upang maiwasan ang paghahalo ng konteksto*
 
@@ -263,7 +263,7 @@ Bawat pag-uusap ay nagpapanatili ng sariling independiyenteng kasaysayan. Sa mga
 
 Ang mga tool ay mga function na maaaring tawagin ng AI. Subukin ang mga ito nang direkta upang matiyak na gumagana ang mga ito nang tama kahit na hindi pinipili ng AI ang mga ito.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.tl.png" alt="Pagsusuri ng Mga Tool" width="800"/>
+<img src="../../../translated_images/tl/tools-testing.3e1706817b0b3924.png" alt="Pagsusuri ng Mga Tool" width="800"/>
 
 *Pagsusuri ng mga tool nang hiwalay na nagpapakita ng mock tool execution nang walang AI calls upang i-verify ang business logic*
 
@@ -294,7 +294,7 @@ Ang mga pagsubok na ito mula sa `04-tools/src/test/java/com/example/langchain4j/
 
 Kadalasan nangangailangan ang mga RAG system ng vector databases at embedding services. Pinapayagan ka ng in-memory pattern na suriin ang buong pipeline nang walang external na dependencies.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.tl.png" alt="In-Memory RAG Testing" width="800"/>
+<img src="../../../translated_images/tl/rag-testing.ee7541b1e23934b1.png" alt="In-Memory RAG Testing" width="800"/>
 
 *In-memory RAG testing workflow na nagpapakita ng pag-parse ng dokumento, pag-iimbak ng embedding, at similarity search nang hindi nangangailangan ng database*
 

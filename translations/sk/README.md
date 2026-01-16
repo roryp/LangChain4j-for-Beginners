@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "sk"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.sk.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/sk/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 Podpora viacerých jazykov
 

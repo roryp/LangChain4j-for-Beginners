@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 സാധാരണ Q&A-യ്ക്ക് ഇത് ശരിയാണെങ്കിലും യഥാർത്ഥ അപ്ലിക്കേഷനുകൾക്ക് ഇത് ഉപയോഗപ്രദമല്ല. കസ്റ്റമർ സർവീസ് ബോട്ടുകൾ നിങ്ങൾ പറഞ്ഞത് ഓർമ്മിക്കണം. വ്യക്തിഗത അസിസ്റ്റന്റുകൾക്ക് കോൺടെക്സ്റ്റ് ആവശ്യമുണ്ട്. ഏത് മൾട്ടി-ടേൺ സംഭാഷണത്തിനും മെമ്മറി ആവശ്യമാണ്.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.ml.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/ml/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *സ്റ്റേറ്റ്ലെസ് (സ്വതന്ത്ര കോൾസ്) ഉം സ്റ്റേറ്റ്ഫുൾ (കോൺടെക്സ്റ്റ്-അവെയർ) സംഭാഷണങ്ങൾ തമ്മിലുള്ള വ്യത്യാസം*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 സംഭാഷണങ്ങളിൽ പ്രവേശിക്കുന്നതിന് മുമ്പ്, ടോക്കണുകൾ മനസ്സിലാക്കുന്നത് പ്രധാനമാണ് - ഭാഷാ മോഡലുകൾ പ്രോസസ്സ് ചെയ്യുന്ന അടിസ്ഥാന ടെക്സ്റ്റ് യൂണിറ്റുകൾ:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.ml.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/ml/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
 
 *ടെക്സ്റ്റ് എങ്ങനെ ടോക്കണുകളായി വിഭജിക്കപ്പെടുന്നു എന്ന ഉദാഹരണം - "I love AI!" 4 വ്യത്യസ്ത പ്രോസസ്സിംഗ് യൂണിറ്റുകളായി മാറുന്നു*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j ഓട്ടോമാറ്റിക്കായി ഇത് കൈകാര്യം ചെയ്യുന്ന മെമ്മറി ഇംപ്ലിമെന്റേഷനുകൾ നൽകുന്നു. നിങ്ങൾ എത്ര സന്ദേശങ്ങൾ സൂക്ഷിക്കണമെന്ന് തിരഞ്ഞെടുക്കും, ഫ്രെയിംവർക്ക് കോൺടെക്സ്റ്റ് വിൻഡോ മാനേജ് ചെയ്യും.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.ml.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/ml/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory അടുത്തിടെ വന്ന സന്ദേശങ്ങളുടെ സ്ലൈഡിംഗ് വിൻഡോ നിലനിർത്തുന്നു, പഴയവ സ്വയം ഒഴിവാക്കുന്നു*
 
@@ -212,7 +212,7 @@ Spring Boot ഡാഷ്ബോർഡിൽ നിന്ന് നിങ്ങൾ
 
 "introduction" പക്കൽ പ്ലേ ബട്ടൺ ക്ലിക്ക് ചെയ്ത് ഈ മോഡ്യൂൾ ആരംഭിക്കാം, അല്ലെങ്കിൽ എല്ലാ മോഡ്യൂളുകളും ഒരുമിച്ച് ആരംഭിക്കാം.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.ml.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ml/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
 
 **ഓപ്ഷൻ 2: ഷെൽ സ്ക്രിപ്റ്റുകൾ ഉപയോഗിച്ച്**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 അപ്ലിക്കേഷൻ രണ്ട് ചാറ്റ് ഇംപ്ലിമെന്റേഷനുകളുമായി വെബ് ഇന്റർഫേസ് നൽകുന്നു, പക്കൽ-പക്കൽ.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.ml.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/ml/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
 
 *സിംപിൾ ചാറ്റ് (സ്റ്റേറ്റ്ലെസ്) ഉം കോൺവേഴ്സേഷണൽ ചാറ്റ് (സ്റ്റേറ്റ്ഫുൾ) ഉം ഉള്ള ഡാഷ്ബോർഡ്*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 ഇത് ആദ്യം പരീക്ഷിക്കുക. "എന്റെ പേര് ജോൺ ആണ്" എന്ന് ചോദിച്ച് ഉടൻ "എന്റെ പേര് എന്താണ്?" എന്ന് ചോദിക്കുക. മോഡൽ ഓർമ്മിക്കില്ല, കാരണം ഓരോ സന്ദേശവും സ്വതന്ത്രമാണ്. ഇത് അടിസ്ഥാന ഭാഷാ മോഡൽ സംയോജനം ഉള്ള പ്രധാന പ്രശ്നം കാണിക്കുന്നു - സംഭാഷണ കോൺടെക്സ്റ്റ് ഇല്ല.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.ml.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/ml/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI മുൻ സന്ദേശത്തിൽ നിന്നുള്ള നിങ്ങളുടെ പേര് ഓർമ്മിക്കുന്നില്ല*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 ഇപ്പോൾ ഇതേ ക്രമം ഇവിടെ പരീക്ഷിക്കുക. "എന്റെ പേര് ജോൺ ആണ്" എന്ന് ചോദിച്ച് "എന്റെ പേര് എന്താണ്?" എന്ന് ചോദിക്കുമ്പോൾ ഇത് ഓർമ്മിക്കുന്നു. വ്യത്യാസം MessageWindowChatMemory ആണ് - ഇത് സംഭാഷണ ചരിത്രം നിലനിർത്തുകയും ഓരോ അഭ്യർത്ഥനയോടും അത് ഉൾപ്പെടുത്തുകയും ചെയ്യുന്നു. പ്രൊഡക്ഷൻ സംഭാഷണ AI ഇങ്ങനെ പ്രവർത്തിക്കുന്നു.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.ml.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/ml/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI മുമ്പത്തെ സംഭാഷണത്തിൽ നിന്നുള്ള നിങ്ങളുടെ പേര് ഓർമ്മിക്കുന്നു*
 

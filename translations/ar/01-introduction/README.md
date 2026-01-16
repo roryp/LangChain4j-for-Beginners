@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 هذا جيد للأسئلة والأجوبة البسيطة لكنه عديم الفائدة للتطبيقات الحقيقية. تحتاج روبوتات خدمة العملاء إلى تذكر ما أخبرتهم به. يحتاج المساعدون الشخصيون إلى السياق. أي محادثة متعددة الجولات تتطلب ذاكرة.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.ar.png" alt="المحادثات بدون حالة مقابل المحادثات بحالة" width="800"/>
+<img src="../../../translated_images/ar/stateless-vs-stateful.cc4a4765e649c41a.png" alt="المحادثات بدون حالة مقابل المحادثات بحالة" width="800"/>
 
 *الفرق بين المحادثات بدون حالة (استدعاءات مستقلة) والمحادثات بحالة (واعية للسياق)*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 قبل الغوص في المحادثات، من المهم فهم الرموز - الوحدات الأساسية للنص التي تعالجها نماذج اللغة:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.ar.png" alt="شرح الرموز" width="800"/>
+<img src="../../../translated_images/ar/token-explanation.c39760d8ec650181.png" alt="شرح الرموز" width="800"/>
 
 *مثال على كيفية تقسيم النص إلى رموز - "أنا أحب الذكاء الاصطناعي!" تصبح 4 وحدات معالجة منفصلة*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 يوفر LangChain4j تطبيقات للذاكرة تتعامل مع هذا تلقائيًا. تختار عدد الرسائل التي تريد الاحتفاظ بها ويدير الإطار نافذة السياق.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.ar.png" alt="مفهوم نافذة الذاكرة" width="800"/>
+<img src="../../../translated_images/ar/memory-window.bbe67f597eadabb3.png" alt="مفهوم نافذة الذاكرة" width="800"/>
 
 *MessageWindowChatMemory يحتفظ بنافذة منزلقة من الرسائل الأخيرة، ويتخلص تلقائيًا من الرسائل القديمة*
 
@@ -212,7 +212,7 @@ Get-Content ..\.env  # يجب أن يعرض AZURE_OPENAI_ENDPOINT و API_KEY و 
 
 فقط انقر على زر التشغيل بجانب "introduction" لبدء هذه الوحدة، أو ابدأ جميع الوحدات دفعة واحدة.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.ar.png" alt="لوحة تحكم Spring Boot" width="400"/>
+<img src="../../../translated_images/ar/dashboard.69c7479aef09ff6b.png" alt="لوحة تحكم Spring Boot" width="400"/>
 
 **الخيار 2: استخدام سكربتات الشل**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 يوفر التطبيق واجهة ويب مع تنفيذين للدردشة جنبًا إلى جنب.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.ar.png" alt="شاشة البداية للتطبيق" width="800"/>
+<img src="../../../translated_images/ar/home-screen.121a03206ab910c0.png" alt="شاشة البداية للتطبيق" width="800"/>
 
 *لوحة تحكم تعرض خيارات الدردشة البسيطة (بدون حالة) والدردشة المحادثية (بحالة)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 جرب هذا أولاً. اسأل "اسمي جون" ثم اسأل فورًا "ما اسمي؟" النموذج لن يتذكر لأن كل رسالة مستقلة. هذا يوضح المشكلة الأساسية مع دمج نموذج اللغة الأساسي - لا يوجد سياق للمحادثة.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.ar.png" alt="عرض توضيحي للدردشة بدون حالة" width="800"/>
+<img src="../../../translated_images/ar/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="عرض توضيحي للدردشة بدون حالة" width="800"/>
 
 *الذكاء الاصطناعي لا يتذكر اسمك من الرسالة السابقة*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 الآن جرب نفس التسلسل هنا. اسأل "اسمي جون" ثم "ما اسمي؟" هذه المرة يتذكر. الفرق هو MessageWindowChatMemory - يحتفظ بتاريخ المحادثة ويضمّنه مع كل طلب. هذه هي طريقة عمل الذكاء الاصطناعي المحادثي في الإنتاج.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.ar.png" alt="عرض توضيحي للدردشة بحالة" width="800"/>
+<img src="../../../translated_images/ar/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="عرض توضيحي للدردشة بحالة" width="800"/>
 
 *الذكاء الاصطناعي يتذكر اسمك من وقت سابق في المحادثة*
 

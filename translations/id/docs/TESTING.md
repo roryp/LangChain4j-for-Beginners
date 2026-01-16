@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.id.png" alt="Hasil Tes Berhasil" width="800"/>
+<img src="../../../translated_images/id/test-results.ea5c98d8f3642043.png" alt="Hasil Tes Berhasil" width="800"/>
 
 *Eksekusi tes yang berhasil menampilkan semua tes lulus tanpa kegagalan*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Kursus ini berfokus pada **unit tests** yang dijalankan secara lokal. Setiap tes menunjukkan konsep LangChain4j tertentu secara terisolasi.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.id.png" alt="Piramida Pengujian" width="800"/>
+<img src="../../../translated_images/id/testing-pyramid.2dd1079a0481e53e.png" alt="Piramida Pengujian" width="800"/>
 
 *piramida pengujian yang menunjukkan keseimbangan antara unit tests (cepat, terisolasi), integration tests (komponen nyata), dan end-to-end tests. Pelatihan ini mencakup unit testing.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#harus mempertahankan riwayat percakap
 
 Jika Anda menggunakan Visual Studio Code, Test Explorer menyediakan antarmuka grafis untuk menjalankan dan men-debug tes.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.id.png" alt="Penjelajah Tes VS Code" width="800"/>
+<img src="../../../translated_images/id/vscode-testing.f02dd5917289dced.png" alt="Penjelajah Tes VS Code" width="800"/>
 
 *Penjelajah Tes VS Code yang menampilkan pohon tes dengan semua kelas tes Java dan metode tes individu*
 
@@ -134,7 +134,7 @@ Test Explorer menunjukkan tanda centang hijau untuk tes yang lulus dan memberika
 
 Pola paling sederhana menguji template prompt tanpa memanggil model AI apa pun. Anda memverifikasi bahwa substitusi variabel bekerja dengan benar dan prompt diformat seperti yang diharapkan.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.id.png" alt="Pengujian Template Prompt" width="800"/>
+<img src="../../../translated_images/id/prompt-template-testing.b902758ddccc8dee.png" alt="Pengujian Template Prompt" width="800"/>
 
 *Pengujian template prompt yang menunjukkan alur substitusi variabel: template dengan placeholder → nilai diterapkan → output terformat diverifikasi*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#Pengujian pemformata
 
 Saat menguji logika percakapan, gunakan Mockito untuk membuat model palsu yang mengembalikan respons yang telah ditentukan. Ini membuat tes cepat, gratis, dan deterministik.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.id.png" alt="Perbandingan Mock vs API Nyata" width="800"/>
+<img src="../../../translated_images/id/mock-vs-real.3b8b1f85bfe6845e.png" alt="Perbandingan Mock vs API Nyata" width="800"/>
 
 *Perbandingan yang menunjukkan mengapa mock lebih disukai untuk pengujian: mereka cepat, gratis, deterministik, dan tidak memerlukan kunci API*
 
@@ -231,7 +231,7 @@ Pola ini muncul di `01-introduction/src/test/java/com/example/langchain4j/servic
 
 Memori percakapan harus menjaga pengguna ganda terpisah. Tes ini memverifikasi bahwa percakapan tidak mencampur konteks.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.id.png" alt="Isolasi Percakapan" width="800"/>
+<img src="../../../translated_images/id/conversation-isolation.e00336cf8f7a3e3f.png" alt="Isolasi Percakapan" width="800"/>
 
 *Pengujian isolasi percakapan yang menunjukkan penyimpanan memori terpisah untuk pengguna berbeda untuk mencegah pencampuran konteks*
 
@@ -263,7 +263,7 @@ Setiap percakapan mempertahankan riwayat independennya sendiri. Di sistem produk
 
 Tools adalah fungsi yang dapat dipanggil oleh AI. Uji mereka langsung untuk memastikan mereka bekerja dengan benar terlepas dari keputusan AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.id.png" alt="Pengujian Tools" width="800"/>
+<img src="../../../translated_images/id/tools-testing.3e1706817b0b3924.png" alt="Pengujian Tools" width="800"/>
 
 *Pengujian tools secara mandiri yang menunjukkan eksekusi tool palsu tanpa panggilan AI untuk memverifikasi logika bisnis*
 
@@ -294,7 +294,7 @@ Tes-tes ini dari `04-tools/src/test/java/com/example/langchain4j/agents/tools/Si
 
 Sistem RAG biasanya memerlukan basis data vektor dan layanan embedding. Pola dalam-memori memungkinkan Anda menguji seluruh pipeline tanpa ketergantungan eksternal.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.id.png" alt="Pengujian RAG Dalam Memori" width="800"/>
+<img src="../../../translated_images/id/rag-testing.ee7541b1e23934b1.png" alt="Pengujian RAG Dalam Memori" width="800"/>
 
 *Alur kerja pengujian RAG dalam memori yang menunjukkan parsing dokumen, penyimpanan embedding, dan pencarian kesamaan tanpa memerlukan database*
 

@@ -38,7 +38,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ಲಾಂಗ್ಚೈನ್ ಎಂದು ಕರೆಯುವುದರ ಅರ್ಥ പല ಘಟಕಗಳನ್ನು ಸ سلسلة ಮಾಡಿದಂತೆ — ನೀವು ಒಂದು ಪ್ರಾಂಪ್ಟ್ ಅನ್ನು ಮಾದರಿ, ನಂತರ ಪಾರ್ಸರ್ ಗೆ ಸ سلسلة ಮಾಡಬಹುದು, ಅಥವಾ ಹಲವಾರು AI ಕರೆಗಳನ್ನು ಸರಣಿಯಾಗಿ ಜೋಡಿಸಿ ಒಂದು ಹೊರಹೊಂದಿಕೆಯನ್ನು ಮುಂದಿನ ಒಳಹೊಂದಿಕೆಯಾಗಿ ಉಪಯೋಗಿಸುತ್ತೀರಿ. ಈ ಕ್ವಿಕ್ ಸ್ಟಾರ್ಟ್ ಮೂಲತತ್ತ್ವಗಳ ಮೇಲೆ ಕೇಂದ್ರೀಕೃತವಾಗಿದೆ ಮೆಟ್ಟಿಲುಮೇಲೆ ಜಟಿಲ ಸರಣಿಗಳನ್ನು ಅನ್ವೇಷಿಸುವ ಮೊದಲು.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.kn.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/kn/langchain-concept.ad1fe6cf063515e1.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *ಲಾಂಗ್ಚೈನ್4ಜೆ ಘಟಕಗಳನ್ನು ಸ سلسلة ಮಾಡುವುದು - ಶಕ್ತಿಶಾಲಿ AI ಕಾರ್ಯಪ್ರವಾಹಗಳನ್ನು ನಿರ್ಮಿಸುವ ಕಟ್ಟಡ ಬ್ಲಾಕ್ಸ್*
 
@@ -50,7 +50,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **MessageWindowChatMemory** - ಸಂವಾದ ಇತಿಹಾಸವನ್ನು ನಿರ್ವಹಿಸುತ್ತದೆ. ಇದಿಲ್ಲದೆ, ಪ್ರತಿ ವಿನಂತಿ ಸ್ವತಂತ್ರವಾಗಿರುತ್ತದೆ. ಇದೊಂದಿಗಿದ್ದರೆ, AI ಹಿಂದಿನ ಸಂದೇಶಗಳನ್ನು ನೆನಪಿನಲ್ಲಿ ಇಟ್ಟುಕೊಳ್ಳುತ್ತದೆ ಮತ್ತು ಹಲವಾರು ತಿರುವುಗಳ ತಲೆಹರಿವು ನಿರ್ವಹಿಸುತ್ತದೆ.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.kn.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/kn/architecture.eedc993a1c576839.png" alt="LangChain4j Architecture" width="800"/>
 
 *ಲಾಂಗ್ಚೈನ್4ಜೆ ವಾಸ್ತುಶಿಲ್ಪ - ಮುಖ್ಯ ಘಟಕಗಳು ಒಟ್ಟಾಗಿ ನಿಮ್ಮ AI ಅಪ್ಲಿಕೇಶನ್‌ಗಳನ್ನು ಶಕ್ತಿ ತುಂಬಲು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ*
 

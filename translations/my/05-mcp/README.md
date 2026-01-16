@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Model Context Protocol (MCP) သည် ထိုပုံစံကို ပေးသည် - AI application များအတွက် ပြင်ပ ကိရိယာများကို ရှာဖွေပြီး အသုံးပြုနိုင်ရန် စံတော်ချိန်ဖြစ်သည်။ တစ်ခုချင်းစီ data source သို့မဟုတ် ဝန်ဆောင်မှုအတွက် စိတ်တိုင်းကျ ပေါင်းစည်းမှုများရေးသားရန် မလိုတော့ပဲ MCP servers များနှင့် ချိတ်ဆက်ခြင်းဖြင့် ၎င်းတို့၏ တတ်နိုင်စွမ်းများကို သိသာထင်ရှားသော ပုံစံဖြင့် ဖော်ပြထားသည်။ သင်၏ AI agent မှ ထိုကိရိယာများကို အလိုအလျောက် ရှာဖွေပြီး အသုံးပြုနိုင်သည်။
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.my.png" alt="MCP ပြိုင်ဆိုင်မှု" width="800"/>
+<img src="../../../translated_images/my/mcp-comparison.9129a881ecf10ff5.png" alt="MCP ပြိုင်ဆိုင်မှု" width="800"/>
 
 *MCP မတနေ့မှီ: ရိုးရှင်းမှုမရှိသော တိုက်တိုက်ဆိုင်ဆိုင် ပေါင်းစည်းမှုများ။ MCP ထွက်ရှိပြီးနောက်: စံချိန်တစ်ခု၊ အဆုံးမဲ့ အလားအလာများ။*
 
@@ -43,7 +43,7 @@ MCP သည် AI ဖွံ့ဖြိုးရေးတွင် မူလ ပ�
 
 MCP သည် ၎င်းတို့အား စံချိန်တင်ပေးသည်။ MCP server တစ်ခုသည် ကိရိယာများကို ဖော်ပြသော ဖော်ပြချက်နှင့် စံစနစ်များဖြင့် ပြပေးသည်။ MCP client များ မည်သည့်လူမျိုးမဆို ချိတ်ဆက်ပြီး အသုံးပြုနိုင်ပြီး အဲဒီကိရိယာများအား ရှာဖွေနိုင်သည်။ တစ်ကြိမ် ဆောက်ပြီး နေရာတိုင်းအသုံးပြုမည်။
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.my.png" alt="MCP ဖွဲ့စည်းပုံ" width="800"/>
+<img src="../../../translated_images/my/mcp-architecture.b3156d787a4ceac9.png" alt="MCP ဖွဲ့စည်းပုံ" width="800"/>
 
 *Model Context Protocol ဖွဲ့စည်းပုံ - စံပြ ကိရိယာ ရှာဖွေရေးနှင့် အကောင်အထည် ဖော်ဆောင်ခြင်း*
 
@@ -71,7 +71,7 @@ LangChain4j နှင့် MCP ကို အသုံးပြုရန်၊ M
 
 MCP သည် ကွဲပြားသော ယာဉ်ပို့ စနစ်များကို ထောက်ခံသည်။ ဤမော်ဂျူးတွင် Stdio transport ကို ပြသထားပြီး ဒေသတွင်းလုပ်ငန်းများအတွက် အသုံးပြုသည်။
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.my.png" alt="ယာဉ်ပို့ စနစ်များ" width="800"/>
+<img src="../../../translated_images/my/transport-mechanisms.2791ba7ee93cf020.png" alt="ယာဉ်ပို့ စနစ်များ" width="800"/>
 
 *MCP ယာဉ်ပို့စနစ်များ: မည်သည့် HTTP ကို remote server များအတွက်, Stdio ကို ဒေသတွင်းလုပ်ငန်းများအတွက်*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 Demo တွင် `FileAgent` သည် MCP ဖိုင်စနစ် ကိရိယာများ အသုံးပြုပြီး ဖိုင်ဖတ်သည်၊ `ReportAgent` သည် အကွပ်အတည်းနှင့် အကြောင်းပြချက်ပါ ပြုစုထားသော စီစဥ်ချက်တစ်ခုကို ေမြ။ Supervisor သည် ဒီလည်ပတ်မှုကို အလိုအလျောက် စီမံခန့်ခွဲသည်။
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.my.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/my/agentic.cf84dcda226374e3.png" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

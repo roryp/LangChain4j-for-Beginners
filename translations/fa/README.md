@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fa"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.fa.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/fa/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 پشتیبانی چندزبانه
 

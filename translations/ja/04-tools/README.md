@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. ツールが実行されデータを返す  
 6. エージェントが結果を取り込み最終回答を提示する
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.ja.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/ja/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
 
 *ReActパターン - AIエージェントが問題解決のために推論と行動を交互に行う様子*
 
@@ -138,7 +138,7 @@ Spring Boot は宣言的な `@AiService` インターフェースを全ツール
 
 **ツール連鎖** - AI は複数のツールを連続で呼び出すことがあります。「シアトルの天気は？傘は必要？」と聞くと、`getCurrentWeather` を呼び、その結果を基に雨具の要否を推論します。
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.ja.png" alt="ツール連鎖" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/ja/tool-chaining.3b25af01967d6f7b.png" alt="ツール連鎖" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *連続したツール呼び出し - ひとつのツールの出力が次の判断の入力に繋がる*
 
@@ -171,7 +171,7 @@ Spring Boot ダッシュボードからは：
 
 「tools」隣の再生ボタンをクリックすればこのモジュール起動、または全モジュール一括起動もできます。
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.ja.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ja/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
 
 **オプション 2：シェルスクリプト使用**
 
@@ -242,7 +242,7 @@ cd ..; .\stop-all.ps1  # すべてのモジュール
 
 このアプリは、天気や温度変換ツールへアクセスできる AI エージェントと対話するためのウェブインターフェースを提供します。
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.ja.png" alt="AI エージェントツール インターフェース" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/ja/tools-homepage.4b4cd8b2717f9621.png" alt="AI エージェントツール インターフェース" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI エージェントツール インターフェース - ツールと対話するためのクイックサンプルとチャットUI*
 
@@ -258,7 +258,7 @@ cd ..; .\stop-all.ps1  # すべてのモジュール
 
 チャットインターフェースは会話履歴を保持し、マルチターン対話を可能にします。以前の問い合わせや応答をすべて見られるので、会話の追跡や複数回の交換でどのように文脈を構築しているか理解しやすいです。
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.ja.png" alt="複数ツール呼び出しを含む会話" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ja/tools-conversation-demo.89f2ce9676080f59.png" alt="複数ツール呼び出しを含む会話" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *シンプルな変換、天気照会、ツール連鎖を含むマルチターン会話*
 

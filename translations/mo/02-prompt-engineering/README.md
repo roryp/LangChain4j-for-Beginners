@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 本模組示範使用與前幾個模組相同的 LangChain4j 基礎，重點在提示結構和推理控制的進階提示模式。
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.mo.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/mo/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
 
 *LangChain4j 如何將你的提示連接到 Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.mo.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/mo/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage 提供持續上下文，UserMessages 包含個別請求*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 不是所有問題都需要相同方法。有些問題需要快速回答，有些需要深入思考。有些需要可見推理，有些只要結果。本模組涵蓋八種提示模式——各自針對不同場景優化。你將嘗試所有模式，學習何時使用最合適。
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.mo.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/mo/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
 
 *八種提示工程模式及其使用案例概覽*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.mo.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/mo/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *低熱情（快速、直接） vs 高熱情（徹底、探索）推理方法比較*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - 「在生產應用中結構化工具前言的最佳實踐是什麼？」
 > - 「如何在 UI 中捕捉並顯示中間進度更新？」
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.mo.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/mo/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
 
 *計劃 → 執行 → 總結的多步任務工作流程*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.mo.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/mo/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
 
 *迭代改進循環——生成、評估、識別問題、改進、重複*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - 「以程式方式解析並處理結構化輸出的最佳方法是什麼？」
 > - 「如何確保不同審查會話中嚴重性等級的一致性？」
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.mo.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/mo/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
 
 *四類框架用於一致的程式碼審查，帶有嚴重性等級*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.mo.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/mo/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
 
 *對話上下文如何隨多輪累積直到達到 token 限制*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.mo.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/mo/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
 
 *將問題拆解為明確的邏輯步驟*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.mo.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/mo/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
 
 *強制特定格式、長度和結構要求*
 
@@ -300,7 +300,7 @@ cat ../.env  # 應該顯示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只需點擊「prompt-engineering」旁的播放按鈕啟動本模組，或一次啟動所有模組。
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.mo.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/mo/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
 
 **選項 2：使用 shell 腳本**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 ## 應用程式截圖
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.mo.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/mo/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *主儀表板顯示所有 8 種提示工程模式及其特性和使用案例*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 用低熱情問個簡單問題，例如「200 的 15% 是多少？」你會得到即時、直接的答案。現在用高熱情問複雜問題，例如「設計一個高流量 API 的快取策略」。觀察模型如何放慢速度並提供詳細推理。相同模型、相同問題結構——但提示告訴它要思考多少。
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.mo.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/mo/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
 *快速計算，最少推理*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.mo.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/mo/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
 
 *全面緩存策略 (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 多步驟工作流程受益於事先規劃和進度敘述。模型會概述它將做什麼，敘述每一步，然後總結結果。
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.mo.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/mo/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
 
 *逐步敘述建立 REST 端點 (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 試試「建立一個電子郵件驗證服務」。模型不只是生成代碼然後停止，而是生成、根據質量標準評估、識別弱點並改進。你會看到它反覆迭代直到代碼達到生產標準。
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.mo.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/mo/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
 
 *完整的電子郵件驗證服務 (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 代碼審查需要一致的評估框架。模型使用固定類別（正確性、實踐、效能、安全性）及嚴重程度來分析代碼。
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.mo.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/mo/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
 
 *基於框架的代碼審查*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 問「什麼是 Spring Boot？」然後緊接著問「給我一個範例」。模型會記住你的第一個問題，並專門給你一個 Spring Boot 範例。沒有記憶，第二個問題會太模糊。
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.mo.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/mo/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
 
 *跨問題的上下文保存*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 選一個數學問題，分別用逐步推理和低熱情度嘗試。低熱情度只給你答案——快速但不透明。逐步推理會展示每個計算和決策。
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.mo.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/mo/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *帶有明確步驟的數學問題*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 當你需要特定格式或字數時，這個模式強制嚴格遵守。試著生成一個正好 100 字的項目符號格式摘要。
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.mo.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/mo/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
 
 *機器學習摘要與格式控制*
 
@@ -445,7 +445,7 @@ GPT-5 讓你透過提示控制計算努力。低努力意味著快速回應且�
 
 注意提示中的 XML 標籤？它們不是裝飾。模型比起自由文本，更可靠地遵循結構化指令。當你需要多步驟流程或複雜邏輯時，結構幫助模型追蹤當前位置和下一步。
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.mo.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/mo/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
 
 *結構良好的提示解剖，有清晰區段和 XML 風格組織*
 

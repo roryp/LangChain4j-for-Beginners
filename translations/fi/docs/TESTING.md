@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.fi.png" alt="Onnistuneet testitulokset" width="800"/>
+<img src="../../../translated_images/fi/test-results.ea5c98d8f3642043.png" alt="Onnistuneet testitulokset" width="800"/>
 
 *Onnistunut testisuoritus: kaikki testit läpäisevät ilman virheitä*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Tämä kurssi keskittyy paikallisesti suoritettaviin **yksikkötestauksiin**. Jokainen testi esittelee erillisen LangChain4j-käsitteen itsenäisesti.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.fi.png" alt="Testauskolmio" width="800"/>
+<img src="../../../translated_images/fi/testing-pyramid.2dd1079a0481e53e.png" alt="Testauskolmio" width="800"/>
 
 *Testauskolmio, joka kuvastaa tasapainoa yksikkötestien (nopeat, eristetyt), integraatiotestien (todelliset komponentit) ja loppukäyttäjätestien välillä. Tämä opetus kattaa yksikkötestauksen.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#pitäisi säilyttää keskusteluhisto
 
 Jos käytät Visual Studio Codea, Test Explorer tarjoaa graafisen käyttöliittymän testien suorittamiseen ja virheenkorjaukseen.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.fi.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/fi/vscode-testing.f02dd5917289dced.png" alt="VS Code Test Explorer" width="800"/>
 
 *VS Code Test Explorer näyttää testipuun kaikilla Java-testiluokilla ja yksittäisillä testimetodeilla*
 
@@ -134,7 +134,7 @@ Test Explorer näyttää vihreät valintamerkit läpäistyistä testeistä ja ta
 
 Yksinkertaisin malli testaa kehotepohjia kutsumatta mitään tekoälymallia. Varmistat, että muuttujien korvaaminen toimii oikein ja kehotteet muotoillaan odotetulla tavalla.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.fi.png" alt="Kehotepohjien testaus" width="800"/>
+<img src="../../../translated_images/fi/prompt-template-testing.b902758ddccc8dee.png" alt="Kehotepohjien testaus" width="800"/>
 
 *Kehotepohjien testaaminen, joka näyttää muuttujien korvausketjun: malli paikkamerkkeineen → arvot käytetty → muotoiltu tulos varmennettu*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testi kehotemallin m
 
 Keskustelulogiikkaa testatessa käytä Mockitoa luodaksesi väärennettyjä malleja, jotka palauttavat ennalta määrätyt vastaukset. Tämä tekee testeistä nopeita, ilmaisia ja deterministisiä.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.fi.png" alt="Mock vs Real API -vertailu" width="800"/>
+<img src="../../../translated_images/fi/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock vs Real API -vertailu" width="800"/>
 
 *Vertailu, joka selittää miksi mockkeja suositaan testeissä: ne ovat nopeita, ilmaisia, deterministisiä eivätkä vaadi API-avaimia*
 
@@ -231,7 +231,7 @@ Tämä malli esiintyy tiedostossa `01-introduction/src/test/java/com/example/lan
 
 Keskustelumuistin on pidettävä useiden käyttäjien kontekstit erillisinä. Tämä testi varmistaa, ettei keskustelujen konteksti sekoitu.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.fi.png" alt="Keskustelujen eristys" width="800"/>
+<img src="../../../translated_images/fi/conversation-isolation.e00336cf8f7a3e3f.png" alt="Keskustelujen eristys" width="800"/>
 
 *Keskustelueristyksen testaus, joka näyttää erilliset muistivarastot eri käyttäjille kontekstin sekoittumisen estämiseksi*
 
@@ -263,7 +263,7 @@ Jokainen keskustelu ylläpitää omaa itsenäistä historiaansa. Tuotantojärjes
 
 Työkalut ovat funktioita, joita tekoäly voi kutsua. Testaa niitä suoraan varmistaaksesi, että ne toimivat oikein riippumatta tekoälyn päätöksistä.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.fi.png" alt="Työkalujen testaus" width="800"/>
+<img src="../../../translated_images/fi/tools-testing.3e1706817b0b3924.png" alt="Työkalujen testaus" width="800"/>
 
 *Työkalujen itsenäinen testaus, joka näyttää mock-työkalun suorituksen ilman tekoälykutsuja liiketoimintalogiikan varmistamiseksi*
 
@@ -294,7 +294,7 @@ Nämä testit tiedostosta `04-tools/src/test/java/com/example/langchain4j/agents
 
 RAG-järjestelmät tarvitsevat perinteisesti vektorikannat ja upotuspalvelut. Muistissa tapahtuva malli sallii koko putken testaamisen ilman ulkopuolisia riippuvuuksia.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.fi.png" alt="Muistissa tapahtuva RAG-testaus" width="800"/>
+<img src="../../../translated_images/fi/rag-testing.ee7541b1e23934b1.png" alt="Muistissa tapahtuva RAG-testaus" width="800"/>
 
 *Muistissa tapahtuvan RAG-testauksen työnkulku, joka näyttää dokumentin jäsennyksen, upotusten tallennuksen ja samankaltaisuushaun ilman tietokantaa*
 

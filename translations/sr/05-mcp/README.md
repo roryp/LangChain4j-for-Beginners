@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Протокол модела контекста (MCP) пружа управо то - стандардни начин да AI апликације откривају и користе спољашње алате. Уместо да пишете прилагођене интеграције за сваки извор података или услугу, повезујете се на MCP сервере који своје могућности приказују у конзистентном формату. Ваш AI агент онда аутоматски може да открије и користи те алате.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.sr.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/sr/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Comparison" width="800"/>
 
 *Пре MCP: Комплексне интеграције тачка-по-тачка. Након MCP: Један протокол, бескрајне могућности.*
 
@@ -43,7 +43,7 @@ MCP решава основни проблем у развоју AI: свака 
 
 MCP то стандардизује. MCP сервер приказује алате са јасним описима и шемама параметара. Сваки MCP клијент може да се повеже, открије доступне алате и користи их. Креирај једном, користи свуда.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.sr.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/sr/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architecture" width="800"/>
 
 *Архитектура Протокола модела контекста - стандардизовано откривање и извршавање алата*
 
@@ -71,7 +71,7 @@ MCP користи модел клијент-сервер. Сервери пру
 
 MCP подржава различите механизме транспорта. Овај модул демонстрира Stdio транспорт за локалне процесе:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.sr.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/sr/transport-mechanisms.2791ba7ee93cf020.png" alt="Transport Mechanisms" width="800"/>
 
 *MCP механизми транспорта: HTTP за удаљене сервере, Stdio за локалне процесе*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 У демо приказу, `FileAgent` чита фајл користећи MCP алате датотечног система, а `ReportAgent` генерише структурирани извештај са извршним резимеом (1 реченица), 3 кључне тачке и препорукама. Супервизор аутоматски оркестрира овај ток:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.sr.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/sr/agentic.cf84dcda226374e3.png" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

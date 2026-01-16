@@ -35,7 +35,7 @@ Anda telah membina AI perbualan, menguasai arahan, memantapkan respons dalam dok
 
 Protokol Konteks Model (MCP) menyediakan tepat itu — kaedah piawai untuk aplikasi AI mencari dan menggunakan alat luaran. Daripada menulis integrasi khusus bagi setiap sumber data atau perkhidmatan, anda boleh sambung ke pelayan MCP yang mendedahkan keupayaan mereka dalam format konsisten. Ejen AI anda kemudian boleh mencari dan menggunakan alat ini secara automatik.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.ms.png" alt="Perbandingan MCP" width="800"/>
+<img src="../../../translated_images/ms/mcp-comparison.9129a881ecf10ff5.png" alt="Perbandingan MCP" width="800"/>
 
 *Sebelum MCP: Integrasi titik-ke-titik yang rumit. Selepas MCP: Satu protokol, kemungkinan tanpa batas.*
 
@@ -43,7 +43,7 @@ MCP menyelesaikan masalah asas dalam pembangunan AI: setiap integrasi adalah khu
 
 MCP mempiawai perkara ini. Pelayan MCP mendedahkan alat dengan keterangan dan skema parameter yang jelas. Mana-mana klien MCP boleh sambung, mencari alat tersedia, dan menggunakannya. Bina sekali, guna di mana-mana.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.ms.png" alt="Seni Bina MCP" width="800"/>
+<img src="../../../translated_images/ms/mcp-architecture.b3156d787a4ceac9.png" alt="Seni Bina MCP" width="800"/>
 
 *Seni bina Protokol Konteks Model – penemuan dan pelaksanaan alat piawai*
 
@@ -71,7 +71,7 @@ Apabila klien anda menyambung ke pelayan MCP, ia bertanya "Apakah alat yang anda
 
 MCP menyokong pelbagai mekanisme pengangkutan. Modul ini menunjukan pengangkutan Stdio untuk proses tempatan:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.ms.png" alt="Mekanisme Pengangkutan" width="800"/>
+<img src="../../../translated_images/ms/transport-mechanisms.2791ba7ee93cf020.png" alt="Mekanisme Pengangkutan" width="800"/>
 
 *Mekanisme pengangkutan MCP: HTTP untuk pelayan jauh, Stdio untuk proses tempatan*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 Dalam demo, `FileAgent` membaca fail menggunakan alat MCP sistem fail, dan `ReportAgent` menjana laporan berstruktur dengan ringkasan eksekutif (1 ayat), 3 poin utama, dan cadangan. Penyelia mengatur aliran ini secara automatik:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.ms.png" alt="Modul Agentik" width="800"/>
+<img src="../../../translated_images/ms/agentic.cf84dcda226374e3.png" alt="Modul Agentik" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

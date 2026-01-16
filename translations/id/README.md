@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "id"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.id.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/id/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 Dukungan Multi-Bahasa
 

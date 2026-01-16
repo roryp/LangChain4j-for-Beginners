@@ -49,7 +49,7 @@ RAG를 모델에 참고 도서관을 제공하는 것으로 생각해 보세요.
 
 이렇게 하면 모델이 훈련 지식이나 임의의 답변에 의존하지 않고 실제 데이터에 근거한 응답을 제공합니다.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ko.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/ko/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
 
 *RAG 워크플로우 - 사용자 질의부터 의미 기반 검색 후 컨텍스트 답변 생성까지*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ko.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/ko/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
 
 *임베딩 공간에 벡터로 표현된 문서들 - 유사한 내용은 군집화됨*
 
@@ -160,7 +160,7 @@ cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT를 보여야 합니다
 
 "rag" 옆에 있는 재생 버튼을 클릭해 이 모듈을 실행하거나, 모든 모듈을 한 번에 시작할 수 있습니다.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ko.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ko/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
 
 **옵션 2: 셸 스크립트 사용**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 이 애플리케이션은 문서 업로드와 질문을 위한 웹 인터페이스를 제공합니다.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ko.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/ko/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG 애플리케이션 인터페이스 - 문서 업로드 및 질문*
 
@@ -248,7 +248,7 @@ TXT 파일 업로드로 시작하세요. 이 디렉터리에 `sample-document.tx
 
 각 답변에는 유사도 점수가 표시된 출처 참고가 포함됩니다. 이 점수(0에서 1 사이)는 각 청크가 질문과 얼마나 관련이 있는지 보여줍니다. 점수가 높을수록 더 좋은 매칭입니다. 이를 통해 출처 자료와 답변을 검증할 수 있습니다.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ko.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/ko/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *출처 참고와 관련도 점수가 포함된 쿼리 결과*
 

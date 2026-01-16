@@ -52,7 +52,7 @@ Tänk på det som att ge instruktioner till en kollega. "Fix the bug" är vagt. 
 
 Denna modul demonstrerar avancerade promptmönster med samma LangChain4j-grund från tidigare moduler, med fokus på promptstruktur och kontroll över resonemang.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.sv.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/sv/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
 
 *Hur LangChain4j kopplar dina prompts till Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.sv.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/sv/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage ger bestående kontext medan UserMessages innehåller individuella förfrågningar*
 
@@ -104,11 +104,11 @@ Huvudpoängen: LangChain4j tillhandahåller infrastrukturen (modellanslutning vi
 
 Alla problem kräver inte samma tillvägagångssätt. Vissa frågor behöver snabba svar, andra kräver djupare tänkande. Vissa behöver synligt resonemang, andra bara resultat. Denna modul täcker åtta promptmönster – var och en optimerad för olika scenarier. Du kommer att experimentera med alla för att lära dig när varje tillvägagångssätt fungerar bäst.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.sv.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/sv/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
 
 *Översikt över de åtta prompt engineering-mönstren och deras användningsområden*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.sv.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/sv/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
 
 *Låg iver (snabb, direkt) vs hög iver (grundlig, utforskande) resonemangstillvägagångssätt*
 
@@ -163,7 +163,7 @@ Chain-of-Thought-prompting ber modellen visa sitt resonemangsflöde, vilket för
 > - "Vilka är bästa praxis för att strukturera verktygspreambler i produktionsapplikationer?"
 > - "Hur kan jag fånga och visa mellanliggande framsteg i ett användargränssnitt?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.sv.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/sv/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
 
 *Planera → Utför → Sammanfatta arbetsflöde för flerstegsuppgifter*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.sv.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/sv/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
 
 *Iterativ förbättringscykel – generera, utvärdera, identifiera problem, förbättra, upprepa*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Vad är bästa sättet att tolka och agera på strukturerad output programmässigt?"
 > - "Hur säkerställer jag konsekventa allvarlighetsnivåer över olika granskningssessioner?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.sv.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/sv/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
 
 *Fyra-kategorier ramverk för konsekventa kodgranskningar med allvarlighetsnivåer*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.sv.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/sv/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
 
 *Hur konversationskontext ackumuleras över flera steg tills token-gränsen nås*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.sv.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/sv/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
 
 *Bryter ner problem i explicita logiska steg*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.sv.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/sv/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
 
 *Upprätthåller specifika format-, längd- och strukturkrav*
 
@@ -300,7 +300,7 @@ Från Spring Boot Dashboard kan du:
 
 Klicka bara på play-knappen bredvid "prompt-engineering" för att starta denna modul, eller starta alla moduler samtidigt.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.sv.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sv/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Alternativ 2: Använda shell-skript**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Alla moduler
 
 ## Applikationsskärmdumpar
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.sv.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/sv/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Huvuddashboard som visar alla 8 prompt engineering-mönster med deras egenskaper och användningsområden*
 
@@ -380,10 +380,10 @@ Webbgränssnittet låter dig experimentera med olika promptstrategier. Varje mö
 
 Ställ en enkel fråga som "Vad är 15% av 200?" med låg iver. Du får ett omedelbart, direkt svar. Ställ nu något komplext som "Designa en caching-strategi för en högtrafikerad API" med hög iver. Se hur modellen saktar ner och ger detaljerat resonemang. Samma modell, samma frågestruktur – men prompten talar om för den hur mycket tänkande som ska göras.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.sv.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/sv/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
 *Snabb beräkning med minimal resonemang*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.sv.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/sv/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
 
 *Omfattande cache-strategi (2.8MB)*
 
@@ -391,7 +391,7 @@ Ställ en enkel fråga som "Vad är 15% av 200?" med låg iver. Du får ett omed
 
 Flerstegsarbetsflöden gynnas av förhandsplanering och löpande berättande. Modellen beskriver vad den ska göra, berättar om varje steg och sammanfattar sedan resultaten.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.sv.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/sv/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
 
 *Skapa en REST-endpoint med steg-för-steg-berättande (3.9MB)*
 
@@ -399,7 +399,7 @@ Flerstegsarbetsflöden gynnas av förhandsplanering och löpande berättande. Mo
 
 Prova "Skapa en e-postvalideringstjänst". Istället för att bara generera kod och stanna, genererar modellen, utvärderar mot kvalitetskriterier, identifierar svagheter och förbättrar. Du kommer att se den iterera tills koden uppfyller produktionsstandarder.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.sv.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/sv/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Fullständig e-postvalideringstjänst (5.2MB)*
 
@@ -407,7 +407,7 @@ Prova "Skapa en e-postvalideringstjänst". Istället för att bara generera kod 
 
 Kodgranskningar behöver konsekventa utvärderingsramverk. Modellen analyserar kod med fasta kategorier (korrekthet, praxis, prestanda, säkerhet) med allvarlighetsnivåer.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.sv.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/sv/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
 
 *Ramverksbaserad kodgranskning*
 
@@ -415,7 +415,7 @@ Kodgranskningar behöver konsekventa utvärderingsramverk. Modellen analyserar k
 
 Fråga "Vad är Spring Boot?" och följ sedan direkt upp med "Visa mig ett exempel". Modellen kommer ihåg din första fråga och ger dig ett specifikt Spring Boot-exempel. Utan minne skulle den andra frågan vara för vag.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.sv.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/sv/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Bevarande av kontext över frågor*
 
@@ -423,7 +423,7 @@ Fråga "Vad är Spring Boot?" och följ sedan direkt upp med "Visa mig ett exemp
 
 Välj ett matematiskt problem och prova både Steg-för-steg-resonemang och Låg iver. Låg iver ger dig bara svaret – snabbt men otydligt. Steg-för-steg visar varje beräkning och beslut.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.sv.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/sv/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Matteproblem med tydliga steg*
 
@@ -431,7 +431,7 @@ Välj ett matematiskt problem och prova både Steg-för-steg-resonemang och Låg
 
 När du behöver specifika format eller ordantal, tvingar detta mönster strikt efterlevnad. Prova att generera en sammanfattning med exakt 100 ord i punktform.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.sv.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/sv/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
 
 *Maskininlärningssammanfattning med formatkontroll*
 
@@ -445,7 +445,7 @@ GPT-5 låter dig styra beräkningsinsatsen via dina prompts. Låg insats betyder
 
 Lägger du märke till XML-taggarna i promptarna? De är inte dekorativa. Modeller följer strukturerade instruktioner mer pålitligt än fri text. När du behöver flerstegsprocesser eller komplex logik hjälper struktur modellen att hålla reda på var den är och vad som kommer härnäst.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.sv.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/sv/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
 
 *Anatomi av en välstrukturerad prompt med tydliga sektioner och XML-liknande organisation*
 

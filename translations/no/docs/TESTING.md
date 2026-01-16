@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.no.png" alt="Vellykkede testresultater" width="800"/>
+<img src="../../../translated_images/no/test-results.ea5c98d8f3642043.png" alt="Vellykkede testresultater" width="800"/>
 
 *Vel gjennomført testkjøring som viser at alle tester passerer uten feil*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Dette kurset fokuserer på **enhetstester** som kjøres lokalt. Hver test demonstrerer et spesifikt LangChain4j-konsept isolert.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.no.png" alt="Testpyramide" width="800"/>
+<img src="../../../translated_images/no/testing-pyramid.2dd1079a0481e53e.png" alt="Testpyramide" width="800"/>
 
 *Testpyramide som viser balansen mellom enhetstester (raske, isolerte), integrasjonstester (ekte komponenter) og ende-til-ende-tester. Dette kurset dekker enhetstesting.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#børOpprettholdeSamtalehistorikk
 
 Hvis du bruker Visual Studio Code, gir Test Explorer et grafisk grensesnitt for å kjøre og feilsøke tester.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.no.png" alt="VS Code Testutforsker" width="800"/>
+<img src="../../../translated_images/no/vscode-testing.f02dd5917289dced.png" alt="VS Code Testutforsker" width="800"/>
 
 *VS Code Testutforsker som viser testtreet med alle Java-testklasser og individuelle testmetoder*
 
@@ -134,7 +134,7 @@ Test Explorer viser grønne hakeikoner for passerende tester og gir detaljerte f
 
 Det enkleste mønsteret tester promptmaler uten å kalle noen AI-modell. Du verifiserer at variabelsubstitusjon fungerer korrekt og at promptene er formatert som forventet.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.no.png" alt="Testing av promptmaler" width="800"/>
+<img src="../../../translated_images/no/prompt-template-testing.b902758ddccc8dee.png" alt="Testing av promptmaler" width="800"/>
 
 *Testing av promptmaler som viser flyten for variabelsubstitusjon: mal med plassholdere → verdier brukes → formatert utdata verifisert*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testPromptMalFormate
 
 Når du tester samtalelogikk, bruk Mockito for å lage falske modeller som returnerer forhåndsbestemte svar. Dette gjør testene raske, gratis og deterministiske.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.no.png" alt="Mock vs ekte API-sammenligning" width="800"/>
+<img src="../../../translated_images/no/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock vs ekte API-sammenligning" width="800"/>
 
 *Sammenligning som viser hvorfor mocks foretrekkes for testing: de er raske, gratis, deterministiske og krever ingen API-nøkler*
 
@@ -231,7 +231,7 @@ Dette mønsteret finnes i `01-introduction/src/test/java/com/example/langchain4j
 
 Samtaleminne må holde flere brukere adskilt. Denne testen verifiserer at samtaler ikke blander kontekster.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.no.png" alt="Samtaleisolasjon" width="800"/>
+<img src="../../../translated_images/no/conversation-isolation.e00336cf8f7a3e3f.png" alt="Samtaleisolasjon" width="800"/>
 
 *Testing av samtaleisolasjon som viser separate minnelagre for forskjellige brukere for å hindre kontektsblanding*
 
@@ -263,7 +263,7 @@ Hver samtale opprettholder sin egen uavhengige historikk. I produksjonssystemer 
 
 Verktøy er funksjoner AI-en kan kalle. Test dem direkte for å sikre at de fungerer korrekt uavhengig av AI-beslutninger.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.no.png" alt="Testing av verktøy" width="800"/>
+<img src="../../../translated_images/no/tools-testing.3e1706817b0b3924.png" alt="Testing av verktøy" width="800"/>
 
 *Testing av verktøy uavhengig som viser mock-utførelse av verktøy uten AI-kall for å verifisere forretningslogikk*
 
@@ -294,7 +294,7 @@ Disse testene fra `04-tools/src/test/java/com/example/langchain4j/agents/tools/S
 
 RAG-systemer krever tradisjonelt vektordatabaser og embeddingtjenester. In-memory-mønsteret lar deg teste hele pipelinen uten eksterne avhengigheter.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.no.png" alt="RAG-testing i minnet" width="800"/>
+<img src="../../../translated_images/no/rag-testing.ee7541b1e23934b1.png" alt="RAG-testing i minnet" width="800"/>
 
 *RAG-testing i minnet som viser arbeidsflyt for dokumentparsing, lagring av embeddinger og likhetssøk uten krav til database*
 

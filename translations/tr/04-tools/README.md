@@ -61,7 +61,7 @@ Araçlara sahip yapay zeka ajanı, muhakeme ve eylem desenini (ReAct) takip eder
 5. Araç yürütülür ve veri döner
 6. Ajan sonucu yanıtına dahil eder ve son cevabı verir
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.tr.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/tr/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
 
 *ReAct deseni - Yapay zeka ajanlarının problem çözmek için muhakeme ile eylem arasında geçiş yapması*
 
@@ -138,7 +138,7 @@ Alternatif yöntemler (manuel `AiServices.builder()`) daha fazla kod gerektirir 
 
 **Araç Zincirleme** - AI, birden fazla aracı ardışık olarak çağırabilir. "Seattle'da hava nasıl ve şemsiye almalıyım?" diye sorun; `getCurrentWeather` fonksiyonunu yağmur ekipmanı hakkında muhakeme ile zincirlediğini izleyin.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.tr.png" alt="Araç Zincirleme" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/tr/tool-chaining.3b25af01967d6f7b.png" alt="Araç Zincirleme" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Ardışık araç çağrıları - bir aracın çıktısı sonraki karara beslenir*
 
@@ -171,7 +171,7 @@ Spring Boot Dashboard’dan şu işlemleri yapabilirsiniz:
 
 “tools” yanındaki oynat düğmesine tıklayarak bu modülü başlatabilir veya tüm modülleri birden başlatabilirsiniz.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.tr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/tr/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Seçenek 2: Komut dosyaları kullanmak**
 
@@ -242,7 +242,7 @@ cd ..; .\stop-all.ps1  # Tüm modüller
 
 Uygulama, hava durumu ve sıcaklık dönüşüm araçlarına erişimi olan bir yapay zeka ajanıyla etkileşim için web arayüzü sunar.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.tr.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/tr/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Yapay Zeka Ajan Araçları arayüzü - araçlarla etkileşim için hızlı örnekler ve sohbet arayüzü*
 
@@ -258,7 +258,7 @@ Basit bir taleple başlayın: "100 Fahrenheit dereceyi Santigrata çevir". Ajan 
 
 Sohbet arayüzü konuşma geçmişini tutar, böylece çok adımlı etkileşimler yapabilirsiniz. Önceki tüm sorguları ve yanıtları görebilir, konuşmanın nasıl geliştiğini ve ajanın bağlamı nasıl oluşturduğunu takip etmek kolaydır.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.tr.png" alt="Çoklu Araç Çağrıları ile Konuşma" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tr/tools-conversation-demo.89f2ce9676080f59.png" alt="Çoklu Araç Çağrıları ile Konuşma" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Basit dönüşümler, hava durumu sorgulamaları ve araç zincirlemesi gösteren çok adımlı konuşma*
 

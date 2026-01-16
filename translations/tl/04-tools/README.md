@@ -61,7 +61,7 @@ Ang AI agent na may mga tools ay sumusunod sa isang pattern na reasoning at acti
 5. Isinasagawa ng tool ang gawain at nagbabalik ng datos
 6. Isinasama ng agent ang resulta at nagbibigay ng panghuling sagot
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.tl.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/tl/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
 
 *Ang ReAct pattern - kung paano nagpapalitan ang AI agents ng pangangatwiran at pagkilos para lutasin ang mga problema*
 
@@ -138,7 +138,7 @@ Ang mga alternatibong paraan (manwal na `AiServices.builder()`) ay nangangailang
 
 **Tool Chaining** - Maaaring tumawag ang AI ng sunud-sunod na maraming mga tool. Tanungin ang "What's the weather in Seattle and should I bring an umbrella?" at panoorin itong ikabit ang `getCurrentWeather` na may pangangatwiran tungkol sa rain gear.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.tl.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/tl/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sunud-sunod na tawag ng tool - ang output ng isang tool ay ginagamit sa susunod na desisyon*
 
@@ -171,7 +171,7 @@ Mula sa Spring Boot Dashboard, maaari mong:
 
 Pindutin lamang ang play button sa tabi ng "tools" para simulan ang module na ito, o simulan lahat ng module nang sabay.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.tl.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/tl/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Lahat ng modules
 
 Nagbibigay ang application ng web interface kung saan maaari kang makipag-ugnayan sa AI agent na may access sa weather at temperature conversion tools.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.tl.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/tl/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Ang AI Agent Tools interface - mabilisang mga halimbawa at chat interface para makipag-interact sa mga tools*
 
@@ -257,7 +257,7 @@ Subukan ang mas kumplikadong tanong: "What's the weather in Seattle and convert 
 
 Pinapanatili ng chat interface ang kasaysayan ng pag-uusap, kaya maaari kang gumawa ng multi-turn na usapan. Makikita mo lahat ng mga nakaraang tanong at sagot, na nagpapadali para subaybayan ang pag-uusap at maintindihan kung paano bumubuo ng konteksto ang agent sa maraming palitan.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.tl.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tl/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Multi-turn na pag-uusap na nagpapakita ng simpleng conversion, paghahanap ng panahon, at tool chaining*
 

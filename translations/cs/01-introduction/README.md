@@ -53,7 +53,7 @@ Jazykové modely jsou bezstavové. Každé volání API je nezávislé. Pokud po
 
 To je v pořádku pro jednoduché otázky a odpovědi, ale k ničemu pro skutečné aplikace. Boti zákaznické podpory si musí pamatovat, co jste jim řekli. Osobní asistenti potřebují kontext. Každá vícekroková konverzace vyžaduje paměť.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.cs.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/cs/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Rozdíl mezi bezstavovými (nezávislými voláními) a stavovými (s kontextem) konverzacemi*
 
@@ -61,7 +61,7 @@ To je v pořádku pro jednoduché otázky a odpovědi, ale k ničemu pro skuteč
 
 Než se pustíte do konverzací, je důležité pochopit tokeny – základní jednotky textu, které jazykové modely zpracovávají:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.cs.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/cs/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
 
 *Příklad, jak je text rozdělen na tokeny – "I love AI!" se stává 4 samostatnými jednotkami zpracování*
 
@@ -73,7 +73,7 @@ Paměť chatu řeší bezstavový problém tím, že udržuje historii konverzac
 
 LangChain4j poskytuje implementace paměti, které to automaticky zvládají. Vy si zvolíte, kolik zpráv chcete uchovat, a rámec spravuje kontextové okno.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.cs.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/cs/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory udržuje posuvné okno nedávných zpráv a automaticky odstraňuje staré*
 
@@ -212,7 +212,7 @@ Ze Spring Boot Dashboard můžete:
 
 Jednoduše klikněte na tlačítko přehrávání vedle "introduction" pro spuštění tohoto modulu, nebo spusťte všechny moduly najednou.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.cs.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/cs/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Možnost 2: Použití shell skriptů**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Všechny moduly
 
 Aplikace poskytuje webové rozhraní se dvěma implementacemi chatu vedle sebe.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.cs.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/cs/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
 
 *Dashboard zobrazující možnosti Jednoduchý chat (bezstavový) a Konverzační chat (stavový)*
 
@@ -290,7 +290,7 @@ Aplikace poskytuje webové rozhraní se dvěma implementacemi chatu vedle sebe.
 
 Vyzkoušejte nejdříve toto. Zeptejte se "Jmenuji se John" a pak hned "Jak se jmenuji?" Model si to nepamatuje, protože každá zpráva je nezávislá. To demonstruje základní problém integrace jazykového modelu – žádný kontext konverzace.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.cs.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/cs/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
 
 *AI si nepamatuje vaše jméno z předchozí zprávy*
 
@@ -298,7 +298,7 @@ Vyzkoušejte nejdříve toto. Zeptejte se "Jmenuji se John" a pak hned "Jak se j
 
 Nyní vyzkoušejte stejnou sekvenci zde. Zeptejte se "Jmenuji se John" a pak "Jak se jmenuji?" Tentokrát si to pamatuje. Rozdíl je v MessageWindowChatMemory – udržuje historii konverzace a zahrnuje ji s každým požadavkem. Takto funguje produkční konverzační AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.cs.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/cs/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
 
 *AI si pamatuje vaše jméno z dřívější části konverzace*
 

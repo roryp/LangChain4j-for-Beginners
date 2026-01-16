@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "uk"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.uk.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/uk/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 Підтримка багатьох мов
 

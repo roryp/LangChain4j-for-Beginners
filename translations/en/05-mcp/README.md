@@ -35,7 +35,7 @@ You've built conversational AI, mastered prompts, grounded responses in document
 
 The Model Context Protocol (MCP) provides exactly that - a standard way for AI applications to discover and use external tools. Instead of writing custom integrations for each data source or service, you connect to MCP servers that expose their capabilities in a consistent format. Your AI agent can then discover and use these tools automatically.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.en.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/en/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *Before MCP: Complex point-to-point integrations. After MCP: One protocol, endless possibilities.*
 
@@ -43,7 +43,7 @@ MCP solves a fundamental problem in AI development: every integration is custom.
 
 MCP standardizes this. An MCP server exposes tools with clear descriptions and schemas. Any MCP client can connect, discover available tools, and use them. Build once, use everywhere.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.en.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/en/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Model Context Protocol architecture - standardized tool discovery and execution*
 
@@ -71,7 +71,7 @@ When your client connects to an MCP server, it asks "What tools do you have?" Th
 
 MCP supports different transport mechanisms. This module demonstrates the Stdio transport for local processes:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.en.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/en/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *MCP transport mechanisms: HTTP for remote servers, Stdio for local processes*
 
@@ -169,7 +169,7 @@ The **Supervisor Agent pattern** is a **flexible** form of agentic AI. A Supervi
 
 In the demo, `FileAgent` reads a file using MCP filesystem tools, and `ReportAgent` generates a structured report with an executive summary (1 sentence), 3 key points, and recommendations. The Supervisor orchestrates this flow automatically:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.en.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/en/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

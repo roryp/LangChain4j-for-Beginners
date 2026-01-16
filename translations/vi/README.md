@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "vi"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.vi.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/vi/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 Hỗ trợ đa ngôn ngữ
 

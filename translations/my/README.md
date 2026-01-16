@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "my"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.my.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/my/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
 
 ### 🌐 ဘာသာစကားအမျိုးမျိုးကို ထောက်ပံ့မှု
 

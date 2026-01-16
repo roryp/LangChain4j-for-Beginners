@@ -49,7 +49,7 @@ RAG (Retrieval-Augmented Generation) แก้ปัญหานี้ แทน
 
 นี่ทำให้คำตอบของโมเดลมีฐานจากข้อมูลจริงของคุณ แทนที่จะอาศัยความรู้จากการฝึกสอนหรือเดาคำตอบ
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.th.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/th/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
 
 *กระบวนการ RAG - จากคำถามของผู้ใช้ ไปสู่การค้นหาเชิงความหมาย และการสร้างคำตอบโดยอ้างอิงบริบท*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.th.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/th/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
 
 *เอกสารถูกแทนด้วยเวกเตอร์ในพื้นที่ embedding - เนื้อหาคล้ายกันจะอยู่ใกล้กัน*
 
@@ -160,7 +160,7 @@ Dev container มี Spring Boot Dashboard extension ซึ่งเป็นอ
 
 แค่คลิกปุ่มเล่นข้าง "rag" เพื่อเริ่มโมดูลนี้ หรือจะเริ่มทุกโมดูลพร้อมกันก็ได้
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.th.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/th/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
 
 **ตัวเลือก 2: ใช้ shell scripts**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # ทุกโมดูล
 
 แอปมาพร้อมอินเทอร์เฟซเว็บสำหรับอัปโหลดเอกสารและถามคำถาม
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.th.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/th/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *อินเทอร์เฟซแอป RAG - อัปโหลดเอกสารและถามคำถาม*
 
@@ -248,7 +248,7 @@ cd ..; .\stop-all.ps1  # ทุกโมดูล
 
 สังเกตว่าคำตอบแต่ละข้อจะมีแหล่งอ้างอิงพร้อมคะแนนความคล้ายคลึง คะแนนเหล่านี้ (0 ถึง 1) แสดงว่าชิ้นส่วนนั้นเกี่ยวข้องกับคำถามมากน้อยแค่ไหน คะแนนสูงแปลว่าแมตช์ดี นี่ช่วยให้คุณตรวจสอบคำตอบกับแหล่งข้อมูลจริง
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.th.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/th/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ผลลัพธ์คำถามพร้อมคำตอบที่มีแหล่งอ้างอิงและคะแนนความเกี่ยวข้อง*
 

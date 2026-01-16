@@ -35,7 +35,7 @@ Anda telah membangun AI percakapan, menguasai prompt, memantapkan respons dalam 
 
 Model Context Protocol (MCP) memberikan tepat itu — cara standar bagi aplikasi AI untuk menemukan dan menggunakan alat eksternal. Alih-alih menulis integrasi khusus untuk setiap sumber data atau layanan, Anda terhubung ke server MCP yang memamerkan kemampuannya dalam format yang konsisten. Agen AI Anda kemudian dapat menemukan dan menggunakan alat-alat tersebut secara otomatis.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.id.png" alt="Perbandingan MCP" width="800"/>
+<img src="../../../translated_images/id/mcp-comparison.9129a881ecf10ff5.png" alt="Perbandingan MCP" width="800"/>
 
 *Sebelum MCP: Integrasi kompleks point-to-point. Setelah MCP: Satu protokol, kemungkinan tak terbatas.*
 
@@ -43,7 +43,7 @@ MCP memecahkan masalah mendasar dalam pengembangan AI: setiap integrasi bersifat
 
 MCP menstandarisasi ini. Server MCP memamerkan alat dengan deskripsi jelas dan skema parameter. Klien MCP mana pun dapat terhubung, menemukan alat yang tersedia, dan menggunakannya. Bangun sekali, gunakan di mana-mana.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.id.png" alt="Arsitektur MCP" width="800"/>
+<img src="../../../translated_images/id/mcp-architecture.b3156d787a4ceac9.png" alt="Arsitektur MCP" width="800"/>
 
 *Arsitektur Model Context Protocol — penemuan dan eksekusi alat yang distandarisasi*
 
@@ -71,7 +71,7 @@ Saat klien Anda terhubung ke server MCP, ia bertanya "Alat apa yang kamu miliki?
 
 MCP mendukung berbagai mekanisme transportasi. Modul ini mendemonstrasikan transport Stdio untuk proses lokal:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.id.png" alt="Mekanisme Transportasi" width="800"/>
+<img src="../../../translated_images/id/transport-mechanisms.2791ba7ee93cf020.png" alt="Mekanisme Transportasi" width="800"/>
 
 *Mekanisme transport MCP: HTTP untuk server jarak jauh, Stdio untuk proses lokal*
 
@@ -169,7 +169,7 @@ Pola **Agen Supervisor** adalah bentuk AI agentic yang **fleksibel**. Seorang Su
 
 Dalam demo, `FileAgent` membaca file menggunakan alat filesystem MCP, dan `ReportAgent` menghasilkan laporan terstruktur dengan ringkasan eksekutif (1 kalimat), 3 poin utama, dan rekomendasi. Supervisor mengatur alur ini secara otomatis:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.id.png" alt="Modul Agentic" width="800"/>
+<img src="../../../translated_images/id/agentic.cf84dcda226374e3.png" alt="Modul Agentic" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

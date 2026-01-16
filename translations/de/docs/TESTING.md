@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.de.png" alt="Erfolgreiche Testergebnisse" width="800"/>
+<img src="../../../translated_images/de/test-results.ea5c98d8f3642043.png" alt="Erfolgreiche Testergebnisse" width="800"/>
 
 *Erfolgreiche Testausführung, bei der alle Tests ohne Fehler bestanden wurden*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Dieser Kurs konzentriert sich auf **Unit-Tests**, die lokal ausgeführt werden. Jeder Test demonstriert ein bestimmtes LangChain4j-Konzept isoliert.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.de.png" alt="Testpyramide" width="800"/>
+<img src="../../../translated_images/de/testing-pyramid.2dd1079a0481e53e.png" alt="Testpyramide" width="800"/>
 
 *Testpyramide, die das Verhältnis zwischen Unit-Tests (schnell, isoliert), Integrationstests (reale Komponenten) und End-to-End-Tests zeigt. Dieses Training behandelt Unit-Tests.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#sollKonversationsverlaufBeibehalten
 
 Wenn Sie Visual Studio Code verwenden, bietet der Test Explorer eine grafische Oberfläche zum Ausführen und Debuggen von Tests.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.de.png" alt="VS Code Test-Explorer" width="800"/>
+<img src="../../../translated_images/de/vscode-testing.f02dd5917289dced.png" alt="VS Code Test-Explorer" width="800"/>
 
 *VS Code Test-Explorer, der den Testbaum mit allen Java-Testklassen und einzelnen Testmethoden anzeigt*
 
@@ -134,7 +134,7 @@ Der Test Explorer zeigt grüne Häkchen für bestandene Tests und liefert detail
 
 Das einfachste Muster testet Prompt-Vorlagen, ohne ein KI-Modell aufzurufen. Sie prüfen, dass die Variablenersetzung korrekt funktioniert und die Prompts wie erwartet formatiert sind.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.de.png" alt="Testen von Prompt-Vorlagen" width="800"/>
+<img src="../../../translated_images/de/prompt-template-testing.b902758ddccc8dee.png" alt="Testen von Prompt-Vorlagen" width="800"/>
 
 *Testen von Prompt-Vorlagen, die den Ablauf der Variablenersetzung zeigen: Vorlage mit Platzhaltern → Werte angewendet → formatiertes Ausgabeergebnis überprüft*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#Test der Formatierun
 
 Beim Testen von Konversationslogik verwenden Sie Mockito, um gefälschte Modelle zu erstellen, die vorbestimmte Antworten zurückgeben. Dadurch werden die Tests schnell, kostenlos und deterministisch.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.de.png" alt="Mock vs. Real API Vergleich" width="800"/>
+<img src="../../../translated_images/de/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock vs. Real API Vergleich" width="800"/>
 
 *Vergleich, der zeigt, warum Mocks für Tests bevorzugt werden: Sie sind schnell, kostenfrei, deterministisch und erfordern keine API-Schlüssel*
 
@@ -231,7 +231,7 @@ Dieses Muster findet sich in `01-introduction/src/test/java/com/example/langchai
 
 Der Konversationsspeicher muss mehrere Benutzer getrennt halten. Dieser Test verifiziert, dass Kontexte nicht vermischt werden.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.de.png" alt="Konversationsisolation" width="800"/>
+<img src="../../../translated_images/de/conversation-isolation.e00336cf8f7a3e3f.png" alt="Konversationsisolation" width="800"/>
 
 *Testen der Konversationsisolation, die separate Speichersysteme für verschiedene Benutzer zeigt, um Kontextvermischung zu verhindern*
 
@@ -263,7 +263,7 @@ Jede Konversation führt ihre eigene, unabhängige Historie. In Produktionssyste
 
 Tools sind Funktionen, die die KI aufrufen kann. Testen Sie sie direkt, um sicherzustellen, dass sie unabhängig von KI-Entscheidungen korrekt funktionieren.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.de.png" alt="Testen von Tools" width="800"/>
+<img src="../../../translated_images/de/tools-testing.3e1706817b0b3924.png" alt="Testen von Tools" width="800"/>
 
 *Unabhängiges Testen von Tools, das die mock-basierte Ausführung von Tools ohne KI-Aufrufe zeigt, um die Geschäftslogik zu überprüfen*
 
@@ -294,7 +294,7 @@ Diese Tests aus `04-tools/src/test/java/com/example/langchain4j/agents/tools/Sim
 
 RAG-Systeme erfordern traditionell Vektor-Datenbanken und Embedding-Services. Das In-Memory-Muster ermöglicht es, die gesamte Pipeline ohne externe Abhängigkeiten zu testen.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.de.png" alt="In-Memory RAG-Tests" width="800"/>
+<img src="../../../translated_images/de/rag-testing.ee7541b1e23934b1.png" alt="In-Memory RAG-Tests" width="800"/>
 
 *In-Memory-RAG-Testworkflow, der das Parsen von Dokumenten, die Speicherung von Embeddings und die Ähnlichkeitssuche ohne Datenbank zeigt*
 

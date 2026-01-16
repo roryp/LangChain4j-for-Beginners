@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 模型上下文協議（MCP）正是提供這種標準方式，讓 AI 應用能發現並使用外部工具。你無需為每個資料來源或服務撰寫自訂整合，改為連線至以一致格式揭露其能力的 MCP 伺服器。這樣你的 AI 代理就能自動發現並使用這些工具。
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.mo.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/mo/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Comparison" width="800"/>
 
 *MCP 之前：複雜的點對點整合。MCP 之後：一個協議，無限可能。*
 
@@ -43,7 +43,7 @@ MCP 解決了 AI 開發中的根本問題：每個整合都是自訂的。想要
 
 MCP 將此標準化。MCP 伺服器以明確描述和結構模式（schema）揭露工具。任何 MCP 用戶端都能連接、發現可用工具並使用。寫一次，用到處。
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.mo.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/mo/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architecture" width="800"/>
 
 *模型上下文協議架構——標準化工具發現與執行*
 
@@ -71,7 +71,7 @@ MCP 使用用戶端-伺服器模式。伺服器提供工具——讀檔案、查
 
 MCP 支援不同傳輸機制。本模組示範用於本地程序的 Stdio 傳輸：
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.mo.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/mo/transport-mechanisms.2791ba7ee93cf020.png" alt="Transport Mechanisms" width="800"/>
 
 *MCP 傳輸機制：遠端伺服器用 HTTP，本地程序用 Stdio*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 在範例中，`FileAgent` 使用 MCP 檔案系統工具讀檔案，`ReportAgent` 則產生一份包含行政摘要（1 句話）、3 個重點及建議的結構化報告。監督者自動協調此流程：
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.mo.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/mo/agentic.cf84dcda226374e3.png" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

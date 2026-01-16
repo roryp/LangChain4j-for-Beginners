@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.es.png" alt="Resultados de pruebas exitosas" width="800"/>
+<img src="../../../translated_images/es/test-results.ea5c98d8f3642043.webp" alt="Resultados de pruebas exitosas" width="800"/>
 
 *Ejecución de pruebas exitosa que muestra todas las pruebas pasando con cero fallos*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Este curso se centra en **pruebas unitarias** que se ejecutan localmente. Cada prueba demuestra un concepto específico de LangChain4j de forma aislada.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.es.png" alt="Pirámide de pruebas" width="800"/>
+<img src="../../../translated_images/es/testing-pyramid.2dd1079a0481e53e.webp" alt="Pirámide de pruebas" width="800"/>
 
 *Pirámide de pruebas que muestra el equilibrio entre pruebas unitarias (rápidas, aisladas), pruebas de integración (componentes reales) y pruebas end-to-end. Esta formación cubre las pruebas unitarias.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#debería mantener el historial de con
 
 Si usas Visual Studio Code, el Test Explorer proporciona una interfaz gráfica para ejecutar y depurar pruebas.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.es.png" alt="Explorador de pruebas de VS Code" width="800"/>
+<img src="../../../translated_images/es/vscode-testing.f02dd5917289dced.webp" alt="Explorador de pruebas de VS Code" width="800"/>
 
 *VS Code Test Explorer mostrando el árbol de pruebas con todas las clases de prueba Java y métodos de prueba individuales*
 
@@ -134,7 +134,7 @@ El Test Explorer muestra marcas verdes para las pruebas que pasan y proporciona 
 
 El patrón más simple prueba las plantillas de prompt sin llamar a ningún modelo de IA. Verificas que la sustitución de variables funcione correctamente y que los prompts estén formateados según lo esperado.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.es.png" alt="Pruebas de plantillas de prompt" width="800"/>
+<img src="../../../translated_images/es/prompt-template-testing.b902758ddccc8dee.webp" alt="Pruebas de plantillas de prompt" width="800"/>
 
 *Prueba de plantillas de prompt mostrando el flujo de sustitución de variables: plantilla con marcadores → valores aplicados → salida formateada verificada*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#prueba de formato de
 
 Al probar la lógica de conversación, usa Mockito para crear modelos falsos que devuelvan respuestas predeterminadas. Esto hace que las pruebas sean rápidas, gratuitas y deterministas.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.es.png" alt="Comparación Mock vs Real API" width="800"/>
+<img src="../../../translated_images/es/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Comparación Mock vs Real API" width="800"/>
 
 *Comparación que muestra por qué se prefieren los mocks para las pruebas: son rápidos, gratuitos, deterministas y no requieren claves de API*
 
@@ -231,7 +231,7 @@ Este patrón aparece en `01-introduction/src/test/java/com/example/langchain4j/s
 
 La memoria de la conversación debe mantener separados a múltiples usuarios. Esta prueba verifica que las conversaciones no mezclen contextos.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.es.png" alt="Aislamiento de conversación" width="800"/>
+<img src="../../../translated_images/es/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Aislamiento de conversación" width="800"/>
 
 *Prueba de aislamiento de conversación mostrando almacenes de memoria separados para diferentes usuarios para evitar la mezcla de contextos*
 
@@ -263,7 +263,7 @@ Cada conversación mantiene su propio historial independiente. En sistemas de pr
 
 Las herramientas son funciones que la IA puede invocar. Pruébalas directamente para asegurarte de que funcionan correctamente independientemente de las decisiones de la IA.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.es.png" alt="Pruebas de herramientas" width="800"/>
+<img src="../../../translated_images/es/tools-testing.3e1706817b0b3924.webp" alt="Pruebas de herramientas" width="800"/>
 
 *Pruebas de herramientas de forma independiente mostrando la ejecución de la herramienta con mocks sin llamadas a la IA para verificar la lógica de negocio*
 
@@ -294,7 +294,7 @@ Estas pruebas de `04-tools/src/test/java/com/example/langchain4j/agents/tools/Si
 
 Los sistemas RAG tradicionalmente requieren bases de datos vectoriales y servicios de embeddings. El patrón en memoria te permite probar todo el pipeline sin dependencias externas.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.es.png" alt="Pruebas RAG en memoria" width="800"/>
+<img src="../../../translated_images/es/rag-testing.ee7541b1e23934b1.webp" alt="Pruebas RAG en memoria" width="800"/>
 
 *Flujo de trabajo de pruebas RAG en memoria mostrando el parseo de documentos, almacenamiento de embeddings y búsqueda por similitud sin requerir una base de datos*
 

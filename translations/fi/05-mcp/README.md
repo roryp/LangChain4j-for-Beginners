@@ -35,7 +35,7 @@ Olet rakentanut keskustelevaa tekoälyä, hallinnut kehotteita, perustanut vasta
 
 Mallin kontekstiprotokolla (MCP) tarjoaa juuri tämän - standardoidun tavan tekoälysovelluksille löytää ja käyttää ulkoisia työkaluja. Sen sijaan, että kirjoittaisit räätälöityjä integraatioita jokaiselle tietolähteelle tai palvelulle, yhdistät MCP-palvelimiin, jotka tarjoavat kykynsä yhtenäisessä muodossa. Tekoälyagenttisi voi sitten automaattisesti löytää ja käyttää näitä työkaluja.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.fi.png" alt="MCP-vertailu" width="800"/>
+<img src="../../../translated_images/fi/mcp-comparison.9129a881ecf10ff5.png" alt="MCP-vertailu" width="800"/>
 
 *Ennen MCP:tä: Monimutkaiset pisteestä pisteeseen integraatiot. MCP:n jälkeen: Yksi protokolla, loputtomat mahdollisuudet.*
 
@@ -43,7 +43,7 @@ MCP ratkaisee tekoälyn kehityksen perusongelman: jokainen integraatio on räät
 
 MCP standardisoi tämän. MCP-palvelin tarjoaa työkalut selkeillä kuvauksilla ja skeemoilla. Mikä tahansa MCP-asiakas voi muodostaa yhteyden, löytää käytettävissä olevat työkalut ja käyttää niitä. Rakenna kerran, käytä kaikkialla.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.fi.png" alt="MCP-arkkitehtuuri" width="800"/>
+<img src="../../../translated_images/fi/mcp-architecture.b3156d787a4ceac9.png" alt="MCP-arkkitehtuuri" width="800"/>
 
 *Mallin kontekstiprotokollan arkkitehtuuri - standardoitu työkalujen löytäminen ja suoritus*
 
@@ -72,7 +72,7 @@ Kun asiakkaasi yhdistyy MCP-palvelimeen, se kysyy "Mitä työkaluja sinulla on?"
 
 MCP tukee erilaisia siirtomekanismeja. Tämä moduuli demonstroi paikallisten prosessien Stdio-siirtoa:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.fi.png" alt="Siirtomekanismit" width="800"/>
+<img src="../../../translated_images/fi/transport-mechanisms.2791ba7ee93cf020.png" alt="Siirtomekanismit" width="800"/>
 
 *MCP:n siirtomekanismit: HTTP etäpalvelimille, Stdio paikallisprosesseille*
 
@@ -175,7 +175,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 Demossa `FileAgent` lukee tiedoston MCP:n tiedostojärjestelmätyökaluilla ja `ReportAgent` tuottaa jäsennellyn raportin, jonka osina ovat tiivistelmä (1 lause), 3 keskeistä kohtaa ja suositukset. Valvoja orkestroi tämän työnkulun automaattisesti:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.fi.png" alt="Agenttimoduuli" width="800"/>
+<img src="../../../translated_images/fi/agentic.cf84dcda226374e3.png" alt="Agenttimoduuli" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

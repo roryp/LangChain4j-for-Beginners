@@ -53,7 +53,7 @@ Language models are stateless. Each API call is independent. If you send "My nam
 
 This is fine for simple Q&A but useless for real applications. Customer service bots need to remember what you told them. Personal assistants need context. Any multi-turn conversation requires memory.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.en.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/en/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *The difference between stateless (independent calls) and stateful (context-aware) conversations*
 
@@ -61,7 +61,7 @@ This is fine for simple Q&A but useless for real applications. Customer service 
 
 Before diving into conversations, it's important to understand tokens - the basic units of text that language models process:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.en.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/en/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *Example of how text is broken into tokens - "I love AI!" becomes 4 separate processing units*
 
@@ -73,7 +73,7 @@ Chat memory solves the stateless problem by maintaining conversation history. Be
 
 LangChain4j provides memory implementations that handle this automatically. You choose how many messages to retain and the framework manages the context window.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.en.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/en/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory maintains a sliding window of recent messages, automatically dropping old ones*
 
@@ -212,7 +212,7 @@ From the Spring Boot Dashboard, you can:
 
 Simply click the play button next to "introduction" to start this module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.en.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/en/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # All modules
 
 The application provides a web interface with two chat implementations side-by-side.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.en.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/en/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *Dashboard showing both Simple Chat (stateless) and Conversational Chat (stateful) options*
 
@@ -290,7 +290,7 @@ The application provides a web interface with two chat implementations side-by-s
 
 Try this first. Ask "My name is John" and then immediately ask "What's my name?" The model won't remember because each message is independent. This demonstrates the core problem with basic language model integration - no conversation context.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.en.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/en/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *AI doesn't remember your name from the previous message*
 
@@ -298,7 +298,7 @@ Try this first. Ask "My name is John" and then immediately ask "What's my name?"
 
 Now try the same sequence here. Ask "My name is John" and then "What's my name?" This time it remembers. The difference is MessageWindowChatMemory - it maintains conversation history and includes it with each request. This is how production conversational AI works.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.en.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/en/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *AI remembers your name from earlier in the conversation*
 

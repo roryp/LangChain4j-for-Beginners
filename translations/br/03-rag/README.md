@@ -49,7 +49,7 @@ Pense em RAG como dar ao modelo uma biblioteca de referência. Quando você faz 
 
 Isso fundamenta as respostas do modelo nos seus dados reais em vez de confiar apenas no conhecimento do treinamento ou inventar respostas.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.br.png" alt="Arquitetura RAG" width="800"/>
+<img src="../../../translated_images/br/rag-architecture.ccb53b71a6ce407f.png" alt="Arquitetura RAG" width="800"/>
 
 *Fluxo de trabalho RAG – da consulta do usuário à busca semântica e geração contextual de resposta*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.br.png" alt="Espaço de Embeddings Vetoriais" width="800"/>
+<img src="../../../translated_images/br/vector-embeddings.2ef7bdddac79a327.png" alt="Espaço de Embeddings Vetoriais" width="800"/>
 
 *Documentos representados como vetores no espaço de embeddings – conteúdos similares se agrupam*
 
@@ -160,7 +160,7 @@ No Spring Boot Dashboard, você pode:
 
 Basta clicar no botão play ao lado de "rag" para iniciar este módulo, ou iniciar todos os módulos juntos.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.br.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/br/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Opção 2: Usando scripts shell**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Todos os módulos
 
 A aplicação fornece uma interface web para upload de documentos e perguntas.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.br.png" alt="Interface da Aplicação RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/br/rag-homepage.d90eb5ce1b3caa94.png" alt="Interface da Aplicação RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interface da aplicação RAG – carregue documentos e faça perguntas*
 
@@ -248,7 +248,7 @@ Agora faça perguntas específicas sobre o conteúdo do documento. Tente algo fa
 
 Note que cada resposta inclui referências das fontes com pontuações de similaridade. Essas pontuações (de 0 a 1) mostram o quão relevante cada bloco foi para sua pergunta. Pontuações mais altas significam melhores correspondências. Isso permite verificar a resposta com o material fonte.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.br.png" alt="Resultados da Consulta RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/br/rag-query-results.6d69fcec5397f355.png" alt="Resultados da Consulta RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Resultados da consulta mostrando resposta com referências das fontes e pontuações de relevância*
 

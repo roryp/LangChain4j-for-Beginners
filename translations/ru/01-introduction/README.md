@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Это подходит для простых вопросов и ответов, но бесполезно для реальных приложений. Боты службы поддержки должны помнить, что вы им сказали. Личные помощники нуждаются в контексте. Любой многоходовой разговор требует памяти.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.ru.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/ru/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Разница между stateless (независимые вызовы) и stateful (с учетом контекста) разговорами*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Прежде чем погружаться в разговоры, важно понять токены — базовые единицы текста, которые обрабатывают языковые модели:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.ru.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/ru/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
 
 *Пример того, как текст разбивается на токены — "I love AI!" становится 4 отдельными единицами обработки*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j предоставляет реализации памяти, которые делают это автоматически. Вы выбираете, сколько сообщений сохранять, а фреймворк управляет контекстным окном.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.ru.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/ru/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory поддерживает скользящее окно последних сообщений, автоматически удаляя старые*
 
@@ -212,7 +212,7 @@ Dev контейнер включает расширение Spring Boot Dashboa
 
 Просто нажмите кнопку запуска рядом с "introduction", чтобы запустить этот модуль, или запустите все модули сразу.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.ru.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ru/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
 
 **Вариант 2: Использование shell-скриптов**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Приложение предоставляет веб-интерфейс с двумя реализациями чата, расположенными рядом.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.ru.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/ru/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
 
 *Панель управления с вариантами Simple Chat (stateless) и Conversational Chat (stateful)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Попробуйте сначала здесь. Скажите "Меня зовут Джон", а затем сразу спросите "Как меня зовут?" Модель не запомнит, потому что каждое сообщение независимо. Это демонстрирует основную проблему базовой интеграции языковой модели — отсутствие контекста разговора.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.ru.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/ru/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
 
 *ИИ не помнит ваше имя из предыдущего сообщения*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Теперь попробуйте ту же последовательность здесь. Скажите "Меня зовут Джон", а затем "Как меня зовут?" На этот раз модель запомнит. Разница в MessageWindowChatMemory — она поддерживает историю разговора и включает её в каждый запрос. Так работает производственный разговорный ИИ.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.ru.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/ru/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
 
 *ИИ помнит ваше имя из начала разговора*
 

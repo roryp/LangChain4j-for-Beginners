@@ -38,7 +38,7 @@ LangChain4j 是一個 Java 函式庫，簡化了構建 AI 驅動應用程序的�
 
 LangChain 中的「鏈（chain）」指的是將多個組件串接在一起—你可能會將提示鏈到模型，再鏈到解析器，或者將多個 AI 調用串接，其中一個輸出成為下一個輸入。本快速開始著重於基礎，後續將探索更複雜的鏈條。
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.mo.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/mo/langchain-concept.ad1fe6cf063515e1.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *LangChain4j 中鏈接組件 — 以組建塊連接來創建強大的 AI 工作流程*
 
@@ -50,7 +50,7 @@ LangChain 中的「鏈（chain）」指的是將多個組件串接在一起—�
 
 **MessageWindowChatMemory** — 維護會話歷史。沒有此功能，每次請求都是獨立的。有了它，AI 記住先前的對話並在多輪對話中保持上下文。
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.mo.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/mo/architecture.eedc993a1c576839.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j 架構 — 核心組件協同運作以支持你的 AI 應用*
 

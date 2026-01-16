@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.sw.png" alt="Matokeo ya Majaribio Yaliyofanikiwa" width="800"/>
+<img src="../../../translated_images/sw/test-results.ea5c98d8f3642043.png" alt="Matokeo ya Majaribio Yaliyofanikiwa" width="800"/>
 
 *Uendeshaji wa majaribio uliofanikiwa unaonyesha majaribio yote yamefaulu bila kushindwa*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Kozi hii inalenga kwenye **majaribio ya kitengo** yanayoendesha kwa ndani. Kila jaribio linaonyesha dhana maalum ya LangChain4j kwa upweke.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.sw.png" alt="Piramidi ya Kupima" width="800"/>
+<img src="../../../translated_images/sw/testing-pyramid.2dd1079a0481e53e.png" alt="Piramidi ya Kupima" width="800"/>
 
 *Piramidi ya kupima ikionyesha uwiano kati ya majaribio ya kitengo (haraka, yaliyo pekee), majaribio ya kuunganisha (vifaa halisi), na majaribio ya mwisho-mwisho. Mafunzo haya yanashughulikia upimaji wa kitengo.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#inapaswa kudumisha historia ya mazung
 
 Ikiwa unatumia Visual Studio Code, Test Explorer hutoa kiolesura cha picha kwa kuendesha na kutatua majaribio.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.sw.png" alt="Kichunguzi cha Majaribio cha VS Code" width="800"/>
+<img src="../../../translated_images/sw/vscode-testing.f02dd5917289dced.png" alt="Kichunguzi cha Majaribio cha VS Code" width="800"/>
 
 *Kichunguzi cha Majaribio cha VS Code kinachoonyesha muundo wa majaribio pamoja na madarasa yote ya majaribio ya Java na njia binafsi za majaribio*
 
@@ -134,7 +134,7 @@ Test Explorer inaonyesha alama za tick za kijani kwa majaribio yaliyopita na ina
 
 Mfano rahisi hujaribu mifano ya prompt bila kuita modeli yoyote ya AI. Unahakiki kwamba uingizaji wa vigezo unafanya kazi ipasavyo na prompts zimepangwa kama inavyotarajiwa.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.sw.png" alt="Kupima Mifano ya Prompt" width="800"/>
+<img src="../../../translated_images/sw/prompt-template-testing.b902758ddccc8dee.png" alt="Kupima Mifano ya Prompt" width="800"/>
 
 *Kupima mifano ya prompt kuonyesha mchakato wa uingizaji wa vigezo: template yenye nafasi za vigezo → thamani zinawekwa → pato lililopangwa linaridhiwa*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#Jaribio la ufomati w
 
 Unapotumia mantiki ya mazungumzo, tumia Mockito kuunda modeli bandia ambazo zinarudisha majibu yaliyopangwa. Hii inafanya majaribio kuwa ya haraka, ya bure, na yasiyotabirika.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.sw.png" alt="Mock dhidi ya API Halisi" width="800"/>
+<img src="../../../translated_images/sw/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock dhidi ya API Halisi" width="800"/>
 
 *Ulinganisho unaoonyesha kwanini mocks zinapendekezwa kwa upimaji: ni haraka, haziitaji malipo, zina matokeo thabiti, na hazihitaji funguo za API*
 
@@ -231,7 +231,7 @@ Mfano huu unaonekana katika `01-introduction/src/test/java/com/example/langchain
 
 Kumbukumbu za mazungumzo lazima ziweke watumiaji wengi kando. Jaribio hili linathibitisha kwamba mazungumzo hayachanganywi.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.sw.png" alt="Kutengwa kwa Mazungumzo" width="800"/>
+<img src="../../../translated_images/sw/conversation-isolation.e00336cf8f7a3e3f.png" alt="Kutengwa kwa Mazungumzo" width="800"/>
 
 *Kupima kutengwa kwa mazungumzo kuonyesha maduka ya kumbukumbu tofauti kwa watumiaji tofauti ili kuzuia kuchanganyika kwa muktadha*
 
@@ -263,7 +263,7 @@ Kila mazungumzo yana historia yake huru. Katika mifumo ya uzalishaji, kutengwa h
 
 Zana ni kazi ambazo AI inaweza kuita. Zipime moja kwa moja kuhakikisha zinafanya kazi kwa usahihi bila kujali maamuzi ya AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.sw.png" alt="Kupima Zana" width="800"/>
+<img src="../../../translated_images/sw/tools-testing.3e1706817b0b3924.png" alt="Kupima Zana" width="800"/>
 
 *Kupima zana kwa kujitegemea kuonyesha utekelezaji wa zana za mock bila miito ya AI ili kuthibitisha mantiki ya biashara*
 
@@ -294,7 +294,7 @@ Majaribio haya kutoka `04-tools/src/test/java/com/example/langchain4j/agents/too
 
 Mifumo ya RAG kawaida yanahitaji hifadhidata za vekta na huduma za embedding. Mfano wa ndani ya kumbukumbu unakuwezesha kupima mchakato mzima bila utegemezi wa nje.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.sw.png" alt="Kupima RAG Ndani ya Kumbukumbu" width="800"/>
+<img src="../../../translated_images/sw/rag-testing.ee7541b1e23934b1.png" alt="Kupima RAG Ndani ya Kumbukumbu" width="800"/>
 
 *Mtiririko wa kazi wa kupima RAG ndani ya kumbukumbu unaonyesha kusomwa kwa nyaraka, uhifadhi wa embeddings, na utafutaji wa ufananisho bila kuhitaji hifadhidata*
 

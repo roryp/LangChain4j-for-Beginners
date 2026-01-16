@@ -38,7 +38,7 @@ LangChain4j ایک جاوا لائبریری ہے جو AI سے چلنے والی
 
 LangChain میں "چین" سے مراد متعدد اجزاء کو ایک ساتھ جوڑنا ہے - آپ ایک پرامپٹ کو ماڈل سے پارسر تک جوڑ سکتے ہیں، یا کئی AI کالز کو اس طرح جوڑ سکتے ہیں کہ ایک آؤٹ پٹ اگلے ان پٹ میں استعمال ہو۔ یہ فوری آغاز بنیادی باتوں پر توجہ دیتا ہے اس سے پہلے کہ پیچیدہ چینز کو دریافت کیا جائے۔
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.ur.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/ur/langchain-concept.ad1fe6cf063515e1.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *LangChain4j میں چیننگ اجزاء - تعمیراتی بلاکس طاقتور AI ورک فلو بنانے کے لیے جڑتے ہیں*
 
@@ -50,7 +50,7 @@ LangChain میں "چین" سے مراد متعدد اجزاء کو ایک سات
 
 **MessageWindowChatMemory** - گفتگو کی تاریخ برقرار رکھتا ہے۔ اس کے بغیر ہر درخواست آزاد ہوگی۔ اس کے ساتھ، AI پچھلے پیغامات یاد رکھتا ہے اور متعدد چکروں میں سیاق و سباق برقرار رکھتا ہے۔
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.ur.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/ur/architecture.eedc993a1c576839.png" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j کی ساخت - بنیادی اجزاء مل کر آپ کی AI ایپلیکیشنز کو طاقت دیتے ہیں*
 

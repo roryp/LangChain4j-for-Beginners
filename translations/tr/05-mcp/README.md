@@ -35,7 +35,7 @@ Konuşma tabanlı yapay zeka oluşturdunuz, promptları ustaca kullandınız, ya
 
 Model Context Protocol (MCP) tam da bunu sağlar — yapay zeka uygulamalarının harici araçları keşfetmesi ve kullanması için standart bir yol. Her veri kaynağı veya servis için özel entegrasyonlar yazmak yerine, yeteneklerini tutarlı bir biçimde açan MCP sunucularına bağlanırsınız. Yapay zeka ajanınız bu araçları otomatik olarak keşfedip kullanabilir.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.tr.png" alt="MCP Karşılaştırması" width="800"/>
+<img src="../../../translated_images/tr/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Karşılaştırması" width="800"/>
 
 *MCP’den Önce: Karmaşık nokta-noktaya entegrasyonlar. MCP’den Sonra: Tek protokol, sonsuz olasılık.*
 
@@ -43,7 +43,7 @@ MCP yapay zeka geliştirmede temel bir sorunu çözer: her entegrasyon özeldir.
 
 MCP bunu standartlaştırır. Bir MCP sunucusu araçları açık tanımlar ve şemalarla sunar. Herhangi bir MCP istemcisi bağlanabilir, mevcut araçları keşfedebilir ve onları kullanabilir. Bir kere inşa edin, her yerde kullanın.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.tr.png" alt="MCP Mimari" width="800"/>
+<img src="../../../translated_images/tr/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Mimari" width="800"/>
 
 *Model Context Protocol mimarisi - standartlaştırılmış araç keşfi ve yürütme*
 
@@ -71,7 +71,7 @@ LangChain4j ile MCP kullanmak için bu Maven bağımlılığını ekleyin:
 
 MCP farklı taşıma mekanizmalarını destekler. Bu modül, yerel süreçler için Stdio taşımayı gösterir:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.tr.png" alt="Taşıma Mekanizmaları" width="800"/>
+<img src="../../../translated_images/tr/transport-mechanisms.2791ba7ee93cf020.png" alt="Taşıma Mekanizmaları" width="800"/>
 
 *MCP taşıma mekanizmaları: uzak sunucular için HTTP, yerel süreçler için Stdio*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 Demoda, `FileAgent` MCP dosya sistemi araçlarını kullanarak dosya okur, `ReportAgent` ise yönetici özeti (1 cümle), 3 anahtar nokta ve öneriler içeren yapılandırılmış bir rapor oluşturur. Supervisor bu akışı otomatik yönetir:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.tr.png" alt="Agentik Modül" width="800"/>
+<img src="../../../translated_images/tr/agentic.cf84dcda226374e3.png" alt="Agentik Modül" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

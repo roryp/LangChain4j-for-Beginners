@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.hu.png" alt="Sikeres teszteredmények" width="800"/>
+<img src="../../../translated_images/hu/test-results.ea5c98d8f3642043.png" alt="Sikeres teszteredmények" width="800"/>
 
 *Sikeres tesztfuttatás, minden teszt sikeresen lefutott, hibák nélkül*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Ez a kurzus a helyben futó, **egységtesztekre** koncentrál. Minden teszt egy-egy LangChain4j-koncepciót mutat be izolált módon.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.hu.png" alt="Tesztelési piramis" width="800"/>
+<img src="../../../translated_images/hu/testing-pyramid.2dd1079a0481e53e.png" alt="Tesztelési piramis" width="800"/>
 
 *A tesztelési piramis bemutatja az egyensúlyt az egységtesztek (gyors, izolált), integrációs tesztek (valódi komponensek) és end-to-end tesztek között. Ez a képzés az egységtesztelést fedi le.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#kellene megőrizni a beszélgetés el
 
 Ha Visual Studio Code-ot használsz, a Test Explorer grafikus felületet biztosít a tesztek futtatásához és hibakereséséhez.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.hu.png" alt="VS Code Tesztböngésző" width="800"/>
+<img src="../../../translated_images/hu/vscode-testing.f02dd5917289dced.png" alt="VS Code Tesztböngésző" width="800"/>
 
 *A VS Code Tesztböngésző a tesztek fáját mutatja az összes Java tesztosztállyal és egyes tesztmetódusokkal*
 
@@ -134,7 +134,7 @@ A Test Explorer zöld pipa ikonokat mutat a sikeres tesztek mellett, és részle
 
 A legegyszerűbb minta a prompt sablonok tesztelése AI-modell meghívása nélkül. Ellenőrzöd, hogy a változók behelyettesítése helyes, és a promptok a várt formátumban jelennek meg.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.hu.png" alt="Prompt sablonok tesztelése" width="800"/>
+<img src="../../../translated_images/hu/prompt-template-testing.b902758ddccc8dee.png" alt="Prompt sablonok tesztelése" width="800"/>
 
 *A prompt sablonok tesztelését bemutató ábra: sablon helykitöltőkkel → értékek alkalmazása → formázott kimenet ellenőrzése*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#prompt sablon formá
 
 A beszélgetés logikájának tesztelésekor használd a Mockito-t hamis modellek létrehozására, amelyek előre meghatározott válaszokat adnak. Ezáltal a tesztek gyorsak, ingyenesek és determinisztikusak lesznek.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.hu.png" alt="Mock és valós API összehasonlítása" width="800"/>
+<img src="../../../translated_images/hu/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock és valós API összehasonlítása" width="800"/>
 
 *Összehasonlítás, ami megmutatja, miért kedveltek a mockok a tesztelésben: gyorsak, ingyenesek, determinisztikusak és nem igényelnek API-kulcsokat*
 
@@ -231,7 +231,7 @@ Ez a minta megtalálható a `01-introduction/src/test/java/com/example/langchain
 
 A beszélgetések memóriájának külön kell tartania a több felhasználót. Ez a teszt ellenőrzi, hogy a beszélgetések nem keverik össze a kontextusokat.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.hu.png" alt="Beszélgetések izolációja" width="800"/>
+<img src="../../../translated_images/hu/conversation-isolation.e00336cf8f7a3e3f.png" alt="Beszélgetések izolációja" width="800"/>
 
 *A beszélgetési izoláció tesztelése: külön memóriatárolók különböző felhasználók számára a kontextus összekeveredésének megakadályozására*
 
@@ -263,7 +263,7 @@ Minden beszélgetés saját, független előzményeket őriz. Termelési rendsze
 
 Az eszközök olyan függvények, amelyeket az AI meghívhat. Teszteld őket közvetlenül, hogy biztosítsd működésüket függetlenül az AI döntéseitől.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.hu.png" alt="Eszközök tesztelése" width="800"/>
+<img src="../../../translated_images/hu/tools-testing.3e1706817b0b3924.png" alt="Eszközök tesztelése" width="800"/>
 
 *Eszközök önálló tesztelését bemutató ábra: mock eszköz végrehajtás AI-hívások nélkül az üzleti logika ellenőrzéséhez*
 
@@ -294,7 +294,7 @@ Ezek a tesztek a `04-tools/src/test/java/com/example/langchain4j/agents/tools/Si
 
 A RAG-rendszerek hagyományosan vektoralapú adatbázisokat és embedding szolgáltatásokat igényelnek. A memóriában történő minta lehetővé teszi az egész pipeline tesztelését külső függőségek nélkül.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.hu.png" alt="Memóriában történő RAG tesztelés" width="800"/>
+<img src="../../../translated_images/hu/rag-testing.ee7541b1e23934b1.png" alt="Memóriában történő RAG tesztelés" width="800"/>
 
 *Memóriában történő RAG tesztelési munkafolyamat: dokumentumfeldolgozás, embedding tárolás és hasonlóságkeresés adatbázis nélkül*
 

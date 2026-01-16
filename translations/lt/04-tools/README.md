@@ -61,7 +61,7 @@ DI agentas su įrankiais naudoja samprotavimo ir veikimo modelį (ReAct):
 5. Įrankis vykdo ir grąžina duomenis  
 6. Agentas įtraukia rezultatą ir pateikia galutinį atsakymą  
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.lt.png" alt="ReAct modelis" width="800"/>
+<img src="../../../translated_images/lt/react-pattern.86aafd3796f3fd13.png" alt="ReAct modelis" width="800"/>
 
 *ReAct modelis – kaip DI agentai keičiasi tarp samprotavimo ir veikimo sprendžiant problemas*
 
@@ -138,7 +138,7 @@ Alternatyvūs būdai (rankinis `AiServices.builder()`) reikalauja daugiau kodo i
 
 **Įrankių grandinimas** – DI gali kviesti kelis įrankius paeiliui. Užduokite klausimą „Koks oras Sietle ir ar turėčiau pasiimti skėčio?“ ir stebėkite, kaip jis sujungia `getCurrentWeather` ir samprotauja apie lietaus reikmenis.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.lt.png" alt="Įrankių grandinimas" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/lt/tool-chaining.3b25af01967d6f7b.png" alt="Įrankių grandinimas" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sekos įrankių kvietimai – vieno įrankio išvestis tampa kito sprendimo pagrindu*
 
@@ -171,7 +171,7 @@ Per Spring Boot Dashboard galite:
 
 Tiesiog spustelėkite paleidimo mygtuką prie „tools“, kad pradėtumėte šį modulį, arba paleiskite visus modulius iš karto.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.lt.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/lt/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
 
 **2 variantas: Naudojant komandinės eilutės scenarijus**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Visi moduliai
 
 Programa suteikia žiniatinklio sąsają, kur galite bendrauti su DI agentu, turinčiu prieigą prie orų ir temperatūros konvertavimo įrankių.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.lt.png" alt="DI agentų įrankių sąsaja" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/lt/tools-homepage.4b4cd8b2717f9621.png" alt="DI agentų įrankių sąsaja" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *DI agentų įrankių sąsaja – greiti pavyzdžiai ir pokalbio sąsaja interakcijai su įrankiais*
 
@@ -257,7 +257,7 @@ Dabar pabandykite kažką sudėtingesnio: „Koks oras Sietle ir konvertuokite j
 
 Pokalbio sąsaja palaiko pokalbio istoriją, leidžianti turėti kelių žingsnių bendravimą. Galite matyti visus ankstesnius klausimus ir atsakymus, todėl lengviau sekti pokalbį ir suprasti, kaip agentas kuria kontekstą per kelis mainus.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.lt.png" alt="Pokalbis su keliais įrankių kvietimais" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/lt/tools-conversation-demo.89f2ce9676080f59.png" alt="Pokalbis su keliais įrankių kvietimais" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Daugiakartinis pokalbis, rodantis paprastus konvertavimus, orų užklausas ir įrankių grandinimą*
 

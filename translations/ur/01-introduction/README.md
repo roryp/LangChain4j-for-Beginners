@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 یہ سادہ سوال و جواب کے لیے ٹھیک ہے لیکن حقیقی ایپلیکیشنز کے لیے بے کار ہے۔ کسٹمر سروس بوٹس کو یاد رکھنا ہوتا ہے کہ آپ نے کیا کہا تھا۔ ذاتی معاونین کو سیاق و سباق کی ضرورت ہوتی ہے۔ کوئی بھی کثیر چکر گفتگو میموری کی متقاضی ہوتی ہے۔
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.ur.png" alt="بغیر حالت بمقابلہ حالت دار گفتگو" width="800"/>
+<img src="../../../translated_images/ur/stateless-vs-stateful.cc4a4765e649c41a.png" alt="بغیر حالت بمقابلہ حالت دار گفتگو" width="800"/>
 
 *بغیر حالت (آزاد کالز) اور حالت دار (سیاق و سباق سے آگاہ) گفتگو کے درمیان فرق*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 گفتگو میں غوطہ لگانے سے پہلے، ٹوکنز کو سمجھنا ضروری ہے - متن کی بنیادی اکائیاں جنہیں زبان کے ماڈلز پروسیس کرتے ہیں:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.ur.png" alt="ٹوکن کی وضاحت" width="800"/>
+<img src="../../../translated_images/ur/token-explanation.c39760d8ec650181.png" alt="ٹوکن کی وضاحت" width="800"/>
 
 *مثال کہ کس طرح متن کو ٹوکنز میں توڑا جاتا ہے - "I love AI!" چار الگ الگ پروسیسنگ یونٹس بن جاتے ہیں*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j میموری کی ایسی امپلیمنٹیشنز فراہم کرتا ہے جو یہ خودکار طریقے سے سنبھالتی ہیں۔ آپ منتخب کرتے ہیں کہ کتنے پیغامات رکھنا ہیں اور فریم ورک سیاق و سباق کی ونڈو کو منظم کرتا ہے۔
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.ur.png" alt="میموری ونڈو کا تصور" width="800"/>
+<img src="../../../translated_images/ur/memory-window.bbe67f597eadabb3.png" alt="میموری ونڈو کا تصور" width="800"/>
 
 *MessageWindowChatMemory حالیہ پیغامات کی سلائیڈنگ ونڈو برقرار رکھتا ہے، پرانے پیغامات خود بخود ہٹا دیتا ہے*
 
@@ -212,7 +212,7 @@ Spring Boot ڈیش بورڈ سے آپ کر سکتے ہیں:
 
 بس "introduction" کے ساتھ پلے بٹن پر کلک کریں تاکہ یہ ماڈیول شروع ہو، یا تمام ماڈیولز کو ایک ساتھ شروع کریں۔
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.ur.png" alt="Spring Boot ڈیش بورڈ" width="400"/>
+<img src="../../../translated_images/ur/dashboard.69c7479aef09ff6b.png" alt="Spring Boot ڈیش بورڈ" width="400"/>
 
 **اختیار 2: شیل اسکرپٹس کا استعمال**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 ایپلیکیشن ایک ویب انٹرفیس فراہم کرتی ہے جس میں دو چیٹ امپلیمنٹیشنز ساتھ ساتھ ہیں۔
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.ur.png" alt="ایپلیکیشن ہوم اسکرین" width="800"/>
+<img src="../../../translated_images/ur/home-screen.121a03206ab910c0.png" alt="ایپلیکیشن ہوم اسکرین" width="800"/>
 
 *ڈیش بورڈ جو سادہ چیٹ (بغیر حالت) اور گفتگو چیٹ (حالت دار) دونوں آپشنز دکھا رہا ہے*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 پہلے یہ آزمائیں۔ پوچھیں "میرا نام جان ہے" اور فوراً بعد پوچھیں "میرا نام کیا ہے؟" ماڈل یاد نہیں رکھے گا کیونکہ ہر پیغام آزاد ہوتا ہے۔ یہ بنیادی زبان ماڈل انضمام کا بنیادی مسئلہ ظاہر کرتا ہے - کوئی گفتگو کا سیاق و سباق نہیں۔
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.ur.png" alt="بغیر حالت چیٹ ڈیمو" width="800"/>
+<img src="../../../translated_images/ur/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="بغیر حالت چیٹ ڈیمو" width="800"/>
 
 *AI پچھلے پیغام سے آپ کا نام یاد نہیں رکھتا*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 اب یہی سلسلہ یہاں آزمائیں۔ پوچھیں "میرا نام جان ہے" اور پھر "میرا نام کیا ہے؟" اس بار یہ یاد رکھتا ہے۔ فرق MessageWindowChatMemory ہے - یہ گفتگو کی تاریخ برقرار رکھتا ہے اور ہر درخواست کے ساتھ شامل کرتا ہے۔ یہی طریقہ ہے جس سے پروڈکشن گفتگو AI کام کرتی ہے۔
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.ur.png" alt="حالت دار چیٹ ڈیمو" width="800"/>
+<img src="../../../translated_images/ur/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="حالت دار چیٹ ڈیمو" width="800"/>
 
 *AI گفتگو کے شروع میں آپ کا نام یاد رکھتا ہے*
 

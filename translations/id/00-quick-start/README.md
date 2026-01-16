@@ -38,7 +38,7 @@ LangChain4j adalah perpustakaan Java yang menyederhanakan pembangunan aplikasi b
 
 "Chain" dalam LangChain merujuk pada menggabungkan beberapa komponen bersama — Anda mungkin menghubungkan prompt ke model ke parser, atau menggabungkan beberapa panggilan AI di mana output satu menjadi input berikutnya. Quickstart ini fokus pada dasar-dasar sebelum menjelajahi rantai yang lebih kompleks.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.id.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/id/langchain-concept.ad1fe6cf063515e1.png" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Menggabungkan komponen di LangChain4j - blok bangunan terhubung untuk membuat alur kerja AI yang kuat*
 
@@ -50,7 +50,7 @@ Kita akan menggunakan tiga komponen inti:
 
 **MessageWindowChatMemory** - Mempertahankan riwayat percakapan. Tanpa ini, setiap permintaan terpisah. Dengan ini, AI mengingat pesan sebelumnya dan mempertahankan konteks selama beberapa putaran.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.id.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/id/architecture.eedc993a1c576839.png" alt="LangChain4j Architecture" width="800"/>
 
 *Arsitektur LangChain4j - komponen inti bekerja bersama untuk menggerakkan aplikasi AI Anda*
 

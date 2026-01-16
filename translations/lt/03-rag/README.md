@@ -49,7 +49,7 @@ Galvokite apie RAG kaip suteikiant modeliui nuorodų biblioteką. Kai užduodate
 
 Tai pagrindžia modelio atsakymus jūsų tikrais duomenimis vietoje to, kad remtųsi mokymo žiniomis ar kurtų atsakymus iš oro.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.lt.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/lt/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
 
 *RAG darbo eiga – nuo vartotojo užklausos iki semantinės paieškos ir kontekstinio atsakymo generavimo*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.lt.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/lt/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
 
 *Dokumentai pateikti kaip vektoriai įterpinių erdvėje – panašus turinys grupuojasi kartu*
 
@@ -160,7 +160,7 @@ Iš Spring Boot Dashboard galite:
 
 Tiesiog paspauskite paleidimo mygtuką šalia „rag“, kad paleistumėte šį modulį, arba paleiskite visus modulius vienu metu.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.lt.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/lt/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
 
 **2 variantas: Naudojant shell skriptus**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Visi moduliai
 
 Programa suteikia internetinę sąsają dokumentų įkėlimui ir klausimų uždavimui.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.lt.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/lt/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG programos sąsaja – įkelkite dokumentus ir užduokite klausimus*
 
@@ -248,7 +248,7 @@ Dabar paklauskite konkrečių klausimų apie dokumentų turinį. Išbandykite fa
 
 Atkreipkite dėmesį, kad kiekvienas atsakymas pateikia šaltinių nuorodas su panašumo balais. Šie balai (nuo 0 iki 1) rodo, kiek kiekvienas fragmentas buvo susijęs su jūsų klausimu. Aukštesni balai reiškia geresnius atitikimus. Tai leidžia jums patikrinti atsakymą pagal šaltinio medžiagą.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.lt.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/lt/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Užklausos rezultatai rodo atsakymą su šaltinių nuorodomis ir aktualumo balais*
 

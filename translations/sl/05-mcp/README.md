@@ -35,7 +35,7 @@ Zgradili ste pogovorno umetno inteligenco, obvladali pozive, utemeljili odgovore
 
 Model Context Protocol (MCP) zagotavlja prav to – standardni način, da AI aplikacije odkrijejo in uporabljajo zunanja orodja. Namesto pisanja lastnih integracij za vsak vir podatkov ali storitev, se povežete s strežniki MCP, ki svoje zmožnosti razkrivajo v doslednem formatu. Vaš AI agent lahko nato ta orodja samodejno odkrije in uporabi.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.sl.png" alt="Primerjava MCP" width="800"/>
+<img src="../../../translated_images/sl/mcp-comparison.9129a881ecf10ff5.png" alt="Primerjava MCP" width="800"/>
 
 *Pred MCP: Kompleksne integracije od točke do točke. Po MCP: en protokol, neskončne možnosti.*
 
@@ -43,7 +43,7 @@ MCP rešuje temeljni problem v razvoju AI: vsaka integracija je unikatna. Želit
 
 MCP to standardizira. MCP strežnik razkriva orodja s jasnimi opisi in shemami. Vsak MCP odjemalec se lahko poveže, odkrije razpoložljiva orodja in jih uporabi. Zgradi enkrat, uporabljaj povsod.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.sl.png" alt="Arhitektura MCP" width="800"/>
+<img src="../../../translated_images/sl/mcp-architecture.b3156d787a4ceac9.png" alt="Arhitektura MCP" width="800"/>
 
 *Arhitektura protokola konteksta modela – standardizirano odkrivanje in izvajanje orodij*
 
@@ -71,7 +71,7 @@ Ko se vaš odjemalec poveže s MCP strežnikom, vpraša "Katera orodja imate?" S
 
 MCP podpira različne transportne mehanizme. Ta modul prikazuje Stdio transport za lokalne procese:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.sl.png" alt="Transportni mehanizmi" width="800"/>
+<img src="../../../translated_images/sl/transport-mechanisms.2791ba7ee93cf020.png" alt="Transportni mehanizmi" width="800"/>
 
 *Transportni mehanizmi MCP: HTTP za oddaljene strežnike, Stdio za lokalne procese*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 V demu `FileAgent` prebere datoteko z uporabo MCP orodij datotečnega sistema, `ReportAgent` pa generira strukturirano poročilo z izvršnim povzetkom (1 stavek), 3 ključnimi točkami in priporočili. Nadzornik samodejno orkestrira ta tok:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.sl.png" alt="Agentni modul" width="800"/>
+<img src="../../../translated_images/sl/agentic.cf84dcda226374e3.png" alt="Agentni modul" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐
