@@ -1,0 +1,362 @@
+{
+  "LangChain4j.90e1d693fcc71b50.webp": {
+    "original_hash": "2b2dcf50ebdefc1d9e53029c330bfe50",
+    "translation_date": "2026-01-16T10:25:20+00:00",
+    "source_file": "images/LangChain4j.png",
+    "language_code": "el"
+  },
+  "learning-path.ac2da6720e77c316.webp": {
+    "original_hash": "3ba2b297e9e94db30c122c060eb65f19",
+    "translation_date": "2026-01-16T10:25:25+00:00",
+    "source_file": "images/learning-path.png",
+    "language_code": "el"
+  },
+  "simple-chat-stateless-demo.13aeb3978eab3234.webp": {
+    "original_hash": "aae414c18969e827e72583d90d7f77fc",
+    "translation_date": "2026-01-16T10:25:31+00:00",
+    "source_file": "01-introduction/images/simple-chat-stateless-demo.png",
+    "language_code": "el"
+  },
+  "stateless-vs-stateful.cc4a4765e649c41a.webp": {
+    "original_hash": "1c9e89b85ad199860cd0ccee393f1b9a",
+    "translation_date": "2026-01-16T10:25:40+00:00",
+    "source_file": "01-introduction/images/stateless-vs-stateful.png",
+    "language_code": "el"
+  },
+  "simple-chat-empty.bac090137c1fa044.webp": {
+    "original_hash": "7b6ce47b8197b9e2a08992e21eb38537",
+    "translation_date": "2026-01-16T10:25:46+00:00",
+    "source_file": "01-introduction/images/simple-chat-empty.png",
+    "language_code": "el"
+  },
+  "memory-window.bbe67f597eadabb3.webp": {
+    "original_hash": "8eb08c9b5bad930339898c50d4493aeb",
+    "translation_date": "2026-01-16T10:25:52+00:00",
+    "source_file": "01-introduction/images/memory-window.png",
+    "language_code": "el"
+  },
+  "token-explanation.c39760d8ec650181.webp": {
+    "original_hash": "62b4d2c1f7d29d1d27e429ecd836dc5d",
+    "translation_date": "2026-01-16T10:25:58+00:00",
+    "source_file": "01-introduction/images/token-explanation.png",
+    "language_code": "el"
+  },
+  "dashboard.69c7479aef09ff6b.webp": {
+    "original_hash": "121c4b1dd4b6676525a4d11e990354fe",
+    "translation_date": "2026-01-16T10:26:02+00:00",
+    "source_file": "01-introduction/images/dashboard.png",
+    "language_code": "el"
+  },
+  "conversational-chat-empty.c30ebda0ac5dca3d.webp": {
+    "original_hash": "568c64cefcc4f1e693115ae51153b269",
+    "translation_date": "2026-01-16T10:26:07+00:00",
+    "source_file": "01-introduction/images/conversational-chat-empty.png",
+    "language_code": "el"
+  },
+  "conversational-chat-stateful-demo.e5be9822eb23ff59.webp": {
+    "original_hash": "ecd11738f8a5b1ff321eaa7e553b9a92",
+    "translation_date": "2026-01-16T10:26:13+00:00",
+    "source_file": "01-introduction/images/conversational-chat-stateful-demo.png",
+    "language_code": "el"
+  },
+  "home-screen.121a03206ab910c0.webp": {
+    "original_hash": "a166e4a0960b604456c0b734d3f4c9b8",
+    "translation_date": "2026-01-16T10:26:21+00:00",
+    "source_file": "01-introduction/images/home-screen.png",
+    "language_code": "el"
+  },
+  "architecture.eedc993a1c576839.webp": {
+    "original_hash": "add139926cd5d568e3ba2c38eb32312b",
+    "translation_date": "2026-01-16T10:26:28+00:00",
+    "source_file": "00-quick-start/images/architecture.png",
+    "language_code": "el"
+  },
+  "langchain-concept.ad1fe6cf063515e1.webp": {
+    "original_hash": "7b421aa8262309aaf85a573fa7940b20",
+    "translation_date": "2026-01-16T10:26:33+00:00",
+    "source_file": "00-quick-start/images/langchain-concept.png",
+    "language_code": "el"
+  },
+  "prompt-structure.a77763d63f4e2f89.webp": {
+    "original_hash": "a1360d83c12ebf0463605d609dc02866",
+    "translation_date": "2026-01-16T10:26:40+00:00",
+    "source_file": "02-prompt-engineering/images/prompt-structure.png",
+    "language_code": "el"
+  },
+  "low-eagerness-demo.898894591fb23aa0.webp": {
+    "original_hash": "1864b8c06f5f70ef402f3e9ab586c06b",
+    "translation_date": "2026-01-16T10:26:50+00:00",
+    "source_file": "02-prompt-engineering/images/low-eagerness-demo.png",
+    "language_code": "el"
+  },
+  "context-memory.dff30ad9fa78832a.webp": {
+    "original_hash": "1cf5db5d30a28248b04f6081c6398934",
+    "translation_date": "2026-01-16T10:27:02+00:00",
+    "source_file": "02-prompt-engineering/images/context-memory.png",
+    "language_code": "el"
+  },
+  "task-execution-pattern.9da3967750ab5c1e.webp": {
+    "original_hash": "d7f2b703fc92b713e194e84643f5de00",
+    "translation_date": "2026-01-16T10:27:09+00:00",
+    "source_file": "02-prompt-engineering/images/task-execution-pattern.png",
+    "language_code": "el"
+  },
+  "constrained-output-pattern.0ce39a682a6795c2.webp": {
+    "original_hash": "62f6334475633fccbea231413ad315cf",
+    "translation_date": "2026-01-16T10:27:14+00:00",
+    "source_file": "02-prompt-engineering/images/constrained-output-pattern.png",
+    "language_code": "el"
+  },
+  "langchain4j-flow.48e534666213010b.webp": {
+    "original_hash": "55777ca44e539e9e7ac1188d3f63ec2a",
+    "translation_date": "2026-01-16T10:27:19+00:00",
+    "source_file": "02-prompt-engineering/images/langchain4j-flow.png",
+    "language_code": "el"
+  },
+  "step-by-step-reasoning-demo.12139513356faecd.webp": {
+    "original_hash": "81b65bfbf17920fa5019b19a99c43bfc",
+    "translation_date": "2026-01-16T10:27:29+00:00",
+    "source_file": "02-prompt-engineering/images/step-by-step-reasoning-demo.png",
+    "language_code": "el"
+  },
+  "self-reflection-cycle.6f71101ca0bd28cc.webp": {
+    "original_hash": "97d6b065eec9eec09baf1583f626668a",
+    "translation_date": "2026-01-16T10:27:47+00:00",
+    "source_file": "02-prompt-engineering/images/self-reflection-cycle.png",
+    "language_code": "el"
+  },
+  "reasoning-effort.db4a3ba5b8e392c1.webp": {
+    "original_hash": "9a6a2c984bacecd3870cfa9146bbeb92",
+    "translation_date": "2026-01-16T10:27:54+00:00",
+    "source_file": "02-prompt-engineering/images/reasoning-effort.png",
+    "language_code": "el"
+  },
+  "tool-preambles-demo.3ca4881e417f2e28.webp": {
+    "original_hash": "d3fe84fb25b6e7023927d0ec5b029ba8",
+    "translation_date": "2026-01-16T10:28:03+00:00",
+    "source_file": "02-prompt-engineering/images/tool-preambles-demo.png",
+    "language_code": "el"
+  },
+  "dashboard-home.5444dbda4bc1f79d.webp": {
+    "original_hash": "3c10f2ac0c216bb86a974f56fe2120a5",
+    "translation_date": "2026-01-16T10:28:25+00:00",
+    "source_file": "02-prompt-engineering/images/dashboard-home.png",
+    "language_code": "el"
+  },
+  "message-types.93e0779798a17c9d.webp": {
+    "original_hash": "5ae5f81859f6531be63931bbcaf27914",
+    "translation_date": "2026-01-16T10:30:40+00:00",
+    "source_file": "02-prompt-engineering/images/message-types.png",
+    "language_code": "el"
+  },
+  "structured-analysis-pattern.0af3b690b60cf2d6.webp": {
+    "original_hash": "13711f73af72aece4a6012d1f4ab193f",
+    "translation_date": "2026-01-16T10:30:51+00:00",
+    "source_file": "02-prompt-engineering/images/structured-analysis-pattern.png",
+    "language_code": "el"
+  },
+  "step-by-step-pattern.a99ea4ca1c48578c.webp": {
+    "original_hash": "a416c911527ef0187827d12095d1c68f",
+    "translation_date": "2026-01-16T10:30:58+00:00",
+    "source_file": "02-prompt-engineering/images/step-by-step-pattern.png",
+    "language_code": "el"
+  },
+  "constrained-output-demo.567cc45b75da1633.webp": {
+    "original_hash": "4b8c148bc4c2976cdfbe806c29b0af3b",
+    "translation_date": "2026-01-16T10:31:08+00:00",
+    "source_file": "02-prompt-engineering/images/constrained-output-demo.png",
+    "language_code": "el"
+  },
+  "multi-turn-chat-demo.0d2d9b9a86a12b4b.webp": {
+    "original_hash": "54456238aeec0b058c42aaddd4c09f3c",
+    "translation_date": "2026-01-16T10:31:26+00:00",
+    "source_file": "02-prompt-engineering/images/multi-turn-chat-demo.png",
+    "language_code": "el"
+  },
+  "dashboard.da2c2130c904aaf0.webp": {
+    "original_hash": "cd1a01352482b96b964b169cf7ab2407",
+    "translation_date": "2026-01-16T10:31:42+00:00",
+    "source_file": "02-prompt-engineering/images/dashboard.png",
+    "language_code": "el"
+  },
+  "high-eagerness-demo.4ac93e7786c5a376.webp": {
+    "original_hash": "e29c4ea1d47dc693390535efe3779489",
+    "translation_date": "2026-01-16T10:31:51+00:00",
+    "source_file": "02-prompt-engineering/images/high-eagerness-demo.png",
+    "language_code": "el"
+  },
+  "self-reflecting-code-demo.851ee05c988e743f.webp": {
+    "original_hash": "241358e61a1d3f9b3be5700c40ce4a34",
+    "translation_date": "2026-01-16T10:32:06+00:00",
+    "source_file": "02-prompt-engineering/images/self-reflecting-code-demo.png",
+    "language_code": "el"
+  },
+  "eight-patterns.fa1ebfdf16f71e9a.webp": {
+    "original_hash": "cad4e0034cecc0a1b84542caa5f641cc",
+    "translation_date": "2026-01-16T10:32:19+00:00",
+    "source_file": "02-prompt-engineering/images/eight-patterns.png",
+    "language_code": "el"
+  },
+  "structured-analysis-demo.9ef892194cd23bc8.webp": {
+    "original_hash": "ebec452eb00e2f5af04ebdeff8e39c21",
+    "translation_date": "2026-01-16T10:32:35+00:00",
+    "source_file": "02-prompt-engineering/images/structured-analysis-demo.png",
+    "language_code": "el"
+  },
+  "stateless-stateful.e988809e368089da.webp": {
+    "original_hash": "340ea635d16b2d03ff2f7a7ee5907182",
+    "translation_date": "2026-01-16T10:32:48+00:00",
+    "source_file": "02-prompt-engineering/images/stateless-stateful.png",
+    "language_code": "el"
+  },
+  "rag-query-results.6d69fcec5397f355.webp": {
+    "original_hash": "2b1942d1e9da76a3d7fc90b0f970a1a5",
+    "translation_date": "2026-01-16T10:33:10+00:00",
+    "source_file": "03-rag/images/rag-query-results.png",
+    "language_code": "el"
+  },
+  "rag-architecture.ccb53b71a6ce407f.webp": {
+    "original_hash": "a0fb0671e18478ad83b93ac8d818c944",
+    "translation_date": "2026-01-16T10:33:47+00:00",
+    "source_file": "03-rag/images/rag-architecture.png",
+    "language_code": "el"
+  },
+  "dashboard.fbe6e28bf4267ffe.webp": {
+    "original_hash": "dcba4dbca7117902a83c98b3792d0af3",
+    "translation_date": "2026-01-16T10:33:52+00:00",
+    "source_file": "03-rag/images/dashboard.png",
+    "language_code": "el"
+  },
+  "rag-homepage.d90eb5ce1b3caa94.webp": {
+    "original_hash": "7a8a7dfe794e24fc00362e1cb6d33c70",
+    "translation_date": "2026-01-16T10:33:58+00:00",
+    "source_file": "03-rag/images/rag-homepage.png",
+    "language_code": "el"
+  },
+  "vector-embeddings.2ef7bdddac79a327.webp": {
+    "original_hash": "6baa1fbed2bb88d03fab227bb5d87516",
+    "translation_date": "2026-01-16T10:34:06+00:00",
+    "source_file": "03-rag/images/vector-embeddings.png",
+    "language_code": "el"
+  },
+  "transport-mechanisms.2791ba7ee93cf020.webp": {
+    "original_hash": "4b946879b30cf2ad6e048289655e553e",
+    "translation_date": "2026-01-16T10:34:11+00:00",
+    "source_file": "05-mcp/images/transport-mechanisms.png",
+    "language_code": "el"
+  },
+  "mcp-architecture.b3156d787a4ceac9.webp": {
+    "original_hash": "6ef1f9751daa7566fae670d97f023c49",
+    "translation_date": "2026-01-16T10:34:16+00:00",
+    "source_file": "05-mcp/images/mcp-architecture.png",
+    "language_code": "el"
+  },
+  "agentic.cf84dcda226374e3.webp": {
+    "original_hash": "4fd1d85d67263a3ecf91134778403eaa",
+    "translation_date": "2026-01-16T10:34:27+00:00",
+    "source_file": "05-mcp/images/agentic.png",
+    "language_code": "el"
+  },
+  "mcp-comparison.9129a881ecf10ff5.webp": {
+    "original_hash": "4b427a9d01ebc5577ab3510b651ecd65",
+    "translation_date": "2026-01-16T10:34:34+00:00",
+    "source_file": "05-mcp/images/mcp-comparison.png",
+    "language_code": "el"
+  },
+  "tools-conversation-demo.89f2ce9676080f59.webp": {
+    "original_hash": "d2ecb36ff969aec004bcfe3cbcd014cf",
+    "translation_date": "2026-01-16T10:34:41+00:00",
+    "source_file": "04-tools/images/tools-conversation-demo.png",
+    "language_code": "el"
+  },
+  "react-pattern.86aafd3796f3fd13.webp": {
+    "original_hash": "945d85c7691a81bab0cb1dc4bd9cdc7f",
+    "translation_date": "2026-01-16T10:34:51+00:00",
+    "source_file": "04-tools/images/react-pattern.png",
+    "language_code": "el"
+  },
+  "tools-chaining-demo.4cf7ff23beabb289.webp": {
+    "original_hash": "834b8fd4589271f575d8f906edaa1302",
+    "translation_date": "2026-01-16T10:35:02+00:00",
+    "source_file": "04-tools/images/tools-chaining-demo.png",
+    "language_code": "el"
+  },
+  "tools-homepage.4b4cd8b2717f9621.webp": {
+    "original_hash": "aaf5717979526f89a3fddab02bc8bc6d",
+    "translation_date": "2026-01-16T10:35:13+00:00",
+    "source_file": "04-tools/images/tools-homepage.png",
+    "language_code": "el"
+  },
+  "tool-chaining.3b25af01967d6f7b.webp": {
+    "original_hash": "b7dc1c932f5146db7961dfe34f122ddb",
+    "translation_date": "2026-01-16T10:35:23+00:00",
+    "source_file": "04-tools/images/tool-chaining.png",
+    "language_code": "el"
+  },
+  "dashboard.9b519b1a1bc1b30a.webp": {
+    "original_hash": "758903d14d189faa0e57ccb9b0ab526e",
+    "translation_date": "2026-01-16T10:35:31+00:00",
+    "source_file": "04-tools/images/dashboard.png",
+    "language_code": "el"
+  },
+  "rag-testing.ee7541b1e23934b1.webp": {
+    "original_hash": "34b9bdfdfaafb04fdcf1452cfd981205",
+    "translation_date": "2026-01-16T10:35:35+00:00",
+    "source_file": "docs/images/rag-testing.png",
+    "language_code": "el"
+  },
+  "mcp-testing.bb3b3e92e47acb4b.webp": {
+    "original_hash": "8bb435d24bc33171adc6f6b4c603126b",
+    "translation_date": "2026-01-16T10:35:38+00:00",
+    "source_file": "docs/images/mcp-testing.png",
+    "language_code": "el"
+  },
+  "tools-testing.3e1706817b0b3924.webp": {
+    "original_hash": "13e19021e2d62bffa0633cce6d50b433",
+    "translation_date": "2026-01-16T10:35:42+00:00",
+    "source_file": "docs/images/tools-testing.png",
+    "language_code": "el"
+  },
+  "testing-patterns.02581af1c9ef7424.webp": {
+    "original_hash": "7090d41059292da6f27ed53fd6662fd9",
+    "translation_date": "2026-01-16T10:35:48+00:00",
+    "source_file": "docs/images/testing-patterns.png",
+    "language_code": "el"
+  },
+  "vscode-testing.f02dd5917289dced.webp": {
+    "original_hash": "dd983d81b3619c330151f2c23ccfcfdc",
+    "translation_date": "2026-01-16T10:35:56+00:00",
+    "source_file": "docs/images/vscode-testing.png",
+    "language_code": "el"
+  },
+  "test-results.ea5c98d8f3642043.webp": {
+    "original_hash": "aad0ec0bcae78a02584a90284e917b43",
+    "translation_date": "2026-01-16T10:36:01+00:00",
+    "source_file": "docs/images/test-results.png",
+    "language_code": "el"
+  },
+  "conversation-isolation.e00336cf8f7a3e3f.webp": {
+    "original_hash": "9a84aad20bec41d5b0f52d02c88bdef2",
+    "translation_date": "2026-01-16T10:36:06+00:00",
+    "source_file": "docs/images/conversation-isolation.png",
+    "language_code": "el"
+  },
+  "prompt-template-testing.b902758ddccc8dee.webp": {
+    "original_hash": "0567b073a2dc320b66d62ce105619b2d",
+    "translation_date": "2026-01-16T10:36:11+00:00",
+    "source_file": "docs/images/prompt-template-testing.png",
+    "language_code": "el"
+  },
+  "mock-vs-real.3b8b1f85bfe6845e.webp": {
+    "original_hash": "c4d21b76782c744a70494ad7122fb470",
+    "translation_date": "2026-01-16T10:36:16+00:00",
+    "source_file": "docs/images/mock-vs-real.png",
+    "language_code": "el"
+  },
+  "testing-pyramid.2dd1079a0481e53e.webp": {
+    "original_hash": "9a59439dbb6c10f949264b55fc698184",
+    "translation_date": "2026-01-16T10:36:25+00:00",
+    "source_file": "docs/images/testing-pyramid.png",
+    "language_code": "el"
+  }
+}
