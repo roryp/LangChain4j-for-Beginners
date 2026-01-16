@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 हे सोप्या प्रश्नोत्तरेसाठी ठीक आहे पण खऱ्या अ‍ॅप्लिकेशन्ससाठी उपयुक्त नाही. ग्राहक सेवा बॉट्सना तुम्ही काय सांगितले ते लक्षात ठेवणे आवश्यक आहे. वैयक्तिक सहाय्यकांना संदर्भ आवश्यक आहे. कोणतेही बहु-टर्न संभाषण स्मृतीची गरज असते.
 
-<img src="../../../translated_images/mr/stateless-vs-stateful.cc4a4765e649c41a.png" alt="स्टेटलेस विरुद्ध स्टेटफुल संभाषणे" width="800"/>
+<img src="../../../translated_images/mr/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="स्टेटलेस विरुद्ध स्टेटफुल संभाषणे" width="800"/>
 
 *स्टेटलेस (स्वतंत्र कॉल्स) आणि स्टेटफुल (संदर्भ-जाणकार) संभाषणांमधील फरक*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 संभाषणांमध्ये उतरायच्या आधी, टोकन्स समजून घेणे महत्त्वाचे आहे - भाषा मॉडेल्स जे मूलभूत मजकूर युनिट्स प्रक्रिया करतात:
 
-<img src="../../../translated_images/mr/token-explanation.c39760d8ec650181.png" alt="टोकन स्पष्टीकरण" width="800"/>
+<img src="../../../translated_images/mr/token-explanation.c39760d8ec650181.webp" alt="टोकन स्पष्टीकरण" width="800"/>
 
 *मजकूर कसा टोकन्समध्ये विभागला जातो याचे उदाहरण - "I love AI!" हे 4 स्वतंत्र प्रक्रिया युनिट्समध्ये रूपांतरित होते*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j स्मृती अंमलबजावणी प्रदान करते जी हे स्वयंचलितपणे हाताळते. तुम्ही किती संदेश ठेवायचे ते निवडता आणि फ्रेमवर्क संदर्भ विंडो व्यवस्थापित करते.
 
-<img src="../../../translated_images/mr/memory-window.bbe67f597eadabb3.png" alt="स्मृती विंडो संकल्पना" width="800"/>
+<img src="../../../translated_images/mr/memory-window.bbe67f597eadabb3.webp" alt="स्मृती विंडो संकल्पना" width="800"/>
 
 *MessageWindowChatMemory अलीकडील संदेशांची स्लायडिंग विंडो राखते, जुने संदेश आपोआप काढून टाकते*
 
@@ -212,7 +212,7 @@ Spring Boot डॅशबोर्डमधून तुम्ही:
 
 "introduction" जवळील प्ले बटणावर क्लिक करा हा मॉड्यूल सुरू करण्यासाठी, किंवा सर्व मॉड्यूल एकत्र सुरू करा.
 
-<img src="../../../translated_images/mr/dashboard.69c7479aef09ff6b.png" alt="Spring Boot डॅशबोर्ड" width="400"/>
+<img src="../../../translated_images/mr/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot डॅशबोर्ड" width="400"/>
 
 **पर्याय 2: शेल स्क्रिप्ट्स वापरून**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 अ‍ॅप्लिकेशन दोन चॅट अंमलबजावण्या बाजूने बाजूने वेब इंटरफेस प्रदान करते.
 
-<img src="../../../translated_images/mr/home-screen.121a03206ab910c0.png" alt="अ‍ॅप्लिकेशन होम स्क्रीन" width="800"/>
+<img src="../../../translated_images/mr/home-screen.121a03206ab910c0.webp" alt="अ‍ॅप्लिकेशन होम स्क्रीन" width="800"/>
 
 *डॅशबोर्ड ज्यात साधा चॅट (स्टेटलेस) आणि संभाषणात्मक चॅट (स्टेटफुल) पर्याय दाखवले आहेत*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 हे प्रथम प्रयत्न करा. "माझं नाव जॉन आहे" विचारा आणि लगेच "माझं नाव काय आहे?" विचारा. मॉडेल लक्षात ठेवणार नाही कारण प्रत्येक संदेश स्वतंत्र आहे. हे मूलभूत भाषा मॉडेल समाकलनातील मुख्य समस्या दर्शवते - संभाषणाचा संदर्भ नाही.
 
-<img src="../../../translated_images/mr/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="स्टेटलेस चॅट डेमो" width="800"/>
+<img src="../../../translated_images/mr/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="स्टेटलेस चॅट डेमो" width="800"/>
 
 *AI मागील संदेशातून तुमचं नाव लक्षात ठेवत नाही*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 आता येथे त्याच क्रमाने प्रयत्न करा. "माझं नाव जॉन आहे" विचारा आणि नंतर "माझं नाव काय आहे?" यावेळी ते लक्षात ठेवते. फरक MessageWindowChatMemory आहे - ते संभाषणाचा इतिहास राखते आणि प्रत्येक विनंतीसह तो संदर्भ समाविष्ट करते. हेच उत्पादनात्मक संभाषणात्मक AI कसे कार्य करते.
 
-<img src="../../../translated_images/mr/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="स्टेटफुल चॅट डेमो" width="800"/>
+<img src="../../../translated_images/mr/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="स्टेटफुल चॅट डेमो" width="800"/>
 
 *AI संभाषणात आधी सांगितलेले तुमचं नाव लक्षात ठेवते*
 

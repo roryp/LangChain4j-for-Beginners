@@ -61,7 +61,7 @@ AI agent tööriistadega järgib põhjendamise ja tegutsemise mustrit (ReAct):
 5. Tööriist täidetakse ja tagastab andmed
 6. Agent võtab tulemuse oma vastusse ja annab lõpliku vastuse
 
-<img src="../../../translated_images/et/react-pattern.86aafd3796f3fd13.png" alt="ReAct Muster" width="800"/>
+<img src="../../../translated_images/et/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Muster" width="800"/>
 
 *ReAct muster — kuidas AI agendid vaheldumisi põhjendavad ja tegutsevad probleemide lahendamiseks*
 
@@ -138,7 +138,7 @@ Alternatiivsed lähenemised (manuaalne `AiServices.builder()`) nõuavad rohkem k
 
 **Tööriistade ahelad** — AI võib kutsuda mitut tööriista jadamisi. Küsides "Milline on ilm Seattle'is ja kas peaksin võtma vihmavarju?", näed, kuidas ta omavahel seob `getCurrentWeather` funktsiooni, põhjendades vihmavarju vajalikkust.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/et/tool-chaining.3b25af01967d6f7b.png" alt="Tööriistade ahelad" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/et/tool-chaining.3b25af01967d6f7b.webp" alt="Tööriistade ahelad" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Jadamineetud tööriistakutsed — ühe tööriista väljund suunatakse järgmise otsusesse*
 
@@ -171,7 +171,7 @@ Spring Boot Dashboardist saad:
 
 Lihtsalt klõpsa mängunupul "tools" kõrval selle mooduli alustamiseks või käivita korraga kõik moodulid.
 
-<img src="../../../translated_images/et/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/et/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Valik 2: Skriptide kasutamine**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Kõik moodulid
 
 Rakendus pakub veebiliidest, kus saad suhelda AI agendiga, kellel on juurdepääs ilma ja temperatuuri teisendamise tööriistadele.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/et/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agendi tööriistade liides" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/et/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agendi tööriistade liides" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI Agendi tööriistade liides — kiired näited ja vestlusliides tööriistadega suhtlemiseks*
 
@@ -257,7 +257,7 @@ Proovi nüüd keerulisemat: "Milline on ilm Seattle'is ja muuda see Fahrenheiti 
 
 Vestlusliides hoiab vestluse ajalugu, võimaldades sul teha mitmesammulisi suhtlusi. Näed kõiki varasemaid päringuid ja vastuseid, mis teeb lihtsaks vestluse jälgimise ja mõistmise, kuidas agent konteksti ehitab mitme vahetusega.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/et/tools-conversation-demo.89f2ce9676080f59.png" alt="Vestlus mitme tööriistakutsuga" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/et/tools-conversation-demo.89f2ce9676080f59.webp" alt="Vestlus mitme tööriistakutsuga" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Mitmesammuline vestlus, mis näitab lihtsaid teisendusi, ilma päringuid ja tööriistade jadamist*
 

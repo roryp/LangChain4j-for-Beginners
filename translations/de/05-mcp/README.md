@@ -35,7 +35,7 @@ Sie haben konversationelle KI gebaut, Prompts gemeistert, Antworten in Dokumente
 
 Das Model Context Protocol (MCP) bietet genau das – eine standardisierte Möglichkeit für KI-Anwendungen, externe Tools zu entdecken und zu nutzen. Statt für jede Datenquelle oder jeden Dienst benutzerdefinierte Integrationen zu schreiben, verbinden Sie sich mit MCP-Servern, die ihre Fähigkeiten in einheitlichem Format bereitstellen. Ihr KI-Agent kann dann diese Tools automatisch finden und verwenden.
 
-<img src="../../../translated_images/de/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/de/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *Vor MCP: Komplexe Punkt-zu-Punkt-Integrationen. Nach MCP: Ein Protokoll, unendliche Möglichkeiten.*
 
@@ -43,7 +43,7 @@ MCP löst ein grundlegendes Problem in der KI-Entwicklung: Jede Integration ist 
 
 MCP standardisiert das. Ein MCP-Server exponiert Werkzeuge mit klaren Beschreibungen und Schemata. Jeder MCP-Client kann sich verbinden, verfügbare Tools entdecken und sie nutzen. Einmal gebaut, überall verwendet.
 
-<img src="../../../translated_images/de/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/de/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Model Context Protocol Architektur – standardisierte Werkzeugerkennung und Ausführung*
 
@@ -71,7 +71,7 @@ Wenn sich Ihr Client mit einem MCP-Server verbindet, fragt er: „Welche Tools h
 
 MCP unterstützt verschiedene Transportmechanismen. Dieses Modul demonstriert den Stdio-Transport für lokale Prozesse:
 
-<img src="../../../translated_images/de/transport-mechanisms.2791ba7ee93cf020.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/de/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *MCP-Transportmechanismen: HTTP für entfernte Server, Stdio für lokale Prozesse*
 
@@ -169,7 +169,7 @@ Das **Supervisor Agent-Muster** ist eine **flexible** Form agentischer KI. Ein S
 
 Im Demo liest `FileAgent` eine Datei mit MCP-Dateisystemtools, und `ReportAgent` erzeugt einen strukturierten Bericht mit einer Zusammenfassung (1 Satz), 3 Schlüsselpunkten und Empfehlungen. Der Supervisor steuert diesen Ablauf automatisch:
 
-<img src="../../../translated_images/de/agentic.cf84dcda226374e3.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/de/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

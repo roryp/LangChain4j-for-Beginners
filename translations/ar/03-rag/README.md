@@ -49,7 +49,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 هذا يؤسس ردود النموذج على بياناتك الفعلية بدلاً من الاعتماد على معرفة تدريبه أو تخليق الأجوبة.
 
-<img src="../../../translated_images/ar/rag-architecture.ccb53b71a6ce407f.png" alt="هندسة RAG" width="800"/>
+<img src="../../../translated_images/ar/rag-architecture.ccb53b71a6ce407f.webp" alt="هندسة RAG" width="800"/>
 
 *سير عمل RAG - من استعلام المستخدم إلى البحث الدلالي ثم توليد الإجابة السياقية*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/ar/vector-embeddings.2ef7bdddac79a327.png" alt="فضاء التضمينات المتجهية" width="800"/>
+<img src="../../../translated_images/ar/vector-embeddings.2ef7bdddac79a327.webp" alt="فضاء التضمينات المتجهية" width="800"/>
 
 *المستندات ممثلة كمتجهات في فضاء التضمين - تتجمع المحتويات المتشابهة معًا*
 
@@ -160,7 +160,7 @@ cat ../.env  # يجب أن يعرض AZURE_OPENAI_ENDPOINT و API_KEY و DEPLOYME
 
 فقط اضغط زر التشغيل بجانب "rag" لبدء هذه الوحدة، أو ابدأ كل الوحدات مرة واحدة.
 
-<img src="../../../translated_images/ar/dashboard.fbe6e28bf4267ffe.png" alt="لوحة تحكم Spring Boot" width="400"/>
+<img src="../../../translated_images/ar/dashboard.fbe6e28bf4267ffe.webp" alt="لوحة تحكم Spring Boot" width="400"/>
 
 **الخيار 2: استخدام سكربتات الشل**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # كل الوحدات
 
 يوفر التطبيق واجهة ويب لتحميل المستندات وطرح الأسئلة.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/ar/rag-homepage.d90eb5ce1b3caa94.png" alt="واجهة تطبيق RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/ar/rag-homepage.d90eb5ce1b3caa94.webp" alt="واجهة تطبيق RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *واجهة تطبيق RAG - قم بتحميل المستندات واطرح الأسئلة*
 
@@ -248,7 +248,7 @@ cd ..; .\stop-all.ps1  # كل الوحدات
 
 لاحظ أن كل إجابة تتضمن مراجع للمصادر مع درجات التشابه. تظهر هذه الدرجات (من 0 إلى 1) مدى ارتباط كل قطعة بسؤالك. الدرجات الأعلى تعني تطابقًا أفضل. يتيح لك ذلك التحقق من الإجابة مقابل المادة المصدرية.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/ar/rag-query-results.6d69fcec5397f355.png" alt="نتائج استعلام RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/ar/rag-query-results.6d69fcec5397f355.webp" alt="نتائج استعلام RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *نتائج الاستعلام تظهر الإجابة مع مراجع المصدر ودرجات الصلة*
 

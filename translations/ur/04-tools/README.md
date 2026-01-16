@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. ٹول چلتا ہے اور ڈیٹا واپس کرتا ہے  
 6. ایجنٹ نتیجہ شامل کر کے حتمی جواب دیتا ہے  
 
-<img src="../../../translated_images/ur/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/ur/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *ReAct پیٹرن - AI ایجنٹس مسئلے حل کرنے کے لیے سوچنے اور عمل کرنے کے درمیان کیسے متبادل کرتے ہیں*
 
@@ -138,7 +138,7 @@ Spring Boot تمام رجسٹرڈ ٹولز کے ساتھ declarative `@AiService
 
 **ٹول چیننگ** - AI باری باری متعدد ٹولز کال کر سکتا ہے۔ پوچھیں "سیئٹل میں موسم کیسا ہے اور کیا umbrellas لے جانا چاہیے؟" اور دیکھیں کہ کیسے یہ `getCurrentWeather` کال کرتا ہے اور بارش کے گیئر کے بارے میں سوچتا ہے۔
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/ur/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/ur/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *تسلسل میں ٹول کالز - ایک ٹول کی آؤٹ پٹ اگلے فیصلے کو دیتی ہے*
 
@@ -171,7 +171,7 @@ Spring Boot ڈیش بورڈ سے آپ کر سکتے ہیں:
 
 بس "tools" کے ساتھ پلے بٹن پر کلک کریں تاکہ یہ ماڈیول شروع ہو، یا تمام ماڈیولز ایک ساتھ شروع کریں۔
 
-<img src="../../../translated_images/ur/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ur/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **اختیار 2: شیل اسکرپٹس استعمال کریں**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 یہ ایپلیکیشن ایک ویب انٹرفیس فراہم کرتی ہے جہاں آپ ایک AI ایجنٹ سے بات چیت کر سکتے ہیں جس کے پاس موسم اور درجہ حرارت تبدیلی کے ٹولز کی رسائی ہوتی ہے۔
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/ur/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/ur/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI ایجنٹ ٹولز انٹرفیس - ٹولز کے ساتھ بات چیت کے تیز مثالیں اور چیٹ انٹرفیس*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 چیٹ انٹرفیس گفتگو کی تاریخ کو برقرار رکھتا ہے، جو آپ کو کثیر مرحلہ بات چیت کرنے کی اجازت دیتا ہے۔ آپ پچھلے تمام سوالات اور جوابات دیکھ سکتے ہیں، جس سے گفتگو کو ٹریک کرنا اور سمجھنا آسان ہوتا ہے کہ ایجنٹ کس طرح متعدد تبادلوں میں سیاق و سباق بناتا ہے۔
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ur/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ur/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *کثیر مرحلہ بات چیت جس میں سادہ تبدیلیاں، موسم کی تلاشیں، اور ٹول چیننگ دکھائی گئی ہے*
 

@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/sl/test-results.ea5c98d8f3642043.png" alt="Uspešni rezultati testov" width="800"/>
+<img src="../../../translated_images/sl/test-results.ea5c98d8f3642043.webp" alt="Uspešni rezultati testov" width="800"/>
 
 *Uspešno izvajanje testov, ki prikazuje, da so vsi testi prestali brez napak*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Ta tečaj se osredotoča na **enote testov (unit tests)**, ki tečejo lokalno. Vsak test prikaže določen koncept LangChain4j v izolaciji.
 
-<img src="../../../translated_images/sl/testing-pyramid.2dd1079a0481e53e.png" alt="Piramida testiranja" width="800"/>
+<img src="../../../translated_images/sl/testing-pyramid.2dd1079a0481e53e.webp" alt="Piramida testiranja" width="800"/>
 
 *Piramida testiranja prikazuje ravnovesje med enotnimi testi (hitri, izolirani), integracijskimi testi (resni sestavni deli) in end-to-end testi. To usposabljanje pokriva enotno testiranje.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#naj ohranja zgodovino pogovorov
 
 Če uporabljate Visual Studio Code, Test Explorer ponuja grafični vmesnik za zagon in odpravljanje napak testov.
 
-<img src="../../../translated_images/sl/vscode-testing.f02dd5917289dced.png" alt="Test Explorer v VS Code" width="800"/>
+<img src="../../../translated_images/sl/vscode-testing.f02dd5917289dced.webp" alt="Test Explorer v VS Code" width="800"/>
 
 *Test Explorer v VS Code prikazuje drevo testov z vsemi Java testnimi razredi in posameznimi testnimi metodami*
 
@@ -134,7 +134,7 @@ Test Explorer prikazuje zelene kljukice za uspešne teste in ponuja podrobna spo
 
 Najpreprostejši vzorec testira predloge pozivov, ne da bi klical kakršen koli AI model. Preverite, ali zamenjava spremenljivk deluje pravilno in ali so pozivi oblikovani tako, kot želite.
 
-<img src="../../../translated_images/sl/prompt-template-testing.b902758ddccc8dee.png" alt="Testiranje predlog pozivov" width="800"/>
+<img src="../../../translated_images/sl/prompt-template-testing.b902758ddccc8dee.webp" alt="Testiranje predlog pozivov" width="800"/>
 
 *Testiranje predlog pozivov, ki prikazuje tok zamenjave spremenljivk: predloga s praznimi mesti → vnesene vrednosti → preverjen oblikovan izhod*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testiranjeOblikovanj
 
 Pri testiranju logike pogovora uporabite Mockito za ustvarjanje lažnih modelov, ki vračajo vnaprej določene odgovore. To naredi teste hitre, brezplačne in deterministične.
 
-<img src="../../../translated_images/sl/mock-vs-real.3b8b1f85bfe6845e.png" alt="Primerjava mock proti resnemu API-ju" width="800"/>
+<img src="../../../translated_images/sl/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Primerjava mock proti resnemu API-ju" width="800"/>
 
 *Primerjava, zakaj so mocki za testiranje zaželeni: so hitri, brezplačni, deterministični in ne zahtevajo API ključev*
 
@@ -231,7 +231,7 @@ Ta vzorec se pojavi v `01-introduction/src/test/java/com/example/langchain4j/ser
 
 Spomin pogovorov mora ohranjati ločene uporabnike. Ta test preveri, da se konteksti pogovorov ne mešajo.
 
-<img src="../../../translated_images/sl/conversation-isolation.e00336cf8f7a3e3f.png" alt="Izolacija pogovorov" width="800"/>
+<img src="../../../translated_images/sl/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Izolacija pogovorov" width="800"/>
 
 *Testiranje izolacije pogovorov prikazuje ločene skladišče zgodovine za različne uporabnike, da se prepreči mešanje konteksta*
 
@@ -263,7 +263,7 @@ Vsak pogovor ohranja svojo neodvisno zgodovino. V produkcijskih sistemih je ta i
 
 Orodja so funkcije, ki jih AI lahko pokliče. Testirajte jih neposredno, da zagotovite, da delujejo pravilno ne glede na odločitve AI.
 
-<img src="../../../translated_images/sl/tools-testing.3e1706817b0b3924.png" alt="Testiranje orodij" width="800"/>
+<img src="../../../translated_images/sl/tools-testing.3e1706817b0b3924.webp" alt="Testiranje orodij" width="800"/>
 
 *Neodvisno testiranje orodij prikazuje izvajanje lažnih orodij brez klicev AI, da se preveri poslovna logika*
 
@@ -294,7 +294,7 @@ Ti testi iz `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleT
 
 Sistemi RAG običajno zahtevajo vektorske baze podatkov in storitve za embeddinge. Vzorec v pomnilniku vam omogoča testiranje celotne cevovoda brez zunanjih odvisnosti.
 
-<img src="../../../translated_images/sl/rag-testing.ee7541b1e23934b1.png" alt="Testiranje RAG v pomnilniku" width="800"/>
+<img src="../../../translated_images/sl/rag-testing.ee7541b1e23934b1.webp" alt="Testiranje RAG v pomnilniku" width="800"/>
 
 *Potek testiranja RAG v pomnilniku prikazuje razčlenjevanje dokumentov, shranjevanje embeddingov in iskanje podobnosti brez potrebe po bazi podatkov*
 

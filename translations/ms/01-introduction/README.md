@@ -53,7 +53,7 @@ Model bahasa adalah tanpa keadaan. Setiap panggilan API adalah bebas. Jika anda 
 
 Ini baik untuk soal jawab mudah tetapi tidak berguna untuk aplikasi sebenar. Bot perkhidmatan pelanggan perlu mengingati apa yang anda beritahu mereka. Pembantu peribadi memerlukan konteks. Sebarang perbualan berbilang pusingan memerlukan memori.
 
-<img src="../../../translated_images/ms/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Perbualan Tanpa Keadaan vs Berkeadaan" width="800"/>
+<img src="../../../translated_images/ms/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Perbualan Tanpa Keadaan vs Berkeadaan" width="800"/>
 
 *Perbezaan antara perbualan tanpa keadaan (panggilan bebas) dan berkeadaan (sedar konteks)*
 
@@ -61,7 +61,7 @@ Ini baik untuk soal jawab mudah tetapi tidak berguna untuk aplikasi sebenar. Bot
 
 Sebelum menyelami perbualan, penting untuk memahami token - unit asas teks yang diproses oleh model bahasa:
 
-<img src="../../../translated_images/ms/token-explanation.c39760d8ec650181.png" alt="Penjelasan Token" width="800"/>
+<img src="../../../translated_images/ms/token-explanation.c39760d8ec650181.webp" alt="Penjelasan Token" width="800"/>
 
 *Contoh bagaimana teks dipecahkan kepada token - "I love AI!" menjadi 4 unit pemprosesan berasingan*
 
@@ -73,7 +73,7 @@ Memori sembang menyelesaikan masalah tanpa keadaan dengan mengekalkan sejarah pe
 
 LangChain4j menyediakan pelaksanaan memori yang mengendalikan ini secara automatik. Anda memilih berapa banyak mesej untuk disimpan dan rangka kerja menguruskan tetingkap konteks.
 
-<img src="../../../translated_images/ms/memory-window.bbe67f597eadabb3.png" alt="Konsep Tetingkap Memori" width="800"/>
+<img src="../../../translated_images/ms/memory-window.bbe67f597eadabb3.webp" alt="Konsep Tetingkap Memori" width="800"/>
 
 *MessageWindowChatMemory mengekalkan tetingkap gelongsor mesej terkini, secara automatik membuang yang lama*
 
@@ -212,7 +212,7 @@ Dari Spring Boot Dashboard, anda boleh:
 
 Klik butang main di sebelah "introduction" untuk memulakan modul ini, atau mulakan semua modul sekaligus.
 
-<img src="../../../translated_images/ms/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ms/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Pilihan 2: Menggunakan skrip shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 Aplikasi menyediakan antara muka web dengan dua pelaksanaan sembang berdampingan.
 
-<img src="../../../translated_images/ms/home-screen.121a03206ab910c0.png" alt="Skrin Utama Aplikasi" width="800"/>
+<img src="../../../translated_images/ms/home-screen.121a03206ab910c0.webp" alt="Skrin Utama Aplikasi" width="800"/>
 
 *Papan pemuka menunjukkan kedua-dua pilihan Sembang Mudah (tanpa keadaan) dan Sembang Perbualan (berkeadaan)*
 
@@ -290,7 +290,7 @@ Aplikasi menyediakan antara muka web dengan dua pelaksanaan sembang berdampingan
 
 Cuba ini dahulu. Tanya "Nama saya John" dan kemudian segera tanya "Siapa nama saya?" Model tidak akan ingat kerana setiap mesej adalah bebas. Ini menunjukkan masalah teras dengan integrasi model bahasa asas - tiada konteks perbualan.
 
-<img src="../../../translated_images/ms/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Demo Sembang Tanpa Keadaan" width="800"/>
+<img src="../../../translated_images/ms/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Demo Sembang Tanpa Keadaan" width="800"/>
 
 *AI tidak mengingati nama anda dari mesej sebelumnya*
 
@@ -298,7 +298,7 @@ Cuba ini dahulu. Tanya "Nama saya John" dan kemudian segera tanya "Siapa nama sa
 
 Sekarang cuba urutan yang sama di sini. Tanya "Nama saya John" dan kemudian "Siapa nama saya?" Kali ini ia ingat. Perbezaannya adalah MessageWindowChatMemory - ia mengekalkan sejarah perbualan dan memasukkannya dengan setiap permintaan. Inilah cara AI perbualan produksi berfungsi.
 
-<img src="../../../translated_images/ms/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Demo Sembang Berkeadaan" width="800"/>
+<img src="../../../translated_images/ms/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Demo Sembang Berkeadaan" width="800"/>
 
 *AI mengingati nama anda dari awal perbualan*
 

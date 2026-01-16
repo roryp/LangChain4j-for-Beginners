@@ -61,7 +61,7 @@ Một đại lý AI với công cụ tuân theo mẫu lý luận và hành độ
 5. Công cụ thực thi và trả về dữ liệu
 6. Đại lý tích hợp kết quả và cung cấp câu trả lời cuối cùng
 
-<img src="../../../translated_images/vi/react-pattern.86aafd3796f3fd13.png" alt="Mẫu ReAct" width="800"/>
+<img src="../../../translated_images/vi/react-pattern.86aafd3796f3fd13.webp" alt="Mẫu ReAct" width="800"/>
 
 *Mẫu ReAct - cách các đại lý AI xen kẽ giữa suy luận và hành động để giải quyết vấn đề*
 
@@ -138,7 +138,7 @@ Các cách khác (thủ công với AiServices.builder()) tốn nhiều mã hơn
 
 **Chuỗi công cụ** - AI có thể gọi nhiều công cụ nối tiếp. Hỏi "Thời tiết ở Seattle thế nào và tôi có nên mang ô không?" và hãy xem nó nối `getCurrentWeather` với suy luận về vật dụng mưa.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/vi/tool-chaining.3b25af01967d6f7b.png" alt="Chuỗi công cụ" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/vi/tool-chaining.3b25af01967d6f7b.webp" alt="Chuỗi công cụ" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Các cuộc gọi công cụ theo trình tự - đầu ra của công cụ này cung cấp thông tin cho quyết định tiếp theo*
 
@@ -171,7 +171,7 @@ Từ Spring Boot Dashboard, bạn có thể:
 
 Chỉ cần bấm nút chạy cạnh "tools" để khởi động module này, hoặc khởi động tất cả modules cùng lúc.
 
-<img src="../../../translated_images/vi/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/vi/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Tùy chọn 2: Dùng script shell**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Tất cả các mô-đun
 
 Ứng dụng cung cấp giao diện web để tương tác với đại lý AI có quyền truy cập công cụ thời tiết và chuyển đổi nhiệt độ.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/vi/tools-homepage.4b4cd8b2717f9621.png" alt="Giao diện công cụ Đại lý AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/vi/tools-homepage.4b4cd8b2717f9621.webp" alt="Giao diện công cụ Đại lý AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Giao diện Công cụ Đại lý AI - ví dụ nhanh và khung chat tương tác với công cụ*
 
@@ -257,7 +257,7 @@ Thử yêu cầu phức tạp hơn: "Thời tiết ở Seattle thế nào và ch
 
 Giao diện chat duy trì lịch sử hội thoại, cho phép bạn tương tác đa lượt. Bạn có thể xem tất cả truy vấn và phản hồi trước đó, giúp theo dõi hội thoại và hiểu cách đại lý xây dựng ngữ cảnh qua nhiều lượt.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/vi/tools-conversation-demo.89f2ce9676080f59.png" alt="Hội thoại với nhiều cuộc gọi công cụ" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/vi/tools-conversation-demo.89f2ce9676080f59.webp" alt="Hội thoại với nhiều cuộc gọi công cụ" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Hội thoại đa lượt thể hiện các chuyển đổi đơn giản, tra cứu thời tiết và chuỗi công cụ*
 

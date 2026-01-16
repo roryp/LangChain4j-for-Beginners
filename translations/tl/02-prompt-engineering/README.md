@@ -52,7 +52,7 @@ Isipin mo ito na parang pagbibigay ng mga tagubilin sa isang katrabaho. "Ayusin 
 
 Ipinapakita ng module na ito ang mga advanced na prompting pattern gamit ang parehong pundasyon ng LangChain4j mula sa mga naunang module, na nakatuon sa istruktura ng prompt at kontrol sa pangangatwiran.
 
-<img src="../../../translated_images/tl/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/tl/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Paano ikinakabit ng LangChain4j ang iyong mga prompt sa Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/tl/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/tl/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *Nagbibigay ang SystemMessage ng permanenteng konteksto habang ang UserMessages ay naglalaman ng mga indibidwal na kahilingan*
 
@@ -104,11 +104,11 @@ Ang mahalagang takeaway: Nagbibigay ang LangChain4j ng imprastraktura (koneksyon
 
 Hindi lahat ng problema ay nangangailangan ng parehong pamamaraan. Ang ilang mga tanong ay nangangailangan ng mabilisang sagot, ang iba ay nangangailangan ng malalim na pag-iisip. Ang ilan ay nangangailangan ng nakikitang pangangatwiran, ang iba ay kailangan lang ng resulta. Saklaw ng module na ito ang walong prompting pattern - bawat isa ay na-optimize para sa iba't ibang mga sitwasyon. Susubukan mo silang lahat upang matutunan kung kailan pinakamahusay gamitin ang bawat isa.
 
-<img src="../../../translated_images/tl/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/tl/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Pangkalahatang-ideya ng walong prompt engineering pattern at ang kanilang mga gamit*
 
-<img src="../../../translated_images/tl/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/tl/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Mababang kasigasigan (mabilis, diretso) vs Mataas na kasigasigan (masusing, eksploratoryo) na mga pamamaraan ng pangangatwiran*
 
@@ -163,7 +163,7 @@ Ang Chain-of-Thought prompting ay tahasang hinihiling sa modelo na ipakita ang p
 > - "Ano ang mga pinakamahusay na kasanayan sa pag-istruktura ng tool preambles sa mga production application?"
 > - "Paano ko mahuhuli at maipapakita ang mga intermediate progress update sa UI?"
 
-<img src="../../../translated_images/tl/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/tl/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Planuhin → Isagawa → Buodin na workflow para sa mga multi-step na gawain*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/tl/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/tl/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Iteratibong loop ng pagpapabuti - gumawa, suriin, tukuyin ang mga isyu, pagbutihin, ulitin*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Ano ang pinakamahusay na paraan para i-parse at i-aktuhan ang structured output programmatically?"
 > - "Paano ko masisiguro ang pare-parehong severity levels sa iba't ibang review session?"
 
-<img src="../../../translated_images/tl/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/tl/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Apat na kategorya na framework para sa pare-parehong code review na may severity levels*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/tl/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/tl/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Paano nag-iipon ang konteksto ng pag-uusap sa maraming turn hanggang maabot ang token limit*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/tl/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/tl/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Paghahati ng mga problema sa tahasang mga lohikal na hakbang*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/tl/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/tl/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Pagpapatupad ng partikular na format, haba, at mga kinakailangan sa istruktura*
 
@@ -300,7 +300,7 @@ Mula sa Spring Boot Dashboard, maaari mong:
 
 I-click lang ang play button sa tabi ng "prompt-engineering" para simulan ang module na ito, o simulan lahat ng module nang sabay-sabay.
 
-<img src="../../../translated_images/tl/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/tl/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opsyon 2: Paggamit ng shell scripts**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Lahat ng mga module
 
 ## Mga Screenshot ng Aplikasyon
 
-<img src="../../../translated_images/tl/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/tl/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Pangunahing dashboard na nagpapakita ng lahat ng 8 prompt engineering pattern kasama ang kanilang mga katangian at gamit*
 
@@ -380,10 +380,10 @@ Pinapayagan ka ng web interface na subukan ang iba't ibang mga estratehiya sa pa
 
 Magtanong ng simpleng tanong tulad ng "Ano ang 15% ng 200?" gamit ang Mababang Kasigasigan. Makakakuha ka ng instant at direktang sagot. Ngayon magtanong ng isang komplikadong bagay tulad ng "Disenyo ng caching strategy para sa isang high-traffic API" gamit ang Mataas na Kasigasigan. Pansinin kung paano bumabagal ang modelo at nagbibigay ng detalyadong pangangatwiran. Parehong modelo, parehong istruktura ng tanong - ngunit sinasabi ng prompt kung gaano karaming pag-iisip ang gagawin.
 
-<img src="../../../translated_images/tl/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/tl/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Mabilis na kalkulasyon na may minimal na pangangatwiran*
 
-<img src="../../../translated_images/tl/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/tl/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *Komprehensibong estratehiya sa caching (2.8MB)*
 
@@ -391,7 +391,7 @@ Magtanong ng simpleng tanong tulad ng "Ano ang 15% ng 200?" gamit ang Mababang K
 
 Nakikinabang ang mga multi-step na workflow mula sa maagang pagpaplano at pagsasalaysay ng progreso. Inilalahad ng modelo kung ano ang gagawin nito, isinasalaysay ang bawat hakbang, pagkatapos ay binubuod ang mga resulta.
 
-<img src="../../../translated_images/tl/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/tl/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *Paglikha ng REST endpoint na may hakbang-hakbang na pagsasalaysay (3.9MB)*
 
@@ -399,7 +399,7 @@ Nakikinabang ang mga multi-step na workflow mula sa maagang pagpaplano at pagsas
 
 Subukan ang "Gumawa ng serbisyo para sa pag-validate ng email". Sa halip na basta gumawa ng code at huminto, ang modelo ay gumagawa, sinusuri laban sa mga pamantayan ng kalidad, tinutukoy ang mga kahinaan, at nagpapabuti. Makikita mo itong umulit hanggang ang code ay umabot sa pamantayan ng produksyon.
 
-<img src="../../../translated_images/tl/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/tl/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Kompletong serbisyo sa pag-validate ng email (5.2MB)*
 
@@ -407,7 +407,7 @@ Subukan ang "Gumawa ng serbisyo para sa pag-validate ng email". Sa halip na bast
 
 Kailangan ng mga pagsusuri ng code ng pare-parehong mga balangkas ng pagsusuri. Sinusuri ng modelo ang code gamit ang mga nakapirming kategorya (katumpakan, mga gawi, pagganap, seguridad) na may mga antas ng kaseryosohan.
 
-<img src="../../../translated_images/tl/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/tl/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *Pagsusuri ng code batay sa balangkas*
 
@@ -415,7 +415,7 @@ Kailangan ng mga pagsusuri ng code ng pare-parehong mga balangkas ng pagsusuri. 
 
 Magtanong ng "Ano ang Spring Boot?" pagkatapos ay agad na sundan ng "Ipakita mo sa akin ang isang halimbawa". Naalala ng modelo ang iyong unang tanong at nagbibigay sa iyo ng isang partikular na halimbawa ng Spring Boot. Kung walang memorya, magiging masyadong malabo ang pangalawang tanong.
 
-<img src="../../../translated_images/tl/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/tl/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Pagpapanatili ng konteksto sa mga tanong*
 
@@ -423,7 +423,7 @@ Magtanong ng "Ano ang Spring Boot?" pagkatapos ay agad na sundan ng "Ipakita mo 
 
 Pumili ng isang problema sa matematika at subukan ito gamit ang parehong Hakbang-hakbang na Pangangatwiran at Mababang Kasigasigan. Ang mababang kasigasigan ay nagbibigay lang ng sagot - mabilis ngunit hindi malinaw. Ipinapakita ng hakbang-hakbang ang bawat kalkulasyon at desisyon.
 
-<img src="../../../translated_images/tl/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/tl/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Problema sa matematika na may malinaw na mga hakbang*
 
@@ -431,7 +431,7 @@ Pumili ng isang problema sa matematika at subukan ito gamit ang parehong Hakbang
 
 Kapag kailangan mo ng mga tiyak na format o bilang ng salita, pinipilit ng pattern na ito ang mahigpit na pagsunod. Subukang gumawa ng buod na may eksaktong 100 salita sa format na bullet point.
 
-<img src="../../../translated_images/tl/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/tl/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *Buod ng machine learning na may kontrol sa format*
 
@@ -445,7 +445,7 @@ Pinapayagan ka ng GPT-5 na kontrolin ang pagsisikap sa komputasyon sa pamamagita
 
 Napansin mo ba ang mga tag ng XML sa mga prompt? Hindi ito palamuti. Mas maaasahan ang pagsunod ng mga modelo sa mga istrakturadong tagubilin kaysa sa malayang teksto. Kapag kailangan mo ng mga multi-step na proseso o kumplikadong lohika, tinutulungan ng istraktura ang modelo na subaybayan kung nasaan ito at ano ang susunod.
 
-<img src="../../../translated_images/tl/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/tl/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *Anatomiya ng isang maayos na istrakturadong prompt na may malinaw na mga seksyon at organisasyong estilo XML*
 

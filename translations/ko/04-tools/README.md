@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. 도구가 실행되어 데이터를 반환함  
 6. 에이전트가 결과를 통합하여 최종 답변을 제공함  
 
-<img src="../../../translated_images/ko/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/ko/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *ReAct 패턴 - AI 에이전트가 문제를 해결하기 위해 추론과 행동을 번갈아 수행하는 방식*
 
@@ -138,7 +138,7 @@ Spring Boot가 선언적인 `@AiService` 인터페이스와 모든 등록된 도
 
 **도구 연결** - AI가 여러 도구를 순차적으로 호출할 수 있습니다. "시애틀 날씨는 어때? 우산을 가져가야 할까?"라고 질문하면 `getCurrentWeather` 도구 호출과 비에 대비한 추론이 연쇄적으로 실행됩니다.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/ko/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/ko/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *순차적 도구 호출 - 한 도구의 출력이 다음 결정의 입력으로 사용됨*
 
@@ -171,7 +171,7 @@ cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT를 표시해야 합니
 
 "tools" 옆의 실행 버튼을 눌러 이 모듈을 시작하거나 모든 모듈을 한 번에 시작하세요.
 
-<img src="../../../translated_images/ko/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ko/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **옵션 2: 셸 스크립트 사용**
 
@@ -242,7 +242,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 애플리케이션은 날씨 및 온도 변환 도구에 접근 가능한 AI 에이전트와 상호작용할 수 있는 웹 인터페이스를 제공합니다.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/ko/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/ko/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI 에이전트 도구 인터페이스 - 도구와 상호작용하기 위한 빠른 예제 및 채팅 인터페이스*
 
@@ -258,7 +258,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 채팅 인터페이스는 대화 기록을 유지하여 다중 턴 상호작용을 지원합니다. 이전 모든 쿼리와 응답을 확인할 수 있어, 대화가 어떻게 진행되고 여러 교환 동안 에이전트가 맥락을 구축하는지 쉽게 추적할 수 있습니다.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ko/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ko/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *다중 턴 대화 예시 - 간단한 변환, 날씨 조회, 도구 연결 포함*
 

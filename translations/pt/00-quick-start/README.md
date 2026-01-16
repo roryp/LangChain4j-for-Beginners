@@ -38,7 +38,7 @@ LangChain4j é uma biblioteca Java que simplifica a construção de aplicações
 
 A "cadeia" em LangChain refere-se a encadear múltiplos componentes - pode encadear um prompt a um modelo, a um parser, ou encadear múltiplas chamadas de IA onde uma saída alimenta a próxima entrada. Este início rápido foca nos fundamentos antes de explorar cadeias mais complexas.
 
-<img src="../../../translated_images/pt/langchain-concept.ad1fe6cf063515e1.png" alt="Conceito de Cadeia LangChain4j" width="800"/>
+<img src="../../../translated_images/pt/langchain-concept.ad1fe6cf063515e1.webp" alt="Conceito de Cadeia LangChain4j" width="800"/>
 
 *Encadeamento de componentes em LangChain4j - os blocos de construção conectam-se para criar fluxos de trabalho poderosos de IA*
 
@@ -50,7 +50,7 @@ Vamos usar três componentes principais:
 
 **MessageWindowChatMemory** - Mantém o histórico da conversa. Sem isto, cada pedido é independente. Com isto, a IA lembra mensagens anteriores e mantém contexto ao longo de múltiplas interações.
 
-<img src="../../../translated_images/pt/architecture.eedc993a1c576839.png" alt="Arquitetura LangChain4j" width="800"/>
+<img src="../../../translated_images/pt/architecture.eedc993a1c576839.webp" alt="Arquitetura LangChain4j" width="800"/>
 
 *Arquitetura LangChain4j - componentes principais a trabalhar juntos para alimentar as suas aplicações de IA*
 

@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. ကိရိယာ အကောင်အထည်ဖော်ပြီး ဒေတာ ပြန်ပေးသည်
 6. အေဂျင့်သည် ရလဒ်ကိုထည့်သွင်းပြီး နောက်ဆုံးဖြေရှင်းချက် ပေးသည်
 
-<img src="../../../translated_images/my/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/my/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *ReAct ပုံစံ - AI အေဂျင့်များသည် ပြဿနာများဖြေရှင်းရန် စဉ်းစားခြင်းနှင့် လုပ်ဆောင်ခြင်းကို မကြာခဏ ပြန်လည်ပြောင်းလဲပုံစံ*
 
@@ -138,7 +138,7 @@ Spring Boot သည် `@AiService` interface တွင် မှတ်ပုံ�
 
 **ကိရိယာချိတ်ဆက်ခြင်း** - AI သည် ကိရိယာအများအပြားကို ဆက်တိုက် ခေါ်သုံးနိုင်သည်။ "စိယာတယ်မြို့ ရာသီဥတုဘယ်လိုလဲ၊ ထီးပါမပြီး ယူသင့်မလား" ဟုမေးပြီး `getCurrentWeather` ကို ခေါ်၍ မိုးရွာမှုအရေးကြီးမှု အကြောင်းစဉ်းစားပါ။
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/my/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/my/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ဆက်တိုက် ကိရိယာခေါ်ဆိုမှု - ကိရိယာတစ်ခု၏ ထုတ်လွှင့်ချက်သည် နောက်ထပ်ဆုံးဖြတ်ချက်သို့ ပို့ဆောင်သည်*
 
@@ -171,7 +171,7 @@ Spring Boot Dashboard မှ:
 
 "tools" နှင့် ဆက်စပ်သည့် play button ကို နှိပ်၍ ဒီ module ကို စတင်ပါ၊ ဒါမှမဟုတ် အားလုံးစတင်နိုင်သည်။
 
-<img src="../../../translated_images/my/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/my/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **ရွေးချယ်မှု ၂ - shell script များ ဖြင့်**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 အပလီကေးရှင်းသည် ရာသီဥတုနှင့် အပူချိန်ပြောင်းလဲမှု ကိရိယာများကို အသုံးပြုနိုင်သော AI အေဂျင့်နှင့် ဆက်သွယ်နိုင်သော web မျက်နှာပြင် ပေးသည်။
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/my/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/my/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI အေဂျင့် ကိရိယာ မျက်နှာပြင် - အချက်အလက်အမြန် နမူနာများနှင့် စကားပြော ပိုင်းဆက်သွယ်မှု*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးအားလုံး
 
 စကားပြော အင်တာဖေ့စ်သည် စကားပြော နှစ်ထပ်ထပ်မှတ်တမ်းကို ထိန်းသိမ်းသည့်အတွက် အမျိုးမျိုးသော အချိန်ပြန် ပြောဆိုမှုများ လုပ်နိုင်သည်။ ယခင် ပေါ်လာမှုများနှင့် တုံ့ပြန်ချက်များအားလုံးကို ကြည့်ရှုနိုင်ပြီး၊ အေဂျင့်သည် များစွာသော လွှဲပြောင်းမှုများတွင် ဦးစားပေး နေရာ ဖော်ဆောင်ပုံကို နားလည်နိုင်စေသည်။
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/my/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/my/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *အများအပြားကိရိယာခေါ်ဆိုမှုများဖြင့် အဆင့်လိုက်ပြောင်းလဲမှု၊ ရာသီဥတု စစ်ဆေးမှုများနှင့် ကိရိယာချိတ်ဆက်မှု ပြသချက်*
 

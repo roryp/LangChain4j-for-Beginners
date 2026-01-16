@@ -35,7 +35,7 @@ Du har bygget samtale-AI, mestret prompts, forankret svar i dokumenter og oprett
 
 Model Context Protocol (MCP) leverer netop det - en standardiseret måde for AI-applikationer at opdage og bruge eksterne værktøjer. I stedet for at skrive brugerdefinerede integrationer for hver datakilde eller service, forbinder du til MCP-servere, der eksponerer deres funktioner i et ensartet format. Din AI-agent kan derefter automatisk opdage og bruge disse værktøjer.
 
-<img src="../../../translated_images/da/mcp-comparison.9129a881ecf10ff5.png" alt="MCP-sammenligning" width="800"/>
+<img src="../../../translated_images/da/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP-sammenligning" width="800"/>
 
 *Før MCP: Komplekse punkt-til-punkt-integrationer. Efter MCP: Én protokol, uendelige muligheder.*
 
@@ -43,7 +43,7 @@ MCP løser et grundlæggende problem i AI-udvikling: hver integration er skrædd
 
 MCP standardiserer dette. En MCP-server eksponerer værktøjer med klare beskrivelser og skemaer. Enhver MCP-klient kan forbinde, opdage tilgængelige værktøjer og bruge dem. Byg én gang, brug overalt.
 
-<img src="../../../translated_images/da/mcp-architecture.b3156d787a4ceac9.png" alt="MCP-arkitektur" width="800"/>
+<img src="../../../translated_images/da/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP-arkitektur" width="800"/>
 
 *Model Context Protocol-arkitektur - standardiseret opdagelse og udførelse af værktøjer*
 
@@ -71,7 +71,7 @@ Når din klient forbinder til en MCP-server, spørger den "Hvilke værktøjer ha
 
 MCP understøtter forskellige transportmekanismer. Dette modul demonstrerer Stdio-transporten til lokale processer:
 
-<img src="../../../translated_images/da/transport-mechanisms.2791ba7ee93cf020.png" alt="Transportmekanismer" width="800"/>
+<img src="../../../translated_images/da/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transportmekanismer" width="800"/>
 
 *MCP transportmekanismer: HTTP til fjernservere, Stdio til lokale processer*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 I demoen læser `FileAgent` en fil ved brug af MCP-filsystemværktøjer, og `ReportAgent` genererer en struktureret rapport med en ledelsesresumé (1 sætning), 3 nøglepunkter og anbefalinger. Supervisor orkestrerer denne proces automatisk:
 
-<img src="../../../translated_images/da/agentic.cf84dcda226374e3.png" alt="Agentmodulet" width="800"/>
+<img src="../../../translated_images/da/agentic.cf84dcda226374e3.webp" alt="Agentmodulet" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

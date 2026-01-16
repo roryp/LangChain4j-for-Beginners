@@ -38,7 +38,7 @@ LangChain4j ni maktaba ya Java inayorahisisha ujenzi wa programu zinazotumia AI.
 
 “Nje ya mlolongo” (chain) katika LangChain inahusu kuunganisha sehemu kadhaa pamoja - unaweza kuunganisha prompt na modeli kisha na parser, au kuunganisha simu nyingi za AI ambapo matokeo ya moja huingiza kwenye ingizo la nyingine. Anza haraka hii inalenga misingi kabla ya kuchunguza mlolongo tata zaidi.
 
-<img src="../../../translated_images/sw/langchain-concept.ad1fe6cf063515e1.png" alt="Dhana ya Kuunganisha LangChain4j" width="800"/>
+<img src="../../../translated_images/sw/langchain-concept.ad1fe6cf063515e1.webp" alt="Dhana ya Kuunganisha LangChain4j" width="800"/>
 
 *Kushikamana kwa vipengele katika LangChain4j - sehemu za msingi zinazoungana kuunda michakato yenye nguvu ya AI*
 
@@ -50,7 +50,7 @@ Tutatumia vipengele vitatu vya msingi:
 
 **MessageWindowChatMemory** – Huhifadhi historia ya mazungumzo. Bila hii, kila ombi ni huru. Ukiwa na hii, AI hukumbuka ujumbe uliotangulia na huendelea na muktadha kwa mizunguko mingi.
 
-<img src="../../../translated_images/sw/architecture.eedc993a1c576839.png" alt="Usanifu wa LangChain4j" width="800"/>
+<img src="../../../translated_images/sw/architecture.eedc993a1c576839.webp" alt="Usanifu wa LangChain4j" width="800"/>
 
 *Usanifu wa LangChain4j - vipengele muhimu vinavyofanya kazi pamoja kuendesha programu zako za AI*
 

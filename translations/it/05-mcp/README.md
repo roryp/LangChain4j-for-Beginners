@@ -35,7 +35,7 @@ Hai costruito AI conversazionali, padroneggiato i prompt, ancorato le risposte n
 
 Il Protocollo del Contesto del Modello (MCP) fornisce esattamente questo: un modo standard per le applicazioni AI di scoprire e usare strumenti esterni. Invece di scrivere integrazioni personalizzate per ogni fonte di dati o servizio, ti colleghi a server MCP che espongono le loro capacità in un formato coerente. Il tuo agente AI può quindi scoprire e usare automaticamente questi strumenti.
 
-<img src="../../../translated_images/it/mcp-comparison.9129a881ecf10ff5.png" alt="Confronto MCP" width="800"/>
+<img src="../../../translated_images/it/mcp-comparison.9129a881ecf10ff5.webp" alt="Confronto MCP" width="800"/>
 
 *Prima di MCP: integrazioni punto a punto complesse. Dopo MCP: un protocollo, possibilità infinite.*
 
@@ -43,7 +43,7 @@ MCP risolve un problema fondamentale nello sviluppo AI: ogni integrazione è per
 
 MCP standardizza tutto questo. Un server MCP espone strumenti con descrizioni chiare e schemi. Qualsiasi client MCP può connettersi, scoprire gli strumenti disponibili e usarli. Crea una volta, usa ovunque.
 
-<img src="../../../translated_images/it/mcp-architecture.b3156d787a4ceac9.png" alt="Architettura MCP" width="800"/>
+<img src="../../../translated_images/it/mcp-architecture.b3156d787a4ceac9.webp" alt="Architettura MCP" width="800"/>
 
 *Architettura del Protocollo del Contesto del Modello - scoperta ed esecuzione degli strumenti standardizzata*
 
@@ -71,7 +71,7 @@ Quando il tuo client si connette a un server MCP, chiede "Quali strumenti hai?" 
 
 MCP supporta diversi meccanismi di trasporto. Questo modulo dimostra il trasporto Stdio per processi locali:
 
-<img src="../../../translated_images/it/transport-mechanisms.2791ba7ee93cf020.png" alt="Meccanismi di Trasporto" width="800"/>
+<img src="../../../translated_images/it/transport-mechanisms.2791ba7ee93cf020.webp" alt="Meccanismi di Trasporto" width="800"/>
 
 *Meccanismi di trasporto MCP: HTTP per server remoti, Stdio per processi locali*
 
@@ -169,7 +169,7 @@ Il **modello Agente Supervisore** è una forma **flessibile** di AI agentica. Un
 
 Nel demo, `FileAgent` legge un file usando gli strumenti MCP filesystem, e `ReportAgent` genera un report strutturato con sintesi esecutiva (1 frase), 3 punti chiave e raccomandazioni. Il Supervisore orchestra il flusso automaticamente:
 
-<img src="../../../translated_images/it/agentic.cf84dcda226374e3.png" alt="Modulo Agentico" width="800"/>
+<img src="../../../translated_images/it/agentic.cf84dcda226374e3.webp" alt="Modulo Agentico" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

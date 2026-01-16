@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. 工具執行並回傳資料
 6. 代理整合結果並提供最終回答
 
-<img src="../../../translated_images/mo/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/mo/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *ReAct 模式 — AI 代理如何在推理與行動間交替以解決問題*
 
@@ -138,7 +138,7 @@ Spring Boot 自動注入所有註冊的宣告式 `@AiService` 介面，LangChain
 
 **工具串接** — AI 可能連續呼叫多個工具。問「西雅圖天氣如何？我該帶雨傘嗎？」時，可看到它將 `getCurrentWeather` 呼叫與關於雨具的推理串接起來。
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/mo/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/mo/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *順序工具呼叫 — 一個工具的輸出如何餵入下一個決策*
 
@@ -171,7 +171,7 @@ cat ../.env  # 應該顯示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 點擊「tools」旁的播放鈕啟動本模組，或一次啟動全部模組。
 
-<img src="../../../translated_images/mo/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/mo/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **選項 2：使用 shell 腳本**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 本應用提供網頁介面，可與擁有天氣與溫度轉換工具的 AI 代理互動。
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/mo/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/mo/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI 代理工具介面 — 快速範例與聊天介面，用於與工具互動*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 聊天介面會保存對話歷史，使你可多回合互動。你能看到先前所有查詢與回答，方便追蹤對話並了解代理如何在多次交流中建立上下文。
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/mo/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/mo/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *多回合對話展示簡單轉換、天氣查詢與工具串接*
 

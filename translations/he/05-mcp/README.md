@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 פרוטוקול הקשר מודל (MCP) מספק בדיוק את זה - דרך סטנדרטית לאפליקציות AI לגלות ולהשתמש בכלים חיצוניים. במקום לכתוב אינטגרציות מותאמות לכל מקור נתונים או שירות, אתם מתחברים לשרתים MCP שמציגים את היכולות שלהם בפורמט עקבי. האג'נט שלכם יכול אז לגלות ולהשתמש בכלים אלו באופן אוטומטי.
 
-<img src="../../../translated_images/he/mcp-comparison.9129a881ecf10ff5.png" alt="השוואת MCP" width="800"/>
+<img src="../../../translated_images/he/mcp-comparison.9129a881ecf10ff5.webp" alt="השוואת MCP" width="800"/>
 
 *לפני MCP: אינטגרציות מורכבות נקודה-לנקודה. אחרי MCP: פרוטוקול אחד, אפשרויות אינסופיות.*
 
@@ -43,7 +43,7 @@ MCP פותר בעיה יסודית בפיתוח AI: כל אינטגרציה מו
 
 MCP מסטנדרט את זה. שרת MCP מציג כלים עם תיאורים וסקימות ברורות. כל לקוח MCP יכול להתחבר, לגלות כלים זמינים, ולהשתמש בהם. בנו פעם אחת, השתמשו בכל מקום.
 
-<img src="../../../translated_images/he/mcp-architecture.b3156d787a4ceac9.png" alt="ארכיטקטורת MCP" width="800"/>
+<img src="../../../translated_images/he/mcp-architecture.b3156d787a4ceac9.webp" alt="ארכיטקטורת MCP" width="800"/>
 
 *ארכיטקטורת פרוטוקול הקשר מודל - גילוי וביצוע כלים סטנדרטים*
 
@@ -71,7 +71,7 @@ MCP משתמש במודל לקוח-שרת. שרתים מספקים כלים - ק
 
 MCP תומך במנגנוני תעבורה שונים. פרק זה מדגים את תעבורת ה-Stdio עבור תהליכים מקומיים:
 
-<img src="../../../translated_images/he/transport-mechanisms.2791ba7ee93cf020.png" alt="מנגנוני תעבורה" width="800"/>
+<img src="../../../translated_images/he/transport-mechanisms.2791ba7ee93cf020.webp" alt="מנגנוני תעבורה" width="800"/>
 
 *מנגנוני תעבורה ב-MCP: HTTP לשרתים מרוחקים, Stdio לתהליכים מקומיים*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 בדמו, `FileAgent` קורא קובץ באמצעות כלי מערכת הקבצים MCP, ו-`ReportAgent` מייצר דוח מובנה עם סיכום מנהלים (משפט אחד), 3 נקודות מפתח והמלצות. המפקח מארגן את הזרימה הזו באופן אוטומטי:
 
-<img src="../../../translated_images/he/agentic.cf84dcda226374e3.png" alt="מודול אג'נטי" width="800"/>
+<img src="../../../translated_images/he/agentic.cf84dcda226374e3.webp" alt="מודול אג'נטי" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

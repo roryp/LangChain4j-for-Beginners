@@ -49,7 +49,7 @@ RAGはモデルに参照図書館を持たせるようなものです。質問�
 
 これにより、モデルの回答はトレーニング済みの知識や架空の回答に頼るのではなく、実際のデータに基づくものになります。
 
-<img src="../../../translated_images/ja/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/ja/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAGのワークフロー - ユーザークエリから意味検索、文脈に沿った回答生成まで*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/ja/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/ja/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *埋め込み空間でベクトルとして表現されたドキュメント - 類似コンテンツがクラスタを形成*
 
@@ -160,7 +160,7 @@ Spring Boot Dashboardでは：
 
 「rag」の横にある再生ボタンをクリックするとこのモジュールが起動します。全モジュールを一度に起動することも可能です。
 
-<img src="../../../translated_images/ja/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ja/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **オプション2：シェルスクリプトの使用**
 
@@ -231,7 +231,7 @@ cd ..; .\stop-all.ps1  # すべてのモジュール
 
 このアプリケーションはドキュメントのアップロードと質問のためのウェブインターフェースを提供します。
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/ja/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/ja/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAGアプリケーションインターフェース - ドキュメントをアップロードして質問可能*
 
@@ -247,7 +247,7 @@ cd ..; .\stop-all.ps1  # すべてのモジュール
 
 回答には似ているチャンクのソース参照と類似度スコアが含まれます。スコアは0から1で、質問に対してチャンクがどれだけ関連しているかを示します。スコアが高いほどマッチ度が良いです。これにより回答を元資料と比較して検証できます。
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/ja/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/ja/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *質問結果に回答とソース参照、関連度スコアを表示*
 

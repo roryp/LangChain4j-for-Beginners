@@ -49,7 +49,7 @@ Man kann sich RAG wie eine Referenzbibliothek für das Modell vorstellen. Wenn S
 
 Dies verankert die Antworten des Modells in Ihren tatsächlichen Daten, anstatt auf das Trainingswissen zu vertrauen oder Antworten zu erfinden.
 
-<img src="../../../translated_images/de/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architektur" width="800"/>
+<img src="../../../translated_images/de/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architektur" width="800"/>
 
 *RAG-Workflow – von der Benutzeranfrage zur semantischen Suche bis zur kontextuellen Antwortgenerierung*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/de/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Raum" width="800"/>
+<img src="../../../translated_images/de/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Raum" width="800"/>
 
 *Dokumente als Vektoren im Embedding-Raum dargestellt – ähnlicher Inhalt gruppiert sich*
 
@@ -160,7 +160,7 @@ Im Spring Boot Dashboard können Sie:
 
 Klicken Sie einfach auf die Wiedergabetaste neben "rag", um dieses Modul zu starten, oder starten Sie alle Module auf einmal.
 
-<img src="../../../translated_images/de/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/de/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Shell-Skripte verwenden**
 
@@ -232,7 +232,7 @@ cd ..; .\stop-all.ps1  # Alle Module
 
 Die Anwendung bietet eine Weboberfläche zum Hochladen von Dokumenten und Stellen von Fragen.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/de/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Anwendungsoberfläche" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/de/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Anwendungsoberfläche" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Die RAG-Anwendungsoberfläche – Dokumente hochladen und Fragen stellen*
 
@@ -250,7 +250,7 @@ Stellen Sie nun spezifische Fragen zum Dokumentinhalt. Versuchen Sie etwas Fakti
 
 Beachten Sie, dass jede Antwort Quellenverweise mit Ähnlichkeitsscores enthält. Diese Scores (0 bis 1) zeigen, wie relevant jeder Chunk für Ihre Frage war. Höhere Scores bedeuten bessere Übereinstimmungen. So können Sie die Antwort mit dem Quellmaterial verifizieren.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/de/rag-query-results.6d69fcec5397f355.png" alt="RAG Abfrageergebnisse" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/de/rag-query-results.6d69fcec5397f355.webp" alt="RAG Abfrageergebnisse" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Abfrageergebnisse mit Antwort, Quellenverweisen und Relevanzscores*
 

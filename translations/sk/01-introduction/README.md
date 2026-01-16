@@ -53,7 +53,7 @@ Jazykové modely sú bezstavové. Každé volanie API je nezávislé. Ak pošlet
 
 To je v poriadku pre jednoduché otázky a odpovede, ale na skutočné aplikácie to nestačí. Chatboti zákazníckej podpory si musia pamätať, čo ste im povedali. Osobní asistenti potrebujú kontext. Každá viackolová konverzácia vyžaduje pamäť.
 
-<img src="../../../translated_images/sk/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/sk/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Rozdiel medzi bezstavovými (nezávislými volaniami) a stavovými (s vedomím kontextu) konverzáciami*
 
@@ -61,7 +61,7 @@ To je v poriadku pre jednoduché otázky a odpovede, ale na skutočné aplikáci
 
 Predtým, než sa pustíte do konverzácií, je dôležité pochopiť tokeny - základné jednotky textu, ktoré jazykové modely spracovávajú:
 
-<img src="../../../translated_images/sk/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/sk/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *Príklad, ako sa text rozkladá na tokeny - "I love AI!" sa stáva 4 samostatnými spracovateľskými jednotkami*
 
@@ -73,7 +73,7 @@ Pamäť chatu rieši problém bezstavovosti tým, že udržiava históriu konver
 
 LangChain4j poskytuje implementácie pamäte, ktoré to automaticky zvládajú. Vy si vyberiete, koľko správ chcete uchovať, a rámec spravuje kontextové okno.
 
-<img src="../../../translated_images/sk/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/sk/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory udržiava posuvné okno nedávnych správ, automaticky vyhadzujúc staré*
 
@@ -212,7 +212,7 @@ Zo Spring Boot Dashboard môžete:
 
 Jednoducho kliknite na tlačidlo prehrávania vedľa "introduction" pre spustenie tohto modulu, alebo spustite všetky moduly naraz.
 
-<img src="../../../translated_images/sk/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sk/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Možnosť 2: Použitie shell skriptov**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Všetky moduly
 
 Aplikácia poskytuje webové rozhranie s dvoma implementáciami chatu vedľa seba.
 
-<img src="../../../translated_images/sk/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/sk/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *Dashboard zobrazujúci možnosti Jednoduchý chat (bezstavový) a Konverzačný chat (stavový)*
 
@@ -290,7 +290,7 @@ Aplikácia poskytuje webové rozhranie s dvoma implementáciami chatu vedľa seb
 
 Vyskúšajte najskôr toto. Povedzte "Volám sa John" a potom hneď "Ako sa volám?" Model si to nepamätá, pretože každá správa je nezávislá. Toto demonštruje základný problém integrácie jazykového modelu - žiadny kontext konverzácie.
 
-<img src="../../../translated_images/sk/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/sk/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *AI si nepamätá vaše meno z predchádzajúcej správy*
 
@@ -298,7 +298,7 @@ Vyskúšajte najskôr toto. Povedzte "Volám sa John" a potom hneď "Ako sa vol�
 
 Teraz vyskúšajte rovnakú sekvenciu tu. Povedzte "Volám sa John" a potom "Ako sa volám?" Tentoraz si to pamätá. Rozdiel je v MessageWindowChatMemory - udržiava históriu konverzácie a zahrňuje ju do každého požiadavku. Takto funguje produkčné konverzačné AI.
 
-<img src="../../../translated_images/sk/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/sk/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *AI si pamätá vaše meno z predchádzajúcej časti konverzácie*
 

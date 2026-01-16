@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Ово је у реду за једноставна питања и одговоре, али бескорисно за праве апликације. Ботови за корисничку подршку морају да памте шта сте им рекли. Лични асистенти захтевају контекст. Сваки разговор са више корака захтева меморију.
 
-<img src="../../../translated_images/sr/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Бесдржавни у односу на државни разговори" width="800"/>
+<img src="../../../translated_images/sr/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Бесдржавни у односу на државни разговори" width="800"/>
 
 *Разлика између бесдржавних (независних позива) и државних (свесних контекста) разговора*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Пре него што зароните у разговоре, важно је разумети токене - основне јединице текста које језички модели обрађују:
 
-<img src="../../../translated_images/sr/token-explanation.c39760d8ec650181.png" alt="Објашњење токена" width="800"/>
+<img src="../../../translated_images/sr/token-explanation.c39760d8ec650181.webp" alt="Објашњење токена" width="800"/>
 
 *Пример како се текст дели на токене - "Волим AI!" постаје 4 одвојене јединице за обраду*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j пружа имплементације меморије које ово аутоматски обрађују. Ви бирајте колико порука да задржите, а оквир управља контекстним прозором.
 
-<img src="../../../translated_images/sr/memory-window.bbe67f597eadabb3.png" alt="Концепт меморијског прозора" width="800"/>
+<img src="../../../translated_images/sr/memory-window.bbe67f597eadabb3.webp" alt="Концепт меморијског прозора" width="800"/>
 
 *MessageWindowChatMemory одржава клизни прозор недавних порука, аутоматски одбацујући старе*
 
@@ -212,7 +212,7 @@ Get-Content ..\.env  # Треба да прикаже AZURE_OPENAI_ENDPOINT, API
 
 Једноставно кликните на дугме за покретање поред "introduction" да бисте покренули овај модул, или покрените све модуле одједном.
 
-<img src="../../../translated_images/sr/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sr/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Опција 2: Коришћење shell скрипти**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Апликација пружа веб интерфејс са две имплементације ћаскања једна поред друге.
 
-<img src="../../../translated_images/sr/home-screen.121a03206ab910c0.png" alt="Почетни екран апликације" width="800"/>
+<img src="../../../translated_images/sr/home-screen.121a03206ab910c0.webp" alt="Почетни екран апликације" width="800"/>
 
 *Контролна табла која приказује опције Једноставног ћаскања (бесдржавно) и Конверзационог ћаскања (државно)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Прво пробајте ово. Реците "Зовем се Џон" и одмах затим питајте "Како се зовем?" Модел неће памтити јер је свака порука независна. Ово демонстрира основни проблем интеграције језичког модела - нема контекста разговора.
 
-<img src="../../../translated_images/sr/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Демо бесдржавног ћаскања" width="800"/>
+<img src="../../../translated_images/sr/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Демо бесдржавног ћаскања" width="800"/>
 
 *AI не памти ваше име из претходне поруке*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Сада пробајте исти низ овде. Реците "Зовем се Џон" и онда "Како се зовем?" Овог пута памти. Разлика је MessageWindowChatMemory - одржава историју разговора и укључује је у сваки захтев. Ово је начин на који производни конверзациони AI функционише.
 
-<img src="../../../translated_images/sr/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Демо државног ћаскања" width="800"/>
+<img src="../../../translated_images/sr/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Демо државног ћаскања" width="800"/>
 
 *AI памти ваше име из ранијег дела разговора*
 

@@ -52,7 +52,7 @@ Pomislite nanj kot na dajanje navodil sodelavcu. "Popravi napako" je nejasno. "P
 
 Ta modul prikazuje napredne vzorce pozivanja z uporabo iste osnove LangChain4j iz prejšnjih modulov, s poudarkom na strukturi pozivov in nadzoru razmišljanja.
 
-<img src="../../../translated_images/sl/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/sl/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Kako LangChain4j povezuje vaše pozive z Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/sl/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/sl/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage zagotavlja trajen kontekst, medtem ko UserMessages vsebujejo posamezne zahteve*
 
@@ -104,11 +104,11 @@ Ključna ugotovitev: LangChain4j zagotavlja infrastrukturo (povezavo modela prek
 
 Ne vsa vprašanja zahtevajo enak pristop. Nekatera potrebujejo hitre odgovore, druga globoko razmišljanje. Nekatera potrebujejo vidno razmišljanje, druga samo rezultate. Ta modul pokriva osem vzorcev pozivanja - vsak optimiziran za različne scenarije. Preizkusili jih boste vse, da boste razumeli, kdaj kateri pristop najbolje deluje.
 
-<img src="../../../translated_images/sl/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/sl/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Pregled osmih vzorcev inženiringa pozivov in njihovih primerov uporabe*
 
-<img src="../../../translated_images/sl/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/sl/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Nizka vnema (hitro, neposredno) proti visoki vnemi (temeljito, raziskovalno) pristopi razmišljanja*
 
@@ -163,7 +163,7 @@ Pozivanje z verigo misli (Chain-of-Thought) izrecno zahteva, da model pokaže sv
 > - "Kakšne so najboljše prakse za strukturiranje uvodov orodij v produkcijskih aplikacijah?"
 > - "Kako lahko zajamem in prikažem vmesne posodobitve napredka v uporabniškem vmesniku?"
 
-<img src="../../../translated_images/sl/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/sl/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Načrt → Izvedba → Povzetek delovnega toka za večstopenjske naloge*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/sl/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/sl/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Iterativni cikel izboljšav - generiraj, oceni, identificiraj težave, izboljšaj, ponovi*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Kakšen je najboljši način za programatično razčlenjevanje in ukrepanje na strukturiran izhod?"
 > - "Kako zagotovim dosledne ravni resnosti med različnimi recenzijskimi sejami?"
 
-<img src="../../../translated_images/sl/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/sl/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Okvir s štirimi kategorijami za dosledne recenzije kode z ravnmi resnosti*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/sl/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/sl/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Kako se kontekst pogovora kopiči skozi več krogov do dosega omejitve tokenov*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/sl/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/sl/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Razčlenjevanje problemov v izrecne logične korake*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/sl/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/sl/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Uveljavljanje specifičnih zahtev glede formata, dolžine in strukture*
 
@@ -300,7 +300,7 @@ Iz Spring Boot nadzorne plošče lahko:
 
 Preprosto kliknite gumb za predvajanje zraven "prompt-engineering" za zagon tega modula ali zaženite vse module naenkrat.
 
-<img src="../../../translated_images/sl/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sl/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Možnost 2: Uporaba shell skript**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Vsi moduli
 
 ## Posnetki zaslona aplikacije
 
-<img src="../../../translated_images/sl/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/sl/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Glavna nadzorna plošča prikazuje vseh 8 vzorcev inženiringa pozivov z njihovimi značilnostmi in primeri uporabe*
 
@@ -380,10 +380,10 @@ Spletni vmesnik vam omogoča eksperimentiranje z različnimi strategijami poziva
 
 Postavite preprosto vprašanje, kot je "Koliko je 15 % od 200?" z nizko vnemo. Dobite takojšen, neposreden odgovor. Zdaj postavite nekaj kompleksnega, kot je "Oblikuj strategijo predpomnjenja za API z velikim prometom" z visoko vnemo. Opazujte, kako model upočasni in poda podrobno razmišljanje. Enak model, ista struktura vprašanja - a poziv mu pove, koliko naj razmišlja.
 
-<img src="../../../translated_images/sl/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/sl/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Hitra računanja z minimalnim razmišljanjem*
 
-<img src="../../../translated_images/sl/high-eagerness-demo.4ac93e7786c5a376.png" alt="Demonstracija visoke vneme" width="800"/>
+<img src="../../../translated_images/sl/high-eagerness-demo.4ac93e7786c5a376.webp" alt="Demonstracija visoke vneme" width="800"/>
 
 *Celovita strategija predpomnjenja (2,8 MB)*
 
@@ -391,7 +391,7 @@ Postavite preprosto vprašanje, kot je "Koliko je 15 % od 200?" z nizko vnemo. D
 
 Večstopenjski delovni tokovi imajo koristi od načrtovanja vnaprej in pripovedovanja o napredku. Model opiše, kaj bo naredil, pripoveduje vsak korak in nato povzame rezultate.
 
-<img src="../../../translated_images/sl/tool-preambles-demo.3ca4881e417f2e28.png" alt="Demonstracija izvajanja nalog" width="800"/>
+<img src="../../../translated_images/sl/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Demonstracija izvajanja nalog" width="800"/>
 
 *Ustvarjanje REST končne točke s pripovedovanjem korak za korakom (3,9 MB)*
 
@@ -399,7 +399,7 @@ Večstopenjski delovni tokovi imajo koristi od načrtovanja vnaprej in pripovedo
 
 Poskusi "Ustvari storitev za preverjanje e-pošte". Namesto da bi samo generiral kodo in se ustavil, model generira, ocenjuje glede na kriterije kakovosti, prepozna slabosti in izboljšuje. Videli boste, kako iterira, dokler koda ne doseže proizvodnih standardov.
 
-<img src="../../../translated_images/sl/self-reflecting-code-demo.851ee05c988e743f.png" alt="Demonstracija samoreflektirajoče kode" width="800"/>
+<img src="../../../translated_images/sl/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Demonstracija samoreflektirajoče kode" width="800"/>
 
 *Popolna storitev za preverjanje e-pošte (5,2 MB)*
 
@@ -407,7 +407,7 @@ Poskusi "Ustvari storitev za preverjanje e-pošte". Namesto da bi samo generiral
 
 Pregledi kode potrebujejo dosledne ocenjevalne okvire. Model analizira kodo z uporabo fiksnih kategorij (pravilnost, prakse, zmogljivost, varnost) z različnimi stopnjami resnosti.
 
-<img src="../../../translated_images/sl/structured-analysis-demo.9ef892194cd23bc8.png" alt="Demonstracija strukturne analize" width="800"/>
+<img src="../../../translated_images/sl/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Demonstracija strukturne analize" width="800"/>
 
 *Pregled kode na osnovi okvira*
 
@@ -415,7 +415,7 @@ Pregledi kode potrebujejo dosledne ocenjevalne okvire. Model analizira kodo z up
 
 Vprašaj "Kaj je Spring Boot?" in takoj nato "Pokaži mi primer". Model si zapomni tvoje prvo vprašanje in ti poda prav primer Spring Boot. Brez spomina bi bilo drugo vprašanje preveč nejasno.
 
-<img src="../../../translated_images/sl/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Demonstracija večkratnega pogovora" width="800"/>
+<img src="../../../translated_images/sl/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Demonstracija večkratnega pogovora" width="800"/>
 
 *Ohranjanje konteksta med vprašanji*
 
@@ -423,7 +423,7 @@ Vprašaj "Kaj je Spring Boot?" in takoj nato "Pokaži mi primer". Model si zapom
 
 Izberi matematični problem in ga poskusi rešiti z Razmišljanjem korak za korakom in z Nizko vnemo. Nizka vnema ti samo poda odgovor - hitro, a nejasno. Korak za korakom ti pokaže vsak izračun in odločitev.
 
-<img src="../../../translated_images/sl/step-by-step-reasoning-demo.12139513356faecd.png" alt="Demonstracija razmišljanja korak za korakom" width="800"/>
+<img src="../../../translated_images/sl/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Demonstracija razmišljanja korak za korakom" width="800"/>
 
 *Matematični problem z izrecnimi koraki*
 
@@ -431,7 +431,7 @@ Izberi matematični problem in ga poskusi rešiti z Razmišljanjem korak za kora
 
 Ko potrebuješ specifične formate ali število besed, ta vzorec zagotavlja strogo upoštevanje. Poskusi ustvariti povzetek z natanko 100 besedami v obliki alinej.
 
-<img src="../../../translated_images/sl/constrained-output-demo.567cc45b75da1633.png" alt="Demonstracija omejenega izhoda" width="800"/>
+<img src="../../../translated_images/sl/constrained-output-demo.567cc45b75da1633.webp" alt="Demonstracija omejenega izhoda" width="800"/>
 
 *Povzetek strojnega učenja s kontrolo formata*
 
@@ -445,7 +445,7 @@ GPT-5 ti omogoča nadzor nad računalniškim naporom preko tvojih pozivov. Nizek
 
 Opaziš XML oznake v pozivih? Niso dekorativne. Modeli sledijo strukturiranim navodilom bolj zanesljivo kot prostemu besedilu. Ko potrebuješ večstopenjske procese ali kompleksno logiko, struktura pomaga modelu slediti, kje je in kaj sledi.
 
-<img src="../../../translated_images/sl/prompt-structure.a77763d63f4e2f89.png" alt="Struktura poziva" width="800"/>
+<img src="../../../translated_images/sl/prompt-structure.a77763d63f4e2f89.webp" alt="Struktura poziva" width="800"/>
 
 *Anatomija dobro strukturiranega poziva z jasnimi razdelki in XML-stil organizacijo*
 

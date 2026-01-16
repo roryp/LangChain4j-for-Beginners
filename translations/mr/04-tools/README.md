@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. टूल कार्यान्वित होतो आणि डेटा परत करतो
 6. एजंट निकाल समाविष्ट करून अंतिम उत्तर प्रदान करतो
 
-<img src="../../../translated_images/mr/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/mr/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *ReAct पॅटर्न - AI एजंट्स कसे तर्क आणि कृती यामध्ये बदल करून समस्या सोडवतात*
 
@@ -138,7 +138,7 @@ public interface Assistant {
 
 **टूल चेनिंग** - AI कधीकधी अनुक्रमे एकाहून अधिक टूल कॉल करतो. "सीएटल मध्ये हवामान काय आहे आणि मला छत्री आणायची का?" विचारा आणि बघा कसे ते `getCurrentWeather` कॉल करतं आणि पावसाच्या साहित्याबद्दल तर्क करतो.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/mr/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/mr/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *अनुक्रमे टूल कॉल्स - एका टूलचा आउटपुट पुढच्या निर्णयामध्ये वापरला जातो*
 
@@ -171,7 +171,7 @@ Spring Boot Dashboard मधून, तुम्ही:
 
 "tools" जवळील प्ले बटण क्लिक करा आणि हा मॉड्यूल सुरू करा, किंवा सर्व मॉड्यूल्स एकत्र सुरू करा.
 
-<img src="../../../translated_images/mr/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/mr/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **पर्याय 2: शेल स्क्रिप्ट्स वापरणे**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 हे अ‍ॅप्लिकेशन वेब इंटरफेस प्रदान करते जिथे तुम्ही हवामान आणि तापमान रूपांतरण टूल्सना प्रवेश असलेल्या AI एजंटशी संवाद साधू शकता.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/mr/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/mr/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI एजंट टूल्स इंटरफेस - जलद उदाहरणे आणि टूल्ससह संवादासाठी चॅट इंटरफेस*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 चॅट इंटरफेस संवादाचा इतिहास ठेवतो, ज्यामुळे तुम्हाला मल्टी-टर्न संवाद करता येतात. तुम्ही पूर्वीच्या सर्व प्रश्न आणि प्रतिसाद पाहू शकता, जेणेकरून संवाद ट्रॅक करणे आणि एजंट कसा संदर्भ तयार करतो हे समजणे सोपे होते.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/mr/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/mr/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *मल्टी-टर्न संवाद, साध्या रूपांतरणे, हवामान तपासणी आणि टूल चेनिंग दाखवणारा*
 

@@ -53,7 +53,7 @@ Språkmodeller är stateless. Varje API-anrop är oberoende. Om du skickar "Mitt
 
 Detta är okej för enkla frågor och svar men värdelöst för riktiga applikationer. Kundtjänstrobotar behöver komma ihåg vad du berättade för dem. Personliga assistenter behöver kontext. Alla konversationer med flera turer kräver minne.
 
-<img src="../../../translated_images/sv/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/sv/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Skillnaden mellan stateless (oberoende anrop) och stateful (konstextmedvetna) konversationer*
 
@@ -61,7 +61,7 @@ Detta är okej för enkla frågor och svar men värdelöst för riktiga applikat
 
 Innan vi dyker in i konversationer är det viktigt att förstå tokens – de grundläggande textenheterna som språkmodeller bearbetar:
 
-<img src="../../../translated_images/sv/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/sv/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *Exempel på hur text delas upp i tokens – "I love AI!" blir 4 separata bearbetningsenheter*
 
@@ -73,7 +73,7 @@ Chattminne löser det stateless problemet genom att behålla konversationshistor
 
 LangChain4j tillhandahåller minnesimplementationer som hanterar detta automatiskt. Du väljer hur många meddelanden som ska sparas och ramverket hanterar kontextfönstret.
 
-<img src="../../../translated_images/sv/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/sv/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory behåller ett glidande fönster av senaste meddelanden och släpper automatiskt gamla*
 
@@ -212,7 +212,7 @@ Från Spring Boot Dashboard kan du:
 
 Klicka bara på play-knappen bredvid "introduction" för att starta denna modul, eller starta alla moduler samtidigt.
 
-<img src="../../../translated_images/sv/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sv/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Alternativ 2: Använda shell-skript**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Alla moduler
 
 Applikationen erbjuder ett webbgränssnitt med två chattimplementationer sida vid sida.
 
-<img src="../../../translated_images/sv/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/sv/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *Dashboard som visar både Simple Chat (stateless) och Conversational Chat (stateful) alternativ*
 
@@ -290,7 +290,7 @@ Applikationen erbjuder ett webbgränssnitt med två chattimplementationer sida v
 
 Testa detta först. Säg "Mitt namn är John" och fråga sedan direkt "Vad heter jag?" Modellen kommer inte ihåg eftersom varje meddelande är oberoende. Detta demonstrerar kärnproblemet med grundläggande språkmodellintegration – ingen kontext från konversationen.
 
-<img src="../../../translated_images/sv/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/sv/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *AI minns inte ditt namn från föregående meddelande*
 
@@ -298,7 +298,7 @@ Testa detta först. Säg "Mitt namn är John" och fråga sedan direkt "Vad heter
 
 Testa nu samma sekvens här. Säg "Mitt namn är John" och sedan "Vad heter jag?" Denna gång minns den. Skillnaden är MessageWindowChatMemory – den behåller konversationshistorik och inkluderar den med varje förfrågan. Så här fungerar produktionsklar konversations-AI.
 
-<img src="../../../translated_images/sv/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/sv/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *AI minns ditt namn från tidigare i konversationen*
 

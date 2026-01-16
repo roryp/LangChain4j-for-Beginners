@@ -61,7 +61,7 @@ AI agent s nástroji se řídí vzorcem uvažování a jednání (ReAct):
 5. Nástroj provede volání a vrátí data
 6. Agent zařadí výsledek a poskytne finální odpověď
 
-<img src="../../../translated_images/cs/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/cs/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *Vzor ReAct - jak AI agenti střídají uvažování a jednání k řešení problémů*
 
@@ -138,7 +138,7 @@ Alternativní přístupy (manuální `AiServices.builder()`) vyžadují více k�
 
 **Řetězení nástrojů** - AI může volat více nástrojů po sobě. Zeptejte se „Jaké je počasí v Seattlu a mám si vzít deštník?“ a sledujte, jak spojí `getCurrentWeather` s úvahami o dešti.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/cs/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/cs/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sekvenční volání nástrojů - výstup jednoho nástroje se používá pro další rozhodnutí*
 
@@ -171,7 +171,7 @@ Ve Spring Boot Dashboard můžete:
 
 Jednoduše klikněte na tlačítko přehrávání vedle „tools“, abyste spustili tento modul, nebo spusťte všechny moduly najednou.
 
-<img src="../../../translated_images/cs/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/cs/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Možnost 2: Použití shell skriptů**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Všechny moduly
 
 Aplikace poskytuje webové rozhraní, kde můžete komunikovat s AI agentem, který má přístup k nástrojům počasí a převodu teplot.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/cs/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/cs/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Rozhraní nástrojů AI agenta – rychlé příklady a chatovací rozhraní pro interakci s nástroji*
 
@@ -257,7 +257,7 @@ Teď zkuste něco složitějšího: „Jaké je počasí v Seattlu a převed ho 
 
 Chatovací rozhraní udržuje historii konverzace, umožňuje tak vícekolové interakce. Můžete vidět všechny předchozí dotazy a odpovědi, což usnadňuje sledování kontextu a pochopení, jak agent buduje kontext přes více výměn.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/cs/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/cs/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Vícekroková konverzace ukazující jednoduché převody, dotazy počasí a řetězení nástrojů*
 

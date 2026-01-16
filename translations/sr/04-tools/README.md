@@ -61,7 +61,7 @@ AI агент са алаткама следи образац размишљањ
 5. Алатка извршава и враћа податке
 6. Агент укључује резултат и даје коначни одговор
 
-<img src="../../../translated_images/sr/react-pattern.86aafd3796f3fd13.png" alt="ReAct образац" width="800"/>
+<img src="../../../translated_images/sr/react-pattern.86aafd3796f3fd13.webp" alt="ReAct образац" width="800"/>
 
 *ReAct образац - како AI агенти наизменично размишљају и делују да би решили проблеме*
 
@@ -138,7 +138,7 @@ Spring Boot аутоматски повезује декларативни `@AiS
 
 **Ланац алатки** - AI може позвати више алатки у низу. Питајте "Какво је време у Сијетлу и да ли да понесем кишобран?" и гледајте како ланцира позив `getCurrentWeather` уз разматрање опреме за кишу.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/sr/tool-chaining.3b25af01967d6f7b.png" alt="Ланац алатки" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/sr/tool-chaining.3b25af01967d6f7b.webp" alt="Ланац алатки" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Секвенцијални позиви алатки - излаз једне алатке постаје улаз за следећу одлуку*
 
@@ -171,7 +171,7 @@ cat ../.env  # Требало би да прикаже AZURE_OPENAI_ENDPOINT, AP
 
 Једноставно кликните на дугме за репродукцију поред „tools“ да бисте покренули овај модул, или покрените све модуле одједном.
 
-<img src="../../../translated_images/sr/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sr/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Опција 2: Коришћење shell скрипти**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Апликација пружа веб интерфејс где можете да комуницирате са AI агентом који има приступ алаткама за време и претварање температуре.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/sr/tools-homepage.4b4cd8b2717f9621.png" alt="Интерфејс AI агента са алаткама" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/sr/tools-homepage.4b4cd8b2717f9621.webp" alt="Интерфејс AI агента са алаткама" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Интерфејс AI агента са алаткама - брзи примери и чат интерфејс за рад са алаткама*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Чат интерфејс чува историју разговора, дозвољавајући вам вишекорачну интеракцију. Можете видети све претходне упите и одговоре, што олакшава праћење и разумевање како агент гради контекст током више размена.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/sr/tools-conversation-demo.89f2ce9676080f59.png" alt="Разговор са вишеструким позивима алатки" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/sr/tools-conversation-demo.89f2ce9676080f59.webp" alt="Разговор са вишеструким позивима алатки" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Вишекорачни разговор показује једноставне претворбе, претраге времена и ланац алатки*
 

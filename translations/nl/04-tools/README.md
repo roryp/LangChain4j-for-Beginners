@@ -61,7 +61,7 @@ Een AI-agent met tools volgt een redeneren-en-handelen-patroon (ReAct):
 5. Tool voert uit en retourneert data
 6. Agent verwerkt het resultaat en geeft het definitieve antwoord
 
-<img src="../../../translated_images/nl/react-pattern.86aafd3796f3fd13.png" alt="ReAct-patroon" width="800"/>
+<img src="../../../translated_images/nl/react-pattern.86aafd3796f3fd13.webp" alt="ReAct-patroon" width="800"/>
 
 *Het ReAct-patroon - hoe AI-agenten afwisselen tussen redeneren en handelen om problemen op te lossen*
 
@@ -138,7 +138,7 @@ Alternatieve benaderingen (handmatige `AiServices.builder()`) vergen meer code e
 
 **Tool chaining** – De AI kan meerdere tools na elkaar aanroepen. Vraag "Wat is het weer in Seattle en moet ik een paraplu meenemen?" en zie hoe het `getCurrentWeather` aanroept met een redenering over regenkleding.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/nl/tool-chaining.3b25af01967d6f7b.png" alt="Tool chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/nl/tool-chaining.3b25af01967d6f7b.webp" alt="Tool chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sequentiële tool-aanroepen - de output van de ene tool voedt de volgende beslissing*
 
@@ -171,7 +171,7 @@ Vanuit het Spring Boot Dashboard kun je:
 
 Klik simpelweg op de afspeelknop naast "tools" om deze module te starten, of start alle modules in één keer.
 
-<img src="../../../translated_images/nl/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/nl/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Optie 2: Shell scripts gebruiken**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Alle modules
 
 De applicatie biedt een webinterface waar je kunt communiceren met een AI-agent die toegang heeft tot weer- en temperatuurconversietools.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/nl/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/nl/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *De AI Agent Tools-interface - snelle voorbeelden en chatinterface om met tools te interageren*
 
@@ -257,7 +257,7 @@ Probeer nu iets complexers: "Wat is het weer in Seattle en converteer het naar F
 
 De chatinterface houdt de gespreksgeschiedenis bij, zodat je meerturn-interacties kunt voeren. Je kunt alle vorige vragen en antwoorden terugzien, wat het makkelijk maakt het gesprek te volgen en te begrijpen hoe de agent context opbouwt over meerdere uitwisselingen.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/nl/tools-conversation-demo.89f2ce9676080f59.png" alt="Gesprek met meerdere tool-aanroepen" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/nl/tools-conversation-demo.89f2ce9676080f59.webp" alt="Gesprek met meerdere tool-aanroepen" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Meerturn-gesprek met eenvoudige conversies, weeropvragingen en tool chaining*
 

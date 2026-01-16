@@ -53,7 +53,7 @@ Keelemudelid on olemitud. Iga API kõne on iseseisev. Kui sa saadad "Minu nimi o
 
 See sobib lihtsate küsimuste ja vastuste jaoks, kuid on kasutu tõeliste rakenduste jaoks. Klienditeeninduse botid peavad mäletama, mida sa neile ütlesid. Isiklikud assistendid vajavad konteksti. Iga mitme vahetusega vestlus nõuab mälu.
 
-<img src="../../../translated_images/et/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Olemitu vs olekuline vestlus" width="800"/>
+<img src="../../../translated_images/et/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Olemitu vs olekuline vestlus" width="800"/>
 
 *Vahe olemitu (iseseisvad kõned) ja olekulise (kontekstiteadliku) vestluse vahel*
 
@@ -61,7 +61,7 @@ See sobib lihtsate küsimuste ja vastuste jaoks, kuid on kasutu tõeliste rakend
 
 Enne vestlustesse sukeldumist on oluline mõista tokeneid – teksti põhiühikuid, mida keelemudelid töötlevad:
 
-<img src="../../../translated_images/et/token-explanation.c39760d8ec650181.png" alt="Tokeni selgitus" width="800"/>
+<img src="../../../translated_images/et/token-explanation.c39760d8ec650181.webp" alt="Tokeni selgitus" width="800"/>
 
 *Näide, kuidas tekst jaguneb tokeniteks – "I love AI!" muutub 4 eraldiseisvaks töötlemisüksuseks*
 
@@ -73,7 +73,7 @@ Vestluse mälu lahendab olemituse probleemi, hoides vestluse ajalugu. Enne päri
 
 LangChain4j pakub mälu teostusi, mis seda automaatselt haldavad. Sa valid, mitu sõnumit säilitada, ja raamistik haldab kontekstiakent.
 
-<img src="../../../translated_images/et/memory-window.bbe67f597eadabb3.png" alt="Mälu akna kontseptsioon" width="800"/>
+<img src="../../../translated_images/et/memory-window.bbe67f597eadabb3.webp" alt="Mälu akna kontseptsioon" width="800"/>
 
 *MessageWindowChatMemory hoiab libisevat akent viimastest sõnumitest, automaatselt eemaldades vanu*
 
@@ -212,7 +212,7 @@ Spring Boot Dashboardist saad:
 
 Lihtsalt klõpsa "introduction" kõrval olevale mängunupule, et käivitada see moodul, või käivita korraga kõik moodulid.
 
-<img src="../../../translated_images/et/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/et/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Variant 2: Shell skriptide kasutamine**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Kõik moodulid
 
 Rakendus pakub veebiliidest kahe kõne rakendusega kõrvuti.
 
-<img src="../../../translated_images/et/home-screen.121a03206ab910c0.png" alt="Rakenduse avaleht" width="800"/>
+<img src="../../../translated_images/et/home-screen.121a03206ab910c0.webp" alt="Rakenduse avaleht" width="800"/>
 
 *Armatuurlaud, mis näitab nii lihtsat vestlust (olemitu) kui ka vestluslikku vestlust (olekuline)*
 
@@ -290,7 +290,7 @@ Rakendus pakub veebiliidest kahe kõne rakendusega kõrvuti.
 
 Proovi esmalt seda. Küsi "Minu nimi on John" ja siis kohe "Mis mu nimi on?" Mudel ei mäleta, sest iga sõnum on iseseisev. See demonstreerib põhiprobleemi lihtsa keelemudeli integratsiooniga – puudub vestluse kontekst.
 
-<img src="../../../translated_images/et/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Olemitu vestluse demo" width="800"/>
+<img src="../../../translated_images/et/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Olemitu vestluse demo" width="800"/>
 
 *Tehisintellekt ei mäleta sinu nime eelmisest sõnumist*
 
@@ -298,7 +298,7 @@ Proovi esmalt seda. Küsi "Minu nimi on John" ja siis kohe "Mis mu nimi on?" Mud
 
 Nüüd proovi sama järjestust siin. Küsi "Minu nimi on John" ja siis "Mis mu nimi on?" Seekord mäletab. Vahe on MessageWindowChatMemory – see hoiab vestluse ajalugu ja lisab selle iga päringu juurde. Nii töötab tootmises vestluslik tehisintellekt.
 
-<img src="../../../translated_images/et/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Olekuline vestluse demo" width="800"/>
+<img src="../../../translated_images/et/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Olekuline vestluse demo" width="800"/>
 
 *Tehisintellekt mäletab sinu nime varasemast vestlusest*
 

@@ -53,7 +53,7 @@ Modele językowe są bezstanowe. Każde wywołanie API jest niezależne. Jeśli 
 
 To jest w porządku dla prostych pytań i odpowiedzi, ale bezużyteczne dla prawdziwych aplikacji. Boty obsługi klienta muszą pamiętać, co im powiedziałeś. Asystenci osobowi potrzebują kontekstu. Każda rozmowa wieloturnowa wymaga pamięci.
 
-<img src="../../../translated_images/pl/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Rozmowy bezstanowe vs stanowe" width="800"/>
+<img src="../../../translated_images/pl/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Rozmowy bezstanowe vs stanowe" width="800"/>
 
 *Różnica między rozmowami bezstanowymi (niezależne wywołania) a stanowymi (świadome kontekstu)*
 
@@ -61,7 +61,7 @@ To jest w porządku dla prostych pytań i odpowiedzi, ale bezużyteczne dla praw
 
 Zanim zagłębimy się w rozmowy, ważne jest zrozumienie tokenów – podstawowych jednostek tekstu, które przetwarzają modele językowe:
 
-<img src="../../../translated_images/pl/token-explanation.c39760d8ec650181.png" alt="Wyjaśnienie tokenów" width="800"/>
+<img src="../../../translated_images/pl/token-explanation.c39760d8ec650181.webp" alt="Wyjaśnienie tokenów" width="800"/>
 
 *Przykład, jak tekst jest dzielony na tokeny – "I love AI!" staje się 4 oddzielnymi jednostkami przetwarzania*
 
@@ -73,7 +73,7 @@ Pamięć czatu rozwiązuje problem bezstanowości, utrzymując historię rozmowy
 
 LangChain4j dostarcza implementacje pamięci, które obsługują to automatycznie. Wybierasz, ile wiadomości zachować, a framework zarządza oknem kontekstowym.
 
-<img src="../../../translated_images/pl/memory-window.bbe67f597eadabb3.png" alt="Koncepcja okna pamięci" width="800"/>
+<img src="../../../translated_images/pl/memory-window.bbe67f597eadabb3.webp" alt="Koncepcja okna pamięci" width="800"/>
 
 *MessageWindowChatMemory utrzymuje przesuwne okno ostatnich wiadomości, automatycznie usuwając stare*
 
@@ -212,7 +212,7 @@ Z poziomu Spring Boot Dashboard możesz:
 
 Po prostu kliknij przycisk play obok "introduction", aby uruchomić ten moduł, lub uruchom wszystkie moduły naraz.
 
-<img src="../../../translated_images/pl/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/pl/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opcja 2: Korzystanie ze skryptów shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Wszystkie moduły
 
 Aplikacja udostępnia interfejs webowy z dwoma implementacjami czatu obok siebie.
 
-<img src="../../../translated_images/pl/home-screen.121a03206ab910c0.png" alt="Ekran główny aplikacji" width="800"/>
+<img src="../../../translated_images/pl/home-screen.121a03206ab910c0.webp" alt="Ekran główny aplikacji" width="800"/>
 
 *Panel pokazujący zarówno prosty czat (bezstanowy), jak i konwersacyjny czat (stanowy)*
 
@@ -290,7 +290,7 @@ Aplikacja udostępnia interfejs webowy z dwoma implementacjami czatu obok siebie
 
 Wypróbuj najpierw to. Zapytaj "Mam na imię John", a potem od razu "Jak mam na imię?" Model nie zapamięta, ponieważ każda wiadomość jest niezależna. To demonstruje podstawowy problem integracji modelu językowego – brak kontekstu rozmowy.
 
-<img src="../../../translated_images/pl/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Demo czatu bezstanowego" width="800"/>
+<img src="../../../translated_images/pl/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Demo czatu bezstanowego" width="800"/>
 
 *AI nie pamięta Twojego imienia z poprzedniej wiadomości*
 
@@ -298,7 +298,7 @@ Wypróbuj najpierw to. Zapytaj "Mam na imię John", a potem od razu "Jak mam na 
 
 Teraz spróbuj tej samej sekwencji tutaj. Zapytaj "Mam na imię John", a potem "Jak mam na imię?" Tym razem pamięta. Różnicą jest MessageWindowChatMemory – utrzymuje historię rozmowy i dołącza ją do każdego zapytania. Tak działa produkcyjne AI konwersacyjne.
 
-<img src="../../../translated_images/pl/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Demo czatu stanowego" width="800"/>
+<img src="../../../translated_images/pl/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Demo czatu stanowego" width="800"/>
 
 *AI pamięta Twoje imię z wcześniejszej części rozmowy*
 

@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/sv/test-results.ea5c98d8f3642043.png" alt="Lyckade testresultat" width="800"/>
+<img src="../../../translated_images/sv/test-results.ea5c98d8f3642043.webp" alt="Lyckade testresultat" width="800"/>
 
 *Lyckad testkörning som visar att alla tester passerar utan fel*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Denna kurs fokuserar på **enhetstester** som körs lokalt. Varje test demonstrerar ett specifikt LangChain4j-koncept i isolering.
 
-<img src="../../../translated_images/sv/testing-pyramid.2dd1079a0481e53e.png" alt="Testpyramid" width="800"/>
+<img src="../../../translated_images/sv/testing-pyramid.2dd1079a0481e53e.webp" alt="Testpyramid" width="800"/>
 
 *Testpyramid som visar balansen mellan enhetstester (snabba, isolerade), integrationstester (riktiga komponenter) och end-to-end-tester. Denna utbildning täcker enhetstester.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#bör behålla samtalshistorik
 
 Om du använder Visual Studio Code ger Test Explorer ett grafiskt gränssnitt för att köra och felsöka tester.
 
-<img src="../../../translated_images/sv/vscode-testing.f02dd5917289dced.png" alt="VS Code Testutforskare" width="800"/>
+<img src="../../../translated_images/sv/vscode-testing.f02dd5917289dced.webp" alt="VS Code Testutforskare" width="800"/>
 
 *VS Code Testutforskare som visar testträdet med alla Java-testklasser och enskilda testmetoder*
 
@@ -134,7 +134,7 @@ Test Explorer visar gröna bockar för godkända tester och ger detaljerade felm
 
 Det enklaste mönstret testar promptmallar utan att anropa någon AI-modell. Du verifierar att variabelsubstitution fungerar korrekt och att prompts formateras som förväntat.
 
-<img src="../../../translated_images/sv/prompt-template-testing.b902758ddccc8dee.png" alt="Test av promptmallar" width="800"/>
+<img src="../../../translated_images/sv/prompt-template-testing.b902758ddccc8dee.webp" alt="Test av promptmallar" width="800"/>
 
 *Test av promptmallar som visar flödet för variabelsubstitution: mall med platshållare → värden appliceras → formaterad utdata verifieras*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#test av formatering 
 
 När du testar konversationslogik, använd Mockito för att skapa falska modeller som returnerar förutbestämda svar. Det gör testerna snabba, kostnadsfria och deterministiska.
 
-<img src="../../../translated_images/sv/mock-vs-real.3b8b1f85bfe6845e.png" alt="Mock vs verklig API-jämförelse" width="800"/>
+<img src="../../../translated_images/sv/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Mock vs verklig API-jämförelse" width="800"/>
 
 *Jämförelse som visar varför mocks föredras för testning: de är snabba, gratis, deterministiska och kräver inga API-nycklar*
 
@@ -231,7 +231,7 @@ Detta mönster finns i `01-introduction/src/test/java/com/example/langchain4j/se
 
 Konversationsminnet måste hålla flera användare separerade. Detta test verifierar att konversationer inte blandar samman kontexter.
 
-<img src="../../../translated_images/sv/conversation-isolation.e00336cf8f7a3e3f.png" alt="Konversationsisolering" width="800"/>
+<img src="../../../translated_images/sv/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Konversationsisolering" width="800"/>
 
 *Test av konversationsisolering som visar separata minneslager för olika användare för att förhindra att kontext blandas*
 
@@ -263,7 +263,7 @@ Varje konversation upprätthåller sin egen oberoende historik. I produktionssys
 
 Verktyg är funktioner som AI kan anropa. Testa dem direkt för att säkerställa att de fungerar korrekt oberoende av AI-beslut.
 
-<img src="../../../translated_images/sv/tools-testing.3e1706817b0b3924.png" alt="Test av verktyg" width="800"/>
+<img src="../../../translated_images/sv/tools-testing.3e1706817b0b3924.webp" alt="Test av verktyg" width="800"/>
 
 *Test av verktyg oberoende som visar mock-exekvering av verktyg utan AI-anrop för att verifiera affärslogik*
 
@@ -294,7 +294,7 @@ Dessa tester från `04-tools/src/test/java/com/example/langchain4j/agents/tools/
 
 RAG-system kräver traditionellt vektordatabaser och embeddingtjänster. In-memory-mönstret låter dig testa hela pipelinen utan externa beroenden.
 
-<img src="../../../translated_images/sv/rag-testing.ee7541b1e23934b1.png" alt="In-memory RAG-testning" width="800"/>
+<img src="../../../translated_images/sv/rag-testing.ee7541b1e23934b1.webp" alt="In-memory RAG-testning" width="800"/>
 
 *In-memory RAG-testarbetsflöde som visar dokumentparsing, lagring av embeddingar och likhetssökning utan att kräva en databas*
 

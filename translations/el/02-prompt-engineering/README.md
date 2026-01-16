@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Αυτή η ενότητα παρουσιάζει προηγμένα πρότυπα προτροπών χρησιμοποιώντας το ίδιο θεμέλιο LangChain4j από τις προηγούμενες ενότητες, με έμφαση στη δομή προτροπών και τον έλεγχο λογισμού.
 
-<img src="../../../translated_images/el/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/el/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Πώς το LangChain4j συνδέει τις προτροπές σας με το Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/el/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/el/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *Το SystemMessage παρέχει μόνιμο πλαίσιο ενώ τα UserMessages περιέχουν μεμονωμένα αιτήματα*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 Δεν χρειάζονται όλα τα προβλήματα την ίδια προσέγγιση. Κάποιες ερωτήσεις χρειάζονται γρήγορες απαντήσεις, άλλες βαθιά σκέψη. Κάποιες χρειάζονται ορατό λογισμό, άλλες απλώς αποτελέσματα. Αυτή η ενότητα καλύπτει οκτώ πρότυπα προτροπών - το καθένα βελτιστοποιημένο για διαφορετικά σενάρια. Θα πειραματιστείτε με όλα για να μάθετε πότε λειτουργεί καλύτερα κάθε προσέγγιση.
 
-<img src="../../../translated_images/el/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/el/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Επισκόπηση των οκτώ προτύπων μηχανικής προτροπών και των περιπτώσεων χρήσης τους*
 
-<img src="../../../translated_images/el/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/el/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Χαμηλός ζήλος (γρήγορος, άμεσος) vs Υψηλός ζήλος (διεξοδικός, εξερευνητικός) προσεγγίσεις λογισμού*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - "Ποιες είναι οι βέλτιστες πρακτικές για τη δομή εισαγωγών εργαλείων σε παραγωγικές εφαρμογές;"
 > - "Πώς μπορώ να καταγράψω και να εμφανίσω ενδιάμεσες ενημερώσεις προόδου σε UI;"
 
-<img src="../../../translated_images/el/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/el/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Σχέδιο → Εκτέλεση → Περίληψη ροής εργασίας για εργασίες πολλαπλών βημάτων*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/el/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/el/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Επαναληπτικός κύκλος βελτίωσης - δημιουργία, αξιολόγηση, εντοπισμός προβλημάτων, βελτίωση, επανάληψη*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Ποιος είναι ο καλύτερος τρόπος να αναλύω και να ενεργώ σε δομημένη έξοδο προγραμματιστικά;"
 > - "Πώς διασφαλίζω συνεπή επίπεδα σοβαρότητας σε διαφορετικές συνεδρίες κριτικής;"
 
-<img src="../../../translated_images/el/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/el/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Πλαίσιο τεσσάρων κατηγοριών για συνεπείς κριτικές κώδικα με επίπεδα σοβαρότητας*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/el/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/el/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Πώς συσσωρεύεται το πλαίσιο συνομιλίας σε πολλούς γύρους μέχρι να φτάσει το όριο tokens*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/el/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/el/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Διάσπαση προβλημάτων σε ρητά λογικά βήματα*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/el/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/el/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Επιβολή συγκεκριμένων απαιτήσεων μορφής, μήκους και δομής*
 
@@ -300,7 +300,7 @@ cat ../.env  # Πρέπει να εμφανίζει το AZURE_OPENAI_ENDPOINT, 
 
 Απλώς κάντε κλικ στο κουμπί αναπαραγωγής δίπλα στο "prompt-engineering" για να ξεκινήσετε αυτή την ενότητα, ή ξεκινήστε όλες τις ενότητες ταυτόχρονα.
 
-<img src="../../../translated_images/el/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/el/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Επιλογή 2: Χρήση shell scripts**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 ## Στιγμιότυπα Εφαρμογής
 
-<img src="../../../translated_images/el/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/el/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Η κύρια κονσόλα που δείχνει και τα 8 πρότυπα μηχανικής προτροπών με τα χαρακτηριστικά και τις περιπτώσεις χρήσης τους*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Κάντε μια απλή ερώτηση όπως "Ποιο είναι το 15% του 200;" χρησιμοποιώντας Χαμηλό Ζήλο. Θα λάβετε άμεση, απευθείας απάντηση. Τώρα ρωτήστε κάτι σύνθετο όπως "Σχεδίασε μια στρατηγική caching για ένα API με υψηλή κίνηση" χρησιμοποιώντας Υψηλό Ζήλο. Παρακολουθήστε πώς το μοντέλο επιβραδύνει και παρέχει λεπτομερή λογισμό. Ίδιο μοντέλο, ίδια δομή ερώτησης - αλλά η προτροπή του λέει πόσο να σκεφτεί.
 
-<img src="../../../translated_images/el/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/el/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Γρήγορος υπολογισμός με ελάχιστη λογική*
 
-<img src="../../../translated_images/el/high-eagerness-demo.4ac93e7786c5a376.png" alt="Επίδειξη Υψηλού Ενθουσιασμού" width="800"/>
+<img src="../../../translated_images/el/high-eagerness-demo.4ac93e7786c5a376.webp" alt="Επίδειξη Υψηλού Ενθουσιασμού" width="800"/>
 
 *Ολοκληρωμένη στρατηγική προσωρινής αποθήκευσης (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Οι πολυβηματικές ροές εργασίας ωφελούνται από τον προγραμματισμό εκ των προτέρων και την αφήγηση της προόδου. Το μοντέλο περιγράφει τι θα κάνει, αφηγείται κάθε βήμα και στη συνέχεια συνοψίζει τα αποτελέσματα.
 
-<img src="../../../translated_images/el/tool-preambles-demo.3ca4881e417f2e28.png" alt="Επίδειξη Εκτέλεσης Εργασίας" width="800"/>
+<img src="../../../translated_images/el/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Επίδειξη Εκτέλεσης Εργασίας" width="800"/>
 
 *Δημιουργία REST endpoint με αφήγηση βήμα προς βήμα (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Δοκιμάστε "Δημιουργία υπηρεσίας επικύρωσης email". Αντί να παράγει απλώς κώδικα και να σταματά, το μοντέλο παράγει, αξιολογεί με βάση κριτήρια ποιότητας, εντοπίζει αδυναμίες και βελτιώνει. Θα δείτε να επαναλαμβάνει μέχρι ο κώδικας να πληροί τα πρότυπα παραγωγής.
 
-<img src="../../../translated_images/el/self-reflecting-code-demo.851ee05c988e743f.png" alt="Επίδειξη Αυτο-ανακλαστικού Κώδικα" width="800"/>
+<img src="../../../translated_images/el/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Επίδειξη Αυτο-ανακλαστικού Κώδικα" width="800"/>
 
 *Πλήρης υπηρεσία επικύρωσης email (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Οι ανασκοπήσεις κώδικα χρειάζονται συνεπή πλαίσια αξιολόγησης. Το μοντέλο αναλύει τον κώδικα χρησιμοποιώντας σταθερές κατηγορίες (ορθότητα, πρακτικές, απόδοση, ασφάλεια) με επίπεδα σοβαρότητας.
 
-<img src="../../../translated_images/el/structured-analysis-demo.9ef892194cd23bc8.png" alt="Επίδειξη Δομημένης Ανάλυσης" width="800"/>
+<img src="../../../translated_images/el/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Επίδειξη Δομημένης Ανάλυσης" width="800"/>
 
 *Ανασκόπηση κώδικα βάσει πλαισίου*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Ρωτήστε "Τι είναι το Spring Boot;" και αμέσως μετά "Δείξε μου ένα παράδειγμα". Το μοντέλο θυμάται την πρώτη σας ερώτηση και σας δίνει συγκεκριμένα ένα παράδειγμα Spring Boot. Χωρίς μνήμη, η δεύτερη ερώτηση θα ήταν πολύ αόριστη.
 
-<img src="../../../translated_images/el/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Επίδειξη Συνομιλίας Πολλαπλών Γύρων" width="800"/>
+<img src="../../../translated_images/el/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Επίδειξη Συνομιλίας Πολλαπλών Γύρων" width="800"/>
 
 *Διατήρηση συμφραζομένων μεταξύ ερωτήσεων*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Επιλέξτε ένα μαθηματικό πρόβλημα και δοκιμάστε το με Λογική Βήμα προς Βήμα και Χαμηλό Ενθουσιασμό. Ο χαμηλός ενθουσιασμός απλώς σας δίνει την απάντηση - γρήγορα αλλά αδιαφανώς. Η λογική βήμα προς βήμα σας δείχνει κάθε υπολογισμό και απόφαση.
 
-<img src="../../../translated_images/el/step-by-step-reasoning-demo.12139513356faecd.png" alt="Επίδειξη Λογικής Βήμα προς Βήμα" width="800"/>
+<img src="../../../translated_images/el/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Επίδειξη Λογικής Βήμα προς Βήμα" width="800"/>
 
 *Μαθηματικό πρόβλημα με ρητά βήματα*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Όταν χρειάζεστε συγκεκριμένες μορφές ή αριθμούς λέξεων, αυτό το μοτίβο επιβάλλει αυστηρή τήρηση. Δοκιμάστε να δημιουργήσετε μια περίληψη με ακριβώς 100 λέξεις σε μορφή κουκκίδων.
 
-<img src="../../../translated_images/el/constrained-output-demo.567cc45b75da1633.png" alt="Επίδειξη Περιορισμένης Εξόδου" width="800"/>
+<img src="../../../translated_images/el/constrained-output-demo.567cc45b75da1633.webp" alt="Επίδειξη Περιορισμένης Εξόδου" width="800"/>
 
 *Περίληψη μηχανικής μάθησης με έλεγχο μορφής*
 
@@ -445,7 +445,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Παρατηρήστε τις ετικέτες XML στις προτροπές; Δεν είναι διακοσμητικές. Τα μοντέλα ακολουθούν δομημένες οδηγίες πιο αξιόπιστα από ελεύθερο κείμενο. Όταν χρειάζεστε πολυβηματικές διαδικασίες ή σύνθετη λογική, η δομή βοηθά το μοντέλο να παρακολουθεί πού βρίσκεται και τι ακολουθεί.
 
-<img src="../../../translated_images/el/prompt-structure.a77763d63f4e2f89.png" alt="Δομή Προτροπής" width="800"/>
+<img src="../../../translated_images/el/prompt-structure.a77763d63f4e2f89.webp" alt="Δομή Προτροπής" width="800"/>
 
 *Ανατομία μιας καλά δομημένης προτροπής με σαφείς ενότητες και οργάνωση τύπου XML*
 

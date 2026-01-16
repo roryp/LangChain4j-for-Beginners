@@ -38,7 +38,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Η "αλυσίδα" στο LangChain αναφέρεται στη σύνδεση πολλών στοιχείων μεταξύ τους - μπορεί να συνδέσετε ένα prompt σε ένα μοντέλο, να ένα parser, ή να αλυσιδώνετε πολλές κλήσεις AI όπου η έξοδος της μιας τροφοδοτεί την επόμενη είσοδο. Αυτή η γρήγορη εκκίνηση εστιάζει στα θεμελιώδη, πριν εξερευνήσουμε πιο σύνθετες αλυσίδες.
 
-<img src="../../../translated_images/el/langchain-concept.ad1fe6cf063515e1.png" alt="Έννοια Αλυσίδας LangChain4j" width="800"/>
+<img src="../../../translated_images/el/langchain-concept.ad1fe6cf063515e1.webp" alt="Έννοια Αλυσίδας LangChain4j" width="800"/>
 
 *Σύνδεση στοιχείων στο LangChain4j - τα δομικά στοιχεία συνδέονται για να δημιουργήσουν ισχυρές ροές εργασίας AI*
 
@@ -50,7 +50,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 **MessageWindowChatMemory** - Διατηρεί το ιστορικό της συνομιλίας. Χωρίς αυτό, κάθε αίτημα είναι ανεξάρτητο. Με αυτό, η AI θυμάται προηγούμενα μηνύματα και διατηρεί το πλαίσιο σε πολλές στροφές.
 
-<img src="../../../translated_images/el/architecture.eedc993a1c576839.png" alt="Αρχιτεκτονική LangChain4j" width="800"/>
+<img src="../../../translated_images/el/architecture.eedc993a1c576839.webp" alt="Αρχιτεκτονική LangChain4j" width="800"/>
 
 *Αρχιτεκτονική LangChain4j - βασικά στοιχεία που συνεργάζονται για να τροφοδοτήσουν τις AI εφαρμογές σας*
 

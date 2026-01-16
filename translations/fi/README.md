@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "fi"
 }
 -->
-<img src="../../translated_images/fi/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/fi/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
 ### 🌐 Monikielinen tuki
 

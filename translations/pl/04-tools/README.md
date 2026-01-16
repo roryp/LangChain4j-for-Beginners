@@ -61,7 +61,7 @@ Agent AI z narzędziami realizuje wzorzec rozumowania i działania (ReAct):
 5. Narzędzie wykonuje się i zwraca dane
 6. Agent włącza wynik i podaje ostateczną odpowiedź
 
-<img src="../../../translated_images/pl/react-pattern.86aafd3796f3fd13.png" alt="Wzorzec ReAct" width="800"/>
+<img src="../../../translated_images/pl/react-pattern.86aafd3796f3fd13.webp" alt="Wzorzec ReAct" width="800"/>
 
 *Wzorzec ReAct – jak agenci AI na przemian rozumują i działają, aby rozwiązywać problemy*
 
@@ -138,7 +138,7 @@ Alternatywne podejścia (ręczne `AiServices.builder()`) wymagają więcej kodu 
 
 **Łańcuchowanie narzędzi** – AI może wywołać wiele narzędzi sekwencyjnie. Zapytaj „Jaka jest pogoda w Seattle i czy powinienem zabrać parasol?” i zobacz, jak łączy `getCurrentWeather` z rozumowaniem o konieczności noszenia płaszcza przeciwdeszczowego.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/pl/tool-chaining.3b25af01967d6f7b.png" alt="Łańcuchowanie narzędzi" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/pl/tool-chaining.3b25af01967d6f7b.webp" alt="Łańcuchowanie narzędzi" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sekwencyjne wywołania narzędzi – wynik jednego narzędzia wpływa na kolejną decyzję*
 
@@ -171,7 +171,7 @@ Z poziomu panelu Spring Boot możesz:
 
 Wystarczy kliknąć przycisk uruchomienia obok „tools”, aby rozpocząć ten moduł lub uruchomić wszystkie moduły na raz.
 
-<img src="../../../translated_images/pl/dashboard.9b519b1a1bc1b30a.png" alt="Panel Spring Boot" width="400"/>
+<img src="../../../translated_images/pl/dashboard.9b519b1a1bc1b30a.webp" alt="Panel Spring Boot" width="400"/>
 
 **Opcja 2: Użycie skryptów powłoki**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Wszystkie moduły
 
 Aplikacja oferuje interfejs webowy, gdzie możesz rozmawiać z agentem AI, który ma dostęp do narzędzi pogodowych i do konwersji temperatur.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/pl/tools-homepage.4b4cd8b2717f9621.png" alt="Interfejs narzędzi agenta AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/pl/tools-homepage.4b4cd8b2717f9621.webp" alt="Interfejs narzędzi agenta AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interfejs narzędzi agenta AI – szybkie przykłady i czat do interakcji z narzędziami*
 
@@ -257,7 +257,7 @@ Teraz spróbuj czegoś bardziej złożonego: „Jaka jest pogoda w Seattle i prz
 
 Interfejs czatu utrzymuje historię rozmowy, pozwalając na wielokrotne interakcje. Możesz zobaczyć wszystkie poprzednie zapytania i odpowiedzi, co ułatwia śledzenie kontekstu i zrozumienie, jak agent buduje kontekst przez kolejne wymiany.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/pl/tools-conversation-demo.89f2ce9676080f59.png" alt="Rozmowa z wieloma wywołaniami narzędzi" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/pl/tools-conversation-demo.89f2ce9676080f59.webp" alt="Rozmowa z wieloma wywołaniami narzędzi" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Wieloetapowa rozmowa pokazująca proste konwersje, zapytania pogodowe i łańcuchowanie narzędzi*
 

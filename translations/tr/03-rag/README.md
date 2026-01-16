@@ -49,7 +49,7 @@ RAG'yi modele bir referans kütüphanesi sağlamak olarak düşünün. Bir soru 
 
 Bu, modelin yanıtlarını eğitim bilgisinden veya uydurmalardan ziyade gerçek verilerinize dayandırır.
 
-<img src="../../../translated_images/tr/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/tr/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG iş akışı - kullanıcı sorgusundan anlamsal arama ve bağlamsal yanıt üretimine*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/tr/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/tr/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Embedding uzayında vektörlerle temsil edilen belgeler - benzer içerikler kümelenir*
 
@@ -160,7 +160,7 @@ Spring Boot Dashboard’dan:
 
 Sadece “rag” modülünün yanındaki oynat tuşuna tıklayın veya tüm modülleri birden başlatın.
 
-<img src="../../../translated_images/tr/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/tr/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Seçenek 2: Shell scriptleri kullanma**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Tüm modüller
 
 Uygulama, belge yükleme ve soru sorma için web arayüzü sağlar.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/tr/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/tr/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG uygulama arayüzü - belgeleri yükleyin ve sorular sorun*
 
@@ -248,7 +248,7 @@ Sistem belgenizi işler, parçalara böler ve her parça için embedding oluştu
 
 Her cevabın kaynak referansları ve benzerlik puanları içerdiğini fark edeceksiniz. Bu puanlar (0 ile 1 arasında) her parçanın sorunuzla ne kadar ilgili olduğunun göstergesidir. Yüksek puanlar daha iyi eşleşme demektir. Bu, cevabı kaynak materyalle doğrulamanızı sağlar.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/tr/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/tr/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sorgu sonuçları - cevap ve kaynak referansları ile alaka puanları gösterimi*
 

@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 本模块演示了使用之前模块相同的 LangChain4j 基础的高级提示模式，重点是提示结构和推理控制。
 
-<img src="../../../translated_images/zh/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/zh/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *LangChain4j 如何将你的提示连接到 Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/zh/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/zh/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage 提供持久上下文，UserMessages 包含单独请求*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 不是所有问题都需要相同的方法。有些问题需要快速回答，有些需要深入思考。有些需要可见推理，有些只要结果。本模块涵盖八种提示模式——每种针对不同场景优化。你将尝试所有模式，学习何时使用哪种方法最合适。
 
-<img src="../../../translated_images/zh/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/zh/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *八种提示工程模式及其使用场景概览*
 
-<img src="../../../translated_images/zh/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/zh/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *低积极性（快速、直接）与高积极性（彻底、探索性）推理方法对比*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - “生产应用中结构化工具前言的最佳实践是什么？”
 > - “如何在 UI 中捕获并显示中间进度更新？”
 
-<img src="../../../translated_images/zh/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/zh/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *计划 → 执行 → 总结的多步骤任务工作流*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/zh/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/zh/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *迭代改进循环——生成、评估、识别问题、改进、重复*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - “以编程方式解析和处理结构化输出的最佳方法是什么？”
 > - “如何确保不同审查会话中严重级别的一致性？”
 
-<img src="../../../translated_images/zh/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/zh/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *四类框架实现一致代码审查及严重级别*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/zh/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/zh/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *对话上下文如何在多轮中累积，直到达到令牌限制*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/zh/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/zh/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *将问题拆解为明确的逻辑步骤*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/zh/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/zh/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *强制执行特定格式、长度和结构要求*
 
@@ -300,7 +300,7 @@ cat ../.env  # 应显示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只需点击“prompt-engineering”旁的播放按钮启动本模块，或一次启动所有模块。
 
-<img src="../../../translated_images/zh/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/zh/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **选项 2：使用 shell 脚本**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 ## 应用截图
 
-<img src="../../../translated_images/zh/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/zh/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *主仪表盘显示所有 8 种提示工程模式及其特点和使用场景*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 用低积极性问一个简单问题，比如“200 的 15% 是多少？”，你会得到即时、直接的答案。现在用高积极性问一个复杂问题，比如“为高流量 API 设计缓存策略”。观察模型如何放慢速度，提供详细推理。同一个模型，同样的问题结构——但提示告诉它思考多少。
 
-<img src="../../../translated_images/zh/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/zh/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *快速计算，推理最少*
 
-<img src="../../../translated_images/zh/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/zh/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *全面缓存策略（2.8MB）*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 多步骤工作流受益于事先规划和过程叙述。模型会概述它将做什么，叙述每一步，然后总结结果。
 
-<img src="../../../translated_images/zh/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/zh/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *带有逐步叙述的 REST 端点创建（3.9MB）*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 尝试“创建一个电子邮件验证服务”。模型不仅生成代码然后停止，而是生成后根据质量标准进行评估，识别弱点并改进。你会看到它反复迭代，直到代码达到生产标准。
 
-<img src="../../../translated_images/zh/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/zh/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *完整的电子邮件验证服务（5.2MB）*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 代码审查需要一致的评估框架。模型使用固定类别（正确性、实践、性能、安全）及严重性等级来分析代码。
 
-<img src="../../../translated_images/zh/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/zh/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *基于框架的代码审查*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 问“什么是 Spring Boot？”，然后紧接着问“给我一个示例”。模型记住你的第一个问题，并专门给你一个 Spring Boot 示例。没有记忆，第二个问题会太模糊。
 
-<img src="../../../translated_images/zh/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/zh/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *跨问题的上下文保持*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 选择一个数学问题，分别用逐步推理和低热情尝试。低热情只给你答案——快速但不透明。逐步推理展示每个计算和决策。
 
-<img src="../../../translated_images/zh/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/zh/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *带有明确步骤的数学问题*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 当你需要特定格式或字数时，这种模式强制严格遵守。试着生成一个恰好100字的项目符号格式摘要。
 
-<img src="../../../translated_images/zh/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/zh/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *带格式控制的机器学习摘要*
 
@@ -445,7 +445,7 @@ GPT-5 让你通过提示控制计算努力。低努力意味着快速响应，�
 
 注意提示中的 XML 标签？它们不是装饰。模型比自由文本更可靠地遵循结构化指令。当你需要多步骤流程或复杂逻辑时，结构帮助模型跟踪当前位置和下一步。
 
-<img src="../../../translated_images/zh/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/zh/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *结构良好的提示解剖，带有清晰部分和 XML 风格组织*
 

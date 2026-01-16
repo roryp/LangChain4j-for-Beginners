@@ -52,7 +52,7 @@ Fikirkan ia seperti memberi arahan kepada rakan sekerja. "Betulkan pepijat" adal
 
 Modul ini menunjukkan corak prompt lanjutan menggunakan asas LangChain4j yang sama dari modul sebelumnya, dengan fokus pada struktur prompt dan kawalan penalaran.
 
-<img src="../../../translated_images/ms/langchain4j-flow.48e534666213010b.png" alt="Aliran LangChain4j" width="800"/>
+<img src="../../../translated_images/ms/langchain4j-flow.48e534666213010b.webp" alt="Aliran LangChain4j" width="800"/>
 
 *Bagaimana LangChain4j menghubungkan prompt anda ke Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/ms/message-types.93e0779798a17c9d.png" alt="Senibina Jenis Mesej" width="800"/>
+<img src="../../../translated_images/ms/message-types.93e0779798a17c9d.webp" alt="Senibina Jenis Mesej" width="800"/>
 
 *Mesej Sistem menyediakan konteks berterusan manakala Mesej Pengguna mengandungi permintaan individu*
 
@@ -104,11 +104,11 @@ Pengajaran utama: LangChain4j menyediakan infrastruktur (sambungan model melalui
 
 Tidak semua masalah memerlukan pendekatan yang sama. Sesetengah soalan memerlukan jawapan cepat, yang lain memerlukan pemikiran mendalam. Ada yang memerlukan penalaran yang kelihatan, ada yang hanya memerlukan hasil. Modul ini merangkumi lapan corak prompt - setiap satu dioptimumkan untuk senario berbeza. Anda akan mencuba kesemuanya untuk belajar bila setiap pendekatan paling sesuai.
 
-<img src="../../../translated_images/ms/eight-patterns.fa1ebfdf16f71e9a.png" alt="Lapan Corak Kejuruteraan Prompt" width="800"/>
+<img src="../../../translated_images/ms/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Lapan Corak Kejuruteraan Prompt" width="800"/>
 
 *Gambaran keseluruhan lapan corak kejuruteraan prompt dan kes penggunaannya*
 
-<img src="../../../translated_images/ms/reasoning-effort.db4a3ba5b8e392c1.png" alt="Perbandingan Usaha Penalaran" width="800"/>
+<img src="../../../translated_images/ms/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Perbandingan Usaha Penalaran" width="800"/>
 
 *Keghairahan rendah (pantas, langsung) vs Keghairahan tinggi (teliti, eksploratori) pendekatan penalaran*
 
@@ -163,7 +163,7 @@ Prompt Chain-of-Thought secara eksplisit meminta model menunjukkan proses penala
 > - "Apakah amalan terbaik untuk menyusun preambul alat dalam aplikasi produksi?"
 > - "Bagaimana saya boleh menangkap dan memaparkan kemas kini kemajuan pertengahan dalam UI?"
 
-<img src="../../../translated_images/ms/task-execution-pattern.9da3967750ab5c1e.png" alt="Corak Pelaksanaan Tugas" width="800"/>
+<img src="../../../translated_images/ms/task-execution-pattern.9da3967750ab5c1e.webp" alt="Corak Pelaksanaan Tugas" width="800"/>
 
 *Rancang → Laksanakan → Ringkaskan aliran kerja untuk tugas berbilang langkah*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ms/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Kitaran Refleksi Diri" width="800"/>
+<img src="../../../translated_images/ms/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Kitaran Refleksi Diri" width="800"/>
 
 *Gelung penambahbaikan berulang - jana, nilai, kenal pasti isu, perbaiki, ulang*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Apakah cara terbaik untuk mengurai dan bertindak atas output berstruktur secara programatik?"
 > - "Bagaimana saya memastikan tahap keterukan konsisten merentasi sesi semakan yang berbeza?"
 
-<img src="../../../translated_images/ms/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Corak Analisis Berstruktur" width="800"/>
+<img src="../../../translated_images/ms/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Corak Analisis Berstruktur" width="800"/>
 
 *Rangka kerja empat kategori untuk semakan kod konsisten dengan tahap keterukan*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/ms/context-memory.dff30ad9fa78832a.png" alt="Memori Konteks" width="800"/>
+<img src="../../../translated_images/ms/context-memory.dff30ad9fa78832a.webp" alt="Memori Konteks" width="800"/>
 
 *Bagaimana konteks perbualan terkumpul sepanjang beberapa giliran sehingga mencapai had token*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ms/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Corak Langkah demi Langkah" width="800"/>
+<img src="../../../translated_images/ms/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Corak Langkah demi Langkah" width="800"/>
 
 *Memecahkan masalah kepada langkah logik yang jelas*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ms/constrained-output-pattern.0ce39a682a6795c2.png" alt="Corak Output Terhad" width="800"/>
+<img src="../../../translated_images/ms/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Corak Output Terhad" width="800"/>
 
 *Memaksa keperluan format, panjang, dan struktur tertentu*
 
@@ -300,7 +300,7 @@ Dari Spring Boot Dashboard, anda boleh:
 
 Klik butang main di sebelah "prompt-engineering" untuk memulakan modul ini, atau mulakan semua modul sekaligus.
 
-<img src="../../../translated_images/ms/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ms/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Pilihan 2: Menggunakan skrip shell**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 ## Tangkapan Skrin Aplikasi
 
-<img src="../../../translated_images/ms/dashboard-home.5444dbda4bc1f79d.png" alt="Laman Utama Dashboard" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/ms/dashboard-home.5444dbda4bc1f79d.webp" alt="Laman Utama Dashboard" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Dashboard utama yang menunjukkan semua 8 corak kejuruteraan prompt dengan ciri dan kes penggunaannya*
 
@@ -380,10 +380,10 @@ Antara muka web membolehkan anda mencuba pelbagai strategi prompt. Setiap corak 
 
 Tanya soalan mudah seperti "Apakah 15% daripada 200?" menggunakan Keghairahan Rendah. Anda akan mendapat jawapan segera dan langsung. Kini tanya sesuatu yang kompleks seperti "Reka strategi caching untuk API trafik tinggi" menggunakan Keghairahan Tinggi. Perhatikan bagaimana model melambat dan memberikan penalaran terperinci. Model sama, struktur soalan sama - tetapi prompt memberitahu berapa banyak pemikiran yang perlu dilakukan.
 
-<img src="../../../translated_images/ms/low-eagerness-demo.898894591fb23aa0.png" alt="Demo Keghairahan Rendah" width="800"/>
+<img src="../../../translated_images/ms/low-eagerness-demo.898894591fb23aa0.webp" alt="Demo Keghairahan Rendah" width="800"/>
 *Pengiraan pantas dengan penalaran minimum*
 
-<img src="../../../translated_images/ms/high-eagerness-demo.4ac93e7786c5a376.png" alt="Demo Semangat Tinggi" width="800"/>
+<img src="../../../translated_images/ms/high-eagerness-demo.4ac93e7786c5a376.webp" alt="Demo Semangat Tinggi" width="800"/>
 
 *Strategi caching menyeluruh (2.8MB)*
 
@@ -391,7 +391,7 @@ Tanya soalan mudah seperti "Apakah 15% daripada 200?" menggunakan Keghairahan Re
 
 Aliran kerja berbilang langkah mendapat manfaat daripada perancangan awal dan penceritaan kemajuan. Model menggariskan apa yang akan dilakukan, menceritakan setiap langkah, kemudian meringkaskan hasil.
 
-<img src="../../../translated_images/ms/tool-preambles-demo.3ca4881e417f2e28.png" alt="Demo Pelaksanaan Tugas" width="800"/>
+<img src="../../../translated_images/ms/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Demo Pelaksanaan Tugas" width="800"/>
 
 *Mewujudkan titik akhir REST dengan penceritaan langkah demi langkah (3.9MB)*
 
@@ -399,7 +399,7 @@ Aliran kerja berbilang langkah mendapat manfaat daripada perancangan awal dan pe
 
 Cuba "Cipta perkhidmatan pengesahan emel". Daripada hanya menjana kod dan berhenti, model menjana, menilai berdasarkan kriteria kualiti, mengenal pasti kelemahan, dan memperbaiki. Anda akan melihat ia mengulangi sehingga kod memenuhi piawaian pengeluaran.
 
-<img src="../../../translated_images/ms/self-reflecting-code-demo.851ee05c988e743f.png" alt="Demo Kod Berfikir Sendiri" width="800"/>
+<img src="../../../translated_images/ms/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Demo Kod Berfikir Sendiri" width="800"/>
 
 *Perkhidmatan pengesahan emel lengkap (5.2MB)*
 
@@ -407,7 +407,7 @@ Cuba "Cipta perkhidmatan pengesahan emel". Daripada hanya menjana kod dan berhen
 
 Semakan kod memerlukan rangka kerja penilaian yang konsisten. Model menganalisis kod menggunakan kategori tetap (ketepatan, amalan, prestasi, keselamatan) dengan tahap keterukan.
 
-<img src="../../../translated_images/ms/structured-analysis-demo.9ef892194cd23bc8.png" alt="Demo Analisis Berstruktur" width="800"/>
+<img src="../../../translated_images/ms/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Demo Analisis Berstruktur" width="800"/>
 
 *Semakan kod berasaskan rangka kerja*
 
@@ -415,7 +415,7 @@ Semakan kod memerlukan rangka kerja penilaian yang konsisten. Model menganalisis
 
 Tanya "Apa itu Spring Boot?" kemudian teruskan dengan "Tunjukkan saya contoh". Model mengingati soalan pertama anda dan memberikan contoh Spring Boot khusus. Tanpa memori, soalan kedua itu akan terlalu samar.
 
-<img src="../../../translated_images/ms/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Demo Sembang Berbilang Giliran" width="800"/>
+<img src="../../../translated_images/ms/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Demo Sembang Berbilang Giliran" width="800"/>
 
 *Pemeliharaan konteks merentasi soalan*
 
@@ -423,7 +423,7 @@ Tanya "Apa itu Spring Boot?" kemudian teruskan dengan "Tunjukkan saya contoh". M
 
 Pilih masalah matematik dan cuba dengan Penalaran Langkah demi Langkah dan Semangat Rendah. Semangat rendah hanya memberikan jawapan - pantas tetapi tidak jelas. Langkah demi langkah menunjukkan setiap pengiraan dan keputusan.
 
-<img src="../../../translated_images/ms/step-by-step-reasoning-demo.12139513356faecd.png" alt="Demo Penalaran Langkah demi Langkah" width="800"/>
+<img src="../../../translated_images/ms/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Demo Penalaran Langkah demi Langkah" width="800"/>
 
 *Masalah matematik dengan langkah yang jelas*
 
@@ -431,7 +431,7 @@ Pilih masalah matematik dan cuba dengan Penalaran Langkah demi Langkah dan Seman
 
 Apabila anda memerlukan format atau bilangan perkataan tertentu, corak ini menguatkuasakan pematuhan ketat. Cuba jana ringkasan dengan tepat 100 perkataan dalam format titik peluru.
 
-<img src="../../../translated_images/ms/constrained-output-demo.567cc45b75da1633.png" alt="Demo Output Terhad" width="800"/>
+<img src="../../../translated_images/ms/constrained-output-demo.567cc45b75da1633.webp" alt="Demo Output Terhad" width="800"/>
 
 *Ringkasan pembelajaran mesin dengan kawalan format*
 
@@ -445,7 +445,7 @@ GPT-5 membolehkan anda mengawal usaha pengiraan melalui arahan anda. Usaha renda
 
 Perasan tag XML dalam arahan? Ia bukan hiasan. Model mengikuti arahan berstruktur dengan lebih boleh dipercayai daripada teks bebas. Apabila anda memerlukan proses berbilang langkah atau logik kompleks, struktur membantu model mengesan di mana ia berada dan apa yang seterusnya.
 
-<img src="../../../translated_images/ms/prompt-structure.a77763d63f4e2f89.png" alt="Struktur Arahan" width="800"/>
+<img src="../../../translated_images/ms/prompt-structure.a77763d63f4e2f89.webp" alt="Struktur Arahan" width="800"/>
 
 *Anatomi arahan yang berstruktur baik dengan bahagian jelas dan organisasi gaya XML*
 

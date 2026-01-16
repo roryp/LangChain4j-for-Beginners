@@ -38,7 +38,7 @@ LangChain4j adalah perpustakaan Java yang memudahkan pembinaan aplikasi berkuasa
 
 "Rantai" dalam LangChain merujuk kepada menyambungkan beberapa komponen - anda mungkin menyambungkan arahan ke model ke parser, atau menyambungkan beberapa panggilan AI di mana satu output menjadi input seterusnya. Mula cepat ini memfokuskan kepada asas sebelum meneroka rantai yang lebih kompleks.
 
-<img src="../../../translated_images/ms/langchain-concept.ad1fe6cf063515e1.png" alt="Konsep Rantaian LangChain4j" width="800"/>
+<img src="../../../translated_images/ms/langchain-concept.ad1fe6cf063515e1.webp" alt="Konsep Rantaian LangChain4j" width="800"/>
 
 *Menyambung komponen dalam LangChain4j - blok binaan menghubungkan untuk mencipta aliran kerja AI yang berkuasa*
 
@@ -50,7 +50,7 @@ Kami akan menggunakan tiga komponen teras:
 
 **MessageWindowChatMemory** - Menyimpan sejarah perbualan. Tanpanya, setiap permintaan bebas. Dengan ini, AI mengingati mesej lepas dan mengekalkan konteks merentas beberapa pusing.
 
-<img src="../../../translated_images/ms/architecture.eedc993a1c576839.png" alt="Seni Bina LangChain4j" width="800"/>
+<img src="../../../translated_images/ms/architecture.eedc993a1c576839.webp" alt="Seni Bina LangChain4j" width="800"/>
 
 *Seni bina LangChain4j - komponen teras bekerjasama untuk menggerakkan aplikasi AI anda*
 

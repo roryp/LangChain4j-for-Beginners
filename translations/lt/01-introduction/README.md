@@ -53,7 +53,7 @@ Kalbos modeliai yra bevaldiški. Kiekvienas API kvietimas yra nepriklausomas. Je
 
 Tai tinka paprastiems klausimams ir atsakymams, bet yra nenaudinga tikroms programoms. Klientų aptarnavimo botai turi prisiminti, ką jiems pasakėte. Asmeniniai asistentai reikalauja konteksto. Bet koks daugkartinis pokalbis reikalauja atminties.
 
-<img src="../../../translated_images/lt/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Bevaldis ir Valdingas Pokalbiai" width="800"/>
+<img src="../../../translated_images/lt/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Bevaldis ir Valdingas Pokalbiai" width="800"/>
 
 *Skirtumas tarp bevaldiškų (nepriklausomų kvietimų) ir valdingų (kontekstą atpažįstančių) pokalbių*
 
@@ -61,7 +61,7 @@ Tai tinka paprastiems klausimams ir atsakymams, bet yra nenaudinga tikroms progr
 
 Prieš pradedant pokalbius svarbu suprasti tokenus – pagrindinius teksto vienetus, kuriuos apdoroja kalbos modeliai:
 
-<img src="../../../translated_images/lt/token-explanation.c39760d8ec650181.png" alt="Tokenų Paaiškinimas" width="800"/>
+<img src="../../../translated_images/lt/token-explanation.c39760d8ec650181.webp" alt="Tokenų Paaiškinimas" width="800"/>
 
 *Pavyzdys, kaip tekstas suskaidomas į tokenus – „I love AI!“ tampa 4 atskiromis apdorojimo vienetais*
 
@@ -73,7 +73,7 @@ Pokalbių atmintis sprendžia bevaldiškumo problemą palaikydama pokalbio istor
 
 LangChain4j suteikia atminties įgyvendinimus, kurie tai valdo automatiškai. Jūs pasirenkate, kiek žinučių išlaikyti, o sistema valdo konteksto langą.
 
-<img src="../../../translated_images/lt/memory-window.bbe67f597eadabb3.png" alt="Atminties Langas" width="800"/>
+<img src="../../../translated_images/lt/memory-window.bbe67f597eadabb3.webp" alt="Atminties Langas" width="800"/>
 
 *MessageWindowChatMemory palaiko slenkantį langą su naujausiomis žinutėmis, automatiškai pašalindama senas*
 
@@ -212,7 +212,7 @@ Iš Spring Boot Dashboard galite:
 
 Tiesiog spustelėkite paleidimo mygtuką šalia „introduction“, kad pradėtumėte šį modulį, arba paleiskite visus modulius vienu metu.
 
-<img src="../../../translated_images/lt/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/lt/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **2 variantas: Naudojant shell skriptus**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Visi moduliai
 
 Programa suteikia žiniatinklio sąsają su dviem pokalbių įgyvendinimais šalia vienas kito.
 
-<img src="../../../translated_images/lt/home-screen.121a03206ab910c0.png" alt="Programos Pradžios Ekranas" width="800"/>
+<img src="../../../translated_images/lt/home-screen.121a03206ab910c0.webp" alt="Programos Pradžios Ekranas" width="800"/>
 
 *Valdymo skydelis, rodantis tiek Paprastą Pokalbį (bevaldis), tiek Pokalbių Pokalbį (valdingas)*
 
@@ -290,7 +290,7 @@ Programa suteikia žiniatinklio sąsają su dviem pokalbių įgyvendinimais šal
 
 Išbandykite pirmiausia. Paklauskite „Mano vardas John“ ir iš karto po to „Koks mano vardas?“ Modelis neprisimins, nes kiekviena žinutė yra nepriklausoma. Tai demonstruoja pagrindinę problemą su paprasta kalbos modelio integracija – nėra pokalbio konteksto.
 
-<img src="../../../translated_images/lt/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Bevaldis Pokalbio Demonstracija" width="800"/>
+<img src="../../../translated_images/lt/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Bevaldis Pokalbio Demonstracija" width="800"/>
 
 *AI neprisimena jūsų vardo iš ankstesnės žinutės*
 
@@ -298,7 +298,7 @@ Išbandykite pirmiausia. Paklauskite „Mano vardas John“ ir iš karto po to �
 
 Dabar išbandykite tą patį seką čia. Paklauskite „Mano vardas John“ ir tada „Koks mano vardas?“ Šį kartą jis prisimena. Skirtumas yra MessageWindowChatMemory – jis palaiko pokalbio istoriją ir įtraukia ją į kiekvieną užklausą. Taip veikia gamybos pokalbių AI.
 
-<img src="../../../translated_images/lt/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Valdingas Pokalbio Demonstracija" width="800"/>
+<img src="../../../translated_images/lt/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Valdingas Pokalbio Demonstracija" width="800"/>
 
 *AI prisimena jūsų vardą iš ankstesnio pokalbio*
 

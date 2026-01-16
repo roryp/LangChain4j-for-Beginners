@@ -38,7 +38,7 @@ LangChain4j هو مكتبة جافا تبسط بناء تطبيقات مدعوم
 
 تشير "السلسلة" في LangChain إلى ربط مكونات متعددة معًا - قد تربط موجهًا بنموذج إلى محلل، أو تصل بين عدة استدعاءات ذكاء اصطناعي حيث تغذي ناتج واحدة مدخل التالية. تركّز هذه البداية السريعة على الأساسيات قبل استكشاف سلاسل أكثر تعقيدًا.
 
-<img src="../../../translated_images/ar/langchain-concept.ad1fe6cf063515e1.png" alt="مفهوم ربط LangChain4j" width="800"/>
+<img src="../../../translated_images/ar/langchain-concept.ad1fe6cf063515e1.webp" alt="مفهوم ربط LangChain4j" width="800"/>
 
 *ربط المكونات في LangChain4j - الكتل الأساسية تتصل لإنشاء سير عمل ذكاء اصطناعي قوي*
 
@@ -50,7 +50,7 @@ LangChain4j هو مكتبة جافا تبسط بناء تطبيقات مدعوم
 
 **MessageWindowChatMemory** - يحفظ تاريخ المحادثة. بدونه، كل طلب مستقل. معه، يتذكر الذكاء الرسائل السابقة ويحافظ على السياق عبر عدة حركات.
 
-<img src="../../../translated_images/ar/architecture.eedc993a1c576839.png" alt="هندسة LangChain4j" width="800"/>
+<img src="../../../translated_images/ar/architecture.eedc993a1c576839.webp" alt="هندسة LangChain4j" width="800"/>
 
 *هندسة LangChain4j - المكونات الأساسية تعمل معًا لتشغيل تطبيقات الذكاء الاصطناعي الخاصة بك*
 

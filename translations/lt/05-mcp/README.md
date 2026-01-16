@@ -35,7 +35,7 @@ Jūs jau sukūrėte pokalbių AI, įvaldėte užklausas, pagrindėte atsakymus d
 
 Modelio konteksto protokolas (MCP) suteikia būtent tai – standartinį būdą AI programoms atrasti ir naudoti išorinius įrankius. Vietoje to, kad rašytumėte specialias integracijas kiekvienam duomenų šaltiniui ar paslaugai, jūs jungiatės prie MCP serverių, kurie pateikia savo galimybes vientisu formatu. Jūsų AI agentas tada automatiškai atranda ir naudoja šiuos įrankius.
 
-<img src="../../../translated_images/lt/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Palyginimas" width="800"/>
+<img src="../../../translated_images/lt/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Palyginimas" width="800"/>
 
 *Prieš MCP: sudėtingos taško su tašku integracijos. Po MCP: vienas protokolas, begalinės galimybės.*
 
@@ -43,7 +43,7 @@ MCP sprendžia fundamentalią problemą AI kūrime: kiekviena integracija yra sp
 
 MCP tai standartizuoja. MCP serveris pateikia įrankius su aiškiomis aprašomis ir schemomis. Bet kuris MCP klientas gali prisijungti, atrasti prieinamus įrankius ir juos naudoti. Sukurkite vieną kartą, naudokite visur.
 
-<img src="../../../translated_images/lt/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architektūra" width="800"/>
+<img src="../../../translated_images/lt/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architektūra" width="800"/>
 
 *Modelio konteksto protokolo architektūra – standartizuotas įrankių atradimas ir vykdymas*
 
@@ -71,7 +71,7 @@ Kai jūsų klientas jungiasi prie MCP serverio, jis klausia: „Kokius įrankius
 
 MCP palaiko įvairius perdavimo mechanizmus. Šiame modulyje demonstruojamas Stdio perdavimas vietiniams procesams:
 
-<img src="../../../translated_images/lt/transport-mechanisms.2791ba7ee93cf020.png" alt="Perdavimo mechanizmai" width="800"/>
+<img src="../../../translated_images/lt/transport-mechanisms.2791ba7ee93cf020.webp" alt="Perdavimo mechanizmai" width="800"/>
 
 *MCP perdavimo mechanizmai: HTTP nuotoliniams serveriams, Stdio vietiniams procesams*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 Demo programoje `FileAgent` skaito failą naudodamas MCP failų sistemos įrankius, o `ReportAgent` generuoja struktūruotą ataskaitą su vykdomuoju santrauka (1 sakinis), 3 pagrindiniais punktais ir rekomendacijomis. Vyriausiasis agentas automatiškai koordinuoja šį procesą:
 
-<img src="../../../translated_images/lt/agentic.cf84dcda226374e3.png" alt="Agentinis modulis" width="800"/>
+<img src="../../../translated_images/lt/agentic.cf84dcda226374e3.webp" alt="Agentinis modulis" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

@@ -52,7 +52,7 @@ Mõtle sellele nagu juhiste andmine kolleegile. "Paranda viga" on ebamäärane. 
 
 See moodul demonstreerib täiustatud promptimise mustreid, kasutades sama LangChain4j alust nagu eelmistel moodulitel, keskendudes promptide struktuurile ja põhjenduse kontrollile.
 
-<img src="../../../translated_images/et/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/et/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Kuidas LangChain4j ühendab sinu promptid Azure OpenAI GPT-5-ga*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/et/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/et/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage annab püsiva konteksti, UserMessages sisaldavad individuaalseid päringuid*
 
@@ -104,11 +104,11 @@ Peamine järeldus: LangChain4j pakub infrastruktuuri (mudeli ühendus läbi [Lan
 
 Kõik probleemid ei vaja sama lähenemist. Mõned küsimused vajavad kiireid vastuseid, teised sügavat mõtlemist. Mõned vajavad nähtavat põhjendust, teised ainult tulemusi. See moodul katab kaheksa promptimise mustrit – igaüks optimeeritud erinevateks olukordadeks. Sa katsetad kõiki, et õppida, millal milline lähenemine kõige paremini töötab.
 
-<img src="../../../translated_images/et/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/et/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Ülevaade kaheksast promptide inseneritöö mustrist ja nende kasutusjuhtudest*
 
-<img src="../../../translated_images/et/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/et/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Madal innukus (kiire, otsene) vs kõrge innukus (põhjalik, uuriv) põhjendamise lähenemised*
 
@@ -163,7 +163,7 @@ Chain-of-Thought promptimine palub mudelil näidata oma põhjendusprotsessi, par
 > - "Millised on parimad praktikad tööriistade sissejuhatuste struktureerimiseks tootmiskeskkonnas?"
 > - "Kuidas püüda ja kuvada vahepealseid edenemisuuendusi kasutajaliideses?"
 
-<img src="../../../translated_images/et/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/et/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Plaani → Täida → Kokkuvõtte töövoog mitme sammu ülesannete jaoks*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/et/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/et/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Iteratiivse täiustamise tsükkel – genereeri, hinda, tuvastage probleemid, paranda, korda*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Mis on parim viis struktureeritud väljundi programmeerimiseks lugemiseks ja töötlemiseks?"
 > - "Kuidas tagada järjepidevad raskusastmed erinevate ülevaatussessioonide vahel?"
 
-<img src="../../../translated_images/et/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/et/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Neljaliikmeline raamistik järjepidevate koodi ülevaatuste jaoks raskusastmetega*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/et/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/et/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Kuidas vestluse kontekst koguneb mitme vooru jooksul kuni tokeni piirini*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/et/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/et/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Probleemide jagamine selgeteks loogilisteks sammudeks*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/et/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/et/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Spetsiifiliste formaadi, pikkuse ja struktuuri nõuete järgimine*
 
@@ -300,7 +300,7 @@ Spring Boot Dashboardist saad:
 
 Lihtsalt klõpsa "prompt-engineering" kõrval olevale mängunupule, et käivitada see moodul, või käivita korraga kõik moodulid.
 
-<img src="../../../translated_images/et/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/et/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Valik 2: Shell skriptide kasutamine**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Kõik moodulid
 
 ## Rakenduse ekraanipildid
 
-<img src="../../../translated_images/et/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/et/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Peamine juhtpaneel, mis näitab kõiki 8 promptide inseneritöö mustrit koos nende omaduste ja kasutusjuhtudega*
 
@@ -380,10 +380,10 @@ Veebiliides võimaldab sul katsetada erinevaid promptimise strateegiaid. Iga mus
 
 Esita lihtne küsimus nagu "Mis on 15% 200-st?" kasutades madalat innukust. Saad kohese ja otsese vastuse. Nüüd esita keerulisem küsimus nagu "Disaini vahemälu strateegia suure liiklusega API jaoks" kasutades kõrget innukust. Vaata, kuidas mudel aeglustub ja annab detailse põhjenduse. Sama mudel, sama küsimuse struktuur – aga prompt ütleb, kui palju mõtlemist teha.
 
-<img src="../../../translated_images/et/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/et/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Kiire arvutus minimaalse põhjendusega*
 
-<img src="../../../translated_images/et/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/et/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *Kõikehõlmav vahemällu salvestamise strateegia (2.8MB)*
 
@@ -391,7 +391,7 @@ Esita lihtne küsimus nagu "Mis on 15% 200-st?" kasutades madalat innukust. Saad
 
 Mitmeastmelised töövood saavad kasu eelplaneerimisest ja edenemise jutustamisest. Mudel kirjeldab, mida ta teeb, jutustab iga sammu kohta ja seejärel võtab tulemused kokku.
 
-<img src="../../../translated_images/et/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/et/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *REST-liidese loomine samm-sammult jutustades (3.9MB)*
 
@@ -399,7 +399,7 @@ Mitmeastmelised töövood saavad kasu eelplaneerimisest ja edenemise jutustamise
 
 Proovi "Loo e-posti valideerimise teenus". Selle asemel, et lihtsalt koodi genereerida ja peatuda, genereerib mudel, hindab kvaliteedikriteeriumide alusel, tuvastab nõrkused ja parandab. Sa näed, kuidas ta kordab protsessi, kuni kood vastab tootmisstandarditele.
 
-<img src="../../../translated_images/et/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/et/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Täielik e-posti valideerimise teenus (5.2MB)*
 
@@ -407,7 +407,7 @@ Proovi "Loo e-posti valideerimise teenus". Selle asemel, et lihtsalt koodi gener
 
 Koodikontrollid vajavad järjepidevaid hindamisraamistikke. Mudel analüüsib koodi fikseeritud kategooriate (õigsus, tavad, jõudlus, turvalisus) ja raskusastmete alusel.
 
-<img src="../../../translated_images/et/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/et/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *Raamistiku-põhine koodikontroll*
 
@@ -415,7 +415,7 @@ Koodikontrollid vajavad järjepidevaid hindamisraamistikke. Mudel analüüsib ko
 
 Küsi "Mis on Spring Boot?" ja seejärel kohe "Näita mulle näidet". Mudel mäletab sinu esimest küsimust ja annab sulle just Spring Booti näite. Ilma mäluta oleks teine küsimus liiga üldine.
 
-<img src="../../../translated_images/et/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/et/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Konteksti säilitamine küsimuste vahel*
 
@@ -423,7 +423,7 @@ Küsi "Mis on Spring Boot?" ja seejärel kohe "Näita mulle näidet". Mudel mäl
 
 Vali matemaatikaülesanne ja proovi seda nii samm-sammult põhjendades kui ka madala innukusega. Madal innukus annab lihtsalt vastuse – kiire, kuid ebaselge. Samm-sammult näitab sulle iga arvutust ja otsust.
 
-<img src="../../../translated_images/et/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/et/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Matemaatikaülesanne selgete sammudega*
 
@@ -431,7 +431,7 @@ Vali matemaatikaülesanne ja proovi seda nii samm-sammult põhjendades kui ka ma
 
 Kui vajad kindlaid vorminguid või sõnade arvu, sunnib see muster rangelt järgima. Proovi genereerida kokkuvõte, mis sisaldab täpselt 100 sõna punktide kujul.
 
-<img src="../../../translated_images/et/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/et/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *Masinõppe kokkuvõte vormingu kontrolliga*
 
@@ -445,7 +445,7 @@ GPT-5 võimaldab sul kontrollida arvutuspingutust oma promptide kaudu. Madal pin
 
 Kas märkasid promptides XML-silte? Need ei ole dekoratiivsed. Mudelid järgivad struktureeritud juhiseid usaldusväärsemalt kui vabateksti. Kui vajad mitmeastmelisi protsesse või keerukat loogikat, aitab struktuur mudelil jälgida, kus ta on ja mis järgmiseks tuleb.
 
-<img src="../../../translated_images/et/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/et/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *Hästi struktureeritud prompti anatoomia selgete osade ja XML-laadse korraldusega*
 

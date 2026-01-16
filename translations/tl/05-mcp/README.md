@@ -35,7 +35,7 @@ Nakabuo ka na ng conversational AI, na-master ang mga prompt, na-ground ang mga 
 
 Ang Model Context Protocol (MCP) ay nagbibigay eksaktong iyon — isang pamantayang paraan para sa mga AI application na matuklasan at gamitin ang mga external na tool. Sa halip na magsulat ng mga custom integration para sa bawat data source o serbisyo, kumokonekta ka sa mga MCP server na nagpapakita ng kanilang mga kakayahan sa isang consistent na format. Maaari nang awtomatikong matuklasan at magamit ng iyong AI agent ang mga tool na ito.
 
-<img src="../../../translated_images/tl/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/tl/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *Bago ang MCP: Kumplikadong point-to-point integrations. Pagkatapos ng MCP: Isang protocol, walang katapusang posibilidad.*
 
@@ -43,7 +43,7 @@ Nilulutas ng MCP ang isang pundamental na problema sa pag-develop ng AI: bawat i
 
 Pinastandardize ito ng MCP. Isang MCP server ay nagpapakita ng mga tool na may malinaw na paglalarawan at schema. Anumang MCP client ay maaaring kumonekta, matuklasan ang mga available na tool, at gamitin ito. Build once, use everywhere.
 
-<img src="../../../translated_images/tl/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/tl/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Model Context Protocol architecture - standardized tool discovery and execution*
 
@@ -71,7 +71,7 @@ Kapag kumonekta ang iyong client sa isang MCP server, tinatanong nito, "Anong mg
 
 Sinuportahan ng MCP ang iba't ibang mekanismo ng transportasyon. Ipinapakita ng module na ito ang Stdio transport para sa mga local na proseso:
 
-<img src="../../../translated_images/tl/transport-mechanisms.2791ba7ee93cf020.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/tl/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *MCP transport mechanisms: HTTP para sa mga remote server, Stdio para sa mga lokal na proseso*
 
@@ -169,7 +169,7 @@ Ang **Supervisor Agent pattern** ay isang **flexible** na anyo ng agentic AI. Gu
 
 Sa demo, nagbabasa ng file gamit ang MCP filesystem tools ang `FileAgent`, at gumagawa ng structured report na may executive summary (1 pangungusap), 3 pangunahing punto, at mga rekomendasyon ang `ReportAgent`. Ina-o-orchestrate ito ng Supervisor nang awtomatiko:
 
-<img src="../../../translated_images/tl/agentic.cf84dcda226374e3.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/tl/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

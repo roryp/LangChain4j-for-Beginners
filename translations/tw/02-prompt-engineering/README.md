@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 本模組示範使用與前幾個模組相同的 LangChain4j 基礎，聚焦於提示結構和推理控制的進階提示模式。
 
-<img src="../../../translated_images/tw/langchain4j-flow.48e534666213010b.png" alt="LangChain4j 流程" width="800"/>
+<img src="../../../translated_images/tw/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j 流程" width="800"/>
 
 *LangChain4j 如何將你的提示連接到 Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/tw/message-types.93e0779798a17c9d.png" alt="訊息類型架構" width="800"/>
+<img src="../../../translated_images/tw/message-types.93e0779798a17c9d.webp" alt="訊息類型架構" width="800"/>
 
 *SystemMessage 提供持續上下文，UserMessages 包含個別請求*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 不是所有問題都需要相同方法。有些問題需要快速回答，有些需要深入思考。有些需要可見推理，有些只要結果。本模組涵蓋八種提示模式——各自針對不同場景優化。你將嘗試所有模式，學習何時使用哪種方法最合適。
 
-<img src="../../../translated_images/tw/eight-patterns.fa1ebfdf16f71e9a.png" alt="八種提示模式" width="800"/>
+<img src="../../../translated_images/tw/eight-patterns.fa1ebfdf16f71e9a.webp" alt="八種提示模式" width="800"/>
 
 *八種提示工程模式及其使用情境概覽*
 
-<img src="../../../translated_images/tw/reasoning-effort.db4a3ba5b8e392c1.png" alt="推理努力比較" width="800"/>
+<img src="../../../translated_images/tw/reasoning-effort.db4a3ba5b8e392c1.webp" alt="推理努力比較" width="800"/>
 
 *低熱忱（快速、直接）vs 高熱忱（徹底、探索）推理方法*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - 「在生產應用中結構工具前言的最佳實踐是什麼？」
 > - 「如何在 UI 中捕捉並顯示中間進度更新？」
 
-<img src="../../../translated_images/tw/task-execution-pattern.9da3967750ab5c1e.png" alt="任務執行模式" width="800"/>
+<img src="../../../translated_images/tw/task-execution-pattern.9da3967750ab5c1e.webp" alt="任務執行模式" width="800"/>
 
 *計劃 → 執行 → 總結的多步驟工作流程*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/tw/self-reflection-cycle.6f71101ca0bd28cc.png" alt="自我反思循環" width="800"/>
+<img src="../../../translated_images/tw/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="自我反思循環" width="800"/>
 
 *迭代改進循環——生成、評估、找出問題、改進、重複*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - 「以程式方式解析並處理結構化輸出的最佳方法是什麼？」
 > - 「如何確保不同審查會話中嚴重性等級的一致性？」
 
-<img src="../../../translated_images/tw/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="結構化分析模式" width="800"/>
+<img src="../../../translated_images/tw/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="結構化分析模式" width="800"/>
 
 *四類框架用於一致的程式碼審查，含嚴重性等級*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/tw/context-memory.dff30ad9fa78832a.png" alt="上下文記憶" width="800"/>
+<img src="../../../translated_images/tw/context-memory.dff30ad9fa78832a.webp" alt="上下文記憶" width="800"/>
 
 *對話上下文如何隨多輪累積，直到達到 token 限制*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/tw/step-by-step-pattern.a99ea4ca1c48578c.png" alt="逐步推理模式" width="800"/>
+<img src="../../../translated_images/tw/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="逐步推理模式" width="800"/>
 
 *將問題拆解為明確的邏輯步驟*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/tw/constrained-output-pattern.0ce39a682a6795c2.png" alt="受限輸出模式" width="800"/>
+<img src="../../../translated_images/tw/constrained-output-pattern.0ce39a682a6795c2.webp" alt="受限輸出模式" width="800"/>
 
 *強制特定格式、長度與結構要求*
 
@@ -300,7 +300,7 @@ cat ../.env  # 應該顯示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只需點擊「prompt-engineering」旁的播放按鈕啟動本模組，或一次啟動所有模組。
 
-<img src="../../../translated_images/tw/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/tw/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **選項 2：使用 shell 腳本**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 ## 應用程式截圖
 
-<img src="../../../translated_images/tw/dashboard-home.5444dbda4bc1f79d.png" alt="主控台首頁" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/tw/dashboard-home.5444dbda4bc1f79d.webp" alt="主控台首頁" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *主控台顯示所有 8 種提示工程模式及其特性與使用情境*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 用低熱忱問個簡單問題，例如「200 的 15% 是多少？」你會得到即時、直接的答案。現在用高熱忱問個複雜問題，例如「設計一個高流量 API 的快取策略」。觀察模型如何放慢速度並提供詳細推理。相同模型、相同問題結構——但提示告訴它要思考多少。
 
-<img src="../../../translated_images/tw/low-eagerness-demo.898894591fb23aa0.png" alt="低熱忱示範" width="800"/>
+<img src="../../../translated_images/tw/low-eagerness-demo.898894591fb23aa0.webp" alt="低熱忱示範" width="800"/>
 *快速計算與最少推理*
 
-<img src="../../../translated_images/tw/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/tw/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *全面快取策略 (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 多步驟工作流程受益於事先規劃與進度敘述。模型會概述它將做什麼，敘述每一步，然後總結結果。
 
-<img src="../../../translated_images/tw/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/tw/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *建立帶有逐步敘述的 REST 端點 (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 試試「建立一個電子郵件驗證服務」。模型不只是生成程式碼然後停止，而是生成後根據品質標準評估，找出弱點並改進。你會看到它反覆迭代直到程式碼達到生產標準。
 
-<img src="../../../translated_images/tw/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/tw/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *完整的電子郵件驗證服務 (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 程式碼審查需要一致的評估框架。模型使用固定類別（正確性、實務、效能、安全性）及嚴重性等級來分析程式碼。
 
-<img src="../../../translated_images/tw/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/tw/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *基於框架的程式碼審查*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 問「什麼是 Spring Boot？」然後緊接著問「給我一個範例」。模型會記住你的第一個問題，並專門給你一個 Spring Boot 範例。沒有記憶，第二個問題會太模糊。
 
-<img src="../../../translated_images/tw/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/tw/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *跨問題的上下文保存*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 選一個數學問題，分別用逐步推理和低熱忱嘗試。低熱忱只給你答案——快速但不透明。逐步推理會展示每個計算和決策。
 
-<img src="../../../translated_images/tw/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/tw/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *帶有明確步驟的數學問題*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 當你需要特定格式或字數時，這個模式強制嚴格遵守。試著生成一個正好 100 字的摘要，並用項目符號格式。
 
-<img src="../../../translated_images/tw/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/tw/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *具格式控制的機器學習摘要*
 
@@ -445,7 +445,7 @@ GPT-5 讓你透過提示控制計算努力。低努力意味著快速回應且�
 
 注意提示中的 XML 標籤？它們不是裝飾。模型比起自由文本，更可靠地遵循結構化指令。當你需要多步驟流程或複雜邏輯時，結構有助於模型追蹤目前位置和下一步。
 
-<img src="../../../translated_images/tw/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/tw/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *結構良好的提示解剖，具有清晰區段和 XML 風格組織*
 

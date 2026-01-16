@@ -35,7 +35,7 @@ Postavili ste konverzačné AI, ovládli ste promptovanie, zakotvili odpovede v 
 
 Protokol kontextu modelu (MCP) poskytuje presne to – štandardný spôsob, ako AI aplikácie môžu objavovať a používať externé nástroje. Namiesto písania vlastných integrácií pre každý zdroj dát alebo službu sa pripojíte k MCP serverom, ktoré svoje schopnosti vystavujú v konzistentnom formáte. Váš AI agent môže tieto nástroje potom automaticky objavovať a používať.
 
-<img src="../../../translated_images/sk/mcp-comparison.9129a881ecf10ff5.png" alt="Porovnanie MCP" width="800"/>
+<img src="../../../translated_images/sk/mcp-comparison.9129a881ecf10ff5.webp" alt="Porovnanie MCP" width="800"/>
 
 *Pred MCP: Zložité bodové integrácie. Po MCP: Jeden protokol, nekonečné možnosti.*
 
@@ -43,7 +43,7 @@ MCP rieši základný problém vo vývoji AI: každá integrácia je na mieru. C
 
 MCP to štandardizuje. MCP server vystavuje nástroje s jasnými popismi a schémami. Každý MCP klient sa môže pripojiť, objaviť dostupné nástroje a použiť ich. Postav raz, používej všade.
 
-<img src="../../../translated_images/sk/mcp-architecture.b3156d787a4ceac9.png" alt="Architektúra MCP" width="800"/>
+<img src="../../../translated_images/sk/mcp-architecture.b3156d787a4ceac9.webp" alt="Architektúra MCP" width="800"/>
 
 *Architektúra Protokolu kontextu modelu – štandardizované objavovanie a spúšťanie nástrojov*
 
@@ -71,7 +71,7 @@ Keď sa váš klient pripojí k MCP serveru, pýta sa: "Aké nástroje máte?" S
 
 MCP podporuje rôzne mechanizmy prenosu. Tento modul demonštruje Stdio prenos pre lokálne procesy:
 
-<img src="../../../translated_images/sk/transport-mechanisms.2791ba7ee93cf020.png" alt="Prenosové mechanizmy" width="800"/>
+<img src="../../../translated_images/sk/transport-mechanisms.2791ba7ee93cf020.webp" alt="Prenosové mechanizmy" width="800"/>
 
 *Prenosové mechanizmy MCP: HTTP pre vzdialené servery, Stdio pre lokálne procesy*
 
@@ -169,7 +169,7 @@ Vzor **Supervízny agent** je **flexibilná** forma agentického AI. Supervízor
 
 V dema `FileAgent` číta súbor pomocou MCP nástrojov pre súborový systém a `ReportAgent` vygeneruje štruktúrovanú správu s výkonným zhrnutím (1 vetu), 3 kľúčovými bodmi a odporúčaniami. Supervízor tento proces automaticky orchestruje:
 
-<img src="../../../translated_images/sk/agentic.cf84dcda226374e3.png" alt="Agentický modul" width="800"/>
+<img src="../../../translated_images/sk/agentic.cf84dcda226374e3.webp" alt="Agentický modul" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ഈ മോഡ്യൂൾ മുൻ മോഡ്യൂളുകളിൽ നിന്നുള്ള അതേ LangChain4j അടിസ്ഥാനത്തിൽ പ്രോംപ്റ്റ് ഘടനയും വിവേക നിയന്ത്രണവും കേന്ദ്രീകരിച്ച് ഉയർന്ന തലത്തിലുള്ള പ്രോംപ്റ്റിംഗ് പാറ്റേണുകൾ കാണിക്കുന്നു.
 
-<img src="../../../translated_images/ml/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/ml/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *LangChain4j നിങ്ങളുടെ പ്രോംപ്റ്റുകളെ Azure OpenAI GPT-5-നോട് ബന്ധിപ്പിക്കുന്നു*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/ml/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/ml/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage സ്ഥിരമായ പശ്ചാത്തലം നൽകുന്നു, UserMessages വ്യക്തിഗത അഭ്യർത്ഥനകൾ ഉൾക്കൊള്ളുന്നു*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 എല്ലാ പ്രശ്നങ്ങൾക്കും ഒരേ സമീപനം വേണ്ടതല്ല. ചില ചോദ്യങ്ങൾക്ക് വേഗത്തിലുള്ള മറുപടികൾ വേണം, ചിലത് ആഴത്തിലുള്ള ചിന്ത ആവശ്യമാണ്. ചിലത് ദൃശ്യമായ വിവേകം ആവശ്യമാണ്, ചിലത് ഫലങ്ങൾ മാത്രം. ഈ മോഡ്യൂൾ എട്ട് പ്രോംപ്റ്റിംഗ് പാറ്റേണുകൾ ഉൾക്കൊള്ളുന്നു - ഓരോന്നും വ്യത്യസ്ത സാഹചര്യങ്ങൾക്ക് അനുയോജ്യമാണ്. നിങ്ങൾ അവയെല്ലാം പരീക്ഷിച്ച് ഓരോ സമീപനം എപ്പോൾ മികച്ചതാണെന്ന് പഠിക്കും.
 
-<img src="../../../translated_images/ml/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/ml/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *എട്ട് പ്രോംപ്റ്റ് എഞ്ചിനീയറിംഗ് പാറ്റേണുകളുടെ അവലോകനം, അവയുടെ ഉപയോഗ കേസുകൾ*
 
-<img src="../../../translated_images/ml/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/ml/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *കുറഞ്ഞ ഉത്സാഹം (വേഗം, നേരിട്ട്) vs ഉയർന്ന ഉത്സാഹം (സമഗ്രം, അന്വേഷണപരമായ) വിവേക സമീപനങ്ങൾ*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - "പ്രൊഡക്ഷൻ അപ്ലിക്കേഷനുകളിൽ ടൂൾ പ്രീഅംബിൾസ് ഘടിപ്പിക്കുന്ന മികച്ച രീതികൾ എന്തെല്ലാം?"
 > - "UI-യിൽ ഇടക്കാല പുരോഗതി അപ്ഡേറ്റുകൾ എങ്ങനെ പിടിച്ച് പ്രദർശിപ്പിക്കാം?"
 
-<img src="../../../translated_images/ml/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/ml/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *പദ്ധതി → നടപ്പാക്കൽ → സംഗ്രഹം workflow ബഹു-ഘട്ട ടാസ്കുകൾക്കായി*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ml/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/ml/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *പര്യവേക്ഷണ ചക്രം - സൃഷ്ടിക്കുക, വിലയിരുത്തുക, പ്രശ്നങ്ങൾ തിരിച്ചറിയുക, മെച്ചപ്പെടുത്തുക, ആവർത്തിക്കുക*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "സംഘടിത ഔട്ട്പുട്ട് പ്രോഗ്രാമാറ്റിക്കായി പാഴ്‌സ് ചെയ്ത് പ്രവർത്തിപ്പിക്കുന്ന മികച്ച മാർഗങ്ങൾ എന്തെല്ലാം?"
 > - "വിവിധ റിവ്യൂ സെഷനുകളിൽ സ്ഥിരതയുള്ള ഗുരുതരത്വ നിലകൾ എങ്ങനെ ഉറപ്പാക്കാം?"
 
-<img src="../../../translated_images/ml/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/ml/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *ഗുരുതരത്വ നിലകളോടെ സ്ഥിരതയുള്ള കോഡ് റിവ്യൂകൾക്കുള്ള നാല്-വിഭാഗ ഫ്രെയിംവർക്ക്*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/ml/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/ml/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *സംഭാഷണ പശ്ചാത്തലം പല തവണകളിലായി കൂട്ടിച്ചേർക്കുന്നു, ടോക്കൺ പരിധി എത്തുന്നതുവരെ*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ml/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/ml/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *പ്രശ്നങ്ങളെ വ്യക്തമായ ലജിക് ഘട്ടങ്ങളായി വിഭജിക്കൽ*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ml/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/ml/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *നിശ്ചിത ഫോർമാറ്റ്, നീളം, ഘടന ആവശ്യകതകൾ പാലിക്കൽ*
 
@@ -300,7 +300,7 @@ Spring Boot ഡാഷ്ബോർഡിൽ നിന്ന് നിങ്ങൾ
 
 "prompt-engineering" പക്കൽ പ്ലേ ബട്ടൺ ക്ലിക്കുചെയ്ത് ഈ മോഡ്യൂൾ ആരംഭിക്കാം, അല്ലെങ്കിൽ എല്ലാ മോഡ്യൂളുകളും ഒരുമിച്ച് ആരംഭിക്കാം.
 
-<img src="../../../translated_images/ml/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ml/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **ഓപ്ഷൻ 2: ഷെൽ സ്ക്രിപ്റ്റുകൾ ഉപയോഗിക്കൽ**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 ## അപ്ലിക്കേഷൻ സ്ക്രീൻഷോട്ടുകൾ
 
-<img src="../../../translated_images/ml/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/ml/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *എട്ട് പ്രോംപ്റ്റ് എഞ്ചിനീയറിംഗ് പാറ്റേണുകളും അവയുടെ സവിശേഷതകളും ഉപയോഗ കേസുകളും കാണിക്കുന്ന പ്രധാന ഡാഷ്ബോർഡ്*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 "200-ന്റെ 15% എന്താണ്?" എന്ന ലളിതമായ ചോദ്യമെടുത്ത് കുറഞ്ഞ ഉത്സാഹം ഉപയോഗിച്ച് ചോദിക്കുക. നിങ്ങൾക്ക് ഉടൻ, നേരിട്ടുള്ള മറുപടി ലഭിക്കും. ഇപ്പോൾ "ഉയർന്ന ട്രാഫിക് API-ക്കായി കാഷിംഗ് തന്ത്രം രൂപകൽപ്പന ചെയ്യുക" എന്ന സങ്കീർണ്ണ ചോദ്യമെടുത്ത് ഉയർന്ന ഉത്സാഹം ഉപയോഗിച്ച് ചോദിക്കുക. മോഡൽ എങ്ങനെ മന്ദഗതിയോടെ വിശദമായ വിവേകം നൽകുന്നു എന്ന് ശ്രദ്ധിക്കുക. ഒരേ മോഡൽ, ഒരേ ചോദ്യ ഘടന - പക്ഷേ പ്രോംപ്റ്റ് എത്ര ചിന്തിക്കണമെന്ന് പറയുന്നു.
 
-<img src="../../../translated_images/ml/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ml/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *കുറഞ്ഞ കാരണവുമുള്ള വേഗത്തിലുള്ള കണക്കുകൂട്ടൽ*
 
-<img src="../../../translated_images/ml/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ml/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *സമഗ്ര കാഷിംഗ് തന്ത്രം (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 മൾട്ടി-സ്റ്റെപ്പ് വർക്ക്‌ഫ്ലോകൾക്ക് മുൻകൂർ പദ്ധതിയിടലും പുരോഗതി വിവരണവും സഹായകമാണ്. മോഡൽ എന്ത് ചെയ്യുമെന്ന് വിശദീകരിക്കുകയും, ഓരോ ഘട്ടവും വിവരണം നൽകുകയും, പിന്നീട് ഫലങ്ങൾ സംഗ്രഹിക്കുകയും ചെയ്യുന്നു.
 
-<img src="../../../translated_images/ml/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/ml/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *ഘട്ടം-ഘട്ടമായി വിവരണം നൽകുന്ന REST എന്റ്പോയിന്റ് സൃഷ്ടിക്കൽ (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 "ഒരു ഇമെയിൽ സാധുത പരിശോധന സേവനം സൃഷ്ടിക്കുക" എന്ന് ശ്രമിക്കുക. കോഡ് സൃഷ്ടിച്ച് നിർത്താതെ, മോഡൽ അത് സൃഷ്ടിക്കുകയും, ഗുണനിലവാര മാനദണ്ഡങ്ങളോട് താരതമ്യം ചെയ്ത് വിലയിരുത്തുകയും, ദുർബലതകൾ കണ്ടെത്തുകയും, മെച്ചപ്പെടുത്തുകയും ചെയ്യുന്നു. കോഡ് ഉത്പാദന നിലവാരങ്ങൾ പാലിക്കുന്നതുവരെ ഇത് ആവർത്തിക്കുന്നു.
 
-<img src="../../../translated_images/ml/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/ml/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *സമ്പൂർണ്ണ ഇമെയിൽ സാധുത പരിശോധന സേവനം (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 കോഡ് റിവ്യൂകൾക്ക് സ്ഥിരമായ വിലയിരുത്തൽ ഫ്രെയിംവർക്കുകൾ ആവശ്യമാണ്. മോഡൽ കോഡ് വിശകലനം ചെയ്യുന്നു സ്ഥിരമായ വിഭാഗങ്ങൾ (ശുദ്ധത, പ്രാക്ടീസുകൾ, പ്രകടനം, സുരക്ഷ) ഉപയോഗിച്ച് ഗുരുത്വതലങ്ങൾ ഉൾപ്പെടുത്തി.
 
-<img src="../../../translated_images/ml/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/ml/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *ഫ്രെയിംവർക്കിൽ അടിസ്ഥാനമാക്കിയുള്ള കോഡ് റിവ്യൂ*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 "Spring Boot എന്താണ്?" എന്ന് ചോദിച്ച് ഉടൻ "ഒരു ഉദാഹരണം കാണിക്കൂ" എന്ന് ചോദിക്കുക. മോഡൽ നിങ്ങളുടെ ആദ്യ ചോദ്യം ഓർക്കുകയും, പ്രത്യേകിച്ച് Spring Boot ഉദാഹരണം നൽകുകയും ചെയ്യുന്നു. ഓർമ്മ ഇല്ലാതെ, രണ്ടാം ചോദ്യം വളരെ അസ്പഷ്ടമായിരിക്കും.
 
-<img src="../../../translated_images/ml/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/ml/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *ചോദ്യങ്ങൾക്കിടയിലെ സാന്ദർഭം സംരക്ഷണം*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 ഒരു ഗണിത പ്രശ്നം തിരഞ്ഞെടുക്കുക, അത് Step-by-Step Reasoning ഉം Low Eagerness ഉം ഉപയോഗിച്ച് പരീക്ഷിക്കുക. Low eagerness നിങ്ങൾക്ക് ഫലം മാത്രം നൽകുന്നു - വേഗത്തിൽ എന്നാൽ അപ്രത്യക്ഷമായി. ഘട്ടം-ഘട്ടം നിങ്ങൾക്ക് ഓരോ കണക്കുകൂട്ടലും തീരുമാനവും കാണിക്കുന്നു.
 
-<img src="../../../translated_images/ml/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/ml/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *വ്യക്തമായ ഘട്ടങ്ങളുള്ള ഗണിത പ്രശ്നം*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # എല്ലാ മോഡ്യൂളുകളും
 
 നിങ്ങൾക്ക് പ്രത്യേക ഫോർമാറ്റുകൾ അല്ലെങ്കിൽ വാക്കുകളുടെ എണ്ണം ആവശ്യമായപ്പോൾ, ഈ മാതൃക കർശനമായ പാലനത്തിന് സഹായിക്കുന്നു. കൃത്യമായി 100 വാക്കുകൾ ഉള്ള ബുള്ളറ്റ് പോയിന്റ് ഫോർമാറ്റിൽ ഒരു സംഗ്രഹം സൃഷ്ടിക്കാൻ ശ്രമിക്കുക.
 
-<img src="../../../translated_images/ml/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/ml/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *ഫോർമാറ്റ് നിയന്ത്രണത്തോടെ മെഷീൻ ലേണിംഗ് സംഗ്രഹം*
 
@@ -445,7 +445,7 @@ GPT-5 നിങ്ങളുടെ പ്രോംപ്റ്റുകൾ വഴ
 
 പ്രോംപ്റ്റുകളിൽ XML ടാഗുകൾ ശ്രദ്ധിച്ചിട്ടുണ്ടോ? അവ അലങ്കാരമല്ല. മോഡലുകൾ ഘടനാപരമായ നിർദ്ദേശങ്ങൾ സ്വതന്ത്ര വാചകത്തേക്കാൾ വിശ്വസനീയമായി പിന്തുടരുന്നു. നിങ്ങൾക്ക് മൾട്ടി-സ്റ്റെപ്പ് പ്രക്രിയകൾ അല്ലെങ്കിൽ സങ്കീർണ്ണ ലജിക് ആവശ്യമുള്ളപ്പോൾ, ഘടന മോഡലിന് എവിടെ ആണ് എന്നതും അടുത്തത് എന്താണെന്നും ട്രാക്ക് ചെയ്യാൻ സഹായിക്കുന്നു.
 
-<img src="../../../translated_images/ml/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/ml/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *വ്യക്തമായ വിഭാഗങ്ങളും XML-ശൈലിയിൽ ക്രമീകരണവും ഉള്ള നല്ല ഘടനയുള്ള പ്രോംപ്റ്റിന്റെ ഘടന*
 

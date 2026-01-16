@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. הכלי מבצע ומחזיר נתונים
 6. הסוכן משלב את התוצאה ומספק את התשובה הסופית
 
-<img src="../../../translated_images/he/react-pattern.86aafd3796f3fd13.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/he/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *דפוס ReAct - כיצד סוכני AI מתחלפים בין היסק ופעולה לפתרון בעיות*
 
@@ -138,7 +138,7 @@ Spring Boot מחבר אוטומטית את ממשק ה-`@AiService` הדקלרט
 
 **רצף כלים** - ה-AI עשוי לקרוא לכלים מרובים ברצף. שאול "מה מזג האוויר בסיאטל והאם כדאי לקחת מטריה?" וצפו כיצד הוא מקשר בין `getCurrentWeather` לבין היסק לגבי ציוד לגשם.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/he/tool-chaining.3b25af01967d6f7b.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/he/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *קריאות כלים ברצף - פלט של כלי אחד מוזן להחלטה הבאה*
 
@@ -171,7 +171,7 @@ cat ../.env  # צריך להציג AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT
 
 פשוט לחצו על כפתור ההפעלה לצד "tools" כדי להפעיל מודול זה, או הפעלתם את כל המודולים יחד.
 
-<img src="../../../translated_images/he/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/he/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **אפשרות 2: שימוש בסקריפטים של שורת פקודה**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 היישום מספק ממשק ווב שבו ניתן לתקשר עם סוכן AI שיש לו גישה לכלי מזג אוויר והמרת טמפרטורה.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/he/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/he/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ממשק כלים לסוכן AI - דוגמאות מהירות וממשק שיחה לתקשורת עם הכלים*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 ממשק השיחה שומר היסטוריית שיחה, מאפשר אינטראקציות מרובות סבבים. ניתן לראות את כל השאלות והתגובות הקודמות, מה שמקל לעקוב אחרי השיחה ולהבין כיצד הסוכן בונה הקשר על פני מספר חילופים.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/he/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/he/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *שיחה מרובת סבבים המראה המרות פשוטות, בדיקות מזג אוויר, ורצף כלים*
 

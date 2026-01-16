@@ -53,7 +53,7 @@ Kielimallit ovat tilattomia. Jokainen API-kutsu on itsenäinen. Jos lähetät "N
 
 Tämä toimii yksinkertaisissa kysymys-vastaus -tilanteissa, mutta on hyödytöntä todellisissa sovelluksissa. Asiakaspalvelubottien täytyy muistaa, mitä kerroit niille. Henkilökohtaisten avustajien täytyy ymmärtää konteksti. Mikä tahansa monivuoroinen keskustelu vaatii muistia.
 
-<img src="../../../translated_images/fi/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/fi/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Ero tilattomien (itsenäisten kutsujen) ja tilallisten (kontekstia ymmärtävien) keskustelujen välillä*
 
@@ -61,7 +61,7 @@ Tämä toimii yksinkertaisissa kysymys-vastaus -tilanteissa, mutta on hyödytön
 
 Ennen kuin sukellat keskusteluihin, on tärkeää ymmärtää tokenit – tekstin perusyksiköt, joita kielimallit käsittelevät:
 
-<img src="../../../translated_images/fi/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/fi/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *Esimerkki siitä, miten teksti pilkotaan tokeneiksi – "I love AI!" muodostuu neljästä erillisestä käsittelyyksiköstä*
 
@@ -73,7 +73,7 @@ Keskustelumuisti ratkaisee tilattomuuden ongelman ylläpitämällä keskusteluhi
 
 LangChain4j tarjoaa muistiratkaisuja, jotka hoitavat tämän automaattisesti. Valitset, kuinka monta viestiä säilytetään, ja kehys hallinnoi konteksti-ikkunaa.
 
-<img src="../../../translated_images/fi/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/fi/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory ylläpitää liukuvaa ikkunaa viimeisimmistä viesteistä, pudottaen automaattisesti vanhoja*
 
@@ -212,7 +212,7 @@ Spring Boot Dashboardista voit:
 
 Klikkaa vain toistopainiketta "introduction" käynnistääksesi tämän moduulin tai käynnistä kaikki moduulit kerralla.
 
-<img src="../../../translated_images/fi/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/fi/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Vaihtoehto 2: Shell-skriptien käyttäminen**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Kaikki moduulit
 
 Sovellus tarjoaa web-käyttöliittymän, jossa on kaksi chat-toteutusta rinnakkain.
 
-<img src="../../../translated_images/fi/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/fi/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *Hallintapaneeli, jossa on sekä Simple Chat (tilaton) että Conversational Chat (tilallinen) -vaihtoehdot*
 
@@ -290,7 +290,7 @@ Sovellus tarjoaa web-käyttöliittymän, jossa on kaksi chat-toteutusta rinnakka
 
 Kokeile tätä ensin. Kysy "Nimeni on John" ja heti perään "Mikä nimeni on?" Malli ei muista, koska jokainen viesti on itsenäinen. Tämä havainnollistaa perusongelman kielimallien integroinnissa – ei keskustelukontekstia.
 
-<img src="../../../translated_images/fi/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/fi/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *Tekoäly ei muista nimeäsi edellisestä viestistä*
 
@@ -298,7 +298,7 @@ Kokeile tätä ensin. Kysy "Nimeni on John" ja heti perään "Mikä nimeni on?" 
 
 Kokeile samaa sekvenssiä täällä. Kysy "Nimeni on John" ja sitten "Mikä nimeni on?" Tällä kertaa se muistaa. Erona on MessageWindowChatMemory – se ylläpitää keskusteluhistoriaa ja liittää sen jokaiseen pyyntöön. Näin tuotantokeskustelutekoäly toimii.
 
-<img src="../../../translated_images/fi/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/fi/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *Tekoäly muistaa nimesi aiemmasta keskustelusta*
 

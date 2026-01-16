@@ -61,7 +61,7 @@ AI-агент с инструментами следует паттерну ра
 5. Инструмент выполняется и возвращает данные
 6. Агент обрабатывает результат и дает окончательный ответ
 
-<img src="../../../translated_images/ru/react-pattern.86aafd3796f3fd13.png" alt="Паттерн ReAct" width="800"/>
+<img src="../../../translated_images/ru/react-pattern.86aafd3796f3fd13.webp" alt="Паттерн ReAct" width="800"/>
 
 *Паттерн ReAct — как AI-агенты чередуют размышления и действия для решения задач*
 
@@ -138,7 +138,7 @@ Spring Boot автоматически внедряет декларативны
 
 **Цепочка инструментов** — AI может вызвать несколько инструментов последовательно. Спросите: «Какая погода в Сиэтле и стоит ли брать зонтик?» и наблюдайте, как он вызывает `getCurrentWeather`, рассуждая о необходимости зонтика.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/ru/tool-chaining.3b25af01967d6f7b.png" alt="Цепочка инструментов" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/ru/tool-chaining.3b25af01967d6f7b.webp" alt="Цепочка инструментов" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Последовательные вызовы инструментов — вывод одного инструмента становится входом для следующего решения*
 
@@ -171,7 +171,7 @@ cat ../.env  # Должно показывать AZURE_OPENAI_ENDPOINT, API_KEY,
 
 Просто нажмите кнопку воспроизведения рядом с «tools», чтобы запустить этот модуль, или запустите все модули сразу.
 
-<img src="../../../translated_images/ru/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ru/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Вариант 2: Использование shell-скриптов**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Приложение предоставляет веб-интерфейс, где вы можете взаимодействовать с AI-агентом, имеющим доступ к инструментам погоды и преобразования температуры.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/ru/tools-homepage.4b4cd8b2717f9621.png" alt="Интерфейс AI-агента с инструментами" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/ru/tools-homepage.4b4cd8b2717f9621.webp" alt="Интерфейс AI-агента с инструментами" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Интерфейс AI-агента с инструментами — быстрые примеры и чат для взаимодействия с инструментами*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Интерфейс чата сохраняет историю диалога, позволяя вести многошаговые взаимодействия. Вы можете видеть все предыдущие запросы и ответы, что облегчает отслеживание беседы и понимание, как агент строит контекст за несколько обменов.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ru/tools-conversation-demo.89f2ce9676080f59.png" alt="Разговор с множественными вызовами инструментов" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ru/tools-conversation-demo.89f2ce9676080f59.webp" alt="Разговор с множественными вызовами инструментов" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Многошаговый разговор с простыми конверсиями, запросами погоды и цепочкой инструментов*
 

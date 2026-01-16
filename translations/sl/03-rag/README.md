@@ -49,7 +49,7 @@ Razmislite o RAG kot o tem, da modelu daste referenčno knjižnico. Ko postavite
 
 S tem temelji odgovore modela na vaših dejanskih podatkih, namesto da bi se zanašal na naučeno znanje ali izmišljal odgovore.
 
-<img src="../../../translated_images/sl/rag-architecture.ccb53b71a6ce407f.png" alt="RAG arhitektura" width="800"/>
+<img src="../../../translated_images/sl/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG arhitektura" width="800"/>
 
 *Potek dela RAG – od uporabniške poizvedbe do semantičnega iskanja in generiranja kontekstualnih odgovorov*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/sl/vector-embeddings.2ef7bdddac79a327.png" alt="Prostor vektornih vdelav" width="800"/>
+<img src="../../../translated_images/sl/vector-embeddings.2ef7bdddac79a327.webp" alt="Prostor vektornih vdelav" width="800"/>
 
 *Dokumenti predstavljeni kot vektorji v prostoru vdelav - podobne vsebine se združujejo*
 
@@ -160,7 +160,7 @@ Iz Spring Boot Dashboarda lahko:
 
 Preprosto kliknite gumb za predvajanje ob "rag" za zagon tega modula ali pa zaženite vse module naenkrat.
 
-<img src="../../../translated_images/sl/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sl/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Možnost 2: Uporaba shell skript**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Vsi moduli
 
 Aplikacija nudi spletni vmesnik za nalaganje dokumentov in postavljanje vprašanj.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/sl/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG uporabniški vmesnik" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/sl/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG uporabniški vmesnik" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Uporabniški vmesnik RAG aplikacije – naložite dokumente in postavite vprašanja*
 
@@ -248,7 +248,7 @@ Zdaj postavite specifična vprašanja glede vsebine dokumenta. Poskusite z dejst
 
 Opazite, da vsak odgovor vsebuje reference na vire z ocenami podobnosti. Te ocene (od 0 do 1) prikazujejo, kako relevantni so bili posamezni deli za vaše vprašanje. Višje ocene pomenijo boljše ujemanje. Tako lahko preverite odgovor glede na izvorno gradivo.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/sl/rag-query-results.6d69fcec5397f355.png" alt="Rezultati poizvedbe RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/sl/rag-query-results.6d69fcec5397f355.webp" alt="Rezultati poizvedbe RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Rezultati poizvedbe prikazujejo odgovor z referencami na vire in ocenami relevantnosti*
 

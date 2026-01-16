@@ -38,7 +38,7 @@ LangChain4j అనేది AI ఆధారిత అనువర్తనాల
 
 LangChainలో "chain" అనేది ఒకదానితో మరోదాన్ని జతచేసే ప్రక్రియను సూచిస్తుంది - మీరు ఒక ప్రాంప్ట్‌ను మోడల్‌కు, లేదా పలువురు AI కాల్స్‌ను ఒకదానికి తరువాతి ఇన్‌పుట్‌గా ఆతర్వాతి కాల్‌కు చేర్పించవచ్చు. ఈ త్వరితప్రారంభం సాంక్లిష్టమైన చైన్లను అన్వేషించక ముందు ప్రాథమిక అంశాలపై దృష్టి పెడుతుంది.
 
-<img src="../../../translated_images/te/langchain-concept.ad1fe6cf063515e1.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/te/langchain-concept.ad1fe6cf063515e1.webp" alt="LangChain4j Chaining Concept" width="800"/>
 
 *LangChain4jలో కంకణాల సంకల్పన - బిల్డింగ్ బ్లాక్స్ శక్తివంతమైన AI వర్క్‌ఫ్లోలను సృష్టించడానికి కలుస్తాయి*
 
@@ -50,7 +50,7 @@ LangChainలో "chain" అనేది ఒకదానితో మరోదా
 
 **MessageWindowChatMemory** - సంభాషణ చరిత్రను నిర్వహిస్తుంది. దీనివల్ల ప్రతి రిక్వెస్ట్ స్వతంత్రం కాకుండా, AI గత సందేశాలను గుర్తుంచుకుంటూ సాంకేతిక సమాచారాన్ని నిలుపుకుంటుంది.
 
-<img src="../../../translated_images/te/architecture.eedc993a1c576839.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/te/architecture.eedc993a1c576839.webp" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j నిర్మాణం - ప్రధాన భాగాలు కలిసి మీ AI అనువర్తనాలకు శక్తిని నింపుతాయి*
 

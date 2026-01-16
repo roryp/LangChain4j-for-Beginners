@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Model Context Protocol (MCP) はまさにそうした標準化された方法をAIアプリケーションに提供します。各データソースやサービス用にカスタムの統合コードを書く代わりに、一貫した形式で機能を公開するMCPサーバーに接続します。あなたのAIエージェントはこのツール群を自動的に発見し利用できます。
 
-<img src="../../../translated_images/ja/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/ja/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *MCP以前：複雑なポイントツーポイント連携。MCP以降：一つのプロトコルで無限の可能性。*
 
@@ -43,7 +43,7 @@ MCPはAI開発における根本的な問題を解決します：すべての統
 
 MCPはこれを標準化します。MCPサーバーは明確な説明とスキーマ付きでツールを公開し、任意のMCPクライアントが接続して利用可能なツールを発見し利用できるようになります。一度作ればどこでも使えるのです。
 
-<img src="../../../translated_images/ja/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/ja/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Model Context Protocolのアーキテクチャ - 標準化されたツール発見と実行*
 
@@ -71,7 +71,7 @@ LangChain4jでMCPを使うにはこのMaven依存を追加します：
 
 MCPは複数の通信方式をサポートします。本モジュールではローカルプロセス向けのStdio通信を例示します：
 
-<img src="../../../translated_images/ja/transport-mechanisms.2791ba7ee93cf020.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/ja/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *MCP通信方式：リモートサーバ用HTTP、ローカルプロセス用Stdio*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 デモでは`FileAgent`がMCPファイルシステムツールでファイルを読み、`ReportAgent`が1文の概要、3つの要点、推奨事項を含む構造化されたレポートを生成します。Supervisorがこのフローを自動的にオーケストレーションします：
 
-<img src="../../../translated_images/ja/agentic.cf84dcda226374e3.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/ja/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

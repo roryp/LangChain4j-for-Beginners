@@ -53,7 +53,7 @@ Mifano ya lugha haina hali. Kila simu ya API ni huru. Ikiwa utatuma "Jina langu 
 
 Hii ni sawa kwa maswali na majibu rahisi lakini haifai kwa programu halisi. Bots za huduma kwa wateja zinahitaji kukumbuka uliyowaambia. Msaidizi wa kibinafsi anahitaji muktadha. Mazungumzo yoyote yenye mizunguko mingi yanahitaji kumbukumbu.
 
-<img src="../../../translated_images/sw/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Mazungumzo Yasiyo na Hali dhidi ya Yenye Hali" width="800"/>
+<img src="../../../translated_images/sw/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Mazungumzo Yasiyo na Hali dhidi ya Yenye Hali" width="800"/>
 
 *Tofauti kati ya mazungumzo yasiyo na hali (simu huru) na yenye hali (yanayojua muktadha)*
 
@@ -61,7 +61,7 @@ Hii ni sawa kwa maswali na majibu rahisi lakini haifai kwa programu halisi. Bots
 
 Kabla ya kuingia kwenye mazungumzo, ni muhimu kuelewa tokeni - vitengo vya msingi vya maandishi ambavyo mifano ya lugha huchakata:
 
-<img src="../../../translated_images/sw/token-explanation.c39760d8ec650181.png" alt="Maelezo ya Tokeni" width="800"/>
+<img src="../../../translated_images/sw/token-explanation.c39760d8ec650181.webp" alt="Maelezo ya Tokeni" width="800"/>
 
 *Mfano wa jinsi maandishi yanavyogawanywa kuwa tokeni - "Ninapenda AI!" inakuwa vitengo 4 tofauti vya usindikaji*
 
@@ -73,7 +73,7 @@ Kumbukumbu ya mazungumzo inatatua tatizo la kutokuwa na hali kwa kudumisha histo
 
 LangChain4j hutoa utekelezaji wa kumbukumbu unaoshughulikia hili moja kwa moja. Unachagua ni ujumbe wangapi kuhifadhi na mfumo hudhibiti dirisha la muktadha.
 
-<img src="../../../translated_images/sw/memory-window.bbe67f597eadabb3.png" alt="Dhana ya Dirisha la Kumbukumbu" width="800"/>
+<img src="../../../translated_images/sw/memory-window.bbe67f597eadabb3.webp" alt="Dhana ya Dirisha la Kumbukumbu" width="800"/>
 
 *MessageWindowChatMemory hudumisha dirisha linalosogea la ujumbe wa hivi karibuni, likiacha zile za zamani moja kwa moja*
 
@@ -212,7 +212,7 @@ Kutoka Spring Boot Dashboard, unaweza:
 
 Bonyeza kitufe cha kucheza kando ya "introduction" kuanzisha moduli hii, au anzisha moduli zote kwa pamoja.
 
-<img src="../../../translated_images/sw/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sw/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Chaguo 2: Kutumia skripti za shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Moduli zote
 
 Programu hutoa kiolesura cha wavuti chenye utekelezaji wa mazungumzo mawili pembeni kwa pembeni.
 
-<img src="../../../translated_images/sw/home-screen.121a03206ab910c0.png" alt="Skrini Kuu ya Programu" width="800"/>
+<img src="../../../translated_images/sw/home-screen.121a03206ab910c0.webp" alt="Skrini Kuu ya Programu" width="800"/>
 
 *Dashibodi inaonyesha chaguzi za Mazungumzo Rahisi (yasiyo na hali) na Mazungumzo ya Mazungumzo (yenye hali)*
 
@@ -290,7 +290,7 @@ Programu hutoa kiolesura cha wavuti chenye utekelezaji wa mazungumzo mawili pemb
 
 Jaribu hii kwanza. Uliza "Jina langu ni John" kisha mara moja uliza "Jina langu ni nani?" Mfano hautakumbuka kwa sababu kila ujumbe ni huru. Hii inaonyesha tatizo kuu la ushirikiano wa mfano wa lugha wa msingi - hakuna muktadha wa mazungumzo.
 
-<img src="../../../translated_images/sw/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Onyesho la Mazungumzo Yasiyo na Hali" width="800"/>
+<img src="../../../translated_images/sw/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Onyesho la Mazungumzo Yasiyo na Hali" width="800"/>
 
 *AI haikumbuki jina lako kutoka ujumbe uliopita*
 
@@ -298,7 +298,7 @@ Jaribu hii kwanza. Uliza "Jina langu ni John" kisha mara moja uliza "Jina langu 
 
 Sasa jaribu mfuatano huo hapa. Uliza "Jina langu ni John" kisha "Jina langu ni nani?" Mara hii inakumbuka. Tofauti ni MessageWindowChatMemory - hudumisha historia ya mazungumzo na hujumuisha muktadha huo kwa kila ombi. Hivi ndivyo AI ya mazungumzo ya uzalishaji inavyofanya kazi.
 
-<img src="../../../translated_images/sw/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Onyesho la Mazungumzo Yenye Hali" width="800"/>
+<img src="../../../translated_images/sw/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Onyesho la Mazungumzo Yenye Hali" width="800"/>
 
 *AI inakumbuka jina lako kutoka mwanzo wa mazungumzo*
 

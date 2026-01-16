@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 এটি সাধারণ প্রশ্নোত্তরের জন্য ঠিক আছে কিন্তু বাস্তব অ্যাপ্লিকেশনের জন্য অকার্যকর। গ্রাহক সেবা বটদের যা আপনি বলেছিলেন তা মনে রাখতে হয়। ব্যক্তিগত সহায়কদের প্রসঙ্গ দরকার। যেকোনো বহু-ধাপ কথোপকথনের জন্য মেমোরি প্রয়োজন।
 
-<img src="../../../translated_images/bn/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/bn/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *স্টেটলেস (স্বাধীন কল) এবং স্টেটফুল (প্রসঙ্গ-সচেতন) কথোপকথনের মধ্যে পার্থক্য*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 কথোপকথনে প্রবেশ করার আগে, টোকেন বোঝা গুরুত্বপূর্ণ - ভাষা মডেলগুলি যেসব মৌলিক টেক্সট ইউনিট প্রক্রিয়া করে:
 
-<img src="../../../translated_images/bn/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/bn/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *কিভাবে টেক্সট টোকেনে বিভক্ত হয় - "I love AI!" চারটি পৃথক প্রক্রিয়াকরণ ইউনিটে পরিণত হয়*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j মেমোরি ইমপ্লিমেন্টেশন সরবরাহ করে যা এটি স্বয়ংক্রিয়ভাবে পরিচালনা করে। আপনি নির্ধারণ করেন কতগুলি বার্তা রাখতে চান এবং ফ্রেমওয়ার্ক প্রসঙ্গ উইন্ডো পরিচালনা করে।
 
-<img src="../../../translated_images/bn/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/bn/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory সাম্প্রতিক বার্তাগুলোর একটি স্লাইডিং উইন্ডো বজায় রাখে, পুরানো বার্তাগুলো স্বয়ংক্রিয়ভাবে ফেলে দেয়*
 
@@ -212,7 +212,7 @@ Spring Boot ড্যাশবোর্ড থেকে আপনি:
 
 শুধু "introduction" এর পাশে প্লে বাটনে ক্লিক করুন এই মডিউল শুরু করতে, অথবা সব মডিউল একসাথে শুরু করুন।
 
-<img src="../../../translated_images/bn/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/bn/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **বিকল্প ২: শেল স্ক্রিপ্ট ব্যবহার**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # সমস্ত মডিউলগুলি
 
 অ্যাপ্লিকেশনটি একটি ওয়েব ইন্টারফেস প্রদান করে যেখানে দুইটি চ্যাট ইমপ্লিমেন্টেশন পাশাপাশি রয়েছে।
 
-<img src="../../../translated_images/bn/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/bn/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *ড্যাশবোর্ডে Simple Chat (স্টেটলেস) এবং Conversational Chat (স্টেটফুল) অপশন উভয়ই দেখানো হয়েছে*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # সমস্ত মডিউলগুলি
 
 প্রথমে এটি চেষ্টা করুন। "আমার নাম জন" বলুন এবং তারপর সাথে সাথে "আমার নাম কী?" জিজ্ঞাসা করুন। মডেল মনে রাখবে না কারণ প্রতিটি বার্তা স্বাধীন। এটি মৌলিক ভাষা মডেল ইন্টিগ্রেশনের মূল সমস্যাটি প্রদর্শন করে - কোনো কথোপকথন প্রসঙ্গ নেই।
 
-<img src="../../../translated_images/bn/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/bn/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *AI পূর্বের বার্তা থেকে আপনার নাম মনে রাখে না*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # সমস্ত মডিউলগুলি
 
 এখন একই ক্রম এখানে চেষ্টা করুন। "আমার নাম জন" বলুন এবং তারপর "আমার নাম কী?" এবার এটি মনে রাখে। পার্থক্য হল MessageWindowChatMemory - এটি কথোপকথনের ইতিহাস বজায় রাখে এবং প্রতিটি অনুরোধের সাথে অন্তর্ভুক্ত করে। এভাবেই উৎপাদন কথোপকথন AI কাজ করে।
 
-<img src="../../../translated_images/bn/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/bn/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *AI কথোপকথনের আগের অংশ থেকে আপনার নাম মনে রাখে*
 

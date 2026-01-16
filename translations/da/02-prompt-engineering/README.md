@@ -52,7 +52,7 @@ Tænk på det som at give instruktioner til en kollega. "Fix fejlen" er vagt. "F
 
 Dette modul demonstrerer avancerede prompting-mønstre ved brug af samme LangChain4j fundament som i tidligere moduler, med fokus på promptstruktur og ræsonneringskontrol.
 
-<img src="../../../translated_images/da/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/da/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Hvordan LangChain4j forbinder dine prompts til Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/da/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/da/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage giver vedvarende kontekst, mens UserMessages indeholder individuelle forespørgsler*
 
@@ -104,11 +104,11 @@ Det vigtigste: LangChain4j leverer infrastrukturen (modelforbindelse via [LangCh
 
 Ikke alle problemer kræver samme tilgang. Nogle spørgsmål har brug for hurtige svar, andre dyb tænkning. Nogle har brug for synlig ræsonnering, andre kun resultater. Dette modul dækker otte prompting-mønstre – hver optimeret til forskellige scenarier. Du vil eksperimentere med dem alle for at lære, hvornår hver tilgang fungerer bedst.
 
-<img src="../../../translated_images/da/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/da/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Oversigt over de otte prompt engineering-mønstre og deres anvendelsestilfælde*
 
-<img src="../../../translated_images/da/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/da/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Lav iver (hurtig, direkte) vs Høj iver (grundig, udforskende) ræsonneringsmetoder*
 
@@ -163,7 +163,7 @@ Chain-of-Thought prompting beder eksplicit modellen om at vise sin ræsonnerings
 > - "Hvad er bedste praksis for at strukturere tool preambles i produktionsapplikationer?"
 > - "Hvordan kan jeg fange og vise mellemliggende fremdriftsopdateringer i en UI?"
 
-<img src="../../../translated_images/da/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/da/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Plan → Udfør → Opsummer arbejdsproces til flertrinsopgaver*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/da/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/da/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Iterativ forbedringscyklus – generer, evaluer, identificer problemer, forbedr, gentag*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Hvad er den bedste måde at parse og handle på struktureret output programmatisk?"
 > - "Hvordan sikrer jeg konsistente alvorlighedsniveauer på tværs af forskellige gennemgangssessioner?"
 
-<img src="../../../translated_images/da/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/da/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Fire-kategori rammeværk til konsistente kodegennemgange med alvorlighedsniveauer*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/da/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/da/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Hvordan samtalekontekst akkumuleres over flere omgange indtil token-grænsen nås*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/da/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/da/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Nedbrydning af problemer i eksplicitte logiske trin*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/da/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/da/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Håndhævelse af specifikke format-, længde- og strukturkrav*
 
@@ -300,7 +300,7 @@ Fra Spring Boot Dashboard kan du:
 
 Klik blot på play-knappen ved siden af "prompt-engineering" for at starte dette modul, eller start alle moduler på én gang.
 
-<img src="../../../translated_images/da/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/da/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Mulighed 2: Brug af shell-scripts**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Alle moduler
 
 ## Applikationsskærmbilleder
 
-<img src="../../../translated_images/da/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/da/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Hoveddashboard, der viser alle 8 prompt engineering-mønstre med deres karakteristika og anvendelsestilfælde*
 
@@ -380,10 +380,10 @@ Webgrænsefladen lader dig eksperimentere med forskellige prompting-strategier. 
 
 Stil et simpelt spørgsmål som "Hvad er 15% af 200?" med Lav Iver. Du får et øjeblikkeligt, direkte svar. Stil nu noget komplekst som "Design en caching-strategi for en højtrafikeret API" med Høj Iver. Se, hvordan modellen sænker tempoet og giver detaljeret ræsonnering. Samme model, samme spørgsmålstruktur – men prompten fortæller, hvor meget den skal tænke.
 
-<img src="../../../translated_images/da/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/da/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Hurtig beregning med minimal ræsonnering*
 
-<img src="../../../translated_images/da/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/da/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *Omfattende caching-strategi (2.8MB)*
 
@@ -391,7 +391,7 @@ Stil et simpelt spørgsmål som "Hvad er 15% af 200?" med Lav Iver. Du får et �
 
 Workflow med flere trin drager fordel af forudgående planlægning og løbende fortælling. Modellen skitserer, hvad den vil gøre, fortæller om hvert trin og opsummerer derefter resultaterne.
 
-<img src="../../../translated_images/da/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/da/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *Oprettelse af en REST-endpoint med trin-for-trin fortælling (3.9MB)*
 
@@ -399,7 +399,7 @@ Workflow med flere trin drager fordel af forudgående planlægning og løbende f
 
 Prøv "Opret en e-mail valideringstjeneste". I stedet for bare at generere kode og stoppe, genererer modellen, evaluerer mod kvalitetskriterier, identificerer svagheder og forbedrer. Du vil se den iterere, indtil koden opfylder produktionsstandarder.
 
-<img src="../../../translated_images/da/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/da/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Færdig e-mail valideringstjeneste (5.2MB)*
 
@@ -407,7 +407,7 @@ Prøv "Opret en e-mail valideringstjeneste". I stedet for bare at generere kode 
 
 Kodegennemgange kræver konsistente evalueringsrammer. Modellen analyserer kode ved hjælp af faste kategorier (korrekthed, praksis, ydeevne, sikkerhed) med alvorlighedsniveauer.
 
-<img src="../../../translated_images/da/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/da/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *Framework-baseret kodegennemgang*
 
@@ -415,7 +415,7 @@ Kodegennemgange kræver konsistente evalueringsrammer. Modellen analyserer kode 
 
 Spørg "Hvad er Spring Boot?" og følg straks op med "Vis mig et eksempel". Modellen husker dit første spørgsmål og giver dig et specifikt Spring Boot-eksempel. Uden hukommelse ville det andet spørgsmål være for vagt.
 
-<img src="../../../translated_images/da/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/da/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Bevarelse af kontekst på tværs af spørgsmål*
 
@@ -423,7 +423,7 @@ Spørg "Hvad er Spring Boot?" og følg straks op med "Vis mig et eksempel". Mode
 
 Vælg et matematikproblem og prøv det med både Trin-for-trin ræsonnering og Lav iver. Lav iver giver dig bare svaret - hurtigt men uigennemsigtigt. Trin-for-trin viser dig hver beregning og beslutning.
 
-<img src="../../../translated_images/da/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/da/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Matematikproblem med eksplicitte trin*
 
@@ -431,7 +431,7 @@ Vælg et matematikproblem og prøv det med både Trin-for-trin ræsonnering og L
 
 Når du har brug for specifikke formater eller ordantal, håndhæver dette mønster streng overholdelse. Prøv at generere et resumé med præcis 100 ord i punktform.
 
-<img src="../../../translated_images/da/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/da/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *Maskinlæringsresumé med formatkontrol*
 
@@ -445,7 +445,7 @@ GPT-5 lader dig styre beregningsindsatsen gennem dine prompts. Lav indsats betyd
 
 Læg mærke til XML-tags i prompts? De er ikke dekorative. Modeller følger strukturerede instruktioner mere pålideligt end frit tekst. Når du har brug for flertrinsprocesser eller kompleks logik, hjælper struktur modellen med at holde styr på, hvor den er, og hvad der kommer næste.
 
-<img src="../../../translated_images/da/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/da/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *Anatomi af en velstruktureret prompt med klare sektioner og XML-stil organisering*
 

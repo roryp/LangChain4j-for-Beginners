@@ -61,7 +61,7 @@ AI agent z orodji sledi vzorcu razmišljanja in ukrepanja (ReAct):
 5. Orodje izvede in vrne podatke  
 6. Agent vključi rezultat in poda končni odgovor
 
-<img src="../../../translated_images/sl/react-pattern.86aafd3796f3fd13.png" alt="Vzorec ReAct" width="800"/>
+<img src="../../../translated_images/sl/react-pattern.86aafd3796f3fd13.webp" alt="Vzorec ReAct" width="800"/>
 
 *Vzorec ReAct – kako AI agenti izmenično razmišljajo in ukrepajo za reševanje problemov*
 
@@ -138,7 +138,7 @@ Alternativni pristopi (ročni `AiServices.builder()`) zahtevajo več kode in ne 
 
 **Verižna uporaba orodij** – AI lahko pokliče več orodij zaporedoma. Vprašajte "Kakšno je vreme v Seattlu in ali naj vzamem dežnik?" in opazujte, kako poveže `getCurrentWeather` z razmišljanjem o dežniku.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/sl/tool-chaining.3b25af01967d6f7b.png" alt="Verižna uporaba orodij" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/sl/tool-chaining.3b25af01967d6f7b.webp" alt="Verižna uporaba orodij" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Zaporedni klici orodij – izhod enega orodja se uporabi pri naslednji odločitvi*
 
@@ -171,7 +171,7 @@ Iz Spring Boot nadzorne plošče lahko:
 
 Preprosto kliknite gumb za zagon poleg "tools" za zagon tega modula ali zaženite vse module hkrati.
 
-<img src="../../../translated_images/sl/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot nadzorna plošča" width="400"/>
+<img src="../../../translated_images/sl/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot nadzorna plošča" width="400"/>
 
 **Možnost 2: Uporaba shell skript**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Vsi moduli
 
 Aplikacija ponuja spletni vmesnik, kjer lahko komunicirate z AI agentom, ki ima dostop do orodij za vreme in pretvorbo temperatur.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/sl/tools-homepage.4b4cd8b2717f9621.png" alt="Vmesnik AI agent orodij" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/sl/tools-homepage.4b4cd8b2717f9621.webp" alt="Vmesnik AI agent orodij" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Vmesnik AI agent orodij – hitri primeri in klepet za interakcijo z orodji*
 
@@ -257,7 +257,7 @@ Zdaj poskusi nekaj bolj zapletenega: "Kakšno je vreme v Seattlu in pretvori ga 
 
 Klepet ohranja zgodovino pogovora, kar omogoča večkrožno interakcijo. Vidite lahko vse prejšnje poizvedbe in odgovore, zato je enostavno slediti pogovoru in razumeti, kako agent gradi kontekst skozi več izmenjav.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/sl/tools-conversation-demo.89f2ce9676080f59.png" alt="Pogovor z več klici orodij" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/sl/tools-conversation-demo.89f2ce9676080f59.webp" alt="Pogovor z več klici orodij" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Večkrožni pogovor, ki prikazuje preproste pretvorbe, iskanje vremena in verižna orodja*
 

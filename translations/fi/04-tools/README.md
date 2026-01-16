@@ -61,7 +61,7 @@ Työkaluilla varustettu AI-agentti noudattaa päättelyn ja toiminnan kuviota (R
 5. Työkalu suorittaa toiminnon ja palauttaa tietoa
 6. Agentti sisällyttää tuloksen vastaukseensa ja antaa lopullisen vastauksen
 
-<img src="../../../translated_images/fi/react-pattern.86aafd3796f3fd13.png" alt="ReAct-kuvio" width="800"/>
+<img src="../../../translated_images/fi/react-pattern.86aafd3796f3fd13.webp" alt="ReAct-kuvio" width="800"/>
 
 *ReAct-kuvio – miten AI-agentit vuorottelevat päättelyn ja toiminnan välillä ongelmien ratkaisemiseksi*
 
@@ -138,7 +138,7 @@ Vaihtoehtoiset lähestymistavat (manuaalinen `AiServices.builder()`) vaativat en
 
 **Työkaluketjutus** – AI saattaa kutsua useita työkaluja peräkkäin. Kysy esimerkiksi "Mikä on sää Seattlessa ja pitäisikö ottaa sateenvarjo?" ja katso, miten se ketjuttaa `getCurrentWeather` -kutsun sateenvarjoa koskevan pohtimisen kanssa.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/fi/tool-chaining.3b25af01967d6f7b.png" alt="Työkaluketjutus" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/fi/tool-chaining.3b25af01967d6f7b.webp" alt="Työkaluketjutus" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Peräkkäiset työkalukutsut – yhden työkalun tuotos ohjaa seuraavaa päätöstä*
 
@@ -171,7 +171,7 @@ Dashboardista voit:
 
 Käynnistä moduuli napsauttamalla "tools"-kohdan vieressä olevaa soittonappia tai käynnistä kaikki moduulit kerralla.
 
-<img src="../../../translated_images/fi/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/fi/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Vaihtoehto 2: Shell-skriptien käyttö**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Kaikki moduulit
 
 Sovellus tarjoaa web-käyttöliittymän, jossa voit olla vuorovaikutuksessa AI-agentin kanssa, jolla on pääsy sää- ja lämpötilamuunnostyökaluihin.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/fi/tools-homepage.4b4cd8b2717f9621.png" alt="AI-agenttien työkaluliittymä" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/fi/tools-homepage.4b4cd8b2717f9621.webp" alt="AI-agenttien työkaluliittymä" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI-agenttien työkaluliittymä – nopeita esimerkkejä ja chat-käyttöliittymä työkalujen kanssa keskusteluun*
 
@@ -257,7 +257,7 @@ Kokeile nyt monimutkaisempaa pyyntöä: "Mikä on sää Seattlessa ja muunna se 
 
 Chat-käyttöliittymä säilyttää keskusteluhistorian, mikä mahdollistaa monivaiheiset vuorovaikutukset. Näet kaikki aiemmat kyselyt ja vastaukset, mikä helpottaa keskustelun seuraamista ja ymmärtämistä siitä, miten agentti rakentaa kontekstia useissa vaihdoissa.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/fi/tools-conversation-demo.89f2ce9676080f59.png" alt="Keskustelu, jossa useita työkalukutsuja" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/fi/tools-conversation-demo.89f2ce9676080f59.webp" alt="Keskustelu, jossa useita työkalukutsuja" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Monivaiheinen keskustelu, jossa nähdään yksinkertaisia muunnoksia, säähaut ja työkaluketjutusta*
 

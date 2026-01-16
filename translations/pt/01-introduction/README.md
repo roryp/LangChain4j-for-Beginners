@@ -53,7 +53,7 @@ Modelos de linguagem são sem estado. Cada chamada à API é independente. Se en
 
 Isto é aceitável para perguntas e respostas simples, mas inútil para aplicações reais. Bots de serviço ao cliente precisam lembrar o que lhes disse. Assistentes pessoais precisam de contexto. Qualquer conversa com múltiplas interações requer memória.
 
-<img src="../../../translated_images/pt/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Conversas Sem Estado vs Com Estado" width="800"/>
+<img src="../../../translated_images/pt/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Conversas Sem Estado vs Com Estado" width="800"/>
 
 *A diferença entre conversas sem estado (chamadas independentes) e com estado (sensíveis ao contexto)*
 
@@ -61,7 +61,7 @@ Isto é aceitável para perguntas e respostas simples, mas inútil para aplicaç
 
 Antes de mergulhar nas conversas, é importante entender tokens - as unidades básicas de texto que os modelos de linguagem processam:
 
-<img src="../../../translated_images/pt/token-explanation.c39760d8ec650181.png" alt="Explicação de Token" width="800"/>
+<img src="../../../translated_images/pt/token-explanation.c39760d8ec650181.webp" alt="Explicação de Token" width="800"/>
 
 *Exemplo de como o texto é dividido em tokens - "I love AI!" torna-se 4 unidades de processamento separadas*
 
@@ -73,7 +73,7 @@ A memória de chat resolve o problema de ser sem estado ao manter o histórico d
 
 LangChain4j fornece implementações de memória que tratam disto automaticamente. Escolhe quantas mensagens reter e o framework gere a janela de contexto.
 
-<img src="../../../translated_images/pt/memory-window.bbe67f597eadabb3.png" alt="Conceito de Janela de Memória" width="800"/>
+<img src="../../../translated_images/pt/memory-window.bbe67f597eadabb3.webp" alt="Conceito de Janela de Memória" width="800"/>
 
 *MessageWindowChatMemory mantém uma janela deslizante das mensagens recentes, descartando automaticamente as antigas*
 
@@ -212,7 +212,7 @@ No Spring Boot Dashboard, pode:
 
 Basta clicar no botão de play ao lado de "introduction" para iniciar este módulo, ou iniciar todos os módulos de uma vez.
 
-<img src="../../../translated_images/pt/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/pt/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opção 2: Usar scripts shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Todos os módulos
 
 A aplicação fornece uma interface web com duas implementações de chat lado a lado.
 
-<img src="../../../translated_images/pt/home-screen.121a03206ab910c0.png" alt="Ecrã Inicial da Aplicação" width="800"/>
+<img src="../../../translated_images/pt/home-screen.121a03206ab910c0.webp" alt="Ecrã Inicial da Aplicação" width="800"/>
 
 *Dashboard mostrando as opções de Chat Simples (sem estado) e Chat Conversacional (com estado)*
 
@@ -290,7 +290,7 @@ A aplicação fornece uma interface web com duas implementações de chat lado a
 
 Experimente primeiro aqui. Pergunte "O meu nome é João" e depois imediatamente "Qual é o meu nome?" O modelo não vai lembrar porque cada mensagem é independente. Isto demonstra o problema central da integração básica de modelos de linguagem - sem contexto de conversa.
 
-<img src="../../../translated_images/pt/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Demo de Chat Sem Estado" width="800"/>
+<img src="../../../translated_images/pt/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Demo de Chat Sem Estado" width="800"/>
 
 *A IA não lembra o seu nome da mensagem anterior*
 
@@ -298,7 +298,7 @@ Experimente primeiro aqui. Pergunte "O meu nome é João" e depois imediatamente
 
 Agora experimente a mesma sequência aqui. Pergunte "O meu nome é João" e depois "Qual é o meu nome?" Desta vez lembra-se. A diferença é o MessageWindowChatMemory - mantém o histórico da conversa e inclui-o em cada pedido. É assim que a IA conversacional de produção funciona.
 
-<img src="../../../translated_images/pt/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Demo de Chat Com Estado" width="800"/>
+<img src="../../../translated_images/pt/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Demo de Chat Com Estado" width="800"/>
 
 *A IA lembra o seu nome de antes na conversa*
 

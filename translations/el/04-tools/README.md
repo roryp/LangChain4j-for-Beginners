@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. Το εργαλείο εκτελείται και επιστρέφει δεδομένα
 6. Ο πράκτορας ενσωματώνει το αποτέλεσμα και παρέχει την τελική απάντηση
 
-<img src="../../../translated_images/el/react-pattern.86aafd3796f3fd13.png" alt="Πρότυπο ReAct" width="800"/>
+<img src="../../../translated_images/el/react-pattern.86aafd3796f3fd13.webp" alt="Πρότυπο ReAct" width="800"/>
 
 *Το πρότυπο ReAct - πώς οι πράκτορες AI εναλλάσσονται μεταξύ σκέψης και δράσης για την επίλυση προβλημάτων*
 
@@ -138,7 +138,7 @@ public interface Assistant {
 
 **Αλυσιδωτή Χρήση Εργαλείων** - Το AI μπορεί να καλέσει πολλαπλά εργαλεία διαδοχικά. Ρωτήστε "Ποιος είναι ο καιρός στο Σιάτλ και να έχω μαζί μου ομπρέλα;" και δείτε το να αλυσιδώνει το `getCurrentWeather` με συλλογισμούς σχετικά με την ομπρέλα.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/el/tool-chaining.3b25af01967d6f7b.png" alt="Αλυσιδωτή Χρήση Εργαλείων" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/el/tool-chaining.3b25af01967d6f7b.webp" alt="Αλυσιδωτή Χρήση Εργαλείων" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Διαδοχικές κλήσεις εργαλείων - η έξοδος ενός εργαλείου τροφοδοτεί τη συνέχεια της απόφασης*
 
@@ -171,7 +171,7 @@ cat ../.env  # Πρέπει να εμφανίζει το AZURE_OPENAI_ENDPOINT, 
 
 Απλά πατήστε το κουμπί αναπαραγωγής δίπλα στο "tools" για να ξεκινήσετε αυτή τη μονάδα ή ξεκινήστε όλες τις μονάδες μαζί.
 
-<img src="../../../translated_images/el/dashboard.9b519b1a1bc1b30a.png" alt="Πίνακας Ελέγχου Spring Boot" width="400"/>
+<img src="../../../translated_images/el/dashboard.9b519b1a1bc1b30a.webp" alt="Πίνακας Ελέγχου Spring Boot" width="400"/>
 
 **Επιλογή 2: Χρήση shell scripts**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Όλες οι μονάδες
 
 Η εφαρμογή παρέχει μια web διεπαφή όπου μπορείτε να αλληλεπιδράσετε με έναν πράκτορα AI που έχει πρόσβαση σε εργαλεία καιρού και μετατροπής θερμοκρασίας.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/el/tools-homepage.4b4cd8b2717f9621.png" alt="Διεπαφή Εργαλείων Πράκτορα AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/el/tools-homepage.4b4cd8b2717f9621.webp" alt="Διεπαφή Εργαλείων Πράκτορα AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Η διεπαφή εργαλείων AI Agent - γρήγορα παραδείγματα και περιβάλλον συνομιλίας για αλληλεπίδραση με εργαλεία*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # Όλες οι μονάδες
 
 Η διεπαφή συνομιλίας κρατά ιστορικό συνομιλιών, επιτρέποντάς σας να έχετε πολυβητες αλληλεπιδράσεις. Μπορείτε να δείτε όλα τα προηγούμενα ερωτήματα και απαντήσεις, διευκολύνοντας την παρακολούθηση της συνομιλίας και την κατανόηση του πώς ο πράκτορας δημιουργεί το πλαίσιο σε πολλές ανταλλαγές.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/el/tools-conversation-demo.89f2ce9676080f59.png" alt="Συνομιλία με Πολλαπλές Κλήσεις Εργαλείων" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/el/tools-conversation-demo.89f2ce9676080f59.webp" alt="Συνομιλία με Πολλαπλές Κλήσεις Εργαλείων" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Πολυβητη συνομιλία που δείχνει απλές μετατροπές, αναζητήσεις καιρού και αλυσιδωτή χρήση εργαλείων*
 

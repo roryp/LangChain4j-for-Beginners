@@ -61,7 +61,7 @@ Agen AI dengan alat mengikuti pola penalaran dan bertindak (ReAct):
 5. Alat mengeksekusi dan mengembalikan data
 6. Agen menggabungkan hasil dan memberikan jawaban akhir
 
-<img src="../../../translated_images/id/react-pattern.86aafd3796f3fd13.png" alt="Polanya ReAct" width="800"/>
+<img src="../../../translated_images/id/react-pattern.86aafd3796f3fd13.webp" alt="Polanya ReAct" width="800"/>
 
 *Pola ReAct - bagaimana agen AI bergantian antara menalar dan bertindak untuk memecahkan masalah*
 
@@ -138,7 +138,7 @@ Pendekatan alternatif (manual `AiServices.builder()`) memerlukan lebih banyak ko
 
 **Rangkaian Alat** - AI mungkin memanggil beberapa alat secara berurutan. Tanyakan "Bagaimana cuaca di Seattle dan apakah saya harus membawa payung?" dan lihat bagaimana ia menggabungkan `getCurrentWeather` dengan penalaran tentang perlengkapan hujan.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/id/tool-chaining.3b25af01967d6f7b.png" alt="Rangkaian Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/id/tool-chaining.3b25af01967d6f7b.webp" alt="Rangkaian Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Panggilan alat berurutan - keluaran alat satu menjadi masukan keputusan berikutnya*
 
@@ -171,7 +171,7 @@ Dari Spring Boot Dashboard, Anda dapat:
 
 Klik tombol play di sebelah "tools" untuk memulai modul ini, atau mulai semua modul sekaligus.
 
-<img src="../../../translated_images/id/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/id/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opsi 2: Menggunakan skrip shell**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 Aplikasi menyediakan antarmuka web di mana Anda dapat berinteraksi dengan agen AI yang memiliki akses ke alat cuaca dan konversi suhu.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/id/tools-homepage.4b4cd8b2717f9621.png" alt="Antarmuka Alat Agen AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/id/tools-homepage.4b4cd8b2717f9621.webp" alt="Antarmuka Alat Agen AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Antarmuka Alat Agen AI - contoh cepat dan antarmuka obrolan untuk berinteraksi dengan alat*
 
@@ -257,7 +257,7 @@ Sekarang coba sesuatu yang lebih kompleks: "Bagaimana cuaca di Seattle dan konve
 
 Antarmuka chat mempertahankan riwayat percakapan, memungkinkan Anda melakukan interaksi multi-putaran. Anda bisa melihat semua pertanyaan dan respons sebelumnya, memudahkan melacak percakapan dan memahami bagaimana agen membangun konteks dari berbagai pertukaran.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/id/tools-conversation-demo.89f2ce9676080f59.png" alt="Percakapan dengan Banyak Panggilan Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/id/tools-conversation-demo.89f2ce9676080f59.webp" alt="Percakapan dengan Banyak Panggilan Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Percakapan multi-putaran menunjukkan konversi sederhana, pencarian cuaca, dan rangkaian alat*
 

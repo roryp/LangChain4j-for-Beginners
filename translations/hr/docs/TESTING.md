@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/hr/test-results.ea5c98d8f3642043.png" alt="Uspješni rezultati testiranja" width="800"/>
+<img src="../../../translated_images/hr/test-results.ea5c98d8f3642043.webp" alt="Uspješni rezultati testiranja" width="800"/>
 
 *Uspješno izvršavanje testova koje prikazuje da su svi testovi prošli bez neuspjeha*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Ovaj tečaj fokusira se na **jedinične testove** koji se izvode lokalno. Svaki test demonstrira određeni LangChain4j koncept u izolaciji.
 
-<img src="../../../translated_images/hr/testing-pyramid.2dd1079a0481e53e.png" alt="Piramida testiranja" width="800"/>
+<img src="../../../translated_images/hr/testing-pyramid.2dd1079a0481e53e.webp" alt="Piramida testiranja" width="800"/>
 
 *Piramida testiranja koja prikazuje ravnotežu između jediničnih testova (brzi, izolirani), integracijskih testova (stvarne komponente) i end-to-end testova. Ova obuka pokriva jedinično testiranje.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#trebao bi održavati povijest razgovo
 
 Ako koristite Visual Studio Code, Test Explorer pruža grafičko sučelje za pokretanje i otklanjanje pogrešaka testova.
 
-<img src="../../../translated_images/hr/vscode-testing.f02dd5917289dced.png" alt="Istraživač testova u VS Codeu" width="800"/>
+<img src="../../../translated_images/hr/vscode-testing.f02dd5917289dced.webp" alt="Istraživač testova u VS Codeu" width="800"/>
 
 *VS Code Test Explorer koji prikazuje stablo testova sa svim Java test klasama i pojedinačnim test metodama*
 
@@ -134,7 +134,7 @@ Istraživač testova prikazuje zelene kvačice za uspješne testove i daje detal
 
 Najjednostavniji obrazac testira predloške promptova bez pozivanja ikakvog AI modela. Provjeravate da zamjena varijabli radi ispravno i da su promptovi formatirani kako se očekuje.
 
-<img src="../../../translated_images/hr/prompt-template-testing.b902758ddccc8dee.png" alt="Testiranje predložaka prompta" width="800"/>
+<img src="../../../translated_images/hr/prompt-template-testing.b902758ddccc8dee.webp" alt="Testiranje predložaka prompta" width="800"/>
 
 *Testiranje predložaka prompta koje prikazuje tok zamjene varijabli: predložak s rezerviranim mjestima → primijenjene vrijednosti → provjeren formatirani izlaz*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testiranje formatira
 
 Prilikom testiranja logike razgovora koristite Mockito za stvaranje lažnih modela koji vraćaju unaprijed određene odgovore. To čini testove brzim, besplatnim i determinističkim.
 
-<img src="../../../translated_images/hr/mock-vs-real.3b8b1f85bfe6845e.png" alt="Usporedba mocka i stvarnog API-ja" width="800"/>
+<img src="../../../translated_images/hr/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Usporedba mocka i stvarnog API-ja" width="800"/>
 
 *Usporedba koja pokazuje zašto su mockovi preferirani za testiranje: brzi su, besplatni, deterministični i ne zahtijevaju API ključeve*
 
@@ -231,7 +231,7 @@ Ovaj obrazac se pojavljuje u `01-introduction/src/test/java/com/example/langchai
 
 Memorija konverzacije mora držati više korisnika odvojenima. Ovaj test provjerava da se konteksti razgovora ne miješaju.
 
-<img src="../../../translated_images/hr/conversation-isolation.e00336cf8f7a3e3f.png" alt="Izolacija razgovora" width="800"/>
+<img src="../../../translated_images/hr/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Izolacija razgovora" width="800"/>
 
 *Testiranje izolacije razgovaja koje prikazuje odvojene spremišta memorije za različite korisnike kako bi se spriječilo miješanje konteksta*
 
@@ -263,7 +263,7 @@ Svaka konverzacija održava vlastitu neovisnu povijest. U proizvodnim sustavima 
 
 Alati su funkcije koje AI može pozvati. Testirajte ih izravno kako biste bili sigurni da rade ispravno bez obzira na odluke AI-ja.
 
-<img src="../../../translated_images/hr/tools-testing.3e1706817b0b3924.png" alt="Testiranje alata" width="800"/>
+<img src="../../../translated_images/hr/tools-testing.3e1706817b0b3924.webp" alt="Testiranje alata" width="800"/>
 
 *Neovisno testiranje alata koje prikazuje izvršavanje mock alata bez AI poziva kako bi se provjerila poslovna logika*
 
@@ -294,7 +294,7 @@ Ovi testovi iz `04-tools/src/test/java/com/example/langchain4j/agents/tools/Simp
 
 RAG sustavi tradicionalno zahtijevaju vektorske baze podataka i servis za embeddinge. Obrazac u memoriji omogućuje testiranje cijelog pipelinea bez vanjskih ovisnosti.
 
-<img src="../../../translated_images/hr/rag-testing.ee7541b1e23934b1.png" alt="Testiranje RAG-a u memoriji" width="800"/>
+<img src="../../../translated_images/hr/rag-testing.ee7541b1e23934b1.webp" alt="Testiranje RAG-a u memoriji" width="800"/>
 
 *RAG testiranje u memoriji koje prikazuje parsiranje dokumenata, pohranu embeddinga i pretraživanje po sličnosti bez potrebe za bazom podataka*
 

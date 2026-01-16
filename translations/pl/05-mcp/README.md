@@ -35,7 +35,7 @@ Zbudowałeś konwersacyjne AI, opanowałeś promptowanie, osadziłeś odpowiedzi
 
 Protokół Kontekstu Modelu (MCP) zapewnia właśnie to — standardowy sposób, aby aplikacje AI mogły odkrywać i korzystać z narzędzi zewnętrznych. Zamiast pisać niestandardowe integracje dla każdego źródła danych lub usługi, łączysz się z serwerami MCP, które udostępniają swoje możliwości w spójnym formacie. Twój agent AI może wtedy automatycznie odkrywać i używać te narzędzia.
 
-<img src="../../../translated_images/pl/mcp-comparison.9129a881ecf10ff5.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/pl/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *Przed MCP: Skomplikowane integracje punkt-punkt. Po MCP: Jeden protokół, nieskończone możliwości.*
 
@@ -43,7 +43,7 @@ MCP rozwiązuje podstawowy problem rozwoju AI: każda integracja jest niestandar
 
 MCP standaryzuje to. Serwer MCP udostępnia narzędzia z jasnymi opisami i schematami. Każdy klient MCP może się połączyć, odkryć dostępne narzędzia i z nich korzystać. Zbuduj raz, używaj wszędzie.
 
-<img src="../../../translated_images/pl/mcp-architecture.b3156d787a4ceac9.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/pl/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Architektura Protokołu Kontekstu Modelu - ustandaryzowane odkrywanie i uruchamianie narzędzi*
 
@@ -71,7 +71,7 @@ Gdy klient łączy się z serwerem MCP, pyta „Jakie macie narzędzia?” Serwe
 
 MCP obsługuje różne mechanizmy transportu. Ten moduł demonstruje transport Stdio dla procesów lokalnych:
 
-<img src="../../../translated_images/pl/transport-mechanisms.2791ba7ee93cf020.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/pl/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *Mechanizmy transportu MCP: HTTP dla serwerów zdalnych, Stdio dla procesów lokalnych*
 
@@ -169,7 +169,7 @@ Wzorzec **Agenta Nadzorującego** to **elastyczna** forma agentowego AI. Nadzorc
 
 W demo `FileAgent` odczytuje plik używając narzędzi MCP do systemu plików, a `ReportAgent` generuje strukturalny raport z podsumowaniem wykonawczym (1 zdanie), 3 kluczowymi punktami i rekomendacjami. Nadzorca orkiestruje ten proces automatycznie:
 
-<img src="../../../translated_images/pl/agentic.cf84dcda226374e3.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/pl/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

@@ -49,7 +49,7 @@ Isipin ang RAG bilang pagbibigay sa modelo ng isang reperensyang silid-aklatan. 
 
 Ipinapatatag nito ang mga sagot ng modelo sa iyong aktwal na datos sa halip na umasa lang sa kaalaman mula sa training o mag-imbento ng sagot.
 
-<img src="../../../translated_images/tl/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/tl/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *Daloy ng RAG - mula sa tanong ng user patungo sa semantic search hanggang sa paggawa ng sagot na may konteksto*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/tl/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/tl/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Mga dokumentong kinakatawan bilang mga vector sa embedding space — magkaparehong nilalaman ay nagbuo ng magkakatabing cluster*
 
@@ -160,7 +160,7 @@ Mula sa Spring Boot Dashboard, maaari mong:
 
 I-click lang ang play button malapit sa "rag" para simulan ang module na ito, o simulan lahat ng module nang sabay.
 
-<img src="../../../translated_images/tl/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/tl/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opsyon 2: Gamit ang shell scripts**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Lahat ng modules
 
 Nagbibigay ang application ng web interface para mag-upload ng dokumento at magtanong.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/tl/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/tl/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interface ng RAG application — mag-upload ng dokumento at magtanong*
 
@@ -248,7 +248,7 @@ Magtanong ng mga tiyak na tanong tungkol sa laman ng dokumento. Subukan ang mga 
 
 Mapapansin mo na bawat sagot ay may kasamang reperensya mula sa pinanggalingan na may similarity scores. Ipinapakita ng mga score (mula 0 hanggang 1) kung gaano ka-relevant ang bawat chunk sa tanong mo. Mas mataas ang score, mas mahusay ang tugma. Makakatulong ito upang mapatunayan mo ang sagot gamit ang source material.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/tl/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/tl/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Mga resulta ng query na nagpapakita ng sagot na may mga reference mula sa pinagkunan at relevance scores*
 

@@ -49,7 +49,7 @@ RAG (Ретривал-Ограничена Генерација) решава о
 
 Ово утемељује одговоре модела у вашим стварним подацима уместо да се ослања на знање из тренинга или измишљене одговоре.
 
-<img src="../../../translated_images/sr/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/sr/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG радни ток - од корисничког упита преко семантичке претраге до контекстуалне генерације одговора*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/sr/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/sr/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Документи представљени као вектори у простору угнежђења - слични садржаји се групишу*
 
@@ -160,7 +160,7 @@ cat ../.env  # Треба приказати AZURE_OPENAI_ENDPOINT, API_KEY, DEP
 
 Само кликните на дугме за покретање поред "rag" да бисте покренули овај модул, или покрените све модуле одједном.
 
-<img src="../../../translated_images/sr/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sr/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Опција 2: Коришћење скрипти у шкољци**
 
@@ -231,7 +231,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Апликација пружа веб интерфејс за отпремање докумената и постављање питања.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/sr/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/sr/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Интерфејс RAG апликације - отпремите документе и постављајте питања*
 
@@ -249,7 +249,7 @@ cd ..; .\stop-all.ps1  # Сви модули
 
 Приметите да сваки одговор укључује изворне референце са скором сличности. Ови скорови (од 0 до 1) показују колико је сваки део био релевантан вашем питању. Виши скорови значе боље подударање. Ово вам омогућава да проверите одговор у односу на изворне материјале.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/sr/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/sr/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Резултати упита који приказују одговор са изворним референцама и скорима релевантности*
 

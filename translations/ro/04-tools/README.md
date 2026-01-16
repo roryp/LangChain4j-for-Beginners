@@ -61,7 +61,7 @@ Un agent AI cu instrumente urmează un model de raționament și acțiune (ReAct
 5. Instrumentul execută și returnează date
 6. Agentul încorporează rezultatul și oferă răspunsul final
 
-<img src="../../../translated_images/ro/react-pattern.86aafd3796f3fd13.png" alt="Modelul ReAct" width="800"/>
+<img src="../../../translated_images/ro/react-pattern.86aafd3796f3fd13.webp" alt="Modelul ReAct" width="800"/>
 
 *Modelul ReAct - cum agenții AI alternează între raționament și acțiune pentru a rezolva probleme*
 
@@ -138,7 +138,7 @@ Abordările alternative (manual `AiServices.builder()`) necesită mai mult cod �
 
 **Lanțuirea instrumentelor** - AI poate apela mai multe instrumente în secvență. Întreabă „Cum este vremea în Seattle și ar trebui să iau umbrela?” și urmărește cum leagă `getCurrentWeather` cu raționamentul despre gear-ul pentru ploaie.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/ro/tool-chaining.3b25af01967d6f7b.png" alt="Lanțuirea instrumentelor" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/ro/tool-chaining.3b25af01967d6f7b.webp" alt="Lanțuirea instrumentelor" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Apeluri secvențiale la instrumente - ieșirea unui instrument alimentează decizia următoare*
 
@@ -171,7 +171,7 @@ Din Spring Boot Dashboard poți:
 
 Apasă butonul de redare de lângă „tools” pentru a porni acest modul sau pornește toate modulele simultan.
 
-<img src="../../../translated_images/ro/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ro/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opțiunea 2: Folosind scripturi shell**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Toate modulele
 
 Aplicația oferă o interfață web unde poți interacționa cu un agent AI care are acces la instrumentele pentru vreme și conversie temperatură.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/ro/tools-homepage.4b4cd8b2717f9621.png" alt="Interfața agenți AI cu instrumente" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/ro/tools-homepage.4b4cd8b2717f9621.webp" alt="Interfața agenți AI cu instrumente" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interfața AI Agent Tools - exemple rapide și chat pentru interacțiunea cu instrumentele*
 
@@ -257,7 +257,7 @@ Acum încearcă ceva mai complex: „Cum este vremea în Seattle și converteșt
 
 Interfața de chat păstrează istoricul conversației, permițând interacțiuni multi-turn. Poți vedea toate întrebările și răspunsurile anterioare, făcând ușor să urmărești conversația și să înțelegi cum agentul construiește contextul pe mai multe schimburi.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ro/tools-conversation-demo.89f2ce9676080f59.png" alt="Conversație cu multiple apeluri la instrumente" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ro/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversație cu multiple apeluri la instrumente" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Conversație multi-turn arătând conversii simple, căutări meteo și lanțuirea instrumentelor*
 

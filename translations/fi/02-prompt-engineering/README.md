@@ -52,7 +52,7 @@ Ajattele sitä kuin antaisit ohjeita kollegalle. "Korjaa bugi" on epämääräin
 
 Tämä moduuli demonstroi edistyneitä kehotemalleja käyttäen samaa LangChain4j-pohjaa kuin aiemmat moduulit, keskittyen kehotteiden rakenteeseen ja päättelyohjaukseen.
 
-<img src="../../../translated_images/fi/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/fi/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Kuinka LangChain4j yhdistää kehotteesi Azure OpenAI GPT-5:een*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/fi/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/fi/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage tarjoaa pysyvän kontekstin, kun UserMessages sisältävät yksittäiset pyynnöt*
 
@@ -104,11 +104,11 @@ Keskeinen opetus: LangChain4j tarjoaa infrastruktuurin (malliyhteyden [LangChain
 
 Kaikki ongelmat eivät vaadi samaa lähestymistapaa. Jotkut kysymykset tarvitsevat nopeita vastauksia, toiset syvällistä pohdintaa. Jotkut vaativat näkyvää päättelyä, toiset pelkkiä tuloksia. Tämä moduuli kattaa kahdeksan kehotemallia – jokainen optimoitu eri tilanteisiin. Kokeilet kaikkia oppiaksesi, milloin mikäkin toimii parhaiten.
 
-<img src="../../../translated_images/fi/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/fi/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Yhdeksän prompt-suunnittelumallin yleiskatsaus ja käyttötarkoitukset*
 
-<img src="../../../translated_images/fi/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/fi/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Matala innokkuus (nopea, suora) vs korkea innokkuus (perusteellinen, tutkiva) päättelylähestymistavat*
 
@@ -163,7 +163,7 @@ Ajatusketju-kehotteet pyytävät mallia näyttämään päättelyprosessinsa, mi
 > - "Mitkä ovat parhaat käytännöt työkalujen esipuheiden jäsentämiseen tuotantosovelluksissa?"
 > - "Miten voin tallentaa ja näyttää väliaikaiset etenemispäivitykset käyttöliittymässä?"
 
-<img src="../../../translated_images/fi/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/fi/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Suunnittele → Suorita → Yhteenveto -työnkulku monivaiheisille tehtäville*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/fi/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/fi/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Iteratiivinen parannussykli – generoi, arvioi, tunnista ongelmat, paranna, toista*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Mikä on paras tapa jäsentää ja käsitellä rakenteellista tulostetta ohjelmallisesti?"
 > - "Miten varmistaa johdonmukaiset vakavuustasot eri katselmusistuntojen välillä?"
 
-<img src="../../../translated_images/fi/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/fi/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Nelikategorinen kehys johdonmukaisiin koodikatselmuksiin vakavuustasoineen*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/fi/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/fi/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Kuinka keskustelukonteksti kertyy useiden vuorojen aikana, kunnes token-raja saavutetaan*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/fi/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/fi/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Ongelmien pilkkominen eksplisiittisiin loogisiin askeleisiin*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/fi/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/fi/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Erityisten muoto-, pituus- ja rakennevaatimusten noudattaminen*
 
@@ -300,7 +300,7 @@ Spring Boot Dashboardista voit:
 
 Klikkaa "prompt-engineering" -moduulin vieressä olevaa toistopainiketta käynnistääksesi sen, tai käynnistä kaikki moduulit kerralla.
 
-<img src="../../../translated_images/fi/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/fi/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Vaihtoehto 2: Shell-skriptien käyttö**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Kaikki moduulit
 
 ## Sovelluksen kuvakaappaukset
 
-<img src="../../../translated_images/fi/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/fi/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Pääasiallinen hallintapaneeli, joka näyttää kaikki 8 prompt-suunnittelumallia niiden ominaisuuksineen ja käyttötapauksineen*
 
@@ -380,10 +380,10 @@ Verkkokäyttöliittymä antaa sinun kokeilla erilaisia kehotteiden suunnittelust
 
 Kysy yksinkertainen kysymys, kuten "Mikä on 15 % luvusta 200?" käyttäen matalaa innokkuutta. Saat välittömän, suoran vastauksen. Kysy nyt jotain monimutkaisempaa, kuten "Suunnittele välimuististrategia korkean liikenteen API:lle" käyttäen korkeaa innokkuutta. Katso, miten malli hidastuu ja antaa yksityiskohtaisen päättelyn. Sama malli, sama kysymysrakenne – mutta kehotteessa kerrotaan, kuinka paljon mallin tulee ajatella.
 
-<img src="../../../translated_images/fi/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/fi/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Nopea laskenta vähäisellä päättelyllä*
 
-<img src="../../../translated_images/fi/high-eagerness-demo.4ac93e7786c5a376.png" alt="Korkea innokkuus -demo" width="800"/>
+<img src="../../../translated_images/fi/high-eagerness-demo.4ac93e7786c5a376.webp" alt="Korkea innokkuus -demo" width="800"/>
 
 *Kattava välimuististrategia (2,8 Mt)*
 
@@ -391,7 +391,7 @@ Kysy yksinkertainen kysymys, kuten "Mikä on 15 % luvusta 200?" käyttäen matal
 
 Monivaiheiset työnkulut hyötyvät ennakkosuunnittelusta ja etenemisen kertomisesta. Malli hahmottelee, mitä se aikoo tehdä, kertoo jokaisesta vaiheesta ja lopuksi tiivistää tulokset.
 
-<img src="../../../translated_images/fi/tool-preambles-demo.3ca4881e417f2e28.png" alt="Tehtävän suoritus -demo" width="800"/>
+<img src="../../../translated_images/fi/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Tehtävän suoritus -demo" width="800"/>
 
 *REST-päätepisteen luominen vaihe vaiheelta kertoen (3,9 Mt)*
 
@@ -399,7 +399,7 @@ Monivaiheiset työnkulut hyötyvät ennakkosuunnittelusta ja etenemisen kertomis
 
 Kokeile "Luo sähköpostin validointipalvelu". Sen sijaan, että malli vain generoi koodin ja pysähtyy, se tuottaa, arvioi laatukriteerien mukaan, tunnistaa heikkoudet ja parantaa. Näet sen toistavan prosessia, kunnes koodi täyttää tuotantostandardit.
 
-<img src="../../../translated_images/fi/self-reflecting-code-demo.851ee05c988e743f.png" alt="Itsearvioiva koodi -demo" width="800"/>
+<img src="../../../translated_images/fi/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Itsearvioiva koodi -demo" width="800"/>
 
 *Täydellinen sähköpostin validointipalvelu (5,2 Mt)*
 
@@ -407,7 +407,7 @@ Kokeile "Luo sähköpostin validointipalvelu". Sen sijaan, että malli vain gene
 
 Koodikatselmukset tarvitsevat johdonmukaiset arviointikehykset. Malli analysoi koodia kiinteiden kategorioiden (oikeellisuus, käytännöt, suorituskyky, turvallisuus) ja vakavuustasojen avulla.
 
-<img src="../../../translated_images/fi/structured-analysis-demo.9ef892194cd23bc8.png" alt="Rakenteellinen analyysi -demo" width="800"/>
+<img src="../../../translated_images/fi/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Rakenteellinen analyysi -demo" width="800"/>
 
 *Kehykseen perustuva koodikatselmus*
 
@@ -415,7 +415,7 @@ Koodikatselmukset tarvitsevat johdonmukaiset arviointikehykset. Malli analysoi k
 
 Kysy "Mikä on Spring Boot?" ja seuraa heti kysymyksellä "Näytä esimerkki". Malli muistaa ensimmäisen kysymyksesi ja antaa sinulle juuri Spring Boot -esimerkin. Ilman muistia toinen kysymys olisi liian epämääräinen.
 
-<img src="../../../translated_images/fi/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Monikierroksinen keskustelu -demo" width="800"/>
+<img src="../../../translated_images/fi/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Monikierroksinen keskustelu -demo" width="800"/>
 
 *Kontekstin säilyttäminen kysymysten välillä*
 
@@ -423,7 +423,7 @@ Kysy "Mikä on Spring Boot?" ja seuraa heti kysymyksellä "Näytä esimerkki". M
 
 Valitse matemaattinen ongelma ja kokeile sitä sekä vaiheittaisella päättelyllä että vähäisellä innokkuudella. Vähäinen innokkuus antaa vain vastauksen – nopeaa mutta epäselvää. Vaiheittainen näyttää jokaisen laskelman ja päätöksen.
 
-<img src="../../../translated_images/fi/step-by-step-reasoning-demo.12139513356faecd.png" alt="Vaiheittainen päättely -demo" width="800"/>
+<img src="../../../translated_images/fi/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Vaiheittainen päättely -demo" width="800"/>
 
 *Matemaattinen ongelma selkeillä vaiheilla*
 
@@ -431,7 +431,7 @@ Valitse matemaattinen ongelma ja kokeile sitä sekä vaiheittaisella päättelyl
 
 Kun tarvitset tiettyjä muotoja tai sanamääriä, tämä malli varmistaa tiukan noudattamisen. Kokeile luoda yhteenveto, jossa on täsmälleen 100 sanaa luettelomuodossa.
 
-<img src="../../../translated_images/fi/constrained-output-demo.567cc45b75da1633.png" alt="Rajoitettu tulostus -demo" width="800"/>
+<img src="../../../translated_images/fi/constrained-output-demo.567cc45b75da1633.webp" alt="Rajoitettu tulostus -demo" width="800"/>
 
 *Koneoppimisen yhteenveto muodon hallinnalla*
 
@@ -445,7 +445,7 @@ GPT-5 antaa sinun hallita laskentapanosta kehotteidesi kautta. Vähäinen panos 
 
 Huomaatko XML-tunnisteet kehotteissa? Ne eivät ole koristeita. Mallit noudattavat rakenteellisia ohjeita luotettavammin kuin vapaamuotoista tekstiä. Kun tarvitset monivaiheisia prosesseja tai monimutkaista logiikkaa, rakenne auttaa mallia seuraamaan, missä se on ja mitä seuraavaksi tulee.
 
-<img src="../../../translated_images/fi/prompt-structure.a77763d63f4e2f89.png" alt="Kehotteen rakenne" width="800"/>
+<img src="../../../translated_images/fi/prompt-structure.a77763d63f4e2f89.webp" alt="Kehotteen rakenne" width="800"/>
 
 *Hyvin rakennetun kehotteen anatomia selkeillä osioilla ja XML-tyylisellä järjestelyllä*
 

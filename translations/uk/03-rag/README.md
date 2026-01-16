@@ -49,7 +49,7 @@ RAG (Генерація з додатковим пошуком) вирішує �
 
 Це накладає відповіді моделі на вашу фактичну інформацію замість того, щоб покладатися на знання з тренування або вигадувати відповіді.
 
-<img src="../../../translated_images/uk/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/uk/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *Робочий процес RAG – від запиту користувача до семантичного пошуку і генерації контекстної відповіді*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/uk/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/uk/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Документи представлені у вигляді векторів у просторі ембеддінгів – схожий контент групується разом*
 
@@ -160,7 +160,7 @@ Dev-контейнер містить розширення Spring Boot Dashboard
 
 Просто натисніть кнопку запуску поруч із "rag", щоб запустити цей модуль, або запустіть усі модулі одразу.
 
-<img src="../../../translated_images/uk/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/uk/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Варіант 2: Використання shell-скриптів**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Всі модулі
 
 Додаток має веб-інтерфейс для завантаження документів та запитань.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/uk/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/uk/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Інтерфейс додатку RAG – завантажуйте документи та задавайте питання*
 
@@ -248,7 +248,7 @@ cd ..; .\stop-all.ps1  # Всі модулі
 
 Зверніть увагу, що кожна відповідь містить посилання на джерела з оцінками схожості. Ці оцінки (від 0 до 1) показують, наскільки релевантним був кожен шматок до вашого питання. Вищі оцінки означають кращі співпадіння. Це дозволяє вам перевірити відповідь відносно джерела.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/uk/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/uk/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Результати запиту з відповіддю, посиланнями на джерела та оцінками релевантності*
 

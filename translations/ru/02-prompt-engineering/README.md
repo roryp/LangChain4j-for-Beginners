@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Этот модуль демонстрирует продвинутые шаблоны подсказок, используя ту же основу LangChain4j из предыдущих модулей, с акцентом на структуру подсказок и контроль рассуждений.
 
-<img src="../../../translated_images/ru/langchain4j-flow.48e534666213010b.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/ru/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Как LangChain4j связывает ваши подсказки с Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/ru/message-types.93e0779798a17c9d.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/ru/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage обеспечивает постоянный контекст, а UserMessages содержат отдельные запросы*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 Не все задачи требуют одинакового подхода. Одни вопросы требуют быстрых ответов, другие — глубокого анализа. Одни требуют видимых рассуждений, другие — просто результатов. Этот модуль охватывает восемь шаблонов подсказок — каждый оптимизирован для разных сценариев. Вы попробуете все, чтобы понять, когда какой подход работает лучше.
 
-<img src="../../../translated_images/ru/eight-patterns.fa1ebfdf16f71e9a.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/ru/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Обзор восьми шаблонов инжиниринга подсказок и их случаев использования*
 
-<img src="../../../translated_images/ru/reasoning-effort.db4a3ba5b8e392c1.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/ru/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Низкая готовность (быстро, прямо) против высокой готовности (тщательно, исследовательно) подходы к рассуждениям*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - «Какие лучшие практики для структурирования вступлений к инструментам в продакшн-приложениях?»
 > - «Как захватывать и отображать промежуточные обновления прогресса в UI?»
 
-<img src="../../../translated_images/ru/task-execution-pattern.9da3967750ab5c1e.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/ru/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *План → Выполнение → Итог для многошаговых задач*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ru/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/ru/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Цикл итеративного улучшения — генерировать, оценивать, выявлять проблемы, улучшать, повторять*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - «Как лучше всего парсить и программно обрабатывать структурированный вывод?»
 > - «Как обеспечить согласованность уровней серьёзности в разных сессиях ревью?»
 
-<img src="../../../translated_images/ru/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/ru/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Четырёхкатегорийная схема для последовательных ревью кода с уровнями серьёзности*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/ru/context-memory.dff30ad9fa78832a.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/ru/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Как контекст разговора накапливается за несколько ходов до достижения лимита токенов*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ru/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/ru/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Разбиение задач на явные логические шаги*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ru/constrained-output-pattern.0ce39a682a6795c2.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/ru/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Обеспечение конкретных требований к формату, длине и структуре*
 
@@ -300,7 +300,7 @@ cat ../.env  # Должен показывать AZURE_OPENAI_ENDPOINT, API_KEY,
 
 Просто нажмите кнопку запуска рядом с «prompt-engineering», чтобы запустить этот модуль, или запустите все модули сразу.
 
-<img src="../../../translated_images/ru/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ru/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Вариант 2: Использование shell-скриптов**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 ## Скриншоты приложения
 
-<img src="../../../translated_images/ru/dashboard-home.5444dbda4bc1f79d.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/ru/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Главная панель с отображением всех 8 шаблонов инжиниринга подсказок с их характеристиками и случаями использования*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Задайте простой вопрос, например «Сколько будет 15% от 200?» с использованием Низкой готовности. Вы получите мгновенный, прямой ответ. Теперь задайте что-то сложное, например «Разработай стратегию кэширования для высоконагруженного API» с использованием Высокой готовности. Посмотрите, как модель замедляется и даёт подробные рассуждения. Та же модель, та же структура вопроса — но подсказка указывает, сколько размышлять.
 
-<img src="../../../translated_images/ru/low-eagerness-demo.898894591fb23aa0.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ru/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Быстрый расчет с минимальным рассуждением*
 
-<img src="../../../translated_images/ru/high-eagerness-demo.4ac93e7786c5a376.png" alt="Демонстрация высокого рвения" width="800"/>
+<img src="../../../translated_images/ru/high-eagerness-demo.4ac93e7786c5a376.webp" alt="Демонстрация высокого рвения" width="800"/>
 
 *Всеобъемлющая стратегия кэширования (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Многошаговые рабочие процессы выигрывают от предварительного планирования и повествования о ходе выполнения. Модель описывает, что она будет делать, рассказывает о каждом шаге, затем подводит итоги.
 
-<img src="../../../translated_images/ru/tool-preambles-demo.3ca4881e417f2e28.png" alt="Демонстрация выполнения задачи" width="800"/>
+<img src="../../../translated_images/ru/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Демонстрация выполнения задачи" width="800"/>
 
 *Создание REST-эндпоинта с пошаговым повествованием (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Попробуйте "Создать сервис проверки электронной почты". Вместо простого генерации кода и остановки, модель генерирует, оценивает по критериям качества, выявляет слабые места и улучшает. Вы увидите, как она итеративно дорабатывает код до производственного уровня.
 
-<img src="../../../translated_images/ru/self-reflecting-code-demo.851ee05c988e743f.png" alt="Демонстрация саморефлексирующего кода" width="800"/>
+<img src="../../../translated_images/ru/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Демонстрация саморефлексирующего кода" width="800"/>
 
 *Полноценный сервис проверки электронной почты (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Код-ревью требуют последовательных рамок оценки. Модель анализирует код по фиксированным категориям (корректность, практики, производительность, безопасность) с уровнями серьезности.
 
-<img src="../../../translated_images/ru/structured-analysis-demo.9ef892194cd23bc8.png" alt="Демонстрация структурированного анализа" width="800"/>
+<img src="../../../translated_images/ru/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Демонстрация структурированного анализа" width="800"/>
 
 *Код-ревью на основе фреймворка*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Спросите "Что такое Spring Boot?", а затем сразу "Покажи пример". Модель помнит ваш первый вопрос и дает именно пример Spring Boot. Без памяти второй вопрос был бы слишком расплывчатым.
 
-<img src="../../../translated_images/ru/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Демонстрация многошагового чата" width="800"/>
+<img src="../../../translated_images/ru/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Демонстрация многошагового чата" width="800"/>
 
 *Сохранение контекста между вопросами*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Выберите математическую задачу и попробуйте решить ее с помощью Пошагового рассуждения и Низкого рвения. Низкое рвение просто дает ответ — быстро, но непрозрачно. Пошаговое рассуждение показывает каждый расчет и решение.
 
-<img src="../../../translated_images/ru/step-by-step-reasoning-demo.12139513356faecd.png" alt="Демонстрация пошагового рассуждения" width="800"/>
+<img src="../../../translated_images/ru/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Демонстрация пошагового рассуждения" width="800"/>
 
 *Математическая задача с явными шагами*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # Все модули
 
 Когда нужны конкретные форматы или количество слов, этот шаблон обеспечивает строгое соблюдение. Попробуйте сгенерировать резюме ровно из 100 слов в формате списка.
 
-<img src="../../../translated_images/ru/constrained-output-demo.567cc45b75da1633.png" alt="Демонстрация ограниченного вывода" width="800"/>
+<img src="../../../translated_images/ru/constrained-output-demo.567cc45b75da1633.webp" alt="Демонстрация ограниченного вывода" width="800"/>
 
 *Резюме по машинному обучению с контролем формата*
 
@@ -445,7 +445,7 @@ GPT-5 позволяет контролировать вычислительны
 
 Заметили XML-теги в подсказках? Это не украшение. Модели надежнее следуют структурированным инструкциям, чем свободному тексту. Когда нужны многошаговые процессы или сложная логика, структура помогает модели отслеживать, где она находится и что дальше.
 
-<img src="../../../translated_images/ru/prompt-structure.a77763d63f4e2f89.png" alt="Структура подсказки" width="800"/>
+<img src="../../../translated_images/ru/prompt-structure.a77763d63f4e2f89.webp" alt="Структура подсказки" width="800"/>
 
 *Анатомия хорошо структурированной подсказки с четкими разделами и организацией в стиле XML*
 

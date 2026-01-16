@@ -53,7 +53,7 @@ Model bahasa bersifat tanpa status. Setiap panggilan API bersifat independen. Ji
 
 Ini baik untuk tanya jawab sederhana tapi tidak berguna untuk aplikasi nyata. Bot layanan pelanggan perlu mengingat apa yang Anda katakan. Asisten pribadi perlu konteks. Setiap percakapan multi-putaran membutuhkan memori.
 
-<img src="../../../translated_images/id/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Percakapan Tanpa Status vs Dengan Status" width="800"/>
+<img src="../../../translated_images/id/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Percakapan Tanpa Status vs Dengan Status" width="800"/>
 
 *Perbedaan antara percakapan tanpa status (panggilan independen) dan dengan status (sadar konteks)*
 
@@ -61,7 +61,7 @@ Ini baik untuk tanya jawab sederhana tapi tidak berguna untuk aplikasi nyata. Bo
 
 Sebelum masuk ke percakapan, penting untuk memahami token - unit dasar teks yang diproses model bahasa:
 
-<img src="../../../translated_images/id/token-explanation.c39760d8ec650181.png" alt="Penjelasan Token" width="800"/>
+<img src="../../../translated_images/id/token-explanation.c39760d8ec650181.webp" alt="Penjelasan Token" width="800"/>
 
 *Contoh bagaimana teks dipecah menjadi token - "I love AI!" menjadi 4 unit pemrosesan terpisah*
 
@@ -73,7 +73,7 @@ Memori chat menyelesaikan masalah tanpa status dengan mempertahankan riwayat per
 
 LangChain4j menyediakan implementasi memori yang menangani ini secara otomatis. Anda memilih berapa banyak pesan yang disimpan dan framework mengelola jendela konteks.
 
-<img src="../../../translated_images/id/memory-window.bbe67f597eadabb3.png" alt="Konsep Jendela Memori" width="800"/>
+<img src="../../../translated_images/id/memory-window.bbe67f597eadabb3.webp" alt="Konsep Jendela Memori" width="800"/>
 
 *MessageWindowChatMemory mempertahankan jendela geser pesan terbaru, secara otomatis menghapus pesan lama*
 
@@ -212,7 +212,7 @@ Dari Spring Boot Dashboard, Anda dapat:
 
 Cukup klik tombol play di sebelah "introduction" untuk memulai modul ini, atau mulai semua modul sekaligus.
 
-<img src="../../../translated_images/id/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/id/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opsi 2: Menggunakan skrip shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 Aplikasi menyediakan antarmuka web dengan dua implementasi chat berdampingan.
 
-<img src="../../../translated_images/id/home-screen.121a03206ab910c0.png" alt="Layar Beranda Aplikasi" width="800"/>
+<img src="../../../translated_images/id/home-screen.121a03206ab910c0.webp" alt="Layar Beranda Aplikasi" width="800"/>
 
 *Dashboard menampilkan opsi Simple Chat (tanpa status) dan Conversational Chat (dengan status)*
 
@@ -290,7 +290,7 @@ Aplikasi menyediakan antarmuka web dengan dua implementasi chat berdampingan.
 
 Coba ini dulu. Tanyakan "Nama saya John" lalu segera tanya "Siapa nama saya?" Model tidak akan mengingat karena setiap pesan bersifat independen. Ini menunjukkan masalah inti integrasi model bahasa dasar - tidak ada konteks percakapan.
 
-<img src="../../../translated_images/id/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Demo Chat Tanpa Status" width="800"/>
+<img src="../../../translated_images/id/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Demo Chat Tanpa Status" width="800"/>
 
 *AI tidak mengingat nama Anda dari pesan sebelumnya*
 
@@ -298,7 +298,7 @@ Coba ini dulu. Tanyakan "Nama saya John" lalu segera tanya "Siapa nama saya?" Mo
 
 Sekarang coba urutan yang sama di sini. Tanyakan "Nama saya John" lalu "Siapa nama saya?" Kali ini model mengingat. Perbedaannya adalah MessageWindowChatMemory - ia mempertahankan riwayat percakapan dan menyertakannya dengan setiap permintaan. Inilah cara AI percakapan produksi bekerja.
 
-<img src="../../../translated_images/id/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Demo Chat Dengan Status" width="800"/>
+<img src="../../../translated_images/id/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Demo Chat Dengan Status" width="800"/>
 
 *AI mengingat nama Anda dari percakapan sebelumnya*
 

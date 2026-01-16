@@ -49,7 +49,7 @@ Gândiți-vă la RAG ca și cum ați oferi modelului o bibliotecă de referinț�
 
 Acest lucru ancorează răspunsurile modelului în datele dvs. reale în loc să se bazeze doar pe cunoștințele din antrenament sau să inventeze răspunsuri.
 
-<img src="../../../translated_images/ro/rag-architecture.ccb53b71a6ce407f.png" alt="Arhitectura RAG" width="800"/>
+<img src="../../../translated_images/ro/rag-architecture.ccb53b71a6ce407f.webp" alt="Arhitectura RAG" width="800"/>
 
 *Fluxul de lucru RAG - de la întrebarea utilizatorului la căutarea semantică și generarea răspunsului contextual*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/ro/vector-embeddings.2ef7bdddac79a327.png" alt="Spațiul embedding-urilor vectoriale" width="800"/>
+<img src="../../../translated_images/ro/vector-embeddings.2ef7bdddac79a327.webp" alt="Spațiul embedding-urilor vectoriale" width="800"/>
 
 *Documentele reprezentate ca vectori în spațiul embedding-urilor - conținut similar se grupează*
 
@@ -160,7 +160,7 @@ Din Spring Boot Dashboard puteți:
 
 Apăsați butonul play de lângă "rag" pentru a porni acest modul sau porniți toate modulele simultan.
 
-<img src="../../../translated_images/ro/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ro/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opțiunea 2: Folosind scripturi shell**
 
@@ -231,7 +231,7 @@ cd ..; .\stop-all.ps1  # Toate modulele
 
 Aplicația oferă o interfață web pentru încărcarea documentelor și adresarea întrebărilor.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/ro/rag-homepage.d90eb5ce1b3caa94.png" alt="Interfața aplicației RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/ro/rag-homepage.d90eb5ce1b3caa94.webp" alt="Interfața aplicației RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interfața aplicației RAG – încărcați documente și puneți întrebări*
 
@@ -249,7 +249,7 @@ Acum puneți întrebări specifice despre conținutul documentului. Încercați 
 
 Observați că fiecare răspuns include referințe la surse cu scoruri de similitudine. Aceste scoruri (de la 0 la 1) arată cât de relevante au fost bucățile pentru întrebarea dvs. Scoruri mai mari indică potriviri mai bune. Aceasta vă permite să verificați răspunsul față de materialul sursă.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/ro/rag-query-results.6d69fcec5397f355.png" alt="Rezultate interogare RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/ro/rag-query-results.6d69fcec5397f355.webp" alt="Rezultate interogare RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Rezultatele interogării care arată răspunsul cu referințele sursei și scorurile de relevanță*
 

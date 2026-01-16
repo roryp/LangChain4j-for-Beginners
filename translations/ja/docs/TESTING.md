@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/ja/test-results.ea5c98d8f3642043.png" alt="成功したテスト結果" width="800"/>
+<img src="../../../translated_images/ja/test-results.ea5c98d8f3642043.webp" alt="成功したテスト結果" width="800"/>
 
 *すべてのテストが失敗ゼロで合格した成功したテスト実行の表示*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 このコースはローカルで実行される**ユニットテスト**に焦点を当てています。各テストはLangChain4jの特定の概念を独立して示します。
 
-<img src="../../../translated_images/ja/testing-pyramid.2dd1079a0481e53e.png" alt="テストピラミッド" width="800"/>
+<img src="../../../translated_images/ja/testing-pyramid.2dd1079a0481e53e.webp" alt="テストピラミッド" width="800"/>
 
 *ユニットテスト（高速、独立）、統合テスト（実際のコンポーネント）、エンドツーエンドテストのバランスを示すテストピラミッド。このトレーニングではユニットテストをカバーします。*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#会話履歴を維持すべき
 
 Visual Studio Codeを使用している場合、Test Explorerはテストの実行とデバッグのためのグラフィカルなインターフェースを提供します。
 
-<img src="../../../translated_images/ja/vscode-testing.f02dd5917289dced.png" alt="VS Code テストエクスプローラー" width="800"/>
+<img src="../../../translated_images/ja/vscode-testing.f02dd5917289dced.webp" alt="VS Code テストエクスプローラー" width="800"/>
 
 *VS Code Test Explorerが、すべてのJavaテストクラスと個々のテストメソッドを含むテストツリーを表示している様子*
 
@@ -134,7 +134,7 @@ Test Explorer は合格したテストに緑のチェックマークを表示し
 
 最も単純なパターンはAIモデルを呼び出さずにプロンプトテンプレートをテストします。変数置換が正しく機能するか、プロンプトが期待どおりにフォーマットされているかを検証します。
 
-<img src="../../../translated_images/ja/prompt-template-testing.b902758ddccc8dee.png" alt="プロンプトテンプレートのテスト" width="800"/>
+<img src="../../../translated_images/ja/prompt-template-testing.b902758ddccc8dee.webp" alt="プロンプトテンプレートのテスト" width="800"/>
 
 *プレースホルダのあるテンプレート → 値の適用 → フォーマットされた出力を検証、という変数置換フローを示すプロンプトテンプレートのテスト*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#プロンプトテ�
 
 会話ロジックをテストする際は、Mockitoを使って事前に定義した応答を返すフェイクモデルを作成します。これによりテストは高速で、無料かつ決定論的になります。
 
-<img src="../../../translated_images/ja/mock-vs-real.3b8b1f85bfe6845e.png" alt="モックと実APIの比較" width="800"/>
+<img src="../../../translated_images/ja/mock-vs-real.3b8b1f85bfe6845e.webp" alt="モックと実APIの比較" width="800"/>
 
 *モックがテストに好まれる理由を示す比較: 高速、無料、決定論的、APIキー不要*
 
@@ -231,7 +231,7 @@ class SimpleConversationTest {
 
 会話メモリは複数のユーザーを分離して保持する必要があります。このテストは会話がコンテキストを混合しないことを検証します。
 
-<img src="../../../translated_images/ja/conversation-isolation.e00336cf8f7a3e3f.png" alt="会話の隔離" width="800"/>
+<img src="../../../translated_images/ja/conversation-isolation.e00336cf8f7a3e3f.webp" alt="会話の隔離" width="800"/>
 
 *異なるユーザーのために独立したメモリストアを示し、コンテキストの混入を防ぐ会話分離のテスト*
 
@@ -263,7 +263,7 @@ void shouldIsolateConversationsByid() {
 
 ツールはAIが呼び出せる関数です。AIの決定に関係なく正しく動作することを確認するために、直接テストします。
 
-<img src="../../../translated_images/ja/tools-testing.3e1706817b0b3924.png" alt="ツールのテスト" width="800"/>
+<img src="../../../translated_images/ja/tools-testing.3e1706817b0b3924.webp" alt="ツールのテスト" width="800"/>
 
 *AI呼び出しなしでモックツール実行を示し、ビジネスロジックを検証するツールの独立テスト*
 
@@ -294,7 +294,7 @@ void shouldDemonstrateToolChaining() {
 
 RAGシステムは通常、ベクトルデータベースや埋め込みサービスを必要とします。インメモリパターンでは外部依存なしでパイプライン全体をテストできます。
 
-<img src="../../../translated_images/ja/rag-testing.ee7541b1e23934b1.png" alt="インメモリRAGテスト" width="800"/>
+<img src="../../../translated_images/ja/rag-testing.ee7541b1e23934b1.webp" alt="インメモリRAGテスト" width="800"/>
 
 *ドキュメント解析、埋め込みの保存、データベース不要の類似検索を示すインメモリRAGテストワークフロー*
 

@@ -53,7 +53,7 @@ I modelli linguistici sono stateless. Ogni chiamata API è indipendente. Se invi
 
 Questo va bene per semplici Q&A ma è inutile per applicazioni reali. I bot di assistenza clienti devono ricordare cosa gli hai detto. Gli assistenti personali necessitano di contesto. Qualsiasi conversazione a più turni richiede memoria.
 
-<img src="../../../translated_images/it/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Conversazioni Stateless vs Stateful" width="800"/>
+<img src="../../../translated_images/it/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Conversazioni Stateless vs Stateful" width="800"/>
 
 *La differenza tra conversazioni stateless (chiamate indipendenti) e stateful (consapevoli del contesto)*
 
@@ -61,7 +61,7 @@ Questo va bene per semplici Q&A ma è inutile per applicazioni reali. I bot di a
 
 Prima di immergerci nelle conversazioni, è importante capire i token - le unità base di testo che i modelli linguistici elaborano:
 
-<img src="../../../translated_images/it/token-explanation.c39760d8ec650181.png" alt="Spiegazione dei Token" width="800"/>
+<img src="../../../translated_images/it/token-explanation.c39760d8ec650181.webp" alt="Spiegazione dei Token" width="800"/>
 
 *Esempio di come il testo viene suddiviso in token - "I love AI!" diventa 4 unità di elaborazione separate*
 
@@ -73,7 +73,7 @@ La memoria della chat risolve il problema stateless mantenendo la cronologia del
 
 LangChain4j fornisce implementazioni di memoria che gestiscono questo automaticamente. Scegli quanti messaggi mantenere e il framework gestisce la finestra di contesto.
 
-<img src="../../../translated_images/it/memory-window.bbe67f597eadabb3.png" alt="Concetto di Finestra di Memoria" width="800"/>
+<img src="../../../translated_images/it/memory-window.bbe67f597eadabb3.webp" alt="Concetto di Finestra di Memoria" width="800"/>
 
 *MessageWindowChatMemory mantiene una finestra scorrevole dei messaggi recenti, eliminando automaticamente quelli più vecchi*
 
@@ -212,7 +212,7 @@ Dal Spring Boot Dashboard puoi:
 
 Clicca semplicemente il pulsante play accanto a "introduction" per avviare questo modulo, oppure avvia tutti i moduli insieme.
 
-<img src="../../../translated_images/it/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/it/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opzione 2: Usare script shell**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Tutti i moduli
 
 L'applicazione fornisce un'interfaccia web con due implementazioni di chat affiancate.
 
-<img src="../../../translated_images/it/home-screen.121a03206ab910c0.png" alt="Schermata Home dell'Applicazione" width="800"/>
+<img src="../../../translated_images/it/home-screen.121a03206ab910c0.webp" alt="Schermata Home dell'Applicazione" width="800"/>
 
 *Dashboard che mostra sia l'opzione Simple Chat (stateless) che Conversational Chat (stateful)*
 
@@ -290,7 +290,7 @@ L'applicazione fornisce un'interfaccia web con due implementazioni di chat affia
 
 Prova prima questa. Chiedi "Mi chiamo John" e poi subito dopo "Come mi chiamo?" Il modello non ricorderà perché ogni messaggio è indipendente. Questo dimostra il problema principale con l'integrazione base del modello linguistico - nessun contesto di conversazione.
 
-<img src="../../../translated_images/it/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Demo Chat Stateless" width="800"/>
+<img src="../../../translated_images/it/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Demo Chat Stateless" width="800"/>
 
 *L'IA non ricorda il tuo nome dal messaggio precedente*
 
@@ -298,7 +298,7 @@ Prova prima questa. Chiedi "Mi chiamo John" e poi subito dopo "Come mi chiamo?" 
 
 Ora prova la stessa sequenza qui. Chiedi "Mi chiamo John" e poi "Come mi chiamo?" Questa volta lo ricorda. La differenza è MessageWindowChatMemory - mantiene la cronologia della conversazione e la include in ogni richiesta. Questo è come funziona l'IA conversazionale in produzione.
 
-<img src="../../../translated_images/it/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Demo Chat Stateful" width="800"/>
+<img src="../../../translated_images/it/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Demo Chat Stateful" width="800"/>
 
 *L'IA ricorda il tuo nome detto in precedenza nella conversazione*
 

@@ -52,7 +52,7 @@ Gândește-te la asta ca la a da instrucțiuni unui coleg. „Remediază bug-ul�
 
 Acest modul demonstrează modele avansate de prompting folosind aceeași fundație LangChain4j din modulele anterioare, cu accent pe structura prompturilor și controlul raționamentului.
 
-<img src="../../../translated_images/ro/langchain4j-flow.48e534666213010b.png" alt="Flux LangChain4j" width="800"/>
+<img src="../../../translated_images/ro/langchain4j-flow.48e534666213010b.webp" alt="Flux LangChain4j" width="800"/>
 
 *Cum LangChain4j conectează prompturile tale la Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/ro/message-types.93e0779798a17c9d.png" alt="Arhitectura Tipurilor de Mesaje" width="800"/>
+<img src="../../../translated_images/ro/message-types.93e0779798a17c9d.webp" alt="Arhitectura Tipurilor de Mesaje" width="800"/>
 
 *SystemMessage oferă context persistent în timp ce UserMessages conțin cereri individuale*
 
@@ -104,11 +104,11 @@ Concluzia principală: LangChain4j oferă infrastructura (conexiunea modelului p
 
 Nu toate problemele necesită aceeași abordare. Unele întrebări cer răspunsuri rapide, altele gândire profundă. Unele cer raționament vizibil, altele doar rezultate. Acest modul acoperă opt modele de prompting - fiecare optimizat pentru scenarii diferite. Vei experimenta cu toate pentru a învăța când funcționează cel mai bine fiecare abordare.
 
-<img src="../../../translated_images/ro/eight-patterns.fa1ebfdf16f71e9a.png" alt="Opt Modele de Prompting" width="800"/>
+<img src="../../../translated_images/ro/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Opt Modele de Prompting" width="800"/>
 
 *Prezentare generală a celor opt modele de inginerie a prompturilor și cazurile lor de utilizare*
 
-<img src="../../../translated_images/ro/reasoning-effort.db4a3ba5b8e392c1.png" alt="Compararea Efortului de Raționament" width="800"/>
+<img src="../../../translated_images/ro/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Compararea Efortului de Raționament" width="800"/>
 
 *Efort scăzut (rapid, direct) vs Efort ridicat (temeinic, explorator) în raționament*
 
@@ -163,7 +163,7 @@ Promptarea Chain-of-Thought cere explicit modelului să arate procesul său de r
 > - „Care sunt cele mai bune practici pentru structurarea preludiilor uneltelor în aplicații de producție?”
 > - „Cum pot captura și afișa actualizări intermediare de progres într-o interfață UI?”
 
-<img src="../../../translated_images/ro/task-execution-pattern.9da3967750ab5c1e.png" alt="Modelul de Execuție a Sarcinilor" width="800"/>
+<img src="../../../translated_images/ro/task-execution-pattern.9da3967750ab5c1e.webp" alt="Modelul de Execuție a Sarcinilor" width="800"/>
 
 *Planifică → Execută → Rezumă fluxul de lucru pentru sarcini în mai mulți pași*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ro/self-reflection-cycle.6f71101ca0bd28cc.png" alt="Ciclul de Auto-Reflecție" width="800"/>
+<img src="../../../translated_images/ro/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Ciclul de Auto-Reflecție" width="800"/>
 
 *Buclă iterativă de îmbunătățire - generează, evaluează, identifică probleme, îmbunătățește, repetă*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - „Care este cea mai bună metodă de a parsa și acționa pe baza output-ului structurat programatic?”
 > - „Cum asigur niveluri consistente de severitate în diferite sesiuni de revizuire?”
 
-<img src="../../../translated_images/ro/structured-analysis-pattern.0af3b690b60cf2d6.png" alt="Modelul de Analiză Structurată" width="800"/>
+<img src="../../../translated_images/ro/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Modelul de Analiză Structurată" width="800"/>
 
 *Cadrul cu patru categorii pentru recenzii consistente de cod cu niveluri de severitate*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/ro/context-memory.dff30ad9fa78832a.png" alt="Memoria Contextului" width="800"/>
+<img src="../../../translated_images/ro/context-memory.dff30ad9fa78832a.webp" alt="Memoria Contextului" width="800"/>
 
 *Cum se acumulează contextul conversației pe mai multe runde până la atingerea limitei de tokeni*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ro/step-by-step-pattern.a99ea4ca1c48578c.png" alt="Modelul Pas cu Pas" width="800"/>
+<img src="../../../translated_images/ro/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Modelul Pas cu Pas" width="800"/>
 
 *Descompunerea problemelor în pași logici expliciți*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/ro/constrained-output-pattern.0ce39a682a6795c2.png" alt="Modelul de Output Constrâns" width="800"/>
+<img src="../../../translated_images/ro/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Modelul de Output Constrâns" width="800"/>
 
 *Impunerea cerințelor specifice de format, lungime și structură*
 
@@ -300,7 +300,7 @@ Din Spring Boot Dashboard poți:
 
 Apasă butonul play de lângă „prompt-engineering” pentru a porni acest modul sau pornește toate modulele simultan.
 
-<img src="../../../translated_images/ro/dashboard.da2c2130c904aaf0.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ro/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opțiunea 2: Folosind scripturi shell**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Toate modulele
 
 ## Capturi de Ecran ale Aplicației
 
-<img src="../../../translated_images/ro/dashboard-home.5444dbda4bc1f79d.png" alt="Pagina Principală Dashboard" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/ro/dashboard-home.5444dbda4bc1f79d.webp" alt="Pagina Principală Dashboard" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Dashboard-ul principal care arată toate cele 8 modele de inginerie a prompturilor cu caracteristicile și cazurile lor de utilizare*
 
@@ -380,10 +380,10 @@ Interfața web îți permite să experimentezi cu diferite strategii de promptin
 
 Pune o întrebare simplă precum „Care este 15% din 200?” folosind Efort Scăzut. Vei primi un răspuns instant, direct. Acum pune ceva complex precum „Proiectează o strategie de caching pentru un API cu trafic intens” folosind Efort Ridicat. Observă cum modelul încetinește și oferă raționament detaliat. Același model, aceeași structură a întrebării - dar promptul îi spune cât să gândească.
 
-<img src="../../../translated_images/ro/low-eagerness-demo.898894591fb23aa0.png" alt="Demo Efort Scăzut" width="800"/>
+<img src="../../../translated_images/ro/low-eagerness-demo.898894591fb23aa0.webp" alt="Demo Efort Scăzut" width="800"/>
 *Calcul rapid cu raționament minim*
 
-<img src="../../../translated_images/ro/high-eagerness-demo.4ac93e7786c5a376.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ro/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *Strategie cuprinzătoare de caching (2.8MB)*
 
@@ -391,7 +391,7 @@ Pune o întrebare simplă precum „Care este 15% din 200?” folosind Efort Sc�
 
 Fluxurile de lucru în mai mulți pași beneficiază de planificare prealabilă și narare a progresului. Modelul conturează ce va face, povestește fiecare pas, apoi rezumă rezultatele.
 
-<img src="../../../translated_images/ro/tool-preambles-demo.3ca4881e417f2e28.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/ro/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *Crearea unui endpoint REST cu narare pas cu pas (3.9MB)*
 
@@ -399,7 +399,7 @@ Fluxurile de lucru în mai mulți pași beneficiază de planificare prealabilă 
 
 Încearcă „Creează un serviciu de validare a email-urilor”. În loc să genereze doar cod și să se oprească, modelul generează, evaluează conform criteriilor de calitate, identifică slăbiciunile și îmbunătățește. Vei vedea cum iterează până când codul îndeplinește standardele de producție.
 
-<img src="../../../translated_images/ro/self-reflecting-code-demo.851ee05c988e743f.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/ro/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Serviciu complet de validare a email-urilor (5.2MB)*
 
@@ -407,7 +407,7 @@ Fluxurile de lucru în mai mulți pași beneficiază de planificare prealabilă 
 
 Revizuirile de cod necesită cadre de evaluare consistente. Modelul analizează codul folosind categorii fixe (corectitudine, practici, performanță, securitate) cu niveluri de severitate.
 
-<img src="../../../translated_images/ro/structured-analysis-demo.9ef892194cd23bc8.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/ro/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *Revizuire de cod bazată pe un cadru*
 
@@ -415,7 +415,7 @@ Revizuirile de cod necesită cadre de evaluare consistente. Modelul analizează 
 
 Întreabă „Ce este Spring Boot?” apoi imediat „Arată-mi un exemplu”. Modelul își amintește prima întrebare și îți oferă un exemplu specific Spring Boot. Fără memorie, a doua întrebare ar fi prea vagă.
 
-<img src="../../../translated_images/ro/multi-turn-chat-demo.0d2d9b9a86a12b4b.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/ro/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Păstrarea contextului între întrebări*
 
@@ -423,7 +423,7 @@ Revizuirile de cod necesită cadre de evaluare consistente. Modelul analizează 
 
 Alege o problemă de matematică și încearc-o atât cu Raționament pas cu pas, cât și cu Efort scăzut. Efortul scăzut îți oferă doar răspunsul - rapid, dar opac. Raționamentul pas cu pas îți arată fiecare calcul și decizie.
 
-<img src="../../../translated_images/ro/step-by-step-reasoning-demo.12139513356faecd.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/ro/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Problemă matematică cu pași expliciți*
 
@@ -431,7 +431,7 @@ Alege o problemă de matematică și încearc-o atât cu Raționament pas cu pas
 
 Când ai nevoie de formate specifice sau număr fix de cuvinte, acest tipar impune respectarea strictă. Încearcă să generezi un rezumat cu exact 100 de cuvinte în format punctat.
 
-<img src="../../../translated_images/ro/constrained-output-demo.567cc45b75da1633.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/ro/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *Rezumat de machine learning cu control al formatului*
 
@@ -445,7 +445,7 @@ GPT-5 îți permite să controlezi efortul computațional prin prompturi. Efortu
 
 Observi etichetele XML din prompturi? Nu sunt decorative. Modelele urmează instrucțiuni structurate mai fiabil decât textul liber. Când ai nevoie de procese în mai mulți pași sau logică complexă, structura ajută modelul să știe unde este și ce urmează.
 
-<img src="../../../translated_images/ro/prompt-structure.a77763d63f4e2f89.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/ro/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *Anatomia unui prompt bine structurat cu secțiuni clare și organizare în stil XML*
 

@@ -61,7 +61,7 @@ Egy eszközökkel rendelkező AI-ügynök a ReAct (Reasoning and Acting) mintát
 5. Az eszköz végrehajtja a hívást és visszaadja az adatokat
 6. Az ügynök beépíti az eredményt és megadja a végső választ
 
-<img src="../../../translated_images/hu/react-pattern.86aafd3796f3fd13.png" alt="ReAct minta" width="800"/>
+<img src="../../../translated_images/hu/react-pattern.86aafd3796f3fd13.webp" alt="ReAct minta" width="800"/>
 
 *A ReAct minta - hogyan váltakoznak az AI-ügynökök az érvelés és cselekvés között a problémamegoldáshoz*
 
@@ -138,7 +138,7 @@ Alternatív megközelítés (kézi `AiServices.builder()`) több kódot igényel
 
 **Eszközláncolás** – Lehet, hogy az AI több eszközt hív egymás után. Kérdezd meg: „Milyen az idő Seattle-ben és vigyek-e esernyőt?” és figyeld, hogyan láncolja össze a `getCurrentWeather` hívást az eső elleni felszerelésről való mérlegeléssel.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/hu/tool-chaining.3b25af01967d6f7b.png" alt="Eszközláncolás" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/hu/tool-chaining.3b25af01967d6f7b.webp" alt="Eszközláncolás" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sorozatos eszközhívások – egy eszköz kimenete a következő döntés bemenete*
 
@@ -171,7 +171,7 @@ A Spring Boot Dashboard segítségével:
 
 Csak kattints a „tools” modul melletti lejátszás gombra, vagy indítsd el az összes modult egyszerre.
 
-<img src="../../../translated_images/hu/dashboard.9b519b1a1bc1b30a.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/hu/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **2. lehetőség: Shell szkriptek használata**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Minden modul
 
 Az alkalmazás webes felületet biztosít, ahol egy AI-ügynökkel kommunikálhatsz, amely hozzáfér időjárás és hőmérséklet-átváltó eszközökhöz.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/hu/tools-homepage.4b4cd8b2717f9621.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/hu/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI Agent Tools felület – gyors példák és chat felület az eszközökkel való interakcióhoz*
 
@@ -257,7 +257,7 @@ Próbálj ki most egy összetettebb kérést: „Milyen az idő Seattle-ben és 
 
 A chat felület megőrzi a beszélgetés előzményeit, így többlépéses interakciókat folytathatsz. Látod az előző lekérdezéseket és válaszokat, könnyű követni a párbeszédet és megérteni, hogyan építi az ügynök a kontextust több cserén keresztül.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/hu/tools-conversation-demo.89f2ce9676080f59.png" alt="Többlépcsős beszélgetés több eszközhívással" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/hu/tools-conversation-demo.89f2ce9676080f59.webp" alt="Többlépcsős beszélgetés több eszközhívással" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Többlépcsős beszélgetés egyszerű átalakításokkal, időjárás lekérdezéssel és eszközláncolással*
 

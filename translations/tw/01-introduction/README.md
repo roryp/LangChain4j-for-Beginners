@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 這對簡單問答還可以，但對真正的應用程式毫無用處。客服機器人需要記住你告訴它的事情。個人助理需要上下文。任何多輪對話都需要記憶。
 
-<img src="../../../translated_images/tw/stateless-vs-stateful.cc4a4765e649c41a.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/tw/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *無狀態（獨立呼叫）與有狀態（具上下文）對話的差異*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 在深入對話之前，了解 tokens 很重要 —— 它是語言模型處理的基本文字單位：
 
-<img src="../../../translated_images/tw/token-explanation.c39760d8ec650181.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/tw/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *文字如何被拆解成 tokens 的範例 — 「I love AI!」變成 4 個獨立處理單位*
 
@@ -73,7 +73,7 @@ Tokens 是 AI 模型衡量和處理文字的方式。單字、標點符號，甚
 
 LangChain4j 提供自動處理這件事的記憶實作。你決定保留多少訊息，框架會管理上下文視窗。
 
-<img src="../../../translated_images/tw/memory-window.bbe67f597eadabb3.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/tw/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory 維持最近訊息的滑動視窗，自動丟棄舊訊息*
 
@@ -212,7 +212,7 @@ Get-Content ..\.env  # 應該顯示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只要點擊「introduction」旁的播放按鈕即可啟動本模組，或一次啟動所有模組。
 
-<img src="../../../translated_images/tw/dashboard.69c7479aef09ff6b.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/tw/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **選項 2：使用 shell 腳本**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 應用程式提供網頁介面，左右並排兩種聊天實作。
 
-<img src="../../../translated_images/tw/home-screen.121a03206ab910c0.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/tw/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *儀表板顯示簡易聊天（無狀態）與對話聊天（有狀態）選項*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 先試試這個。問「我叫 John」，接著立刻問「我叫什麼名字？」模型不會記得，因為每則訊息都是獨立的。這展示了基本語言模型整合的核心問題 —— 沒有對話上下文。
 
-<img src="../../../translated_images/tw/simple-chat-stateless-demo.13aeb3978eab3234.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/tw/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *AI 不會記得你前一則訊息中的名字*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 現在在這裡試同樣的順序。問「我叫 John」，再問「我叫什麼名字？」這次它會記得。差別在於 MessageWindowChatMemory —— 它維持對話歷史並將其包含在每次請求中。這就是生產對話式 AI 的運作方式。
 
-<img src="../../../translated_images/tw/conversational-chat-stateful-demo.e5be9822eb23ff59.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/tw/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *AI 記得你之前對話中的名字*
 

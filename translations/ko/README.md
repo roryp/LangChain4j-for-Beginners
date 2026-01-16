@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "ko"
 }
 -->
-<img src="../../translated_images/ko/LangChain4j.90e1d693fcc71b50.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/ko/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
 ### 🌐 다국어 지원
 

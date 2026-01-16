@@ -48,7 +48,7 @@ Fikiria RAG kama kumpa mfano maktaba ya rejea. Unapoanza swali, mfumo:
 
 Hii hufanya jibu la mfano liwe linalotegemea data yako halisi badala ya kutegemea maarifa ya mafunzo au kuunda majibu yasiyo ya kweli.
 
-<img src="../../../translated_images/sw/rag-architecture.ccb53b71a6ce407f.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/sw/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *Mtiririko wa kazi wa RAG - kutoka swali la mtumiaji hadi utafutaji wa kimaana na uzalishaji wa jibu kwa muktadha*
 
@@ -101,7 +101,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/sw/vector-embeddings.2ef7bdddac79a327.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/sw/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Hati zinazooneshwa kama vekta kwenye nafasi ya mfano - maudhui yanayofanana huungana pamoja*
 
@@ -159,7 +159,7 @@ Kutoka Spring Boot Dashboard, unaweza:
 
 Bofya kitufe cha kuanzisha karibu na "rag" kuanzisha sehemu hii, au anzisha sehemu zote mara moja.
 
-<img src="../../../translated_images/sw/dashboard.fbe6e28bf4267ffe.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sw/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Chaguo 2: Kutumia skripti za shell**
 
@@ -229,7 +229,7 @@ cd ..; .\stop-all.ps1  # Moduli zote
 
 Programu hutoa kiolesura cha wavuti kwa ajili ya kupakia nyaraka na kuuliza maswali.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/sw/rag-homepage.d90eb5ce1b3caa94.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/sw/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Kiolesura cha programu ya RAG - pakia nyaraka na uliza maswali*
 
@@ -247,7 +247,7 @@ Sasa uliza maswali maalum kuhusu maudhui ya hati. Jaribu kitu cha kweli kilicho 
 
 Gundua kila jibu lina marejeo ya chanzo na alama za ulinganifu. Alama hizi (0 hadi 1) zinaonyesha jinsi kipande kilivyohusiana na swali lako. Alama kubwa zinamaanisha ulinganifu mzuri. Hii inakuruhusu kuthibitisha jibu dhidi ya nyaraka za chanzo.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/sw/rag-query-results.6d69fcec5397f355.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/sw/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Matokeo ya swali yakionyesha jibu na marejeo ya chanzo pamoja na alama za ulinganifu*
 
