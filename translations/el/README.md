@@ -1,87 +1,75 @@
 <!--
 CO_OP_TRANSLATOR_METADATA:
 {
-  "original_hash": "6a3bd54fc243ce3dc79d18848d2b5413",
-  "translation_date": "2026-01-05T23:22:03+00:00",
+  "original_hash": "7dffae166c7db7dc932a0e3d0217cbb7",
+  "translation_date": "2026-01-16T10:21:24+00:00",
   "source_file": "README.md",
   "language_code": "el"
 }
 -->
-<img src="../../translated_images/LangChain4j.90e1d693fcc71b50.el.png" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/el/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
-### 🌐 Υποστήριξη Πολλαπλών Γλωσσών
+### 🌐 Υποστήριξη Πολλών Γλωσσών
 
 #### Υποστηρίζεται μέσω του GitHub Action (Αυτοματοποιημένο & Πάντα Ενημερωμένο)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Αραβικά](../ar/README.md) | [Μπενγκάλι](../bn/README.md) | [Βουλγαρικά](../bg/README.md) | [Βιρμανικά (Μιανμάρ)](../my/README.md) | [Κινέζικα (Απλοποιημένα)](../zh/README.md) | [Κινέζικα (Παραδοσιακά, Χονγκ Κονγκ)](../hk/README.md) | [Κινέζικα (Παραδοσιακά, Μακάο)](../mo/README.md) | [Κινέζικα (Παραδοσιακά, Ταϊβάν)](../tw/README.md) | [Κροατικά](../hr/README.md) | [Τσέχικα](../cs/README.md) | [Δανέζικα](../da/README.md) | [Ολλανδικά](../nl/README.md) | [Εσθονικά](../et/README.md) | [Φινλανδικά](../fi/README.md) | [Γαλλικά](../fr/README.md) | [Γερμανικά](../de/README.md) | [Ελληνικά](./README.md) | [Εβραϊκά](../he/README.md) | [Χίντι](../hi/README.md) | [Ουγγρικά](../hu/README.md) | [Ινδονησιακά](../id/README.md) | [Ιταλικά](../it/README.md) | [Ιαπωνικά](../ja/README.md) | [Κανάντα](../kn/README.md) | [Κορεατικά](../ko/README.md) | [Λιθουανικά](../lt/README.md) | [Μαλαϊκά](../ms/README.md) | [Μαλαγιαλάμ](../ml/README.md) | [Μαράθι](../mr/README.md) | [Νεπάλ](../ne/README.md) | [Νιγηριανό Πίνγκιν](../pcm/README.md) | [Νορβηγικά](../no/README.md) | [Περσικά (Φαρσί)](../fa/README.md) | [Πολωνικά](../pl/README.md) | [Πορτογαλικά (Βραζιλία)](../br/README.md) | [Πορτογαλικά (Πορτογαλία)](../pt/README.md) | [Πουντζάμπι (Γκουρμούκι)](../pa/README.md) | [Ρουμανικά](../ro/README.md) | [Ρωσικά](../ru/README.md) | [Σερβικά (Κυριλλικά)](../sr/README.md) | [Σλοβακικά](../sk/README.md) | [Σλοβενικά](../sl/README.md) | [Ισπανικά](../es/README.md) | [Σουαχίλι](../sw/README.md) | [Σουηδικά](../sv/README.md) | [Ταγκαλόγκ (Φιλιππινέζικα)](../tl/README.md) | [Ταμίλ](../ta/README.md) | [Τελουγκού](../te/README.md) | [Ταϊλανδικά](../th/README.md) | [Τουρκικά](../tr/README.md) | [Ουκρανικά](../uk/README.md) | [Ουρντού](../ur/README.md) | [Βιετναμέζικα](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](./README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
 > **Προτιμάτε να Κλωνοποιήσετε Τοπικά;**
 
-> Αυτό το αποθετήριο περιλαμβάνει πάνω από 50 μεταφράσεις σε γλώσσες, γεγονός που αυξάνει σημαντικά το μέγεθος λήψης. Για να κλωνοποιήσετε χωρίς τις μεταφράσεις, χρησιμοποιήστε sparse checkout:
+> Αυτό το αποθετήριο περιλαμβάνει πάνω από 50 μεταφράσεις γλωσσών, γεγονός που αυξάνει σημαντικά το μέγεθος λήψης. Για κλωνοποίηση χωρίς μεταφράσεις, χρησιμοποιήστε sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Αυτό σας παρέχει όλα όσα χρειάζεστε για να ολοκληρώσετε το μάθημα με πολύ πιο γρήγορη λήψη.
+> Αυτό σας δίνει όλα όσα χρειάζεστε για να ολοκληρώσετε το μάθημα με πολύ ταχύτερη λήψη.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # LangChain4j για Αρχάριους
 
-Ένα μάθημα για την κατασκευή εφαρμογών τεχνητής νοημοσύνης με LangChain4j και Azure OpenAI GPT-5, από βασική συνομιλία έως πράκτορες AI.
+Ένα μάθημα για την κατασκευή εφαρμογών AI με LangChain4j και Azure OpenAI GPT-5, από βασική συνομιλία έως πράκτορες AI.
 
-**Νέος στο LangChain4j;** Ρίξτε μια ματιά στο [Γλωσσάρι](docs/GLOSSARY.md) για ορισμούς βασικών όρων και εννοιών.
+**Νέος στο LangChain4j;** Δείτε το [Γλωσσάρι](docs/GLOSSARY.md) για ορισμούς βασικών όρων και εννοιών.
 
-## Πίνακας Περιεχομένων
+## Περιεχόμενα
 
-1. [Γρήγορη Έναρξη](00-quick-start/README.md) - Ξεκινήστε με το LangChain4j  
-2. [Εισαγωγή](01-introduction/README.md) - Μάθετε τα βασικά του LangChain4j  
-3. [Μηχανική Γραφής Ερωτημάτων](02-prompt-engineering/README.md) - Δεξιότητα στον σχεδιασμό αποτελεσματικών ερωτημάτων  
-4. [RAG (Ανάκτηση-Ενισχυμένη Δημιουργία)](03-rag/README.md) - Κατασκευή έξυπνων συστημάτων βάσει γνώσης  
-5. [Εργαλεία](04-tools/README.md) - Ενσωμάτωση εξωτερικών εργαλείων και απλών βοηθών  
-6. [MCP (Πρωτόκολλο Πλαισίου Μοντέλου)](05-mcp/README.md) - Εργασία με το Πρωτόκολλο Πλαισίου Μοντέλου (MCP) και μονάδες Πρακτόρου  
+1. [Γρήγορη Έναρξη](00-quick-start/README.md) - Ξεκινήστε με το LangChain4j
+2. [Εισαγωγή](01-introduction/README.md) - Μάθετε τα βασικά του LangChain4j
+3. [Μηχανική Εκφώνησης](02-prompt-engineering/README.md) - Εξοικειωθείτε με το σχεδιασμό αποτελεσματικών εκφωνήσεων
+4. [RAG (Ανάκτηση-Υποβοηθούμενη Γενιά)](03-rag/README.md) - Δημιουργήστε ευφυή συστήματα με βάση τη γνώση
+5. [Εργαλεία](04-tools/README.md) - Ενσωματώστε εξωτερικά εργαλεία και απλούς βοηθούς
+6. [MCP (Πρωτόκολλο Πλαισίου Μοντέλου)](05-mcp/README.md) - Εργαστείτε με το MCP και τα Agentic modules
 ---
 
-## Μονοπάτι Μάθησης
+## Διαδρομή Εκμάθησης
 
 > **Γρήγορη Έναρξη**
 
-1. Κάντε fork αυτό το αποθετήριο στον λογαριασμό σας στο GitHub  
-2. Κάντε κλικ στο **Code** → καρτέλα **Codespaces** → **...** → **New with options...**  
-3. Χρησιμοποιήστε τις προεπιλογές – αυτό θα επιλέξει το κοντέινερ Ανάπτυξης που δημιουργήθηκε για το μάθημα  
-4. Κάντε κλικ στο **Create codespace**  
-5. Περιμένετε 5-10 λεπτά για να ετοιμαστεί το περιβάλλον  
-6. Πηγαίνετε απευθείας στο [Γρήγορη Έναρξη](./00-quick-start/README.md) για να ξεκινήσετε!
+1. Δημιουργήστε fork σε αυτό το αποθετήριο στον λογαριασμό σας στο GitHub
+2. Κάντε κλικ στο **Code** → καρτέλα **Codespaces** → **...** → **Νέο με επιλογές...**
+3. Χρησιμοποιήστε τις προεπιλογές – αυτό θα επιλέξει το Development container που δημιουργήθηκε για αυτό το μάθημα
+4. Κάντε κλικ στο **Create codespace**
+5. Περιμένετε 5-10 λεπτά για να ετοιμαστεί το περιβάλλον
+6. Μεταβείτε απευθείας στο [Γρήγορη Έναρξη](./00-quick-start/README.md) για να ξεκινήσετε!
 
-> **Προτιμάτε να Κλωνοποιήσετε Τοπικά;**
->
-> Αυτό το αποθετήριο περιλαμβάνει πάνω από 50 μεταφράσεις σε γλώσσες, γεγονός που αυξάνει σημαντικά το μέγεθος λήψης. Για να κλωνοποιήσετε χωρίς τις μεταφράσεις, χρησιμοποιήστε sparse checkout:
-> ```bash
-> git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
-> cd LangChain4j-for-Beginners
-> git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
-> ```
-> Αυτό σας παρέχει όλα όσα χρειάζεστε για να ολοκληρώσετε το μάθημα με πολύ πιο γρήγορη λήψη.
+Μετά την ολοκλήρωση των ενοτήτων, εξερευνήστε τον [Οδηγό Δοκιμών](docs/TESTING.md) για να δείτε ενέργειες και έννοιες δοκιμών LangChain4j.
 
-Αφού ολοκληρώσετε τα μαθήματα, εξερευνήστε τον [Οδηγό Δοκιμών](docs/TESTING.md) για να δείτε στην πράξη τις έννοιες δοκιμών στο LangChain4j.
+> **Σημείωση:** Αυτή η εκπαίδευση χρησιμοποιεί τόσο GitHub Models όσο και Azure OpenAI. Η ενότητα [Γρήγορη Έναρξη](00-quick-start/README.md) χρησιμοποιεί GitHub Models (δεν απαιτείται συνδρομή Azure), ενώ οι ενότητες 1-5 χρησιμοποιούν Azure OpenAI.
 
-> **Σημείωση:** Αυτή η εκπαίδευση χρησιμοποιεί τόσο τα Μοντέλα GitHub όσο και το Azure OpenAI. Το μάθημα [Γρήγορη Έναρξη](00-quick-start/README.md) χρησιμοποιεί Μοντέλα GitHub (δεν απαιτείται συνδρομή Azure), ενώ τα μαθήματα 1-5 χρησιμοποιούν Azure OpenAI.
+## Μάθηση με GitHub Copilot
 
+Για να ξεκινήσετε γρήγορα τον προγραμματισμό, ανοίξτε αυτό το έργο σε ένα GitHub Codespace ή στο τοπικό σας IDE με τον παρεχόμενο devcontainer. Ο devcontainer που χρησιμοποιείται σε αυτό το μάθημα έρχεται προδιαμορφωμένος με το GitHub Copilot για προγραμματισμό ζευγαρίσματος AI.
 
-## Μάθηση με το GitHub Copilot
+Κάθε παράδειγμα κώδικα περιλαμβάνει προτεινόμενες ερωτήσεις που μπορείτε να κάνετε στο GitHub Copilot για να εμβαθύνετε την κατανόησή σας. Αναζητήστε τις ενδείξεις 💡/🤖 στα:
 
-Για να ξεκινήσετε γρήγορα τον προγραμματισμό, ανοίξτε αυτό το έργο σε ένα GitHub Codespace ή στο τοπικό IDE σας με το παρεχόμενο devcontainer. Το devcontainer που χρησιμοποιείται σε αυτό το μάθημα είναι προδιαμορφωμένο με το GitHub Copilot για προγραμματισμό AI σε συνεργασία.
+- **Κεφαλίδες αρχείων Java** - Ερωτήσεις ειδικές για κάθε παράδειγμα
+- **README ενοτήτων** - Εξερευνητικές ερωτήσεις μετά τα παραδείγματα κώδικα
 
-Κάθε παράδειγμα κώδικα περιλαμβάνει προτεινόμενες ερωτήσεις που μπορείτε να κάνετε στο GitHub Copilot για να εμβαθύνετε την κατανόησή σας. Ψάξτε για τις ενδείξεις 💡/🤖 στα:
+**Πώς να το χρησιμοποιήσετε:** Ανοίξτε οποιοδήποτε αρχείο κώδικα και κάντε τις προτεινόμενες ερωτήσεις στο Copilot. Έχει πλήρες πλαίσιο του κώδικα και μπορεί να εξηγήσει, να επεκτείνει και να προτείνει εναλλακτικές.
 
-- **Κεφαλίδες αρχείων Java** - Ερωτήσεις συγκεκριμένες για κάθε παράδειγμα  
-- **README των μαθημάτων** - Εξερευνητικές ενδείξεις μετά από παραδείγματα κώδικα  
-
-**Πώς να χρησιμοποιήσετε:** Ανοίξτε οποιοδήποτε αρχείο κώδικα και ρωτήστε τις προτεινόμενες ερωτήσεις στο Copilot. Έχει πλήρες πλαίσιο για τη βάση κώδικα και μπορεί να εξηγήσει, να επεκτείνει και να προτείνει εναλλακτικές.
-
-Θέλετε να μάθετε περισσότερα; Ρίξτε μια ματιά στο [Copilot για Προγραμματισμό AI σε Συνεργασία](https://aka.ms/GitHubCopilotAI).
-
+Θέλετε να μάθετε περισσότερα; Δείτε το [Copilot για AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
 ## Πρόσθετοι Πόροι
 
@@ -100,38 +88,39 @@ CO_OP_TRANSLATOR_METADATA:
 
 ---
  
-### Σειρά Γενετικής Τεχνητής Νοημοσύνης
-[![Γενετική Τεχνητή Νοημοσύνη για Αρχάριους](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
-[![Γενετική Τεχνητή Νοημοσύνη (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
-[![Γενετική Τεχνητή Νοημοσύνη (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
-[![Γενετική Τεχνητή Νοημοσύνη (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
+### Σειρά Γενετικής AI
+[![Γενετική AI για Αρχάριους](https://img.shields.io/badge/Generative%20AI%20for%20Beginners-8B5CF6?style=for-the-badge&labelColor=E5E7EB&color=8B5CF6)](https://github.com/microsoft/generative-ai-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![Γενετική AI (.NET)](https://img.shields.io/badge/Generative%20AI%20(.NET)-9333EA?style=for-the-badge&labelColor=E5E7EB&color=9333EA)](https://github.com/microsoft/Generative-AI-for-beginners-dotnet?WT.mc_id=academic-105485-koreyst)
+[![Γενετική AI (Java)](https://img.shields.io/badge/Generative%20AI%20(Java)-C084FC?style=for-the-badge&labelColor=E5E7EB&color=C084FC)](https://github.com/microsoft/generative-ai-for-beginners-java?WT.mc_id=academic-105485-koreyst)
+[![Γενετική AI (JavaScript)](https://img.shields.io/badge/Generative%20AI%20(JavaScript)-E879F9?style=for-the-badge&labelColor=E5E7EB&color=E879F9)](https://github.com/microsoft/generative-ai-with-javascript?WT.mc_id=academic-105485-koreyst)
 
 ---
  
-### Βασική Μάθηση
-[![Μηχανική Μάθηση για Αρχάριους](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+### Βασική Εκμάθηση
+[![ML για Αρχάριους](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
 [![Επιστήμη Δεδομένων για Αρχάριους](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![Τεχνητή Νοημοσύνη για Αρχάριους](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI για Αρχάριους](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
 [![Κυβερνοασφάλεια για Αρχάριους](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![Ανάπτυξη Ιστού για Αρχάριους](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![Web Dev για Αρχάριους](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
 [![IoT για Αρχάριους](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![Ανάπτυξη XR για Αρχάριους](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development για Αρχάριους](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
 ### Σειρά Copilot
-[![Copilot για Προγραμματισμό σε Ζεύγη με Τεχνητή Νοημοσύνη](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot για C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Περιπέτεια Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## Λήψη Βοήθειας
+## Λήψη βοήθειας
 
-Εάν κολλήσετε ή έχετε οποιεσδήποτε απορίες σχετικά με την κατασκευή εφαρμογών AI, εγγραφείτε:
+Εάν κολλήσετε ή έχετε οποιεσδήποτε ερωτήσεις σχετικά με τη δημιουργία εφαρμογών AI, συμμετέχετε:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Εάν έχετε σχόλια για το προϊόν ή σφάλματα κατά την κατασκευή, επισκεφθείτε:
+Εάν έχετε σχόλια για το προϊόν ή σφάλματα κατά τη δημιουργία, επισκεφθείτε:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
@@ -142,6 +131,6 @@ CO_OP_TRANSLATOR_METADATA:
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Αποποίηση Ευθυνών**:  
-Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης AI [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που προσπαθούμε για ακρίβεια, παρακαλούμε να έχετε υπόψη σας ότι οι αυτόματες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη γλώσσα του αποτελεί την εξουσιοδοτημένη πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή παρανοήσεις που προκύπτουν από τη χρήση αυτής της μετάφρασης.
+**Αποποίηση ευθυνών**:
+Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης AI [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που επιδιώκουμε την ακρίβεια, παρακαλούμε να έχετε υπόψη ότι οι αυτοματοποιημένες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα πρέπει να θεωρείται η επίσημη πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή λανθασμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

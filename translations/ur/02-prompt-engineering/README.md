@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 یہ ماڈیول پرامپٹ کی ساخت اور استدلال کنٹرول پر توجہ کے ساتھ پچھلے ماڈیولز کے LangChain4j بنیاد کو استعمال کرتے ہوئے جدید پرامپٹنگ پیٹرنز دکھاتا ہے۔
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.ur.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/ur/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *LangChain4j آپ کے پرامپٹس کو Azure OpenAI GPT-5 سے کیسے جوڑتا ہے*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.ur.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/ur/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage مستقل سیاق و سباق فراہم کرتا ہے جبکہ UserMessages انفرادی درخواستیں رکھتے ہیں*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 تمام مسائل کے لیے ایک ہی طریقہ کار ضروری نہیں ہوتا۔ کچھ سوالات کو فوری جواب چاہیے، کچھ کو گہری سوچ۔ کچھ کو واضح استدلال چاہیے، کچھ کو صرف نتائج۔ یہ ماڈیول آٹھ پرامپٹنگ پیٹرنز کا احاطہ کرتا ہے - ہر ایک مختلف حالات کے لیے بہتر بنایا گیا ہے۔ آپ ان سب کے ساتھ تجربہ کریں گے تاکہ سیکھ سکیں کہ کب کون سا طریقہ بہتر کام کرتا ہے۔
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.ur.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/ur/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *آٹھ پرامپٹ انجینئرنگ پیٹرنز اور ان کے استعمال کے حالات کا جائزہ*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.ur.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/ur/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *کم جوش (تیز، براہ راست) بمقابلہ زیادہ جوش (تفصیلی، تحقیقی) استدلالی طریقے*
 
@@ -163,7 +163,7 @@ Chain-of-Thought پرامپٹنگ ماڈل سے واضح استدلال کا ع�
 > - "پروڈکشن ایپلیکیشنز میں ٹول پری ایمبلز کی ساخت کے بہترین طریقے کیا ہیں؟"
 > - "میں UI میں درمیانی پیش رفت کی اپ ڈیٹس کیسے حاصل اور دکھا سکتا ہوں؟"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.ur.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/ur/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *کئی مرحلوں کے کاموں کے لیے منصوبہ → عمل درآمد → خلاصہ ورک فلو*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.ur.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/ur/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *تدریجی بہتری کا چکر - تیار کریں، جائزہ لیں، مسائل شناخت کریں، بہتر کریں، دہرائیں*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "منظم آؤٹ پٹ کو پروگراماتی طور پر پارس اور عمل کرنے کا بہترین طریقہ کیا ہے؟"
 > - "میں مختلف ریویو سیشنز میں مستقل شدت کی سطح کیسے یقینی بناؤں؟"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.ur.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/ur/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *شدت کی سطحوں کے ساتھ مستقل کوڈ ریویوز کے لیے چار زمرہ جات کا فریم ورک*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.ur.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/ur/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *بات چیت کا سیاق و سباق کئی مرحلوں میں جمع ہوتا ہے جب تک کہ ٹوکن کی حد نہ پہنچ جائے*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.ur.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/ur/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *مسائل کو واضح منطقی مراحل میں تقسیم کرنا*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.ur.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/ur/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *مخصوص فارمیٹ، لمبائی، اور ساخت کی ضروریات کا نفاذ*
 
@@ -300,7 +300,7 @@ Spring Boot ڈیش بورڈ سے آپ کر سکتے ہیں:
 
 بس "prompt-engineering" کے ساتھ پلے بٹن پر کلک کریں تاکہ یہ ماڈیول شروع ہو، یا تمام ماڈیولز ایک ساتھ شروع کریں۔
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.ur.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ur/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **اختیار 2: شیل اسکرپٹس کا استعمال**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 ## ایپلیکیشن کے اسکرین شاٹس
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.ur.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/ur/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *مین ڈیش بورڈ جو تمام 8 پرامپٹ انجینئرنگ پیٹرنز کو ان کی خصوصیات اور استعمال کے حالات کے ساتھ دکھا رہا ہے*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 ایک آسان سوال پوچھیں جیسے "200 کا 15% کیا ہے؟" کم جوش استعمال کرتے ہوئے۔ آپ کو فوری، براہ راست جواب ملے گا۔ اب کچھ پیچیدہ پوچھیں جیسے "ہائی ٹریفک API کے لیے کیشنگ حکمت عملی ڈیزائن کریں" زیادہ جوش استعمال کرتے ہوئے۔ دیکھیں کہ ماڈل کس طرح سست ہوتا ہے اور تفصیلی استدلال فراہم کرتا ہے۔ ایک ہی ماڈل، ایک ہی سوال کی ساخت - لیکن پرامپٹ اسے بتاتا ہے کہ کتنا سوچنا ہے۔
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.ur.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ur/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *کم از کم استدلال کے ساتھ تیز حساب*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.ur.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ur/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *جامع کیشنگ حکمت عملی (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 کئی مراحل پر مشتمل ورک فلو کو پہلے سے منصوبہ بندی اور پیش رفت کی وضاحت سے فائدہ ہوتا ہے۔ ماڈل بتاتا ہے کہ وہ کیا کرے گا، ہر قدم کی وضاحت کرتا ہے، پھر نتائج کا خلاصہ پیش کرتا ہے۔
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.ur.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/ur/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *قدم بہ قدم وضاحت کے ساتھ REST اینڈپوائنٹ بنانا (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 "ایک ای میل ویلیڈیشن سروس بنائیں" آزما کر دیکھیں۔ صرف کوڈ بنانے اور رکنے کی بجائے، ماڈل کوڈ تیار کرتا ہے، معیار کے خلاف جانچتا ہے، کمزوریاں شناخت کرتا ہے، اور بہتری لاتا ہے۔ آپ دیکھیں گے کہ یہ تب تک دہرائے گا جب تک کوڈ پروڈکشن معیار پر پورا نہ اترے۔
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.ur.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/ur/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *مکمل ای میل ویلیڈیشن سروس (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 کوڈ ریویوز کے لیے مستقل جانچ کے فریم ورک کی ضرورت ہوتی ہے۔ ماڈل کوڈ کا تجزیہ مقررہ زمروں (درستگی، طریقہ کار، کارکردگی، سیکیورٹی) اور شدت کی سطحوں کے ساتھ کرتا ہے۔
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.ur.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/ur/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *فریم ورک پر مبنی کوڈ ریویو*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 پوچھیں "Spring Boot کیا ہے؟" پھر فوراً "ایک مثال دکھائیں"۔ ماڈل آپ کے پہلے سوال کو یاد رکھتا ہے اور خاص طور پر Spring Boot کی مثال دیتا ہے۔ بغیر یادداشت کے، دوسرا سوال بہت مبہم ہوتا۔
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.ur.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/ur/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *سوالات کے درمیان سیاق و سباق کا تحفظ*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 کسی ریاضی کے مسئلے کا انتخاب کریں اور اسے Step-by-Step Reasoning اور Low Eagerness دونوں کے ساتھ آزمائیں۔ Low eagerness صرف جواب دیتا ہے - تیز لیکن غیر واضح۔ Step-by-step آپ کو ہر حساب اور فیصلہ دکھاتا ہے۔
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.ur.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/ur/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *واضح مراحل کے ساتھ ریاضی کا مسئلہ*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 جب آپ کو مخصوص فارمیٹس یا الفاظ کی تعداد کی ضرورت ہو، یہ طریقہ سخت پابندی عائد کرتا ہے۔ بال پوائنٹ فارمیٹ میں بالکل 100 الفاظ کا خلاصہ بنانے کی کوشش کریں۔
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.ur.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/ur/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *فارمیٹ کنٹرول کے ساتھ مشین لرننگ کا خلاصہ*
 
@@ -445,7 +445,7 @@ GPT-5 آپ کو اپنے پرامپٹس کے ذریعے حسابی کوشش کو
 
 کیا آپ نے پرامپٹس میں XML ٹیگز دیکھے؟ یہ صرف سجاوٹ نہیں ہیں۔ ماڈلز منظم ہدایات کو آزاد متن سے زیادہ قابل اعتماد طریقے سے فالو کرتے ہیں۔ جب آپ کو کئی مراحل کے عمل یا پیچیدہ منطق کی ضرورت ہو، ساخت ماڈل کو بتاتی ہے کہ وہ کہاں ہے اور آگے کیا آنا ہے۔
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.ur.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/ur/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *واضح سیکشنز اور XML طرز کی تنظیم کے ساتھ اچھی ساخت والا پرامپٹ*
 

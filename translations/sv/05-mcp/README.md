@@ -35,7 +35,7 @@ Du har byggt konversations-AI, bemästrat promptar, grundat svar i dokument och 
 
 Model Context Protocol (MCP) erbjuder just det - ett standardiserat sätt för AI-applikationer att upptäcka och använda externa verktyg. Istället för att skriva anpassade integrationer för varje datakälla eller tjänst kopplar du upp dig mot MCP-servrar som exponerar sina funktioner i ett konsekvent format. Din AI-agent kan sedan automatiskt hitta och använda dessa verktyg.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.sv.png" alt="MCP Jämförelse" width="800"/>
+<img src="../../../translated_images/sv/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Jämförelse" width="800"/>
 
 *Före MCP: Komplexa punkt-till-punkt-integrationer. Efter MCP: Ett protokoll, oändliga möjligheter.*
 
@@ -43,7 +43,7 @@ MCP löser ett grundläggande problem i AI-utveckling: varje integration är spe
 
 MCP standardiserar detta. En MCP-server exponerar verktyg med tydliga beskrivningar och scheman. Varje MCP-klient kan koppla upp sig, upptäcka tillgängliga verktyg och använda dem. Bygg en gång, använd överallt.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.sv.png" alt="MCP Arkitektur" width="800"/>
+<img src="../../../translated_images/sv/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Arkitektur" width="800"/>
 
 *Model Context Protocol-arkitektur - standardiserad verktygsupptäckt och exekvering*
 
@@ -71,7 +71,7 @@ När din klient kopplar upp sig mot en MCP-server frågar den "Vilka verktyg har
 
 MCP stöder olika transportmekanismer. Denna modul demonstrerar Stdio-transporten för lokala processer:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.sv.png" alt="Transportmekanismer" width="800"/>
+<img src="../../../translated_images/sv/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transportmekanismer" width="800"/>
 
 *MCP transportmekanismer: HTTP för fjärrservrar, Stdio för lokala processer*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 I demon läser `FileAgent` en fil med MCP-filsystemverktyg, och `ReportAgent` genererar en strukturerad rapport med en sammanfattande inledning (1 mening), 3 nyckelpunkter och rekommendationer. Supervisorn orkestrerar denna process automatiskt:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.sv.png" alt="Agentmodul" width="800"/>
+<img src="../../../translated_images/sv/agentic.cf84dcda226374e3.webp" alt="Agentmodul" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

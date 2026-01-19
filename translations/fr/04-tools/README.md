@@ -61,7 +61,7 @@ Un agent IA avec outils suit un pattern de raisonnement et d'action (ReAct) :
 5. L'outil s'exécute et renvoie des données
 6. L'agent intègre le résultat et fournit la réponse finale
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.fr.png" alt="Pattern ReAct" width="800"/>
+<img src="../../../translated_images/fr/react-pattern.86aafd3796f3fd13.webp" alt="Pattern ReAct" width="800"/>
 
 *Le pattern ReAct – comment les agents IA alternent entre raisonnement et action pour résoudre des problèmes*
 
@@ -138,7 +138,7 @@ Les approches alternatives (manuelles avec `AiServices.builder()`) nécessitent 
 
 **Chaînage d’outils** – L’IA peut appeler plusieurs outils en séquence. Demandez « Quel temps fait-il à Seattle et dois-je prendre un parapluie ? » et regardez comment il enchaîne `getCurrentWeather` avec un raisonnement sur les vêtements de pluie.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.fr.png" alt="Chaînage d'outils" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/fr/tool-chaining.3b25af01967d6f7b.webp" alt="Chaînage d'outils" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Appels d’outils séquentiels – la sortie d’un outil alimente la décision suivante*
 
@@ -171,7 +171,7 @@ Depuis le tableau de bord Spring Boot, vous pouvez :
 
 Cliquez simplement sur le bouton de lecture à côté de « tools » pour démarrer ce module, ou lancez tous les modules en une fois.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.fr.png" alt="Tableau de bord Spring Boot" width="400"/>
+<img src="../../../translated_images/fr/dashboard.9b519b1a1bc1b30a.webp" alt="Tableau de bord Spring Boot" width="400"/>
 
 **Option 2 : Utiliser des scripts shell**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Tous les modules
 
 L’application propose une interface web où vous pouvez interagir avec un agent IA ayant accès à des outils météo et de conversion de température.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.fr.png" alt="Interface des outils de l’agent IA" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/fr/tools-homepage.4b4cd8b2717f9621.webp" alt="Interface des outils de l’agent IA" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interface des outils de l’agent IA – exemples rapides et interface de chat pour interagir avec les outils*
 
@@ -257,7 +257,7 @@ Essayez maintenant quelque chose de plus complexe : « Quel temps fait-il à Sea
 
 L’interface de chat conserve l’historique des conversations, vous permettant d’avoir des interactions multiples. Vous pouvez voir toutes les requêtes et réponses précédentes, ce qui facilite le suivi de la conversation et la compréhension de la construction contextuelle sur plusieurs échanges.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.fr.png" alt="Conversation avec appels multiples d’outils" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/fr/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation avec appels multiples d’outils" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Conversation multi-tours montrant conversions simples, recherches météo et chaînage d’outils*
 

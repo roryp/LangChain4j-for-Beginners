@@ -35,7 +35,7 @@ Je hebt al gespreksgerichte AI gebouwd, prompts beheerst, antwoorden gebaseerd o
 
 Het Model Context Protocol (MCP) biedt precies dat - een standaardmanier voor AI-toepassingen om externe tools te ontdekken en te gebruiken. In plaats van voor elke databron of service aangepaste integraties te schrijven, verbind je met MCP-servers die hun mogelijkheden via een consistente indeling blootstellen. Je AI-agent kan dan automatisch deze tools ontdekken en gebruiken.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.nl.png" alt="MCP Vergelijking" width="800"/>
+<img src="../../../translated_images/nl/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Vergelijking" width="800"/>
 
 *Voor MCP: Complexe punt-tot-punt integraties. Na MCP: Eén protocol, eindeloze mogelijkheden.*
 
@@ -43,7 +43,7 @@ MCP lost een fundamenteel probleem in AI-ontwikkeling op: elke integratie is maa
 
 MCP standaardiseert dit. Een MCP-server biedt tools aan met duidelijke beschrijvingen en schema’s. Elke MCP-client kan verbinden, beschikbare tools ontdekken en gebruiken. Eén keer bouwen, overal gebruiken.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.nl.png" alt="MCP Architectuur" width="800"/>
+<img src="../../../translated_images/nl/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architectuur" width="800"/>
 
 *Model Context Protocol architectuur - gestandaardiseerde toolontdekking en uitvoering*
 
@@ -71,7 +71,7 @@ Wanneer je client verbindt met een MCP-server, vraagt het "Welke tools heb je?" 
 
 MCP ondersteunt verschillende transportmechanismen. Deze module demonstreert de Stdio transport voor lokale processen:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.nl.png" alt="Transportmechanismen" width="800"/>
+<img src="../../../translated_images/nl/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transportmechanismen" width="800"/>
 
 *MCP transportmechanismen: HTTP voor externe servers, Stdio voor lokale processen*
 
@@ -169,7 +169,7 @@ Het **Supervisor Agent patroon** is een **flexibele** vorm van agentic AI. Een S
 
 In de demo leest `FileAgent` een bestand met MCP filesystem tools, en maakt `ReportAgent` een gestructureerd rapport met een executive summary (1 zin), 3 kernpunten en aanbevelingen. De Supervisor orkestreert deze flow automatisch:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.nl.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/nl/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

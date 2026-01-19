@@ -49,7 +49,7 @@ RAG کو ایک حوالہ جاتی لائبریری دینے کے طور پر �
 
 یہ ماڈل کے جوابات کو آپ کے اصل ڈیٹا پر قائم کرتا ہے بجائے اس کے کہ وہ اپنی تربیتی معلومات پر انحصار کرے یا بے بنیاد جواب بنائے۔
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.ur.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/ur/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG ورک فلو - صارف کے سوال سے لے کر سیمنٹک سرچ اور سیاق و سباق کے مطابق جواب کی تخلیق تک*
 
@@ -103,7 +103,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.ur.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/ur/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *دستاویزات ایمبیڈنگ اسپیس میں ویکٹروں کے طور پر نمائندگی، ملتی جلتی مواد ایک ساتھ کلسٹر ہوتے ہیں*
 
@@ -162,7 +162,7 @@ Spring Boot Dashboard سے آپ:
 
 بس "rag" کے ساتھ پلے بٹن پر کلک کریں اس ماڈیول کو شروع کرنے کے لیے، یا تمام ماڈیولز کو ایک ساتھ شروع کریں۔
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.ur.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ur/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **اختیار 2: شیل اسکرپٹس استعمال کریں**
 
@@ -233,7 +233,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 یہ ایپلیکیشن دستاویز اپلوڈ اور سوالات کے لیے ویب انٹرفیس فراہم کرتی ہے۔
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.ur.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/ur/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG ایپلیکیشن انٹرفیس - دستاویزات اپلوڈ کریں اور سوالات پوچھیں*
 
@@ -251,7 +251,7 @@ cd ..; .\stop-all.ps1  # تمام ماڈیولز
 
 نوٹ کریں کہ ہر جواب میں سورس کے حوالے اور مماثلت کے اسکور شامل ہوتے ہیں۔ یہ اسکور (0 سے 1 تک) دکھاتے ہیں کہ ہر چنک آپ کے سوال کے لیے کتنا متعلقہ تھا۔ زیادہ اسکورز بہتر میل جول ظاہر کرتے ہیں۔ اس سے آپ جواب کو ماخذ مواد کے خلاف تصدیق کر سکتے ہیں۔
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.ur.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/ur/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *سوالات کے نتائج، جس میں جواب کے ساتھ ماخذ کے حوالے اور متعلقہ اسکور دکھائے گئے ہیں*
 

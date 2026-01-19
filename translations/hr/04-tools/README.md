@@ -61,7 +61,7 @@ AI agent s alatima prati obrazac razmišljanja i djelovanja (ReAct):
 5. Alat izvršava i vraća podatke
 6. Agent uključuje rezultat i daje konačni odgovor
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.hr.png" alt="Obrazac ReAct" width="800"/>
+<img src="../../../translated_images/hr/react-pattern.86aafd3796f3fd13.webp" alt="Obrazac ReAct" width="800"/>
 
 *ReAct obrazac - kako AI agenti naizmjence razmišljaju i djeluju da riješe probleme*
 
@@ -138,7 +138,7 @@ Alternativni pristupi (ručni `AiServices.builder()`) zahtijevaju više koda i n
 
 **Povezivanje alata** - AI može pozvati više alata u nizu. Pitajte "Kakvo je vrijeme u Seattleu i trebam li ponijeti kišobran?" i gledajte kako povezuje `getCurrentWeather` s razmišljanjem o kišnoj opremi.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.hr.png" alt="Povezivanje alata" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/hr/tool-chaining.3b25af01967d6f7b.webp" alt="Povezivanje alata" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Nizovi poziva alata - izlaz jednog alata koristi se za sljedeću odluku*
 
@@ -171,7 +171,7 @@ S nadzorne ploče možete:
 
 Jednostavno kliknite gumb za pokretanje pored "tools" da pokrenete ovaj modul, ili pokrenite sve module odjednom.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.hr.png" alt="Spring Boot nadzorna ploča" width="400"/>
+<img src="../../../translated_images/hr/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot nadzorna ploča" width="400"/>
 
 **Opcija 2: Korištenje skripti**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Svi moduli
 
 Aplikacija pruža web sučelje gdje možete komunicirati s AI agentom koji ima pristup alatima za vremensku prognozu i pretvorbu temperatura.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.hr.png" alt="Sučelje AI agenata s alatima" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/hr/tools-homepage.4b4cd8b2717f9621.webp" alt="Sučelje AI agenata s alatima" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sučelje AI agenata s alatima - brzi primjeri i chat za interakciju s alatima*
 
@@ -257,7 +257,7 @@ Sad pokušajte nešto složenije: "Kakvo je vrijeme u Seattleu i pretvori to u F
 
 Chat sučelje čuva povijest razgovora, omogućujući višekratne interakcije. Možete vidjeti sve prethodne upite i odgovore, što olakšava praćenje razgovora i razumijevanje kako agent gradi kontekst kroz višestruke razmjene.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.hr.png" alt="Razgovor s višestrukim pozivima alata" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/hr/tools-conversation-demo.89f2ce9676080f59.webp" alt="Razgovor s višestrukim pozivima alata" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Višekratni razgovor koji prikazuje jednostavne pretvorbe, vremenske preglede i povezivanje alata*
 

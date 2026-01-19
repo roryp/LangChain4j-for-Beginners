@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.fr.png" alt="Résultats de test réussis" width="800"/>
+<img src="../../../translated_images/fr/test-results.ea5c98d8f3642043.webp" alt="Résultats de test réussis" width="800"/>
 
 *Exécution réussie des tests montrant que tous les tests passent sans aucun échec*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Ce cours se concentre sur les **tests unitaires** qui s'exécutent localement. Chaque test démontre un concept spécifique de LangChain4j en isolation.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.fr.png" alt="Pyramide de tests" width="800"/>
+<img src="../../../translated_images/fr/testing-pyramid.2dd1079a0481e53e.webp" alt="Pyramide de tests" width="800"/>
 
 *Pyramide de tests montrant l'équilibre entre les tests unitaires (rapides, isolés), les tests d'intégration (composants réels) et les tests de bout en bout. Cette formation couvre les tests unitaires.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#doit conserver l'historique de la con
 
 Si vous utilisez Visual Studio Code, le Test Explorer fournit une interface graphique pour exécuter et déboguer les tests.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.fr.png" alt="Explorateur de tests VS Code" width="800"/>
+<img src="../../../translated_images/fr/vscode-testing.f02dd5917289dced.webp" alt="Explorateur de tests VS Code" width="800"/>
 
 *L'explorateur de tests VS Code montrant l'arborescence des tests avec toutes les classes de test Java et les méthodes de test individuelles*
 
@@ -134,7 +134,7 @@ The Test Explorer shows green checkmarks for passing tests and provides detailed
 
 Le patron le plus simple teste les modèles de prompt sans appeler de modèle d'IA. Vous vérifiez que la substitution des variables fonctionne correctement et que les prompts sont formatés comme prévu.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.fr.png" alt="Test de modèles de prompt" width="800"/>
+<img src="../../../translated_images/fr/prompt-template-testing.b902758ddccc8dee.webp" alt="Test de modèles de prompt" width="800"/>
 
 *Test de modèles de prompt montrant le flux de substitution de variables : modèle avec espaces réservés → valeurs appliquées → sortie formatée vérifiée*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#test de formatage du
 
 Lors des tests de la logique de conversation, utilisez Mockito pour créer des modèles factices qui renvoient des réponses prédéterminées. Cela rend les tests rapides, gratuits et déterministes.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.fr.png" alt="Maquettes vs API réelle" width="800"/>
+<img src="../../../translated_images/fr/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Maquettes vs API réelle" width="800"/>
 
 *Comparaison montrant pourquoi les maquettes sont préférées pour les tests : elles sont rapides, gratuites, déterministes et ne nécessitent pas de clés API*
 
@@ -231,7 +231,7 @@ Ce patron apparaît dans `01-introduction/src/test/java/com/example/langchain4j/
 
 La mémoire de conversation doit garder les utilisateurs séparés. Ce test vérifie que les conversations ne mélangent pas les contextes.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.fr.png" alt="Isolation des conversations" width="800"/>
+<img src="../../../translated_images/fr/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Isolation des conversations" width="800"/>
 
 *Test de l'isolation des conversations montrant des magasins de mémoire séparés pour différents utilisateurs afin d'empêcher le mélange de contextes*
 
@@ -263,7 +263,7 @@ Chaque conversation conserve son propre historique indépendant. Dans les systè
 
 Les outils sont des fonctions que l'IA peut appeler. Testez-les directement pour garantir qu'ils fonctionnent correctement indépendamment des décisions de l'IA.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.fr.png" alt="Test des outils" width="800"/>
+<img src="../../../translated_images/fr/tools-testing.3e1706817b0b3924.webp" alt="Test des outils" width="800"/>
 
 *Test des outils indépendamment montrant l'exécution d'un outil simulé sans appels d'IA pour vérifier la logique métier*
 
@@ -294,7 +294,7 @@ Ces tests dans `04-tools/src/test/java/com/example/langchain4j/agents/tools/Simp
 
 Les systèmes RAG nécessitent traditionnellement des bases de données vectorielles et des services d'embeddings. Le modèle en mémoire vous permet de tester l'ensemble du pipeline sans dépendances externes.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.fr.png" alt="Test RAG en mémoire" width="800"/>
+<img src="../../../translated_images/fr/rag-testing.ee7541b1e23934b1.webp" alt="Test RAG en mémoire" width="800"/>
 
 *Flux de test RAG en mémoire montrant l'analyse de documents, le stockage des embeddings et la recherche par similarité sans nécessiter de base de données*
 

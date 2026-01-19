@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 ఇది సాదా ప్రశ్నోత్తరాలకు సరిపోతుంది కానీ నిజమైన అప్లికేషన్లకు ఉపయోగపడదు. కస్టమర్ సర్వీస్ బాట్లు మీరు చెప్పిన విషయాన్ని గుర్తుంచుకోవాలి. వ్యక్తిగత సహాయకులు సందర్భాన్ని అవసరం పడతారు. ఏదైనా బహుళ తిప్పల సంభాషణకు మెమరీ అవసరం.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.te.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/te/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *స్టేట్‌లెస్ (స్వతంత్ర కాల్స్) మరియు స్టేట్‌ఫుల్ (సందర్భం-అవగాహన) సంభాషణల మధ్య తేడా*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 సంభాషణలలోకి దిగేముందు, టోకెన్లను అర్థం చేసుకోవడం ముఖ్యం - భాషా మోడల్స్ ప్రాసెస్ చేసే టెక్స్ట్ యొక్క ప్రాథమిక యూనిట్లు:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.te.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/te/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *టెక్స్ట్ ఎలా టోకెన్లుగా విభజించబడుతుందో ఉదాహరణ - "I love AI!" 4 వేర్వేరు ప్రాసెసింగ్ యూనిట్లుగా మారుతుంది*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j మెమరీ అమలు విధానాలను అందిస్తుంది, ఇవి ఆటోమేటిక్‌గా ఈ పని చేస్తాయి. మీరు ఎంత సందేశాలు నిల్వ చేయాలో ఎంచుకుంటారు, ఫ్రేమ్‌వర్క్ సందర్భ విండోను నిర్వహిస్తుంది.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.te.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/te/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory తాజా సందేశాల స్లైడింగ్ విండోను నిర్వహిస్తుంది, పాత సందేశాలను ఆటోమేటిక్‌గా తొలగిస్తుంది*
 
@@ -212,7 +212,7 @@ Spring Boot డాష్‌బోర్డ్ నుండి మీరు:
 
 "introduction" పక్కన ఉన్న ప్లే బటన్‌ను క్లిక్ చేయడం ద్వారా ఈ మాడ్యూల్‌ను ప్రారంభించండి, లేదా అన్ని మాడ్యూల్‌లను ఒకేసారి ప్రారంభించండి.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.te.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/te/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **ఎంపిక 2: షెల్ స్క్రిప్ట్‌లు ఉపయోగించడం**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # అన్ని మాడ్యూల్స్
 
 అప్లికేషన్ రెండు చాట్ అమలు విధానాలతో వెబ్ ఇంటర్‌ఫేస్‌ను అందిస్తుంది పక్కపక్కన.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.te.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/te/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *సాధారణ చాట్ (స్టేట్‌లెస్) మరియు సంభాషణాత్మక చాట్ (స్టేట్‌ఫుల్) ఎంపికలను చూపించే డాష్‌బోర్డ్*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # అన్ని మాడ్యూల్స్
 
 ముందుగా దీన్ని ప్రయత్నించండి. "నా పేరు జాన్" అని అడిగి, వెంటనే "నా పేరు ఏమిటి?" అని అడగండి. మోడల్ గుర్తుంచుకోదు ఎందుకంటే ప్రతి సందేశం స్వతంత్రం. ఇది ప్రాథమిక భాషా మోడల్ ఇంటిగ్రేషన్‌లో ప్రధాన సమస్యను చూపిస్తుంది - సంభాషణ సందర్భం లేదు.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.te.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/te/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *AI మీ పేరు గత సందేశం నుండి గుర్తుంచుకోదు*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # అన్ని మాడ్యూల్స్
 
 ఇప్పుడు అదే క్రమాన్ని ఇక్కడ ప్రయత్నించండి. "నా పేరు జాన్" అని అడిగి, తరువాత "నా పేరు ఏమిటి?" అని అడగండి. ఈసారి అది గుర్తుంచుకుంటుంది. తేడా MessageWindowChatMemory - ఇది సంభాషణ చరిత్రను నిర్వహించి ప్రతి అభ్యర్థనతో చేర్చుతుంది. ఇది ఉత్పత్తి సంభాషణాత్మక AI ఎలా పనిచేస్తుందో చూపిస్తుంది.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.te.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/te/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *AI సంభాషణలో ముందుగా చెప్పిన మీ పేరును గుర్తుంచుకుంటుంది*
 

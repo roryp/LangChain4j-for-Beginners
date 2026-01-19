@@ -61,7 +61,7 @@ En AI-agent med verktyg följer ett resonemangs- och agerandemönster (ReAct):
 5. Verktyget utför och returnerar data
 6. Agenten införlivar resultatet och ger det slutgiltiga svaret
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.sv.png" alt="ReAct-mönstret" width="800"/>
+<img src="../../../translated_images/sv/react-pattern.86aafd3796f3fd13.webp" alt="ReAct-mönstret" width="800"/>
 
 *ReAct-mönstret – hur AI-agenter växlar mellan resonemang och agerande för att lösa problem*
 
@@ -138,7 +138,7 @@ Alternativa tillvägagångssätt (manuella `AiServices.builder()`) kräver mer k
 
 **Verktygskedjning** – AI kan anropa flera verktyg i följd. Fråga "Hur är vädret i Seattle och ska jag ta med ett paraply?" och se hur det kedjar ihop `getCurrentWeather` med resonemang om regnkläder.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.sv.png" alt="Verktygskedjning" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/sv/tool-chaining.3b25af01967d6f7b.webp" alt="Verktygskedjning" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sekventiella verktygsanrop – en verktygs output matas in i nästa beslut*
 
@@ -171,7 +171,7 @@ Från Spring Boot Dashboard kan du:
 
 Klicka bara på play-knappen bredvid "tools" för att starta denna modul, eller starta alla moduler samtidigt.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.sv.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sv/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Alternativ 2: Använd shell-skript**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Alla moduler
 
 Applikationen erbjuder ett webbgränssnitt där du kan interagera med en AI-agent som har tillgång till verktyg för väder och temperaturkonvertering.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.sv.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/sv/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI Agent Tools-gränssnittet – snabba exempel och chattgränssnitt för att interagera med verktyg*
 
@@ -257,7 +257,7 @@ Testa nu något mer komplext: "Hur är vädret i Seattle och konvertera det till
 
 Chattgränssnittet sparar samtalshistorik så att du kan ha flerstegsinteraktioner. Du kan se alla tidigare frågor och svar, vilket gör det enkelt att följa konversationen och förstå hur agenten bygger kontext över flera utbyten.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.sv.png" alt="Samtal med flera verktygsanrop" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/sv/tools-conversation-demo.89f2ce9676080f59.webp" alt="Samtal med flera verktygsanrop" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Flerstegsamtal som visar enkla konverteringar, väderuppslag och verktygskedjning*
 

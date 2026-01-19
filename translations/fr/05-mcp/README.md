@@ -35,7 +35,7 @@ Vous avez construit une IA conversationnelle, maîtrisé les prompts, ancré les
 
 Le Protocole de Contexte de Modèle (MCP) offre précisément cela : une manière standard pour les applications IA de découvrir et d’utiliser des outils externes. Au lieu d’écrire des intégrations personnalisées pour chaque source de données ou service, vous vous connectez à des serveurs MCP qui exposent leurs capacités dans un format cohérent. Votre agent IA peut alors découvrir et utiliser ces outils automatiquement.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.fr.png" alt="Comparaison MCP" width="800"/>
+<img src="../../../translated_images/fr/mcp-comparison.9129a881ecf10ff5.webp" alt="Comparaison MCP" width="800"/>
 
 *Avant MCP : intégrations point à point complexes. Après MCP : un protocole, des possibilités infinies.*
 
@@ -43,7 +43,7 @@ Le MCP résout un problème fondamental dans le développement d’IA : chaque i
 
 Le MCP standardise cela. Un serveur MCP expose des outils avec des descriptions claires et des schémas. Tout client MCP peut se connecter, découvrir les outils disponibles et les utiliser. Construisez une fois, utilisez partout.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.fr.png" alt="Architecture MCP" width="800"/>
+<img src="../../../translated_images/fr/mcp-architecture.b3156d787a4ceac9.webp" alt="Architecture MCP" width="800"/>
 
 *Architecture du Protocole de Contexte de Modèle – découverte et exécution standardisées d’outils*
 
@@ -71,7 +71,7 @@ Quand votre client se connecte à un serveur MCP, il demande « Quels outils ave
 
 Le MCP supporte différents mécanismes de transport. Ce module démontre le transport Stdio pour les processus locaux :
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.fr.png" alt="Mécanismes de transport" width="800"/>
+<img src="../../../translated_images/fr/transport-mechanisms.2791ba7ee93cf020.webp" alt="Mécanismes de transport" width="800"/>
 
 *Mécanismes de transport MCP : HTTP pour serveurs distants, Stdio pour processus locaux*
 
@@ -169,7 +169,7 @@ Le modèle d’**Agent Superviseur** est une forme **flexible** d’IA agentique
 
 Dans la démo, `FileAgent` lit un fichier avec les outils chimiques MCP, et `ReportAgent` génère un rapport structuré avec un résumé exécutif (1 phrase), 3 points clés, et des recommandations. Le Superviseur orchestre ce flux automatiquement :
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.fr.png" alt="Module Agentique" width="800"/>
+<img src="../../../translated_images/fr/agentic.cf84dcda226374e3.webp" alt="Module Agentique" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

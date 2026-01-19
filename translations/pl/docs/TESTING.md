@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.pl.png" alt="Pomyślne wyniki testów" width="800"/>
+<img src="../../../translated_images/pl/test-results.ea5c98d8f3642043.webp" alt="Pomyślne wyniki testów" width="800"/>
 
 *Pomyślne uruchomienie testów pokazujące, że wszystkie testy przeszły bez błędów*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Ten kurs koncentruje się na **testach jednostkowych**, które uruchamiają się lokalnie. Każdy test demonstruje konkretną koncepcję LangChain4j w izolacji.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.pl.png" alt="Piramida testów" width="800"/>
+<img src="../../../translated_images/pl/testing-pyramid.2dd1079a0481e53e.webp" alt="Piramida testów" width="800"/>
 
 *Piramida testów pokazująca równowagę między testami jednostkowymi (szybkie, izolowane), testami integracyjnymi (rzeczywiste komponenty) i testami end-to-end. To szkolenie obejmuje testy jednostkowe.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#powinienZachowywaćHistorięKonwersac
 
 Jeśli używasz Visual Studio Code, Test Explorer zapewnia graficzny interfejs do uruchamiania i debugowania testów.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.pl.png" alt="Eksplorator testów VS Code" width="800"/>
+<img src="../../../translated_images/pl/vscode-testing.f02dd5917289dced.webp" alt="Eksplorator testów VS Code" width="800"/>
 
 *Eksplorator testów VS Code pokazujący drzewo testów z wszystkimi klasami testowymi Java i poszczególnymi metodami testowymi*
 
@@ -134,7 +134,7 @@ Test Explorer pokazuje zielone znaczniki dla przechodzących testów i dostarcza
 
 Najprostszy wzorzec testuje szablony promptów bez wywoływania jakiegokolwiek modelu AI. Weryfikujesz, że podstawianie zmiennych działa poprawnie i że prompty są sformatowane zgodnie z oczekiwaniami.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.pl.png" alt="Testowanie szablonów promptów" width="800"/>
+<img src="../../../translated_images/pl/prompt-template-testing.b902758ddccc8dee.webp" alt="Testowanie szablonów promptów" width="800"/>
 
 *Testowanie szablonów promptów pokazujące przepływ podstawiania zmiennych: szablon z miejscami na dane → zastosowane wartości → zweryfikowany sformatowany wynik*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testFormatowaniaSzab
 
 Podczas testowania logiki konwersacji użyj Mockito, aby stworzyć fałszywe modele zwracające wcześniej ustalone odpowiedzi. Dzięki temu testy są szybkie, bezpłatne i deterministyczne.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.pl.png" alt="Porównanie: Mock vs rzeczywiste API" width="800"/>
+<img src="../../../translated_images/pl/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Porównanie: Mock vs rzeczywiste API" width="800"/>
 
 *Porównanie pokazujące, dlaczego mocki są preferowane do testowania: są szybkie, bezpłatne, deterministyczne i nie wymagają kluczy API*
 
@@ -231,7 +231,7 @@ Ten wzorzec pojawia się w `01-introduction/src/test/java/com/example/langchain4
 
 Pamięć konwersacji musi utrzymywać różnych użytkowników oddzielnie. Ten test weryfikuje, że konwersacje nie mieszają kontekstów.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.pl.png" alt="Izolacja konwersacji" width="800"/>
+<img src="../../../translated_images/pl/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Izolacja konwersacji" width="800"/>
 
 *Testowanie izolacji konwersacji pokazujące oddzielne magazyny pamięci dla różnych użytkowników, aby zapobiec mieszaniu kontekstów*
 
@@ -263,7 +263,7 @@ Każda konwersacja utrzymuje własną niezależną historię. W systemach produk
 
 Narzędzia to funkcje, które AI może wywołać. Testuj je bezpośrednio, aby upewnić się, że działają poprawnie niezależnie od decyzji AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.pl.png" alt="Testowanie narzędzi" width="800"/>
+<img src="../../../translated_images/pl/tools-testing.3e1706817b0b3924.webp" alt="Testowanie narzędzi" width="800"/>
 
 *Testowanie narzędzi niezależnie pokazujące wykonanie mockowanych narzędzi bez wywołań AI, aby zweryfikować logikę biznesową*
 
@@ -294,7 +294,7 @@ Te testy z `04-tools/src/test/java/com/example/langchain4j/agents/tools/SimpleTo
 
 Systemy RAG tradycyjnie wymagają baz wektorowych i serwisów osadzeń. Wzorzec "in-memory" pozwala przetestować cały pipeline bez zależności zewnętrznych.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.pl.png" alt="Testowanie RAG w pamięci" width="800"/>
+<img src="../../../translated_images/pl/rag-testing.ee7541b1e23934b1.webp" alt="Testowanie RAG w pamięci" width="800"/>
 
 *Przepływ testowania RAG w pamięci pokazujący parsowanie dokumentów, przechowywanie osadzeń i wyszukiwanie podobieństwa bez konieczności używania bazy danych*
 

@@ -49,7 +49,7 @@ RAG ਨੂੰ ਇੱਕ ਰੈਫਰੈਂਸ ਲਾਇਬ੍ਰੇਰੀ ਦੇ
 
 ਇਸ ਤਰ੍ਹਾਂ ਮਾਡਲ ਦੇ ਜਵਾਬ ਤੁਹਾਡੇ ਅਸਲੀ ਡੇਟਾ 'ਤੇ ਆਧਾਰਿਤ ਹੁੰਦੇ ਹਨ ਨਾ ਕਿ ਉਸ ਦੀ ਟਰੇਨਿੰਗ ਜਾਣਕਾਰੀ ਤੇ ਭਰੋਸਾ ਕਰਨ ਜਾਂ ਜਵਾਬ ਬਣਾਉਣ ਤੇ।
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.pa.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/pa/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG ਵਰਕਫਲੋ - ਉਪਭੋਗਤਾ ਕਵੈਰੀ ਤੋਂ ਸੇਮੈਂਟਿਕ ਖੋਜ ਚੋਂ ਸੰਦਰਭੀ ਜਵਾਬ ਉਤਪੱਤੀ ਤੱਕ*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.pa.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/pa/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *ਦਸਤਾਵੇਜ਼ ਇੰਬੈਡਿੰਗ ਸਪੇਸ ਵਿੱਚ ਵੈਕਟਰਾਂ ਵਾਂਗ ਪ੍ਰਤੀਨਿਧਿਤ - ਸਮਾਨ ਸਮੱਗਰੀ ਗਰੁੱਪ ਬਣਾਉਂਦੀ ਹੈ*
 
@@ -160,7 +160,7 @@ cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT ਦਿਖਾਣਾ ਚ
 
 ਸਿਰਫ "rag" ਦੇ ਨਾਲ ਪਲੇ ਬਟਨ 'ਤੇ ਕਲਿੱਕ ਕਰਕੇ ਇਹ ਮਾਡਿਊਲ ਸ਼ੁਰੂ ਕਰੋ ਜਾਂ ਸਾਰੇ ਮਾਡਿਊਲ ਇਕੱਠੇ ਸ਼ੁਰੂ ਕਰੋ।
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.pa.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/pa/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **ਚੋਣ 2: ਸ਼ੈੱਲ ਸਕ੍ਰਿਪਟਾਂ ਦੀ ਵਰਤੋਂ**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # ਸਾਰੇ ਮੋਡਿਊਲ
 
 ਐਪਲੀਕੇਸ਼ਨ ਦਸਤਾਵੇਜ਼ ਅਪਲੋਡ ਅਤੇ ਸਵਾਲ ਪੁੱਛਣ ਲਈ ਵੈੱਬ ਇੰਟਰਫੇਸ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ।
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.pa.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/pa/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG ਐਪਲੀਕੇਸ਼ਨ ਇੰਟਰਫੇਸ - ਦਸਤਾਵੇਜ਼ ਅਪਲੋਡ ਕਰੋ ਅਤੇ ਸਵਾਲ ਪੁੱਛੋ*
 
@@ -248,7 +248,7 @@ cd ..; .\stop-all.ps1  # ਸਾਰੇ ਮੋਡਿਊਲ
 
 ਧਿਆਨ ਦਿਓ ਕਿ ਹਰ ਜਵਾਬ ਵਿੱਚ ਸਰੋਤ ਸੰਦਰਭ ਅਤੇ similarity scores شامل ਹਨ। ਇਹ ਸਕੋਰ (0 ਤੋਂ 1 ਤੱਕ) ਦਿਖਾਉਂਦੇ ਹਨ ਕਿ ਹਰ ਚੰਕ ਤੁਹਾਡੇ ਸਵਾਲ ਨਾਲ ਕਿੰਨਾ ਸਬੰਧਿਤ ਸੀ। ਉੱਚੇ ਸਕੋਰ ਦਾ ਮਤਲਬ ਵਧੀਆ ਮਿਲਾਪ ਹੈ। ਇਸ ਨਾਲ ਤੁਸੀਂ ਜਵਾਬ ਨੂੰ ਸਰੋਥ ਮਾਦਾ ਨਾਲ ਪ੍ਰਮਾਣਿਤ ਕਰ ਸਕਦੇ ਹੋ।
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.pa.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/pa/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ਕਵੈਰੀ ਨਤੀਜੇ ਦੇਖਾਏ ਜਾ ਰਹੇ ਹਨ ਜਵਾਬ ਨਾਲ ਸਰੋਤ ਸੰਦਰਭ ਅਤੇ ਮਿਲਾਪ ਸਕੋਰਾਂ ਸਮੇਤ*
 

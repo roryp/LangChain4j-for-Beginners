@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.zh.png" alt="成功的测试结果" width="800"/>
+<img src="../../../translated_images/zh/test-results.ea5c98d8f3642043.webp" alt="成功的测试结果" width="800"/>
 
 *成功的测试执行，显示所有测试通过且无失败*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 本课程侧重于在本地运行的**单元测试**。每个测试演示一个独立的 LangChain4j 概念。
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.zh.png" alt="测试金字塔" width="800"/>
+<img src="../../../translated_images/zh/testing-pyramid.2dd1079a0481e53e.webp" alt="测试金字塔" width="800"/>
 
 *测试金字塔显示单元测试（快速、独立）、集成测试（真实组件）和端到端测试之间的平衡。本培训涵盖单元测试。*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#应维护对话历史记录
 
 如果您使用 Visual Studio Code，测试资源管理器提供了一个用于运行和调试测试的图形界面。
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.zh.png" alt="VS Code 测试资源管理器" width="800"/>
+<img src="../../../translated_images/zh/vscode-testing.f02dd5917289dced.webp" alt="VS Code 测试资源管理器" width="800"/>
 
 *VS Code 测试资源管理器显示包含所有 Java 测试类和各个测试方法的测试树*
 
@@ -134,7 +134,7 @@ mvn --% test -Dtest=SimpleConversationTest#应维护对话历史记录
 
 最简单的模式是在不调用任何 AI 模型的情况下测试提示模板。您可以验证变量替换是否正常工作以及提示是否按预期格式化。
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.zh.png" alt="提示模板测试" width="800"/>
+<img src="../../../translated_images/zh/prompt-template-testing.b902758ddccc8dee.webp" alt="提示模板测试" width="800"/>
 
 *测试提示模板，显示变量替换流程：带占位符的模板 → 应用的值 → 验证格式化输出*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#测试提示模板�
 
 在测试会话逻辑时，使用 Mockito 创建返回预设响应的假模型。这样测试就会快速、免费且确定性强。
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.zh.png" alt="模拟与真实 API 对比" width="800"/>
+<img src="../../../translated_images/zh/mock-vs-real.3b8b1f85bfe6845e.webp" alt="模拟与真实 API 对比" width="800"/>
 
 *对比说明为什么在测试中更偏好使用模拟：它们快速、免费、确定性强且不需要 API 密钥*
 
@@ -231,7 +231,7 @@ class SimpleConversationTest {
 
 会话记忆必须将多个用户区分开。此测试验证会话不会混合上下文。
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.zh.png" alt="会话隔离" width="800"/>
+<img src="../../../translated_images/zh/conversation-isolation.e00336cf8f7a3e3f.webp" alt="会话隔离" width="800"/>
 
 *测试会话隔离，显示不同用户的独立记忆存储以防止上下文混淆*
 
@@ -263,7 +263,7 @@ void shouldIsolateConversationsByid() {
 
 工具是 AI 可以调用的函数。直接测试它们以确保无论 AI 的决策如何，它们都能正确工作。
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.zh.png" alt="工具测试" width="800"/>
+<img src="../../../translated_images/zh/tools-testing.3e1706817b0b3924.webp" alt="工具测试" width="800"/>
 
 *独立测试工具，显示在不调用 AI 的情况下模拟工具执行以验证业务逻辑*
 
@@ -294,7 +294,7 @@ void shouldDemonstrateToolChaining() {
 
 RAG 系统传统上需要向量数据库和嵌入服务。内存中模式让您在无需外部依赖的情况下测试整个管道。
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.zh.png" alt="内存中 RAG 测试" width="800"/>
+<img src="../../../translated_images/zh/rag-testing.ee7541b1e23934b1.webp" alt="内存中 RAG 测试" width="800"/>
 
 *内存中 RAG 测试工作流，展示文档解析、嵌入存储和相似度搜索，而无需数据库*
 

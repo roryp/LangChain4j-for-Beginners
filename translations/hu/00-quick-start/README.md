@@ -38,7 +38,7 @@ A LangChain4j egy Java könyvtár, amely leegyszerűsíti az MI-alapú alkalmaz�
 
 A "chain" a LangChain-ben arra utal, hogy több komponenst láncolsz össze – összekapcsolhatsz egy promptot egy modellel, aztán egy parzerrel, vagy láncolhatsz egymás után több MI hívást, ahol az egyik kimenet a következő bemenete. Ez a gyorsstart az alapokra koncentrál, mielőtt bonyolultabb láncokat fedeznénk fel.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.hu.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/hu/langchain-concept.ad1fe6cf063515e1.webp" alt="LangChain4j Chaining Concept" width="800"/>
 
 *komponensek láncolása a LangChain4j-ben – az építő blokkok kapcsolódnak, hogy erőteljes MI munkafolyamatokat hozzanak létre*
 
@@ -50,7 +50,7 @@ Három fő komponenst használunk:
 
 **MessageWindowChatMemory** - a beszélgetési előzményeket kezeli. Enélkül minden kérés független. Ezzel az MI emlékszik az előző üzenetekre és fenntartja a kontextust több körön át.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.hu.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/hu/architecture.eedc993a1c576839.webp" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j architektúra – a fő komponensek együttműködnek, hogy erőteljes MI alkalmazásokat működtessenek*
 

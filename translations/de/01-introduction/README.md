@@ -53,7 +53,7 @@ Sprachmodelle sind zustandslos. Jeder API-Aufruf ist unabhängig. Wenn Sie "Mein
 
 Das ist für einfache Fragen und Antworten in Ordnung, aber für echte Anwendungen nutzlos. Kundenservice-Bots müssen sich merken, was Sie ihnen gesagt haben. Persönliche Assistenten brauchen Kontext. Jede mehrstufige Konversation erfordert Speicher.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.de.png" alt="Zustandslose vs. zustandsbehaftete Konversationen" width="800"/>
+<img src="../../../translated_images/de/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Zustandslose vs. zustandsbehaftete Konversationen" width="800"/>
 
 *Der Unterschied zwischen zustandslosen (unabhängigen Aufrufen) und zustandsbehafteten (kontextbewussten) Konversationen*
 
@@ -61,7 +61,7 @@ Das ist für einfache Fragen und Antworten in Ordnung, aber für echte Anwendung
 
 Bevor wir in Konversationen eintauchen, ist es wichtig, Tokens zu verstehen – die Grundeinheiten des Textes, die Sprachmodelle verarbeiten:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.de.png" alt="Token-Erklärung" width="800"/>
+<img src="../../../translated_images/de/token-explanation.c39760d8ec650181.webp" alt="Token-Erklärung" width="800"/>
 
 *Beispiel, wie Text in Tokens zerlegt wird – "I love AI!" wird zu 4 separaten Verarbeitungseinheiten*
 
@@ -73,7 +73,7 @@ Chat-Speicher löst das Problem der Zustandslosigkeit, indem er den Gesprächsve
 
 LangChain4j bietet Speicherimplementierungen, die dies automatisch handhaben. Sie wählen, wie viele Nachrichten behalten werden sollen, und das Framework verwaltet das Kontextfenster.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.de.png" alt="Speicherfenster-Konzept" width="800"/>
+<img src="../../../translated_images/de/memory-window.bbe67f597eadabb3.webp" alt="Speicherfenster-Konzept" width="800"/>
 
 *MessageWindowChatMemory hält ein gleitendes Fenster der letzten Nachrichten und entfernt automatisch alte*
 
@@ -212,7 +212,7 @@ Im Spring Boot Dashboard können Sie:
 
 Klicken Sie einfach auf den Play-Button neben "introduction", um dieses Modul zu starten, oder starten Sie alle Module gleichzeitig.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.de.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/de/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Verwendung von Shell-Skripten**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Alle Module
 
 Die Anwendung bietet eine Weboberfläche mit zwei Chat-Implementierungen nebeneinander.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.de.png" alt="Startbildschirm der Anwendung" width="800"/>
+<img src="../../../translated_images/de/home-screen.121a03206ab910c0.webp" alt="Startbildschirm der Anwendung" width="800"/>
 
 *Dashboard zeigt sowohl Simple Chat (zustandslos) als auch Conversational Chat (zustandsbehaftet) Optionen*
 
@@ -290,7 +290,7 @@ Die Anwendung bietet eine Weboberfläche mit zwei Chat-Implementierungen nebenei
 
 Probieren Sie dies zuerst. Fragen Sie "Mein Name ist John" und dann sofort "Wie heißt du?" Das Modell wird sich nicht erinnern, da jede Nachricht unabhängig ist. Dies zeigt das Kernproblem bei der einfachen Integration von Sprachmodellen – kein Gesprächskontext.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.de.png" alt="Demo Zustandsloser Chat" width="800"/>
+<img src="../../../translated_images/de/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Demo Zustandsloser Chat" width="800"/>
 
 *Die KI erinnert sich nicht an Ihren Namen aus der vorherigen Nachricht*
 
@@ -298,7 +298,7 @@ Probieren Sie dies zuerst. Fragen Sie "Mein Name ist John" und dann sofort "Wie 
 
 Probieren Sie hier dieselbe Abfolge. Fragen Sie "Mein Name ist John" und dann "Wie heißt du?" Diesmal erinnert es sich. Der Unterschied ist MessageWindowChatMemory – es hält den Gesprächsverlauf und fügt ihn jeder Anfrage hinzu. So funktioniert produktionsreife konversationelle KI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.de.png" alt="Demo Zustandsbehafteter Chat" width="800"/>
+<img src="../../../translated_images/de/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Demo Zustandsbehafteter Chat" width="800"/>
 
 *Die KI erinnert sich an Ihren Namen aus dem früheren Gespräch*
 

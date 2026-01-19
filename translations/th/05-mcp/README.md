@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 โปรโตคอลบริบทโมเดล (MCP) ให้สิ่งที่ต้องการ — วิธีมาตรฐานสำหรับแอปพลิเคชัน AI ในการค้นหาและใช้เครื่องมือภายนอก แทนที่จะเขียนอินทิเกรชันแบบกำหนดเองสำหรับแต่ละแหล่งข้อมูลหรือบริการ คุณเชื่อมต่อกับเซิร์ฟเวอร์ MCP ที่เปิดเผยความสามารถของเครื่องมือในรูปแบบที่สอดคล้องกัน เอเจนต์ AI ของคุณจึงสามารถค้นหาและใช้เครื่องมือเหล่านี้ได้โดยอัตโนมัติ
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.th.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/th/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *ก่อน MCP: อินทิเกรชันแบบจุดต่อจุดซับซ้อน หลัง MCP: โปรโตคอลเดียว ความเป็นไปได้ไร้ขีดจำกัด*
 
@@ -43,7 +43,7 @@ MCP แก้ปัญหาพื้นฐานในการพัฒนา 
 
 MCP มาตรฐานนี้ เซิร์ฟเวอร์ MCP เปิดเผยเครื่องมือพร้อมคำอธิบายและสคีมาเครื่องมือที่ชัดเจน ลูกค้า MCP ใดๆ ก็สามารถเชื่อมต่อ ค้นหาเครื่องมือที่ใช้ได้ และใช้งาน เครื่องมือสร้างครั้งเดียว ใช้ได้ทุกที่
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.th.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/th/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *สถาปัตยกรรมโปรโตคอลบริบทโมเดล — การค้นหาและใช้งานเครื่องมือแบบมาตรฐาน*
 
@@ -71,7 +71,7 @@ MCP ใช้รูปแบบลูกค้า-เซิร์ฟเวอร
 
 MCP รองรับกลไกการส่งข้อมูลหลายแบบ โมดูลนี้สาธิตการส่งข้อมูลแบบ Stdio สำหรับกระบวนการในเครื่อง:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.th.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/th/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *กลไกการส่งข้อมูล MCP: HTTP สำหรับเซิร์ฟเวอร์ระยะไกล, Stdio สำหรับกระบวนการในเครื่อง*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 ในเดโมนี้ `FileAgent` อ่านไฟล์ด้วยเครื่องมือระบบไฟล์ MCP และ `ReportAgent` สร้างรายงานที่มีสรุปผู้บริหาร (1 ประโยค) 3 จุดสำคัญ และคำแนะนำ ผู้ดูแลจัดการเวิร์กโฟลว์นี้โดยอัตโนมัติ:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.th.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/th/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

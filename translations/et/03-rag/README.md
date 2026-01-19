@@ -49,7 +49,7 @@ Mõtle RAG’ile kui mudelile viiteraamatu andmisele. Kui sa küsid küsimust, t
 
 See maandab mudeli vastused sinu tegelike andmete peale, selle asemel, et tugineda ainult treeningteabele või väljamõeldud vastustele.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.et.png" alt="RAG arhitektuur" width="800"/>
+<img src="../../../translated_images/et/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG arhitektuur" width="800"/>
 
 *RAG töövoog – kasutajapäringust semantilise otsingu ja kontekstipõhise vastuse genereerimiseni*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.et.png" alt="Vektormanustuste ruum" width="800"/>
+<img src="../../../translated_images/et/vector-embeddings.2ef7bdddac79a327.webp" alt="Vektormanustuste ruum" width="800"/>
 
 *Dokumendid esitatakse vektoritena manuste ruumis – sarnane sisu koguneb ühte gruppi*
 
@@ -160,7 +160,7 @@ Dashboardist saad:
 
 Lihtsalt klõpsa nupule "rag" kõrval, et käivitada see moodul, või käivita korraga kõik moodulid.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.et.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/et/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Variant 2: Shell skriptide kasutamine**
 
@@ -231,7 +231,7 @@ cd ..; .\stop-all.ps1  # Kõik moodulid
 
 Rakendus pakub veebiliidest dokumentide üleslaadimiseks ja küsimuste esitamiseks.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.et.png" alt="RAG rakenduse liides" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/et/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG rakenduse liides" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG rakenduse liides – laadi üles dokumendid ja esita küsimusi*
 
@@ -249,7 +249,7 @@ Esita nüüd dokumendi sisu kohta spetsiifilisi küsimusi. Proovi midagi faktip�
 
 Pane tähele, et iga vastus sisaldab allikaviiteid koos sarnasuse skooridega. Need skoorid (0 kuni 1) näitavad, kui palju see tükk sinu küsimusega haakus. Kõrgemad skoorid tähendavad paremaid vasteid. See võimaldab sul vastuseid allikmaterjaliga kontrollida.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.et.png" alt="RAG päringu tulemused" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/et/rag-query-results.6d69fcec5397f355.webp" alt="RAG päringu tulemused" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Päringu tulemused: vastus koos allikaviidete ja asjakohasuse skooridega*
 

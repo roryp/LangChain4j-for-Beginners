@@ -38,7 +38,7 @@ LangChain4j သည် AI အင်အားဖြင့် အက်ပလော
 
 LangChain ကို “ချိန်း” ဆိုသော အဓိပ္ပာယ်မှာ ကွန်ပွန်နင့်များကို ဆက်စပ်ခြင်းဖြစ်ပြီး၊ စကားပုံတစ်ခုကို မော်ဒယ်၊ ပARSER အနေနဲ့ ချိန်း၊ ဒါမှမဟုတ် AI ခေါ်ဆိုမှုများ စဉ်ဆက်မပြတ် ချိန်းဖက်ပြီး တစ်ခုရလျှင် နောက်ထပ်ကို ထောက်ပံ့ပေးနိုင်သည်။ ဒီ အမြန် စတင်ခြင်းမှာ အခြေခံအကြောင်းအရာများသာ အာရုံစူးစိုက်ပြီး ပိုမိုရှုပ်ထွေးသော ချိန်းများကို နောက်ပိုင်း၌ ဖြေလေဖြာမည်။
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.my.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/my/langchain-concept.ad1fe6cf063515e1.webp" alt="LangChain4j Chaining Concept" width="800"/>
 
 *LangChain4j တွင် ချိန်းယောက် - အဆောက်အအုံများ ဆက်သွယ်ပြီး အခိုင်အမာ AI စီးရီးများ ဖန်တီးခြင်း*
 
@@ -50,7 +50,7 @@ LangChain ကို “ချိန်း” ဆိုသော အဓိပ္�
 
 **MessageWindowChatMemory** - စကားပြောမှတ်တမ်း သိမ်းဆည်းသည်။ ဒီအပိုင်းမရှိပါက တစ်ကြိမ်ခ်င်းစီ ပြောဆိုမှုတည်ငြိမ်မှုမရှိဘူး။ ပါဝင်၍ AI သည် ယခင်စာသားများကို မှတ်မိပြီး context ကို သိမ်းဆည်းထားနိုင်သည်။
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.my.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/my/architecture.eedc993a1c576839.webp" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j တည်ဆောက်မှု - အဓိက အစိတ်အပိုင်းများ သင်၏ AI အက်ပလောကေးရှင်းများကို အားပေး ဆက်လက်လုပ်ဆောင်ခြင်း*
 

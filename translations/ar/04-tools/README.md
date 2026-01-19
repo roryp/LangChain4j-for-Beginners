@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. الأداة تنفذ وتعيد البيانات  
 6. الوكيل يدمج النتيجة ويوفر الجواب النهائي  
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.ar.png" alt="نمط ReAct" width="800"/>
+<img src="../../../translated_images/ar/react-pattern.86aafd3796f3fd13.webp" alt="نمط ReAct" width="800"/>
 
 *نمط ReAct – كيف يتناوب وكلاء الذكاء الاصطناعي بين التفكير والعمل لحل المشاكل*
 
@@ -138,7 +138,7 @@ public interface Assistant {
 
 **سلسلة الأدوات** - قد يستدعي الذكاء الاصطناعي عدة أدوات على التتابع. اسأل "ما حالة الطقس في سياتل وهل يجب أن أحضر مظلة؟" وشاهد كيف يربط `getCurrentWeather` مع التفكير حول معدات المطر.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.ar.png" alt="سلسلة الأدوات" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/ar/tool-chaining.3b25af01967d6f7b.webp" alt="سلسلة الأدوات" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *استدعاءات أدوات متتالية - ناتج أداة يمد للإتخاذ القرار التالي*
 
@@ -171,7 +171,7 @@ cat ../.env  # يجب عرض AZURE_OPENAI_ENDPOINT، API_KEY، DEPLOYMENT
 
 فقط انقر على زر التشغيل بجانب "tools" لبدء هذه الوحدة، أو ابدأ جميع الوحدات دفعة واحدة.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.ar.png" alt="لوحة تحكم Spring Boot" width="400"/>
+<img src="../../../translated_images/ar/dashboard.9b519b1a1bc1b30a.webp" alt="لوحة تحكم Spring Boot" width="400"/>
 
 **الخيار 2: استخدام السكريبتات الطرفية**
 
@@ -242,7 +242,7 @@ cd ..; .\stop-all.ps1  # جميع الموديلات
 
 يوفر التطبيق واجهة ويب حيث يمكنك التفاعل مع وكيل ذكاء اصطناعي يمكنه الوصول إلى أدوات الطقس وتحويل درجات الحرارة.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.ar.png" alt="واجهة أدوات وكيل الذكاء الاصطناعي" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/ar/tools-homepage.4b4cd8b2717f9621.webp" alt="واجهة أدوات وكيل الذكاء الاصطناعي" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *واجهة أدوات وكيل الذكاء الاصطناعي - أمثلة سريعة وواجهة دردشة للتفاعل مع الأدوات*
 
@@ -258,7 +258,7 @@ cd ..; .\stop-all.ps1  # جميع الموديلات
 
 واجهة الدردشة تحافظ على تاريخ المحادثة، مما يتيح لك إجراء تفاعلات متعددة الأدوار. يمكنك مشاهدة كل الاستفسارات السابقة والردود، مما يسهل تتبع المحادثة وفهم كيف يبني الوكيل السياق عبر التبادلات المتعددة.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.ar.png" alt="محادثة مع استدعاءات أدوات متعددة" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ar/tools-conversation-demo.89f2ce9676080f59.webp" alt="محادثة مع استدعاءات أدوات متعددة" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *محادثة متعددة الأدوار تظهر تحويلات بسيطة، استعلامات الطقس، وسلسلة الأدوات*
 

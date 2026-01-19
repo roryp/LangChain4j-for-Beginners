@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 ৫. টুল কার্যকর হয় এবং তথ্য ফেরত দেয়  
 ৬. এজেন্ট ফলাফল অন্তর্ভুক্ত করে চূড়ান্ত উত্তর প্রদান করে
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.bn.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/bn/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *ReAct প্যাটার্ন — কীভাবে AI এজেন্ট যুক্তি বিবেচনা ও কর্মজীবন অতিক্রম করে সমস্যার সমাধান করে*
 
@@ -138,7 +138,7 @@ Spring Boot স্বয়ংক্রিয়ভাবে `@AiService` ইন
 
 **টুল চেইনিং** - AI একাধিক টুল ক্রমানুসারে কল করতে পারে। উদাহরণস্বরূপ, জিজ্ঞেস করুন "সিয়াটেলে আবহাওয়া কেমন এবং ছাতা এনেছে কি না?" এবং দেখুন কীভাবে এটি `getCurrentWeather` কল করে রেইন গিয়ারের ব্যাপারে যুক্তি তৈরি করে।
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.bn.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/bn/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *ক্রমাগত টুল কল - এক টুলের আউটপুট পরবর্তী সিদ্ধান্তে ব্যবহার হয়*
 
@@ -171,7 +171,7 @@ cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT দেখানো উ
 
 শুধু "tools" এর পাশে প্লে বাটনে ক্লিক করে এই মডিউলটি শুরু করুন, অথবা সব মডিউল একসাথে চালু করুন।
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.bn.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/bn/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **বিকল্প ২: শেল স্ক্রিপ্ট ব্যবহার**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # সমস্ত মডিউল
 
 এই অ্যাপ্লিকেশনটি একটি ওয়েব ইন্টারফেস প্রদান করে যেখানে আপনি এমন একটি AI এজেন্টের সাথে ইন্টারঅ্যাক্ট করতে পারেন যার কাছে আবহাওয়া এবং তাপমাত্রা রূপান্তর টুলস আছে।
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.bn.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/bn/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI এজেন্ট টুলস ইন্টারফেস - দ্রুত উদাহরণ এবং টুলসের সাথে কথা বলার জন্য চ্যাট ইন্টারফেস*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # সমস্ত মডিউল
 
 চ্যাট ইন্টারফেস কথোপকথনের ইতিহাস সংরক্ষণ করে, যা আপনাকে মাল্টি-টার্ন ইন্টারঅ্যাকশন করতে দেয়। আপনি আগের সকল প্রশ্ন ও উত্তর দেখে কথোপকথন ট্র্যাক করতে পারেন এবং কিভাবে এজেন্ট একাধিক বিনিময়ে প্রসঙ্গ তৈরি করে তা বুঝতে পারেন।
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.bn.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/bn/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *মাল্টি-টার্ন কথোপকথনে সহজ রূপান্তর, আবহাওয়া অনুসন্ধান, এবং টুল চেইনিং দেখানো হয়েছে*
 

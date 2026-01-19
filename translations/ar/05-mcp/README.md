@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 يوفر بروتوكول سياق النموذج (MCP) هذا بالضبط - طريقة معيارية لتطبيقات الذكاء الاصطناعي لاكتشاف واستخدام الأدوات الخارجية. بدلاً من كتابة تكاملات مخصصة لكل مصدر بيانات أو خدمة، تتصل بخوادم MCP التي تعرض قدراتها بصيغة موحدة. يمكن لوكيل الذكاء الاصطناعي الخاص بك بعد ذلك اكتشاف هذه الأدوات واستخدامها تلقائيًا.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.ar.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/ar/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *قبل MCP: تكاملات معقدة نقطة لنقطة. بعد MCP: بروتوكول واحد، إمكانيات لا نهائية.*
 
@@ -43,7 +43,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 يوحد MCP هذا الأمر. يعرض خادم MCP الأدوات مع أوصاف واضحة ومخططات. يمكن لأي عميل MCP الاتصال، واكتشاف الأدوات المتاحة، واستخدامها. ابني مرة واحدة، واستخدم في كل مكان.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.ar.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/ar/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *بنية بروتوكول سياق النموذج - اكتشاف وتنفيذ الأدوات موحد*
 
@@ -71,7 +71,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 يدعم MCP آليات نقل مختلفة. توضح هذه الوحدة نقل Stdio للعمليات المحلية:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.ar.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/ar/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *آليات نقل MCP: HTTP للخوادم عن بعد، Stdio للعمليات المحلية*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 في العرض التوضيحي، يقرأ `FileAgent` ملفًا باستخدام أدوات نظام الملفات MCP، وينشئ `ReportAgent` تقريرًا منظمًا مع ملخص تنفيذي (جملة واحدة)، 3 نقاط رئيسية، وتوصيات. ينظم المشرف هذا التدفق تلقائيًا:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.ar.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/ar/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

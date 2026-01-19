@@ -52,7 +52,7 @@ GPT-5를 사용하는 이유는 추론 제어 기능이 도입되어 모델에�
 
 이 모듈은 이전 모듈과 동일한 LangChain4j 기반을 사용하면서 프롬프트 구조와 추론 제어에 중점을 둔 고급 프롬프트 패턴을 보여줍니다.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.ko.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/ko/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *LangChain4j가 프롬프트를 Azure OpenAI GPT-5에 연결하는 방식*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.ko.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/ko/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage는 지속적인 컨텍스트를 제공하고 UserMessages는 개별 요청을 포함*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 모든 문제에 같은 접근법이 필요한 것은 아닙니다. 어떤 질문은 빠른 답변이 필요하고, 어떤 것은 깊은 사고가 필요합니다. 어떤 것은 추론 과정을 보여줘야 하고, 어떤 것은 결과만 필요합니다. 이 모듈은 8가지 프롬프트 패턴을 다루며, 각각 다른 시나리오에 최적화되어 있습니다. 모든 패턴을 실험하며 언제 어떤 접근법이 가장 적합한지 배울 것입니다.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.ko.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/ko/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *8가지 프롬프트 엔지니어링 패턴과 사용 사례 개요*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.ko.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/ko/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *낮은 열의도(빠르고 직접적) vs 높은 열의도(철저하고 탐색적) 추론 접근법 비교*
 
@@ -163,7 +163,7 @@ Chain-of-Thought 프롬프트는 모델에게 추론 과정을 명시적으로 �
 > - "프로덕션 애플리케이션에서 도구 프리앰블 구조화의 모범 사례는 무엇인가요?"
 > - "UI에서 중간 진행 상황 업데이트를 어떻게 캡처하고 표시할 수 있나요?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.ko.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/ko/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *다단계 작업을 위한 계획 → 실행 → 요약 워크플로우*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.ko.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/ko/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *반복 개선 루프 - 생성, 평가, 문제 식별, 개선, 반복*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "구조화된 출력을 프로그래밍적으로 파싱하고 활용하는 최선의 방법은 무엇인가요?"
 > - "다른 리뷰 세션 간에 일관된 심각도 수준을 어떻게 보장하나요?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.ko.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/ko/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *심각도 수준이 포함된 4가지 카테고리 프레임워크로 일관된 코드 리뷰*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.ko.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/ko/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *여러 턴에 걸쳐 대화 컨텍스트가 누적되어 토큰 한도에 도달할 때까지 유지되는 방식*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.ko.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/ko/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *문제를 명확한 논리 단계로 분해*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.ko.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/ko/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *특정 형식, 길이, 구조 요구사항 강제 적용*
 
@@ -300,7 +300,7 @@ Spring Boot 대시보드에서 할 수 있는 것:
 
 "prompt-engineering" 옆의 재생 버튼을 클릭해 이 모듈을 시작하거나 모든 모듈을 한 번에 시작할 수 있습니다.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.ko.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ko/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **옵션 2: 셸 스크립트 사용**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 ## 애플리케이션 스크린샷
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.ko.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/ko/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *8가지 프롬프트 엔지니어링 패턴과 각 특성 및 사용 사례를 보여주는 메인 대시보드*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 "200의 15%는 얼마인가요?" 같은 간단한 질문을 낮은 열의도로 물어보면 즉각적이고 직접적인 답변을 받습니다. 이제 "고트래픽 API를 위한 캐싱 전략을 설계하세요" 같은 복잡한 질문을 높은 열의도로 물어보세요. 모델이 천천히 자세한 추론을 제공하는 것을 볼 수 있습니다. 같은 모델, 같은 질문 구조지만 프롬프트가 얼마나 깊게 생각할지 지시합니다.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.ko.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ko/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *최소한의 추론으로 빠른 계산*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.ko.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ko/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *포괄적인 캐싱 전략 (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 다단계 워크플로우는 사전 계획과 진행 내레이션에 유리합니다. 모델은 수행할 작업을 개요로 제시하고, 각 단계를 설명한 후 결과를 요약합니다.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.ko.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/ko/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *단계별 내레이션과 함께 REST 엔드포인트 생성 (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 "이메일 검증 서비스 생성"을 시도해 보세요. 단순히 코드를 생성하고 멈추는 대신, 모델은 코드를 생성하고 품질 기준에 따라 평가하며 약점을 식별하고 개선합니다. 코드는 생산 기준에 도달할 때까지 반복되는 과정을 볼 수 있습니다.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.ko.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/ko/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *완전한 이메일 검증 서비스 (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 코드 리뷰에는 일관된 평가 프레임워크가 필요합니다. 모델은 고정된 범주(정확성, 관행, 성능, 보안)와 심각도 수준을 사용하여 코드를 분석합니다.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.ko.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/ko/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *프레임워크 기반 코드 리뷰*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 "Spring Boot가 무엇인가요?"라고 묻고 바로 "예제를 보여주세요"라고 이어서 질문하세요. 모델은 첫 번째 질문을 기억하고 구체적인 Spring Boot 예제를 제공합니다. 메모리가 없으면 두 번째 질문은 너무 모호할 것입니다.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.ko.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/ko/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *질문 간 컨텍스트 보존*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 수학 문제를 선택하고 단계별 추론과 낮은 열의 두 가지 방식으로 시도해 보세요. 낮은 열의는 답만 빠르게 제공하지만 불투명합니다. 단계별은 모든 계산과 결정을 보여줍니다.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.ko.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/ko/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *명확한 단계가 포함된 수학 문제*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 특정 형식이나 단어 수가 필요할 때 이 패턴은 엄격한 준수를 강제합니다. 정확히 100단어의 요약을 글머리 기호 형식으로 생성해 보세요.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.ko.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/ko/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *형식 제어가 포함된 머신러닝 요약*
 
@@ -445,7 +445,7 @@ GPT-5는 프롬프트를 통해 계산 노력을 제어할 수 있게 합니다.
 
 프롬프트에 XML 태그가 있는 것을 눈치채셨나요? 장식용이 아닙니다. 모델은 자유 형식 텍스트보다 구조화된 지침을 더 신뢰성 있게 따릅니다. 다단계 프로세스나 복잡한 논리가 필요할 때, 구조는 모델이 현재 위치와 다음 단계를 추적하는 데 도움을 줍니다.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.ko.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/ko/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *명확한 섹션과 XML 스타일 구성이 포함된 잘 구조화된 프롬프트의 해부*
 

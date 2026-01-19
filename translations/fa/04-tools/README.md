@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. ابزار اجرا شده و داده برمی‌گرداند  
 6. عامل نتیجه را در پاسخ نهایی جای می‌دهد
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.fa.png" alt="الگوی ReAct" width="800"/>
+<img src="../../../translated_images/fa/react-pattern.86aafd3796f3fd13.webp" alt="الگوی ReAct" width="800"/>
 
 *الگوی ReAct - چگونه عامل‌های هوش مصنوعی بین استدلال و عمل برای حل مسائل جابجا می‌شوند*
 
@@ -138,7 +138,7 @@ public interface Assistant {
 
 **زنجیره‌سازی ابزار** - ممکن است هوش مصنوعی چند ابزار را پشت سر هم فراخوانی کند. بپرسید "هوای سیاتل چگونه است و آیا باید چتری همراه داشته باشم؟" و ببینید چگونه `getCurrentWeather` را با استدلال درباره تجهیزات بارانی زنجیره می‌کند.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.fa.png" alt="زنجیره‌سازی ابزار" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/fa/tool-chaining.3b25af01967d6f7b.webp" alt="زنجیره‌سازی ابزار" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *فراخوانی‌های متوالی ابزار - خروجی یک ابزار وارد تصمیم بعدی می‌شود*
 
@@ -171,7 +171,7 @@ cat ../.env  # باید AZURE_OPENAI_ENDPOINT، API_KEY، DEPLOYMENT را نشا
 
 فقط روی دکمه پخش کنار "tools" کلیک کنید تا این ماژول شروع شود، یا همه ماژول‌ها را هم‌زمان اجرا کنید.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.fa.png" alt="داشبورد Spring Boot" width="400"/>
+<img src="../../../translated_images/fa/dashboard.9b519b1a1bc1b30a.webp" alt="داشبورد Spring Boot" width="400"/>
 
 **گزینه ۲: استفاده از اسکریپت‌های پوسته**
 
@@ -242,7 +242,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 برنامه یک رابط وب فراهم می‌کند که می‌توانید با یک عامل هوش مصنوعی که به ابزارهای آب و هوا و تبدیل دما دسترسی دارد، تعامل کنید.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.fa.png" alt="رابط ابزارهای عامل هوش مصنوعی" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/fa/tools-homepage.4b4cd8b2717f9621.webp" alt="رابط ابزارهای عامل هوش مصنوعی" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *رابط ابزارهای عامل هوش مصنوعی - مثال‌های سریع و رابط گفتگو برای تعامل با ابزارها*
 
@@ -258,7 +258,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 رابط گفتگو تاریخچه مکالمه را حفظ می‌کند تا تعامل چندمرحله‌ای داشته باشید. می‌توانید همه پرسش‌ها و پاسخ‌های قبلی را ببینید و به راحتی جریان گفتگو را دنبال کنید و درک کنید چگونه عامل زمینه را از تبادل‌های مختلف می‌سازد.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.fa.png" alt="گفتگو با چند فراخوانی ابزار" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/fa/tools-conversation-demo.89f2ce9676080f59.webp" alt="گفتگو با چند فراخوانی ابزار" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *گفتگوی چندمرحله‌ای نمایشگر تبدیل‌های ساده، جستجوی آب و هوا و زنجیره‌سازی ابزار*
 

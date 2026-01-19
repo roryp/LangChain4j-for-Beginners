@@ -61,7 +61,7 @@ An AI agent with tools follows a reasoning and acting pattern (ReAct):
 5. Tool executes and returns data
 6. Agent incorporates the result and provides the final answer
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.en.png" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/en/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *The ReAct pattern - how AI agents alternate between reasoning and acting to solve problems*
 
@@ -138,7 +138,7 @@ Alternative approaches (manual `AiServices.builder()`) require more code and mis
 
 **Tool Chaining** - The AI might call multiple tools in sequence. Ask "What's the weather in Seattle and should I bring an umbrella?" and watch it chain `getCurrentWeather` with reasoning about rain gear.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.en.png" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/en/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sequential tool calls - one tool's output feeds into the next decision*
 
@@ -171,7 +171,7 @@ From the Spring Boot Dashboard, you can:
 
 Simply click the play button next to "tools" to start this module, or start all modules at once.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.en.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/en/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Using shell scripts**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # All modules
 
 The application provides a web interface where you can interact with an AI agent that has access to weather and temperature conversion tools.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.en.png" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/en/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *The AI Agent Tools interface - quick examples and chat interface for interacting with tools*
 
@@ -257,7 +257,7 @@ Now try something more complex: "What's the weather in Seattle and convert it to
 
 The chat interface maintains conversation history, allowing you to have multi-turn interactions. You can see all previous queries and responses, making it easy to track the conversation and understand how the agent builds context over multiple exchanges.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.en.png" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/en/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Multi-turn conversation showing simple conversions, weather lookups, and tool chaining*
 

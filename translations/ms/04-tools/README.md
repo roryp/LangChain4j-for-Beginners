@@ -61,7 +61,7 @@ Ejen AI dengan alat mengikuti corak penalaran dan bertindak (ReAct):
 5. Alat melaksanakan dan mengembalikan data
 6. Ejen memasukkan hasil itu dan memberi jawapan akhir
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.ms.png" alt="Corak ReAct" width="800"/>
+<img src="../../../translated_images/ms/react-pattern.86aafd3796f3fd13.webp" alt="Corak ReAct" width="800"/>
 
 *Corak ReAct - bagaimana ejen AI bergilir-gilir antara penalaran dan tindakan untuk menyelesaikan masalah*
 
@@ -138,7 +138,7 @@ Pendekatan alternatif (manual `AiServices.builder()`) memerlukan lebih banyak ko
 
 **Rantaian Alat** - AI mungkin memanggil beberapa alat secara berturutan. Tanya "Apa cuaca di Seattle dan patutkah saya bawa payung?" dan lihat ia merantai `getCurrentWeather` dengan penalaran tentang peralatan hujan.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.ms.png" alt="Rantaian Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/ms/tool-chaining.3b25af01967d6f7b.webp" alt="Rantaian Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Panggilan alat berturutan - output satu alat menjadi input keputusan seterusnya*
 
@@ -171,7 +171,7 @@ Dari Spring Boot Dashboard, anda boleh:
 
 Klik butang main di sebelah "tools" untuk memulakan modul ini, atau mulakan semua modul sekaligus.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.ms.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ms/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Pilihan 2: Menggunakan skrip shell**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 Aplikasi menyediakan antara muka web di mana anda boleh berinteraksi dengan ejen AI yang mempunyai akses kepada alat cuaca dan penukaran suhu.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.ms.png" alt="Antara Muka Alat Ejen AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/ms/tools-homepage.4b4cd8b2717f9621.webp" alt="Antara Muka Alat Ejen AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Antara muka Alat Ejen AI - contoh cepat dan antara muka sembang untuk berinteraksi dengan alat*
 
@@ -257,7 +257,7 @@ Sekarang cuba sesuatu yang lebih kompleks: "Apa cuaca di Seattle dan tukarkan ke
 
 Antara muka sembang menyimpan sejarah perbualan, membolehkan anda berinteraksi berbilang giliran. Anda boleh melihat semua pertanyaan dan respons sebelumnya, memudahkan menjejaki perbualan dan memahami bagaimana ejen membina konteks sepanjang pertukaran.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.ms.png" alt="Perbualan dengan Pelbagai Panggilan Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ms/tools-conversation-demo.89f2ce9676080f59.webp" alt="Perbualan dengan Pelbagai Panggilan Alat" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Perbualan berbilang giliran menunjukkan penukaran mudah, carian cuaca, dan rantaian alat*
 

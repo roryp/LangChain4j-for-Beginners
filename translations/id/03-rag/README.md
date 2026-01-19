@@ -49,7 +49,7 @@ Anggaplah RAG sebagai memberikan model sebuah perpustakaan referensi. Ketika And
 
 Ini membuat jawaban model berlandaskan data aktual Anda daripada hanya mengandalkan pengetahuan latihannya atau mengarang jawaban.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.id.png" alt="Arsitektur RAG" width="800"/>
+<img src="../../../translated_images/id/rag-architecture.ccb53b71a6ce407f.webp" alt="Arsitektur RAG" width="800"/>
 
 *Alur kerja RAG - dari pertanyaan pengguna ke pencarian semantik hingga pembuatan jawaban kontekstual*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.id.png" alt="Ruang Embedding Vektor" width="800"/>
+<img src="../../../translated_images/id/vector-embeddings.2ef7bdddac79a327.webp" alt="Ruang Embedding Vektor" width="800"/>
 
 *Dokumen direpresentasikan sebagai vektor dalam ruang embedding - konten yang mirip dikelompokkan bersama*
 
@@ -160,7 +160,7 @@ Dari Spring Boot Dashboard, Anda dapat:
 
 Cukup klik tombol play di sebelah "rag" untuk memulai modul ini, atau mulai semua modul sekaligus.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.id.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/id/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opsi 2: Menggunakan skrip shell**  
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Semua modul
 
 Aplikasi menyediakan antarmuka web untuk mengunggah dokumen dan mengajukan pertanyaan.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.id.png" alt="Antarmuka Aplikasi RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/id/rag-homepage.d90eb5ce1b3caa94.webp" alt="Antarmuka Aplikasi RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Antarmuka aplikasi RAG - unggah dokumen dan ajukan pertanyaan*
 
@@ -248,7 +248,7 @@ Sekarang ajukan pertanyaan spesifik tentang isi dokumen. Cobalah hal faktual yan
 
 Perhatikan setiap jawaban menyertakan referensi sumber dengan skor kemiripan. Skor ini (0 sampai 1) menunjukkan seberapa relevan setiap potongan terhadap pertanyaan Anda. Skor lebih tinggi berarti kecocokan lebih baik. Ini memungkinkan Anda memverifikasi jawaban terhadap bahan sumber.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.id.png" alt="Hasil Query RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/id/rag-query-results.6d69fcec5397f355.webp" alt="Hasil Query RAG" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Hasil query menunjukkan jawaban dengan referensi sumber dan skor relevansi*
 

@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 இது எளிய கேள்வி-பதில் செயல்பாடுகளுக்கு சரி, ஆனால் உண்மையான பயன்பாடுகளுக்கு பயனற்றது. வாடிக்கையாளர் சேவை பாட்டுகள் நீங்கள் சொன்னதை நினைவில் வைக்க வேண்டும். தனிப்பட்ட உதவியாளர்கள் சூழலை தேவைப்படுத்துகின்றனர். எந்த பல முறை உரையாடலும் நினைவகத்தை தேவைப்படுத்தும்.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.ta.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/ta/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *நிலையற்ற (தனித்துவ அழைப்புகள்) மற்றும் நிலையான (சூழல் அறிவு) உரையாடல்களின் வேறுபாடு*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 உரையாடல்களில் மூழ்குவதற்கு முன், டோக்கன்களைப் புரிந்துகொள்வது முக்கியம் - மொழி மாதிரிகள் செயலாக்கும் அடிப்படை உரை அலகுகள்:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.ta.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/ta/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *உரை எப்படி டோக்கன்களாக பிரிக்கப்படுகிறது என்பதன் உதாரணம் - "I love AI!" என்பது 4 தனித்தனியான செயலாக்க அலகுகளாக மாறுகிறது*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j நினைவக செயலாக்கங்களை தானாக கையாளும். நீங்கள் எத்தனை செய்திகளை வைத்திருக்க வேண்டும் என்பதை தேர்வு செய்கிறீர்கள், கட்டமைப்பு சூழல் சாளரத்தை நிர்வகிக்கிறது.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.ta.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/ta/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *MessageWindowChatMemory சமீபத்திய செய்திகளின் ஒரு ஸ்லைடிங் சாளரத்தை பராமரிக்கிறது, பழையவற்றை தானாக நீக்குகிறது*
 
@@ -212,7 +212,7 @@ Spring Boot டாஷ்போர்டில் நீங்கள்:
 
 இந்த மொடியூலை துவங்க "introduction" பக்கத்தில் உள்ள பிளே பொத்தானை கிளிக் செய்யவும் அல்லது அனைத்து மொடியூல்களையும் ஒரே நேரத்தில் துவங்கவும்.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.ta.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ta/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **விருப்பம் 2: ஷெல் ஸ்கிரிப்ட்களை பயன்படுத்துதல்**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # அனைத்து தொகுதிகளும்
 
 பயன்பாடு இரண்டு உரையாடல் செயலாக்கங்களுடன் இணைய முகப்பை வழங்குகிறது.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.ta.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/ta/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *Dashboard இல் எளிய உரையாடல் (நிலையற்ற) மற்றும் உரையாடல் உரையாடல் (நிலையான) விருப்பங்கள் இரண்டும் காணப்படுகிறது*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # அனைத்து தொகுதிகளும்
 
 முதலில் இதை முயற்சிக்கவும். "என் பெயர் ஜான்" என்று கேட்டு உடனடியாக "என் பெயர் என்ன?" என்று கேளுங்கள். மாடல் நினைவில் வைக்காது ஏனெனில் ஒவ்வொரு செய்தியும் தனித்துவமானது. இது அடிப்படை மொழி மாதிரி ஒருங்கிணைப்பில் உள்ள முக்கிய பிரச்சினையை காட்டுகிறது - உரையாடல் சூழல் இல்லை.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.ta.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/ta/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *AI உங்கள் பெயரை முந்தைய செய்தியிலிருந்து நினைவில் வைக்காது*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # அனைத்து தொகுதிகளும்
 
 இப்போது அதே வரிசையை இங்கே முயற்சிக்கவும். "என் பெயர் ஜான்" என்று கேட்டு பின்னர் "என் பெயர் என்ன?" என்று கேளுங்கள். இப்போது அது நினைவில் வைக்கிறது. வேறுபாடு MessageWindowChatMemory - இது உரையாடல் வரலாற்றை பராமரித்து ஒவ்வொரு கோரிக்கையுடனும் சேர்க்கிறது. இது தயாரிப்பு உரையாடல் AI எப்படி செயல்படுகிறது என்பதைக் காட்டுகிறது.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.ta.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/ta/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *AI உரையாடலில் முன்பு சொன்ன உங்கள் பெயரை நினைவில் வைக்கிறது*
 

@@ -52,7 +52,7 @@ Pensez-y comme donner des instructions à un collègue. "Corrige le bug" est vag
 
 Ce module démontre des modèles avancés d'invites en utilisant la même base LangChain4j des modules précédents, avec un focus sur la structure des invites et le contrôle du raisonnement.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.fr.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/fr/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Comment LangChain4j connecte vos invites à Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.fr.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/fr/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage fournit un contexte persistant tandis que UserMessages contiennent les requêtes individuelles*
 
@@ -104,11 +104,11 @@ Le point clé : LangChain4j fournit l'infrastructure (connexion au modèle via [
 
 Tous les problèmes ne nécessitent pas la même approche. Certaines questions demandent des réponses rapides, d'autres une réflexion approfondie. Certaines nécessitent un raisonnement visible, d'autres juste des résultats. Ce module couvre huit modèles d'invites - chacun optimisé pour différents scénarios. Vous expérimenterez tous pour apprendre quand chaque approche fonctionne le mieux.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.fr.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/fr/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *Vue d'ensemble des huit modèles d'ingénierie des invites et leurs cas d'utilisation*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.fr.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/fr/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Faible impatience (rapide, direct) vs forte impatience (approfondi, exploratoire) dans les approches de raisonnement*
 
@@ -163,7 +163,7 @@ Le prompt Chain-of-Thought demande explicitement au modèle de montrer son proce
 > - "Quelles sont les meilleures pratiques pour structurer les préambules d'outils dans des applications en production ?"
 > - "Comment capturer et afficher les mises à jour de progression intermédiaires dans une interface utilisateur ?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.fr.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/fr/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Planifier → Exécuter → Résumer le flux de travail pour les tâches multi-étapes*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.fr.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/fr/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Boucle d'amélioration itérative - générer, évaluer, identifier les problèmes, améliorer, répéter*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "Quelle est la meilleure façon d'analyser et d'agir sur une sortie structurée de manière programmatique ?"
 > - "Comment assurer des niveaux de gravité cohérents à travers différentes sessions de revue ?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.fr.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/fr/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Cadre à quatre catégories pour des revues de code cohérentes avec niveaux de gravité*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.fr.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/fr/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Comment le contexte de la conversation s'accumule sur plusieurs tours jusqu'à atteindre la limite de tokens*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.fr.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/fr/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Décomposer les problèmes en étapes logiques explicites*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.fr.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/fr/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Imposition de règles spécifiques de format, longueur et structure*
 
@@ -300,7 +300,7 @@ Depuis le Spring Boot Dashboard, vous pouvez :
 
 Cliquez simplement sur le bouton lecture à côté de "prompt-engineering" pour démarrer ce module, ou démarrez tous les modules en même temps.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.fr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/fr/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2 : Utiliser les scripts shell**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Tous les modules
 
 ## Captures d'écran de l'application
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.fr.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/fr/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *Le tableau de bord principal montrant les 8 modèles d'ingénierie des invites avec leurs caractéristiques et cas d'utilisation*
 
@@ -380,10 +380,10 @@ L'interface web vous permet d'expérimenter différentes stratégies d'invite. C
 
 Posez une question simple comme "Quel est 15 % de 200 ?" en utilisant Faible impatience. Vous obtiendrez une réponse instantanée et directe. Maintenant posez quelque chose de complexe comme "Concevez une stratégie de mise en cache pour une API à fort trafic" en utilisant Forte impatience. Regardez comment le modèle ralentit et fournit un raisonnement détaillé. Même modèle, même structure de question - mais l'invite lui dit combien réfléchir.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.fr.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/fr/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Calcul rapide avec un raisonnement minimal*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.fr.png" alt="Démonstration de haute motivation" width="800"/>
+<img src="../../../translated_images/fr/high-eagerness-demo.4ac93e7786c5a376.webp" alt="Démonstration de haute motivation" width="800"/>
 
 *Stratégie de mise en cache complète (2,8 Mo)*
 
@@ -391,7 +391,7 @@ Posez une question simple comme "Quel est 15 % de 200 ?" en utilisant Faible imp
 
 Les workflows à étapes multiples bénéficient d'une planification préalable et d'une narration des progrès. Le modèle décrit ce qu'il va faire, narre chaque étape, puis résume les résultats.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.fr.png" alt="Démonstration d'exécution de tâche" width="800"/>
+<img src="../../../translated_images/fr/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Démonstration d'exécution de tâche" width="800"/>
 
 *Création d'un point de terminaison REST avec narration étape par étape (3,9 Mo)*
 
@@ -399,7 +399,7 @@ Les workflows à étapes multiples bénéficient d'une planification préalable 
 
 Essayez "Créer un service de validation d'email". Au lieu de simplement générer du code et s'arrêter, le modèle génère, évalue selon des critères de qualité, identifie les faiblesses, et améliore. Vous le verrez itérer jusqu'à ce que le code atteigne les standards de production.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.fr.png" alt="Démonstration de code auto-réfléchi" width="800"/>
+<img src="../../../translated_images/fr/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Démonstration de code auto-réfléchi" width="800"/>
 
 *Service complet de validation d'email (5,2 Mo)*
 
@@ -407,7 +407,7 @@ Essayez "Créer un service de validation d'email". Au lieu de simplement génér
 
 Les revues de code nécessitent des cadres d'évaluation cohérents. Le modèle analyse le code en utilisant des catégories fixes (exactitude, pratiques, performance, sécurité) avec des niveaux de gravité.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.fr.png" alt="Démonstration d'analyse structurée" width="800"/>
+<img src="../../../translated_images/fr/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Démonstration d'analyse structurée" width="800"/>
 
 *Revue de code basée sur un cadre*
 
@@ -415,7 +415,7 @@ Les revues de code nécessitent des cadres d'évaluation cohérents. Le modèle 
 
 Demandez "Qu'est-ce que Spring Boot ?" puis immédiatement "Montre-moi un exemple". Le modèle se souvient de votre première question et vous donne un exemple spécifique de Spring Boot. Sans mémoire, cette deuxième question serait trop vague.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.fr.png" alt="Démonstration de chat multi-tours" width="800"/>
+<img src="../../../translated_images/fr/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Démonstration de chat multi-tours" width="800"/>
 
 *Préservation du contexte entre les questions*
 
@@ -423,7 +423,7 @@ Demandez "Qu'est-ce que Spring Boot ?" puis immédiatement "Montre-moi un exempl
 
 Choisissez un problème mathématique et essayez-le avec Raisonnement étape par étape et Faible motivation. La faible motivation vous donne juste la réponse - rapide mais opaque. Le raisonnement étape par étape vous montre chaque calcul et décision.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.fr.png" alt="Démonstration de raisonnement étape par étape" width="800"/>
+<img src="../../../translated_images/fr/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Démonstration de raisonnement étape par étape" width="800"/>
 
 *Problème mathématique avec étapes explicites*
 
@@ -431,7 +431,7 @@ Choisissez un problème mathématique et essayez-le avec Raisonnement étape par
 
 Quand vous avez besoin de formats spécifiques ou de nombre de mots, ce modèle impose une stricte conformité. Essayez de générer un résumé avec exactement 100 mots en format liste à puces.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.fr.png" alt="Démonstration de sortie contrainte" width="800"/>
+<img src="../../../translated_images/fr/constrained-output-demo.567cc45b75da1633.webp" alt="Démonstration de sortie contrainte" width="800"/>
 
 *Résumé d'apprentissage automatique avec contrôle du format*
 
@@ -445,7 +445,7 @@ GPT-5 vous permet de contrôler l'effort computationnel via vos invites. Un faib
 
 Vous remarquez les balises XML dans les invites ? Elles ne sont pas décoratives. Les modèles suivent des instructions structurées plus fiablement que du texte libre. Quand vous avez besoin de processus à étapes multiples ou de logique complexe, la structure aide le modèle à suivre où il en est et ce qui vient ensuite.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.fr.png" alt="Structure de l'invite" width="800"/>
+<img src="../../../translated_images/fr/prompt-structure.a77763d63f4e2f89.webp" alt="Structure de l'invite" width="800"/>
 
 *Anatomie d'une invite bien structurée avec sections claires et organisation de style XML*
 

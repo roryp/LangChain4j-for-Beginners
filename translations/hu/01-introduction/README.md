@@ -53,7 +53,7 @@ A nyelvi modellek állapot nélküliak. Minden API hívás független. Ha elkül
 
 Ez rendben van egyszerű kérdés-válasz esetén, de használhatatlan valódi alkalmazásokhoz. Az ügyfélszolgálati botoknak emlékezniük kell arra, amit mondtál. A személyi asszisztenseknek kontextusra van szükségük. Bármilyen többkörös beszélgetés memóriát igényel.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.hu.png" alt="Állapot nélküli vs állapotfüggő beszélgetések" width="800"/>
+<img src="../../../translated_images/hu/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Állapot nélküli vs állapotfüggő beszélgetések" width="800"/>
 
 *Az állapot nélküli (független hívások) és az állapotfüggő (kontextusérzékeny) beszélgetések közötti különbség*
 
@@ -61,7 +61,7 @@ Ez rendben van egyszerű kérdés-válasz esetén, de használhatatlan valódi a
 
 Mielőtt belevágnánk a beszélgetésekbe, fontos megérteni a tokeneket – a szöveg alapvető egységeit, amelyeket a nyelvi modellek feldolgoznak:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.hu.png" alt="Token magyarázat" width="800"/>
+<img src="../../../translated_images/hu/token-explanation.c39760d8ec650181.webp" alt="Token magyarázat" width="800"/>
 
 *Példa arra, hogyan törik fel a szöveg tokenekre – az „I love AI!” 4 külön feldolgozási egységgé válik*
 
@@ -73,7 +73,7 @@ A csevegési memória megoldja az állapot nélküli problémát azáltal, hogy 
 
 A LangChain4j memóriamegoldásokat kínál, amelyek ezt automatikusan kezelik. Te választod ki, hogy hány üzenetet tartasz meg, a keretrendszer pedig kezeli a kontextusablakot.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.hu.png" alt="Memória ablak koncepció" width="800"/>
+<img src="../../../translated_images/hu/memory-window.bbe67f597eadabb3.webp" alt="Memória ablak koncepció" width="800"/>
 
 *MessageWindowChatMemory egy csúszó ablakot tart fenn a legutóbbi üzenetekből, automatikusan eldobva a régieket*
 
@@ -212,7 +212,7 @@ A Spring Boot Dashboard segítségével:
 
 Egyszerűen kattints a lejátszás gombra az „introduction” modul mellett, hogy elindítsd ezt a modult, vagy indítsd el az összes modult egyszerre.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.hu.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/hu/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **2. lehetőség: Shell szkriptek használata**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Minden modul
 
 Az alkalmazás egy webes felületet biztosít két párhuzamos csevegő implementációval.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.hu.png" alt="Alkalmazás kezdőképernyő" width="800"/>
+<img src="../../../translated_images/hu/home-screen.121a03206ab910c0.webp" alt="Alkalmazás kezdőképernyő" width="800"/>
 
 *Irányítópult, amely mind az Egyszerű csevegés (állapot nélküli), mind a Beszélgető csevegés (állapotfüggő) opciókat mutatja*
 
@@ -290,7 +290,7 @@ Az alkalmazás egy webes felületet biztosít két párhuzamos csevegő implemen
 
 Ezzel kezd el. Kérdezd meg, hogy „A nevem John”, majd azonnal, hogy „Mi a nevem?” A modell nem fog emlékezni, mert minden üzenet független. Ez bemutatja az alapvető problémát az egyszerű nyelvi modell integrációval – nincs beszélgetési kontextus.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.hu.png" alt="Állapot nélküli csevegés demó" width="800"/>
+<img src="../../../translated_images/hu/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Állapot nélküli csevegés demó" width="800"/>
 
 *Az AI nem emlékszik a nevedre az előző üzenetből*
 
@@ -298,7 +298,7 @@ Ezzel kezd el. Kérdezd meg, hogy „A nevem John”, majd azonnal, hogy „Mi a
 
 Most próbáld ki ugyanazt a sorrendet itt. Kérdezd meg, hogy „A nevem John”, majd „Mi a nevem?” Ezúttal emlékszik. A különbség a MessageWindowChatMemory – ez fenntartja a beszélgetési előzményeket, és minden kéréshez hozzáadja azt. Így működik az éles beszélgető AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.hu.png" alt="Állapotfüggő csevegés demó" width="800"/>
+<img src="../../../translated_images/hu/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Állapotfüggő csevegés demó" width="800"/>
 
 *Az AI emlékszik a nevedre a beszélgetés korábbi részéből*
 

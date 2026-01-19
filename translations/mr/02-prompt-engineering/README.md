@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 हा मॉड्यूल मागील मॉड्यूल्समधीलच LangChain4j पाया वापरून प्रगत प्रॉम्प्टिंग नमुने दाखवतो, ज्यामध्ये प्रॉम्प्ट रचना आणि विचार नियंत्रणावर लक्ष केंद्रित केले आहे.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.mr.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/mr/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *LangChain4j तुमचे प्रॉम्प्ट Azure OpenAI GPT-5 शी कसे जोडते*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.mr.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/mr/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage सातत्यपूर्ण संदर्भ पुरवते तर UserMessages मध्ये वैयक्तिक विनंत्या असतात*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 सर्व समस्या एकाच पद्धतीने सोडवायच्या नसतात. काही प्रश्नांना जलद उत्तर हवे असते, काहींना खोल विचार हवा असतो. काहींना दिसणारी विचारसरणी हवी असते, काहींना फक्त निकाल हवा असतो. हा मॉड्यूल आठ प्रॉम्प्टिंग नमुने कव्हर करतो - प्रत्येक वेगळ्या परिस्थितीसाठी ऑप्टिमाइझ केलेले. तुम्ही सर्वांसोबत प्रयोग कराल आणि कधी कोणती पद्धत सर्वोत्तम काम करते ते शिकाल.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.mr.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/mr/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *आठ प्रॉम्प्ट अभियांत्रिकी नमुन्यांचा आढावा आणि त्यांचे वापर प्रकरणे*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.mr.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/mr/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *कमी विरागीपणा (जलद, थेट) विरुद्ध जास्त विरागीपणा (सखोल, तपासणी) विचारसरणी पद्धती*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - "उत्पादन अनुप्रयोगांमध्ये टूल प्रीअँबल्स रचनेसाठी सर्वोत्तम पद्धती काय आहेत?"
 > - "UI मध्ये मधल्या प्रगती अद्यतने कशी टिपावी आणि दाखवावी?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.mr.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/mr/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *बहु-चरण कार्यांसाठी योजना → अंमलबजावणी → सारांश कार्यप्रवाह*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.mr.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/mr/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *पुनरावृत्ती सुधारणा लूप - तयार करा, मूल्यांकन करा, समस्या ओळखा, सुधारणा करा, पुनरावृत्ती करा*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "संरचित आउटपुट प्रोग्रामॅटिकली पार्स आणि वापरण्याचा सर्वोत्तम मार्ग काय आहे?"
 > - "वेगवेगळ्या पुनरावलोकन सत्रांमध्ये सातत्यपूर्ण गंभीरता पातळ्या कशा सुनिश्चित कराव्यात?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.mr.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/mr/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *सातत्यपूर्ण कोड पुनरावलोकनांसाठी चार-श्रेणी फ्रेमवर्क गंभीरता पातळ्यांसह*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.mr.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/mr/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *संवाद संदर्भ अनेक टर्नमध्ये जमा होतो जोपर्यंत टोकन मर्यादा पोहोचत नाही*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.mr.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/mr/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *समस्यांचे स्पष्ट तर्कशास्त्रीय पायऱ्यांमध्ये विघटन*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.mr.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/mr/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *विशिष्ट स्वरूप, लांबी आणि रचना आवश्यकता लागू करणे*
 
@@ -300,7 +300,7 @@ cat ../.env  # AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYMENT दाखवले प
 
 "prompt-engineering" जवळील प्ले बटणावर क्लिक करा हा मॉड्यूल सुरू करण्यासाठी, किंवा सर्व मॉड्यूल एकत्र सुरू करा.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.mr.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/mr/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **पर्याय 2: शेल स्क्रिप्ट वापरणे**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 ## अर्जाचे स्क्रीनशॉट
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.mr.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/mr/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *मुख्य डॅशबोर्ड जे सर्व 8 प्रॉम्प्ट अभियांत्रिकी नमुने त्यांची वैशिष्ट्ये आणि वापर प्रकरणांसह दाखवते*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 "200 चा 15% किती?" असा सोपा प्रश्न कमी विरागीपणा वापरून विचारा. तुम्हाला त्वरित, थेट उत्तर मिळेल. आता "उच्च-ट्रॅफिक API साठी कॅशिंग धोरण डिझाइन करा" असा जटिल प्रश्न जास्त विरागीपणा वापरून विचारा. मॉडेल कसे हळू होते आणि तपशीलवार विचारसरणी देते ते पहा. एकच मॉडेल, एकच प्रश्न रचना - पण प्रॉम्प्ट त्याला किती विचार करायचा ते सांगते.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.mr.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/mr/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *कमी विचारसरणीसह जलद गणना*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.mr.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/mr/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *संपूर्ण कॅशिंग धोरण (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 बहु-टप्प्यांच्या कार्यप्रवाहांना आगाऊ नियोजन आणि प्रगती वर्णन याचा फायदा होतो. मॉडेल काय करणार आहे हे सांगते, प्रत्येक टप्पा वर्णन करते, नंतर निकालांचे सारांश देते.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.mr.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/mr/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *टप्प्याटप्प्याने वर्णनासह REST एंडपॉइंट तयार करणे (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 "ईमेल सत्यापन सेवा तयार करा" असे प्रयत्न करा. फक्त कोड तयार करून थांबण्याऐवजी, मॉडेल तयार करते, गुणवत्ता निकषांवर मूल्यांकन करते, कमकुवत भाग ओळखते आणि सुधारणा करते. तुम्ही ते पुनरावृत्ती करताना पाहाल जोपर्यंत कोड उत्पादन मानकांपर्यंत पोहोचत नाही.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.mr.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/mr/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *पूर्ण ईमेल सत्यापन सेवा (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 कोड पुनरावलोकनांसाठी सुसंगत मूल्यांकन फ्रेमवर्क आवश्यक असतात. मॉडेल निश्चित श्रेण्या (योग्यता, पद्धती, कार्यक्षमता, सुरक्षा) आणि तीव्रता पातळ्यांसह कोडचे विश्लेषण करते.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.mr.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/mr/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *फ्रेमवर्क-आधारित कोड पुनरावलोकन*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 "स्प्रिंग बूट म्हणजे काय?" असा प्रश्न विचारा आणि लगेच "मला एक उदाहरण दाखवा" असे पुढील प्रश्न विचारा. मॉडेल तुमचा पहिला प्रश्न लक्षात ठेवते आणि तुम्हाला स्प्रिंग बूटचे विशिष्ट उदाहरण देते. स्मृतीशिवाय, दुसरा प्रश्न फार अस्पष्ट असू शकतो.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.mr.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/mr/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *प्रश्नांमध्ये संदर्भ जपणे*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 कोणतीही गणिताची समस्या निवडा आणि टप्प्याटप्प्याने विचारसरणी आणि कमी उत्साह या दोन्हीने प्रयत्न करा. कमी उत्साह फक्त उत्तर देते - जलद पण अस्पष्ट. टप्प्याटप्प्याने तुम्हाला प्रत्येक गणना आणि निर्णय दाखवते.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.mr.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/mr/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *स्पष्ट टप्प्यांसह गणिताची समस्या*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # सर्व मॉड्यूल्स
 
 जेव्हा तुम्हाला विशिष्ट स्वरूप किंवा शब्दसंख्या आवश्यक असते, तेव्हा हा नमुना कडक पालन सुनिश्चित करतो. अचूक 100 शब्दांच्या बुलेट पॉइंट स्वरूपात सारांश तयार करण्याचा प्रयत्न करा.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.mr.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/mr/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *स्वरूप नियंत्रणासह मशीन लर्निंग सारांश*
 
@@ -445,7 +445,7 @@ GPT-5 तुम्हाला तुमच्या प्रॉम्प्ट
 
 प्रॉम्प्टमधील XML टॅग्स लक्षात घेतले का? ते फक्त सजावटीसाठी नाहीत. मॉडेल्स संरचित सूचना अधिक विश्वासार्हपणे पाळतात. जेव्हा तुम्हाला बहु-टप्प्यांची प्रक्रिया किंवा गुंतागुंतीचे लॉजिक आवश्यक असते, तेव्हा रचना मॉडेलला त्याच्या स्थितीचा आणि पुढे काय करायचे याचा मागोवा ठेवण्यास मदत करते.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.mr.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/mr/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *स्पष्ट विभाग आणि XML-शैलीच्या संघटनेसह चांगल्या रचनेचा प्रॉम्प्ट*
 

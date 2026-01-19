@@ -38,7 +38,7 @@ LangChain4j is a Java library that simplifies building AI-powered applications. 
 
 The "chain" in LangChain refers to chaining together multiple components - you might chain a prompt to a model to a parser, or chain multiple AI calls together where one output feeds into the next input. This quick start focuses on the fundamentals before exploring more complex chains.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.en.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/en/langchain-concept.ad1fe6cf063515e1.webp" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Chaining components in LangChain4j - building blocks connect to create powerful AI workflows*
 
@@ -50,7 +50,7 @@ We'll use three core components:
 
 **MessageWindowChatMemory** - Maintains conversation history. Without this, each request is independent. With it, the AI remembers previous messages and maintains context across multiple turns.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.en.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/en/architecture.eedc993a1c576839.webp" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j architecture - core components working together to power your AI applications*
 

@@ -35,7 +35,7 @@ Oled loonud vestlusliku tehisintellekti, valdad sõelujaid, sidunud vastused dok
 
 Model Context Protocol (MCP) pakub just seda — standardset viisi, kuidas AI rakendused leiavad ja kasutavad väliseid tööriistu. Selle asemel, et kirjutada iga andmeallika või teenuse jaoks eraldi integratsioon, ühendad MCP serveritega, mis avaldavad oma võimekuse ühtses formaadis. Sinu AI agent saab neid tööriistu siis automaatselt avastada ja kasutada.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.et.png" alt="MCP Võrdlus" width="800"/>
+<img src="../../../translated_images/et/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Võrdlus" width="800"/>
 
 *Enne MCP-d: keerulised otsast-otsani integratsioonid. Pärast MCP-d: üks protokoll, lõputud võimalused.*
 
@@ -43,7 +43,7 @@ MCP lahendab AI arenduse põhiprobleemi: iga integratsioon on käsitsi kohandatu
 
 MCP standardiseerib selle. MCP server avaldab tööriistu selgete kirjelduse ja skeemidega. Igal MCP kliendil on võimalik ühenduda, avastada olemasolevaid tööriistu ja neid kasutada. Loo üks kord, kasuta kõikjal.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.et.png" alt="MCP Arhitektuur" width="800"/>
+<img src="../../../translated_images/et/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Arhitektuur" width="800"/>
 
 *Model Context Protocoli arhitektuur – standardiseeritud tööriistade avastamine ja käivitamine*
 
@@ -71,7 +71,7 @@ Kui su klient ühendub MCP serveriga, küsib ta: "Millised tööriistad sul olem
 
 MCP toetab erinevaid transpordimehhanisme. See moodul demonstreerib Stdio transporti kohalike protsesside puhul:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.et.png" alt="Transpordimehhanismid" width="800"/>
+<img src="../../../translated_images/et/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transpordimehhanismid" width="800"/>
 
 *MCP transpordimehhanismid: HTTP kaugserverite jaoks, Stdio kohalike protsesside jaoks*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 Demos loeb `FileAgent` faili MCP failisüsteemi tööriistade abil ja `ReportAgent` genereerib struktureeritud aruande juhtkokkuvõtte (1 lause), 3 võtmekohaga ja soovitustega. Järelevalve orkestreerib selle töövoo automaatselt:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.et.png" alt="Agentne Moodul" width="800"/>
+<img src="../../../translated_images/et/agentic.cf84dcda226374e3.webp" alt="Agentne Moodul" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

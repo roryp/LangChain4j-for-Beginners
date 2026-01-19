@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Αυτό είναι εντάξει για απλές ερωτήσεις και απαντήσεις αλλά άχρηστο για πραγματικές εφαρμογές. Τα bots εξυπηρέτησης πελατών πρέπει να θυμούνται τι τους είπατε. Οι προσωπικοί βοηθοί χρειάζονται πλαίσιο. Κάθε συνομιλία πολλών γύρων απαιτεί μνήμη.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.el.png" alt="Stateless vs Stateful Conversations" width="800"/>
+<img src="../../../translated_images/el/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Stateless vs Stateful Conversations" width="800"/>
 
 *Η διαφορά μεταξύ συνομιλιών χωρίς κατάσταση (ανεξάρτητες κλήσεις) και με κατάσταση (με επίγνωση πλαισίου)*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Πριν βουτήξουμε στις συνομιλίες, είναι σημαντικό να κατανοήσουμε τα tokens - τις βασικές μονάδες κειμένου που επεξεργάζονται τα γλωσσικά μοντέλα:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.el.png" alt="Token Explanation" width="800"/>
+<img src="../../../translated_images/el/token-explanation.c39760d8ec650181.webp" alt="Token Explanation" width="800"/>
 
 *Παράδειγμα πώς το κείμενο χωρίζεται σε tokens - "I love AI!" γίνεται 4 ξεχωριστές μονάδες επεξεργασίας*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Το LangChain4j παρέχει υλοποιήσεις μνήμης που το διαχειρίζονται αυτό αυτόματα. Επιλέγετε πόσα μηνύματα να διατηρείτε και το πλαίσιο διαχειρίζεται το παράθυρο πλαισίου.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.el.png" alt="Memory Window Concept" width="800"/>
+<img src="../../../translated_images/el/memory-window.bbe67f597eadabb3.webp" alt="Memory Window Concept" width="800"/>
 
 *Το MessageWindowChatMemory διατηρεί ένα κυλιόμενο παράθυρο πρόσφατων μηνυμάτων, απορρίπτοντας αυτόματα τα παλιά*
 
@@ -212,7 +212,7 @@ Get-Content ..\.env  # Πρέπει να εμφανίζει το AZURE_OPENAI_EN
 
 Απλά κάντε κλικ στο κουμπί αναπαραγωγής δίπλα στο "introduction" για να ξεκινήσετε αυτό το module, ή ξεκινήστε όλα τα modules μαζί.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.el.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/el/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Επιλογή 2: Χρήση shell scripts**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Η εφαρμογή παρέχει ένα web περιβάλλον με δύο υλοποιήσεις συνομιλίας δίπλα-δίπλα.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.el.png" alt="Application Home Screen" width="800"/>
+<img src="../../../translated_images/el/home-screen.121a03206ab910c0.webp" alt="Application Home Screen" width="800"/>
 
 *Πίνακας ελέγχου που δείχνει τις επιλογές Απλής Συνομιλίας (χωρίς κατάσταση) και Συνομιλίας με κατάσταση*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Δοκιμάστε πρώτα αυτό. Ρωτήστε "Το όνομά μου είναι Γιάννης" και αμέσως μετά "Ποιο είναι το όνομά μου;". Το μοντέλο δεν θα θυμάται γιατί κάθε μήνυμα είναι ανεξάρτητο. Αυτό δείχνει το βασικό πρόβλημα με την απλή ενσωμάτωση γλωσσικού μοντέλου - έλλειψη πλαισίου συνομιλίας.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.el.png" alt="Stateless Chat Demo" width="800"/>
+<img src="../../../translated_images/el/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Stateless Chat Demo" width="800"/>
 
 *Η AI δεν θυμάται το όνομά σας από το προηγούμενο μήνυμα*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # Όλα τα modules
 
 Τώρα δοκιμάστε την ίδια ακολουθία εδώ. Ρωτήστε "Το όνομά μου είναι Γιάννης" και μετά "Ποιο είναι το όνομά μου;". Αυτή τη φορά θυμάται. Η διαφορά είναι το MessageWindowChatMemory - διατηρεί το ιστορικό συνομιλίας και το περιλαμβάνει με κάθε αίτημα. Έτσι λειτουργεί η παραγωγική συνομιλητική AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.el.png" alt="Stateful Chat Demo" width="800"/>
+<img src="../../../translated_images/el/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Stateful Chat Demo" width="800"/>
 
 *Η AI θυμάται το όνομά σας από νωρίτερα στη συνομιλία*
 

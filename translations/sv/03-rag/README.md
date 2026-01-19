@@ -49,7 +49,7 @@ Tänk på RAG som att ge modellen ett referensbibliotek. När du ställer en fr�
 
 Detta förankrar modellens svar i dina faktiska data istället för att lita på dess träningskunskap eller att hitta på svar.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.sv.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/sv/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG arbetsflöde - från användarfråga till semantisk sökning till kontextuell svarsgenerering*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.sv.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/sv/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Dokument representerade som vektorer i inbäddningsutrymmet - liknande innehåll klustras ihop*
 
@@ -160,7 +160,7 @@ Från Spring Boot Dashboard kan du:
 
 Klicka bara på play-knappen bredvid ”rag” för att starta denna modul, eller starta alla moduler samtidigt.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.sv.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/sv/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Alternativ 2: Använda shell-skript**
 
@@ -231,7 +231,7 @@ cd ..; .\stop-all.ps1  # Alla moduler
 
 Applikationen erbjuder ett webbgränssnitt för dokumentuppladdning och frågeställning.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.sv.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/sv/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG-applikationsgränssnitt - ladda upp dokument och ställ frågor*
 
@@ -249,7 +249,7 @@ Ställ specifika frågor om dokumentinnehållet. Prova något faktabaserat som t
 
 Notera att varje svar inkluderar källreferenser med likhetspoäng. Dessa poäng (0 till 1) visar hur relevanta varje bit var för din fråga. Högre poäng betyder bättre matchning. Detta låter dig verifiera svaret mot källmaterialet.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.sv.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/sv/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Frågeresultat som visar svar med källreferenser och relevanspoäng*
 

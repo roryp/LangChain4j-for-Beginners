@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.ms.png" alt="Keputusan Ujian Berjaya" width="800"/>
+<img src="../../../translated_images/ms/test-results.ea5c98d8f3642043.webp" alt="Keputusan Ujian Berjaya" width="800"/>
 
 *Pelaksanaan ujian berjaya menunjukkan semua ujian lulus tanpa sebarang kegagalan*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Kursus ini menumpukan pada **ujian unit** yang dijalankan secara tempatan. Setiap ujian menunjukkan konsep LangChain4j tertentu secara terasing.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.ms.png" alt="Piramid Ujian" width="800"/>
+<img src="../../../translated_images/ms/testing-pyramid.2dd1079a0481e53e.webp" alt="Piramid Ujian" width="800"/>
 
 *Piramid ujian menunjukkan keseimbangan antara ujian unit (pantas, terasing), ujian integrasi (komponen sebenar), dan ujian hujung-ke-hujung. Latihan ini merangkumi ujian unit.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#sepatutnya mengekalkan sejarah perbua
 
 Jika anda menggunakan Visual Studio Code, Test Explorer menyediakan antara muka grafik untuk menjalankan dan mengimbas langkah demi langkah ujian.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.ms.png" alt="Peneroka Ujian VS Code" width="800"/>
+<img src="../../../translated_images/ms/vscode-testing.f02dd5917289dced.webp" alt="Peneroka Ujian VS Code" width="800"/>
 
 *Peneroka Ujian VS Code menunjukkan pokok ujian dengan semua kelas ujian Java dan kaedah ujian individu*
 
@@ -134,7 +134,7 @@ Test Explorer menunjukkan tanda semak hijau untuk ujian yang lulus dan menyediak
 
 Corak paling ringkas menguji templat prompt tanpa memanggil mana-mana model AI. Anda mengesahkan bahawa penggantian pembolehubah berfungsi dengan betul dan prompt diformat seperti yang dijangka.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.ms.png" alt="Ujian Templat Prompt" width="800"/>
+<img src="../../../translated_images/ms/prompt-template-testing.b902758ddccc8dee.webp" alt="Ujian Templat Prompt" width="800"/>
 
 *Menguji templat prompt yang menunjukkan aliran penggantian pembolehubah: templat dengan pemegang tempat → nilai digunakan → keluaran yang diformat disahkan*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#uji pemformatan temp
 
 Apabila menguji logik perbualan, gunakan Mockito untuk mencipta model palsu yang mengembalikan respons yang telah ditentukan. Ini menjadikan ujian pantas, percuma, dan deterministik.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.ms.png" alt="Perbandingan Mock vs API Sebenar" width="800"/>
+<img src="../../../translated_images/ms/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Perbandingan Mock vs API Sebenar" width="800"/>
 
 *Perbandingan yang menunjukkan mengapa mock diutamakan untuk ujian: ia pantas, percuma, deterministik, dan tidak memerlukan kekunci API*
 
@@ -231,7 +231,7 @@ This pattern appears in `01-introduction/src/test/java/com/example/langchain4j/s
 
 Memori perbualan mesti mengekalkan pemisahan antara berbilang pengguna. Ujian ini mengesahkan bahawa perbualan tidak mencampurkan konteks.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.ms.png" alt="Pengasingan Perbualan" width="800"/>
+<img src="../../../translated_images/ms/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Pengasingan Perbualan" width="800"/>
 
 *Menguji pengasingan perbualan yang menunjukkan stor memori berasingan untuk pengguna berbeza untuk mengelakkan pencampuran konteks*
 
@@ -263,7 +263,7 @@ Each conversation maintains its own independent history. In production systems, 
 
 Alat adalah fungsi yang boleh dipanggil oleh AI. Uji mereka secara langsung untuk memastikan ia berfungsi dengan betul tanpa mengira keputusan AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.ms.png" alt="Ujian Alat" width="800"/>
+<img src="../../../translated_images/ms/tools-testing.3e1706817b0b3924.webp" alt="Ujian Alat" width="800"/>
 
 *Menguji alat secara berasingan yang menunjukkan pelaksanaan alat mock tanpa panggilan AI untuk mengesahkan logik perniagaan*
 
@@ -294,7 +294,7 @@ These tests from `04-tools/src/test/java/com/example/langchain4j/agents/tools/Si
 
 Sistem RAG secara tradisinya memerlukan pangkalan data vektor dan perkhidmatan embedding. Corak dalam-memori membolehkan anda menguji keseluruhan aliran tanpa pergantungan luaran.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.ms.png" alt="Ujian RAG Dalam Memori" width="800"/>
+<img src="../../../translated_images/ms/rag-testing.ee7541b1e23934b1.webp" alt="Ujian RAG Dalam Memori" width="800"/>
 
 *Aliran kerja ujian RAG dalam memori yang menunjukkan penguraian dokumen, penyimpanan embedding, dan carian kesamaan tanpa memerlukan pangkalan data*
 

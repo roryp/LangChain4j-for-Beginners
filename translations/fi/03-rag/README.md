@@ -49,7 +49,7 @@ Ajattele RAG:ia kuin viitemuistiona mallille. Kun kysyt kysymyksen, järjestelm�
 
 Tämä juurruttaa mallin vastaukset todellisiin tietoihisi sen sijaan, että se luottaisi koulutustietoon tai keksisi vastauksia.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.fi.png" alt="RAG-arkkitehtuuri" width="800"/>
+<img src="../../../translated_images/fi/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG-arkkitehtuuri" width="800"/>
 
 *RAG-työnkulku – käyttäjän kyselystä semanttiseen hakuun ja kontekstuaaliseen vastausten generointiin*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.fi.png" alt="Vektorien upotusavaruus" width="800"/>
+<img src="../../../translated_images/fi/vector-embeddings.2ef7bdddac79a327.webp" alt="Vektorien upotusavaruus" width="800"/>
 
 *Dokumentit esitetty vektoreina upotusavaruudessa – samankaltaiset sisällöt ryhmittyvät*
 
@@ -160,7 +160,7 @@ Spring Boot Dashboardista voit:
 
 Klikkaa vain "rag"-moduulin vieressä olevaa toistopainiketta käynnistääksesi tämän moduulin tai käynnistä kaikki moduulit kerralla.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.fi.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/fi/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Vaihtoehto 2: Shell-skriptit**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Kaikki moduulit
 
 Sovellus tarjoaa selainpohjaisen käyttöliittymän dokumenttien lataamiseen ja kysymysten esittämiseen.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.fi.png" alt="RAG-sovelluksen käyttöliittymä" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/fi/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG-sovelluksen käyttöliittymä" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG-sovelluksen käyttöliittymä – lataa dokumentteja ja esitä kysymyksiä*
 
@@ -248,7 +248,7 @@ Kysy nyt tarkkoja kysymyksiä dokumentin sisällöstä. Kokeile jotain faktatiet
 
 Huomaa, että jokainen vastaus sisältää lähdeviitteitä samankaltaisuuspisteineen. Nämä pisteet (0–1) osoittavat, kuinka relevantteja kukin pala oli kysymyksellesi. Korkeammat pisteet tarkoittavat parempia osumia. Näin voit varmistaa vastauksen lähdeaineiston perusteella.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.fi.png" alt="RAG-kyselytulokset" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/fi/rag-query-results.6d69fcec5397f355.webp" alt="RAG-kyselytulokset" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Kyselytulokset, jotka näyttävät vastauksen lähdeviitteineen ja relevanttipisteineen*
 

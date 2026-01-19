@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. கருவி செயல்பட்டு தரவை வழங்குகின்றது  
 6. முகவர் முடிவை சேர்த்து இறுதிப் பதிலை வழங்குகின்றான்
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.ta.png" alt="ReAct மாதிரி" width="800"/>
+<img src="../../../translated_images/ta/react-pattern.86aafd3796f3fd13.webp" alt="ReAct மாதிரி" width="800"/>
 
 *ReAct மாதிரி - AI முகவர்கள் பிரச்சனைகளை தீர்க்க காரணிக்கும் செயல்படும் இடையிலான மாறுதலை காட்டுகிறது*
 
@@ -138,7 +138,7 @@ Spring Boot அனைத்து பதிவு செய்யப்பட்
 
 **கருவி தொடர் அழைப்புகள்** - AI பல கருவிகளை தொடர் வரிசையில் அழைக்கலாம். "சியாட்டில் வானிலை என்ன மற்றும் நான் குடைகளை எடுத்துச் செல்ல வேண்டுமா?" எனக் கேட்டு `getCurrentWeather` மற்றும் மழைக்காக கருதுகோள்களை இணைத்து பார்க்கலாம்.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.ta.png" alt="கருவி தொடர் அழைப்புகள்" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/ta/tool-chaining.3b25af01967d6f7b.webp" alt="கருவி தொடர் அழைப்புகள்" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *தொடர்பான கருவி அழைப்புகள் - ஒரு கருவியின் வெளியீடு அடுத்தத் தீர்மானத்திற்கு உணவாகிறது*
 
@@ -171,7 +171,7 @@ Spring Boot Dashboard இல் இருந்து, நீங்கள்:
 
 "tools" அற்றுள்ள play பொத்தானை கிளிக் செய்து இந்த தொகுதியைத் தொடங்கி அல்லது அனைத்து தொகுதிகளையும் ஒரே நேரத்தில் தொடங்கலாம்.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.ta.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ta/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **விருப்பம் 2: ஷெல் ஸ்கிரிப்ட்கள்**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # அனைத்து தொகுதிகள்
 
 இந்த விண்ணப்பம், வானிலை மற்றும் வெப்பநிலைக் கூடிப்படியமை மாற்றும் கருவிகளுடன் கூடிய AI முகவருடன் உரையாட ஒருஒர் வலை இடைமுகத்தை வழங்குகிறது.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.ta.png" alt="AI முகவர் கருவிகள் இடைமுகம்" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/ta/tools-homepage.4b4cd8b2717f9621.webp" alt="AI முகவர் கருவிகள் இடைமுகம்" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI முகவர் கருவிகள் இடைமுகம் - கருவர்களுடன் தொடர்பு கொள்ள விரைவான உதாரணங்கள் மற்றும் உரையாடல் இடைமுகம்*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # அனைத்து தொகுதிகள்
 
 உரையாடல் இடைமுகம் உரையாடல் பின்னணியைக் காப்பாற்றி, பல முறையா் நடக்கும் தொடர்புகளை அனுமதிக்கிறது. முன்பு ஏற்பட்ட கேள்விகள் மற்றும் பதில்களைப் அனைவரும் பார்க்கலாம், இவ்வாறு உரையாடலின் கற்றலை மற்றும் முகவர் எப்படி பல தடவைகளில் சூழலை உருவாக்குகிறது என்பதைக் கண்டு கொள்ளலாம்.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.ta.png" alt="பல கருவி அழைப்புகளுடன் உரையாடல்" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/ta/tools-conversation-demo.89f2ce9676080f59.webp" alt="பல கருவி அழைப்புகளுடன் உரையாடல்" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *பல முறை உரையாடல் - எளிய மாற்றங்கள், வானிலை தேடல்கள் மற்றும் கருவி தொடர் அழைப்புகள்*
 

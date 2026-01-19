@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.vi.png" alt="Kết quả kiểm thử thành công" width="800"/>
+<img src="../../../translated_images/vi/test-results.ea5c98d8f3642043.webp" alt="Kết quả kiểm thử thành công" width="800"/>
 
 *Thực thi kiểm thử thành công cho thấy tất cả các bài kiểm thử đều vượt qua mà không có lỗi nào*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Khóa học này tập trung vào **kiểm thử đơn vị** chạy cục bộ. Mỗi bài kiểm thử minh họa một khái niệm cụ thể của LangChain4j một cách độc lập.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.vi.png" alt="Kim tự tháp kiểm thử" width="800"/>
+<img src="../../../translated_images/vi/testing-pyramid.2dd1079a0481e53e.webp" alt="Kim tự tháp kiểm thử" width="800"/>
 
 *Kim tự tháp kiểm thử cho thấy cân bằng giữa kiểm thử đơn vị (nhanh, độc lập), kiểm thử tích hợp (các thành phần thực tế), và kiểm thử đầu-cuối. Khóa đào tạo này đề cập kiểm thử đơn vị.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#nên duy trì lịch sử hội tho�
 
 Nếu bạn đang sử dụng Visual Studio Code, Test Explorer cung cấp giao diện đồ họa để chạy và gỡ lỗi các bài kiểm thử.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.vi.png" alt="Test Explorer của VS Code" width="800"/>
+<img src="../../../translated_images/vi/vscode-testing.f02dd5917289dced.webp" alt="Test Explorer của VS Code" width="800"/>
 
 *Test Explorer của VS Code hiển thị cây kiểm thử với tất cả các lớp kiểm thử Java và các phương thức kiểm thử riêng lẻ*
 
@@ -134,7 +134,7 @@ Test Explorer hiển thị dấu tích màu xanh cho các bài kiểm thử vư�
 
 Mẫu đơn giản nhất kiểm thử các mẫu prompt mà không gọi bất kỳ mô hình AI nào. Bạn xác minh rằng việc thay thế biến hoạt động chính xác và các prompt được định dạng như mong đợi.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.vi.png" alt="Kiểm thử mẫu prompt" width="800"/>
+<img src="../../../translated_images/vi/prompt-template-testing.b902758ddccc8dee.webp" alt="Kiểm thử mẫu prompt" width="800"/>
 
 *Kiểm thử mẫu prompt thể hiện luồng thay thế biến: mẫu với các chỗ giữ chỗ → áp dụng giá trị → xác minh đầu ra đã được định dạng*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#kiểm tra định d
 
 Khi kiểm thử logic cuộc trò chuyện, sử dụng Mockito để tạo mô hình giả trả về các phản hồi đã định trước. Điều này khiến các bài kiểm thử nhanh, miễn phí và có tính quyết định.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.vi.png" alt="So sánh mock và API thực" width="800"/>
+<img src="../../../translated_images/vi/mock-vs-real.3b8b1f85bfe6845e.webp" alt="So sánh mock và API thực" width="800"/>
 
 *So sánh cho thấy lý do tại sao mock được ưu tiên cho kiểm thử: chúng nhanh, miễn phí, có tính quyết định và không yêu cầu khóa API*
 
@@ -231,7 +231,7 @@ Mẫu này xuất hiện trong `01-introduction/src/test/java/com/example/langch
 
 Bộ nhớ cuộc trò chuyện phải giữ riêng biệt nhiều người dùng. Bài kiểm thử này xác minh rằng các cuộc trò chuyện không trộn lẫn ngữ cảnh.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.vi.png" alt="Cách ly cuộc trò chuyện" width="800"/>
+<img src="../../../translated_images/vi/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Cách ly cuộc trò chuyện" width="800"/>
 
 *Kiểm thử cách ly cuộc trò chuyện thể hiện lưu trữ bộ nhớ riêng cho các người dùng khác nhau để ngăn chặn trộn lẫn ngữ cảnh*
 
@@ -263,7 +263,7 @@ Mỗi cuộc trò chuyện duy trì lịch sử riêng độc lập. Trong hệ 
 
 Công cụ là các hàm mà AI có thể gọi. Kiểm thử trực tiếp chúng để đảm bảo chúng hoạt động chính xác bất kể quyết định của AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.vi.png" alt="Kiểm thử công cụ" width="800"/>
+<img src="../../../translated_images/vi/tools-testing.3e1706817b0b3924.webp" alt="Kiểm thử công cụ" width="800"/>
 
 *Kiểm thử công cụ độc lập mô tả việc thực thi công cụ giả mà không gọi AI để xác minh logic nghiệp vụ*
 
@@ -294,7 +294,7 @@ These tests from `04-tools/src/test/java/com/example/langchain4j/agents/tools/Si
 
 Hệ thống RAG truyền thống yêu cầu cơ sở dữ liệu vector và dịch vụ embedding. Mẫu chạy trong bộ nhớ cho phép bạn kiểm thử toàn bộ quy trình mà không cần phụ thuộc bên ngoài.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.vi.png" alt="Kiểm thử RAG trong bộ nhớ" width="800"/>
+<img src="../../../translated_images/vi/rag-testing.ee7541b1e23934b1.webp" alt="Kiểm thử RAG trong bộ nhớ" width="800"/>
 
 *Quy trình kiểm thử RAG trong bộ nhớ cho thấy phân tích tài liệu, lưu trữ embedding, và tìm kiếm tương đồng mà không cần cơ sở dữ liệu*
 

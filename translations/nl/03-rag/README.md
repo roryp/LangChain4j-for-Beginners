@@ -49,7 +49,7 @@ Zie RAG als het geven van een referentiebibliotheek aan het model. Wanneer je ee
 
 Dit maakt dat de antwoorden van het model gebaseerd zijn op jouw echte data in plaats van op zijn trainingskennis of verzonnen antwoorden.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.nl.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/nl/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG workflow - van gebruikersvraag naar semantische zoekopdracht tot contextueel antwoordgeneratie*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.nl.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/nl/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Documenten voorgesteld als vectoren in embedding-ruimte - vergelijkbare inhoud clustert samen*
 
@@ -160,7 +160,7 @@ Via het Spring Boot Dashboard kun je:
 
 Klik simpelweg op de play-knop naast "rag" om deze module te starten, of start alle modules tegelijk.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.nl.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/nl/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Optie 2: gebruik shell scripts**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # Alle modules
 
 De applicatie biedt een webinterface om documenten te uploaden en vragen te stellen.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.nl.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/nl/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *De RAG applicatie-interface - upload documenten en stel vragen*
 
@@ -248,7 +248,7 @@ Stel nu specifieke vragen over de inhoud van het document. Probeer iets feitelij
 
 Opvallend is dat elk antwoord bronverwijzingen bevat met gelijkenisscores. Deze scores (van 0 tot 1) geven aan hoe relevant elk stuk was voor jouw vraag. Hogere scores betekenen betere matches. Zo kun je het antwoord verifieren met het bronmateriaal.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.nl.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/nl/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Zoekresultaten met antwoord, bronverwijzingen en relevantiescores*
 

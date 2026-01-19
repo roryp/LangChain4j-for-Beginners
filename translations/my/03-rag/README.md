@@ -49,7 +49,7 @@ RAG ကို မော်ဒယ်အား ကိုးကားစာကြ�
 
 ဤနည်းစနစ်မှာ မော်ဒယ်၏ဖြေကြားချက်များကို သင်၏ရင်းမြစ်ဒေတာများပေါ်မှာ အခြေခံပေးပြီး training အတတ်ပညာသို့မဟုတ် ဖန်တီးထုတ်လုပ်ချက်မဟုတ်ကြောင်း သေချာစေသည်။
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.my.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/my/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG အလုပ်လုပ်ပုံ - အသုံးပြုသူမေးခွန်းမှ semantic search နှင့် context-based ဖြေချက်ထုတ်ပုံ*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.my.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/my/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *စာရွက်များသည် embedding နေရာ၌ vector များဖြင့် ကိုယ်စားပြုထားပြီး ဆင်တူဖွဲ့စည်းမှုများ သဘောတူနေကြသည်*
 
@@ -160,7 +160,7 @@ Dashboard မှ -
 
 "rag" app အနီးက play button ကို နှိပ်၍ module ကို စတင်ပါ၊ ဒါမှမဟုတ် လုံးဝ module များအားလုံးကို တစ်ပြိုင်နက် စတင်ပါ။
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.my.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/my/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: shell script များ အသုံးပြုခြင်း**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # မော်ဂျူးလ်အားလုံး
 
 application သည် စာရွက် upload နှင့် မေးခွန်းမေးခြင်းအတွက် web interface ပံ့ပိုးသည်။
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.my.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/my/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG application interface - စာရွက် upload လုပ်၍ မေးခွန်းမေးပါ*
 
@@ -248,7 +248,7 @@ application သည် စာရွက် upload နှင့် မေးခွ�
 
 အဖြေတိုင်းတွင် ဆော့စွဲရာများနှင့် similarity score များပါဝင်သည်။ score များသည် 0 မှ 1 အတွင်း ရှိပြီး မေးခွန်းနှင့် ဆက်စပ်မှုကို ဖော်ပြသည်။ score မြင့်သည့် chunks များသည် ပိုမိုပေါက်ဖ်သော ဆက်စပ်မှုရှိကြောင်း သက်သေပြသည်။ ထို့ကြောင့် မူရင်း စာရွက်နှင့် နှိုင်းယှဉ်စစ်ဆေးနိုင်သည်။
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.my.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/my/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Query ရလဒ်များ - အဖြေ၊ ဆော့စွဲရာများနှင့် relevance score များ ဖော်ပြထားခြင်း*
 

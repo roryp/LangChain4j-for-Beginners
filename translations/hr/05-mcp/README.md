@@ -35,7 +35,7 @@ Sastavili ste konverzacijski AI, savladali promptove, utemeljili odgovore u doku
 
 Protokol Konteksta Modela (MCP) pruža upravo to – standardizirani način za AI aplikacije da otkriju i koriste vanjske alate. Umjesto da pišete prilagođene integracije za svaki izvor podataka ili uslugu, povezujete se s MCP poslužiteljima koji izlažu svoje mogućnosti u dosljednom formatu. Vaš AI agent tada može automatski otkriti i koristiti te alate.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.hr.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/hr/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *Prije MCP-a: složene točkastije integracije. Nakon MCP-a: jedan protokol, beskonačne mogućnosti.*
 
@@ -43,7 +43,7 @@ MCP rješava temeljni problem u razvoju AI-ja: svaka integracija je prilagođena
 
 MCP to standardizira. MCP poslužitelj izlaže alate s jasnim opisima i šemama. Bilo koji MCP klijent može se spojiti, otkriti dostupne alate i koristiti ih. Izgradi jednom, koristi svugdje.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.hr.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/hr/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Arhitektura Protokola Konteksta Modela – standardizirano otkrivanje i izvršavanje alata*
 
@@ -71,7 +71,7 @@ Kad se vaš klijent spoji na MCP poslužitelj, pita: "Koje alate imate?" Posluž
 
 MCP podržava različite mehanizme prijenosa. Ovaj modul pokazuje Stdio transport za lokalne procese:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.hr.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/hr/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *Mehanizmi prijenosa MCP-a: HTTP za udaljene poslužitelje, Stdio za lokalne procese*
 
@@ -169,7 +169,7 @@ Uzorak **Supervisor agenta** je **fleksibilan** oblik agentnog AI-ja. Supervisor
 
 U demonstraciji, `FileAgent` čita datoteku koristeći MCP alate za datotečni sustav, a `ReportAgent` generira strukturirani izvještaj s izvršnim sažetkom (1 rečenica), 3 ključne točke i preporuke. Supervisor automatski orkestrira ovaj tijek:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.hr.png" alt="Agentni modul" width="800"/>
+<img src="../../../translated_images/hr/agentic.cf84dcda226374e3.webp" alt="Agentni modul" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

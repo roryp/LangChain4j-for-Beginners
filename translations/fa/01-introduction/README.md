@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 این برای پرسش و پاسخ ساده خوب است اما برای برنامه‌های واقعی بی‌فایده است. ربات‌های خدمات مشتری باید آنچه به آنها گفته‌اید را به خاطر بسپارند. دستیاران شخصی به زمینه نیاز دارند. هر مکالمه چند نوبتی نیازمند حافظه است.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.fa.png" alt="مکالمات بدون حالت در مقابل با حالت" width="800"/>
+<img src="../../../translated_images/fa/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="مکالمات بدون حالت در مقابل با حالت" width="800"/>
 
 *تفاوت بین مکالمات بدون حالت (فراخوانی‌های مستقل) و با حالت (آگاه به زمینه)*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 قبل از ورود به مکالمات، مهم است که توکن‌ها را درک کنید - واحدهای پایه متن که مدل‌های زبانی پردازش می‌کنند:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.fa.png" alt="توضیح توکن" width="800"/>
+<img src="../../../translated_images/fa/token-explanation.c39760d8ec650181.webp" alt="توضیح توکن" width="800"/>
 
 *مثالی از چگونگی شکستن متن به توکن‌ها - "I love AI!" به ۴ واحد پردازشی جداگانه تبدیل می‌شود*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j پیاده‌سازی‌های حافظه‌ای ارائه می‌دهد که این کار را به صورت خودکار انجام می‌دهند. شما تعیین می‌کنید چند پیام نگه داشته شود و چارچوب پنجره زمینه را مدیریت می‌کند.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.fa.png" alt="مفهوم پنجره حافظه" width="800"/>
+<img src="../../../translated_images/fa/memory-window.bbe67f597eadabb3.webp" alt="مفهوم پنجره حافظه" width="800"/>
 
 *MessageWindowChatMemory پنجره لغزنده‌ای از پیام‌های اخیر را نگه می‌دارد و به صورت خودکار پیام‌های قدیمی را حذف می‌کند*
 
@@ -212,7 +212,7 @@ devcontainer شامل افزونه Spring Boot Dashboard است که رابط ب
 
 فقط روی دکمه پخش کنار "introduction" کلیک کنید تا این ماژول شروع شود، یا همه ماژول‌ها را همزمان اجرا کنید.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.fa.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/fa/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **گزینه ۲: استفاده از اسکریپت‌های شل**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 برنامه یک رابط وب با دو پیاده‌سازی چت کنار هم ارائه می‌دهد.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.fa.png" alt="صفحه اصلی برنامه" width="800"/>
+<img src="../../../translated_images/fa/home-screen.121a03206ab910c0.webp" alt="صفحه اصلی برنامه" width="800"/>
 
 *داشبورد نمایش‌دهنده گزینه‌های چت ساده (بدون حالت) و چت مکالمه‌ای (با حالت)*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 اول این را امتحان کنید. بگویید "اسم من جان است" و بلافاصله بپرسید "اسم من چیست؟" مدل به خاطر نمی‌آورد چون هر پیام مستقل است. این مشکل اصلی ادغام مدل زبان پایه را نشان می‌دهد - بدون زمینه مکالمه.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.fa.png" alt="دموی چت بدون حالت" width="800"/>
+<img src="../../../translated_images/fa/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="دموی چت بدون حالت" width="800"/>
 
 *هوش مصنوعی اسم شما را از پیام قبلی به خاطر نمی‌آورد*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # همه ماژول‌ها
 
 حالا همان توالی را اینجا امتحان کنید. بگویید "اسم من جان است" و سپس "اسم من چیست؟" این بار به خاطر می‌آورد. تفاوت MessageWindowChatMemory است - تاریخچه مکالمه را حفظ می‌کند و با هر درخواست آن را می‌فرستد. این نحوه کار هوش مصنوعی مکالمه‌ای در تولید است.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.fa.png" alt="دموی چت با حالت" width="800"/>
+<img src="../../../translated_images/fa/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="دموی چت با حالت" width="800"/>
 
 *هوش مصنوعی اسم شما را از ابتدای مکالمه به خاطر می‌آورد*
 

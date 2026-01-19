@@ -52,7 +52,7 @@ GPT-5を使う理由は、推論制御が導入されているためです。モ
 
 このモジュールでは、前のモジュールと同じLangChain4jの基盤を使いながら、プロンプト構造と推論制御に焦点を当てた高度なプロンプトパターンを示します。
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.ja.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/ja/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *LangChain4jがプロンプトをAzure OpenAI GPT-5に接続する仕組み*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.ja.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/ja/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessageは永続的なコンテキストを提供し、UserMessageは個別のリクエストを含む*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 すべての問題に同じアプローチが必要なわけではありません。簡単な質問には素早い回答が必要で、複雑な問題には深い思考が求められます。可視化された推論が必要な場合もあれば、結果だけでよい場合もあります。本モジュールでは8つのプロンプトパターンを扱い、それぞれ異なるシナリオに最適化されています。すべて試して、どのアプローチがいつ効果的か学びましょう。
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.ja.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/ja/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *8つのプロンプトエンジニアリングパターンとそのユースケースの概要*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.ja.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/ja/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *低意欲（速く直接的）vs 高意欲（徹底的で探求的）な推論アプローチの比較*
 
@@ -163,7 +163,7 @@ Chain-of-Thoughtプロンプトはモデルに推論過程を明示的に示さ�
 > - 「本番アプリケーションでのツール前置きの構造化のベストプラクティスは？」
 > - 「UIで中間進捗をキャプチャして表示する方法は？」
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.ja.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/ja/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *計画 → 実行 → 要約のワークフローによる複数ステップタスク*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.ja.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/ja/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *反復的改善ループ - 生成、評価、問題特定、改善、繰り返し*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - 「構造化出力をプログラム的に解析し活用する最良の方法は？」
 > - 「異なるレビューセッション間で一貫した重大度レベルを保つには？」
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.ja.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/ja/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *重大度レベル付きの4カテゴリフレームワークによる一貫したコードレビュー*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.ja.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/ja/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *複数ターンにわたる会話コンテキストの蓄積とトークン制限までの流れ*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.ja.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/ja/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *問題を明示的な論理ステップに分解*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.ja.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/ja/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *特定のフォーマット、長さ、構造要件の強制*
 
@@ -300,7 +300,7 @@ Spring Boot Dashboardからは：
 
 「prompt-engineering」の横の再生ボタンをクリックしてこのモジュールを起動、またはすべてのモジュールを一括起動できます。
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.ja.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/ja/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **オプション2: シェルスクリプトの利用**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # すべてのモジュール
 
 ## アプリケーションのスクリーンショット
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.ja.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/ja/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *8つのプロンプトエンジニアリングパターンとその特徴・ユースケースを示すメインダッシュボード*
 
@@ -380,10 +380,10 @@ Webインターフェースで異なるプロンプト戦略を試せます。�
 
 「200の15%は？」のような簡単な質問を低意欲で聞くと、即座に直接的な回答が得られます。次に「高トラフィックAPIのキャッシュ戦略を設計してください」のような複雑な質問を高意欲で聞くと、モデルはゆっくり考え詳細な推論を示します。同じモデル、同じ質問構造でも、プロンプトが思考量を指示しているのです。
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.ja.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ja/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *最小限の推論での迅速な計算*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.ja.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/ja/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *包括的なキャッシュ戦略（2.8MB）*
 
@@ -391,7 +391,7 @@ Webインターフェースで異なるプロンプト戦略を試せます。�
 
 複数ステップのワークフローは、事前計画と進行のナレーションが有効です。モデルは何をするかを概説し、各ステップを説明し、結果をまとめます。
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.ja.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/ja/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *ステップごとのナレーション付きRESTエンドポイントの作成（3.9MB）*
 
@@ -399,7 +399,7 @@ Webインターフェースで異なるプロンプト戦略を試せます。�
 
 「メール検証サービスを作成する」を試してください。単にコードを生成して終わるのではなく、モデルは生成し、品質基準に照らして評価し、弱点を特定し、改善します。コードが本番基準を満たすまで繰り返す様子が見られます。
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.ja.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/ja/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *完全なメール検証サービス（5.2MB）*
 
@@ -407,7 +407,7 @@ Webインターフェースで異なるプロンプト戦略を試せます。�
 
 コードレビューには一貫した評価フレームワークが必要です。モデルは固定されたカテゴリ（正確性、プラクティス、パフォーマンス、セキュリティ）と重大度レベルを用いてコードを分析します。
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.ja.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/ja/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *フレームワークに基づくコードレビュー*
 
@@ -415,7 +415,7 @@ Webインターフェースで異なるプロンプト戦略を試せます。�
 
 「Spring Bootとは何ですか？」と尋ね、その直後に「例を見せて」と続けてください。モデルは最初の質問を覚えており、特定のSpring Bootの例を示します。メモリがなければ、2つ目の質問はあいまいすぎます。
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.ja.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/ja/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *質問間のコンテキスト保持*
 
@@ -423,7 +423,7 @@ Webインターフェースで異なるプロンプト戦略を試せます。�
 
 数学の問題を選び、ステップバイステップ推論と低熱意の両方で試してください。低熱意は答えだけを素早く返しますが不透明です。ステップバイステップはすべての計算と判断を示します。
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.ja.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/ja/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *明示的なステップを伴う数学問題*
 
@@ -431,7 +431,7 @@ Webインターフェースで異なるプロンプト戦略を試せます。�
 
 特定のフォーマットや語数が必要な場合、このパターンは厳密な遵守を強制します。100語ちょうどの箇条書き形式で要約を生成してみてください。
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.ja.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/ja/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *フォーマット制御付き機械学習要約*
 
@@ -445,7 +445,7 @@ GPT-5はプロンプトを通じて計算努力を制御できます。低努力
 
 プロンプト内のXMLタグに気づきましたか？装飾ではありません。モデルは自由形式のテキストよりも構造化された指示に従いやすいです。複数ステップのプロセスや複雑なロジックが必要な場合、構造はモデルが現在地と次に何をするかを追跡するのに役立ちます。
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.ja.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/ja/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *明確なセクションとXMLスタイルの構成を持つよく構造化されたプロンプトの解剖*
 

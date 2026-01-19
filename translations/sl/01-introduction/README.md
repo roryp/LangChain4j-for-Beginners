@@ -53,7 +53,7 @@ Jezikovni modeli so brezstanje. Vsak API klic je neodvisen. Če pošljete "Moje 
 
 To je v redu za preprosta vprašanja in odgovore, vendar je neuporabno za resne aplikacije. Botom za podporo strankam je treba zapomniti, kaj ste jim povedali. Osebni asistenti potrebujejo kontekst. Vsak večkrožni pogovor zahteva pomnilnik.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.sl.png" alt="Brezstanje proti stanju pogovorov" width="800"/>
+<img src="../../../translated_images/sl/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="Brezstanje proti stanju pogovorov" width="800"/>
 
 *Razlika med brezstanje (neodvisni klici) in stanje (zavedanje konteksta) pogovori*
 
@@ -61,7 +61,7 @@ To je v redu za preprosta vprašanja in odgovore, vendar je neuporabno za resne 
 
 Preden se poglobite v pogovore, je pomembno razumeti tokene - osnovne enote besedila, ki jih jezikovni modeli obdelujejo:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.sl.png" alt="Razlaga tokenov" width="800"/>
+<img src="../../../translated_images/sl/token-explanation.c39760d8ec650181.webp" alt="Razlaga tokenov" width="800"/>
 
 *Primer, kako se besedilo razdeli na tokene - "I love AI!" postane 4 ločene obdelovalne enote*
 
@@ -73,7 +73,7 @@ Pomnilnik klepeta rešuje problem brezstanja z ohranjanjem zgodovine pogovora. P
 
 LangChain4j zagotavlja implementacije pomnilnika, ki to samodejno upravljajo. Izberete, koliko sporočil želite obdržati, okvir pa upravlja kontekstno okno.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.sl.png" alt="Koncept pomnilniškega okna" width="800"/>
+<img src="../../../translated_images/sl/memory-window.bbe67f597eadabb3.webp" alt="Koncept pomnilniškega okna" width="800"/>
 
 *MessageWindowChatMemory ohranja drseče okno nedavnih sporočil in samodejno odstranjuje starejša*
 
@@ -212,7 +212,7 @@ Iz Spring Boot Dashboard lahko:
 
 Preprosto kliknite gumb za predvajanje poleg "introduction" za zagon tega modula ali zaženite vse module hkrati.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.sl.png" alt="Spring Boot nadzorna plošča" width="400"/>
+<img src="../../../translated_images/sl/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot nadzorna plošča" width="400"/>
 
 **Možnost 2: Uporaba shell skript**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # Vsi moduli
 
 Aplikacija nudi spletni vmesnik z dvema implementacijama klepeta ena ob drugi.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.sl.png" alt="Domači zaslon aplikacije" width="800"/>
+<img src="../../../translated_images/sl/home-screen.121a03206ab910c0.webp" alt="Domači zaslon aplikacije" width="800"/>
 
 *Nadzorna plošča prikazuje možnosti Simple Chat (brezstanje) in Conversational Chat (stanje)*
 
@@ -290,7 +290,7 @@ Aplikacija nudi spletni vmesnik z dvema implementacijama klepeta ena ob drugi.
 
 Poskusite najprej to. Vprašajte "Moje ime je John" in nato takoj "Kako je moje ime?" Model si ne bo zapomnil, ker je vsako sporočilo neodvisno. To prikazuje osnovni problem integracije jezikovnega modela - brez konteksta pogovora.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.sl.png" alt="Demo brezstanje klepeta" width="800"/>
+<img src="../../../translated_images/sl/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="Demo brezstanje klepeta" width="800"/>
 
 *AI si ne zapomni vašega imena iz prejšnjega sporočila*
 
@@ -298,7 +298,7 @@ Poskusite najprej to. Vprašajte "Moje ime je John" in nato takoj "Kako je moje 
 
 Zdaj poskusite isti zaporedje tukaj. Vprašajte "Moje ime je John" in nato "Kako je moje ime?" Tokrat si zapomni. Razlika je MessageWindowChatMemory - ohranja zgodovino pogovora in jo vključuje v vsak zahtevek. Tako deluje produkcijska pogovorna AI.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.sl.png" alt="Demo stanje klepeta" width="800"/>
+<img src="../../../translated_images/sl/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="Demo stanje klepeta" width="800"/>
 
 *AI si zapomni vaše ime iz prej v pogovoru*
 

@@ -61,7 +61,7 @@ Ein KI-Agent mit Tools folgt einem Muster von Überlegung und Handlung (ReAct):
 5. Das Tool führt aus und liefert Daten zurück  
 6. Der Agent integriert das Ergebnis und gibt die finale Antwort  
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.de.png" alt="ReAct Muster" width="800"/>
+<img src="../../../translated_images/de/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Muster" width="800"/>
 
 *Das ReAct-Muster – wie KI-Agenten zwischen Überlegung und Handlung wechseln, um Probleme zu lösen*
 
@@ -138,7 +138,7 @@ Alternative Ansätze (manuelle `AiServices.builder()`) erfordern mehr Code und v
 
 **Tool-Verkettung** – Die KI kann mehrere Tools nacheinander aufrufen. Stellen Sie die Frage „Wie ist das Wetter in Seattle und soll ich einen Regenschirm mitnehmen?“ und beobachten Sie, wie sie `getCurrentWeather` mit Überlegungen zum Regenschutz verknüpft.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.de.png" alt="Tool-Verkettung" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/de/tool-chaining.3b25af01967d6f7b.webp" alt="Tool-Verkettung" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Sequenzielle Tool-Aufrufe – die Ausgabe eines Tools fließt in die nächste Entscheidung ein*
 
@@ -171,7 +171,7 @@ Im Spring Boot Dashboard können Sie:
 
 Klicken Sie einfach auf den Play-Button neben „tools“, um dieses Modul zu starten, oder starten Sie alle Module auf einmal.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.de.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/de/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Option 2: Shell-Skripte verwenden**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Alle Module
 
 Die Anwendung bietet eine Weboberfläche, auf der Sie mit einem KI-Agenten interagieren können, der Zugriff auf Wetter- und Temperaturumrechner-Tools hat.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.de.png" alt="KI-Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/de/tools-homepage.4b4cd8b2717f9621.webp" alt="KI-Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Das KI-Agent Tools-Interface – schnelle Beispiele und Chat-Oberfläche zur Interaktion mit Tools*
 
@@ -257,7 +257,7 @@ Probieren Sie jetzt eine komplexere Frage: „Wie ist das Wetter in Seattle und 
 
 Die Chat-Oberfläche speichert den Gesprächsverlauf, sodass Sie mehrstufige Interaktionen führen können. Sie können alle bisherigen Anfragen und Antworten sehen, was es einfach macht, den Kontext zu verfolgen und zu verstehen, wie der Agent über mehrere Austausche Kontext aufbaut.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.de.png" alt="Gespräch mit mehreren Tool-Aufrufen" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/de/tools-conversation-demo.89f2ce9676080f59.webp" alt="Gespräch mit mehreren Tool-Aufrufen" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Mehrstufiges Gespräch mit einfachen Umrechnungen, Wetterabfragen und Tool-Verkettung*
 

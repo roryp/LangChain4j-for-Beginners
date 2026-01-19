@@ -35,7 +35,7 @@ Ai construit AI conversațional, ai stăpânit prompturile, ai fundamentat răsp
 
 Protocolul Contextului Modelului (MCP) oferă exact asta - o metodă standard pentru aplicațiile AI de a descoperi și folosi unelte externe. În loc să scrii integrări custom pentru fiecare sursă de date sau serviciu, te conectezi la servere MCP care expun capabilitățile lor într-un format consecvent. Agentul tău AI poate astfel să descopere și să folosească aceste unelte automat.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.ro.png" alt="Comparație MCP" width="800"/>
+<img src="../../../translated_images/ro/mcp-comparison.9129a881ecf10ff5.webp" alt="Comparație MCP" width="800"/>
 
 *Înainte de MCP: Integrări complexe punct-la-punct. După MCP: Un protocol, posibilități infinite.*
 
@@ -43,7 +43,7 @@ MCP rezolvă o problemă fundamentală în dezvoltarea AI: fiecare integrare est
 
 MCP standardizează acest lucru. Un server MCP expune unelte cu descrieri clare și scheme. Orice client MCP se poate conecta, descoperi uneltele disponibile și le poate folosi. Construiești o singură dată, folosești peste tot.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.ro.png" alt="Arhitectura MCP" width="800"/>
+<img src="../../../translated_images/ro/mcp-architecture.b3156d787a4ceac9.webp" alt="Arhitectura MCP" width="800"/>
 
 *Arhitectura Protocolului Contextului Modelului - descoperire și execuție standardizată a uneltelor*
 
@@ -71,7 +71,7 @@ Când clientul tău se conectează la un server MCP, întreabă „Ce unelte ai?
 
 MCP suportă diferite mecanisme de transport. Acest modul demonstrează transportul Stdio pentru procese locale:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.ro.png" alt="Mecanisme de Transport" width="800"/>
+<img src="../../../translated_images/ro/transport-mechanisms.2791ba7ee93cf020.webp" alt="Mecanisme de Transport" width="800"/>
 
 *Mecanisme de transport MCP: HTTP pentru servere la distanță, Stdio pentru procese locale*
 
@@ -169,7 +169,7 @@ Modelul **Agent Supraveghetor** este o formă **flexibilă** a AI agentic. Un Su
 
 În demo, `FileAgent` citește un fișier folosind uneltele MCP pentru sistemul de fișiere, iar `ReportAgent` generează un raport structurat cu un sumar executiv (1 propoziție), 3 puncte cheie și recomandări. Supraveghetorul orchestrează acest flux automat:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.ro.png" alt="Modulul Agentic" width="800"/>
+<img src="../../../translated_images/ro/agentic.cf84dcda226374e3.webp" alt="Modulul Agentic" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

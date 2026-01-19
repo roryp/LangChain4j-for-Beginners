@@ -38,7 +38,7 @@ Ang LangChain4j ay isang Java library na nagpapadali sa paggawa ng mga AI-powere
 
 Ang "chain" sa LangChain ay tumutukoy sa pagsasama-sama ng maraming bahagi - maaari mong i-chain ang isang prompt sa isang model hanggang sa parser, o pagsamahin ang maraming tawag sa AI kung saan ang output ng isa ay nagsisilbing input para sa kasunod. Nakatuon ang mabilis na simula na ito sa mga pundasyon bago tuklasin ang mas komplikadong chains.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.tl.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/tl/langchain-concept.ad1fe6cf063515e1.webp" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Pagsasama ng mga bahagi sa LangChain4j - ang mga pundasyon na nagsasanib para makagawa ng makapangyarihang AI workflows*
 
@@ -50,7 +50,7 @@ Gagamit tayo ng tatlong pangunahing bahagi:
 
 **MessageWindowChatMemory** - Nagpapanatili ng kasaysayan ng pag-uusap. Kung wala ito, bawat request ay independyente. Kung meron, naaalala ng AI ang mga nakaraang mensahe at nagpapanatili ng konteksto sa maraming turn.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.tl.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/tl/architecture.eedc993a1c576839.webp" alt="LangChain4j Architecture" width="800"/>
 
 *Arkitektura ng LangChain4j - mga pangunahing bahagi na nagtitulungan para paganahin ang iyong AI applications*
 

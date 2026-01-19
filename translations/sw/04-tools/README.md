@@ -61,7 +61,7 @@ Ajenti wa AI mwenye vifaa hufuata mfano wa kufikiri na kutenda (ReAct):
 5. Kifaa hutekeleza na kurudisha data
 6. Ajenti huingiza matokeo na kutoa jibu la mwisho
 
-<img src="../../../translated_images/react-pattern.86aafd3796f3fd13.sw.png" alt="Mfumo wa ReAct" width="800"/>
+<img src="../../../translated_images/sw/react-pattern.86aafd3796f3fd13.webp" alt="Mfumo wa ReAct" width="800"/>
 
 *Mfumo wa ReAct - jinsi maajenti wa AI hubadilishana kati ya kufikiri na kutenda kutatua matatizo*
 
@@ -138,7 +138,7 @@ Njia mbadala (mkono `AiServices.builder()`) zinahitaji zaidi ya kode na hazina f
 
 **Kuingiza Vifaa Mfululizo** - AI inaweza kuita vifaa vingi mfululizo. Uliza "Hali ya hewa ikoje Seattle na je, niipige jeusi?" na uone inavyounganisha `getCurrentWeather` na kufikiri juu ya mavazi ya mvua.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/tool-chaining.3b25af01967d6f7b.sw.png" alt="Kuingiza Vifaa Mfululizo" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/sw/tool-chaining.3b25af01967d6f7b.webp" alt="Kuingiza Vifaa Mfululizo" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Wito mfululizo wa vifaa - matokeo ya kifaa kimoja huungwa mkono kwa uamuzi unaofuata*
 
@@ -171,7 +171,7 @@ Kutoka Dashibodi ya Spring Boot, unaweza:
 
 Bonyeza tu kitufe cha kuanzisha kando na "tools" kuanzisha moduli hii, au anzisha moduli zote mara moja.
 
-<img src="../../../translated_images/dashboard.9b519b1a1bc1b30a.sw.png" alt="Dashibodi ya Spring Boot" width="400"/>
+<img src="../../../translated_images/sw/dashboard.9b519b1a1bc1b30a.webp" alt="Dashibodi ya Spring Boot" width="400"/>
 
 **Chaguo 2: Kutumia skiripti za shell**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Moduli zote
 
 Programu hutoa kiolesura cha wavuti ambapo unaweza kuingiliana na ajenti wa AI mwenye upatikanaji wa vifaa vya hali ya hewa na kubadilisha joto.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/tools-homepage.4b4cd8b2717f9621.sw.png" alt="Kiolesura cha Vifaa vya Maajenti wa AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/sw/tools-homepage.4b4cd8b2717f9621.webp" alt="Kiolesura cha Vifaa vya Maajenti wa AI" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Kiolesura cha Vifaa vya Maajenti wa AI - mifano ya haraka na mazungumzo ya kuingiliana na vifaa*
 
@@ -257,7 +257,7 @@ Sasa jaribu jambo tata zaidi: "Hali ya hewa ikoje Seattle na ibadilishe kuwa Fah
 
 Kiolesura cha mazungumzo kinafuatilia historia ya mazungumzo, kikiruhusu maingiliano ya hatua nyingi. Unaweza kuona maswali yote yaliyopita na majibu, kuifanya iwe rahisi kufuatilia mazungumzo na kuelewa jinsi ajenti anavyojenga muktadha kwa mabadilishano mengi.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/tools-conversation-demo.89f2ce9676080f59.sw.png" alt="Mazungumzo na Wito wa Vifaa Vyenye Mbalimbali" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/sw/tools-conversation-demo.89f2ce9676080f59.webp" alt="Mazungumzo na Wito wa Vifaa Vyenye Mbalimbali" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Mazungumzo yenye hatua nyingi yakiwa na uboreshaji rahisi wa kubadilisha joto, utaftaji wa hali ya hewa, na kuingiza vifaa mfululizo*
 

@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.et.png" alt="Edukad testi tulemused" width="800"/>
+<img src="../../../translated_images/et/test-results.ea5c98d8f3642043.webp" alt="Edukad testi tulemused" width="800"/>
 
 *Testide õnnestunud täitmine: kõik testid läbisid ilma ebaõnnestumisteta*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 See kursus keskendub lokaalselt käivitatavatele **ühikutestidele**. Iga test demonstreerib üksikut LangChain4j kontseptsiooni eraldatult.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.et.png" alt="Testimise püramiid" width="800"/>
+<img src="../../../translated_images/et/testing-pyramid.2dd1079a0481e53e.webp" alt="Testimise püramiid" width="800"/>
 
 *Testimise püramiid, mis näitab tasakaalu üksikutestide (kiired, eraldatud), integratsioonitestide (päris komponendid) ja lõpp-kuni-lõpp-katsete vahel. See koolitus hõlmab üksikutestimist.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#peaksSäilitamaVestluseAjalugu
 
 Kui kasutad Visual Studio Code'i, pakub Test Explorer graafilist liidest testide käivitamiseks ja silumiseks.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.et.png" alt="VS Code Test Exploreri" width="800"/>
+<img src="../../../translated_images/et/vscode-testing.f02dd5917289dced.webp" alt="VS Code Test Exploreri" width="800"/>
 
 *VS Code Test Explorer kuvab testi puu kõigi Java testiklasside ja üksikute testmeetoditega*
 
@@ -134,7 +134,7 @@ Test Explorer kuvab läbipääsu puhul rohelisi linnukesi ning annab üksikasjal
 
 Lihtsaim muster testib päringu malle ilma ühegi AI-mudeli kutsumiseta. Sa kontrollid, et muutujate asendamine töötab õigesti ja päringud on oodatud kujul vormindatud.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.et.png" alt="Päringu mallide testimine" width="800"/>
+<img src="../../../translated_images/et/prompt-template-testing.b902758ddccc8dee.webp" alt="Päringu mallide testimine" width="800"/>
 
 *Päringu mallide testimine, kus on näidatud muutujate asendamise voog: mall kohatäiteks → väärtused rakendatud → vormindatud väljund kontrollitud*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#promptimalli vormind
 
 Vestlusloogika testimisel kasuta Mockito't, et luua võltsmudelid, mis tagastavad eelnevalt määratletud vastuseid. See teeb testid kiireks, tasuta ja deterministlikuks.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.et.png" alt="Mock vs Reaalse API võrdlus" width="800"/>
+<img src="../../../translated_images/et/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Mock vs Reaalse API võrdlus" width="800"/>
 
 *Võrdlus, mis selgitab, miks mock'e eelistatakse testimisel: need on kiired, tasuta, deterministlikud ja ei vaja API-võtmeid*
 
@@ -231,7 +231,7 @@ See muster esineb failis `01-introduction/src/test/java/com/example/langchain4j/
 
 Vestluse mälu peab hoidma mitme kasutaja andmed eraldi. See test kontrollib, et vestlused ei sega kontekste omavahel.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.et.png" alt="Vestluse isoleeritus" width="800"/>
+<img src="../../../translated_images/et/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Vestluse isoleeritus" width="800"/>
 
 *Vestluse isoleerimise testimine, mis näitab erinevate kasutajate jaoks eraldi mälukogusid, et vältida kontekstide segunemist*
 
@@ -263,7 +263,7 @@ Iga vestlus säilitab oma iseseisva ajaloo. Tootmissüsteemides on see isoleerit
 
 Tööriistad on funktsioonid, mida AI saab kutsuda. Testi neid otse, et tagada nende õige toimimine sõltumata AI otsustest.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.et.png" alt="Tööriistade testimine" width="800"/>
+<img src="../../../translated_images/et/tools-testing.3e1706817b0b3924.webp" alt="Tööriistade testimine" width="800"/>
 
 *Tööriistade eraldi testimine, kus näidatakse mock-tööriistade käivitust ilma AI-kõnedeta äriloogika kinnitamiseks*
 
@@ -294,7 +294,7 @@ Need testid failist `04-tools/src/test/java/com/example/langchain4j/agents/tools
 
 RAG-süsteemid vajavad tavaliselt vektoriandmebaase ja embeddinguteenuseid. Mälusisene muster võimaldab testida kogu torujuhet ilma väliste sõltuvusteta.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.et.png" alt="Mälusisene RAG-testimine" width="800"/>
+<img src="../../../translated_images/et/rag-testing.ee7541b1e23934b1.webp" alt="Mälusisene RAG-testimine" width="800"/>
 
 *Mälusisene RAG-testimise töövoog, mis näitab dokumentide parsingu, embeddingu salvestamist ja sarnasuse otsingut ilma andmebaasi nõudmata*
 

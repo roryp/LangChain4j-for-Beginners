@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.bg.png" alt="Успешни резултати от тестовете" width="800"/>
+<img src="../../../translated_images/bg/test-results.ea5c98d8f3642043.webp" alt="Успешни резултати от тестовете" width="800"/>
 
 *Успешно изпълнение на тестовете, показващо всички преминали тестове без нито една грешка*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Този курс се фокусира върху **модулни тестове** които се изпълняват локално. Всеки тест демонстрира специфична концепция на LangChain4j в изолация.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.bg.png" alt="Пирамида на тестването" width="800"/>
+<img src="../../../translated_images/bg/testing-pyramid.2dd1079a0481e53e.webp" alt="Пирамида на тестването" width="800"/>
 
 *Пирамида на тестването, показваща баланса между модулните тестове (бързи, изолирани), интеграционните тестове (реални компоненти) и end-to-end тестовете. Това обучение покрива модулното тестване.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#трябва да поддържа и
 
 Ако използвате Visual Studio Code, Test Explorer предоставя графичен интерфейс за стартиране и дебъгване на тестове.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.bg.png" alt="VS Code Test Explorer" width="800"/>
+<img src="../../../translated_images/bg/vscode-testing.f02dd5917289dced.webp" alt="VS Code Test Explorer" width="800"/>
 
 *VS Code Test Explorer показва дървото с тестовете с всички Java тестови класове и индивидуални тестови методи*
 
@@ -134,7 +134,7 @@ Test Explorer показва зелени отметки за преминали
 
 Най-простият шаблон тества шаблоните за подсказки без да извиква какъвто и да е AI модел. Проверявате, че заместването на променливи работи правилно и подсказките са форматирани както се очаква.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.bg.png" alt="Тестване на шаблони за подсказки" width="800"/>
+<img src="../../../translated_images/bg/prompt-template-testing.b902758ddccc8dee.webp" alt="Тестване на шаблони за подсказки" width="800"/>
 
 *Тестване на шаблони за подсказки, показващо поток на заместване на променливи: шаблон с плейсхолдери → прилагане на стойности → проверка на форматирания изход*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#Тест на фор
 
 Когато тествате логиката на разговора, използвайте Mockito за създаване на фалшиви модели, които връщат предварително зададени отговори. Това прави тестовете бързи, безплатни и детерминирани.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.bg.png" alt="Сравнение на мок срещу реално API" width="800"/>
+<img src="../../../translated_images/bg/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Сравнение на мок срещу реално API" width="800"/>
 
 *Сравнение, показващо защо моковете са предпочитани за тестване: те са бързи, безплатни, детерминирани и не изискват API ключове*
 
@@ -231,7 +231,7 @@ class SimpleConversationTest {
 
 Паметта на разговорите трябва да държи множество потребители разделени. Този тест проверява, че разговорите не смесват контекстите.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.bg.png" alt="Изолация на разговори" width="800"/>
+<img src="../../../translated_images/bg/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Изолация на разговори" width="800"/>
 
 *Тестване на изолация на разговори, показващо отделни хранилища за памет за различни потребители, за да се предотврати смесване на контекстите*
 
@@ -263,7 +263,7 @@ void shouldIsolateConversationsByid() {
 
 Инструментите са функции, които AI може да извика. Тествайте ги директно, за да се уверите, че работят правилно независимо от решенията на AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.bg.png" alt="Тестване на инструменти" width="800"/>
+<img src="../../../translated_images/bg/tools-testing.3e1706817b0b3924.webp" alt="Тестване на инструменти" width="800"/>
 
 *Тестване на инструменти независимо, показващо мок изпълнение на инструмент без повиквания към AI за проверка на бизнес логиката*
 
@@ -294,7 +294,7 @@ void shouldDemonstrateToolChaining() {
 
 RAG системите традиционно изискват векторни бази данни и embedding услуги. In-memory шаблонът ви позволява да тествате целия пайплайн без външни зависимости.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.bg.png" alt="In-Memory RAG тестване" width="800"/>
+<img src="../../../translated_images/bg/rag-testing.ee7541b1e23934b1.webp" alt="In-Memory RAG тестване" width="800"/>
 
 *In-memory RAG тестване, показващо парсване на документи, съхранение на вграждания и търсене по сходство без нужда от база данни*
 

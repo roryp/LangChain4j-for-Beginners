@@ -35,7 +35,7 @@ mvn test
 mvn --% test
 ```
 
-<img src="../../../translated_images/test-results.ea5c98d8f3642043.cs.png" alt="Úspěšné výsledky testů" width="800"/>
+<img src="../../../translated_images/cs/test-results.ea5c98d8f3642043.webp" alt="Úspěšné výsledky testů" width="800"/>
 
 *Úspěšné spuštění testů ukazující, že všechny testy proběhly bez chyb*
 
@@ -43,7 +43,7 @@ mvn --% test
 
 Tento kurz se zaměřuje na **jednotkové testy**, které běží lokálně. Každý test demonstruje konkrétní koncept LangChain4j izolovaně.
 
-<img src="../../../translated_images/testing-pyramid.2dd1079a0481e53e.cs.png" alt="Testovací pyramida" width="800"/>
+<img src="../../../translated_images/cs/testing-pyramid.2dd1079a0481e53e.webp" alt="Testovací pyramida" width="800"/>
 
 *Testovací pyramida ukazující vyváženost mezi jednotkovými testy (rychlé, izolované), integračními testy (skutečné komponenty) a end-to-end testy. Tento kurz pokrývá jednotkové testování.*
 
@@ -114,7 +114,7 @@ mvn --% test -Dtest=SimpleConversationTest#mělo by uchovávat historii konverza
 
 Pokud používáte Visual Studio Code, Test Explorer poskytuje grafické rozhraní pro spouštění a ladění testů.
 
-<img src="../../../translated_images/vscode-testing.f02dd5917289dced.cs.png" alt="Prohlížeč testů VS Code" width="800"/>
+<img src="../../../translated_images/cs/vscode-testing.f02dd5917289dced.webp" alt="Prohlížeč testů VS Code" width="800"/>
 
 *Prohlížeč testů VS Code ukazující strom testů se všemi Java testovacími třídami a jednotlivými testovacími metodami*
 
@@ -134,7 +134,7 @@ Test Explorer zobrazuje zelené fajfky pro úspěšné testy a poskytuje podrobn
 
 Nejjednodušší vzor testuje šablony promptů bez volání jakéhokoli AI modelu. Ověříte, že nahrazování proměnných funguje správně a prompt je naformátován podle očekávání.
 
-<img src="../../../translated_images/prompt-template-testing.b902758ddccc8dee.cs.png" alt="Testování šablon promptů" width="800"/>
+<img src="../../../translated_images/cs/prompt-template-testing.b902758ddccc8dee.webp" alt="Testování šablon promptů" width="800"/>
 
 *Testování šablon promptů ukazující tok nahrazování proměnných: šablona s placeholdery → aplikované hodnoty → ověřený naformátovaný výstup*
 
@@ -173,7 +173,7 @@ cd 00-quick-start; mvn --% test -Dtest=SimpleQuickStartTest#testování formáto
 
 Při testování logiky konverzace použijte Mockito k vytvoření falešných modelů, které vracejí předem určené odpovědi. Díky tomu jsou testy rychlé, zdarma a deterministické.
 
-<img src="../../../translated_images/mock-vs-real.3b8b1f85bfe6845e.cs.png" alt="Porovnání mock vs reálné API" width="800"/>
+<img src="../../../translated_images/cs/mock-vs-real.3b8b1f85bfe6845e.webp" alt="Porovnání mock vs reálné API" width="800"/>
 
 *Porovnání ukazující, proč jsou mocky preferovány pro testování: jsou rychlé, zdarma, deterministické a nevyžadují API klíče*
 
@@ -231,7 +231,7 @@ Tento vzor se objevuje v `01-introduction/src/test/java/com/example/langchain4j/
 
 Paměť konverzace musí udržovat oddělené uživatele. Tento test ověřuje, že se kontexty nekombinují.
 
-<img src="../../../translated_images/conversation-isolation.e00336cf8f7a3e3f.cs.png" alt="Izolace konverzací" width="800"/>
+<img src="../../../translated_images/cs/conversation-isolation.e00336cf8f7a3e3f.webp" alt="Izolace konverzací" width="800"/>
 
 *Testování izolace konverzací ukazující oddělené úložiště paměti pro různé uživatele, aby se zabránilo míchání kontextu*
 
@@ -263,7 +263,7 @@ Každá konverzace si udržuje vlastní nezávislou historii. V produkčních sy
 
 Nástroje jsou funkce, které může AI volat. Testujte je přímo, abyste zajistili, že fungují správně nezávisle na rozhodnutích AI.
 
-<img src="../../../translated_images/tools-testing.3e1706817b0b3924.cs.png" alt="Testování nástrojů" width="800"/>
+<img src="../../../translated_images/cs/tools-testing.3e1706817b0b3924.webp" alt="Testování nástrojů" width="800"/>
 
 *Testování nástrojů nezávisle ukazující spuštění mock nástroje bez volání AI pro ověření business logiky*
 
@@ -294,7 +294,7 @@ Tyto testy z `04-tools/src/test/java/com/example/langchain4j/agents/tools/Simple
 
 Systémy RAG tradičně vyžadují vektorové databáze a embedding služby. Vzor v paměti vám umožní otestovat celý pipeline bez externích závislostí.
 
-<img src="../../../translated_images/rag-testing.ee7541b1e23934b1.cs.png" alt="Testování RAG v paměti" width="800"/>
+<img src="../../../translated_images/cs/rag-testing.ee7541b1e23934b1.webp" alt="Testování RAG v paměti" width="800"/>
 
 *Workflow testování RAG v paměti ukazující parsování dokumentů, ukládání embeddingů a vyhledávání podle podobnosti bez nutnosti databáze*
 

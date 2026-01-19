@@ -38,7 +38,7 @@ LangChain4j е Java библиотека, която опростява създ
 
 „Цепната верига“ (chain) в LangChain се отнася до свързване на множество компоненти - може да свържете подкана с модел, с парсър или да свържете няколко AI извиквания, при които един изход влиза като вход към следващото. Този бърз старт се фокусира върху основите, преди да изследва по-сложни вериги.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.bg.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/bg/langchain-concept.ad1fe6cf063515e1.webp" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Свързване на компоненти в LangChain4j – строителни блокове, свързващи се, за да създадат мощни AI работни потоци*
 
@@ -50,7 +50,7 @@ LangChain4j е Java библиотека, която опростява създ
 
 **MessageWindowChatMemory** – поддържа история на разговора. Без него всяка заявка е независима. С него AI помни предишни съобщения и поддържа контекст през няколко ходове.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.bg.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/bg/architecture.eedc993a1c576839.webp" alt="LangChain4j Architecture" width="800"/>
 
 *Архитектура на LangChain4j – основни компоненти, работещи заедно, за да захранват вашите AI приложения*
 

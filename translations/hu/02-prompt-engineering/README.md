@@ -52,7 +52,7 @@ Gondolj rá úgy, mint amikor utasítást adsz egy kollégának. A „Javítsd m
 
 Ez a modul fejlett promptolási mintákat mutat be ugyanazon LangChain4j alapokra építve, mint az előző modulok, a prompt struktúrájára és az érvelés vezérlésére fókuszálva.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.hu.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/hu/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *Hogyan kapcsolja össze a LangChain4j a promptjaidat az Azure OpenAI GPT-5-tel*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
   
-<img src="../../../translated_images/message-types.93e0779798a17c9d.hu.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/hu/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *A SystemMessage tartós kontextust biztosít, míg a UserMessage-ek egyedi kéréseket tartalmaznak*
 
@@ -104,11 +104,11 @@ A legfontosabb tanulság: a LangChain4j biztosítja az infrastruktúrát (modell
 
 Nem minden problémához ugyanaz a megközelítés kell. Egyes kérdések gyors válaszokat igényelnek, mások mély gondolkodást. Egyesek látható érvelést, mások csak eredményeket. Ez a modul nyolc promptolási mintát fed le – mindegyik más helyzetekre optimalizálva. Mindegyikkel kísérletezni fogsz, hogy megtanuld, mikor melyik működik a legjobban.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.hu.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/hu/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *A nyolc prompt tervezési minta áttekintése és felhasználási eseteik*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.hu.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/hu/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *Alacsony lelkesedés (gyors, közvetlen) vs Magas lelkesedés (alapos, feltáró) érvelési megközelítések*
 
@@ -163,7 +163,7 @@ A Chain-of-Thought promptolás kifejezetten kéri a modellt, hogy mutassa be ér
 > - „Mik a legjobb gyakorlatok az eszköz bevezetők strukturálására éles alkalmazásokban?”  
 > - „Hogyan lehet köztes előrehaladási frissítéseket rögzíteni és megjeleníteni egy UI-ban?”
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.hu.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/hu/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *Tervezés → Végrehajtás → Összefoglalás munkafolyamat többlépéses feladatokhoz*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.hu.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/hu/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *Iteratív fejlesztési ciklus – generálás, értékelés, problémák azonosítása, javítás, ismétlés*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - „Mi a legjobb módja a strukturált kimenet programozott feldolgozásának és végrehajtásának?”  
 > - „Hogyan biztosítható a következetes súlyossági szintek alkalmazása különböző ellenőrzési munkamenetekben?”
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.hu.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/hu/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *Négy kategóriás keretrendszer következetes kódellenőrzésekhez súlyossági szintekkel*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
   
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.hu.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/hu/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *Hogyan halmozódik fel a beszélgetési kontextus több fordulón át, amíg el nem éri a token limitet*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.hu.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/hu/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *Problémák explicit logikai lépésekre bontása*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
   
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.hu.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/hu/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *Specifikus formátum, hossz és struktúra követelmények érvényesítése*
 
@@ -300,7 +300,7 @@ A Spring Boot Dashboard segítségével:
 
 Egyszerűen kattints a lejátszás gombra a „prompt-engineering” mellett, hogy elindítsd ezt a modult, vagy indítsd el egyszerre az összes modult.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.hu.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/hu/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **2. lehetőség: Shell szkriptek használata**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # Minden modul
   
 ## Alkalmazás képernyőképek
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.hu.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/hu/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *A fő műszerfal, amely az összes 8 prompt tervezési mintát mutatja jellemzőikkel és felhasználási eseteikkel*
 
@@ -380,10 +380,10 @@ A webes felület lehetővé teszi, hogy különböző promptolási stratégiákk
 
 Tegyél fel egy egyszerű kérdést, például „Mi 15%-a 200-nak?” Alacsony lelkesedéssel. Azonnali, közvetlen választ kapsz. Most kérdezz valami összetettet, például „Tervezzen egy gyorsítótárazási stratégiát egy nagy forgalmú API-hoz” Magas lelkesedéssel. Figyeld, ahogy a modell lassabban dolgozik és részletes érvelést ad. Ugyanaz a modell, ugyanaz a kérdésfelépítés – de a prompt megmondja, mennyi gondolkodást végezzen.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.hu.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/hu/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *Gyors számítás minimális érveléssel*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.hu.png" alt="High Eagerness Demo" width="800"/>
+<img src="../../../translated_images/hu/high-eagerness-demo.4ac93e7786c5a376.webp" alt="High Eagerness Demo" width="800"/>
 
 *Átfogó gyorsítótárazási stratégia (2,8MB)*
 
@@ -391,7 +391,7 @@ Tegyél fel egy egyszerű kérdést, például „Mi 15%-a 200-nak?” Alacsony 
 
 A többlépéses munkafolyamatok előnyösek az előzetes tervezés és a folyamat narrációja szempontjából. A modell vázolja, mit fog tenni, narrálja az egyes lépéseket, majd összefoglalja az eredményeket.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.hu.png" alt="Task Execution Demo" width="800"/>
+<img src="../../../translated_images/hu/tool-preambles-demo.3ca4881e417f2e28.webp" alt="Task Execution Demo" width="800"/>
 
 *REST végpont létrehozása lépésről lépésre narrációval (3,9MB)*
 
@@ -399,7 +399,7 @@ A többlépéses munkafolyamatok előnyösek az előzetes tervezés és a folyam
 
 Próbáld ki a "Hozz létre egy e-mail érvényesítő szolgáltatást" kérést. Ahelyett, hogy csak kódot generálna és megállna, a modell generál, értékel minőségi kritériumok alapján, azonosítja a gyengeségeket, és javít. Láthatod, ahogy iterál, amíg a kód eléri a gyártási szintet.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.hu.png" alt="Self-Reflecting Code Demo" width="800"/>
+<img src="../../../translated_images/hu/self-reflecting-code-demo.851ee05c988e743f.webp" alt="Self-Reflecting Code Demo" width="800"/>
 
 *Teljes e-mail érvényesítő szolgáltatás (5,2MB)*
 
@@ -407,7 +407,7 @@ Próbáld ki a "Hozz létre egy e-mail érvényesítő szolgáltatást" kérést
 
 A kódáttekintésekhez következetes értékelési keretrendszerek szükségesek. A modell rögzített kategóriák (helyesség, gyakorlatok, teljesítmény, biztonság) és súlyossági szintek alapján elemzi a kódot.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.hu.png" alt="Structured Analysis Demo" width="800"/>
+<img src="../../../translated_images/hu/structured-analysis-demo.9ef892194cd23bc8.webp" alt="Structured Analysis Demo" width="800"/>
 
 *Keretrendszer-alapú kódáttekintés*
 
@@ -415,7 +415,7 @@ A kódáttekintésekhez következetes értékelési keretrendszerek szükségese
 
 Kérdezd meg: "Mi az a Spring Boot?" majd azonnal kövesd a "Mutass egy példát" kérdéssel. A modell emlékszik az első kérdésedre, és kifejezetten egy Spring Boot példát ad. Memória nélkül a második kérdés túl általános lenne.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.hu.png" alt="Multi-Turn Chat Demo" width="800"/>
+<img src="../../../translated_images/hu/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="Multi-Turn Chat Demo" width="800"/>
 
 *Kontekstus megőrzése a kérdések között*
 
@@ -423,7 +423,7 @@ Kérdezd meg: "Mi az a Spring Boot?" majd azonnal kövesd a "Mutass egy példát
 
 Válassz egy matekfeladatot, és próbáld ki mind a Lépésről lépésre érveléssel, mind az Alacsony lelkesedéssel. Az alacsony lelkesedés csak a választ adja meg – gyors, de átláthatatlan. A lépésről lépésre megmutat minden számítást és döntést.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.hu.png" alt="Step-by-Step Reasoning Demo" width="800"/>
+<img src="../../../translated_images/hu/step-by-step-reasoning-demo.12139513356faecd.webp" alt="Step-by-Step Reasoning Demo" width="800"/>
 
 *Matekfeladat explicit lépésekkel*
 
@@ -431,7 +431,7 @@ Válassz egy matekfeladatot, és próbáld ki mind a Lépésről lépésre érve
 
 Ha specifikus formátumokra vagy szószámra van szükség, ez a minta szigorú betartást érvényesít. Próbálj meg egy összefoglalót generálni pontosan 100 szóban, felsorolásos formátumban.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.hu.png" alt="Constrained Output Demo" width="800"/>
+<img src="../../../translated_images/hu/constrained-output-demo.567cc45b75da1633.webp" alt="Constrained Output Demo" width="800"/>
 
 *Gépi tanulás összefoglaló formátumvezérléssel*
 
@@ -445,7 +445,7 @@ A GPT-5 lehetővé teszi, hogy a promptjaidon keresztül szabályozd a számít�
 
 Észrevetted az XML címkéket a promptokban? Nem díszítésként vannak ott. A modellek megbízhatóbban követik a strukturált utasításokat, mint a szabad szöveget. Ha többlépéses folyamatokra vagy összetett logikára van szükség, a struktúra segít a modellnek nyomon követni, hol tart és mi következik.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.hu.png" alt="Prompt Structure" width="800"/>
+<img src="../../../translated_images/hu/prompt-structure.a77763d63f4e2f89.webp" alt="Prompt Structure" width="800"/>
 
 *Egy jól strukturált prompt anatómiája világos szakaszokkal és XML-stílusú szervezéssel*
 

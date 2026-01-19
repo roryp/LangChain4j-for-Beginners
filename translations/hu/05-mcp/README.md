@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 A Modell Kontextus Protokoll (MCP) pontosan ezt nyújtja - egy szabványos módot arra, hogy az AI-alkalmazások felfedezhessék és használhassák a külső eszközöket. Egyedi integrációk helyett minden adatforráshoz vagy szolgáltatáshoz MCP szerverek csatlakoznak, amelyek képességeiket egységes formátumban teszik elérhetővé. Az AI ügynököd ezután automatikusan képes felfedezni és használni ezeket az eszközöket.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.hu.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/hu/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *Előtte MCP: bonyolult pont-pont integrációk. Utána MCP: Egy protokoll, végtelen lehetőségek.*
 
@@ -43,7 +43,7 @@ Az MCP megold egy alapvető problémát az AI fejlesztésben: minden integráci�
 
 Az MCP ezt szabványosítja. Egy MCP szerver eszközöket tesz elérhetővé világos leírásokkal és sémákkal. Bármely MCP kliens csatlakozhat, felfedezheti az elérhető eszközöket, és használhatja azokat. Egyszer építsd meg, bárhol használd.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.hu.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/hu/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Modell Kontextus Protokoll architektúra - szabványosított eszköz felfedezés és használat*
 
@@ -71,7 +71,7 @@ Amikor a kliensed csatlakozik egy MCP szerverhez, megkérdezi: „Milyen eszköz
 
 Az MCP különböző átvitel mechanizmusokat támogat. Ez a modul a Stdio átvitel demonstrációját mutatja be helyi folyamatokhoz:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.hu.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/hu/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *MCP átvitel mechanizmusok: HTTP távoli szerverekhez, Stdio helyi folyamatokhoz*
 
@@ -169,7 +169,7 @@ A **Felügyelő Agent minta** egy **rugalmas** agentic AI forma. Egy felügyelő
 
 A demóban a `FileAgent` MCP fájlrendszer eszközökkel olvassa a fájlt, a `ReportAgent` pedig strukturált jelentést készít egy végrehajtói összefoglalóval (1 mondat), 3 kulcsponttal és ajánlásokkal. A Felügyelő automatikusan irányítja ezt a folyamatot:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.hu.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/hu/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

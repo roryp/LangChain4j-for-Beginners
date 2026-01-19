@@ -53,7 +53,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 이는 간단한 Q&A에는 괜찮지만 실제 애플리케이션에는 쓸모가 없습니다. 고객 서비스 봇은 사용자가 말한 내용을 기억해야 합니다. 개인 비서는 컨텍스트가 필요합니다. 다중 턴 대화는 메모리가 필요합니다.
 
-<img src="../../../translated_images/stateless-vs-stateful.cc4a4765e649c41a.ko.png" alt="무상태 대화 vs 상태 유지 대화" width="800"/>
+<img src="../../../translated_images/ko/stateless-vs-stateful.cc4a4765e649c41a.webp" alt="무상태 대화 vs 상태 유지 대화" width="800"/>
 
 *무상태(독립 호출)와 상태 유지(컨텍스트 인식) 대화의 차이*
 
@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 대화에 들어가기 전에 토큰을 이해하는 것이 중요합니다. 토큰은 언어 모델이 처리하는 텍스트의 기본 단위입니다:
 
-<img src="../../../translated_images/token-explanation.c39760d8ec650181.ko.png" alt="토큰 설명" width="800"/>
+<img src="../../../translated_images/ko/token-explanation.c39760d8ec650181.webp" alt="토큰 설명" width="800"/>
 
 *텍스트가 토큰으로 분해되는 예 - "I love AI!"는 4개의 별도 처리 단위가 됩니다*
 
@@ -73,7 +73,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 LangChain4j는 이를 자동으로 처리하는 메모리 구현체를 제공합니다. 유지할 메시지 수를 선택하면 프레임워크가 컨텍스트 창을 관리합니다.
 
-<img src="../../../translated_images/memory-window.bbe67f597eadabb3.ko.png" alt="메모리 창 개념" width="800"/>
+<img src="../../../translated_images/ko/memory-window.bbe67f597eadabb3.webp" alt="메모리 창 개념" width="800"/>
 
 *MessageWindowChatMemory는 최근 메시지의 슬라이딩 윈도우를 유지하며 오래된 메시지는 자동으로 삭제*
 
@@ -212,7 +212,7 @@ Spring Boot 대시보드에서:
 
 "introduction" 옆의 재생 버튼을 클릭해 이 모듈을 시작하거나 모든 모듈을 한 번에 시작할 수 있습니다.
 
-<img src="../../../translated_images/dashboard.69c7479aef09ff6b.ko.png" alt="Spring Boot 대시보드" width="400"/>
+<img src="../../../translated_images/ko/dashboard.69c7479aef09ff6b.webp" alt="Spring Boot 대시보드" width="400"/>
 
 **옵션 2: 셸 스크립트 사용**
 
@@ -282,7 +282,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 애플리케이션은 두 가지 채팅 구현을 나란히 제공하는 웹 인터페이스를 제공합니다.
 
-<img src="../../../translated_images/home-screen.121a03206ab910c0.ko.png" alt="애플리케이션 홈 화면" width="800"/>
+<img src="../../../translated_images/ko/home-screen.121a03206ab910c0.webp" alt="애플리케이션 홈 화면" width="800"/>
 
 *무상태 간단 채팅과 상태 유지 대화형 채팅 옵션을 보여주는 대시보드*
 
@@ -290,7 +290,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 먼저 이것을 시도해 보세요. "내 이름은 John입니다"라고 말한 후 바로 "내 이름이 뭐죠?"라고 물어보세요. 모델은 기억하지 못합니다. 각 메시지가 독립적이기 때문입니다. 이는 기본 언어 모델 통합의 핵심 문제인 대화 컨텍스트 부재를 보여줍니다.
 
-<img src="../../../translated_images/simple-chat-stateless-demo.13aeb3978eab3234.ko.png" alt="무상태 채팅 데모" width="800"/>
+<img src="../../../translated_images/ko/simple-chat-stateless-demo.13aeb3978eab3234.webp" alt="무상태 채팅 데모" width="800"/>
 
 *AI가 이전 메시지에서 이름을 기억하지 못함*
 
@@ -298,7 +298,7 @@ cd ..; .\stop-all.ps1  # 모든 모듈
 
 이제 같은 순서를 여기서 시도해 보세요. "내 이름은 John입니다"라고 말한 후 "내 이름이 뭐죠?"라고 물으면 이번에는 기억합니다. 차이는 MessageWindowChatMemory에 있습니다. 대화 기록을 유지하고 각 요청에 포함시키기 때문입니다. 이것이 프로덕션 대화형 AI가 작동하는 방식입니다.
 
-<img src="../../../translated_images/conversational-chat-stateful-demo.e5be9822eb23ff59.ko.png" alt="상태 유지 채팅 데모" width="800"/>
+<img src="../../../translated_images/ko/conversational-chat-stateful-demo.e5be9822eb23ff59.webp" alt="상태 유지 채팅 데모" width="800"/>
 
 *AI가 대화 초반에 말한 이름을 기억함*
 

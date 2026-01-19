@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 מודול זה מדגים תבניות פרומפט מתקדמות באמצעות אותה תשתית LangChain4j מהמודולים הקודמים, עם דגש על מבנה הפרומפט ושליטה בהסקת מסקנות.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.he.png" alt="LangChain4j Flow" width="800"/>
+<img src="../../../translated_images/he/langchain4j-flow.48e534666213010b.webp" alt="LangChain4j Flow" width="800"/>
 
 *כיצד LangChain4j מחבר את הפרומפטים שלכם ל-Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.he.png" alt="Message Types Architecture" width="800"/>
+<img src="../../../translated_images/he/message-types.93e0779798a17c9d.webp" alt="Message Types Architecture" width="800"/>
 
 *SystemMessage מספק הקשר מתמשך בעוד ש-UserMessages מכילות בקשות פרטניות*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 לא כל הבעיות דורשות את אותה גישה. חלק מהשאלות זקוקות לתשובות מהירות, אחרות דורשות חשיבה עמוקה. חלק זקוקות להסבר גלוי, אחרות רק לתוצאה. מודול זה מכסה שמונה תבניות פרומפט - כל אחת מותאמת לתרחישים שונים. תנסו את כולן כדי ללמוד מתי כל גישה עובדת הכי טוב.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.he.png" alt="Eight Prompting Patterns" width="800"/>
+<img src="../../../translated_images/he/eight-patterns.fa1ebfdf16f71e9a.webp" alt="Eight Prompting Patterns" width="800"/>
 
 *סקירה של שמונת תבניות הנדסת הפרומפטים ומקרי השימוש שלהן*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.he.png" alt="Reasoning Effort Comparison" width="800"/>
+<img src="../../../translated_images/he/reasoning-effort.db4a3ba5b8e392c1.webp" alt="Reasoning Effort Comparison" width="800"/>
 
 *רצון נמוך (מהיר, ישיר) לעומת רצון גבוה (יסודי, חוקר) בגישות הסקת מסקנות*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - "מהן השיטות הטובות ביותר לבניית הקדמות לכלים ביישומים פרודקשן?"
 > - "איך אפשר ללכוד ולהציג עדכוני התקדמות ביניים בממשק משתמש?"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.he.png" alt="Task Execution Pattern" width="800"/>
+<img src="../../../translated_images/he/task-execution-pattern.9da3967750ab5c1e.webp" alt="Task Execution Pattern" width="800"/>
 
 *תכנון → ביצוע → סיכום עבור משימות מרובות שלבים*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.he.png" alt="Self-Reflection Cycle" width="800"/>
+<img src="../../../translated_images/he/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="Self-Reflection Cycle" width="800"/>
 
 *לולאת שיפור איטרטיבית - יצירה, הערכה, זיהוי בעיות, שיפור, חזרה*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "מה הדרך הטובה ביותר לנתח ולפעול על פלט מובנה באופן תכנותי?"
 > - "איך להבטיח רמות חומרה עקביות בין סשנים שונים של סקירה?"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.he.png" alt="Structured Analysis Pattern" width="800"/>
+<img src="../../../translated_images/he/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="Structured Analysis Pattern" width="800"/>
 
 *מסגרת ארבע-קטגוריות לסקירות קוד עקביות עם רמות חומרה*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.he.png" alt="Context Memory" width="800"/>
+<img src="../../../translated_images/he/context-memory.dff30ad9fa78832a.webp" alt="Context Memory" width="800"/>
 
 *כיצד מצטבר הקשר השיחה על פני סבבים מרובים עד להגעה למגבלת הטוקנים*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.he.png" alt="Step-by-Step Pattern" width="800"/>
+<img src="../../../translated_images/he/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="Step-by-Step Pattern" width="800"/>
 
 *פירוק בעיות לשלבים לוגיים מפורשים*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.he.png" alt="Constrained Output Pattern" width="800"/>
+<img src="../../../translated_images/he/constrained-output-pattern.0ce39a682a6795c2.webp" alt="Constrained Output Pattern" width="800"/>
 
 *אכיפת דרישות פורמט, אורך ומבנה ספציפיות*
 
@@ -300,7 +300,7 @@ cat ../.env  # צריך להציג את AZURE_OPENAI_ENDPOINT, API_KEY, DEPLOYME
 
 פשוט לחצו על כפתור ההפעלה ליד "prompt-engineering" כדי להפעיל את המודול הזה, או להפעיל את כל המודולים בבת אחת.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.he.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/he/dashboard.da2c2130c904aaf0.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **אפשרות 2: שימוש בסקריפטים של shell**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 ## צילום מסך של היישום
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.he.png" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/he/dashboard-home.5444dbda4bc1f79d.webp" alt="Dashboard Home" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *לוח המחוונים הראשי המציג את כל 8 תבניות הנדסת הפרומפטים עם מאפייניהן ומקרי השימוש*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 שאלו שאלה פשוטה כמו "מה זה 15% מ-200?" באמצעות רצון נמוך. תקבלו תשובה מיידית וישירה. עכשיו שאלו משהו מורכב כמו "עצב אסטרטגיית מטמון ל-API עם תעבורה גבוהה" באמצעות רצון גבוה. צפו כיצד המודל מאט ומספק הסקה מפורטת. אותו מודל, אותו מבנה שאלה - אבל הפרומפט אומר לו כמה לחשוב.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.he.png" alt="Low Eagerness Demo" width="800"/>
+<img src="../../../translated_images/he/low-eagerness-demo.898894591fb23aa0.webp" alt="Low Eagerness Demo" width="800"/>
 *חישוב מהיר עם הסבר מינימלי*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.he.png" alt="הדגמת התלהבות גבוהה" width="800"/>
+<img src="../../../translated_images/he/high-eagerness-demo.4ac93e7786c5a376.webp" alt="הדגמת התלהבות גבוהה" width="800"/>
 
 *אסטרטגיית מטמון מקיפה (2.8MB)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 זרימות עבודה מרובות שלבים נהנות מתכנון מראש ונרטיב התקדמות. המודל מפרט מה הוא יעשה, מתאר כל שלב, ואז מסכם תוצאות.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.he.png" alt="הדגמת ביצוע משימה" width="800"/>
+<img src="../../../translated_images/he/tool-preambles-demo.3ca4881e417f2e28.webp" alt="הדגמת ביצוע משימה" width="800"/>
 
 *יצירת נקודת קצה REST עם נרטיב שלב אחר שלב (3.9MB)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 נסה "צור שירות אימות אימייל". במקום רק לייצר קוד ולעצור, המודל מייצר, מעריך מול קריטריוני איכות, מזהה חולשות ומשפר. תראה אותו חוזר על עצמו עד שהקוד עומד בסטנדרטים של ייצור.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.he.png" alt="הדגמת קוד עם חשיבה עצמית" width="800"/>
+<img src="../../../translated_images/he/self-reflecting-code-demo.851ee05c988e743f.webp" alt="הדגמת קוד עם חשיבה עצמית" width="800"/>
 
 *שירות אימות אימייל מלא (5.2MB)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 סקירות קוד דורשות מסגרות הערכה עקביות. המודל מנתח קוד באמצעות קטגוריות קבועות (נכונות, שיטות עבודה, ביצועים, אבטחה) עם רמות חומרה.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.he.png" alt="הדגמת ניתוח מובנה" width="800"/>
+<img src="../../../translated_images/he/structured-analysis-demo.9ef892194cd23bc8.webp" alt="הדגמת ניתוח מובנה" width="800"/>
 
 *סקירת קוד מבוססת מסגרת*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 שאל "מה זה Spring Boot?" ואז מיד המשך עם "הראה לי דוגמה". המודל זוכר את השאלה הראשונה שלך ונותן לך דוגמה ספציפית ל-Spring Boot. בלי זיכרון, השאלה השנייה הייתה עמומה מדי.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.he.png" alt="הדגמת שיחה רב-סיבובית" width="800"/>
+<img src="../../../translated_images/he/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="הדגמת שיחה רב-סיבובית" width="800"/>
 
 *שימור הקשר בין שאלות*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 בחר בעיית מתמטיקה ונסה אותה עם הסבר שלב אחר שלב והתלהבות נמוכה. התלהבות נמוכה נותנת רק את התשובה - מהיר אך לא ברור. הסבר שלב אחר שלב מראה כל חישוב והחלטה.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.he.png" alt="הדגמת הסבר שלב אחר שלב" width="800"/>
+<img src="../../../translated_images/he/step-by-step-reasoning-demo.12139513356faecd.webp" alt="הדגמת הסבר שלב אחר שלב" width="800"/>
 
 *בעיה מתמטית עם שלבים מפורשים*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # כל המודולים
 
 כשאתה צריך פורמטים ספציפיים או ספירת מילים, תבנית זו מחייבת עמידה קפדנית. נסה לייצר סיכום עם בדיוק 100 מילים בפורמט נקודות.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.he.png" alt="הדגמת פלט מוגבל" width="800"/>
+<img src="../../../translated_images/he/constrained-output-demo.567cc45b75da1633.webp" alt="הדגמת פלט מוגבל" width="800"/>
 
 *סיכום למידת מכונה עם שליטה על הפורמט*
 
@@ -445,7 +445,7 @@ GPT-5 מאפשר לך לשלוט במאמץ החישובי דרך ההנחיות
 
 שמעת על תגי XML בהנחיות? הם לא רק לקישוט. מודלים עוקבים אחרי הוראות מובנות בצורה אמינה יותר מטקסט חופשי. כשאתה צריך תהליכים מרובי שלבים או לוגיקה מורכבת, המבנה עוזר למודל לעקוב איפה הוא ומה הבא.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.he.png" alt="מבנה הנחיה" width="800"/>
+<img src="../../../translated_images/he/prompt-structure.a77763d63f4e2f89.webp" alt="מבנה הנחיה" width="800"/>
 
 *אנטומיה של הנחיה מובנית היטב עם חלקים ברורים וארגון בסגנון XML*
 

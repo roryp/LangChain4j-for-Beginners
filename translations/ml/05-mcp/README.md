@@ -35,7 +35,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 Model Context Protocol (MCP) അതെന്തെന്നാൽ കൃത്യമായും നല്‍കുന്നു - ഒരു സ്റ്റാൻഡേർഡ് വഴി എഐ ആപ്ലിക്കേഷനുകൾ പുറമെ ഉള്ള ഉപകരണങ്ങൾ കണ്ടെത്താനും ഉപയോഗിക്കാനും. ഓരോ ഡാറ്റാ സ്രോതസിനും സേവനത്തിനും വേണ്ടി കസ്റ്റം ഇന്റഗ്രേഷൻ എഴുതുന്നതിനുപകരം, MCP സെർവറുകളുമായി ബന്ധപ്പെടുന്നു, അവ അവരുടെ ശേഷിക്കുട്ടികൾ ഒരു ഒറ്റ രൂപത്തിലിലായി പ്രദർശിപ്പിക്കുന്നു. നിങ്ങളുടെ എഐ അജന്റ് അവ ഉപകരണങ്ങൾ സ്വയം കണ്ടെത്തി ഉപയോഗിക്കാം.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.ml.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/ml/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *എംസിപിക്ക് മുമ്പ്: സങ്കീർണമായ പിൻ-ടു-പിൻ ഇൻറഗ്രേഷനുകൾ. MCP-നുള്ളിൽ: ഒരു പ്രോട്ടോക്കോൾ, അതുല്യ സാധ്യതകൾ.*
 
@@ -43,7 +43,7 @@ MCP എഐ വികസനത്തിലെ ഒരു അടിസ്ഥാന 
 
 MCP ഇതിനെ സ്റ്റാൻഡേർഡ് ആക്കുന്നു. ഒരു MCP സെർവർ ഉപകരണങ്ങൾ വ്യക്തമായ വിവരണങ്ങളോടുകൂടി സ്‌കീമകളോടുകൂടി വെളിച്ചം നല്‍കുന്നു. ഏതെങ്കിലും MCP ക്ലയന്റ് കണക്ട് ചെയ്ത് ലഭ്യമായ ഉപകരണങ്ങൾ കണ്ടെത്തുകയും പ്രവർത്തിപ്പിക്കുകയും ചെയ്യാം. ഒരുമിച്ച് നിർമ്മിച്ച് എവിടെയും ഉപയോഗിക്കുക.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.ml.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/ml/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Model Context Protocol നിർമ്മാണരീതി - സ്റ്റാൻഡേർഡ് ഉപകരണം കണ്ടെത്തലും നിർവഹണവും*
 
@@ -71,7 +71,7 @@ LangChain4j ഉപയോഗിച്ച് MCP ഉപയോഗിക്കാൻ
 
 MCP വ്യത്യസ്ത ട്രാൻസ്പോർട്ട് മാര്‍ഗ്ഗങ്ങൾ പിന്തുണയ്ക്കുന്നു. ഈ മോഡ്യൂൾ പ്രാദേശിക പ്രോസസുകൾക്കായുള്ള Stdio ട്രാൻസ്പോർട്ട് കാണിക്കുന്നു:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.ml.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/ml/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *MCP ട്രാൻസ്പോർട്ട് മാർഗ്ഗങ്ങൾ: ദൂരം സെർവറുകൾക്കു HTTP, പ്രാദേശിക പ്രോസസുകൾക്കു Stdio*
 
@@ -169,7 +169,7 @@ for integrating Large Language Models (LLMs) into Java applications...
 
 ഡെമോയിൽ, `FileAgent` MCP ഫയൽ സിസ്റ്റം ഉപകരണങ്ങൾ ഉപയോഗിച്ച് ഫയൽ വായിക്കുന്നു, `ReportAgent` 1 വാക്യം എക്സിക്യൂട്ടീവ് സമാര്യം, 3 പ്രധാന പോയിന്റുകൾ, ശിപാർശകൾ എന്നിവയുള്ള ഘടനാപൂർണ്ണ റിപ്പോർട്ട് സൃഷ്ടിക്കുന്നു. സൂപ്പർവൈസർ സ്വയമേധയാ ഈ പ്രവാഹം സംഘടിപ്പിക്കുന്നു:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.ml.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/ml/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

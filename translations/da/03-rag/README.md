@@ -49,7 +49,7 @@ Tænk på RAG som at give modellen et referenceløb. Når du stiller et spørgsm
 
 Dette forankrer modellens svar i dine faktiske data i stedet for at stole på træningsviden eller at finde på svar.
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.da.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/da/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG arbejdsproces - fra brugerforespørgsel til semantisk søgning til kontekstuel svar-generering*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
   
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.da.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/da/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *Dokumenter repræsenteret som vektorer i embeddings-rum – lignende indhold grupperes*
 
@@ -160,7 +160,7 @@ Fra Spring Boot Dashboard kan du:
 
 Klik blot på play-knappen ved siden af "rag" for at starte dette modul, eller start alle moduler på en gang.
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.da.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/da/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Valgmulighed 2: Brug shell-scripts**
 
@@ -231,7 +231,7 @@ cd ..; .\stop-all.ps1  # Alle moduler
 
 Applikationen tilbyder en webgrænseflade til dokumentupload og spørgsmål.
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.da.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/da/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG applikationsgrænseflade – upload dokumenter og stil spørgsmål*
 
@@ -249,7 +249,7 @@ Stil nu specifikke spørgsmål om dokumentets indhold. Prøv noget faktuelt, som
 
 Bemærk, at hvert svar indeholder kildehenvisninger med lighedsscores. Disse scores (0 til 1) viser, hvor relevant hver chunk var for dit spørgsmål. Højere scorer betyder bedre match. Det giver dig mulighed for at verificere svaret mod kildematerialet.
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.da.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/da/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Spørgeresultater der viser svar med kildehenvisninger og relevansscores*
 

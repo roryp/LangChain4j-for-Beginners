@@ -35,7 +35,7 @@ Has construido inteligencia artificial conversacional, dominado los prompts, fun
 
 El Protocolo de Contexto del Modelo (MCP) proporciona exactamente eso: una forma estándar para que aplicaciones de IA descubran y usen herramientas externas. En lugar de escribir integraciones personalizadas para cada fuente de datos o servicio, te conectas a servidores MCP que exponen sus capacidades en un formato consistente. Tu agente de IA puede entonces descubrir y usar estas herramientas automáticamente.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.es.png" alt="Comparación MCP" width="800"/>
+<img src="../../../translated_images/es/mcp-comparison.9129a881ecf10ff5.webp" alt="Comparación MCP" width="800"/>
 
 *Antes de MCP: Integraciones punto a punto complejas. Después de MCP: Un protocolo, infinitas posibilidades.*
 
@@ -43,7 +43,7 @@ MCP resuelve un problema fundamental en el desarrollo de IA: cada integración e
 
 MCP estandariza esto. Un servidor MCP expone herramientas con descripciones claras y esquemas. Cualquier cliente MCP puede conectarse, descubrir herramientas disponibles y usarlas. Construye una vez, usa en todas partes.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.es.png" alt="Arquitectura MCP" width="800"/>
+<img src="../../../translated_images/es/mcp-architecture.b3156d787a4ceac9.webp" alt="Arquitectura MCP" width="800"/>
 
 *Arquitectura del Protocolo de Contexto del Modelo: descubrimiento y ejecución de herramientas estandarizadas*
 
@@ -71,7 +71,7 @@ Cuando tu cliente se conecta a un servidor MCP, pregunta "¿Qué herramientas ti
 
 MCP soporta diferentes mecanismos de transporte. Este módulo demuestra el transporte Stdio para procesos locales:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.es.png" alt="Mecanismos de Transporte" width="800"/>
+<img src="../../../translated_images/es/transport-mechanisms.2791ba7ee93cf020.webp" alt="Mecanismos de Transporte" width="800"/>
 
 *Mecanismos de transporte MCP: HTTP para servidores remotos, Stdio para procesos locales*
 
@@ -169,7 +169,7 @@ El **patrón Agente Supervisor** es una forma **flexible** de IA agéntica. Un S
 
 En la demo, `FileAgent` lee un archivo usando herramientas MCP de sistema de archivos, y `ReportAgent` genera un reporte estructurado con un resumen ejecutivo (1 oración), 3 puntos clave y recomendaciones. El Supervisor orquesta este flujo automáticamente:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.es.png" alt="Módulo Agéntico" width="800"/>
+<img src="../../../translated_images/es/agentic.cf84dcda226374e3.webp" alt="Módulo Agéntico" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

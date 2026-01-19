@@ -49,7 +49,7 @@ RAG को ऐसे समझें जैसे मॉडल को एक स
 
 यह मॉडल के प्रतिक्रियाओं को आपके वास्तविक डेटा में जमीनी स्तर पर लाता है, न कि उसके प्रशिक्षण ज्ञान पर निर्भर रहने या उत्तर बनाने पर।
 
-<img src="../../../translated_images/rag-architecture.ccb53b71a6ce407f.hi.png" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/hi/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG कार्यप्रणाली - उपयोगकर्ता क्वेरी से सार्थक खोज तक संदर्भीय उत्तर निर्माण*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/vector-embeddings.2ef7bdddac79a327.hi.png" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/hi/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *डॉक्यूमेंट्स को एम्बेडिंग स्पेस में वेक्टर के रूप में दर्शाया गया - समान सामग्री क्लस्टर्स में समूहित होती है*
 
@@ -160,7 +160,7 @@ Spring Boot Dashboard से आप:
 
 सिर्फ "rag" के बगल में प्ले बटन पर क्लिक करें इस मॉड्यूल को शुरू करने के लिए, या सभी मॉड्यूल एक साथ शुरू करें।
 
-<img src="../../../translated_images/dashboard.fbe6e28bf4267ffe.hi.png" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/hi/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **विकल्प 2: शेल स्क्रिप्ट्स का उपयोग**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # सभी मॉड्यूल
 
 एप्लिकेशन दस्तावेज़ अपलोड और प्रश्न पूछने के लिए एक वेब इंटरफेस प्रदान करता है।
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/rag-homepage.d90eb5ce1b3caa94.hi.png" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/hi/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG एप्लिकेशन इंटरफ़ेस - दस्तावेज़ अपलोड करें और प्रश्न पूछें*
 
@@ -248,7 +248,7 @@ cd ..; .\stop-all.ps1  # सभी मॉड्यूल
 
 ध्यान दें कि प्रत्येक उत्तर में स्रोत संदर्भ होते हैं जिनके साथ समानता स्कोर भी होते हैं। ये स्कोर (0 से 1 तक) दिखाते हैं कि प्रत्येक चंक आपके प्रश्न के लिए कितना प्रासंगिक था। उच्च स्कोर बेहतर मिलान दर्शाते हैं। यह आपको उत्तर की जांच स्रोत सामग्री के विरुद्ध करने देता है।
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/rag-query-results.6d69fcec5397f355.hi.png" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/hi/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *प्रश्न परिणाम दर्शाते हैं उत्तर स्रोत संदर्भों और प्रासंगिकता स्कोर के साथ*
 

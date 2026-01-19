@@ -35,7 +35,7 @@ Umejenga AI ya mazungumzo, umeweza kutumia maelekezo, umeweka majibu katika nyar
 
 Itifaki ya Muktadha wa Mfano (MCP) hutoa hasa hilo - njia ya kawaida kwa programu za AI kugundua na kutumia zana za nje. Badala ya kuandika mjumuisho maalum kwa kila chanzo cha data au huduma, unajiunga na seva za MCP zinazofichua uwezo wao kwa muundo unaolingana. Wakala wako wa AI basi anaweza kugundua na kutumia zana hizi moja kwa moja.
 
-<img src="../../../translated_images/mcp-comparison.9129a881ecf10ff5.sw.png" alt="MCP Comparison" width="800"/>
+<img src="../../../translated_images/sw/mcp-comparison.9129a881ecf10ff5.webp" alt="MCP Comparison" width="800"/>
 
 *Kabala ya MCP: Mizunguko ya moja kwa moja tata. Baada ya MCP: Protokoli moja, uwezekano usio na kikomo.*
 
@@ -43,7 +43,7 @@ MCP inatatua tatizo la msingi katika maendeleo ya AI: kila ujumuishaji ni maalum
 
 MCP huweka kiwango hiki. Seva ya MCP inaonyesha zana kwa maelezo wazi na skimu. Mteja yeyote wa MCP anaweza kuungana, kugundua zana zinazopatikana, na kuzitumia. Jenga mara moja, tumia kila mahali.
 
-<img src="../../../translated_images/mcp-architecture.b3156d787a4ceac9.sw.png" alt="MCP Architecture" width="800"/>
+<img src="../../../translated_images/sw/mcp-architecture.b3156d787a4ceac9.webp" alt="MCP Architecture" width="800"/>
 
 *Miundo ya Itifaki ya Muktadha wa Mfano - ugunduzi na utekelezaji wa zana unaolingana*
 
@@ -71,7 +71,7 @@ Unapo jiunga na seva ya MCP, huuliza "Una zana zipi?" Seva hutoa orodha ya zana 
 
 MCP inaunga mkono mbinu tofauti za usafirishaji. Moduli hii inaonyesha usafirishaji wa Stdio kwa michakato ya ndani:
 
-<img src="../../../translated_images/transport-mechanisms.2791ba7ee93cf020.sw.png" alt="Transport Mechanisms" width="800"/>
+<img src="../../../translated_images/sw/transport-mechanisms.2791ba7ee93cf020.webp" alt="Transport Mechanisms" width="800"/>
 
 *Mbinu za usafirishaji MCP: HTTP kwa seva za mbali, Stdio kwa michakato ya ndani*
 
@@ -169,7 +169,7 @@ Mfano wa **Wakala Msimamizi** ni aina **inayobadilika** ya AI ya agentic. Msimam
 
 Katika maonyesho, `FileAgent` husoma faili kwa kutumia zana za mfumo wa faili wa MCP, na `ReportAgent` huunda ripoti yenye muhtasari wa mkurugenzi (sentensi 1), pointi 3 muhimu, na mapendekezo. Msimamizi huoratibu mzunguko huu moja kwa moja:
 
-<img src="../../../translated_images/agentic.cf84dcda226374e3.sw.png" alt="Agentic Module" width="800"/>
+<img src="../../../translated_images/sw/agentic.cf84dcda226374e3.webp" alt="Agentic Module" width="800"/>
 
 ```
 ┌─────────────┐      ┌──────────────┐

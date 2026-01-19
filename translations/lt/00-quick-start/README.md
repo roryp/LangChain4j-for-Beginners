@@ -38,7 +38,7 @@ LangChain4j yra Java biblioteka, kuri supaprastina AI pagrindu sukurtų program�
 
 Terminas „chain“ LangChain požiūriu reiškia kelių komponentų sujungimą – galite susieti užklausą su modeliu ir su parseriu arba kelis AI kvietimus tarpusavyje, kur vieno rezultatas yra kito įvestis. Šis greitas pradžios vadovas susitelkia į pagrindus prieš pereinant prie sudėtingesnių grandinių.
 
-<img src="../../../translated_images/langchain-concept.ad1fe6cf063515e1.lt.png" alt="LangChain4j Chaining Concept" width="800"/>
+<img src="../../../translated_images/lt/langchain-concept.ad1fe6cf063515e1.webp" alt="LangChain4j Chaining Concept" width="800"/>
 
 *Komponentų sujungimas LangChain4j – blokai jungiasi, kad sukurtų galingus AI darbo srautus*
 
@@ -50,7 +50,7 @@ Naudosime tris pagrindinius komponentus:
 
 **MessageWindowChatMemory** – Laiko pokalbio istoriją. Be jos kiekvienas užklausimas yra nepriklausomas. Su ja AI prisimena ankstesnius pranešimus ir išlaiko kontekstą per kelis pakeitimus.
 
-<img src="../../../translated_images/architecture.eedc993a1c576839.lt.png" alt="LangChain4j Architecture" width="800"/>
+<img src="../../../translated_images/lt/architecture.eedc993a1c576839.webp" alt="LangChain4j Architecture" width="800"/>
 
 *LangChain4j architektūra – pagrindiniai komponentai veikia drauge, kad palaikytų jūsų AI programas*
 

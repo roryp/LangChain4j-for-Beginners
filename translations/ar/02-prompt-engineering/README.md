@@ -52,7 +52,7 @@ CO_OP_TRANSLATOR_METADATA:
 
 توضح هذه الوحدة أنماط المطالبة المتقدمة باستخدام نفس أساس LangChain4j من الوحدات السابقة، مع التركيز على بنية المطالبات والتحكم في التفكير.
 
-<img src="../../../translated_images/langchain4j-flow.48e534666213010b.ar.png" alt="تدفق LangChain4j" width="800"/>
+<img src="../../../translated_images/ar/langchain4j-flow.48e534666213010b.webp" alt="تدفق LangChain4j" width="800"/>
 
 *كيف يربط LangChain4j مطالباتك بـ Azure OpenAI GPT-5*
 
@@ -88,7 +88,7 @@ UserMessage userMsg = UserMessage.from(
 String response = chatModel.chat(systemMsg, userMsg);
 ```
 
-<img src="../../../translated_images/message-types.93e0779798a17c9d.ar.png" alt="هيكل أنواع الرسائل" width="800"/>
+<img src="../../../translated_images/ar/message-types.93e0779798a17c9d.webp" alt="هيكل أنواع الرسائل" width="800"/>
 
 *SystemMessage يوفر سياقًا دائمًا بينما تحتوي UserMessages على طلبات فردية*
 
@@ -104,11 +104,11 @@ String response = chatModel.chat(systemMsg, userMsg);
 
 ليست كل المشاكل تحتاج نفس النهج. بعض الأسئلة تحتاج إجابات سريعة، وأخرى تحتاج تفكيرًا عميقًا. بعضها يحتاج إلى تفكير مرئي، وبعضها يحتاج فقط إلى النتائج. تغطي هذه الوحدة ثمانية أنماط للمطالبات - كل منها مُحسّن لسيناريوهات مختلفة. ستجربها جميعًا لتتعلم متى يعمل كل نهج بشكل أفضل.
 
-<img src="../../../translated_images/eight-patterns.fa1ebfdf16f71e9a.ar.png" alt="ثمانية أنماط للمطالبات" width="800"/>
+<img src="../../../translated_images/ar/eight-patterns.fa1ebfdf16f71e9a.webp" alt="ثمانية أنماط للمطالبات" width="800"/>
 
 *نظرة عامة على ثمانية أنماط هندسة المطالبات وحالات استخدامها*
 
-<img src="../../../translated_images/reasoning-effort.db4a3ba5b8e392c1.ar.png" alt="مقارنة جهد التفكير" width="800"/>
+<img src="../../../translated_images/ar/reasoning-effort.db4a3ba5b8e392c1.webp" alt="مقارنة جهد التفكير" width="800"/>
 
 *قلة الحماس (سريع، مباشر) مقابل الحماس العالي (شامل، استكشافي) في أساليب التفكير*
 
@@ -163,7 +163,7 @@ String response = chatModel.chat(prompt);
 > - "ما هي أفضل الممارسات لبناء مقدمات الأدوات في تطبيقات الإنتاج؟"
 > - "كيف يمكنني التقاط وعرض تحديثات التقدم الوسيط في واجهة المستخدم؟"
 
-<img src="../../../translated_images/task-execution-pattern.9da3967750ab5c1e.ar.png" alt="نمط تنفيذ المهام" width="800"/>
+<img src="../../../translated_images/ar/task-execution-pattern.9da3967750ab5c1e.webp" alt="نمط تنفيذ المهام" width="800"/>
 
 *خطة → تنفيذ → تلخيص لسير العمل متعدد الخطوات*
 
@@ -184,7 +184,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/self-reflection-cycle.6f71101ca0bd28cc.ar.png" alt="دورة التفكير الذاتي" width="800"/>
+<img src="../../../translated_images/ar/self-reflection-cycle.6f71101ca0bd28cc.webp" alt="دورة التفكير الذاتي" width="800"/>
 
 *حلقة تحسين تكرارية - توليد، تقييم، تحديد المشكلات، تحسين، تكرار*
 
@@ -215,7 +215,7 @@ String response = chatModel.chat(prompt);
 > - "ما هي أفضل طريقة لتحليل والتصرف بناءً على الإخراج المنظم برمجيًا؟"
 > - "كيف أضمن مستويات شدة متسقة عبر جلسات المراجعة المختلفة؟"
 
-<img src="../../../translated_images/structured-analysis-pattern.0af3b690b60cf2d6.ar.png" alt="نمط التحليل المنظم" width="800"/>
+<img src="../../../translated_images/ar/structured-analysis-pattern.0af3b690b60cf2d6.webp" alt="نمط التحليل المنظم" width="800"/>
 
 *إطار عمل بأربع فئات لمراجعات الكود المتسقة مع مستويات الشدة*
 
@@ -233,7 +233,7 @@ AiMessage aiMessage2 = chatModel.chat(memory.messages()).aiMessage();
 memory.add(aiMessage2);
 ```
 
-<img src="../../../translated_images/context-memory.dff30ad9fa78832a.ar.png" alt="ذاكرة السياق" width="800"/>
+<img src="../../../translated_images/ar/context-memory.dff30ad9fa78832a.webp" alt="ذاكرة السياق" width="800"/>
 
 *كيف يتراكم سياق المحادثة عبر أدوار متعددة حتى الوصول إلى حد الرموز*
 
@@ -251,7 +251,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/step-by-step-pattern.a99ea4ca1c48578c.ar.png" alt="نمط خطوة بخطوة" width="800"/>
+<img src="../../../translated_images/ar/step-by-step-pattern.a99ea4ca1c48578c.webp" alt="نمط خطوة بخطوة" width="800"/>
 
 *تفكيك المشاكل إلى خطوات منطقية صريحة*
 
@@ -271,7 +271,7 @@ String prompt = """
 String response = chatModel.chat(prompt);
 ```
 
-<img src="../../../translated_images/constrained-output-pattern.0ce39a682a6795c2.ar.png" alt="نمط الإخراج المقيد" width="800"/>
+<img src="../../../translated_images/ar/constrained-output-pattern.0ce39a682a6795c2.webp" alt="نمط الإخراج المقيد" width="800"/>
 
 *فرض متطلبات تنسيق، طول، وبنية محددة*
 
@@ -300,7 +300,7 @@ cat ../.env  # يجب أن يعرض AZURE_OPENAI_ENDPOINT و API_KEY و DEPLOYME
 
 فقط انقر على زر التشغيل بجانب "prompt-engineering" لبدء هذه الوحدة، أو ابدأ جميع الوحدات دفعة واحدة.
 
-<img src="../../../translated_images/dashboard.da2c2130c904aaf0.ar.png" alt="لوحة تحكم Spring Boot" width="400"/>
+<img src="../../../translated_images/ar/dashboard.da2c2130c904aaf0.webp" alt="لوحة تحكم Spring Boot" width="400"/>
 
 **الخيار 2: استخدام سكربتات الشل**
 
@@ -368,7 +368,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 ## لقطات شاشة التطبيق
 
-<img src="../../../translated_images/dashboard-home.5444dbda4bc1f79d.ar.png" alt="الصفحة الرئيسية للوحة التحكم" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+<img src="../../../translated_images/ar/dashboard-home.5444dbda4bc1f79d.webp" alt="الصفحة الرئيسية للوحة التحكم" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
 
 *لوحة التحكم الرئيسية تعرض جميع أنماط هندسة المطالبات الثمانية مع خصائصها وحالات استخدامها*
 
@@ -380,10 +380,10 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 اطرح سؤالًا بسيطًا مثل "ما هو 15% من 200؟" باستخدام قلة الحماس. ستحصل على إجابة فورية ومباشرة. الآن اسأل شيئًا معقدًا مثل "صمم استراتيجية تخزين مؤقت لواجهة برمجة تطبيقات ذات حركة مرور عالية" باستخدام الحماس العالي. شاهد كيف يتباطأ النموذج ويقدم تفكيرًا مفصلًا. نفس النموذج، نفس بنية السؤال - لكن المطالبة تخبره بكمية التفكير المطلوبة.
 
-<img src="../../../translated_images/low-eagerness-demo.898894591fb23aa0.ar.png" alt="عرض قلة الحماس" width="800"/>
+<img src="../../../translated_images/ar/low-eagerness-demo.898894591fb23aa0.webp" alt="عرض قلة الحماس" width="800"/>
 *حساب سريع مع تفكير محدود*
 
-<img src="../../../translated_images/high-eagerness-demo.4ac93e7786c5a376.ar.png" alt="عرض الحماس العالي" width="800"/>
+<img src="../../../translated_images/ar/high-eagerness-demo.4ac93e7786c5a376.webp" alt="عرض الحماس العالي" width="800"/>
 
 *استراتيجية تخزين شاملة (2.8 ميجابايت)*
 
@@ -391,7 +391,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 تستفيد سير العمل متعددة الخطوات من التخطيط المسبق وسرد التقدم. يوضح النموذج ما سيفعله، يروي كل خطوة، ثم يلخص النتائج.
 
-<img src="../../../translated_images/tool-preambles-demo.3ca4881e417f2e28.ar.png" alt="عرض تنفيذ المهمة" width="800"/>
+<img src="../../../translated_images/ar/tool-preambles-demo.3ca4881e417f2e28.webp" alt="عرض تنفيذ المهمة" width="800"/>
 
 *إنشاء نقطة نهاية REST مع سرد خطوة بخطوة (3.9 ميجابايت)*
 
@@ -399,7 +399,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 جرب "إنشاء خدمة تحقق من البريد الإلكتروني". بدلاً من مجرد توليد الكود والتوقف، يولد النموذج، يقيمه مقابل معايير الجودة، يحدد نقاط الضعف، ويحسن. سترى تكراره حتى يفي الكود بمعايير الإنتاج.
 
-<img src="../../../translated_images/self-reflecting-code-demo.851ee05c988e743f.ar.png" alt="عرض كود يعكس نفسه" width="800"/>
+<img src="../../../translated_images/ar/self-reflecting-code-demo.851ee05c988e743f.webp" alt="عرض كود يعكس نفسه" width="800"/>
 
 *خدمة تحقق من البريد الإلكتروني كاملة (5.2 ميجابايت)*
 
@@ -407,7 +407,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 تحتاج مراجعات الكود إلى أطر تقييم متسقة. يحلل النموذج الكود باستخدام فئات ثابتة (الصحة، الممارسات، الأداء، الأمان) مع مستويات شدة.
 
-<img src="../../../translated_images/structured-analysis-demo.9ef892194cd23bc8.ar.png" alt="عرض التحليل المنظم" width="800"/>
+<img src="../../../translated_images/ar/structured-analysis-demo.9ef892194cd23bc8.webp" alt="عرض التحليل المنظم" width="800"/>
 
 *مراجعة كود قائمة على إطار عمل*
 
@@ -415,7 +415,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 اسأل "ما هو Spring Boot؟" ثم تابع فوراً بـ "أرني مثالاً". يتذكر النموذج سؤالك الأول ويعطيك مثالاً محدداً على Spring Boot. بدون الذاكرة، سيكون السؤال الثاني غامضاً جداً.
 
-<img src="../../../translated_images/multi-turn-chat-demo.0d2d9b9a86a12b4b.ar.png" alt="عرض محادثة متعددة الأدوار" width="800"/>
+<img src="../../../translated_images/ar/multi-turn-chat-demo.0d2d9b9a86a12b4b.webp" alt="عرض محادثة متعددة الأدوار" width="800"/>
 
 *الحفاظ على السياق عبر الأسئلة*
 
@@ -423,7 +423,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 اختر مسألة رياضية وجربها مع كل من التفكير خطوة بخطوة والحماس المنخفض. الحماس المنخفض يعطيك الإجابة فقط - سريع لكنه غامض. التفكير خطوة بخطوة يعرض كل حساب وقرار.
 
-<img src="../../../translated_images/step-by-step-reasoning-demo.12139513356faecd.ar.png" alt="عرض التفكير خطوة بخطوة" width="800"/>
+<img src="../../../translated_images/ar/step-by-step-reasoning-demo.12139513356faecd.webp" alt="عرض التفكير خطوة بخطوة" width="800"/>
 
 *مسألة رياضية مع خطوات واضحة*
 
@@ -431,7 +431,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 عندما تحتاج إلى تنسيقات محددة أو عدد كلمات معين، يفرض هذا النمط الالتزام الصارم. جرب توليد ملخص يحتوي بالضبط على 100 كلمة بصيغة نقاط.
 
-<img src="../../../translated_images/constrained-output-demo.567cc45b75da1633.ar.png" alt="عرض الإخراج المقيد" width="800"/>
+<img src="../../../translated_images/ar/constrained-output-demo.567cc45b75da1633.webp" alt="عرض الإخراج المقيد" width="800"/>
 
 *ملخص تعلم آلي مع تحكم في التنسيق*
 
@@ -445,7 +445,7 @@ cd ..; .\stop-all.ps1  # جميع الوحدات
 
 هل لاحظت علامات XML في المطالبات؟ ليست للزينة. تتبع النماذج التعليمات المنظمة بشكل أكثر موثوقية من النص الحر. عندما تحتاج إلى عمليات متعددة الخطوات أو منطق معقد، يساعد الهيكل النموذج على تتبع موقعه وما سيأتي بعده.
 
-<img src="../../../translated_images/prompt-structure.a77763d63f4e2f89.ar.png" alt="هيكل المطالبة" width="800"/>
+<img src="../../../translated_images/ar/prompt-structure.a77763d63f4e2f89.webp" alt="هيكل المطالبة" width="800"/>
 
 *تشريح مطالبة منظمة جيداً مع أقسام واضحة وتنظيم بأسلوب XML*
 
