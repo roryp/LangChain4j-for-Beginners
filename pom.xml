@@ -28,7 +28,7 @@
     <!-- MCP support requires beta version -->
     <langchain4j.mcp.version>1.10.0-beta18</langchain4j.mcp.version>
     <!-- Test dependency versions - JUnit version managed by Spring Boot BOM -->
-    <assertj.version>3.25.3</assertj.version>
+    <assertj.version>3.27.7</assertj.version>
     <testcontainers.version>2.0.2</testcontainers.version>
     <!-- Logging versions - aligned with Spring Boot 4.0.0 -->
     <slf4j.version>2.0.17</slf4j.version>
