@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c3e07ca58d0b8a3f47d3bf5728541e0a",
-  "translation_date": "2025-12-13T14:05:30+00:00",
-  "source_file": "01-introduction/README.md",
-  "language_code": "sr"
-}
--->
 # Модул 01: Почетак рада са LangChain4j
 
 ## Садржај
