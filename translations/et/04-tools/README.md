@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "844788938b26242f3cc54ce0d0951bea",
-  "translation_date": "2026-01-06T02:02:56+00:00",
-  "source_file": "04-tools/README.md",
-  "language_code": "et"
-}
--->
 # Moodul 04: AI Agendid tööriistadega
 
 ## Sisukord
