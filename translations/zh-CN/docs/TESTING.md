@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ed93b3c14d58734ac10162967da958c1",
-  "translation_date": "2025-12-30T21:09:41+00:00",
-  "source_file": "docs/TESTING.md",
-  "language_code": "zh"
-}
--->
 # 测试 LangChain4j 应用
 
 ## 目录

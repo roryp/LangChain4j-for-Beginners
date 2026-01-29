@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8d787826cad7e92bf5cdbd116b1e6116",
-  "translation_date": "2025-12-13T15:50:16+00:00",
-  "source_file": "02-prompt-engineering/README.md",
-  "language_code": "fa"
-}
--->
 # ماژول ۰۲: مهندسی پرامپت با GPT-5
 
 ## فهرست مطالب

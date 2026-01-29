@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
-  "translation_date": "2025-12-13T12:01:01+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "zh"
-}
--->
 ## Security
 
 Microsoft 非常重视我们软件产品和服务的安全性，这包括通过我们的 GitHub 组织管理的所有源代码库，这些组织包括 [Microsoft](https://github.com/Microsoft)、[Azure](https://github.com/Azure)、[DotNet](https://github.com/dotnet)、[AspNet](https://github.com/aspnet) 和 [Xamarin](https://github.com/xamarin)。

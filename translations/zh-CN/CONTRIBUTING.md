@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:44:40+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "zh"
-}
--->
 # 贡献
 
 感谢您对贡献的兴趣！我们欢迎对本课程的拉取请求和改进。提交更改时，请遵循以下指南：
