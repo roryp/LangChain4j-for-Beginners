@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-12-13T11:52:31+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "hi"
-}
--->
 # Microsoft ओपन सोर्स कोड ऑफ कंडक्ट
 
 इस प्रोजेक्ट ने [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) को अपनाया है।

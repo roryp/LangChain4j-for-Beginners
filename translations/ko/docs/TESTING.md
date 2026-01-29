@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ed93b3c14d58734ac10162967da958c1",
-  "translation_date": "2025-12-30T22:20:04+00:00",
-  "source_file": "docs/TESTING.md",
-  "language_code": "ko"
-}
--->
 # LangChain4j 애플리케이션 테스트
 
 ## 목차

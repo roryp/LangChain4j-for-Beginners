@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
-  "translation_date": "2025-12-13T12:01:55+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "ko"
-}
--->
 ## 보안
 
 Microsoft는 소프트웨어 제품 및 서비스의 보안을 매우 중요하게 생각하며, 여기에는 [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet) 및 [Xamarin](https://github.com/xamarin)을 포함한 GitHub 조직을 통해 관리되는 모든 소스 코드 저장소가 포함됩니다.
