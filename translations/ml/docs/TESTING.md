@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ed93b3c14d58734ac10162967da958c1",
-  "translation_date": "2025-12-31T08:13:07+00:00",
-  "source_file": "docs/TESTING.md",
-  "language_code": "ml"
-}
--->
 # LangChain4j അപ്ലിക്കേഷനുകൾ ടെസ്റ്റിംഗ്
 
 ## ഉള്ളടക്ക പട്ടിക

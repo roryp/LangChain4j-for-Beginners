@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8d787826cad7e92bf5cdbd116b1e6116",
-  "translation_date": "2025-12-13T16:38:24+00:00",
-  "source_file": "02-prompt-engineering/README.md",
-  "language_code": "ml"
-}
--->
 # Module 02: GPT-5 ഉപയോഗിച്ച് പ്രോംപ്റ്റ് എഞ്ചിനീയറിംഗ്
 
 ## ഉള്ളടക്ക പട്ടിക
