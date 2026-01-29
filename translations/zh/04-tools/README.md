@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. 工具执行并返回数据
 6. 代理将结果纳入最终回答
 
-<img src="../../../translated_images/zh/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/zh-CN/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *ReAct 模式 —— AI 代理如何在推理与行动之间交替解决问题*
 
@@ -138,7 +138,7 @@ Spring Boot 自动为声明性的 `@AiService` 接口注入所有注册工具，
 
 **工具链**——AI 可能会依次调用多个工具。比如问“西雅图的天气如何？我需要带伞吗？”它会先调用 `getCurrentWeather`，然后根据是否下雨判断是否需要雨具。
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/zh/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/zh-CN/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *顺序调用工具 —— 一个工具的输出作为下一个决策的输入*
 
@@ -171,7 +171,7 @@ cat ../.env  # 应显示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 点击 “tools” 旁的播放按钮启动本模块，或一次启动所有模块。
 
-<img src="../../../translated_images/zh/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/zh-CN/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **选项 2：使用 Shell 脚本**
 
@@ -242,7 +242,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 该应用提供一个网页界面，让你与具有天气和温度转换工具的 AI 代理交互。
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/zh/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/zh-CN/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI 代理工具界面 —— 快速示例和聊天界面供交互使用工具*
 
@@ -258,7 +258,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 聊天界面保留对话历史，支持多轮交互。可查看所有过往提问和回答，易于追踪对话和理解代理如何建立多轮上下文。
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/zh/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/zh-CN/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *多轮对话展示简单转换、天气查询和工具链调用*
 

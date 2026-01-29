@@ -61,7 +61,7 @@ CO_OP_TRANSLATOR_METADATA:
 5. 工具執行並返回資料
 6. 代理整合結果並提供最終答案
 
-<img src="../../../translated_images/hk/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
+<img src="../../../translated_images/zh-HK/react-pattern.86aafd3796f3fd13.webp" alt="ReAct Pattern" width="800"/>
 
 *ReAct 模式 — AI 代理如何在推理與執行間交替以解決問題*
 
@@ -138,7 +138,7 @@ Spring Boot 自動注入帶有所有已註冊工具的宣告式 `@AiService` 介
 
 **工具鏈結** — AI 可能會連續調用多個工具。詢問「西雅圖的天氣如何？我應該帶傘嗎？」並觀察它對 `getCurrentWeather` 的調用以及關於雨具的推理。
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/hk/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/zh-HK/tool-chaining.3b25af01967d6f7b.webp" alt="Tool Chaining" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *連續的工具呼叫 — 一個工具的輸出為下一步決策提供依據*
 
@@ -171,7 +171,7 @@ cat ../.env  # 應顯示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只需點擊「tools」旁的播放按鈕即可啟動本模組，或一次啟動所有模組。
 
-<img src="../../../translated_images/hk/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/zh-HK/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **選項 2：使用 shell 指令**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 此應用提供一個網頁界面，讓你可以與擁有天氣和溫度換算工具的 AI 代理互動。
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/hk/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/zh-HK/tools-homepage.4b4cd8b2717f9621.webp" alt="AI Agent Tools Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *AI 代理工具介面 — 快速示範和對話接口以便與工具互動*
 
@@ -257,7 +257,7 @@ cd ..; .\stop-all.ps1  # 所有模組
 
 聊天介面會保留對話歷史，讓你進行多輪互動。你可以看到所有之前的查詢和回應，輕鬆追蹤對話，理解代理如何在多次交流中建立上下文。
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/hk/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/zh-HK/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversation with Multiple Tool Calls" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *多輪對話展示簡單換算、天氣查詢與工具鏈結*
 

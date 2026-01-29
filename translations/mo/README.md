@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "mo"
 }
 -->
-<img src="../../translated_images/mo/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/zh-MO/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
 ### 🌐 多語言支援
 

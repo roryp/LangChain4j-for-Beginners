@@ -61,7 +61,7 @@ Um agente de IA com ferramentas segue um padrão de raciocínio e ação (ReAct)
 5. A ferramenta executa e retorna dados  
 6. O agente incorpora o resultado e fornece a resposta final  
 
-<img src="../../../translated_images/br/react-pattern.86aafd3796f3fd13.webp" alt="Padrão ReAct" width="800"/>
+<img src="../../../translated_images/pt-BR/react-pattern.86aafd3796f3fd13.webp" alt="Padrão ReAct" width="800"/>
 
 *O padrão ReAct - como agentes de IA alternam entre raciocínio e ação para resolver problemas*
 
@@ -138,7 +138,7 @@ Abordagens alternativas (manual `AiServices.builder()`) exigem mais código e pe
 
 **Encadeamento de Ferramentas** - A IA pode chamar múltiplas ferramentas em sequência. Pergunte "Qual o clima em Seattle e devo levar um guarda-chuva?" e veja como encadeia `getCurrentWeather` com raciocínio sobre chuva.
 
-<a href="images/tool-chaining.png"><img src="../../../translated_images/br/tool-chaining.3b25af01967d6f7b.webp" alt="Encadeamento de Ferramentas" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tool-chaining.png"><img src="../../../translated_images/pt-BR/tool-chaining.3b25af01967d6f7b.webp" alt="Encadeamento de Ferramentas" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Chamadas sequenciais de ferramentas - a saída de uma ferramenta alimenta a decisão da próxima*
 
@@ -171,7 +171,7 @@ Pelo Spring Boot Dashboard você pode:
 
 Basta clicar no botão de play ao lado de "tools" para iniciar este módulo, ou iniciar todos os módulos de uma vez.
 
-<img src="../../../translated_images/br/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/pt-BR/dashboard.9b519b1a1bc1b30a.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **Opção 2: Usando scripts shell**
 
@@ -241,7 +241,7 @@ cd ..; .\stop-all.ps1  # Todos os módulos
 
 A aplicação oferece uma interface web onde você pode interagir com um agente de IA que tem acesso a ferramentas de clima e conversão de temperatura.
 
-<a href="images/tools-homepage.png"><img src="../../../translated_images/br/tools-homepage.4b4cd8b2717f9621.webp" alt="Interface de Ferramentas do Agente de IA" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-homepage.png"><img src="../../../translated_images/pt-BR/tools-homepage.4b4cd8b2717f9621.webp" alt="Interface de Ferramentas do Agente de IA" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Interface das Ferramentas do Agente de IA - exemplos rápidos e interface de chat para interação com ferramentas*
 
@@ -257,7 +257,7 @@ Agora tente algo mais complexo: "Qual o clima em Seattle e converta para Fahrenh
 
 A interface de chat mantém o histórico da conversa, permitindo interações multi-turno. Você pode ver todas as consultas e respostas anteriores, facilitando acompanhar a conversa e entender como o agente constrói o contexto em múltiplas trocas.
 
-<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/br/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversa com Múltiplas Chamadas de Ferramentas" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/tools-conversation-demo.png"><img src="../../../translated_images/pt-BR/tools-conversation-demo.89f2ce9676080f59.webp" alt="Conversa com Múltiplas Chamadas de Ferramentas" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *Conversa multi-turno mostrando conversões simples, consultas de clima e encadeamento de ferramentas*
 

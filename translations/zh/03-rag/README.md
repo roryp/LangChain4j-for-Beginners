@@ -49,7 +49,7 @@ RAG（检索增强生成）解决了这个问题。它不是试图教模型你�
 
 这样模型的回答就基于你的实际数据，而非依赖其训练知识或凭空编造答案。
 
-<img src="../../../translated_images/zh/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
+<img src="../../../translated_images/zh-CN/rag-architecture.ccb53b71a6ce407f.webp" alt="RAG Architecture" width="800"/>
 
 *RAG 流程 — 从用户查询到语义搜索再到上下文答案生成*
 
@@ -102,7 +102,7 @@ EmbeddingStore<TextSegment> embeddingStore =
     new InMemoryEmbeddingStore<>();
 ```
 
-<img src="../../../translated_images/zh/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
+<img src="../../../translated_images/zh-CN/vector-embeddings.2ef7bdddac79a327.webp" alt="Vector Embeddings Space" width="800"/>
 
 *文档在嵌入空间中的向量表示——相似内容聚集成簇*
 
@@ -160,7 +160,7 @@ cat ../.env  # 应该显示 AZURE_OPENAI_ENDPOINT、API_KEY、DEPLOYMENT
 
 只需点击“rag”旁的播放按钮启动此模块，或同时启动所有模块。
 
-<img src="../../../translated_images/zh/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
+<img src="../../../translated_images/zh-CN/dashboard.fbe6e28bf4267ffe.webp" alt="Spring Boot Dashboard" width="400"/>
 
 **选项 2：使用 shell 脚本**
 
@@ -230,7 +230,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 该应用提供文档上传和提问的 Web 界面。
 
-<a href="images/rag-homepage.png"><img src="../../../translated_images/zh/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-homepage.png"><img src="../../../translated_images/zh-CN/rag-homepage.d90eb5ce1b3caa94.webp" alt="RAG Application Interface" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *RAG 应用界面 — 上传文档并提问*
 
@@ -248,7 +248,7 @@ cd ..; .\stop-all.ps1  # 所有模块
 
 注意每个答案都包含带有相似度分数的来源引用。分数（0 到 1）表示该块与问题的相关程度。分数越高意味着匹配越好。这样你可以核对答案与来源材料。
 
-<a href="images/rag-query-results.png"><img src="../../../translated_images/zh/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
+<a href="images/rag-query-results.png"><img src="../../../translated_images/zh-CN/rag-query-results.6d69fcec5397f355.webp" alt="RAG Query Results" width="800" style="border: 1px solid #ddd; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/></a>
 
 *查询结果显示答案，附带来源引用和相关度分数*
 

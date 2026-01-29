@@ -7,7 +7,7 @@ CO_OP_TRANSLATOR_METADATA:
   "language_code": "pt"
 }
 -->
-<img src="../../translated_images/pt/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
+<img src="../../translated_images/pt-PT/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
 ### 🌐 Suporte Multilíngue
 
