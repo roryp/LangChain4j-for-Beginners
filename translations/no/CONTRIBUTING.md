@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:46:58+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "no"
-}
--->
 # Bidra
 
 Takk for din interesse for å bidra! Vi ønsker pull requests og forbedringer til dette kurset velkommen. Vennligst følg disse retningslinjene når du sender inn endringer:
