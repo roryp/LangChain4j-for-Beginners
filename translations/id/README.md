@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7dffae166c7db7dc932a0e3d0217cbb7",
-  "translation_date": "2026-01-16T09:17:37+00:00",
-  "source_file": "README.md",
-  "language_code": "id"
-}
--->
 <img src="../../translated_images/id/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
 ### 🌐 Dukungan Multi-Bahasa
@@ -14,33 +5,33 @@ CO_OP_TRANSLATOR_METADATA:
 #### Didukung melalui GitHub Action (Otomatis & Selalu Terbaru)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](./README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arab](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgaria](../bg/README.md) | [Birma (Myanmar)](../my/README.md) | [Cina (Sederhana)](../zh-CN/README.md) | [Cina (Tradisional, Hong Kong)](../zh-HK/README.md) | [Cina (Tradisional, Macau)](../zh-MO/README.md) | [Cina (Tradisional, Taiwan)](../zh-TW/README.md) | [Kroasia](../hr/README.md) | [Ceko](../cs/README.md) | [Denmark](../da/README.md) | [Belanda](../nl/README.md) | [Estonia](../et/README.md) | [Finlandia](../fi/README.md) | [Perancis](../fr/README.md) | [Jerman](../de/README.md) | [Yunani](../el/README.md) | [Ibrani](../he/README.md) | [Hindi](../hi/README.md) | [Hungaria](../hu/README.md) | [Indonesia](./README.md) | [Italia](../it/README.md) | [Jepang](../ja/README.md) | [Kannada](../kn/README.md) | [Korea](../ko/README.md) | [Litua](../lt/README.md) | [Melayu](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Pidgin Nigeria](../pcm/README.md) | [Norwegia](../no/README.md) | [Persia (Farsi)](../fa/README.md) | [Polandia](../pl/README.md) | [Portugis (Brasil)](../pt-BR/README.md) | [Portugis (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Rumania](../ro/README.md) | [Rusia](../ru/README.md) | [Serbia (Sirilik)](../sr/README.md) | [Slovakia](../sk/README.md) | [Slovenia](../sl/README.md) | [Spanyol](../es/README.md) | [Swahili](../sw/README.md) | [Swedia](../sv/README.md) | [Tagalog (Filipina)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thailand](../th/README.md) | [Turki](../tr/README.md) | [Ukraina](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnam](../vi/README.md)
 
-> **Lebih Suka Clone Secara Lokal?**
+> **Lebih Suka Mengkloning Secara Lokal?**
 
-> Repositori ini mencakup lebih dari 50 terjemahan bahasa yang secara signifikan meningkatkan ukuran unduhan. Untuk meng-clone tanpa terjemahan, gunakan sparse checkout:
+> Repositori ini menyertakan lebih dari 50 terjemahan bahasa yang secara signifikan meningkatkan ukuran unduhan. Untuk mengkloning tanpa terjemahan, gunakan sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Ini memberi Anda semua yang Anda butuhkan untuk menyelesaikan kursus dengan unduhan yang jauh lebih cepat.
+> Ini memberi Anda semua yang Anda butuhkan untuk menyelesaikan kursus dengan waktu unduh yang jauh lebih cepat.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # LangChain4j untuk Pemula
 
-Kursus untuk membangun aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, dari chat dasar hingga agen AI.
+Sebuah kursus untuk membangun aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, dari chat dasar hingga agen AI.
 
-**Baru dengan LangChain4j?** Lihat [Glosarium](docs/GLOSSARY.md) untuk definisi istilah dan konsep kunci.
+**Baru mengenal LangChain4j?** Lihat [Glosarium](docs/GLOSSARY.md) untuk definisi istilah dan konsep utama.
 
 ## Daftar Isi
 
-1. [Mulai Cepat](00-quick-start/README.md) - Mulai dengan LangChain4j
+1. [Mulai Cepat](00-quick-start/README.md) - Memulai dengan LangChain4j
 2. [Pengenalan](01-introduction/README.md) - Pelajari dasar-dasar LangChain4j
 3. [Rekayasa Prompt](02-prompt-engineering/README.md) - Kuasai desain prompt yang efektif
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Bangun sistem berbasis pengetahuan cerdas
 5. [Alat](04-tools/README.md) - Integrasikan alat eksternal dan asisten sederhana
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Bekerja dengan Model Context Protocol (MCP) dan modul Agentic
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Bekerja dengan Model Context Protocol (MCP) dan modul Agen
 ---
 
 ## Jalur Pembelajaran
@@ -51,26 +42,26 @@ Kursus untuk membangun aplikasi AI dengan LangChain4j dan Azure OpenAI GPT-5, da
 2. Klik **Code** → tab **Codespaces** → **...** → **New with options...**
 3. Gunakan pengaturan default – ini akan memilih container Pengembangan yang dibuat untuk kursus ini
 4. Klik **Create codespace**
-5. Tunggu 5-10 menit hingga lingkungan siap
-6. Langsung ke [Mulai Cepat](./00-quick-start/README.md) untuk mulai!
+5. Tunggu 5-10 menit hingga lingkungan siap digunakan
+6. Langsung ke [Mulai Cepat](./00-quick-start/README.md) untuk memulai!
 
 Setelah menyelesaikan modul, jelajahi [Panduan Pengujian](docs/TESTING.md) untuk melihat konsep pengujian LangChain4j dalam praktik.
 
-> **Catatan:** Pelatihan ini menggunakan Model GitHub dan Azure OpenAI. Modul [Mulai Cepat](00-quick-start/README.md) menggunakan Model GitHub (tidak memerlukan langganan Azure), sementara modul 1-5 menggunakan Azure OpenAI.
+> **Catatan:** Pelatihan ini menggunakan baik GitHub Models dan Azure OpenAI. Modul [Mulai Cepat](00-quick-start/README.md) menggunakan GitHub Models (tidak memerlukan langganan Azure), sementara modul 1-5 menggunakan Azure OpenAI.
 
 
 ## Belajar dengan GitHub Copilot
 
-Untuk cepat mulai coding, buka proyek ini di GitHub Codespace atau IDE lokal Anda dengan devcontainer yang disediakan. Devcontainer yang digunakan dalam kursus ini sudah dikonfigurasi dengan GitHub Copilot untuk pemrograman berpasangan AI.
+Untuk mulai cepat menulis kode, buka proyek ini di GitHub Codespace atau IDE lokal Anda dengan devcontainer yang disediakan. Devcontainer yang digunakan dalam kursus ini sudah dikonfigurasi dengan GitHub Copilot untuk pemrograman terpasang AI.
 
-Setiap contoh kode menyertakan pertanyaan yang disarankan yang bisa Anda ajukan ke GitHub Copilot untuk memperdalam pemahaman Anda. Cari tanda 💡/🤖 di:
+Setiap contoh kode menyertakan pertanyaan yang disarankan yang dapat Anda tanyakan ke GitHub Copilot untuk memperdalam pemahaman. Cari petunjuk 💡/🤖 di:
 
-- **Header file Java** - Pertanyaan spesifik untuk setiap contoh
-- **README modul** - Prompt eksplorasi setelah contoh kode
+- **Header file Java** - Pertanyaan khusus untuk setiap contoh
+- **README modul** - Petunjuk eksplorasi setelah contoh kode
 
-**Cara menggunakan:** Buka file kode apa pun dan tanyakan pertanyaan yang disarankan ke Copilot. Dia memiliki konteks penuh dari basis kode dan dapat menjelaskan, memperluas, serta menyarankan alternatif.
+**Cara menggunakan:** Buka file kode apapun dan tanyakan pertanyaan yang disarankan ke Copilot. Ia memiliki konteks penuh dari basis kode dan dapat menjelaskan, memperluas, dan menyarankan alternatif.
 
-Ingin belajar lebih banyak? Lihat [Copilot untuk Pemrograman Berpasangan AI](https://aka.ms/GitHubCopilotAI).
+Ingin belajar lebih banyak? Lihat [Copilot untuk Pemrograman Terpasang AI](https://aka.ms/GitHubCopilotAI).
 
 
 ## Sumber Daya Tambahan
@@ -110,29 +101,28 @@ Ingin belajar lebih banyak? Lihat [Copilot untuk Pemrograman Berpasangan AI](htt
 ---
  
 ### Seri Copilot
-
-[![Copilot untuk Pemrograman Berpasangan AI](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
-[![Copilot untuk C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
-[![Petualangan Copilot](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
+[![Copilot for AI Paired Programming](https://img.shields.io/badge/Copilot%20for%20AI%20Paired%20Programming-FACC15?style=for-the-badge&labelColor=E5E7EB&color=FACC15)](https://aka.ms/GitHubCopilotAI?WT.mc_id=academic-105485-koreyst)
+[![Copilot for C#/.NET](https://img.shields.io/badge/Copilot%20for%20C%23/.NET-FBBF24?style=for-the-badge&labelColor=E5E7EB&color=FBBF24)](https://github.com/microsoft/mastering-github-copilot-for-dotnet-csharp-developers?WT.mc_id=academic-105485-koreyst)
+[![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
 ## Mendapatkan Bantuan
 
-Jika Anda mengalami kesulitan atau memiliki pertanyaan tentang membangun aplikasi AI, bergabunglah dengan:
+Jika Anda mengalami kebuntuan atau memiliki pertanyaan tentang membangun aplikasi AI, bergabunglah:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-Jika Anda memiliki masukan produk atau menemukan kesalahan saat membangun, kunjungi:
+Jika Anda memiliki umpan balik produk atau kesalahan saat membangun, kunjungi:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## Lisensi
 
-Lisensi MIT - Lihat file [LICENSE](../../LICENSE) untuk detail.
+Lisensi MIT - Lihat file [LICENSE](../../LICENSE) untuk detailnya.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya mencapai ketepatan, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidakakuratan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan jasa penerjemah profesional manusia. Kami tidak bertanggung jawab atas kesalahpahaman atau kesalahan interpretasi yang timbul dari penggunaan terjemahan ini.
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan layanan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Meskipun kami berupaya untuk akurasi, harap diingat bahwa terjemahan otomatis mungkin mengandung kesalahan atau ketidaktepatan. Dokumen asli dalam bahasa aslinya harus dianggap sebagai sumber yang sahih. Untuk informasi penting, disarankan menggunakan terjemahan manusia profesional. Kami tidak bertanggung jawab atas kesalahpahaman atau penafsiran yang keliru yang timbul dari penggunaan terjemahan ini.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->
