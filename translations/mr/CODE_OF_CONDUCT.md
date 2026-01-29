@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-12-13T11:52:50+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "mr"
-}
--->
 # Microsoft मुक्त स्रोत आचार संहिता
 
 या प्रकल्पाने [Microsoft मुक्त स्रोत आचार संहिता](https://opensource.microsoft.com/codeofconduct/) स्वीकारली आहे.
