@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-12-13T11:51:20+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "ur"
-}
--->
 # مائیکروسافٹ اوپن سورس کوڈ آف کنڈکٹ
 
 اس پروجیکٹ نے [مائیکروسافٹ اوپن سورس کوڈ آف کنڈکٹ](https://opensource.microsoft.com/codeofconduct/) کو اپنایا ہے۔

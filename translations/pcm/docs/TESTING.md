@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ed93b3c14d58734ac10162967da958c1",
-  "translation_date": "2025-12-31T07:38:04+00:00",
-  "source_file": "docs/TESTING.md",
-  "language_code": "pcm"
-}
--->
 # How to Test LangChain4j Applications
 
 ## Table of Contents

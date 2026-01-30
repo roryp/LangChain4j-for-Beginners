@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "844788938b26242f3cc54ce0d0951bea",
-  "translation_date": "2026-01-05T22:55:01+00:00",
-  "source_file": "04-tools/README.md",
-  "language_code": "pa"
-}
--->
 # ਮਾਡਿਊਲ 04: ਟੂਲਸ ਨਾਲ AI ਏਜੰਟਸ
 
 ## ਸੂਚੀ

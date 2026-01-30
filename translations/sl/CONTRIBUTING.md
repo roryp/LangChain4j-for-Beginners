@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:48:45+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "sl"
-}
--->
 # Prispevanje
 
 Hvala za vaše zanimanje za prispevanje! Veselimo se pull requestov in izboljšav tega tečaja. Prosimo, upoštevajte naslednja navodila pri pošiljanju sprememb:

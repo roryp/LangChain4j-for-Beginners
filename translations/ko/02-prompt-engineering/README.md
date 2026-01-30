@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8d787826cad7e92bf5cdbd116b1e6116",
-  "translation_date": "2025-12-13T15:56:47+00:00",
-  "source_file": "02-prompt-engineering/README.md",
-  "language_code": "ko"
-}
--->
 # Module 02: GPT-5를 활용한 프롬프트 엔지니어링
 
 ## 목차

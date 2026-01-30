@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "844788938b26242f3cc54ce0d0951bea",
-  "translation_date": "2026-01-05T23:35:40+00:00",
-  "source_file": "04-tools/README.md",
-  "language_code": "th"
-}
--->
 # Module 04: เอเจนต์ AI พร้อมเครื่องมือ
 
 ## สารบัญ

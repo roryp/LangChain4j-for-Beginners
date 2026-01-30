@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:48:52+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "my"
-}
--->
 # Contributing
 
 သင်၏ အထောက်အပံ့ပေးမှုအတွက် ကျေးဇူးတင်ပါသည်! ဤသင်တန်းအတွက် pull requests နှင့် တိုးတက်မှုများကို ကြိုဆိုပါသည်။ ပြင်ဆင်မှုများတင်သွင်းရာတွင် အောက်ပါ လမ်းညွှန်ချက်များကို လိုက်နာပါ။

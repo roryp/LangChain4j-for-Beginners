@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6c816d130a1fa47570c11907e72d84ae",
-  "translation_date": "2026-01-05T21:15:37+00:00",
-  "source_file": "05-mcp/README.md",
-  "language_code": "fr"
-}
--->
 # Module 05 : Protocole de Contexte de Modèle (MCP)
 
 ## Table des matières

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bb15d54593663fb75ef1302f3dd1bb1a",
-  "translation_date": "2025-12-13T22:33:20+00:00",
-  "source_file": "01-introduction/infra/README.md",
-  "language_code": "ml"
-}
--->
 # LangChain4j ആരംഭിക്കുന്നതിന് Azure ഇൻഫ്രാസ്ട്രക്ചർ
 
 ## ഉള്ളടക്ക പട്ടിക

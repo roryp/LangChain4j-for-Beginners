@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6c816d130a1fa47570c11907e72d84ae",
-  "translation_date": "2026-01-06T01:05:02+00:00",
-  "source_file": "05-mcp/README.md",
-  "language_code": "ro"
-}
--->
 # Modulul 05: Protocolul Contextului Modelului (MCP)
 
 ## Cuprins
