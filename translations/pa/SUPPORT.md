@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "e6ad884382c7442882eca5e65a7cb42d",
-  "translation_date": "2025-12-13T11:38:43+00:00",
-  "source_file": "SUPPORT.md",
-  "language_code": "pa"
-}
--->
 # ਸਹਾਇਤਾ
 
 ## ਮੁੱਦੇ ਦਰਜ ਕਰਨ ਅਤੇ ਮਦਦ ਪ੍ਰਾਪਤ ਕਰਨ ਦਾ ਤਰੀਕਾ  

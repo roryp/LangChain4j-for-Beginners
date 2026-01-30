@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:45:40+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "ne"
-}
--->
 # Contributing
 
 योगदान दिनु भएकोमा धन्यवाद! हामी यस कोर्समा पुल अनुरोधहरू र सुधारहरू स्वागत गर्दछौं। कृपया परिवर्तनहरू पेश गर्दा यी दिशानिर्देशहरू पालना गर्नुहोस्:

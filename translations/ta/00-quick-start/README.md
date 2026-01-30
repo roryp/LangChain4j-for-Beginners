@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "22b5d7c8d7585325e38b37fd29eafe25",
-  "translation_date": "2026-01-06T01:52:36+00:00",
-  "source_file": "00-quick-start/README.md",
-  "language_code": "ta"
-}
--->
 # தொகுதி 00: சீக்கிர தொடக்கம்
 
 ## உள்ளடக்க அட்டவணை

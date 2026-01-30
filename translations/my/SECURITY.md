@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
-  "translation_date": "2025-12-13T12:08:21+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "my"
-}
--->
 ## လုံခြုံရေး
 
 Microsoft သည် ကျွန်ုပ်တို့၏ ဆော့ဖ်ဝဲ ထုတ်ကုန်များနှင့် ဝန်ဆောင်မှုများ၏ လုံခြုံရေးကို အလေးထားပါသည်၊ ၎င်းတွင် ကျွန်ုပ်တို့၏ GitHub အဖွဲ့အစည်းများမှ စီမံခန့်ခွဲသော အရင်းအမြစ်ကုဒ် စုစည်းမှုများအားလုံး ပါဝင်သည်၊ ၎င်းတွင် [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet) နှင့် [Xamarin](https://github.com/xamarin) ပါဝင်သည်။

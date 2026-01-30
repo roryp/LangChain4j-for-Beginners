@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c3e07ca58d0b8a3f47d3bf5728541e0a",
-  "translation_date": "2025-12-13T13:41:24+00:00",
-  "source_file": "01-introduction/README.md",
-  "language_code": "da"
-}
--->
 # Modul 01: Kom godt i gang med LangChain4j
 
 ## Indholdsfortegnelse

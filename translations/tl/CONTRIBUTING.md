@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:47:43+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "tl"
-}
--->
 # Contributing
 
 Salamat sa iyong interes na mag-ambag! Tinatanggap namin ang mga pull request at mga pagpapabuti sa kursong ito. Mangyaring sundin ang mga alituntuning ito kapag nagsusumite ng mga pagbabago:

@@ -1,47 +1,37 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7dffae166c7db7dc932a0e3d0217cbb7",
-  "translation_date": "2026-01-16T12:26:01+00:00",
-  "source_file": "README.md",
-  "language_code": "pcm"
-}
--->
 <img src="../../translated_images/pcm/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
-### 🌐 Support for Plenty Language Dem
+### 🌐 Support for Many Languages
 
-#### Dem dey support am through GitHub Action (E dey automatic & e dey always up-to-date)
+#### Dem Dey Support Am via GitHub Action (Automatic & Always Up-to-Date)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh/README.md) | [Chinese (Traditional, Hong Kong)](../hk/README.md) | [Chinese (Traditional, Macau)](../mo/README.md) | [Chinese (Traditional, Taiwan)](../tw/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../br/README.md) | [Portuguese (Portugal)](../pt/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](./README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](../ur/README.md) | [Vietnamese](../vi/README.md)
 
-> **You prefer make you save am for your own machine?**
+> **You Dey Prefer Clone Am for Your Local?**
 
-> Dis repo get more than 50 language translations wey go make the download size big well well. If you wan clone without all dis translations, use sparse checkout:
+> Dis repository get more than 50 language translations wey go make the download size big well well. If you want clone without the translations, use sparse checkout:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> Dis one go give you everything wey you need to finish dis course fast.
-
+> Dis one go give you everything wey you need to complete the course with better download speed.
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
-# LangChain4j for Beginners
+# LangChain4j For Beginners
 
-One course wey teach you how to build AI apps using LangChain4j and Azure OpenAI GPT-5, from the simplest chat waka go reach AI agents.
+Na course wey go show you how to build AI applications wit LangChain4j and Azure OpenAI GPT-5, from basic chat reach AI agents.
 
-**You be new for LangChain4j?** Try look [Glossary](docs/GLOSSARY.md) make you sabi wetin some key words and concepts mean.
+**You be New for LangChain4j?** Check the [Glossary](docs/GLOSSARY.md) for wetin key words and concepts mean.
 
 ## Table of Contents
 
-1. [Quick Start](00-quick-start/README.md) - How to start using LangChain4j quick quick
-2. [Introduction](01-introduction/README.md) - Learn all the basics about LangChain4j
-3. [Prompt Engineering](02-prompt-engineering/README.md) - How to sabi do prompt wey correct
+1. [Quick Start](00-quick-start/README.md) - How to start wit LangChain4j quick quick
+2. [Introduction](01-introduction/README.md) - Learn the basic fundamentals of LangChain4j
+3. [Prompt Engineering](02-prompt-engineering/README.md) - How to sabi design prompt well well
 4. [RAG (Retrieval-Augmented Generation)](03-rag/README.md) - Build smart knowledge-based systems
-5. [Tools](04-tools/README.md) - How to connect external tools and simple assistants
-6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work with Model Context Protocol (MCP) and Agentic modules
+5. [Tools](04-tools/README.md) - How to join external tools and simple assistants
+6. [MCP (Model Context Protocol)](05-mcp/README.md) - Work wit Model Context Protocol (MCP) and Agentic modules
 ---
 
 ##  Learning Path
@@ -50,26 +40,26 @@ One course wey teach you how to build AI apps using LangChain4j and Azure OpenAI
 
 1. Fork dis repository go your GitHub account
 2. Click **Code** → **Codespaces** tab → **...** → **New with options...**
-3. Use the default settings – dis one go select the Development container wey dem create for dis course
+3. Use the default ones – dis one go select the Development container wey dem create for dis course
 4. Click **Create codespace**
-5. Wait for 5-10 minutes till the environment ready
-6. Jump go [Quick Start](./00-quick-start/README.md) start the work!
+5. Wait for 5-10 minutes make the environment ready
+6. Jump direct go [Quick Start](./00-quick-start/README.md) to start!
 
-After you don do the modules, make you check [Testing Guide](docs/TESTING.md) to see how dem dey do LangChain4j testing concepts for real.
+After you don finish the modules, try explore the [Testing Guide](docs/TESTING.md) to see how LangChain4j testing concepts dey work.
 
-> **Note:** Dis training dey use both GitHub Models and Azure OpenAI. The [Quick Start](00-quick-start/README.md) module dey use GitHub Models (no need Azure subscription), but modules 1-5 go dey use Azure OpenAI.
+> **Note:** Dis training dey use both GitHub Models and Azure OpenAI. The [Quick Start](00-quick-start/README.md) module na GitHub Models (no need Azure subscription), but modules 1-5 go use Azure OpenAI.
 
 
-## Learning with GitHub Copilot
+## Learning wit GitHub Copilot
 
-To start to code quick quick, open dis project for GitHub Codespace or your local IDE wit di devcontainer wey dem provide. Dis devcontainer wey we dey use for dis course come with GitHub Copilot ready to help AI paired programming.
+If you want start coding fast, open dis project inside GitHub Codespace or your local IDE wit the devcontainer wey dey. The devcontainer for dis course get GitHub Copilot pre-configured for AI paired programming.
 
-Every code example carry questions wey you fit ask GitHub Copilot to understand well well. Look for the 💡/🤖 prompts for:
+Each code example get questions wey you fit ask GitHub Copilot to understand more. Look for the 💡/🤖 prompts for:
 
-- **Java file headers** - Questions wey concern each example
-- **Module READMEs** - Exploration questions dem after code examples
+- **Java file headers** - Questions for every example
+- **Module READMEs** - Questions to explore after code examples
 
-**How to use am:** Open any code file and ask Copilot di questions dem. E get full knowledge of the codebase and fit explain, add say e fit suggest other ways.
+**How to use am:** Open any code file and ask Copilot the questions wey dey. E get full knowledge of the codebase and fit explain, expand, and suggest better ways.
 
 You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI).
 
@@ -117,23 +107,23 @@ You want learn more? Check [Copilot for AI Paired Programming](https://aka.ms/Gi
 [![Copilot Adventure](https://img.shields.io/badge/Copilot%20Adventure-FDE68A?style=for-the-badge&labelColor=E5E7EB&color=FDE68A)](https://github.com/microsoft/CopilotAdventures?WT.mc_id=academic-105485-koreyst)
 <!-- CO-OP TRANSLATOR OTHER COURSES END -->
 
-## How You Fit Help
+## Getting Help
 
-If you jam or get any question about how to build AI apps, come join:
+If you jam for anywhere or get any question about how to build AI apps, join:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-If you get any product feedback or wahala while you dey build, make you visit:
+If you get product feedback or find wahala while you dey build, make you go:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## License
 
-MIT License - Make you check [LICENSE](../../LICENSE) file for details.
+MIT License - See [LICENSE](../../LICENSE) file for details.
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:  
-Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make e accurate, abeg sabi say automated translation fit get errors or no too correct. Di original document for im own language na di correct source. If na serious matter, make person wey sabi translate am by human handle am. We no go responsible if people misunderstand or misinterpret dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we try make e correct, abeg sabi say automated translation fit get some error or yawa. Di original document for dia own language na di ogbonge source wey you suppose trust. If na serious matter, e better make person wey sabi human translator do am. We no go take blame if anybody misunderstand or interpret am wrongly because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

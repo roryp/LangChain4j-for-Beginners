@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ed93b3c14d58734ac10162967da958c1",
-  "translation_date": "2025-12-30T19:50:27+00:00",
-  "source_file": "docs/TESTING.md",
-  "language_code": "de"
-}
--->
 # Testen von LangChain4j-Anwendungen
 
 ## Inhaltsverzeichnis

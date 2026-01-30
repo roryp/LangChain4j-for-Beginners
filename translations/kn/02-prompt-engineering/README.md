@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8d787826cad7e92bf5cdbd116b1e6116",
-  "translation_date": "2025-12-13T16:39:46+00:00",
-  "source_file": "02-prompt-engineering/README.md",
-  "language_code": "kn"
-}
--->
 # Module 02: GPT-5 ಜೊತೆಗೆ ಪ್ರಾಂಪ್ಟ್ ಎಂಜಿನಿಯರಿಂಗ್
 
 ## ವಿಷಯಗಳ ಪಟ್ಟಿಕೆ

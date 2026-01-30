@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
-  "translation_date": "2026-01-06T00:14:29+00:00",
-  "source_file": "03-rag/README.md",
-  "language_code": "vi"
-}
--->
 # Module 03: RAG (Tạo Sinh Tăng Cường Truy Xuất)
 
 ## Mục Lục

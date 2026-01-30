@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-12-13T11:53:12+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "pa"
-}
--->
 # ਮਾਈਕ੍ਰੋਸੌਫਟ ਖੁੱਲਾ ਸਰੋਤ ਕੋਡ ਆਚਰਨ
 
 ਇਸ ਪ੍ਰੋਜੈਕਟ ਨੇ [ਮਾਈਕ੍ਰੋਸੌਫਟ ਖੁੱਲਾ ਸਰੋਤ ਕੋਡ ਆਚਰਨ](https://opensource.microsoft.com/codeofconduct/) ਨੂੰ ਅਪਣਾਇਆ ਹੈ।

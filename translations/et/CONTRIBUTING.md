@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:49:24+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "et"
-}
--->
 # Panustamine
 
 Täname, et olete huvitatud panustamisest! Me tervitame pull-päringuid ja selle kursuse täiustusi. Palun järgige muudatuste esitamisel järgmisi juhiseid:

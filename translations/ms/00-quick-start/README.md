@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "22b5d7c8d7585325e38b37fd29eafe25",
-  "translation_date": "2026-01-06T00:25:01+00:00",
-  "source_file": "00-quick-start/README.md",
-  "language_code": "ms"
-}
--->
 # Modul 00: Mula Cepat
 
 ## Jadual Kandungan

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "ed93b3c14d58734ac10162967da958c1",
-  "translation_date": "2025-12-31T02:54:13+00:00",
-  "source_file": "docs/TESTING.md",
-  "language_code": "vi"
-}
--->
 # Kiểm thử Ứng dụng LangChain4j
 
 ## Mục lục

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6c816d130a1fa47570c11907e72d84ae",
-  "translation_date": "2026-01-06T00:09:25+00:00",
-  "source_file": "05-mcp/README.md",
-  "language_code": "he"
-}
--->
 # פרק 05: פרוטוקול הקשר מודל (MCP)
 
 ## תוכן העניינים
