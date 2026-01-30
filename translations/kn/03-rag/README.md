@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
-  "translation_date": "2026-01-06T02:27:59+00:00",
-  "source_file": "03-rag/README.md",
-  "language_code": "kn"
-}
--->
 # ಮೋಡ್ಯೂಲ್ 03: RAG (ರಿಟ್ರೀವಲ್-ಆಗ್ಮೆಂಟೆಡ್ ಜನರೇಷನ್)
 
 ## ವಿಷಯಗಳ ಬೆಂಗಳೂರು

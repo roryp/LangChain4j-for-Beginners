@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:45:26+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "bn"
-}
--->
 # Contributing
 
 অংশগ্রহণের জন্য আপনার আগ্রহের জন্য ধন্যবাদ! আমরা এই কোর্সে পুল রিকোয়েস্ট এবং উন্নতি স্বাগত জানাই। পরিবর্তন জমা দেওয়ার সময় দয়া করে এই নির্দেশিকাগুলি অনুসরণ করুন:

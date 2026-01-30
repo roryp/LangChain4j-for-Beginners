@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
-  "translation_date": "2025-12-13T12:05:54+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "id"
-}
--->
 ## Keamanan
 
 Microsoft menganggap serius keamanan produk dan layanan perangkat lunak kami, yang mencakup semua repositori kode sumber yang dikelola melalui organisasi GitHub kami, yang meliputi [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet) dan [Xamarin](https://github.com/xamarin).

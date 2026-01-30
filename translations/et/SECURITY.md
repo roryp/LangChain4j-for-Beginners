@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
-  "translation_date": "2025-12-13T12:09:17+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "et"
-}
--->
 ## Turvalisus
 
 Microsoft võtab meie tarkvaratoodete ja -teenuste turvalisust tõsiselt, mis hõlmab kõiki lähtekoodi hoidlaid, mida haldame oma GitHubi organisatsioonide kaudu, sealhulgas [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet) ja [Xamarin](https://github.com/xamarin).

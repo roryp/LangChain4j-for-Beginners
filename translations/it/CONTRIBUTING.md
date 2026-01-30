@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:46:10+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "it"
-}
--->
 # Contribuire
 
 Grazie per il tuo interesse a contribuire! Accogliamo con piacere pull request e miglioramenti a questo corso. Si prega di seguire queste linee guida quando si inviano modifiche:

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "bb15d54593663fb75ef1302f3dd1bb1a",
-  "translation_date": "2025-12-13T21:44:53+00:00",
-  "source_file": "01-introduction/infra/README.md",
-  "language_code": "ar"
-}
--->
 # بنية تحتية أزور لـ LangChain4j للبدء
 
 ## جدول المحتويات

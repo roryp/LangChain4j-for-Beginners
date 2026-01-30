@@ -1,0 +1,86 @@
+{
+  "00-quick-start/README.md": {
+    "original_hash": "22b5d7c8d7585325e38b37fd29eafe25",
+    "translation_date": "2026-01-05T22:02:07+00:00",
+    "source_file": "00-quick-start/README.md",
+    "language_code": "zh-HK"
+  },
+  "01-introduction/README.md": {
+    "original_hash": "c3e07ca58d0b8a3f47d3bf5728541e0a",
+    "translation_date": "2025-12-13T13:13:45+00:00",
+    "source_file": "01-introduction/README.md",
+    "language_code": "zh-HK"
+  },
+  "01-introduction/infra/README.md": {
+    "original_hash": "bb15d54593663fb75ef1302f3dd1bb1a",
+    "translation_date": "2025-12-13T21:48:28+00:00",
+    "source_file": "01-introduction/infra/README.md",
+    "language_code": "zh-HK"
+  },
+  "02-prompt-engineering/README.md": {
+    "original_hash": "8d787826cad7e92bf5cdbd116b1e6116",
+    "translation_date": "2025-12-13T15:53:41+00:00",
+    "source_file": "02-prompt-engineering/README.md",
+    "language_code": "zh-HK"
+  },
+  "03-rag/README.md": {
+    "original_hash": "81d087662fb3dd7b7124bce1a9c9ec86",
+    "translation_date": "2026-01-05T22:02:52+00:00",
+    "source_file": "03-rag/README.md",
+    "language_code": "zh-HK"
+  },
+  "04-tools/README.md": {
+    "original_hash": "844788938b26242f3cc54ce0d0951bea",
+    "translation_date": "2026-01-05T22:06:06+00:00",
+    "source_file": "04-tools/README.md",
+    "language_code": "zh-HK"
+  },
+  "05-mcp/README.md": {
+    "original_hash": "6c816d130a1fa47570c11907e72d84ae",
+    "translation_date": "2026-01-05T22:04:27+00:00",
+    "source_file": "05-mcp/README.md",
+    "language_code": "zh-HK"
+  },
+  "CODE_OF_CONDUCT.md": {
+    "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
+    "translation_date": "2025-12-13T11:51:49+00:00",
+    "source_file": "CODE_OF_CONDUCT.md",
+    "language_code": "zh-HK"
+  },
+  "CONTRIBUTING.md": {
+    "original_hash": "69325bec6df1567581c5f7f4d5c91337",
+    "translation_date": "2025-12-13T11:44:53+00:00",
+    "source_file": "CONTRIBUTING.md",
+    "language_code": "zh-HK"
+  },
+  "README.md": {
+    "original_hash": "03f8747fa7fbe44de2af264b385fb422",
+    "translation_date": "2026-01-29T16:29:12+00:00",
+    "source_file": "README.md",
+    "language_code": "zh-HK"
+  },
+  "SECURITY.md": {
+    "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
+    "translation_date": "2025-12-13T12:01:20+00:00",
+    "source_file": "SECURITY.md",
+    "language_code": "zh-HK"
+  },
+  "SUPPORT.md": {
+    "original_hash": "e6ad884382c7442882eca5e65a7cb42d",
+    "translation_date": "2025-12-13T11:37:52+00:00",
+    "source_file": "SUPPORT.md",
+    "language_code": "zh-HK"
+  },
+  "docs/GLOSSARY.md": {
+    "original_hash": "0c4ed0dd4b9db1aa5d6ac7cfd0c79ca4",
+    "translation_date": "2026-01-06T07:51:10+00:00",
+    "source_file": "docs/GLOSSARY.md",
+    "language_code": "zh-HK"
+  },
+  "docs/TESTING.md": {
+    "original_hash": "ed93b3c14d58734ac10162967da958c1",
+    "translation_date": "2025-12-30T21:39:30+00:00",
+    "source_file": "docs/TESTING.md",
+    "language_code": "zh-HK"
+  }
+}

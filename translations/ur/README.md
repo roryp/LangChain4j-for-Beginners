@@ -1,75 +1,66 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "7dffae166c7db7dc932a0e3d0217cbb7",
-  "translation_date": "2026-01-16T08:31:44+00:00",
-  "source_file": "README.md",
-  "language_code": "ur"
-}
--->
 <img src="../../translated_images/ur/LangChain4j.90e1d693fcc71b50.webp" alt="LangChain4j" width="800"/>
 
-### 🌐 کثیراللسانی سپورٹ
+### 🌐 کثیر اللسانی معاونت
 
-#### گٹ ہب ایکشن کے ذریعے سپورٹ شدہ (خودکار اور ہمیشہ اپ ٹو ڈیٹ)
+#### GitHub ایکشن کے ذریعے معاونت (خودکار اور ہمیشہ تازہ ترین)
 
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE START -->
-[عربی](../ar/README.md) | [بنگالی](../bn/README.md) | [بلغاریائی](../bg/README.md) | [برمی (میانمار)](../my/README.md) | [چینی (سمپلified)](../zh/README.md) | [چینی (روایتی، ہانگ کانگ)](../hk/README.md) | [چینی (روایتی، مکاو)](../mo/README.md) | [چینی (روایتی، تائیوان)](../tw/README.md) | [کروشیا ئی](../hr/README.md) | [چیک](../cs/README.md) | [ڈینش](../da/README.md) | [ڈچ](../nl/README.md) | [ایسٹونین](../et/README.md) | [فنش](../fi/README.md) | [فرانسیسی](../fr/README.md) | [جرمن](../de/README.md) | [یونانی](../el/README.md) | [عبرانی](../he/README.md) | [ہندی](../hi/README.md) | [ہنگریائی](../hu/README.md) | [انڈونیشیائی](../id/README.md) | [اطالوی](../it/README.md) | [جاپانی](../ja/README.md) | [کنڑ](../kn/README.md) | [کوریائی](../ko/README.md) | [لتھوانین](../lt/README.md) | [مالے](../ms/README.md) | [مالایالم](../ml/README.md) | [مراٹھی](../mr/README.md) | [نیپالی](../ne/README.md) | [نائجیریائی پڈجن](../pcm/README.md) | [ناروے](../no/README.md) | [فارسی (عربی)](../fa/README.md) | [پولش](../pl/README.md) | [پرتگالی (برازیل)](../br/README.md) | [پرتگالی (پرتگال)](../pt/README.md) | [پنجابی (گرمکھی)](../pa/README.md) | [رومانیائی](../ro/README.md) | [روسی](../ru/README.md) | [سربی (سریلیک)](../sr/README.md) | [سلوواکی](../sk/README.md) | [سلووینیائی](../sl/README.md) | [سپینی](../es/README.md) | [سواحلی](../sw/README.md) | [سویڈش](../sv/README.md) | [ٹاگالوگ (فلیپائنی)](../tl/README.md) | [تمل](../ta/README.md) | [تلگو](../te/README.md) | [تھائی](../th/README.md) | [ترکش](../tr/README.md) | [یوکرینی](../uk/README.md) | [اردو](./README.md) | [ویتنامی](../vi/README.md)
+[Arabic](../ar/README.md) | [Bengali](../bn/README.md) | [Bulgarian](../bg/README.md) | [Burmese (Myanmar)](../my/README.md) | [Chinese (Simplified)](../zh-CN/README.md) | [Chinese (Traditional, Hong Kong)](../zh-HK/README.md) | [Chinese (Traditional, Macau)](../zh-MO/README.md) | [Chinese (Traditional, Taiwan)](../zh-TW/README.md) | [Croatian](../hr/README.md) | [Czech](../cs/README.md) | [Danish](../da/README.md) | [Dutch](../nl/README.md) | [Estonian](../et/README.md) | [Finnish](../fi/README.md) | [French](../fr/README.md) | [German](../de/README.md) | [Greek](../el/README.md) | [Hebrew](../he/README.md) | [Hindi](../hi/README.md) | [Hungarian](../hu/README.md) | [Indonesian](../id/README.md) | [Italian](../it/README.md) | [Japanese](../ja/README.md) | [Kannada](../kn/README.md) | [Korean](../ko/README.md) | [Lithuanian](../lt/README.md) | [Malay](../ms/README.md) | [Malayalam](../ml/README.md) | [Marathi](../mr/README.md) | [Nepali](../ne/README.md) | [Nigerian Pidgin](../pcm/README.md) | [Norwegian](../no/README.md) | [Persian (Farsi)](../fa/README.md) | [Polish](../pl/README.md) | [Portuguese (Brazil)](../pt-BR/README.md) | [Portuguese (Portugal)](../pt-PT/README.md) | [Punjabi (Gurmukhi)](../pa/README.md) | [Romanian](../ro/README.md) | [Russian](../ru/README.md) | [Serbian (Cyrillic)](../sr/README.md) | [Slovak](../sk/README.md) | [Slovenian](../sl/README.md) | [Spanish](../es/README.md) | [Swahili](../sw/README.md) | [Swedish](../sv/README.md) | [Tagalog (Filipino)](../tl/README.md) | [Tamil](../ta/README.md) | [Telugu](../te/README.md) | [Thai](../th/README.md) | [Turkish](../tr/README.md) | [Ukrainian](../uk/README.md) | [Urdu](./README.md) | [Vietnamese](../vi/README.md)
 
-> **اگر مقامی طور پر کلون کرنا پسند کریں؟**
+> **مقامی طور پر کلون کرنا پسند کریں؟**
 
-> اس ریپوزٹری میں 50+ زبانوں کے تراجم شامل ہیں جو ڈاؤن لوڈ کے سائز کو بہت زیادہ بڑھاتے ہیں۔ بغیر تراجم کے کلون کرنے کے لیے sparse checkout استعمال کریں:
+> اس مخزن میں 50+ زبانوں کے تراجم شامل ہیں جو ڈاؤن لوڈ سائز کو نمایاں طور پر بڑھاتے ہیں۔ تراجم کے بغیر کلون کرنے کے لیے sparse checkout استعمال کریں:
 > ```bash
 > git clone --filter=blob:none --sparse https://github.com/microsoft/LangChain4j-for-Beginners.git
 > cd LangChain4j-for-Beginners
 > git sparse-checkout set --no-cone '/*' '!translations' '!translated_images'
 > ```
-> اس سے آپ کو وہ سب کچھ ملے گا جو آپ کو کورس مکمل کرنے کے لیے چاہیے، لیکن ڈاؤن لوڈ بہت تیز ہوگا۔
+> یہ آپ کو وہ سب کچھ فراہم کرتا ہے جو آپ کو کورس مکمل کرنے کے لیے چاہیے ایک بہت ہی تیز ڈاؤن لوڈ کے ساتھ۔
 <!-- CO-OP TRANSLATOR LANGUAGES TABLE END -->
 
 # ابتدائیوں کے لیے LangChain4j
 
-LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بنانے کا کورس، بنیادی چیٹ سے لے کر AI ایجنٹس تک۔
+LangChain4j اور Azure OpenAI GPT-5 کے ذریعے AI ایپلیکیشنز بنانے کا کورس، بنیادی چیٹ سے لے کر AI ایجنٹ تک۔
 
-**LangChain4j میں نئے ہیں؟** اہم اصطلاحات اور تصورات کی تعریف کے لیے [گلاسری](docs/GLOSSARY.md) دیکھیں۔
+**LangChain4j میں نئے ہیں؟** اہم اصطلاحات اور تصورات کی تعریفوں کے لیے [لغت](docs/GLOSSARY.md) دیکھیں۔
 
-## فہرستِ مضامین
+## فہرست مضامین
 
-1. [فوری آغاز](00-quick-start/README.md) - LangChain4j کے ساتھ شروع کریں
-2. [تعریف](01-introduction/README.md) - LangChain4j کے بنیادی اصول سیکھیں
-3. [پرامپٹ انجینئرنگ](02-prompt-engineering/README.md) - مؤثر پرامپٹ ڈیزائن میں مہارت حاصل کریں
-4. [رٰیگ (ریٹریول-آگمینٹڈ جنریشن)](03-rag/README.md) - ذہین معلوماتی نظام بنائیں
-5. [اوزار](04-tools/README.md) - بیرونی اوزار اور آسان معاونات شامل کریں
-6. [ایم سی پی (ماڈل کانٹیکسٹ پروٹوکول)](05-mcp/README.md) - ماڈل کانٹیکسٹ پروٹوکول (MCP) اور ایجنٹک ماڈیولز کے ساتھ کام کریں
+1. [جلدی آغاز](00-quick-start/README.md) - LangChain4j کے ساتھ شروع کریں  
+2. [تعارف](01-introduction/README.md) - LangChain4j کے بنیادی اصول سیکھیں  
+3. [پرومپٹ انجینئرنگ](02-prompt-engineering/README.md) - مؤثر پرومپٹ کی ڈیزائننگ سیکھیں  
+4. [RAG (ریٹریول-آگمینٹڈ جینریشن)](03-rag/README.md) - ذہین معلوماتی نظام بنائیں  
+5. [اوزار](04-tools/README.md) - بیرونی اوزار اور سادہ اسسٹنٹس شامل کریں  
+6. [MCP (موڈل کانٹیکسٹ پروٹوکول)](05-mcp/README.md) - موڈل کانٹیکسٹ پروٹوکول (MCP) اور ایجنٹک ماڈیولز کے ساتھ کام کریں  
 ---
 
-## تعلیمی راہ
+## تعلیمی راستہ
 
-> **فوری آغاز**
+> **جلدی آغاز**
 
-1. اس ریپوزٹری کو اپنے گٹ ہب اکاؤنٹ میں فورک کریں
-2. **Code** پر کلک کریں → **Codespaces** ٹیب → **...** → **New with options...** منتخب کریں
-3. ڈیفالٹ منتخب کریں – یہ کورس کے لیے بنایا گیا Development container منتخب کرے گا
-4. **Create codespace** پر کلک کریں
-5. ماحول تیار ہونے کے لیے 5-10 منٹ انتظار کریں
-6. شروع کرنے کے لیے سیدھے [فوری آغاز](./00-quick-start/README.md) پر جائیں!
+1. اس مخزن کو اپنے GitHub اکاؤنٹ پر فورک کریں  
+2. **Code** پر کلک کریں → **Codespaces** ٹیب → **...** → **New with options...**  
+3. ڈیفالٹس استعمال کریں – یہ کورس کے لیے بنائے گئے ڈویلپمنٹ کنٹینر کو منتخب کرے گا  
+4. **Create codespace** پر کلک کریں  
+5. ماحول کے تیار ہونے کے لیے 5-10 منٹ انتظار کریں  
+6. شروع کرنے کے لیے براہ راست [جلدی آغاز](./00-quick-start/README.md) پر جائیں!
 
-ماڈیولز مکمل کرنے کے بعد، LangChain4j کے ٹیسٹنگ تصورات کو عملی طور پر دیکھنے کے لیے [ٹیسٹنگ گائیڈ](docs/TESTING.md) دریافت کریں۔
+ماڈیولز مکمل کرنے کے بعد، LangChain4j کی ٹیسٹنگ کے تصورات کو عملی طور پر دیکھنے کے لیے [ٹیسٹنگ گائیڈ](docs/TESTING.md) دریافت کریں۔
 
-> **نوٹ:** یہ تربیت گٹ ہب ماڈلز اور Azure OpenAI دونوں استعمال کرتی ہے۔ [فوری آغاز](00-quick-start/README.md) ماڈیول GitHub ماڈلز استعمال کرتا ہے (کوئی Azure سبسکرپشن نہیں چاہیے)، جبکہ ماڈیولز 1-5 Azure OpenAI استعمال کرتے ہیں۔
+> **نوٹ:** یہ تربیت GitHub ماڈلز اور Azure OpenAI دونوں استعمال کرتی ہے۔ [جلدی آغاز](00-quick-start/README.md) ماڈیول GitHub ماڈلز استعمال کرتا ہے (کوئی Azure سبسکرپشن ضروری نہیں)، جبکہ ماڈیول 1-5 میں Azure OpenAI استعمال ہوتا ہے۔
 
 ## GitHub کوپائلٹ کے ساتھ سیکھنا
 
-جلد کوڈنگ شروع کرنے کے لیے، اس پروجیکٹ کو GitHub Codespace یا اپنے مقامی IDE میں فراہم کردہ devcontainer کے ساتھ کھولیں۔ اس کورس میں استعمال ہونے والا devcontainer GitHub Copilot کے ساتھ پہلے سے مرتب ہوتا ہے، جو AI جوڑواں پروگرامنگ کے لیے ہے۔
+جلدی کوڈنگ شروع کرنے کے لیے، اس پروجیکٹ کو GitHub Codespace یا آپ کے مقامی IDE میں devcontainer کے ساتھ کھولیں۔ اس کورس میں استعمال شدہ devcontainer پہلے سے GitHub Copilot کے لیے AI پیئر پروگرامنگ کے ساتھ ترتیب دیا گیا ہے۔
 
-ہر کوڈ کی مثال میں تجویز کردہ سوالات شامل ہیں جو آپ GitHub Copilot سے پوچھ سکتے ہیں تاکہ اپنی سمجھ کو گہرا کریں۔ 💡/🤖 اشارے تلاش کریں:
+ہر کوڈ مثال میں آپ کے سمجھنے کو گہرا کرنے کے لیے GitHub Copilot سے پوچھے جانے والے سوالات شامل ہیں۔ 💡/🤖 پرامپٹس درج ذیل میں دیکھیں:
 
-- **جاوا فائل ہیڈرز** - ہر مثال سے متعلق مخصوص سوالات
-- **ماڈیول README** - کوڈ مثالوں کے بعد دریافت کے اشارے
+- **جاوا فائل کے ہیڈرز** - ہر مثال کے لیے مخصوص سوالات  
+- **ماڈیول ریڈمیز** - کوڈ مثالوں کے بعد تجرباتی سوالات
 
-**استعمال کا طریقہ:** کوئی بھی کوڈ فائل کھولیں اور تجویز کردہ سوالات Copilot سے پوچھیں۔ اسے پوری کوڈبیس کا مکمل سیاق و سباق معلوم ہے اور یہ وضاحت، توسیع، اور متبادل تجاویز دے سکتا ہے۔
+**استعمال کا طریقہ:** کوئی بھی کوڈ فائل کھولیں اور کوپائلٹ سے تجویز کردہ سوالات پوچھیں۔ اسے کوڈ بیس کا مکمل سیاق و سباق معلوم ہے اور یہ وضاحت، توسیع، اور متبادلات تجویز کر سکتا ہے۔
 
-مزید جاننا چاہتے ہیں؟ [AI جوڑواں پروگرامنگ کے لیے کوپائلٹ](https://aka.ms/GitHubCopilotAI) دیکھیں۔
+مزید سیکھنا چاہتے ہیں؟ [AI پیئر پروگرامنگ کے لیے کوپائلٹ](https://aka.ms/GitHubCopilotAI) دیکھیں۔
 
 ## اضافی وسائل
 
@@ -96,14 +87,14 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 ---
  
-### کور لرننگ
-[![مشین لرننگ برائے ابتدائی](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
-[![ڈیٹا سائنس برائے ابتدائی](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
-[![AI برائے ابتدائی](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
-[![سائبرسیکیورٹی برائے ابتدائی](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
-[![ویب ڈیولپمنٹ برائے ابتدائی](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
-[![IoT برائے ابتدائی](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
-[![XR ڈیولپمنٹ برائے ابتدائی](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
+### بنیادی تعلیم
+[![ML for Beginners](https://img.shields.io/badge/ML%20for%20Beginners-22C55E?style=for-the-badge&labelColor=E5E7EB&color=22C55E)](https://aka.ms/ml-beginners?WT.mc_id=academic-105485-koreyst)
+[![Data Science for Beginners](https://img.shields.io/badge/Data%20Science%20for%20Beginners-84CC16?style=for-the-badge&labelColor=E5E7EB&color=84CC16)](https://aka.ms/datascience-beginners?WT.mc_id=academic-105485-koreyst)
+[![AI for Beginners](https://img.shields.io/badge/AI%20for%20Beginners-A3E635?style=for-the-badge&labelColor=E5E7EB&color=A3E635)](https://aka.ms/ai-beginners?WT.mc_id=academic-105485-koreyst)
+[![Cybersecurity for Beginners](https://img.shields.io/badge/Cybersecurity%20for%20Beginners-F97316?style=for-the-badge&labelColor=E5E7EB&color=F97316)](https://github.com/microsoft/Security-101?WT.mc_id=academic-96948-sayoung)
+[![Web Dev for Beginners](https://img.shields.io/badge/Web%20Dev%20for%20Beginners-EC4899?style=for-the-badge&labelColor=E5E7EB&color=EC4899)](https://aka.ms/webdev-beginners?WT.mc_id=academic-105485-koreyst)
+[![IoT for Beginners](https://img.shields.io/badge/IoT%20for%20Beginners-14B8A6?style=for-the-badge&labelColor=E5E7EB&color=14B8A6)](https://aka.ms/iot-beginners?WT.mc_id=academic-105485-koreyst)
+[![XR Development for Beginners](https://img.shields.io/badge/XR%20Development%20for%20Beginners-38BDF8?style=for-the-badge&labelColor=E5E7EB&color=38BDF8)](https://github.com/microsoft/xr-development-for-beginners?WT.mc_id=academic-105485-koreyst)
 
 ---
  
@@ -115,21 +106,21 @@ LangChain4j اور Azure OpenAI GPT-5 کے ساتھ AI ایپلیکیشنز بن
 
 ## مدد حاصل کرنا
 
-اگر آپ پھنس جائیں یا AI ایپس بنانے کے بارے میں کوئی سوالات ہوں، تو شامل ہوں:
+اگر آپ پھنس جائیں یا AI ایپس بنانے کے بارے میں کوئی سوال ہو، تو شامل ہوں:
 
 [![Azure AI Foundry Discord](https://img.shields.io/badge/Discord-Azure_AI_Foundry_Community_Discord-blue?style=for-the-badge&logo=discord&color=5865f2&logoColor=fff)](https://aka.ms/foundry/discord)
 
-اگر آپ کے پاس پروڈکٹ فیڈبیک ہے یا تعمیر کے دوران غلطیاں ہوں تو وزٹ کریں:
+اگر آپ کے پاس پروڈکٹ کے بارے میں آراء یا بنانے کے دوران غلطیاں ہوں تو ملاحظہ کریں:
 
 [![Azure AI Foundry Developer Forum](https://img.shields.io/badge/GitHub-Azure_AI_Foundry_Developer_Forum-blue?style=for-the-badge&logo=github&color=000000&logoColor=fff)](https://aka.ms/foundry/forum)
 
 ## لائسنس
 
-MIT لائسنس - مزید تفصیلات کے لیے [LICENSE](../../LICENSE) فائل دیکھیں۔
+MIT لائسنس - تفصیلات کے لیے [LICENSE](../../LICENSE) فائل دیکھیں۔
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**دستخطی دستبرداری**:  
-یہ دستاویز اے آئی ترجمہ سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کا استعمال کرتے ہوئے ترجمہ کی گئی ہے۔ اگرچہ ہم درستگی کے لیے کوشاں ہیں، براہ کرم اس بات سے آگاہ رہیں کہ خودکار ترجمے میں غلطیاں یا بے ضابطہ معلومات ہو سکتی ہیں۔ اصل دستاویز اپنی مادری زبان میں ہی معتبر ذریعہ سمجھی جانی چاہیے۔ اہم معلومات کے لیے پیشہ ور انسانی ترجمہ تجویز کیا جاتا ہے۔ اس ترجمے کے استعمال سے ہونے والی کسی بھی غلط فہمی یا بدفہمی کی ذمہ داری ہم پر نہیں ہوگی۔
+**دستخطی نوٹس**:
+یہ دستاویز AI ترجمہ کی سروس [Co-op Translator](https://github.com/Azure/co-op-translator) کے ذریعہ ترجمہ کی گئی ہے۔ اگرچہ ہم درستگی کی کوشش کرتے ہیں، براہ کرم آگاہ رہیں کہ خودکار ترجمے میں غلطیاں یا بے دقتیاں ہوسکتی ہیں۔ اصل دستاویز اپنی مادری زبان میں مستند ماخذ سمجھی جانی چاہئے۔ اہم معلومات کے لیے پیشہ ور انسانی ترجمہ کی سفارش کی جاتی ہے۔ ہم اس ترجمے کے استعمال سے پیدا ہونے والی کسی بھی غلط فہمی یا غلط تعبیر کے ذمہ دار نہیں ہیں۔
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

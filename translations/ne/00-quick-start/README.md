@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "22b5d7c8d7585325e38b37fd29eafe25",
-  "translation_date": "2026-01-05T22:44:33+00:00",
-  "source_file": "00-quick-start/README.md",
-  "language_code": "ne"
-}
--->
 # Module 00: छिटो सुरु गर्नुहोस्
 
 ## सामग्री तालिका

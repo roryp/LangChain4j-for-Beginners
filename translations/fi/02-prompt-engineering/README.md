@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8d787826cad7e92bf5cdbd116b1e6116",
-  "translation_date": "2025-12-13T16:13:43+00:00",
-  "source_file": "02-prompt-engineering/README.md",
-  "language_code": "fi"
-}
--->
 # Moduuli 02: Prompt-suunnittelu GPT-5:n kanssa
 
 ## Sisällysluettelo

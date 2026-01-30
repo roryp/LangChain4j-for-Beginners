@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "57f14126c1c6add76b3aef3844dfe4e3",
-  "translation_date": "2025-12-13T12:09:04+00:00",
-  "source_file": "SECURITY.md",
-  "language_code": "ta"
-}
--->
 ## பாதுகாப்பு
 
 Microsoft எங்கள் மென்பொருள் தயாரிப்புகள் மற்றும் சேவைகளின் பாதுகாப்பை மிகுந்த முக்கியத்துவத்துடன் எடுத்துக்கொள்கிறது, இதில் எங்கள் GitHub நிறுவனங்கள் மூலம் நிர்வகிக்கப்படும் அனைத்து மூலக் குறியீட்டு சேமிப்பகங்களும் அடங்கும், அவை [Microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet) மற்றும் [Xamarin](https://github.com/xamarin) ஆகியவற்றை உள்ளடக்கியவை.

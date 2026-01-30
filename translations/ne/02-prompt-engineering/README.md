@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "8d787826cad7e92bf5cdbd116b1e6116",
-  "translation_date": "2025-12-13T16:00:58+00:00",
-  "source_file": "02-prompt-engineering/README.md",
-  "language_code": "ne"
-}
--->
 # Module 02: GPT-5 सँग प्रॉम्प्ट इन्जिनियरिङ
 
 ## Table of Contents

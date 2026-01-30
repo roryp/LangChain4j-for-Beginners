@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "6c816d130a1fa47570c11907e72d84ae",
-  "translation_date": "2026-01-06T00:38:12+00:00",
-  "source_file": "05-mcp/README.md",
-  "language_code": "sw"
-}
--->
 # Module 05: Itifaki ya Muktadha wa Mfano (MCP)
 
 ## Jedwali la Yaliyomo

@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "844788938b26242f3cc54ce0d0951bea",
-  "translation_date": "2026-01-05T23:20:33+00:00",
-  "source_file": "04-tools/README.md",
-  "language_code": "tr"
-}
--->
 # Modül 04: Araçlara Sahip Yapay Zeka Ajanları
 
 ## İçindekiler

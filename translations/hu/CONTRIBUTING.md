@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "69325bec6df1567581c5f7f4d5c91337",
-  "translation_date": "2025-12-13T11:47:57+00:00",
-  "source_file": "CONTRIBUTING.md",
-  "language_code": "hu"
-}
--->
 # Hozzájárulás
 
 Köszönjük az érdeklődését a hozzájárulás iránt! Örömmel fogadjuk a pull kéréseket és a kurzus fejlesztéseit. Kérjük, kövesse az alábbi irányelveket a változtatások beküldésekor:

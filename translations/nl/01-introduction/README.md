@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "c3e07ca58d0b8a3f47d3bf5728541e0a",
-  "translation_date": "2025-12-13T13:45:51+00:00",
-  "source_file": "01-introduction/README.md",
-  "language_code": "nl"
-}
--->
 # Module 01: Aan de slag met LangChain4j
 
 ## Inhoudsopgave

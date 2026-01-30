@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "0c4ed0dd4b9db1aa5d6ac7cfd0c79ca4",
-  "translation_date": "2026-01-06T08:05:14+00:00",
-  "source_file": "docs/GLOSSARY.md",
-  "language_code": "it"
-}
--->
 # Glossario LangChain4j
 
 ## Indice

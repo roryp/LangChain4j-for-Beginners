@@ -1,12 +1,3 @@
-<!--
-CO_OP_TRANSLATOR_METADATA:
-{
-  "original_hash": "442b123d034f92f7c384d2bbd28f99f1",
-  "translation_date": "2025-12-13T11:52:41+00:00",
-  "source_file": "CODE_OF_CONDUCT.md",
-  "language_code": "bn"
-}
--->
 # Microsoft ওপেন সোর্স আচরণবিধি
 
 এই প্রকল্পটি [Microsoft ওপেন সোর্স আচরণবিধি](https://opensource.microsoft.com/codeofconduct/) গ্রহণ করেছে।
