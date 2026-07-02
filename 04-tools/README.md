@@ -133,11 +133,11 @@ Spring Boot auto-wires the declarative `@AiService` interface with all registere
 
 *The end-to-end flow — the user asks a question, the model selects a tool, LangChain4j executes it, and the model weaves the result into a natural response.*
 
-If you ran the [ToolIntegrationDemo](../00-quick-start/src/main/java/com/example/langchain4j/quickstart/ToolIntegrationDemo.java) in Module 00, you already saw this pattern in action — the `Calculator` tools were called the same way. The sequence diagram below shows exactly what happened under the hood during that demo:
+Behind the scenes, `AiServices` runs the same tool-calling loop for any tool — here illustrated with a simple `Calculator`. The sequence diagram below shows exactly what happens under the hood:
 
 <img src="images/tool-calling-sequence.png" alt="Tool Calling Sequence Diagram" width="800"/>
 
-*The tool-calling loop from the Quick Start demo — `AiServices` sends your message and tool schemas to the LLM, the LLM replies with a function call like `add(42, 58)`, LangChain4j executes the `Calculator` method locally, and feeds the result back for the final answer.*
+*The tool-calling loop — `AiServices` sends your message and tool schemas to the LLM, the LLM replies with a function call like `add(42, 58)`, LangChain4j executes the `Calculator` method locally, and feeds the result back for the final answer.*
 
 > **🤖 Try with [GitHub Copilot](https://github.com/features/copilot) Chat:** Open [`AgentService.java`](src/main/java/com/example/langchain4j/agents/service/AgentService.java) and ask:
 > - "How does the ReAct pattern work and why is it effective for AI agents?"

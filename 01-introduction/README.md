@@ -24,13 +24,13 @@ Watch this live session that explains how to get started with this module:
 
 ## What You'll Learn
 
-In the quick start, you used GitHub Models to send prompts, call tools, build a RAG pipeline, and test guardrails. Those demos showed what's possible — now we switch to Azure OpenAI and GPT-5.2 and start building production-style applications. This module focuses on conversational AI that remembers context and maintains state — the concepts those quick start demos used behind the scenes but didn't explain.
+This is your starting point with LangChain4j and Azure OpenAI. We begin with the fundamentals and start building production-style applications. This module focuses on conversational AI that remembers context and maintains state — the foundational concepts every later module builds on.
 
 We'll use Azure OpenAI's GPT-5.2 throughout this guide because its advanced reasoning capabilities make the behavior of different patterns more apparent. When you add memory, you'll clearly see the difference. This makes it easier to understand what each component brings to your application.
 
 You'll build one application that demonstrates both patterns:
 
-**Stateless Chat** - Each request is independent. The model has no memory of previous messages. This is the pattern you used in the quick start.
+**Stateless Chat** - Each request is independent. The model has no memory of previous messages. This is the simplest starting point.
 
 **Stateful Conversation** - Each request includes conversation history. The model maintains context across multiple turns. This is what production applications require.
 
@@ -79,7 +79,7 @@ LangChain4j provides memory implementations that handle this automatically. You 
 
 ## How This Uses LangChain4j
 
-This module extends the quick start by integrating Spring Boot and adding conversation memory. Here's how the pieces fit together:
+This module integrates Spring Boot and adds conversation memory. Here's how the pieces fit together:
 
 **Dependencies** - Add two LangChain4j libraries:
 
@@ -312,6 +312,6 @@ Both panels use the same GPT-5.2 model. The only difference is memory. This make
 
 ---
 
-**Navigation:** [← Previous: Module 00 - Quick Start](../00-quick-start/README.md) | [Back to Main](../README.md) | [Next: Module 02 - Prompt Engineering →](../02-prompt-engineering/README.md)
+**Navigation:** [← Back to Main](../README.md) | [Next: Module 02 - Prompt Engineering →](../02-prompt-engineering/README.md)
 
 

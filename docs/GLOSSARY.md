@@ -5,7 +5,7 @@
 - [Core Concepts](#core-concepts)
 - [LangChain4j Components](#langchain4j-components)
 - [AI/ML Concepts](#aiml-concepts)
-- [Guardrails](#guardrails---module-00)
+- [Guardrails](#guardrails)
 - [Prompt Engineering](#prompt-engineering---module-02)
 - [RAG (Retrieval-Augmented Generation)](#rag-retrieval-augmented-generation---module-03)
 - [Agents and Tools](#agents-and-tools---module-04)
@@ -86,7 +86,7 @@ Quick reference for terms and concepts used throughout the course.
 
 **Zero-Shot Learning** - Performing tasks without examples. [Module 02](../02-prompt-engineering/README.md)
 
-## Guardrails - [Module 00](../00-quick-start/README.md)
+## Guardrails
 
 **Defense in Depth** - Multi-layer security approach combining application-level guardrails with provider safety filters.
 
@@ -98,7 +98,7 @@ Quick reference for terms and concepts used throughout the course.
 
 **OutputGuardrail** - Interface for validating AI responses before returning to users.
 
-**Provider Safety Filters** - Built-in content filters from AI providers (e.g., GitHub Models) that catch violations at the API level.
+**Provider Safety Filters** - Built-in content filters from AI providers (e.g., Azure OpenAI) that catch violations at the API level.
 
 **Soft Refusal** - Model politely declines to answer without throwing an error.
 
@@ -211,8 +211,6 @@ Quick reference for terms and concepts used throughout the course.
 ## Testing and Development - [Testing Guide](TESTING.md)
 
 **Dev Container** - Containerized development environment. [Configuration](../.devcontainer/devcontainer.json)
-
-**GitHub Models** - Free AI model playground. [Module 00](../00-quick-start/README.md)
 
 **In-Memory Testing** - Testing with in-memory storage.
 

@@ -50,7 +50,6 @@ This grounds the model's responses in your actual data instead of relying on its
 
 ## Prerequisites
 
-- Completed [Module 00 - Quick Start](../00-quick-start/README.md) (for the Easy RAG example referenced later in this module)
 - Completed [Module 01 - Introduction](../01-introduction/README.md) (Azure OpenAI resources deployed, including the `text-embedding-3-small` embedding model)
 - `.env` file in root directory with Azure credentials (created by `azd up` in Module 01)
 
@@ -88,13 +87,13 @@ LangChain4j offers three ways to implement RAG, each with a different level of a
 
 **This tutorial uses the Native approach.** Each step of the RAG pipeline — embedding the query, searching the vector store, assembling the context, and generating the answer — is written out explicitly in [`RagService.java`](src/main/java/com/example/langchain4j/rag/service/RagService.java). This is intentional: as a learning resource, it's more important that you see and understand every stage than that the code is minimized. Once you're comfortable with how the pieces fit together, you can graduate to Easy RAG for quick prototypes or Advanced RAG for production systems.
 
-> **💡 Already seen Easy RAG in action?** The [Quick Start module](../00-quick-start/README.md) includes a Document Q&A example ([`SimpleReaderDemo.java`](../00-quick-start/src/main/java/com/example/langchain4j/quickstart/SimpleReaderDemo.java)) that uses the Easy RAG approach — LangChain4j handles embedding, searching, and prompt assembly automatically. This module takes the next step by breaking open that pipeline so you can see and control each stage yourself.
+> **💡 Curious about Easy RAG?** LangChain4j also offers an *Easy RAG* approach where `AiServices` and a `ContentRetriever` handle embedding, searching, and prompt assembly automatically. This module takes the more explicit path — breaking open that pipeline so you can see and control each stage yourself.
 
-The diagram below shows the Easy RAG pipeline from that Quick Start example. Notice how `AiServices` and `EmbeddingStoreContentRetriever` hide all the complexity — you load a document, attach a retriever, and get answers. The Native approach in this module breaks each of those hidden steps open:
+The diagram below shows the Easy RAG pipeline. Notice how `AiServices` and `EmbeddingStoreContentRetriever` hide all the complexity — you load a document, attach a retriever, and get answers. The Native approach in this module breaks each of those hidden steps open:
 
 <img src="images/easy-rag-pipeline.png" alt="Easy RAG Pipeline - LangChain4j" width="800"/>
 
-*This diagram shows the Easy RAG pipeline from `SimpleReaderDemo.java`. Compare this with the Native approach used in this module: Easy RAG hides the embedding, retrieval, and prompt assembly behind `AiServices` and `ContentRetriever` — you load a document, attach a retriever, and get answers. The Native approach in this module breaks that pipeline open so you call each stage (embed, search, assemble context, generate) yourself, giving you full visibility and control.*
+*This diagram shows the Easy RAG pipeline. Compare this with the Native approach used in this module: Easy RAG hides the embedding, retrieval, and prompt assembly behind `AiServices` and `ContentRetriever` — you load a document, attach a retriever, and get answers. The Native approach in this module breaks that pipeline open so you call each stage (embed, search, assemble context, generate) yourself, giving you full visibility and control.*
 
 ## How It Works
 
