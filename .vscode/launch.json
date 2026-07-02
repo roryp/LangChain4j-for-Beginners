@@ -2,14 +2,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "ResponsibleAIDemo",
-            "request": "launch",
-            "mainClass": "com.example.langchain4j.quickstart.ResponsibleAIDemo",
-            "projectName": "langchain4j-quickstart",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
             "name": "SupervisorAgentDemo",
             "request": "launch",
             "mainClass": "com.example.langchain4j.mcp.SupervisorAgentDemo",
@@ -21,38 +13,6 @@
             "request": "launch",
             "mainClass": "com.example.langchain4j.mcp.McpAgentDemo",
             "projectName": "mcp-example"
-        },
-        {
-            "type": "java",
-            "name": "ToolIntegrationDemo",
-            "request": "launch",
-            "mainClass": "com.example.langchain4j.quickstart.ToolIntegrationDemo",
-            "projectName": "langchain4j-quickstart",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "SimpleReaderDemo",
-            "request": "launch",
-            "mainClass": "com.example.langchain4j.quickstart.SimpleReaderDemo",
-            "projectName": "langchain4j-quickstart",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "PromptEngineeringDemo",
-            "request": "launch",
-            "mainClass": "com.example.langchain4j.quickstart.PromptEngineeringDemo",
-            "projectName": "langchain4j-quickstart",
-            "envFile": "${workspaceFolder}/.env"
-        },
-        {
-            "type": "java",
-            "name": "BasicChatDemo",
-            "request": "launch",
-            "mainClass": "com.example.langchain4j.quickstart.BasicChatDemo",
-            "projectName": "langchain4j-quickstart",
-            "envFile": "${workspaceFolder}/.env"
         },
         {
             "type": "java",
